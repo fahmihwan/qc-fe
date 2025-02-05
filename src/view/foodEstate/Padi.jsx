@@ -1,10 +1,12 @@
 import React from 'react'
 import LayoutAdmin from '../layout/LayoutAdmin'
+import IndonesiaMap from '../component/IndonesiaMap'
 
 const Padi = () => {
     return (
         <LayoutAdmin>
-            Padi
+            <div className='h-[541px]'></div>
+            <IndonesiaMap />
         </LayoutAdmin>
     )
 }

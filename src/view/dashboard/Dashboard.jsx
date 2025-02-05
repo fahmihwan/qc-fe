@@ -4,7 +4,7 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 const Dashboard = () => {
     return (
         <LayoutAdmin>
-            <div>
+            <div className='w-full'>
                 <div className="h-0 dark:bg-white"></div>
                 <div className="h-[621px]"></div>
                 <div className="h-[2px] dark:bg-white"></div>
