@@ -93,11 +93,12 @@ export const Sidebar = () => {
                 </ul>
             </div>
 
-            <div className="border-r w-[273px] border-r-gray-400  h-[311px] px-6 pt-[25px] mt-[2px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+            <div className="border-r w-[273px] border-r-gray-400  h-[311px] mt-[2px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+                <span className='text-xs'>Doughnat 1</span>
                 <PieChartSideBar />
             </div>
             <div className="border-r w-[273px] border-r-gray-400  h-[137px] px-6 pt-[25px] mt-[2px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
-            <PieChartSideBar />
+            
             </div>
         </aside>
     )

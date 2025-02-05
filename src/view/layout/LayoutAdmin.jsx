@@ -6,7 +6,7 @@ import { Sidebar } from "../component/Sidebar";
 export default function LayoutAdmin({ children }) {
     return (
         <>
-            <>
+            <body className="dark:bg-dark-mode">
                 <Navbar />
                 <button
                     data-drawer-target="sidebar-multi-level-sidebar"
@@ -31,15 +31,11 @@ export default function LayoutAdmin({ children }) {
                     </svg>
                 </button>
 
-                <div className="flex flex-row justify-start">
+                <div className="flex flex-row justify-start dark:bg-dark-mode">
                     <Sidebar />
-                    <div className="p-4">
-                        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-4">
-                            {children}
-                        </div>
-                    </div>
+                    {children}
                 </div>
-            </>
+            </body>
 
 
 

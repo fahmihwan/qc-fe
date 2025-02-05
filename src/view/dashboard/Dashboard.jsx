@@ -4,19 +4,27 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 const Dashboard = () => {
     return (
         <LayoutAdmin>
+            <div>
+                <div className="h-0 dark:bg-white"></div>
+                <div className="h-[621px]"></div>
+                <div className="h-[2px] dark:bg-white"></div>
 
-            <p className=''>
-                dsadsadsa
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa quos odio, tenetur mollitia obcaecati eaque repudiandae corrupti ex excepturi velit vero necessitatibus in vel consequuntur deleniti omnis voluptate aut?
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita explicabo aperiam iusto odit facere ratione adipisci totam recusandae? Sequi, excepturi modi. Tempora ratione nostrum quia nulla nam esse corporis.
-            </p>
+                <marquee className="mx-6 my-4 dark:bg-dark-mode">
+                    <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
+                    <span className="dark:text-white text-xl font-bold">Mag: </span>
+                    <span className="text-green-custom text-xl">3.3 </span>
+                    <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
+                    <span className="dark:text-white text-xl font-bold">Lok: </span>
+                    <span className="text-green-custom text-xl">4.09 LS </span>
+                    <span className="dark:text-white text-xl">, </span>
+                    <span className="text-green-custom text-xl">121.80 BT </span>
+                    <span className="dark:text-white text-xl">{"(Pusat Ge"} </span>
+                </marquee>
 
-
-            dsds
-
-            dsadsadsa
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa quos odio, tenetur mollitia obcaecati eaque repudiandae corrupti ex excepturi velit vero necessitatibus in vel consequuntur deleniti omnis voluptate aut?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita explicabo aperiam iusto odit facere ratione adipisci totam recusandae? Sequi, excepturi modi. Tempora ratione nostrum quia nulla nam esse corporis.
+                {/* <div className="mt-2dark:bg-white">
+                    <span className="dark:text-white">Test</span>
+                </div> */}
+            </div>
         </LayoutAdmin>
     )
 }
