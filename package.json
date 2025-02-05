@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "chart.js": "^4.4.7",
     "flowbite": "^3.1.1",
     "flowbite-react": "^0.10.2",
     "react": "^18.3.1",
