@@ -20,7 +20,7 @@ export const Navbar = () => {
                     className="flex items-center ml-11 space-x-6 rtl:space-x-reverse"
                 >
                     <img
-                        src="src\assets\img\logo.png"
+                        src="http://103.150.101.2:8080/assets/img/logo.png"
                         className="h-16"
                         alt="BIN Logo"
                     />
