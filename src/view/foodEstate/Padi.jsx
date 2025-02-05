@@ -5,8 +5,9 @@ import IndonesiaMap from '../component/IndonesiaMap'
 const Padi = () => {
     return (
         <LayoutAdmin>
-            <div className='h-[541px]'></div>
+            <div style={{width: "100%", height: "541px"}}>
             <IndonesiaMap />
+            </div>
         </LayoutAdmin>
     )
 }
