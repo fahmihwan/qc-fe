@@ -19,9 +19,9 @@ export const Navbar = () => {
                     className="flex items-center ml-11 space-x-6 rtl:space-x-reverse"
                 >
                     <img
-                        src="https://flowbite.com/docs/images/logo.svg"
+                        src="src\assets\img\logo.png"
                         className="h-16"
-                        alt="Flowbite Logo"
+                        alt="BIN Logo"
                     />
                     <div className="flex flex-col items-start">
                         <div className="text-lg font-bold whitespace-nowrap dark:text-white">

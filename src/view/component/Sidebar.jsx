@@ -27,7 +27,7 @@ export const Sidebar = () => {
                                         p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                         >
                                             {d?.icon}
-                                            <span className="ms-3 text-sm">{d?.title}</span>
+                                            <span className="ml-3 text-sm">{d?.title}</span>
                                         </Link>
                                     </li>
                                 ) : (
@@ -46,7 +46,7 @@ export const Sidebar = () => {
                                             data-collapse-toggle="dropdown-example"
                                         >
                                             {d?.icon}
-                                            <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">
+                                            <span className="flex-1 ml-3 text-left rtl:text-right whitespace-nowrap">
                                                 {d?.title}
                                             </span>
                                             <svg
