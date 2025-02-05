@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import menu from '../../data/menu'
+import PieChartSideBar from './PieChartSideBar'
 
 export const Sidebar = () => {
     const [dropDown, setDropDown] = useState(null)
@@ -8,11 +9,11 @@ export const Sidebar = () => {
     return (
         <aside
             id="sidebar-multi-level-sidebar"
-            className="fixed top-0 left-0 z-40 w-64 h-screen pt-[65px] transition-transform -translate-x-full sm:translate-x-0 "
+            className="top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 "
             aria-label="Sidebar"
         >
-            <div className="border-r border-r-gray-400  h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-dark-mode">
-                <ul className="space-y-2 font-medium">
+            <div className="border-r w-[273px] h-[679px]  overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+                <ul className="space-y-2 font-medium px-6 pt-[25px]">
                     {
                         menu?.map((d, i) => {
                             return (<div key={i}>
@@ -26,7 +27,7 @@ export const Sidebar = () => {
                                         p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                                         >
                                             {d?.icon}
-                                            <span className="ms-3">{d?.title}</span>
+                                            <span className="ms-3 text-sm">{d?.title}</span>
                                         </Link>
                                     </li>
                                 ) : (
@@ -40,7 +41,7 @@ export const Sidebar = () => {
                                             className="flex 
                                         border
                                         border-black dark:border-white
-                                        items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group  dark:text-white "
+                                        items-center w-full p-2 text-sm text-gray-900 transition duration-75 rounded-lg group  dark:text-white "
                                             aria-controls="dropdown-example"
                                             data-collapse-toggle="dropdown-example"
                                         >
@@ -90,6 +91,13 @@ export const Sidebar = () => {
                     }
 
                 </ul>
+            </div>
+
+            <div className="border-r w-[273px] border-r-gray-400  h-[311px] px-6 pt-[25px] mt-[2px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+                <PieChartSideBar />
+            </div>
+            <div className="border-r w-[273px] border-r-gray-400  h-[137px] px-6 pt-[25px] mt-[2px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+            <PieChartSideBar />
             </div>
         </aside>
     )

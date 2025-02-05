@@ -12,20 +12,28 @@ export const Navbar = () => {
 
 
     return (
-        <nav className="bg-white dark:bg-dark-mode fixed w-full z-20 top-0 start-0 border-b border-b-gray-400 dark:border-gray-600">
+        <nav className="bg-white dark:bg-dark-mode w-full z-20 top-0 start-0 border-b border-b-gray-400 dark:border-gray-600">
             <div className="w-full flex flex-wrap items-center justify-between mx-auto p-4">
                 <a
                     href="https://flowbite.com/"
-                    className="flex items-center space-x-3 rtl:space-x-reverse"
+                    className="flex items-center ml-11 space-x-6 rtl:space-x-reverse"
                 >
                     <img
                         src="https://flowbite.com/docs/images/logo.svg"
-                        className="h-8"
+                        className="h-16"
                         alt="Flowbite Logo"
                     />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                        Flowbite
-                    </span>
+                    <div className="flex flex-col items-start">
+                        <div className="text-lg font-bold whitespace-nowrap dark:text-white">
+                            BINMAP
+                        </div>
+                        <div className="text-sm font-bold whitespace-nowrap dark:text-white">
+                            Badan Intelijen Negara
+                        </div>
+                        <div className="text-sm font-bold whitespace-nowrap dark:text-white">
+                            Monitoring & Analytic Platform
+                        </div>
+                    </div>
                 </a>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 
