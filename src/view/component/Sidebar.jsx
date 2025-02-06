@@ -13,7 +13,7 @@ export const Sidebar = () => {
             className="top-0 left-0 z-40  transition-transform -translate-x-full sm:translate-x-0 border"
             aria-label="Sidebar"
         >
-            <div className="border-r  w-[273px] h-[100%] overflow-y-auto bg-gray-300 dark:bg-dark-mode">
+            <div className="border-r  w-[273px] h-[100%] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
                 <ul className="space-y-2 font-medium px-6 pt-[25px]">
                     {
                         menu?.map((d, i) => {
