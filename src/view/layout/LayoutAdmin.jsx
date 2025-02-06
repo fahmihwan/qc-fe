@@ -6,7 +6,7 @@ import { Sidebar } from "../component/Sidebar";
 export default function LayoutAdmin({ children }) {
     return (
         <>
-            <body className="dark:bg-dark-mode">
+            <body className="dark:bg-dark-mode min-h-screen">
                 <Navbar />
                 <button
                     data-drawer-target="sidebar-multi-level-sidebar"
@@ -31,9 +31,11 @@ export default function LayoutAdmin({ children }) {
                     </svg>
                 </button>
 
-                <div className="flex flex-row justify-start dark:bg-dark-mode">
+                <div className="flex flex-row justify-start h-full dark:bg-dark-mode">
                     <Sidebar />
-                    {children}
+                    <div className="flex-grow dark:bg-dark-mode">
+                        {children}
+                    </div>
                 </div>
             </body>
 

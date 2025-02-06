@@ -9,7 +9,6 @@ const PieChartSideBar = () => {
         labels: ["A", "B", "C", "D"],
         datasets: [
             {
-                label: "Votes",
                 data: [12, 19, 3, 5],
                 backgroundColor: [
                     "rgba(21, 93, 33, 1)",
@@ -36,7 +35,7 @@ const PieChartSideBar = () => {
             data: myData,
             options: {
                 responsive: true,
-                maintainAspectRatio: false
+                maintainAspectRatio: false  
             }
         })
 
