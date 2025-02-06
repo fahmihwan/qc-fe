@@ -283,3 +283,19 @@ export const IconDarkModeSVG = () => {
         </svg>
     )
 }
+
+export const IconMenuSVG = () => {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={30}
+            height={30}
+            viewBox="0 0 24 24"
+            // style={{ fill: "#ffffff", transform: "", msfilter: "" }}
+            // style={{ fill: "rgba(0, 0, 0, 1)", transform: "", msfilter: "" }}
+            className="dark:fill-white"
+        >
+            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+        </svg>
+    )
+}
