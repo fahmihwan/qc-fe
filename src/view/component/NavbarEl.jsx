@@ -38,14 +38,14 @@ export const NavbarEl = () => {
                     />
                     <div className="flex flex-col items-start">
                         <div className="text-lg font-bold whitespace-nowrap dark:text-white">
-                            BINMAP
+                            DASHBOARD 360
                         </div>
                         <div className="text-sm font-bold whitespace-nowrap dark:text-white">
-                            Badan Intelijen Negara
+                            Asisgo
                         </div>
-                        <div className="text-sm font-bold whitespace-nowrap dark:text-white">
+                        {/* <div className="text-sm font-bold whitespace-nowrap dark:text-white">
                             Monitoring & Analytic Platform
-                        </div>
+                        </div> */}
                     </div>
                 </a>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

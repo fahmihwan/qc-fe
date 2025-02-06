@@ -5,6 +5,7 @@ import Gempa from "../view/bencana/Gempa";
 import AllCategories from "../view/foodEstate/AllCategories";
 import Login from "../view/auth/Login";
 import { ProtectedRouteAuthenticated, ProtectedRouteGuest } from "./ProtectedRoute";
+import AllBencanaCategories from "../view/bencana/AllBencanaCategories";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -28,6 +29,10 @@ const routes = createBrowserRouter([
     {
         path: "/all-food-estate",
         element: <ProtectedRouteAuthenticated element={<AllCategories />} />
+    },
+    {
+        path: "/all-bencana",
+        element: <AllBencanaCategories />
     }
 
 ])

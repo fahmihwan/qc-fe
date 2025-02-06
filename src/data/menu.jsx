@@ -52,6 +52,11 @@ const menu = [
         icon: <IconBencanaSVG />,
         submenu: [
             {
+                title: 'Semua Kategori',
+                link: '/all-bencana',
+                icon: <IconDashboardSVG />
+            },
+            {
                 title: 'Gempa',
                 link: '/gempa',
                 icon: <IconGempaSVG />

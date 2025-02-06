@@ -8,11 +8,12 @@ const allBencana = {
             hilang: 2,
             luka: 2
         },
-        dampakKerusakan:[{
+        dampakKerusakan:{
             rumahRusak: {
-                rusakRingan: 2, 
-                rusakSedang: 1, 
-                totalRusak: 3,
+                rusakRingan: 234, 
+                rusakSedang: 41,
+                rusakBerat: 184,
+                totalRusak: 184,
             },
             fasilitasRusak: {
                 satuanPendidikan: 0,
@@ -20,7 +21,7 @@ const allBencana = {
                 fasyenkes: 0,
                 totalRusak: 0
             }
-        }]
+        },
     },
     jlhKejadianBanjir: 5,
     jlhKejadianCuacaEkstrem: 0,
