@@ -22,7 +22,6 @@ const IndonesiaMap = () => {
             zoom: 5,
         });
 
-        // Layer untuk provinsi Indonesia
         const provinceLayer = new FeatureLayer({
             url: "https://gis.dukcapil.kemendagri.go.id/server/rest/services/INDONESIA_BOUNDARY/MapServer/1",
             outFields: ["*"],

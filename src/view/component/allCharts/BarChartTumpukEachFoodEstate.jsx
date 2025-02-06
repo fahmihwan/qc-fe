@@ -28,7 +28,7 @@ const BarChartTumpukEachFoodEstate = ({ title, dummyData }) => {
         },
         scales: {
             x: {
-                stacked: true, // Enable stacking on the x-axis
+                stacked: true, 
                 ticks: {
                     color: '#A3A3A3'
                 },
@@ -37,7 +37,7 @@ const BarChartTumpukEachFoodEstate = ({ title, dummyData }) => {
                 }
             },
             y: {
-                stacked: true, // Enable stacking on the y-axis
+                stacked: true, 
                 beginAtZero: true,
                 ticks: {
                     color: '#A3A3A3',
