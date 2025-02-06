@@ -1,41 +1,16 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import menu from '../../data/menu'
-import PieChartSideBar from './PieChartSideBar'
-import { useDispatch, useSelector } from 'react-redux'
-import { setOtherSlice } from "../../redux/features/otherSlice";
 export const Sidebar = () => {
-    // const dispatch = useDispatch()
+    const [dropDown, setDropDown] = useState(null);
 
-    // const dropDown = useSelector((state) => state?.other?.sidebarDropDown)
-
-    // const setDropDown = (params, scope) => {
-    //     // console.log(params);
-    //     dispatch(setOtherSlice({
-    //         sidebarDropDown: params
-    //     }))
-    // }
-
-
-    const [dropDown, setDropDown] = useState(null)
-    console.log(dropDown);
-
-
-    // const dropDown = localStorage.getItem('dropdown')
-
-    // const setDropDown = (params) => {
-    //     console.log(params);
-    //     // localStorage.setItem('dropdown', JSON.stringify(params))
-    // }
-
-    // console.log(dropDown);
     return (
         <aside
             id="sidebar-multi-level-sidebar"
-            className="top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 "
+            className="top-0 left-0 z-40  transition-transform -translate-x-full sm:translate-x-0 border"
             aria-label="Sidebar"
         >
-            <div className=" border-t-[1px] w-[273px] h-[698px]  overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+            <div className="border-r  w-[273px] h-[100%] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
                 <ul className="space-y-2 font-medium px-6 pt-[25px]">
                     {
                         menu?.map((d, i) => {
@@ -71,7 +46,6 @@ export const Sidebar = () => {
                                             {d?.icon}
                                             <span className="flex-1 ml-3 text-left rtl:text-right whitespace-nowrap">
                                                 {d?.title}
-                                                {dropDown}
                                             </span>
                                             <svg
                                                 className="w-3 h-3"
@@ -94,7 +68,6 @@ export const Sidebar = () => {
                                             {d?.submenu?.length != 0 && d?.submenu?.map((x, index) => {
                                                 return (
                                                     <li key={index} onClick={() => setDropDown(d?.title)}>
-                                                        {/* // <li key={index} onClick={() => console.log(d?.title)}> */}
                                                         <Link
                                                             to={x.link}
                                                             className="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
@@ -104,9 +77,7 @@ export const Sidebar = () => {
                                                             {x?.title}
                                                         </Link>
                                                     </li>
-
                                                 )
-
                                             })}
 
                                         </ul>
@@ -117,15 +88,8 @@ export const Sidebar = () => {
                     }
 
                 </ul>
-            </div >
-
-            {/* <div className="border-r-[1px] w-[273px] border-t-[1px] border-r-white  h-[311px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
-                <span className='text-xs'>Doughnat 1</span>
-                <PieChartSideBar />
             </div>
-            <div className="border-r-[1px] w-[273px] border-t-[1px] border-r-white  h-[137px] px-6 pt-[25px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
 
-            </div> */}
         </aside >
     )
 }
