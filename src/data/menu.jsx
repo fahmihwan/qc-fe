@@ -26,22 +26,22 @@ const menu = [
             },
             {
                 title: 'Jagung',
-                link: '',
+                link: '/jagung',
                 icon: <IconJagungSVG />
             },
             {
                 title: 'Singkong',
-                link: '',
+                link: '/singkong',
                 icon: <IconSingkongSVG />
             },
             {
                 title: 'Kedelai',
-                link: '',
+                link: '/kedelai',
                 icon: <IconKedelaiSVG />
             },
             {
                 title: 'Tebu',
-                link: '',
+                link: '/tebu',
                 icon: <IconTebuSVG />
             }
         ],

@@ -252,10 +252,10 @@ export const IconFasyenkesSVG = ({ className }) => {
     )
 }
 
-export const IconRumahSVG = ({ color, className }) => {
+export const IconRumahSVG = ({ color }) => {
     return (
-        <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-            <path d="M6.5 34.125V14.625L19.5 4.875L32.5 14.625V34.125H22.75V22.75H16.25V34.125H6.5Z" fill={color} />
+        <svg width="39" height="39" viewBox="0 0 39 39" fill={color} xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.5 34.125V14.625L19.5 4.875L32.5 14.625V34.125H22.75V22.75H16.25V34.125H6.5Z" fill="#FF0000" />
         </svg>
     )
 }
