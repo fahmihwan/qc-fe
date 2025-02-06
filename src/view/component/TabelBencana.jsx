@@ -1,4 +1,4 @@
-import { IconAirPasangAbrasiSVG, IconBanjirSVG, IconCuacaEkstremSVG, IconErupsiGunungApiSVG, IconGempaBumiSVG, IconKarhutlaSVG, IconKekeringanSVG, IconMeninggalSVG, IconTanahLongsorSVG, IconTsunamiSVG } from "./IconSvg"
+import { IconAirPasangAbrasiSVG, IconBanjirSVG, IconCuacaEkstremSVG, IconErupsiGunungApiSVG, IconFasyenkesSVG, IconGempaBumiSVG, IconHilangSVG, IconKarhutlaSVG, IconKekeringanSVG, IconLukaSVG, IconMenderitaMengungsiSVG, IconMeninggalSVG, IconRumahIbadatSVG, IconRumahSVG, IconSatuanPendidikanSVG, IconTanahLongsorSVG, IconTsunamiSVG } from "./IconSvg"
 
 const formatDate = (dateString) => {
     const date = new Date(dateString)
@@ -21,10 +21,12 @@ const SingleBencana = ({icon, jlhKejadian, title}) => {
 
 const SingleDampakBencana = ({icon, jlhDampak, title}) => {
     return (
-        <div className="flex flex-row space-x-[25px]">
+        <div className="flex flex-row items-center space-x-[25px]">
+            <div className="w-[40px] items-center align-middle">
             {icon}
-            <span className="font-bold text-base text-green-custom">{jlhDampak}</span>
-            <span className="text-base font-bold dark:text-white">{title}</span>
+            </div>
+            <span className="font-bold text-base text-green-custom  min-w-[40px]">{jlhDampak}</span>
+            <span className="text-base dark:text-white min-w-[90px]">{title}</span>
         </div>
     )
 }
@@ -32,7 +34,7 @@ const SingleDampakBencana = ({icon, jlhDampak, title}) => {
 const TabelBencana = ({dataBencana}) => {
     return (
         <div className='h-[448px] border-t-[1px] flex flex-row dark:border-white'>
-            <div className='border-r-[1px] w-2/5 h-full py-4 px-9'>
+            <div className='border-r-[1px] min-w-[369px] h-full py-4 px-9'>
                 <div className="mb-[30px]">
                     <div className='font-bold dark:text-white text-base text-center'>Jumlah Kejadian</div>
                     <div className='font-bold dark:text-white text-base text-center'>per Jenis Bencana</div>
@@ -51,21 +53,99 @@ const TabelBencana = ({dataBencana}) => {
                 </div>
             </div>
 
-            <div className='flex flex-col w-full justify-between border-r-[1px]'>
-                <div className="px-[63px] pt-5 pb-6">
+            <div className='flex flex-col border-r-[1px]'>
+                <div className="px-[115px] pt-5 pb-6">
                     <div className="align-top">
                         <div className="text-center text-base font-bold dark:text-white">Dampak Bencana Alam</div>
                         <div className="text-center text-base dark:text-dark-gray-custom text-light-gray-custom">Periode {formatDate(dataBencana.startDate)} - {formatDate(dataBencana.endDate)}</div>
                     </div>
-                </div>
-                <div className="px-[63px] pt-5 pb-6">
-                    <div className="align-top">
-                        <span className="text-center text-base font-bold dark:text-white">Dampak Bencana Alam</span>
-                        <span className="text-center text-base dark:text-dark-gray-custom text-light-gray-custom">Periode {formatDate(dataBencana.startDate)} - {formatDate(dataBencana.endDate)}</span>
+
+                    <div className="flex flex-col justify-start">
+                        <div className="flex flex-row px-58 space-x-[80px] mt-5 px-[59px]">
+                            <SingleDampakBencana icon={<IconMeninggalSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.meninggal} title={"Meninggal"}/>
+                            <SingleDampakBencana icon={<IconMenderitaMengungsiSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.menderitaMengungsi} title={"Menderita dan Mengungsi"}/>
+                        </div>
+
+                        <div className="h-[1px] bg-dark-gray-custom mt-[14px]"></div>
+
+                        <div className="flex flex-row px-58 space-x-[80px] mt-[14px] px-[59px]">
+                            <SingleDampakBencana icon={<IconHilangSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.hilang} title={"Hilang"}/>
+                            <SingleDampakBencana icon={<IconLukaSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.luka} title={"Luka-luka"}/>
+                        </div>
                     </div>
-                    <div className="align-middle px-58 space-x-[100px]">
-                        <span className="text-white">dataBencana.semuaKategori.dampakPadaManusia.meninggal</span>
-                        <SingleDampakBencana icon={<IconMeninggalSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.meninggal} title={"test"}/>
+                </div>
+
+                <div className="px-[63px] pt-5 pb-6 border-t-[1px] border-white">
+                    <div className="align-top text-center text-base font-bold dark:text-white mb-[13px]">Dampak Kerusakan Bencana</div>
+                    
+                    <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-white rounded-[10px] mb-[6px]">
+                        <span className="font-bold text-base dark:text-white max-w-[70px]">Rumah Rusak</span>
+                        
+                        <div className="flex flex-row justify-evenly">
+                            <div className="flex flex-row gap-[8px] mr-[22px] items-center">
+                                <IconRumahSVG color={"#33A02C"} className={"min-w-[40px] min-h-[40px]"} />
+                                <div className="flex flex-col">
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakRingan}</div>
+                                    <div className="text-base dark:text-white -mt-2">Rusak Ringan</div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-row gap-[8px] mr-[22px] items-center">
+                                <IconRumahSVG color={"#F4BE37"} className={"min-w-[40px] min-h-[40px]"} />
+                                <div className="flex flex-col">
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakSedang}</div>
+                                    <div className="text-base dark:text-white -mt-2">Rusak Sedang</div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-row gap-[8px] mr-[22px] items-center">
+                                <IconRumahSVG color={"#E31A1C"} className={"min-w-[40px] min-h-[40px]"} />
+                                <div className="flex flex-col">
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakBerat}</div>
+                                    <div className="text-base dark:text-white -mt-2">Rusak Berat</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <div className="font-bold text-base dark:text-white">Total Rusak</div>
+                            <div className="font-bold text-3xl dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.totalRusak}</div>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-white rounded-[10px]">
+                        <span className="font-bold text-base dark:text-white max-w-[70px]">Fasilitas Rusak</span>
+                        
+                        <div className="flex flex-row justify-evenly">
+                            <div className="flex flex-row gap-[8px] mr-[22px] items-center  max-w-[150px] min-w-[150px]">
+                                <IconSatuanPendidikanSVG className={"min-w-[40px] min-h-[34px]"}/>
+                                <div className="flex flex-col">
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakRingan}</div>
+                                    <div className="text-base dark:text-white -mt-2">Satuan Pendidikan</div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
+                                <IconRumahIbadatSVG  className={"min-w-[40px] min-h-[34px]"}/>
+                                <div className="flex flex-col">
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakSedang}</div>
+                                    <div className="text-base dark:text-white -mt-2">Rumah Ibadat</div>
+                                </div>
+                            </div>
+
+                            <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
+                                <IconFasyenkesSVG className={"min-w-[40px] min-h-[34px]"}/>
+                                <div className="flex flex-col">
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakBerat}</div>
+                                    <div className="text-base dark:text-white -mt-2">Fasyankes</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-col">
+                            <div className="font-bold text-base dark:text-white">Total Rusak</div>
+                            <div className="font-bold text-3xl dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.totalRusak}</div>
+                        </div>
                     </div>
                 </div>
             </div>
