@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import menu from '../../data/menu'
-import PieChartSideBar from './PieChartSideBar'
-import { useDispatch, useSelector } from 'react-redux'
-import { setOtherSlice } from "../../redux/features/otherSlice";
 export const Sidebar = () => {
     const [dropDown, setDropDown] = useState(null);
 
