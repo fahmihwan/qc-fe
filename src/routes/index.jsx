@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Padi from "../view/foodEstate/Padi";
 import Gempa from "../view/bencana/Gempa";
+import AllCategories from "../view/foodEstate/AllCategories";
 import Login from "../view/auth/Login";
 import { ProtectedRouteAuthenticated, ProtectedRouteGuest } from "./ProtectedRoute";
 
@@ -24,6 +25,10 @@ const routes = createBrowserRouter([
         path: "/gempa",
         element: <ProtectedRouteAuthenticated element={<Gempa />} />
     },
+    {
+        path: "/all-food-estate",
+        element: <AllCategories />
+    }
 
 ])
 export default routes

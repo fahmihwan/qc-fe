@@ -15,6 +15,11 @@ const menu = [
         icon: <IconFoodEstateSVG />,
         submenu: [
             {
+                title: 'Semua Kategori',
+                link: '/all-food-estate',
+                icon: <IconDashboardSVG />
+            },
+            {
                 title: 'Padi',
                 link: '/padi',
                 icon: <IconPadiSVG />

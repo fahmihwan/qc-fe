@@ -1,4 +1,5 @@
-import { NavbarEl } from "../component/NavbarEl";
+
+import { Navbar } from "../component/Navbar";
 import { Sidebar } from "../component/Sidebar";
 
 
@@ -6,8 +7,8 @@ import { Sidebar } from "../component/Sidebar";
 export default function LayoutAdmin({ children }) {
     return (
         <>
-            <>
-                <NavbarEl />
+            <body className="dark:bg-dark-mode min-h-screen">
+                <Navbar />
                 <button
                     data-drawer-target="sidebar-multi-level-sidebar"
                     data-drawer-toggle="sidebar-multi-level-sidebar"
@@ -31,15 +32,13 @@ export default function LayoutAdmin({ children }) {
                     </svg>
                 </button>
 
-                <div className="flex flex-row justify-start">
+                <div className="flex flex-row justify-start h-full dark:bg-dark-mode">
                     <Sidebar />
-                    <div className="p-4">
-                        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-4">
-                            {children}
-                        </div>
+                    <div className="flex-grow dark:bg-dark-mode">
+                        {children}
                     </div>
                 </div>
-            </>
+            </body>
 
 
 
