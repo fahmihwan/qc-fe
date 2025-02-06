@@ -4,7 +4,7 @@ import { IconDashboardSVG } from "../view/component/IconSvg"
 const menu = [
     {
         title: 'Dashboard',
-        link: '/',
+        link: '/dashboard',
         icon: (<IconDashboardSVG />),
         submenu: null,
 
