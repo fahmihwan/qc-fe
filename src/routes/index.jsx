@@ -32,7 +32,7 @@ const routes = createBrowserRouter([
     },
     {
         path: "/all-bencana",
-        element: <AllBencanaCategories />
+        element: <ProtectedRouteAuthenticated element={<AllBencanaCategories />} />
     }
 
 ])
