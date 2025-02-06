@@ -1,5 +1,5 @@
 
-import { Navbar } from "../component/Navbar";
+import { NavbarEl } from "../component/NavbarEl";
 import { Sidebar } from "../component/Sidebar";
 
 
@@ -8,7 +8,7 @@ export default function LayoutAdmin({ children }) {
     return (
         <>
             <body className="dark:bg-dark-mode min-h-screen">
-                <Navbar />
+                <NavbarEl />
                 <button
                     data-drawer-target="sidebar-multi-level-sidebar"
                     data-drawer-toggle="sidebar-multi-level-sidebar"
