@@ -35,7 +35,7 @@ export const Sidebar = () => {
             className="top-0 left-0 z-40 h-screen transition-transform -translate-x-full sm:translate-x-0 "
             aria-label="Sidebar"
         >
-            <div className="border-r border-t-[1px] w-[273px] h-[698px]  overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+            <div className=" border-t-[1px] w-[273px] h-[698px]  overflow-y-auto bg-gray-50 dark:bg-dark-mode">
                 <ul className="space-y-2 font-medium px-6 pt-[25px]">
                     {
                         menu?.map((d, i) => {
@@ -119,13 +119,13 @@ export const Sidebar = () => {
                 </ul>
             </div >
 
-            <div className="border-r-[1px] w-[273px] border-t-[1px] border-r-white  h-[311px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
+            {/* <div className="border-r-[1px] w-[273px] border-t-[1px] border-r-white  h-[311px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
                 <span className='text-xs'>Doughnat 1</span>
                 <PieChartSideBar />
             </div>
             <div className="border-r-[1px] w-[273px] border-t-[1px] border-r-white  h-[137px] px-6 pt-[25px] overflow-y-auto bg-gray-50 dark:bg-dark-mode">
 
-            </div>
+            </div> */}
         </aside >
     )
 }

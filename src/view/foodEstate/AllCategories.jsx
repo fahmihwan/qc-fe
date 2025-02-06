@@ -7,13 +7,13 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 const AllCategories = () => {
     return (
         <LayoutAdmin>
-            <div className='w-full'>
+            <div className='w-full border-l'>
                 <div className="overflow-x-hidden border-y-[1px] py-4 px-[113px] dark:border-white">
                     <div className='dark:text-white text-2xl font-bold text-center'>DASHBOARD 360</div>
                     <div className='dark:text-white text-2xl font-bold text-center'>SEMUA KATEGORI FOOD ESTATE</div>
                 </div>
 
-                <div className='h-full p-[10px] border-b-[1px] dark:border-white'  style={{width: "100%", height: "541px"}}>
+                <div className='p-[10px] border-b-[1px] dark:border-white'  style={{width: "100%", height: "541px"}}>
                     <IndonesiaMap />
                 </div>
 

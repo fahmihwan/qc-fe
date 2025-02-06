@@ -19,22 +19,22 @@ const SingleBencana = ({icon, jlhKejadian, title}) => {
     )
 }
 
-const SingleDampakBencana = ({icon, jlhDampak, title}) => {
+const SingleDampakBencana = ({icon, jlhDampak, title, isMenderita}) => {
     return (
         <div className="flex flex-row items-center space-x-[25px]">
             <div className="w-[40px] items-center align-middle">
             {icon}
             </div>
-            <span className="font-bold text-base text-green-custom  min-w-[40px]">{jlhDampak}</span>
-            <span className="text-base dark:text-white min-w-[90px]">{title}</span>
+            <span className="font-bold text-base text-left text-green-custom  min-w-[40px]">{jlhDampak}</span>
+            <span className={`${title === 'Meninggal' || title === 'Hilang' ? 'min-w-[95px]': ' min-w-[90px]'} text-left text-base dark:text-white`}>{title}</span>
         </div>
     )
 }
 
 const TabelBencana = ({dataBencana}) => {
     return (
-        <div className='h-[448px] border-t-[1px] flex flex-row dark:border-white'>
-            <div className='border-r-[1px] min-w-[369px] h-full py-4 px-9'>
+        <div className='border-t-[1px] flex flex-row dark:border-white'>
+            <div className='border-r-[1px] min-w-[369px] py-4 px-9'>
                 <div className="mb-[30px]">
                     <div className='font-bold dark:text-white text-base text-center'>Jumlah Kejadian</div>
                     <div className='font-bold dark:text-white text-base text-center'>per Jenis Bencana</div>
@@ -63,7 +63,7 @@ const TabelBencana = ({dataBencana}) => {
                     <div className="flex flex-col justify-start">
                         <div className="flex flex-row px-58 space-x-[80px] mt-5 px-[59px]">
                             <SingleDampakBencana icon={<IconMeninggalSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.meninggal} title={"Meninggal"}/>
-                            <SingleDampakBencana icon={<IconMenderitaMengungsiSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.menderitaMengungsi} title={"Menderita dan Mengungsi"}/>
+                            <SingleDampakBencana icon={<IconMenderitaMengungsiSVG/>} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.menderitaMengungsi} isMenderita={true} title={"Menderita dan Mengungsi"}/>
                         </div>
 
                         <div className="h-[1px] bg-dark-gray-custom mt-[14px]"></div>
@@ -116,11 +116,11 @@ const TabelBencana = ({dataBencana}) => {
                     <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-white rounded-[10px]">
                         <span className="font-bold text-base dark:text-white max-w-[70px]">Fasilitas Rusak</span>
                         
-                        <div className="flex flex-row justify-evenly">
+                        <div className="flex flex-row justify-evenly items-start">
                             <div className="flex flex-row gap-[8px] mr-[22px] items-center  max-w-[150px] min-w-[150px]">
-                                <IconSatuanPendidikanSVG className={"min-w-[40px] min-h-[34px]"}/>
+                                <IconSatuanPendidikanSVG className={"min-w-[40px] min-h-[34px] -mt-5"}/>
                                 <div className="flex flex-col">
-                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakRingan}</div>
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.fasilitasRusak.satuanPendidikan}</div>
                                     <div className="text-base dark:text-white -mt-2">Satuan Pendidikan</div>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@ const TabelBencana = ({dataBencana}) => {
                             <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
                                 <IconRumahIbadatSVG  className={"min-w-[40px] min-h-[34px]"}/>
                                 <div className="flex flex-col">
-                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakSedang}</div>
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.fasilitasRusak.rumahIbadat}</div>
                                     <div className="text-base dark:text-white -mt-2">Rumah Ibadat</div>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@ const TabelBencana = ({dataBencana}) => {
                             <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
                                 <IconFasyenkesSVG className={"min-w-[40px] min-h-[34px]"}/>
                                 <div className="flex flex-col">
-                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakBerat}</div>
+                                    <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.fasilitasRusak.fasyenkes}</div>
                                     <div className="text-base dark:text-white -mt-2">Fasyankes</div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@ const TabelBencana = ({dataBencana}) => {
 
                         <div className="flex flex-col">
                             <div className="font-bold text-base dark:text-white">Total Rusak</div>
-                            <div className="font-bold text-3xl dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.totalRusak}</div>
+                            <div className="font-bold text-3xl dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.fasilitasRusak.totalRusak}</div>
                         </div>
                     </div>
                 </div>
