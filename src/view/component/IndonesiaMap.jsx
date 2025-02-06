@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import MapView from "@arcgis/core/views/MapView";
 import WebMap from "@arcgis/core/WebMap";
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
-import Zoom from "@arcgis/core/widgets/Zoom";
 import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer";
 import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol";
@@ -33,35 +32,32 @@ const IndonesiaMap = () => {
             },
             renderer: new SimpleRenderer({
                 symbol: new SimpleFillSymbol({
-                    color: [255, 0, 0, 0.1], // Indonesia diwarnai merah transparan
+                    color: [255, 0, 0, 0.1],
                     outline: {
-                        color: [255, 0, 0], // Outline merah untuk Indonesia
+                        color: [255, 0, 0],
                         width: 1,
                     },
                 })
             })
         });
 
-        // Layer untuk negara lainnya dengan warna abu-abu
         const countryLayer = new FeatureLayer({
-            url: "URL_LAYER_DARATAN_LAINNYA", // Ganti dengan URL FeatureLayer negara lain
+            url: "URL_LAYER_DARATAN_LAINNYA", 
             outFields: ["*"],
             renderer: new SimpleRenderer({
                 symbol: new SimpleFillSymbol({
-                    color: [200, 200, 200, 0.5], // Abu-abu untuk negara lain
+                    color: [200, 200, 200, 0.5],
                     outline: {
-                        color: [100, 100, 100], // Outline lebih gelap untuk negara lain
+                        color: [100, 100, 100], 
                         width: 0.5,
                     },
                 })
             })
         });
 
-        // Menambahkan kedua layer ke peta
         webMap.add(provinceLayer);
         webMap.add(countryLayer);
 
-        // Menambahkan widget navigasi
         const navToggle = new NavigationToggle({ view });
         view.ui.add(navToggle, "top-left");
 
