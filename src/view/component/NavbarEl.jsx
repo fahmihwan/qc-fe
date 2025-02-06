@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const NavbarEl = () => {
     const [theme, setTheme] = useState('dark');
     const [dropdownProfile, setDropdownProfile] = useState(true)
+    console.log(dropdownProfile);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -31,7 +32,7 @@ export const NavbarEl = () => {
                     className="flex items-center ml-11 space-x-6 rtl:space-x-reverse"
                 >
                     <img
-                        src="http://103.150.101.2:8080/assets/img/logo.png"
+                        src="/assets/img/logo2.png"
                         className="h-16"
                         alt="BIN Logo"
                     />

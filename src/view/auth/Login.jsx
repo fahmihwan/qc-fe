@@ -49,11 +49,13 @@ const Login = () => {
     }
 
     return (
-        <div className='h-[100vh] flex items-center justify-center'>
+        <div className='h-[100vh] flex items-center justify-center bg-[url("/assets/img/login_background.png")]'>
 
-            <div className='block w-[500px] p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 '>
+            <div className='bg-transparent backdrop-blur-md
+            
+            block w-[500px] p-6 border border-gray-200 rounded-lg shadow-sm  '>
                 <div className='flex justify-center'>
-                    <div className='flex flex-col '>
+                    <div className='flex flex-col text-white font-bold'>
                         <div className='text-center'>
                             LOGO
                         </div>
@@ -69,14 +71,15 @@ const Login = () => {
                     name={"email"}
                     type='email'
                     placeholder={"Email"}
+                    classNameLabel={"text-white"}
                     handleChange={(e) => handleChange(e)}
                     value={formData?.email}
                 />
-
                 <TextInputEl
                     name={"password"}
-                    type='email'
-                    placeholder={"Email"}
+                    type='password'
+                    classNameLabel={"text-white"}
+                    placeholder={"Password"}
                     handleChange={(e) => handleChange(e)}
                     value={formData?.password}
                 />
