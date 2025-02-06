@@ -3,12 +3,14 @@
 
 
 
-export const TextInputEl = ({ type = 'text', name, id, placeholder, handleChange, value, readOnly = false, className, isError = "", messageInfo = "" }) => {
+export const TextInputEl = ({ type = 'text', name, id, placeholder, handleChange,
+    classNameLabel,
+    value, readOnly = false, className, isError = "", messageInfo = "" }) => {
     return (
         <div className="mb-5">
             <label
                 htmlFor="error"
-                className="block mb-2 text-sm font-medium "
+                className={`block mb-2 text-sm font-medium ${classNameLabel ? classNameLabel : ''}`}
             >
                 {placeholder}
             </label>
