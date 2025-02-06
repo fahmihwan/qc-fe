@@ -29,6 +29,10 @@ const routes = createBrowserRouter([
     {
         path: "/all-food-estate",
         element: <ProtectedRouteAuthenticated element={<AllCategories />} />
+    },
+    {
+        path: "/all-bencana",
+        element: <ProtectedRouteAuthenticated element={<AllBencanaCategories />} />
     }
 
 ])
