@@ -1,10 +1,14 @@
+import { useEffect } from 'react'
+import { useEffectFoodEstate } from '../../hook/useEffectFoodEstate'
 import BarChartEachFoodEstate from '../component/allCharts/BarChartEachFoodEstate'
 import IndonesiaMap from '../component/IndonesiaMap'
 import DropdownCustom from '../component/miniComponent/DropdownCustom'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
-const EachCategoryFoodEstate = ({category}) => {
+const EachCategoryFoodEstate = ({ category }) => {
     const listDropDown = [2024, 2023, 2022, 2021, 2020]
+
+    const { response } = useEffectFoodEstate('Jagung'); //customeHook
 
     const dummyData = (title) => {
         return {
@@ -23,18 +27,18 @@ const EachCategoryFoodEstate = ({category}) => {
         <LayoutAdmin>
             <div className='w-full border-y-[1px] grid grid-cols-7'>
                 <div className='col-span-5'>
-                <div className="relative border-b-[1px] px-6 dark:border-white flex items-center">
-                    <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
-                        <div className="dark:text-white text-2xl font-bold">DASHBOARD 360</div>
-                        <div className="dark:text-white text-2xl font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                    <div className="relative border-b-[1px] px-6 dark:border-white flex items-center">
+                        <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
+                            <div className="dark:text-white text-2xl font-bold">DASHBOARD 360</div>
+                            <div className="dark:text-white text-2xl font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                        </div>
+
+                        <div className="ml-auto">
+                            <DropdownCustom listDropDown={listDropDown} />
+                        </div>
                     </div>
 
-                    <div className="ml-auto">
-                        <DropdownCustom listDropDown={listDropDown} />
-                    </div>
-                </div>
-
-                    <div className='p-[10px] border-b-[1px] dark:border-white'  style={{width: "100%", height: "541px"}}>
+                    <div className='p-[10px] border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
                         <IndonesiaMap />
                     </div>
 
@@ -45,9 +49,9 @@ const EachCategoryFoodEstate = ({category}) => {
                     </marquee>
                 </div>
                 <div className='col-span-2 border-x-[1px]'>
-                    <BarChartEachFoodEstate title={"Luas Panen (ku/ha)"} dummyData={dummyData("Luas Panen (ku/ha)")}/>
+                    <BarChartEachFoodEstate title={"Luas Panen (ku/ha)"} dummyData={dummyData("Luas Panen (ku/ha)")} />
                     <div className='h-[1px] dark:bg-white'></div>
-                    <BarChartEachFoodEstate title={"Produktivitas (ton)"} dummyData={dummyData("Produktivitas (ton)")}/>
+                    <BarChartEachFoodEstate title={"Produktivitas (ton)"} dummyData={dummyData("Produktivitas (ton)")} />
                 </div>
             </div>
         </LayoutAdmin>
