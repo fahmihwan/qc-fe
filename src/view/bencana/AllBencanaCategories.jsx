@@ -5,6 +5,9 @@ import TabelBencana from '../component/TabelBencana'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
 const AllBencanaCategories = () => {
+    const onProvinceClick = ({name, code}) => {
+        console.log('Ini provinsi diklik');
+    } 
     return (
         <LayoutAdmin>
             <div className='w-full border-l'>
@@ -13,7 +16,7 @@ const AllBencanaCategories = () => {
                 </div>
 
                 <div className='p-[10px] border-b-[1px] dark:border-white'  style={{width: "100%", height: "541px"}}>
-                    <IndonesiaMap />
+                <IndonesiaMap onProvinceClick={onProvinceClick}/>
                 </div>
 
                 <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">

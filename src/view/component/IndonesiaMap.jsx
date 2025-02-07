@@ -7,7 +7,7 @@ import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer";
 import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 
-const IndonesiaMap = () => {
+const IndonesiaMap = ({onProvinceClick}) => {
     const mapRef = useRef(null);
 
     useEffect(() => {
@@ -75,13 +75,15 @@ const IndonesiaMap = () => {
                             alert("Data provinsi tidak lengkap.");
                         }
                     } else {
-                        alert("Tidak ada provinsi yang diklik.");
+                        onProvinceClick()
+                        alert("Tidak ada provinsi yang diklik test.");
                     }
                 } else {
                     alert("Tidak ada provinsi yang diklik.");
                 }
             } catch (error) {
                 console.error("Error during hit test:", error);
+                onProvinceClick()
                 alert("Terjadi kesalahan saat mengambil data provinsi.");
             }
         });
