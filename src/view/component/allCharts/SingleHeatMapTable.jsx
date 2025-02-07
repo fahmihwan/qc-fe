@@ -1,5 +1,4 @@
 const SingleHeatMapTable = ({data}) => {
-    console.log(`ini dari single heatmap ${data}`)
     const items = Object.entries(data).filter(([key]) => key !== "satuan")
 
     const getColor = (value, max) => {

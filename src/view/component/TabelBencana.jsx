@@ -83,7 +83,7 @@ const TabelBencana = ({dataBencana}) => {
                         
                         <div className="flex flex-row justify-evenly">
                             <div className="flex flex-row gap-[8px] mr-[22px] items-center">
-                                <IconRumahSVG color={"#33A02C"} className={"min-w-[40px] min-h-[40px]"} />
+                                <IconRumahSVG color={"#33A02C"}/>
                                 <div className="flex flex-col">
                                     <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakRingan}</div>
                                     <div className="text-base dark:text-white -mt-2">Rusak Ringan</div>
@@ -91,7 +91,7 @@ const TabelBencana = ({dataBencana}) => {
                             </div>
 
                             <div className="flex flex-row gap-[8px] mr-[22px] items-center">
-                                <IconRumahSVG color={"#F4BE37"} className={"min-w-[40px] min-h-[40px]"} />
+                                <IconRumahSVG color={"#F4BE37"}/>
                                 <div className="flex flex-col">
                                     <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakSedang}</div>
                                     <div className="text-base dark:text-white -mt-2">Rusak Sedang</div>
@@ -99,7 +99,7 @@ const TabelBencana = ({dataBencana}) => {
                             </div>
 
                             <div className="flex flex-row gap-[8px] mr-[22px] items-center">
-                                <IconRumahSVG color={"#E31A1C"} className={"min-w-[40px] min-h-[40px]"} />
+                                <IconRumahSVG color={"#E31A1C"}/>
                                 <div className="flex flex-col">
                                     <div className="text-[25px] dark:text-white">{dataBencana.semuaKategori.dampakKerusakan.rumahRusak.rusakBerat}</div>
                                     <div className="text-base dark:text-white -mt-2">Rusak Berat</div>

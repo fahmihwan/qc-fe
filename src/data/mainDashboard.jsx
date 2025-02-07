@@ -1,91 +1,130 @@
 
 
-const mainDashboard = [
-    {
-        title: 'PADI',
-        data: [
-            {
+const mainDashboard = {
+    "message": "data fetched successfully",
+    "data": [
+        {
+            title: 'PADI',
+            data: {
                 luasPanen: 1000,
-                satuan: 'ha',
-            },
-            {
                 produktivitas: 5.2,
-                satuan: 'ton/ha',
-            },
-            {
-                produksi: 12002330,
-                satuan: 'ton',
+                produksi: 12002330
             }
-        ]
-    },
-    {
-        title: 'JAGUNG',
-        data: [
-            {
+        },
+        {
+            title: 'JAGUNG',
+            data: {
                 luasPanen: 1000,
-                satuan: 'ha',
-            },
-            {
                 produktivitas: 5.2,
-                satuan: 'ton/ha',
-            },
-            {
-                produksi: 12002330,
-                satuan: 'ton',
+                produksi: 12002330
             }
-        ]
-    },
-    {
-        title: 'SINGKONG',
-        data: [
-            {
+        },
+        {
+            title: 'SINGKONG',
+            data: {
                 luasPanen: 1000,
-                satuan: 'ha',
-            },
-            {
                 produktivitas: 5.2,
-                satuan: 'ton/ha',
-            },
-            {
-                produksi: 12002330,
-                satuan: 'ton',
+                produksi: 12002330
             }
-        ]
-    },
-    {
-        title: 'KEDELAI',
-        data: [
-            {
+        },
+        {
+            title: 'KEDELAI',
+            data: {
                 luasPanen: 1000,
-                satuan: 'ha',
-            },
-            {
                 produktivitas: 5.2,
-                satuan: 'ton/ha',
-            },
-            {
-                produksi: 12002330,
-                satuan: 'ton',
+                produksi: 12002330
             }
-        ]
-    },
-    {
-        title: 'TEBU',
-        data: [
-            {
+        },
+        {
+            title: 'TEBU',
+            data: {
                 luasPanen: 1000,
-                satuan: 'ha',
-            },
-            {
                 produktivitas: 5.2,
-                satuan: 'ton/ha',
-            },
-            {
-                produksi: 12002330,
-                satuan: 'ton',
+                produksi: 12002330
             }
-        ]
-    }
-]
+        },
+        {
+            title: 'BANJIR',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'CUACA EKSTREM',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'TANAH LONGSOR',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'KARHUTLA',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'GELOMBANG PASANG',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'GEMPA BUMI',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'KEKERINGAN',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'ERUPSI',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+        {
+            title: 'TSUNAMI',
+            data: {
+                meninggal: 2,
+                hilang: 2,
+                menderitaDanMengungsi: 3227,
+                lukaLuka: 2
+            }
+        },
+    ]
+}
 
 export default mainDashboard

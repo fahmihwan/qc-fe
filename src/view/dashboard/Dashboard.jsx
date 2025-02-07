@@ -36,7 +36,7 @@ const Dashboard = () => {
                     <CardMainDashboard allDataFoodEstate={mainDashboard} />
                 </div>
 
-                <div className='mt-[15px] h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
+                <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
                     <IndonesiaMap />
                 </div>
             </div>
