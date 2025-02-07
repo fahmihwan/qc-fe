@@ -1,10 +1,10 @@
 import SingleHeatMapTable from "./SingleHeatMapTable"
 
-const TableForFoodEstate = ({title, dummyData}) => {
-    const getYear = new Date(dummyData.data.startDate).getFullYear()
+const TableForFoodEstate = ({title, data}) => {
+    const getYear = new Date(data.data.startDate).getFullYear()
 
-    const selectedData = title == "Luas Panen (ha)" ? dummyData.data.totalLahan : dummyData.data.produktivitas
-    console.log(dummyData.data.produktivitas)
+    const selectedData = title == "Luas Panen (ha)" ? data.data.totalLahan : data.data.produktivitas
+    // console.log(data.data.produktivitas)
 
     return (
         <>
