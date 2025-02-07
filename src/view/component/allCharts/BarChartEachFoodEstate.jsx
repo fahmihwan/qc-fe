@@ -57,12 +57,12 @@ const BarChart = ({dummyData}) => {
     return <Bar data={dummyData} options={options} height={"274px"}/>
 }
 
-const BarChartEachFoodEstate = ({title, dummyData}) => {
+const BarChartEachFoodEstate = ({title, data}) => {
     return (
         <div className="px-[29px] py-[15px]">
             <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
             <div className="h-[274px]">
-                <BarChart dummyData={dummyData}/>
+                <BarChart dummyData={data}/>
             </div>
         </div>
     )

@@ -4,11 +4,11 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const BarChart = ({ dummyData, options }) => {
-    return <Bar data={dummyData} options={options} height={"274px"} />;
+const BarChart = ({ data, options }) => {
+    return <Bar data={data} options={options} height={"350px"} width={"500px"}/>;
 }
 
-const BarChartTumpukEachFoodEstate = ({ title, dummyData }) => {
+const BarChartTumpukEachFoodEstate = ({ title, data }) => {
     const options = {
         responsive: true,
         plugins: {
@@ -34,7 +34,7 @@ const BarChartTumpukEachFoodEstate = ({ title, dummyData }) => {
                 },
                 grid: {
                     display: false
-                }
+                },
             },
             y: {
                 stacked: true, 
@@ -52,12 +52,15 @@ const BarChartTumpukEachFoodEstate = ({ title, dummyData }) => {
     };
 
     return (
-        <div className="px-[29px] py-[15px]">
-            <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-            <div className="h-[274px]">
-                <BarChart dummyData={dummyData} options={options} />
+        <>
+            <div className="px-[29px] py-[15px] h-[306px] flex flex-col">
+                <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
+                <div className="h-full flex flex-grow items-center justify-center">
+                    <BarChart data={data} options={options} />
+                </div>
             </div>
-        </div>
+            <div className='h-[1px] dark:bg-white'></div>
+        </>
     );
 }
 

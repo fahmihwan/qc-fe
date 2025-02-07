@@ -7,7 +7,9 @@ import { MapEl } from '../component/Map';
 
 
 const Dashboard = () => {
-
+    const onProvinceClick = ({name, code}) => {
+        console.log('Ini provinsi diklik');
+    } 
 
 
     return (
@@ -37,7 +39,7 @@ const Dashboard = () => {
                 </div>
 
                 <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                    <IndonesiaMap />
+                <IndonesiaMap onProvinceClick={onProvinceClick}/>
                 </div>
             </div>
         </LayoutAdmin>

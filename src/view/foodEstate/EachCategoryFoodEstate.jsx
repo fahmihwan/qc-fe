@@ -18,6 +18,9 @@ const EachCategoryFoodEstate = ({category}) => {
             ]
         }
     }
+    const onProvinceClick = ({name, code}) => {
+        console.log('Ini provinsi diklik');
+    } 
 
     return (
         <LayoutAdmin>
@@ -35,7 +38,7 @@ const EachCategoryFoodEstate = ({category}) => {
                 </div>
 
                     <div className='p-[10px] border-b-[1px] dark:border-white'  style={{width: "100%", height: "541px"}}>
-                        <IndonesiaMap />
+                    <IndonesiaMap onProvinceClick={onProvinceClick}/>
                     </div>
 
                     <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">
@@ -45,9 +48,9 @@ const EachCategoryFoodEstate = ({category}) => {
                     </marquee>
                 </div>
                 <div className='col-span-2 border-x-[1px]'>
-                    <BarChartEachFoodEstate title={"Luas Panen (ku/ha)"} dummyData={dummyData("Luas Panen (ku/ha)")}/>
+                    <BarChartEachFoodEstate title={"Luas Panen (ku/ha)"} data={dummyData("Luas Panen (ku/ha)")}/>
                     <div className='h-[1px] dark:bg-white'></div>
-                    <BarChartEachFoodEstate title={"Produktivitas (ton)"} dummyData={dummyData("Produktivitas (ton)")}/>
+                    <BarChartEachFoodEstate title={"Produktivitas (ton)"} data={dummyData("Produktivitas (ton)")}/>
                 </div>
             </div>
         </LayoutAdmin>
