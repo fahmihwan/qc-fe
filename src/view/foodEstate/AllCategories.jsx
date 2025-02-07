@@ -7,6 +7,7 @@ import TableForFoodEstate from '../component/allCharts/TableForFoodEstate'
 import IndonesiaMap from '../component/IndonesiaMap'
 import DropdownCustom from '../component/miniComponent/DropdownCustom'
 import LayoutAdmin from '../layout/LayoutAdmin'
+import { useEffectOtherApi } from '../../hook/useEffectOtherApi'
 
 const AllCategories = () => {
     const listDropDown = [2024, 2023, 2022, 2021, 2020]
@@ -105,13 +106,14 @@ const AllCategories = () => {
             }
         ]
     }
-    
+
     const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     const onProvinceClick = () => {
         setIsProvinceClicked(true)
         console.log('Ini provinsi diklik  test');
-    } 
+    }
 
+    const { response, error } = useEffectOtherApi(2024);
     return (
         <LayoutAdmin>
             <div className='w-full border-y-[1px] grid grid-cols-7'>
@@ -127,28 +129,28 @@ const AllCategories = () => {
                         </div>
                     </div>
 
-                    <div className='p-[10px] dark:border-white border-b-[1px]'  style={{width: "100%", height: "541px"}}>
-                        <IndonesiaMap onProvinceClick={onProvinceClick}/>
+                    <div className='p-[10px] dark:border-white border-b-[1px]' style={{ width: "100%", height: "541px" }}>
+                        <IndonesiaMap onProvinceClick={onProvinceClick} />
                     </div>
 
                     <div className='grid grid-cols-2'>
                         <div className=' dark:border-white border-r-[1px] col-span-1 dark:text-white px-6 pt-4'>
-                            <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable}/>
+                            <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} />
                         </div>
                         <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4'>
-                            <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable}/>
+                            <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} />
                         </div>
                     </div>
                 </div>
 
                 {isProvinceClicked ?
                     <div className='col-span-2 border-x-[1px]'>
-                        <PieChartAfterFilteredByProvinceAllFoodEstate title={"Luas Panen (ha) Provinsi A"} data={dummyDataForSpecifiedProvince}/>
-                        <PieChartAfterFilteredByProvinceAllFoodEstate title={"Produktivitas (ku/ha) Provinsi A"} data={dummyDataForSpecifiedProvince}/>
+                        <PieChartAfterFilteredByProvinceAllFoodEstate title={"Luas Panen (ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
+                        <PieChartAfterFilteredByProvinceAllFoodEstate title={"Produktivitas (ku/ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
                     </div> :
                     <div className='col-span-2 border-x-[1px]'>
-                        <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={dummyData}/>
-                        <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={dummyData}/>
+                        <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={dummyData} />
+                        <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={dummyData} />
                     </div>
                 }
             </div>
