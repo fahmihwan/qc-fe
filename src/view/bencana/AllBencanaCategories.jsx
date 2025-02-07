@@ -5,18 +5,18 @@ import TabelBencana from '../component/TabelBencana'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
 const AllBencanaCategories = () => {
-    const onProvinceClick = ({name, code}) => {
+    const onProvinceClick = ({ name, code }) => {
         console.log('Ini provinsi diklik');
-    } 
+    }
     return (
         <LayoutAdmin>
-            <div className='w-full border-l'>
-                <div className="overflow-x-hidden border-y-[1px] py-4 px-[113px] dark:border-white">
+            <div className='w-full '>
+                <div className="overflow-x-hidden py-4 px-[113px]">
                     <div className='dark:text-white text-2xl font-bold text-center'>GEOSPASIAL DATA BENCANA INDONESIA</div>
                 </div>
 
-                <div className='p-[10px] border-b-[1px] dark:border-white'  style={{width: "100%", height: "541px"}}>
-                <IndonesiaMap onProvinceClick={onProvinceClick}/>
+                <div className='p-[10px] border-b-[1px]' style={{ width: "100%", height: "541px" }}>
+                    <IndonesiaMap onProvinceClick={onProvinceClick} />
                 </div>
 
                 <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">
@@ -31,7 +31,7 @@ const AllBencanaCategories = () => {
                     <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
                 </marquee>
 
-                <TabelBencana dataBencana={allBencana}/>
+                <TabelBencana dataBencana={allBencana} />
             </div>
         </LayoutAdmin>
     )

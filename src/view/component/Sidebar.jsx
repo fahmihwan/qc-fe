@@ -7,10 +7,15 @@ export const Sidebar = () => {
     return (
         <aside
             id="sidebar-multi-level-sidebar"
-            className="top-0 left-0 z-40  transition-transform -translate-x-full sm:translate-x-0 border"
-            aria-label="Sidebar"
+            className="top-0 left-0 z-40  transition-transform -translate-x-full sm:translate-x-0  
+                        border-r border-gray-500"
+            aria-label="Sidebar
+            "
         >
-            <div className="border-r  w-[273px] h-[100%] overflow-y-auto bg-white dark:bg-dark-mode">
+            <div className=" w-[273px] h-screen overflow-y-auto bg-white
+
+            dark:bg-dark-mode
+            ">
                 <ul className="space-y-2 font-medium px-6 pt-[25px]">
                     {
                         menu?.map((d, i) => {
@@ -64,7 +69,10 @@ export const Sidebar = () => {
                                             </svg>
                                         </button>
 
-                                        <ul id="dropdown-example" className={`${d?.title == dropDown ? 'block' : 'hidden'} py-2 space-y-2   `}>
+                                        <ul id="dropdown-example"
+                                            className={`${d?.title == dropDown ? 'max-h-[1000px]' : 'max-h-0'
+                                                } overflow-hidden py-0 space-y-2 transform transition-all duration-300 ease-in-out`}
+                                        >
                                             {d?.submenu?.length != 0 && d?.submenu?.map((x, index) => {
                                                 return (
                                                     <li key={index} onClick={() => setDropDown(d?.title)}>

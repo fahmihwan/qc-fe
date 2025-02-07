@@ -12,6 +12,7 @@ export default {
     extend: {
       colors: {
         'dark-mode': '#1B1B1B',
+        'dark-mode-v2': '#232326',
         'red-custom': '#E31A1C',
         'green-custom': '#33A02C',
         'yellow-custom': '#F4BE37',

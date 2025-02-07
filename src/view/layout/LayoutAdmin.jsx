@@ -8,10 +8,8 @@ export default function LayoutAdmin({ children }) {
 
     return (
 
-        <div className="dark:bg-dark-mode min-h-screen">
+        <div className="dark:bg-dark-mode min-h-screen ">
             <NavbarEl />
-
-
 
             <button
                 data-drawer-target="sidebar-multi-level-sidebar"
@@ -38,7 +36,7 @@ export default function LayoutAdmin({ children }) {
 
             <div className="flex flex-row justify-start h-full dark:bg-dark-mode">
                 <Sidebar />
-                <div className="flex-grow dark:bg-dark-mode">
+                <div className="flex-grow dark:bg-dark-mode-v2">
                     {children}
                 </div>
             </div>
