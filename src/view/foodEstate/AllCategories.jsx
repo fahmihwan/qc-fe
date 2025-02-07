@@ -8,6 +8,29 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 
 const AllCategories = () => {
     const listDropDown = [2024, 2023, 2022, 2021, 2020]
+    const dummyDataForTable = {
+        "message": "data fetch successfully",
+        "data": {
+            "startDate": "2024-01-01T00:00:00Z",
+            "endDate": "2024-01-29T23:59:59Z",
+            "totalLahan": {
+                "satuan": "ha",
+                "padi": 10024212,
+                "jagung": 1241353,
+                "kedelai": 13892735,
+                "tebu": 93935983,
+                "singkong": 87982783
+            },
+            "produktivitas": {
+                "satuan": "ku/ha",
+                "padi": 298383,
+                "jagung": 124,
+                "kedelai": 329,
+                "tebu": 93872,
+                "singkong": 9827
+            }
+        }
+    }
 
     const dummyData = {
         labels: [2020, 2021, 2022, 2023, 2024],
@@ -66,17 +89,17 @@ const AllCategories = () => {
 
                     <div className='grid grid-cols-2'>
                         <div className=' dark:border-white border-r-[1px] col-span-1 dark:text-white px-6 pt-4'>
-                            <TableForFoodEstate title={"Luas Lahan (ton)"} />
+                            <TableForFoodEstate title={"Luas Panen (ha)"} dummyData={dummyDataForTable}/>
                         </div>
                         <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4'>
-                            <TableForFoodEstate title={"Produktivitas (ku/ha)"} />
+                            <TableForFoodEstate title={"Produktivitas (ku/ha)"} dummyData={dummyDataForTable}/>
                         </div>
                     </div>
                 </div>
                 <div className='col-span-2 border-x-[1px]'>
-                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ku/ha)"} dummyData={dummyData}/>
+                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} dummyData={dummyData}/>
                     <div className='h-[1px] dark:bg-white'></div>
-                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ton)"} dummyData={dummyData}/>
+                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} dummyData={dummyData}/>
                 </div>
             </div>
         </LayoutAdmin>

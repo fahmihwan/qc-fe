@@ -12,7 +12,7 @@ const Dashboard = () => {
 
     return (
         <LayoutAdmin>
-            <div className='w-full min-h-screen dark:bg-dark-mode border-l'>
+            <div className='w-full min-h-screen dark:bg-dark-mode'>
                 <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] dark:border-white">
                     {/* <div className="flex w-full min-w-full gap-16 animate-marquee">
                         {[...Array(2)].map((_, i) => (
@@ -36,7 +36,7 @@ const Dashboard = () => {
                     <CardMainDashboard allDataFoodEstate={mainDashboard} />
                 </div>
 
-                <div className='mt-[15px] h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
+                <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
                     <IndonesiaMap />
                 </div>
             </div>
