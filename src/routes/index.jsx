@@ -29,23 +29,23 @@ const routes = createBrowserRouter([
     },
     {
         path: "/padi",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"padi"} />} />
+        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Padi"} />} />
     },
     {
         path: "/jagung",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"jagung"} />} />
+        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Jagung"} />} />
     },
     {
         path: "/singkong",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"singkong"} />} />
+        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Singkong"} />} />
     },
     {
         path: "/kedelai",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"kedelai"} />} />
+        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Kedelai"} />} />
     },
     {
         path: "/tebu",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"tebu"} />} />
+        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Tebu"} />} />
     },
 
     {

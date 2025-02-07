@@ -133,10 +133,10 @@ const AllCategories = () => {
 
                     <div className='grid grid-cols-2'>
                         <div className=' dark:border-white border-r-[1px] col-span-1 dark:text-white px-6 pt-4'>
-                            <TableForFoodEstate title={"Luas Panen (ha)"} dummyData={dummyDataForTable}/>
+                            <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable}/>
                         </div>
                         <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4'>
-                            <TableForFoodEstate title={"Produktivitas (ku/ha)"} dummyData={dummyDataForTable}/>
+                            <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable}/>
                         </div>
                     </div>
                 </div>
