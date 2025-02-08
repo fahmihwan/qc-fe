@@ -28,10 +28,15 @@ const Login = () => {
         const isAuth = await authenticated(formData);
 
         if (isAuth[1] === true) {
+            console.log(isAuth);
 
+            // firstName: '',
+            // lastName: '',
+            // email: '',
+            // username: '',
             dispatch(setUserSlice({
-                fistName: '',
-                lastName: '',
+                firstName: isAuth[2].first_name,
+                lastName: isAuth[2].last_name,
                 email: isAuth[2].email,
                 username: isAuth[2].username,
             }))
