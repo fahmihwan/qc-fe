@@ -116,25 +116,37 @@ const AllCategories = () => {
     const { response, error } = useEffectOtherApi(2024);
     return (
         <LayoutAdmin>
-            <div className='w-full border-y-[1px] grid grid-cols-7'>
-                <div className='col-span-5'>
-                    <div className="relative border-b-[1px] px-6 dark:border-white flex items-center">
-                        <div className="absolute left-1/2 transform -translate-x-1/2 text-center h-20 flex flex-col justify-center">
-                            <div className="dark:text-white text-2xl text-center font-bold">DASHBOARD 360</div>
-                            <div className="dark:text-white text-2xl text-center font-bold">SEMUA KATEGORI FOOD ESTATE</div>
-                        </div>
+            <div className='w-full border-y-[1px] xl:grid lg:grid-cols-7'>
+                <div className='col-span-12 lg:col-span-5 '>
 
-                        <div className="ml-auto">
-                            <DropdownCustom listDropDown={listDropDown} />
+                    {/* header */}
+                    <div className=" border-b-[1px]  dark:border-white flex ">
+                        <div className="grid grid-cols-3 gap-4 lg:py-5 px-2 w-full items-center">
+                            <div className="   rounded flex  items-centers">
+                                <div className="flex-col justify-center block lg:hidden items-center ">
+                                    <div className="dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
+                                    <div className="dark:text-white text-xs lg:text-2xl  font-bold">SEMUA KATEGORI FOOD ESTATE</div>
+                                </div>
+                            </div>
+                            <div className=" text-white rounded ">
+                                <div className="text-center h-20  flex-col justify-center hidden lg:block">
+                                    <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
+                                    <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">SEMUA KATEGORI FOOD ESTATE</div>
+                                </div>
+                            </div>
+                            <div className=" text-white flex justify-end">
+                                <DropdownCustom listDropDown={listDropDown} />
+                            </div>
                         </div>
                     </div>
+
 
                     <div className='p-[10px] dark:border-white border-b-[1px]' style={{ width: "100%", height: "541px" }}>
                         <IndonesiaMap onProvinceClick={onProvinceClick} />
                     </div>
 
-                    <div className='grid grid-cols-2'>
-                        <div className=' dark:border-white border-r-[1px] col-span-1 dark:text-white px-6 pt-4'>
+                    <div className='grid md:grid-cols-2'>
+                        <div className=' dark:border-white mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4'>
                             <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} />
                         </div>
                         <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4'>
@@ -143,16 +155,19 @@ const AllCategories = () => {
                     </div>
                 </div>
 
+                {/* grafik samping kanan */}
+                {/* <div className='w-full border'> */}
                 {isProvinceClicked ?
-                    <div className='col-span-2 border-x-[1px]'>
+                    <div className='w-full xl:col-span-2 border-x-[1px]'>
                         <PieChartAfterFilteredByProvinceAllFoodEstate title={"Luas Panen (ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
                         <PieChartAfterFilteredByProvinceAllFoodEstate title={"Produktivitas (ku/ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
                     </div> :
-                    <div className='col-span-2 border-x-[1px]'>
+                    <div className='w-full xl:col-span-2 border-x-[1px]'>
                         <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={dummyData} />
                         <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={dummyData} />
                     </div>
                 }
+
             </div>
         </LayoutAdmin>
     )

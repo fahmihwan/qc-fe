@@ -34,11 +34,12 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
 
     return (
         <>
-            <Navbar fluid rounded className="dark:!bg-dark-mode border-b">
+            <Navbar fluid rounded className="dark:!bg-dark-mode border-b ">
                 <button
                     onClick={() => handleDrawer(true)}
                     type="button"
-                    className="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="inline-flex
+                    items-center p-2 mt-2 ms-0 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 >
                     <span className="sr-only">Open sidebar</span>
                     <svg
@@ -60,7 +61,7 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
                 <Link
                     to="/dashboard"
                     // href="https://flowbite.com/"
-                    className="items-center  space-x-2 md:space-x-4 rtl:space-x-reverse flex"
+                    className="items-center  space-x-2 md:space-x-4s rtl:space-x-reverse flex"
                 >
                     <img
                         src="/assets/img/logo2.png"
@@ -68,11 +69,12 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
                         alt="BIN Logo"
                     />
                     <div className="flex flex-col items-start">
-                        <div className="text-sm md:text-lg font-bold whitespace-nowrap dark:text-white">
+                        <div className="text-xs md:text-lg font-bold whitespace-nowrap dark:text-white">
                             DASHBOARD 360
                         </div>
-                        <div className="text-xs font-bold whitespace-nowrap dark:text-white">
-                            Asisgo | Monitoring & Analytic Platform
+                        <div className="text-xs  font-bold whitespace-nowrap dark:text-white">
+                            Monitoring & Analytic Platform
+                            {/* | Monitoring & Analytic Platform */}
                         </div>
 
                     </div>
