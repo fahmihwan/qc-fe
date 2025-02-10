@@ -5,9 +5,11 @@ import TabelBencana from '../component/TabelBencana'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
 const AllBencanaCategories = () => {
-    const onProvinceClick = ({ name, code }) => {
-        console.log('Ini provinsi diklik');
+    const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
+        setIsProvinceClicked(true)
+        console.log('Ini provinsi diklik  test');
     }
+    
     return (
         <LayoutAdmin>
             <div className='w-full '>

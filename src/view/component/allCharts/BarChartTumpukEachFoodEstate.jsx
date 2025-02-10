@@ -59,7 +59,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
                     <BarChart data={data} options={options} />
                 </div>
             </div>
-            <div className='h-[1px] dark:bg-white'></div>
+            <div className='h-[0.5px] dark:bg-white'></div>
         </>
     );
 }

@@ -9,9 +9,10 @@ import { useEffect, useState } from 'react';
 
 
 const Dashboard = () => {
-    const onProvinceClick = ({name, code}) => {
-        console.log('Ini provinsi diklik');
-    } 
+    const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
+        setIsProvinceClicked(true)
+        console.log('Ini provinsi diklik  test');
+    }
 
     const { response, error } = useEffectDashboardCards()
     const [isLoading, setIsLoading] = useState(true)

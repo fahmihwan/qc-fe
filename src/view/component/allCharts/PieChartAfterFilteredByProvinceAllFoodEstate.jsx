@@ -83,7 +83,7 @@ const PieChartAfterFilteredByProvinceAllFoodEstate = ({title, data}) => {
 
     return (
         <>
-            <div className="px-[29px] py-[15px] h-[306px] flex flex-col">
+            <div className="px-[29px] py-[15px] h-[326px] flex flex-col">
                 <div className="dark:text-white font-bold text-xl lg:-mb-4 mb-2">{title} Tahun {getYear}</div>
                 <div className="h-[250px] flex flex-row items-center justify-center">
                     <div className="w-72 flex items-center align-middle justify-center">

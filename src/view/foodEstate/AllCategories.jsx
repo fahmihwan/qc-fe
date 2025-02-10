@@ -10,6 +10,7 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 import { useEffectOtherApi } from '../../hook/useEffectOtherApi'
 
 const AllCategories = () => {
+    const [selectedProvinceName, setSelectedProvinceName] = useState('')
     const listDropDown = [2024, 2023, 2022, 2021, 2020]
     const dummyDataForTable = {
         "message": "data fetch successfully",
@@ -108,9 +109,10 @@ const AllCategories = () => {
     }
 
     const [isProvinceClicked, setIsProvinceClicked] = useState(false)
-    const onProvinceClick = () => {
+    const onProvinceClick = (namaProvinsi, kodeProvinsi) => {
         setIsProvinceClicked(true)
-        console.log('Ini provinsi diklik  test');
+        console.log('Ini provinsi diklik test');
+        setSelectedProvinceName(namaProvinsi)
     }
 
     const { response, error } = useEffectOtherApi(2024);
@@ -146,11 +148,11 @@ const AllCategories = () => {
                     </div>
 
                     {!isProvinceClicked &&
-                     <div className='grid md:grid-cols-2'>
-                        <div className=' dark:border-white mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4'>
+                     <div className='grid md:grid-cols-2 border-b-[1px]     '>
+                        <div className=' dark:border-white mb-10 md:mb-0 border-r-[1px] col-span-1 dark:text-white px-6 pt-4'>
                             <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} />
                         </div>
-                        <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4 sm:border-t-[1px] sm:dark:border-white'>
+                        <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4  sm:dark:border-white'>
                             <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} />
                         </div>
                     </div>
@@ -160,11 +162,11 @@ const AllCategories = () => {
                 {/* grafik samping kanan */}
                 {/* <div className='w-full border'> */}
                 {isProvinceClicked ?
-                    <div className='w-full xl:col-span-2 border-x-[1px] sm:border-t-[1px] sm:dark:border-white'>
-                        <PieChartAfterFilteredByProvinceAllFoodEstate title={"Luas Panen (ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
-                        <PieChartAfterFilteredByProvinceAllFoodEstate title={"Produktivitas (ku/ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
+                    <div className='w-full xl:col-span-2 border-x-[1px] sm:dark:border-white'>
+                        <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={dummyDataForSpecifiedProvince} />
+                        <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={dummyDataForSpecifiedProvince} />
                     </div> :
-                    <div className='w-full xl:col-span-2 border-x-[1px] sm:border-t-[1px] sm:dark:border-white'>
+                    <div className='w-full xl:col-span-2 border-x-[1px]  sm:dark:border-white'>
                         <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={dummyData} />
                         <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={dummyData} />
                     </div>
