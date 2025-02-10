@@ -70,7 +70,7 @@ const EachCategoryFoodEstate = ({ category }) => {
             ]
         }
     }
-    const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
+    const onProvinceClick = ({ namaProvinsi, kodeProvinsi }) => {
         setIsProvinceClicked(true)
         console.log('Ini provinsi diklik  test');
     }

@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const PieChart = ({data}) => {
+const PieChart = ({ data }) => {
     const chartRef = useRef(null);
-    const chartInstance = useRef(null); 
+    const chartInstance = useRef(null);
     console.log
 
     useEffect(() => {
-        if(chartInstance.current){
+        if (chartInstance.current) {
             chartInstance.current.destroy()
         }
 
@@ -28,10 +28,10 @@ const PieChart = ({data}) => {
                         ],
                         backgroundColor: [
                             "rgba(178, 223, 138, 1)",
-                            "rgba(244, 190, 55, 1)", 
-                            "rgba(15, 44, 64, 1)", 
-                            "rgba(138, 28, 114, 1)", 
-                            "rgba(21, 93, 33, 1)", 
+                            "rgba(244, 190, 55, 1)",
+                            "rgba(15, 44, 64, 1)",
+                            "rgba(138, 28, 114, 1)",
+                            "rgba(21, 93, 33, 1)",
                         ],
                         borderWidth: 1,
                     },
@@ -69,16 +69,16 @@ const PieChart = ({data}) => {
         });
 
         return () => {
-            if(chartInstance.current){
+            if (chartInstance.current) {
                 chartInstance.current.destroy()
             }
         }
     }, [data])
-    
+
     return <canvas ref={chartRef} className="h-full w-full" />
 }
 
-const PieChartAfterFilteredByProvinceAllFoodEstate = ({title, data}) => {
+const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data }) => {
     const getYear = new Date(data.data.startDate).getFullYear()
 
     return (

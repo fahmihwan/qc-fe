@@ -10,21 +10,18 @@ export const Sidebar = ({ isDrawerOpen, handleDrawer }) => {
             <aside
                 id="sidebar-multi-level-sidebar"
                 className="top-0 left-0 z-40  transition-transform -translate-x-full sm:translate-x-0  
-                        border-r border-t dark:border-white lg:block hidden"
-                aria-label="Sidebar
-            "
+                         lg:block hidden border-r dark:border-dark-mode-border"
+                aria-label="Sidebar"
             >
-                <div className=" w-[273px] h-screen overflow-y-auto bg-white dark:bg-dark-mode
-            ">
+                <div className=" w-[273px] h-screen overflow-y-auto bg-white dark:bg-dark-mode-v2">
                     <MenuEl menu={menu} dropDown={dropDown} setDropDown={setDropDown} />
 
                 </div>
-
             </aside >
 
 
 
-            <Drawer open={isDrawerOpen} onClose={() => handleDrawer(false)} className='dark:!bg-dark-mode'>
+            <Drawer open={isDrawerOpen} onClose={() => handleDrawer(false)} className='dark:!bg-dark-mode border-r'>
                 <Drawer.Header title="Menu" />
                 <Drawer.Items>
                     <MenuEl menu={menu} dropDown={dropDown} setDropDown={setDropDown} />
