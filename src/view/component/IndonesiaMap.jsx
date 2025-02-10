@@ -8,10 +8,11 @@ import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 import { provinsiData } from "../../data/38provinsi";
 
-const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true }) => {
+const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverable = true }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
-    const [selectedProvince, setSelectedProvince] = useState(null); // Untuk menyimpan provinsi yang diklik
+    const [selectedProvince, setSelectedProvince] = useState(null); 
+    const [hoveredProvince, setHoveredProvince] = useState(null)
 
     useEffect(() => {
         const webMap = new WebMap({ basemap: "streets-navigation-vector" });
@@ -96,8 +97,27 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true }) => {
             }
         });
 
+        view.on("pointer-move", async (event) => {
+            if (!hoverable) return;
+            try {
+                const hitTestResponse = await view.hitTest(event);
+                const hoveredGraphic = hitTestResponse.results.find(
+                    (result) => result.graphic.layer === graphicsLayer
+                )?.graphic;
+
+                if (hoveredGraphic) {
+                    const { KODE_PROV } = hoveredGraphic.attributes;
+                    setHoveredProvince(KODE_PROV); // Set provinsi yang sedang di-hover
+                } else {
+                    setHoveredProvince(null); // Reset hover jika kursor keluar dari provinsi
+                }
+            } catch (error) {
+                console.error("Error saat hover peta:", error);
+            }
+        });
+
         return () => view.destroy();
-    }, [clickable]);
+    }, [clickable, hoverable]);
 
     // **Efek perubahan warna ketika provinsi dipilih**
     useEffect(() => {
@@ -112,6 +132,11 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true }) => {
                     color: [0, 0, 255, 0.5], 
                     outline: { color: [0, 0, 150], width: 1 },
                 });
+            } else if (graphic.attributes?.KODE_PROV === hoveredProvince) {
+                graphic.symbol = new SimpleFillSymbol({
+                    color: [0, 0, 255, 0.2], 
+                    outline: { color: [0, 0, 150], width: 1 },
+                });
             } else {
                 graphic.symbol = new SimpleFillSymbol({
                     color: [0, 0, 255, 0], 
@@ -119,7 +144,7 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true }) => {
                 });
             }
         });
-    }, [selectedProvince, mapView]);
+    }, [selectedProvince, hoveredProvince, mapView]);
 
     return <div ref={mapRef} className="w-full h-full" />;
 };

@@ -100,9 +100,9 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>
                                 </div>
-                                <div className=" text-white flex justify-end">
+                                {/* <div className=" text-white flex justify-end">
                                     <DropdownCustom listDropDown={listDropDown} />
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 

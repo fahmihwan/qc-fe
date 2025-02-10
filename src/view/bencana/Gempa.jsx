@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import LayoutAdmin from '../layout/LayoutAdmin'
 import { IconGempaSVG, IconPointMapSVG, IconPointSVG, IconXSVG } from '../component/IconSvg'
 import IndonesiaMap from '../component/IndonesiaMap'
+import { TableForMagnitudoFive } from '../component/allGempaTables/TableForMagnitudoFive'
+import { TableForDirasakan } from '../component/allGempaTables/TableForDirasakan'
+import { TableForBerpotensiTsunami } from '../component/allGempaTables/TableForBerpotensiTsunami'
+import { TableForRealTime } from '../component/allGempaTables/TableForRealTime'
 
 const Gempa = () => {
     const [activeCategory, setActiveCategory] = useState("TERKINI")
@@ -38,6 +42,61 @@ const Gempa = () => {
         },
     ]
 
+    const dummyDataMagnitudoFive = {
+        "Infogempa": {
+          "gempa": [
+            {
+              "Tanggal": "08 Feb 2025",
+              "Jam": "12:00:33 WIB",
+              "DateTime": "2025-02-08T05:00:33+00:00",
+              "Coordinates": "-6.10,103.20",
+              "Lintang": "6.10 LS",
+              "Bujur": "103.20 BT",
+              "Magnitude": "5.2",
+              "Kedalaman": "10 km",
+              "Wilayah": "130 km BaratDaya PESISIRBARAT-LAMPUNG",
+              "Potensi": "Tidak berpotensi tsunami"
+            },
+            {
+              "Tanggal": "08 Feb 2025",
+              "Jam": "01:32:18 WIB",
+              "DateTime": "2025-02-07T18:32:18+00:00",
+              "Coordinates": "-1.86,138.93",
+              "Lintang": "1.86 LS",
+              "Bujur": "138.93 BT",
+              "Magnitude": "5.3",
+              "Kedalaman": "10 km",
+              "Wilayah": "20 km Tenggara SARMI-PAPUA",
+              "Potensi": "Tidak berpotensi tsunami"
+            },
+            {
+              "Tanggal": "07 Feb 2025",
+              "Jam": "00:09:50 WIB",
+              "DateTime": "2025-02-06T17:09:50+00:00",
+              "Coordinates": "-2.52,141.95",
+              "Lintang": "2.52 LS",
+              "Bujur": "141.95 BT",
+              "Magnitude": "5.5",
+              "Kedalaman": "10 km",
+              "Wilayah": "142 km TimurLaut JAYAPURA-PAPUA",
+              "Potensi": "Tidak berpotensi tsunami"
+            },
+            {
+              "Tanggal": "06 Feb 2025",
+              "Jam": "23:24:53 WIB",
+              "DateTime": "2025-02-06T16:24:53+00:00",
+              "Coordinates": "-2.57,141.90",
+              "Lintang": "2.57 LS",
+              "Bujur": "141.90 BT",
+              "Magnitude": "5.6",
+              "Kedalaman": "10 km",
+              "Wilayah": "136 km TimurLaut JAYAPURA-PAPUA",
+              "Potensi": "Tidak berpotensi tsunami"
+            },
+          ]
+        }
+    }
+
     const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
         setIsProvinceClicked(true)
         console.log('Ini provinsi diklik  test');
@@ -60,6 +119,10 @@ const Gempa = () => {
                     <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
                     <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
                     <div className='dark:text-white text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
+                </div>
+
+                <div className='h-full border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
+                    <IndonesiaMap clickable={false}/>
                 </div>
 
                 <div className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'>
@@ -88,7 +151,7 @@ const Gempa = () => {
                     })}
                 </div>
                 
-                <div className='dark:border-white border-2 my-[30px] mx-20 py-[15px] max-w-[1180px] px-4 rounded-[15px] w-fit grid grid-cols-4 items-stretch'>
+                <div className='dark:border-white border-2 my-[30px] mx-20 py-[15px] max-w-[90%] px-4 rounded-[15px] w-fit grid grid-cols-4 items-stretch'>
                     <div className='col-span-1 border-r-[1px] dark:border-white'>
                         <div className='pr-[25px] py-[11px]'>
                             <MiniComponentStatusGunung status={"Gempa Dirasakan"}/>
@@ -121,8 +184,27 @@ const Gempa = () => {
                     </div>
                 </div>
 
-                <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                    <IndonesiaMap clickable={false}/>
+                <div className='mx-[82px]'>
+                    {activeCategory !== "TERKINI" &&
+                        <div className='dark:text-white font-bold text-[32px] mt-[111px] mb-[30px]'>
+                            10 Gempa Bumi {activeCategoryTitle}
+                        </div>
+                    }
+                    {activeCategory === "M50" &&
+                        <TableForMagnitudoFive data={dummyDataMagnitudoFive.Infogempa.gempa}/>
+                    }
+
+                    {activeCategory === "DIRASAKAN" &&
+                        <TableForDirasakan />
+                    }
+
+                    {activeCategory === "BERPOTENSI_TSUNAMI" &&
+                        <TableForBerpotensiTsunami />
+                    }
+
+                    {activeCategory === "REAL_TIME" &&
+                        <TableForRealTime />
+                    }
                 </div>
 
                 {modalOpen && (
