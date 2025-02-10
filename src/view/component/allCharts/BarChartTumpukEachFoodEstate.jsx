@@ -5,7 +5,7 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const BarChart = ({ data, options }) => {
-    return <Bar data={data} options={options} height={"350px"} width={"500px"}/>;
+    return <Bar data={data} options={options} height={"350px"} width={"500px"} />;
 }
 
 const BarChartTumpukEachFoodEstate = ({ title, data }) => {
@@ -28,7 +28,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
         },
         scales: {
             x: {
-                stacked: true, 
+                stacked: true,
                 ticks: {
                     color: '#A3A3A3'
                 },
@@ -37,7 +37,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
                 },
             },
             y: {
-                stacked: true, 
+                stacked: true,
                 beginAtZero: true,
                 ticks: {
                     color: '#A3A3A3',

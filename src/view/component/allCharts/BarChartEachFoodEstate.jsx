@@ -4,7 +4,7 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
-const BarChart = ({data, title}) => {
+const BarChart = ({ data, title }) => {
     const maxData = Math.max(...data.datasets[0].data);
     const minData = Math.min(...data.datasets[0].data);
 
@@ -38,7 +38,7 @@ const BarChart = ({data, title}) => {
                 }
             },
             y: {
-                beginAtZero: true, 
+                beginAtZero: true,
                 suggestedMin: minData - stepSize,
                 suggestedMax: maxData + stepSize,
                 ticks: {
@@ -47,28 +47,28 @@ const BarChart = ({data, title}) => {
                     callback: (value) => `${value.toLocaleString()}`
                 },
                 grid: {
-                    color: "rgba(255, 255, 255, 0.1)" 
+                    color: "rgba(255, 255, 255, 0.1)"
                 }
             }
         }
     };
-    
 
-    return <Bar data={data} options={options} height={"274px"}/>
+
+    return <Bar data={data} options={options} height={"274px"} />
 }
 
-const BarChartEachFoodEstate = ({title, data}) => {
+const BarChartEachFoodEstate = ({ title, data }) => {
     return (
-        <div className="px-[29px] py-[15px]">
+        <div className="px-[29px] py-[15px] h-[306px] flex flex-col">
             <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-            <div className="h-[274px]">
+            <div className="min-h-28 flex flex-grow items-center justify-center">
                 {data.datasets[0].data.length > 0 ? (
-                    <BarChart data={data}/>
+                    <BarChart data={data} />
                 ) : (
                     <div className="dark:text-white font-bold text-xl mb-[10px]">Data belum tersedia</div>
                 )}
             </div>
-            
+
         </div>
     )
 }
