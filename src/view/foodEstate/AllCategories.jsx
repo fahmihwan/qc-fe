@@ -125,13 +125,13 @@ const AllCategories = () => {
                             <div className="   rounded flex  items-centers">
                                 <div className="flex-col justify-center block lg:hidden items-center ">
                                     <div className="dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
-                                    <div className="dark:text-white text-xs lg:text-2xl  font-bold">SEMUA KATEGORI FOOD ESTATE</div>
+                                    <div className="dark:text-white text-xs lg:text-2xl  font-bold">SEMUA FOOD ESTATE</div>
                                 </div>
                             </div>
                             <div className=" text-white rounded ">
-                                <div className="text-center h-20  flex-col justify-center hidden lg:block">
+                                <div className="text-center flex-col justify-center hidden lg:block">
                                     <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
-                                    <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">SEMUA KATEGORI FOOD ESTATE</div>
+                                    <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">SEMUA FOOD ESTATE</div>
                                 </div>
                             </div>
                             <div className=" text-white flex justify-end">
@@ -145,24 +145,26 @@ const AllCategories = () => {
                         <IndonesiaMap onProvinceClick={onProvinceClick} />
                     </div>
 
-                    <div className='grid md:grid-cols-2'>
+                    {!isProvinceClicked &&
+                     <div className='grid md:grid-cols-2'>
                         <div className=' dark:border-white mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4'>
                             <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} />
                         </div>
-                        <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4'>
+                        <div className=' dark:border-white col-span-1 dark:text-white px-6 py-4 sm:border-t-[1px] sm:dark:border-white'>
                             <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} />
                         </div>
                     </div>
+                    }
                 </div>
 
                 {/* grafik samping kanan */}
                 {/* <div className='w-full border'> */}
                 {isProvinceClicked ?
-                    <div className='w-full xl:col-span-2 border-x-[1px]'>
+                    <div className='w-full xl:col-span-2 border-x-[1px] sm:border-t-[1px] sm:dark:border-white'>
                         <PieChartAfterFilteredByProvinceAllFoodEstate title={"Luas Panen (ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
                         <PieChartAfterFilteredByProvinceAllFoodEstate title={"Produktivitas (ku/ha) Provinsi A"} data={dummyDataForSpecifiedProvince} />
                     </div> :
-                    <div className='w-full xl:col-span-2 border-x-[1px]'>
+                    <div className='w-full xl:col-span-2 border-x-[1px] sm:border-t-[1px] sm:dark:border-white'>
                         <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={dummyData} />
                         <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={dummyData} />
                     </div>

@@ -9,10 +9,11 @@ const BarChart = ({data, title}) => {
     const minData = Math.min(...data.datasets[0].data);
 
     const range = maxData - minData;
-    const stepSize = title == "Luas Panen (ton)" ? Math.ceil(range / 5 / 80000) * 100000 : Math.ceil(range / 5 / 100) * 100;
+    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 100000 : Math.ceil(range / 5 / 100) * 100;
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
@@ -59,9 +60,9 @@ const BarChart = ({data, title}) => {
 
 const BarChartEachFoodEstate = ({title, data}) => {
     return (
-        <div className="px-[29px] py-[15px]">
+        <div className="px-[29px] py-[15px] h-[330px]">
             <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-            <div className="h-[274px]">
+            <div className="h-[250px]">
                 {data.datasets[0].data.length > 0 ? (
                     <BarChart data={data}/>
                 ) : (

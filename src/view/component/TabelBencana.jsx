@@ -33,8 +33,8 @@ const SingleDampakBencana = ({ icon, jlhDampak, title, isMenderita }) => {
 
 const TabelBencana = ({ dataBencana }) => {
     return (
-        <div className='border-t-[1px] flex flex-row dark:border-white'>
-            <div className='border-r-[1px] min-w-[369px] py-4 px-9'>
+        <div className='border-t-[1px] dark:border-white grid grid-cols-3'>
+            <div className='border-r-[1px] grid py-4 px-9 col-span-1'>
                 <div className="mb-[30px]">
                     <div className='font-bold dark:text-white text-base text-center'>Jumlah Kejadian</div>
                     <div className='font-bold dark:text-white text-base text-center'>per Jenis Bencana</div>
@@ -53,7 +53,7 @@ const TabelBencana = ({ dataBencana }) => {
                 </div>
             </div>
 
-            <div className='flex flex-col border-r-[1px]'>
+            <div className='flex flex-col border-r-[1px] col-span-2'>
                 <div className="px-[115px] pt-5 pb-6">
                     <div className="align-top">
                         <div className="text-center text-base font-bold dark:text-white">Dampak Bencana Alam</div>
