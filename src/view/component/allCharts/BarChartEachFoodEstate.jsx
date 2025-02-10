@@ -9,10 +9,11 @@ const BarChart = ({ data, title }) => {
     const minData = Math.min(...data.datasets[0].data);
 
     const range = maxData - minData;
-    const stepSize = title == "Luas Panen (ton)" ? Math.ceil(range / 5 / 80000) * 100000 : Math.ceil(range / 5 / 100) * 100;
+    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 100000 : Math.ceil(range / 5 / 100) * 100;
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,

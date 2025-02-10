@@ -39,14 +39,16 @@ const PieChart = ({data}) => {
             },
             options: {
                 responsive: true,
-                layout: {
-                    padding: {
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        right: 0
-                    }
-                },
+                maintainAspectRatio: false,
+                aspectRatio: 1,
+                // layout: {
+                //     padding: {
+                //         top: 0,
+                //         bottom: 0,
+                //         left: 0,
+                //         right: 0
+                //     }
+                // },
                 plugins: {
                     legend: {
                         position: "left",
@@ -73,7 +75,7 @@ const PieChart = ({data}) => {
         }
     }, [data])
     
-    return <canvas ref={chartRef} />
+    return <canvas ref={chartRef} className="h-full w-full" />
 }
 
 const PieChartAfterFilteredByProvinceAllFoodEstate = ({title, data}) => {
@@ -82,9 +84,11 @@ const PieChartAfterFilteredByProvinceAllFoodEstate = ({title, data}) => {
     return (
         <>
             <div className="px-[29px] py-[15px] h-[306px] flex flex-col">
-                <div className="dark:text-white font-bold text-xl">{title} Tahun {getYear}</div>
-                <div className="h-full flex flex-grow items-center justify-center">
-                    <PieChart data={data.data} />
+                <div className="dark:text-white font-bold text-xl lg:-mb-4 mb-2">{title} Tahun {getYear}</div>
+                <div className="h-[250px] flex flex-row items-center justify-center">
+                    <div className="w-72 flex items-center align-middle justify-center">
+                        <PieChart data={data.data} />
+                    </div>
                 </div>
             </div>
             <div className='h-[1px] dark:bg-white'></div>

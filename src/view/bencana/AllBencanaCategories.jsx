@@ -11,7 +11,7 @@ const AllBencanaCategories = () => {
     return (
         <LayoutAdmin>
             <div className='w-full '>
-                <div className="overflow-x-hidden py-4 px-[113px]">
+                <div className="overflow-x-hidden py-4 px-[113px] border-y-[1px] dark:border-white">
                     <div className='dark:text-white text-2xl font-bold text-center'>GEOSPASIAL DATA BENCANA INDONESIA</div>
                 </div>
 

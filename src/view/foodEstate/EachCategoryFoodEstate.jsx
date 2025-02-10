@@ -20,7 +20,7 @@ const EachCategoryFoodEstate = ({ category }) => {
         if (response) {
             console.log('response dari api: ', response);
             console.log('response dari api: ', response.luasPanen);
-            setDataLuasPanenToParse(formatChartData(response, 'Luas Panen (ton)'))
+            setDataLuasPanenToParse(formatChartData(response, 'Luas Panen (ha)'))
             setDataProduktivitasToParse(formatChartData(response, 'Produktivitas (ku/ha)'))
 
             setTimeout(() => {
@@ -39,7 +39,7 @@ const EachCategoryFoodEstate = ({ category }) => {
             return { labels: [], datasets: [] }
         }
 
-        const isLuasPanen = title === "Luas Panen (ton)"
+        const isLuasPanen = title === "Luas Panen (ha)"
         const dataKey = isLuasPanen ? "luasPanen" : "produktivitas"
 
         const dataList = response[dataKey] || []
@@ -129,9 +129,10 @@ const EachCategoryFoodEstate = ({ category }) => {
                     {!isLoading && response && (
                         <>
                             <div className='w-full xl:col-span-2 border-x-[1px]'>
-                                <BarChartEachFoodEstate title={"Luas Panen (ton)"} data={dataLuasPanenToParse} />
+                                <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} />
                                 <div className='h-[1px] dark:bg-white'></div>
                                 <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} />
+                                <div className='h-[0.5px] dark:bg-white'></div>
                             </div>
                         </>
                     )}
