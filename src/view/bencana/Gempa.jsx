@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import LayoutAdmin from '../layout/LayoutAdmin'
-import { IconGempaSVG, IconPointMapSVG, IconPointSVG } from '../component/IconSvg'
+import { IconGempaSVG, IconPointMapSVG, IconPointSVG, IconXSVG } from '../component/IconSvg'
 import IndonesiaMap from '../component/IndonesiaMap'
 
 const Gempa = () => {
     const [activeCategory, setActiveCategory] = useState("TERKINI")
     const [activeCategoryTitle, setActiveCategoryTitle] = useState("Terkini")
     const [activeCategoryDesc, setActiveCategoryDesc] = useState("terkini")
+
+    const [modalOpen, setModalOpen] = useState(false)
 
     const categories = [
         {
@@ -110,7 +112,10 @@ const Gempa = () => {
                             </div>
                         </div>
 
-                        <button className='w-[297px] row-span-1 rounded-[5px] bg-blue-custom mx-auto text-white '>
+                        <button 
+                            className='w-[297px] row-span-1 rounded-[5px] bg-blue-custom mx-auto text-white '
+                            onClick={() => setModalOpen(true)}
+                        >
                             Lihat Detail
                         </button>
                     </div>
@@ -119,6 +124,74 @@ const Gempa = () => {
                 <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
                     <IndonesiaMap clickable={false}/>
                 </div>
+
+                {modalOpen && (
+                    <div 
+                        className='fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-70'
+                        onClick={() => setModalOpen(false)}
+                    >
+                        <div 
+                            className='bg-white dark:bg-dark-mode lg:max-w-[60%] shadow-lg transform transition-all duration-300 opacity-100 scale-100'
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className='flex flex-row justify-between px-5 py-[13px] items-center'>
+                                <span className='dark:text-white font-bold text-sm'>Gempa Bumi {activeCategoryTitle}</span>
+                                <button onClick={() => setModalOpen(false)}>
+                                    <IconXSVG />
+                                </button>
+                            </div>
+                            <div className='h-[1px] dark:bg-white bg-dark-mode'></div>
+                            <div className='grid grid-cols-2 dark:bg-black'>
+                                <div className='px-5 py-[24px] dark:border-white border-r-[1px]'>
+                                    <img src="/assets/img/contoh_gempa.png" className='w-full' />
+                                </div>
+                                <div className='p-6'>
+                                    <MiniComponentStatusGunung status={"Gempa Dirasakan"} />
+                                    <div className='mt-[10px] dark:text-white text-xs'>09 Feb 2025, 19:37:01</div>
+                                    <div className='mt-5 dark:text-white text-base font-bold'>Pusat gempa berada di darat 3 Km timurlaur Lalolae, Kolaka Timur</div>
+                                    <div className='mt-[30px] dark:bg-dark-mode px-[15px] border dark:border-white rounded-lg'>
+                                        <table className=' dark:text-white w-full'>
+                                            <tbody>
+                                                <tr className="border-b border-white">
+                                                    <td className="p-3 flex items-center">
+                                                        <div className='flex flex-row items-center gap-[10px]'>
+                                                            <IconGempaSVG color={"fill-red-custom"} />
+                                                            <span className='text-base dark:text-white'>Magnitudo</span>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-3">:</td>
+                                                    <td className="p-3">2,2</td>
+                                                </tr>
+                                                <tr className="border-b border-white">
+                                                    <td className="p-3 flex items-center">
+                                                        <div className='flex flex-row items-center gap-[10px]'>
+                                                            <IconPointSVG color={"fill-red-custom"} />
+                                                            <span className='text-base dark:text-white'>Kedalaman</span>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-3">:</td>
+                                                    <td className="p-3">5Km</td>
+                                                </tr>
+                                                <tr>
+                                                    <td className="p-3 align-middle">
+                                                        <div className="flex items-center gap-2">
+                                                            <IconPointMapSVG color={"fill-red-custom"} />
+                                                            <span className='text-base dark:text-white'>Lokasi</span>
+                                                        </div>
+                                                    </td>
+                                                    <td className="px-3 align-middle">:</td>
+                                                    <td className="p-3 align-middle">4,05 LS - 1221,80 BT</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div className='mt-[25px] dark:text-white text-xs'>Dirasakan (Skala MMI)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </LayoutAdmin>
     )
