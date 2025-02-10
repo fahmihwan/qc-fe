@@ -5,27 +5,34 @@ import IndonesiaMap from '../component/IndonesiaMap'
 
 const Gempa = () => {
     const [activeCategory, setActiveCategory] = useState("TERKINI")
+    const [activeCategoryTitle, setActiveCategoryTitle] = useState("Terkini")
+    const [activeCategoryDesc, setActiveCategoryDesc] = useState("terkini")
 
     const categories = [
         {
             id: "TERKINI",
-            label: "Terkini"
+            label: "Terkini",
+            description: "terkini"
         },
         {
             id: "M50",
-            label: "M 5,0+"
+            label: "M 5,0+",
+            description: "magnitudo > 5,0"
         },
         {
             id: "DIRASAKAN",
-            label: "Dirasakan"
+            label: "Dirasakan",
+            description: "dirasakan"
         },
         {
             id: "BERPOTENSI_TSUNAMI",
-            label: "Berpotensi Tsunami"
+            label: "Berpotensi Tsunami",
+            description: "berpotensi tsunami"
         },
         {
             id: "REAL_TIME",
-            label: "Real-time"
+            label: "Real-time",
+            description: 'real-time'
         },
     ]
 
@@ -49,8 +56,8 @@ const Gempa = () => {
             <div className='w-full min-h-screen dark:bg-dark-mode'>
                 <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] dark:border-white">
                     <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
-                    <div className='dark:text-white font-bold text-center text-2xl'>DATA GEMPA INDONESIA TERKINI</div>
-                    <div className='dark:text-white text-center text-base'>Informasi gempa bumi terkini di wilayah Indonesia</div>
+                    <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
+                    <div className='dark:text-white text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
                 </div>
 
                 <div className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'>
@@ -59,7 +66,11 @@ const Gempa = () => {
                             <button 
                                 key={category.id}
                                 type="button" 
-                                onClick={() => setActiveCategory(category.id)} 
+                                onClick={() => {
+                                    setActiveCategory(category.id)
+                                    setActiveCategoryTitle(category.label)
+                                    setActiveCategoryDesc(category.description)
+                                }} 
                                 className={`border-2 dark:border-white border-dark-mode w-[196px] dark:text-white bg-blue-700  focus:ring-4 focus:ring-blue-300 
                                     font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
                                     ${
@@ -107,7 +118,7 @@ const Gempa = () => {
 
                 <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
                     <IndonesiaMap clickable={false}/>
-                    </div>
+                </div>
             </div>
         </LayoutAdmin>
     )
