@@ -8,7 +8,7 @@ import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 import { provinsiData } from "../../data/38provinsi";
 
-const IndonesiaMap = ({ kodeProvinsi, onProvinceClick }) => {
+const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
     const [selectedProvince, setSelectedProvince] = useState(null); // Untuk menyimpan provinsi yang diklik
@@ -74,8 +74,9 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick }) => {
 
         const navToggle = new NavigationToggle({ view });
         view.ui.add(navToggle, "top-left");
-
+        
         view.on("click", async (event) => {
+            if(!clickable) return
             try {
                 const hitTestResponse = await view.hitTest(event);
                 if (hitTestResponse.results.length > 0) {
@@ -96,7 +97,7 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick }) => {
         });
 
         return () => view.destroy();
-    }, []);
+    }, [clickable]);
 
     // **Efek perubahan warna ketika provinsi dipilih**
     useEffect(() => {

@@ -17,7 +17,9 @@ export default {
         'green-custom': '#33A02C',
         'yellow-custom': '#F4BE37',
         'dark-gray-custom': '#909090',
-        'light-gray-custom': '#505050'
+        'light-gray-custom': '#505050',
+        'blue-custom': '#1F78B4',
+        'light-green-custom': '#E5F5E5'
 
         // 'brand-blue': '#1D4ED8',  // Menambahkan warna biru khusus
         // 'brand-green': '#10B981', // Menambahkan warna hijau khusus
