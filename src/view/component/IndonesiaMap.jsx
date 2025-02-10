@@ -6,20 +6,24 @@ import Graphic from "@arcgis/core/Graphic";
 import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol";
 import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import "@arcgis/core/assets/esri/themes/light/main.css";
-import { provinsiData } from "../../data/38provinsi";
+// import { provinsiData } from "../../data/38provinsi";
+import provinsiJson from '../../data/38provinsi.json'
 
 const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverable = true }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
-    const [selectedProvince, setSelectedProvince] = useState(null); 
+    const [selectedProvince, setSelectedProvince] = useState(null);
     const [hoveredProvince, setHoveredProvince] = useState(null)
+
+    let provinsiData = provinsiJson.data
+
 
     useEffect(() => {
         const webMap = new WebMap({ basemap: "streets-navigation-vector" });
         const view = new MapView({
             container: mapRef.current,
             map: webMap,
-            center: [117.148, -2.5489], 
+            center: [117.148, -2.5489],
             zoom: 5,
         });
 
@@ -54,12 +58,12 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverab
             polygons.forEach((rings) => {
                 const polygon = {
                     type: "polygon",
-                    rings: rings.map((coord) => [coord[0], coord[1]]), 
+                    rings: rings.map((coord) => [coord[0], coord[1]]),
                 };
 
                 // Warna default
                 const defaultSymbol = new SimpleFillSymbol({
-                    color: [0, 0, 255, 0.2], 
+                    color: [0, 0, 255, 0.2],
                     outline: { color: [0, 0, 150], width: 1 },
                 });
 
@@ -75,9 +79,9 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverab
 
         const navToggle = new NavigationToggle({ view });
         view.ui.add(navToggle, "top-left");
-        
+
         view.on("click", async (event) => {
-            if(!clickable) return
+            if (!clickable) return
             try {
                 const hitTestResponse = await view.hitTest(event);
                 if (hitTestResponse.results.length > 0) {
@@ -129,17 +133,17 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverab
         graphicsLayer.graphics.forEach((graphic) => {
             if (graphic.attributes?.KODE_PROV === selectedProvince) {
                 graphic.symbol = new SimpleFillSymbol({
-                    color: [0, 0, 255, 0.5], 
+                    color: [0, 0, 255, 0.5],
                     outline: { color: [0, 0, 150], width: 1 },
                 });
             } else if (graphic.attributes?.KODE_PROV === hoveredProvince) {
                 graphic.symbol = new SimpleFillSymbol({
-                    color: [0, 0, 255, 0.2], 
+                    color: [0, 0, 255, 0.2],
                     outline: { color: [0, 0, 150], width: 1 },
                 });
             } else {
                 graphic.symbol = new SimpleFillSymbol({
-                    color: [0, 0, 255, 0], 
+                    color: [0, 0, 255, 0],
                     outline: { color: [0, 0, 150], width: 0.2 },
                 });
             }
