@@ -354,7 +354,12 @@ const Gempa = () => {
                     </div>
 
                     <div className='h-full border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                        <IndonesiaMap clickable={false}/>
+                        <IndonesiaMap 
+                            clickable={false} 
+                            earthquakeData={Array.isArray(response.Infogempa.gempa) 
+                                ? response.Infogempa.gempa.map(g => ({ Coordinates: g.Coordinates })) 
+                                : [{ Coordinates: response.Infogempa.gempa.Coordinates }]}
+                        />
                     </div>
 
                     <div className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'>
