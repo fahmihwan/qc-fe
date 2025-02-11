@@ -34,7 +34,7 @@ export const TableForDirasakan = ({data, handleOpenModal}) => {
                     {data.map((datum, index) => {
                         console.log(datum.Dirasakan)
                         return (
-                            <tr className="odd:bg-white odd:dark:bg-dark-mode even:bg-gray-50 even:dark:bg-black border-b dark:border-gray-700 border-gray-200 dark:border-none">
+                            <tr key={index} className="odd:bg-white odd:dark:bg-dark-mode even:bg-gray-50 even:dark:bg-black border-b dark:border-gray-700 border-gray-200 dark:border-none">
                                 <th scope="row" className="dark:border-white border-r px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                                     {index + 1}
                                 </th>
