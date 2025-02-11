@@ -149,11 +149,11 @@ const AllCategories = () => {
                     </div>
 
                     {!isProvinceClicked &&
-                        <div className='grid md:grid-cols-2 ml-5 mt-5  p-2 dark:bg-dark-mode-bg'>
-                            <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border bg-white dark:border-dark-mode-border mr-5'>
+                        <div className='grid md:grid-cols-2 ml-5 mt-5  p-2 '>
+                            <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border  bg-white dark:bg-dark-mode-bg dark:border-dark-mode-border mr-5'>
                                 <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} />
                             </div>
-                            <div className=' col-span-1 dark:text-white px-6 py-4  border bg-white dark:border-dark-mode-border '>
+                            <div className=' col-span-1 dark:text-white px-6 py-4  border bg-white dark:bg-dark-mode-bg dark:border-dark-mode-border '>
                                 <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} />
                             </div>
                         </div>
