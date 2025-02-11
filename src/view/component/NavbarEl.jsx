@@ -13,7 +13,11 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
     const user = useSelector((state) => state.user)
 
 
-    const [theme, setTheme] = useState('dark');
+
+    const storedTheme = localStorage.getItem('theme');
+    const initialTheme = storedTheme ? storedTheme : 'dark';
+
+    const [theme, setTheme] = useState(initialTheme);
 
 
     const navigate = useNavigate();
@@ -22,6 +26,10 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
         theme === "dark"
             ? document.documentElement.classList.add("dark")
             : document.documentElement.classList.remove("dark");
+
+
+        // Simpan pilihan tema di localStorage
+        localStorage.setItem('theme', theme);
     }, [theme]);
 
     const handleLogout = () => {
@@ -89,8 +97,9 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
                             className="peer hidden "
                             onClick={() => setTheme(theme == 'dark' ? 'light' : 'dark')}
                         />
-                        <IconLightModeSVG />
                         <IconDarkModeSVG />
+                        <IconLightModeSVG />
+
 
                     </label>
 
