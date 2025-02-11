@@ -82,14 +82,14 @@ const EachCategoryFoodEstate = ({ category }) => {
                     Loading...
                 </div>
             ) : (
-                <div className='w-full border-y-[1px] xl:grid lg:grid-cols-7'>
+                <div className='w-full xl:grid lg:grid-cols-7 '>
                     <div className='col-span-12 lg:col-span-5 '>
 
                         {/* header */}
-                        <div className=" border-b-[1px]  dark:border-white flex ">
-                            <div className="grid grid-cols-3 gap-4 lg:py-5 px-2 w-full items-center">
-                                <div className="   rounded flex  items-centers">
-                                    <div className="flex-col justify-center block lg:hidden items-center ">
+                        <div className=" flex border border-dark-mode-border ml-5 my-5 px-5 dark:bg-dark-mode-v2 ">
+                            <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
+                                <div className="rounded flex  items-">
+                                    <div className="flex-col justify-center block lg:hidden items-center text-white">
                                         <div className="dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
                                         <div className="dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>
@@ -117,8 +117,10 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div> */}
 
-                        <div className='p-[10px] border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                            <IndonesiaMap onProvinceClick={onProvinceClick} />
+                        <div className='border ml-5 p-2 flex justify-center border-dark-mode-border ' >
+                            <div className='w-[100%] h-[500px] '>
+                                <IndonesiaMap onProvinceClick={onProvinceClick} />
+                            </div>
                         </div>
 
                         <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">
@@ -129,18 +131,21 @@ const EachCategoryFoodEstate = ({ category }) => {
                     </div>
                     {!isLoading && response && (
                         <>
-                            <div className='w-full xl:col-span-2 border-x-[1px]'>
-                                <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} />
-                                <div className='h-[1px] dark:bg-white'></div>
-                                <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} />
-                                <div className='h-[0.5px] dark:bg-white'></div>
+                            <div className='w-full xl:col-span-2'>
+                                <div className='dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
+                                    <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} />
+                                </div>
+                                <div className='dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
+                                    <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} />
+                                </div>
                             </div>
                         </>
                     )}
 
                 </div>
-            )}
-        </LayoutAdmin>
+            )
+            }
+        </LayoutAdmin >
 
 
     )

@@ -126,14 +126,14 @@ const AllCategories = () => {
                         <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                             <div className=" rounded flex  items-centers ">
                                 <div className="flex-col justify-center block lg:hidden items-center text-white">
-                                    <div className="text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
-                                    <div className="text-xs lg:text-2xl  font-bold">SEMUA FOOD ESTATE</div>
+                                    <div className="dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
+                                    <div className="dark:text-white text-xs lg:text-2xl  font-bold">SEMUA FOOD ESTATE</div>
                                 </div>
                             </div>
                             <div className=" text-white rounded ">
-                                <div className="text-center flex-col justify-center hidden lg:block">
-                                    <div className=" text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
-                                    <div className=" text-xs lg:text-2xl text-center font-bold">SEMUA FOOD ESTATE</div>
+                                <div className="text-center h-20  flex-col justify-center hidden lg:block">
+                                    <div className=" dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
+                                    <div className=" dark:text-white text-xs lg:text-2xl text-center font-bold">SEMUA FOOD ESTATE</div>
                                 </div>
                             </div>
                             <div className=" text-white flex justify-end">
