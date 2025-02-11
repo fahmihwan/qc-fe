@@ -10,7 +10,7 @@ export const Sidebar = ({ isDrawerOpen, handleDrawer }) => {
             <aside
                 id="sidebar-multi-level-sidebar"
                 className="top-0 left-0 z-40  transition-transform -translate-x-full sm:translate-x-0  
-                         lg:block hidden border-r dark:border-dark-mode-border"
+                         lg:block hidden border-r dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2"
                 aria-label="Sidebar"
             >
                 <div className=" w-[273px] h-screen overflow-y-auto bg-white dark:bg-dark-mode-v2">
