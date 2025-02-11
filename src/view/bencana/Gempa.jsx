@@ -211,7 +211,7 @@ const Gempa = () => {
             <div className='dark:border-white border-2 my-[30px] mx-20 py-[15px] max-w-[90%] px-4 rounded-[15px] w-fit grid grid-cols-4 items-stretch'>
                 <div className='col-span-1 border-r-[1px] dark:border-white'>
                     <div className='pr-[25px] py-[11px]'>
-                        <MiniComponentStatusGunung status={"Gempa Dirasakan"}/>
+                        <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"}/>
                         <div className='dark:text-white text-sm mt-[22px] mb-3'>{dataDetail.Tanggal}, {dataDetail.Jam}</div>
                         <div className='dark:text-white font-bold text-sm mt-[22px] mb-3'>{dataDetail.Wilayah}</div>
                     </div>
@@ -278,7 +278,7 @@ const Gempa = () => {
                             <img src={shakeMapCreator()} className='w-full' />
                         </div>
                         <div className='p-6'>
-                            <MiniComponentStatusGunung status={"Gempa Dirasakan"} />
+                            <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"}/>
                             <div className='mt-[10px] dark:text-white text-xs'>{dataDetail.Tanggal}, {dataDetail.Jam}</div>
                             <div className='mt-5 dark:text-white text-base font-bold'>{dataDetail.Wilayah}</div>
                             <div className='mt-[30px] dark:bg-dark-mode px-[15px] border dark:border-white rounded-lg'>
