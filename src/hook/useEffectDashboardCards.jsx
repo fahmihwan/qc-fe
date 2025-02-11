@@ -5,16 +5,16 @@ export const useEffectDashboardCards = () => {
     const [response, setResponse] = useState(null)
     const [error, setError] = useState(null)
 
-    const fetchCards = async() => {
-        try{
+    const fetchCards = async () => {
+        try {
             const response = await getAllForDashboardCards()
-            if(response.data){
+            if (response.data) {
                 setResponse(response.data)
-            } else{
+            } else {
                 setError("Data dari API kosong!");
             }
         } catch (error) {
-            console.log("ada error di use effect: ", error)
+            // console.log("ada error di use effect: ", error)
             setError(error);
         }
     }
@@ -22,6 +22,6 @@ export const useEffectDashboardCards = () => {
     useEffect(() => {
         fetchCards()
     }, [])
-    
-    return {response, error, fetchCards}
+
+    return { response, error, fetchCards }
 }

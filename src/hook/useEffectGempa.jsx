@@ -6,7 +6,7 @@ export const useEffectGempa = (param) => {
     const [error, setError] = useState(null);
 
     const fetchData = async (param) => {
-        console.log(param,'parammmmm')
+        // console.log(param,'parammmmm')
         setLoading(true);
         let apiURL = "";
 
@@ -16,7 +16,7 @@ export const useEffectGempa = (param) => {
             apiURL = "https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json";
         } else if (param === "DIRASAKAN") {
             apiURL = "https://data.bmkg.go.id/DataMKG/TEWS/gempadirasakan.json";
-        }else{
+        } else {
             alert('else')
         }
 
@@ -29,20 +29,20 @@ export const useEffectGempa = (param) => {
             }
             const data = await res.json();
             setResponse(data);
-            console.log("Data fetched:", data);
+            // console.log("Data fetched:", data);
         } catch (err) {
-            console.error("Fetch error:", err);
+            // console.error("Fetch error:", err);
             setError(err);
         } finally {
             setLoading(false);
         }
     };
 
-    useEffect(() => { 
-        if(param != undefined){
+    useEffect(() => {
+        if (param != undefined) {
             fetchData(param);
         }
     }, [param]);
 
-    return { response, loading, error , fetchData};
+    return { response, loading, error, fetchData };
 };

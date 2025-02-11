@@ -21,7 +21,7 @@ export const useEffectOtherApi = (param) => {
                 setError("Data dari API kosong!");
             }
         } catch (error) {
-            console.log("ada error di use effect: ", error)
+            // console.log("ada error di use effect: ", error)
             setError(error);
         }
     }

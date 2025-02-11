@@ -7,7 +7,7 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 
 const EachCategoryFoodEstate = ({ category }) => {
     const listDropDown = [2024, 2023, 2022, 2021, 2020]
-    console.log("ini kategori:", category)
+    // console.log("ini kategori:", category)
 
     const { response, error } = useEffectFoodEstate(category);
     const [isLoading, setIsLoading] = useState(true)
@@ -18,23 +18,23 @@ const EachCategoryFoodEstate = ({ category }) => {
 
     useEffect(() => {
         if (response) {
-            console.log('response dari api: ', response);
-            console.log('response dari api: ', response.luasPanen);
+            // console.log('response dari api: ', response);
+            // console.log('response dari api: ', response.luasPanen);
             setDataLuasPanenToParse(formatChartData(response, 'Luas Panen (ha)'))
             setDataProduktivitasToParse(formatChartData(response, 'Produktivitas (ku/ha)'))
 
             setTimeout(() => {
                 setAllData(response);
-                console.log("ini alldatas", response);
-                console.log("data ", dataLuasPanenToParse)
-                console.log("data ", dataProduktivitasToParse)
+                // console.log("ini alldatas", response);
+                // console.log("data ", dataLuasPanenToParse)
+                // console.log("data ", dataProduktivitasToParse)
                 setIsLoading(false);
             }, 1500);
         }
     }, [response]);
 
     const formatChartData = (response, title) => {
-        console.log("ini kepanggil")
+        // console.log("ini kepanggil")
         if (!response) {
             return { labels: [], datasets: [] }
         }
@@ -72,7 +72,7 @@ const EachCategoryFoodEstate = ({ category }) => {
     }
     const onProvinceClick = ({ namaProvinsi, kodeProvinsi }) => {
         setIsProvinceClicked(true)
-        console.log('Ini provinsi diklik  test');
+        // console.log('Ini provinsi diklik  test');
     }
 
     return (

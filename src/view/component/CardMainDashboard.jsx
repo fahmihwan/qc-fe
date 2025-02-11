@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import Slider from 'react-slick';
 
 const CardMainDashboard = ({ allDataFoodEstate }) => {
-    console.log("ini data alldatafoodestate", allDataFoodEstate);
+    // console.log("ini data alldatafoodestate", allDataFoodEstate);
     const scrollRef = useRef();
     const [scrollIndex, setScrollIndex] = useState(0);
     const itemsPerScroll = 5;
@@ -22,9 +22,9 @@ const CardMainDashboard = ({ allDataFoodEstate }) => {
     };
 
     const startIndex = scrollIndex * itemsPerScroll;
-    console.log(startIndex);
-    console.log("ini dataarray", dataArray)
-    console.log("ini start index", startIndex)
+    // console.log(startIndex);
+    // console.log("ini dataarray", dataArray)
+    // console.log("ini start index", startIndex)
     const visibleItems = dataArray
 
 
@@ -93,14 +93,16 @@ const CardMainDashboard = ({ allDataFoodEstate }) => {
 
     var settings = {
         dots: true,
+        className: "slider variable-width",
         infinite: true,
         speed: 500,
-
+        // variableWidth: true,
         slidesToShow: 5,
-        slidesToScroll: 5
+        slidesToScroll: 5,
+        variableWidth: true
     };
     return (
-        <div className="w-[1400px] relative box-border">
+        <div className="w-[1450px]  box-border">
             {/* <div className=' border border-red-500 overflow-hidden '> */}
             <div className="slider-container">
                 <Slider {...settings}>
@@ -158,6 +160,8 @@ const SingleCard = ({ singleData }) => {
 
             <div className="flex border text-center  dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2 justify-center rounded-lg dark:text-white w-[250px] h-[350px]
              mr-5 mt-5">
+                {/* <div className="flex border text-center  dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2 justify-center rounded-lg dark:text-white  h-[350px]
+             mr-5 mt-5" style={{ width: 100 }}> */}
                 <div>
                     <h5 className="border-b py-3 mb-5">{singleData.title}</h5>
                     <div className="">

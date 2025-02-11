@@ -7,24 +7,24 @@ export const useEffectFoodEstate = (param) => {
     const [error, setError] = useState(null);
 
     const fetchData = async (param) => {
-        console.log("masuk sini", param)
+        // console.log("masuk sini", param)
         if (!param) {
             setError("params is not exists");
             return;
         }
-        console.log("masukkkkk")
+        // console.log("masukkkkk")
 
         try {
-            console.log("masuk sini brod")
+            // console.log("masuk sini brod")
             const response = await getChart(param);
             if (response.data) {
-                console.log("berhasil nich")
-                setResponse(response.data); 
+                // console.log("berhasil nich")
+                setResponse(response.data);
             } else {
                 setError("Data dari API kosong!");
             }
         } catch (error) {
-            console.log("ada error di use effect: ", error)
+            // console.log("ada error di use effect: ", error)
             setError(error);
         }
     }
