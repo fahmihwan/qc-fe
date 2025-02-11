@@ -122,7 +122,7 @@ const AllCategories = () => {
                 <div className='col-span-12 lg:col-span-5 '>
 
                     {/* header */}
-                    <div className=" flex border border-dark-mode-border ml-5 my-5 px-5 dark:bg-dark-mode">
+                    <div className=" flex border border-dark-mode-border ml-5 my-5 px-5 dark:bg-dark-mode-v2">
                         <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                             <div className=" rounded flex  items-centers ">
                                 <div className="flex-col justify-center block lg:hidden items-center text-white">

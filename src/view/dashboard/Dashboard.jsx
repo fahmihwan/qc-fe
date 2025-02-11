@@ -33,9 +33,8 @@ const Dashboard = () => {
     return (
         <LayoutAdmin>
             {
-                isLoading ? (<div className='text-white'>dsdsd</div>) : (<div className='w-full min-h-screen dark:bg-dark-mode'>
-                    <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] ">
-
+                isLoading ? (<div className='text-white'>dsdsd</div>) : (<div className='w-full min-h-screen '>
+                    <div className="overflow-x-hidden border-b dark:border-dark-mode-border py-10">
                         {/* <div className="flex w-full min-w-full gap-16 animate-marquee">
                                 {[...Array(2)].map((_, i) => (
                                     <div key={i} className="flex whitespace-nowrap gap-8 w-max">
@@ -95,7 +94,7 @@ const Dashboard = () => {
                     </div> */}
 
 
-                    <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
+                    <div className='h-full p-[10px] border dark:border-dark-mode-border m-5' style={{ width: "95%", height: "541px" }}>
                         <IndonesiaMap onProvinceClick={onProvinceClick} />
                     </div>
                 </div >)
