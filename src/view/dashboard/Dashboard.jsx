@@ -34,7 +34,7 @@ const Dashboard = () => {
         <LayoutAdmin>
             {
                 isLoading ? (<div className='text-white'>dsdsd</div>) : (<div className='w-full min-h-screen '>
-                    <div className="overflow-x-hidden border-b dark:border-dark-mode-border py-10">
+                    <div className="overflow-x-hidden border-b  dark:border-dark-mode-border py-10">
                         {/* <div className="flex w-full min-w-full gap-16 animate-marquee">
                                 {[...Array(2)].map((_, i) => (
                                     <div key={i} className="flex whitespace-nowrap gap-8 w-max">

@@ -17,6 +17,7 @@ export default {
         // 'dark-mode-bg': '#101316',
         'dark-mode-bg': '#23262b',
         'dark-mode-border': '#3c3e3f',
+        // 'light-mode-bg': '#f6f6f6',
         'red-custom': '#E31A1C',
         'green-custom': '#33A02C',
         'yellow-custom': '#F4BE37',

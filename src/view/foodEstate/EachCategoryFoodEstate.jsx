@@ -86,18 +86,18 @@ const EachCategoryFoodEstate = ({ category }) => {
                     <div className='col-span-12 lg:col-span-5 '>
 
                         {/* header */}
-                        <div className=" flex border border-dark-mode-border ml-5 my-5 px-5 dark:bg-dark-mode-v2 ">
+                        <div className=" flex border dark:border-dark-mode-border ml-5 my-5 px-5 bg-white dark:bg-dark-mode-v2">
                             <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                                 <div className="rounded flex  items-">
                                     <div className="flex-col justify-center block lg:hidden items-center text-white">
-                                        <div className="dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
-                                        <div className="dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                                        <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
+                                        <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>
                                 </div>
                                 <div className=" text-white rounded ">
                                     <div className="text-center h-20  flex-col justify-center hidden lg:block">
-                                        <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
-                                        <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                                        <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
+                                        <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>
                                 </div>
                                 {/* <div className=" text-white flex justify-end">
@@ -117,7 +117,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div> */}
 
-                        <div className='border ml-5 p-2 flex justify-center border-dark-mode-border ' >
+                        <div className='border ml-5 p-2 flex justify-center dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2' >
                             <div className='w-[100%] h-[500px] '>
                                 <IndonesiaMap onProvinceClick={onProvinceClick} />
                             </div>
@@ -132,10 +132,10 @@ const EachCategoryFoodEstate = ({ category }) => {
                     {!isLoading && response && (
                         <>
                             <div className='w-full xl:col-span-2'>
-                                <div className='dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
+                                <div className='bg-white dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
                                     <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} />
                                 </div>
-                                <div className='dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
+                                <div className='bg-white dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
                                     <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} />
                                 </div>
                             </div>

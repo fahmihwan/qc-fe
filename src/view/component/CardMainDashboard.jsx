@@ -156,7 +156,7 @@ const SingleCard = ({ singleData }) => {
             </div> */}
 
 
-            <div className="flex border text-center border-dark-mode-border bg-dark-mode-v2 justify-center rounded-lg text-white w-[250px] h-[350px]
+            <div className="flex border text-center  dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2 justify-center rounded-lg dark:text-white w-[250px] h-[350px]
              mr-5 mt-5">
                 <div>
                     <h5 className="border-b py-3 mb-5">{singleData.title}</h5>
