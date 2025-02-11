@@ -5,64 +5,102 @@ import IndonesiaMap from '../component/IndonesiaMap'
 import LayoutAdmin from '../layout/LayoutAdmin'
 import { MapEl } from '../component/Map';
 import { useEffectDashboardCards } from '../../hook/useEffectDashboardCards';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from 'react';
 
 
 const Dashboard = () => {
-    const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
+    const onProvinceClick = ({ namaProvinsi, kodeProvinsi }) => {
         setIsProvinceClicked(true)
         console.log('Ini provinsi diklik  test');
     }
 
     const { response, error } = useEffectDashboardCards()
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
 
-    useEffect(() => {
-        if(response) {
-            console.log(response)
-            setTimeout(() => {
-                setIsLoading(false)
-            }, 1500)
-        }
-    }, [response])
+    // useEffect(() => {
+    //     if (response) {
+    //         console.log(response)
+    //         setTimeout(() => {
+    //             setIsLoading(false)
+    //         }, 0)
+    //     }
+    // }, [response])
+
 
     return (
         <LayoutAdmin>
-            {isLoading ? (
-                <div className="flex justify-center items-center h-screen text-white text-2xl">
-                    Loading...
-                </div>
-            ) : (
-                <div className='w-full min-h-screen dark:bg-dark-mode'>
-                    <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] dark:border-white">
+            {
+                isLoading ? (<div className='text-white'>dsdsd</div>) : (<div className='w-full min-h-screen dark:bg-dark-mode'>
+                    <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] ">
+
                         {/* <div className="flex w-full min-w-full gap-16 animate-marquee">
-                            {[...Array(2)].map((_, i) => (
-                                <div key={i} className="flex whitespace-nowrap gap-8 w-max">
-                                    <span className="text-green-custom text-xl">
-                                        SELAMAT DATANG DI DASHBOARD 360
-                                    </span>
-                                    <span className="dark:text-white text-xl">|</span>
-                                    <span className="text-red-custom text-xl">
-                                        DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
-                                    </span>
-                                    <span className="dark:text-white text-xl">|</span>
-                                </div>
-                            ))}
-                        </div> */}
-                        <div className='dark:text-white'>-</div>
+                                {[...Array(2)].map((_, i) => (
+                                    <div key={i} className="flex whitespace-nowrap gap-8 w-max">
+                                        <span className="text-green-custom text-xl">
+                                            SELAMAT DATANG DI DASHBOARD 360
+                                        </span>
+                                        <span className="dark:text-white text-xl">|</span>
+                                        <span className="text-red-custom text-xl">
+                                            DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
+                                        </span>
+                                        <span className="dark:text-white text-xl">|</span>
+                                    </div>
+                                ))}
+                            </div> */}
+                        {/* <div className='dark:text-white'>-</div> */}
                     </div>
 
-
-                    <div className='w-full'>
+                    <div className='w-full flex justify-center py-5 my-5'>
                         <CardMainDashboard allDataFoodEstate={response} />
                     </div>
 
+                    {/* <div className='w-full flex justify-center '>
+                        <div className='w-[800px] flex'>
+                            <Slider {...settings}>
+                                <div className='m-5'>
+                                    <div className='bg-slate-200 m-5'>
+                                        <h3>1</h3>
+                                    </div>
+                                </div>
+                                <div className='m-5'>
+                                    <div className='bg-slate-200 m-5'>
+                                        <h3>2</h3>
+                                    </div>
+                                </div>
+                                <div className='m-5'>
+                                    <div className='bg-slate-200 m-5'>
+                                        <h3>3</h3>
+                                    </div>
+                                </div>
+                                <div className='m-5'>
+                                    <div className='bg-slate-200 m-5'>
+                                        <h3>3</h3>
+                                    </div>
+                                </div>
+                                <div className='m-5'>
+                                    <div className='bg-slate-200 m-5'>
+                                        <h3>3</h3>
+                                    </div>
+                                </div>
+                                <div className='m-5'>
+                                    <div className='bg-slate-200 m-5'>
+                                        <h3>3</h3>
+                                    </div>
+                                </div>
+                            </Slider>
+                        </div>
+                    </div> */}
+
+
                     <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                    <IndonesiaMap onProvinceClick={onProvinceClick}/>
+                        <IndonesiaMap onProvinceClick={onProvinceClick} />
                     </div>
-                </div> 
-            )}
-        </LayoutAdmin>
+                </div >)
+            }
+        </LayoutAdmin >
     )
 }
 
