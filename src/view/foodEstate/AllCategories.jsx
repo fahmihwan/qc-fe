@@ -145,7 +145,7 @@ const AllCategories = () => {
                     {/* <div className='p-5 mr-5 border dark:border-dark-mode-border' style={{ width: "90%", height: "541px" }}> */}
                     <div className='border ml-5 p-2 flex justify-center border-dark-mode-border '>
                         <div className=' w-[100%] h-[500px]'>
-                            <IndonesiaMap onProvinceClick={onProvinceClick} />
+                            <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []}/>
                         </div>
                     </div>
 

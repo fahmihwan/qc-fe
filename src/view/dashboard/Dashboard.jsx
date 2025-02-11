@@ -96,7 +96,7 @@ const Dashboard = () => {
 
 
                     <div className='h-full p-[10px] border-t-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                        <IndonesiaMap onProvinceClick={onProvinceClick} />
+                        <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []}/>
                     </div>
                 </div >)
             }

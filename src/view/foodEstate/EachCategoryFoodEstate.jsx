@@ -118,7 +118,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                         </div> */}
 
                         <div className='p-[10px] border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                            <IndonesiaMap onProvinceClick={onProvinceClick} />
+                            <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []}/>
                         </div>
 
                         <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">
