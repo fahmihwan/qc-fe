@@ -72,6 +72,18 @@ const AllCategories = () => {
         }
     }, [responseSideBarChart, errorSideBarChart]);
 
+    useEffect(() => {
+        console.log(pieChartData)
+    }, [pieChartData])
+
+    useEffect(() => {
+        if (selectedProvinceCode && selectedYear) {
+            fetchData(selectedProvinceCode, selectedYear).then((res) => {
+                setPieChartData(res);
+            });
+        }
+    }, [selectedYear, selectedProvinceCode]);
+
      const fetchData = async (province_id, year) => {
         try{
             if(!province_id && !year) return;
@@ -108,6 +120,14 @@ const AllCategories = () => {
         // setPieChartData(dummyDataForSpecifiedProvince)
         // setErrorPieChartData(errorPieChart)
     };
+
+    const onSelect = async(year) => {
+        setSelectedYear(year)
+        await fetchData(selectedProvinceCode, selectedYear).then((res)=>{
+            console.log(res)
+            setPieChartData(res)
+        })
+    }
 
     const resetSelection = () => {
         setIsProvinceClicked(false);
@@ -169,7 +189,7 @@ const AllCategories = () => {
                                 </div>
                                 <div className=" text-white flex items-center justify-end">
                                     <div className='flex flex-col items-center align-middle'>
-                                        <DropdownCustom listDropDown={listDropDown} />
+                                        <DropdownCustom listDropDown={listDropDown} onSelect={onSelect}/>
 
                                         {isProvinceClicked &&
                                             <button

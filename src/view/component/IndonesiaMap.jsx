@@ -26,7 +26,7 @@ const IndonesiaMap = ({
 
 
     useEffect(() => {
-        console.log("ini dari indonesia map", earthquakeData);
+        // console.log("ini dari indonesia map", earthquakeData);
         const webMap = new WebMap({ basemap: "streets-navigation-vector" });
         const view = new MapView({
             container: mapRef.current,

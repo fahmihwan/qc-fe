@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const DropdownCustom = ({ listDropDown }) => {
+const DropdownCustom = ({ listDropDown, onSelect }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState("Pilih Tahun");
 
@@ -29,6 +29,7 @@ const DropdownCustom = ({ listDropDown }) => {
                                     onClick={() => {
                                         setSelectedItem(item)
                                         setIsOpen(false);
+                                        onSelect(item)
                                     }}
                                 >
                                     {item}
