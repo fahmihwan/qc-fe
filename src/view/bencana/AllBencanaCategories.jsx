@@ -5,6 +5,7 @@ import TabelBencana from '../component/TabelBencana'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
 const AllBencanaCategories = () => {
+    const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
         setIsProvinceClicked(true)
         console.log('Ini provinsi diklik  test');

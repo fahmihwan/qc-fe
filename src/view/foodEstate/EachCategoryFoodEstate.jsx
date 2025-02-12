@@ -16,6 +16,8 @@ const EachCategoryFoodEstate = ({ category }) => {
     const [dataProduktivitasToParse, setDataProduktivitasToParse] = useState({})
     const [allData, setAllData] = useState({})
 
+    const [isProvinceClicked, setIsProvinceClicked] = useState(false)
+
     useEffect(() => {
         if (response) {
             console.log('response dari api: ', response);
@@ -95,7 +97,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                     </div>
                                 </div>
                                 <div className=" text-white rounded ">
-                                    <div className="text-center h-20  flex-col justify-center hidden lg:block">
+                                    <div className="text-center   flex-col justify-center hidden lg:block">
                                         <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
                                         <div className="dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>

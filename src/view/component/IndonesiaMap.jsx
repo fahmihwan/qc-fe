@@ -144,14 +144,25 @@ const IndonesiaMap = ({
             });
             
             view.on("click", async (event) => {
-                if (!clickable) return;
                 try {
                     const hitTestResponse = await view.hitTest(event);
-                    if (hitTestResponse.results.length > 0) {
+                    
+                    // Cek apakah klik mengenai titik gempa
+                    const clickedEarthquake = hitTestResponse.results.find(
+                        (result) => result.graphic.layer === earthquakeLayer
+                    )?.graphic;
+            
+                    if (clickedEarthquake) {
+                        console.log("Gempa diklik:", clickedEarthquake.attributes);
+                        // Panggil fungsi lain jika diperlukan
+                    }
+            
+                    // Cek apakah klik mengenai provinsi
+                    if (clickable) {
                         const clickedGraphic = hitTestResponse.results.find(
                             (result) => result.graphic.layer === provinceLayer
                         )?.graphic;
-    
+            
                         if (clickedGraphic) {
                             const { PROVINSI, KODE_PROV } = clickedGraphic.attributes;
                             setSelectedProvince(KODE_PROV);
@@ -162,7 +173,7 @@ const IndonesiaMap = ({
                 } catch (error) {
                     console.error("Error saat klik peta:", error);
                 }
-            });
+            });            
         });
     
         return () => view.destroy();

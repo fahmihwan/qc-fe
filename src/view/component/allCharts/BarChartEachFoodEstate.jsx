@@ -66,7 +66,7 @@ const BarChartEachFoodEstate = ({ title, data }) => {
                 {data.datasets[0].data.length > 0 ? (
                     <BarChart data={data} />
                 ) : (
-                    <div className="dark:text-white font-bold text-xl mb-[10px]">Data belum tersedia</div>
+                    <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                 )}
             </div>
 

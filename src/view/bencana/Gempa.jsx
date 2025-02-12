@@ -14,12 +14,13 @@ const Gempa = () => {
     const [activeCategory, setActiveCategory] = useState("TERKINI")
     const [activeCategoryTitle, setActiveCategoryTitle] = useState("Terkini")
     const [activeCategoryDesc, setActiveCategoryDesc] = useState("terkini")
+
     const [selectedDetailGempa, setSelectedDetailGempa] = useState({})
+    const [selectedEarthquake, setSelectedEarthquake] = useState({})
 
     const [modalOpen, setModalOpen] = useState(false)
 
     const {response, loading, error, fetchData} = useEffectGempa(activeCategory)
-
 
 
     const categories = [
@@ -50,115 +51,7 @@ const Gempa = () => {
         // },
     ]
 
-    const dummyDataMagnitudoFive = {
-        "Infogempa": {
-          "gempa": [
-            {
-              "Tanggal": "08 Feb 2025",
-              "Jam": "12:00:33 WIB",
-              "DateTime": "2025-02-08T05:00:33+00:00",
-              "Coordinates": "-6.10,103.20",
-              "Lintang": "6.10 LS",
-              "Bujur": "103.20 BT",
-              "Magnitude": "5.2",
-              "Kedalaman": "10 km",
-              "Wilayah": "130 km BaratDaya PESISIRBARAT-LAMPUNG",
-              "Potensi": "Tidak berpotensi tsunami"
-            },
-            {
-              "Tanggal": "08 Feb 2025",
-              "Jam": "01:32:18 WIB",
-              "DateTime": "2025-02-07T18:32:18+00:00",
-              "Coordinates": "-1.86,138.93",
-              "Lintang": "1.86 LS",
-              "Bujur": "138.93 BT",
-              "Magnitude": "5.3",
-              "Kedalaman": "10 km",
-              "Wilayah": "20 km Tenggara SARMI-PAPUA",
-              "Potensi": "Tidak berpotensi tsunami"
-            },
-            {
-              "Tanggal": "07 Feb 2025",
-              "Jam": "00:09:50 WIB",
-              "DateTime": "2025-02-06T17:09:50+00:00",
-              "Coordinates": "-2.52,141.95",
-              "Lintang": "2.52 LS",
-              "Bujur": "141.95 BT",
-              "Magnitude": "5.5",
-              "Kedalaman": "10 km",
-              "Wilayah": "142 km TimurLaut JAYAPURA-PAPUA",
-              "Potensi": "Tidak berpotensi tsunami"
-            },
-            {
-              "Tanggal": "06 Feb 2025",
-              "Jam": "23:24:53 WIB",
-              "DateTime": "2025-02-06T16:24:53+00:00",
-              "Coordinates": "-2.57,141.90",
-              "Lintang": "2.57 LS",
-              "Bujur": "141.90 BT",
-              "Magnitude": "5.6",
-              "Kedalaman": "10 km",
-              "Wilayah": "136 km TimurLaut JAYAPURA-PAPUA",
-              "Potensi": "Tidak berpotensi tsunami"
-            },
-          ]
-        }
-    }
-
-    const dummyDataDirasakan = {
-        "Infogempa": {
-          "gempa": [
-            {
-              "Tanggal": "11 Feb 2025",
-              "Jam": "04:24:05 WIB",
-              "DateTime": "2025-02-10T21:24:05+00:00",
-              "Coordinates": "2.91,118.46",
-              "Lintang": "2.91 LU",
-              "Bujur": "118.46 BT",
-              "Magnitude": "3.9",
-              "Kedalaman": "10 km",
-              "Wilayah": "Pusat gempa berada di laut 107 km Tenggara TARAKAN",
-              "Dirasakan": "II Berau , II Tanjung Selor"
-            },
-            {
-              "Tanggal": "10 Feb 2025",
-              "Jam": "22:15:06 WIB",
-              "DateTime": "2025-02-10T15:15:06+00:00",
-              "Coordinates": "-9.76,119.63",
-              "Lintang": "9.76 LS",
-              "Bujur": "119.63 BT",
-              "Magnitude": "5.1",
-              "Kedalaman": "39 km",
-              "Wilayah": "Pusat gempa berada di laut 15 km tenggara Waibakul",
-              "Dirasakan": "III Sumba Timur, III Bima"
-            },
-            {
-              "Tanggal": "09 Feb 2025",
-              "Jam": "19:37:01 WIB",
-              "DateTime": "2025-02-09T12:37:01+00:00",
-              "Coordinates": "-4.05,121.80",
-              "Lintang": "4.05 LS",
-              "Bujur": "121.80 BT",
-              "Magnitude": "2.2",
-              "Kedalaman": "5 km",
-              "Wilayah": "Pusat gempa berada di darat 3 km timurlaut Lalolae, Kolaka Timur",
-              "Dirasakan": "II Kolaka Timur"
-            },
-            {
-              "Tanggal": "08 Feb 2025",
-              "Jam": "19:13:57 WIB",
-              "DateTime": "2025-02-08T12:13:57+00:00",
-              "Coordinates": "-4.76,119.92",
-              "Lintang": "4.76 LS",
-              "Bujur": "119.92 BT",
-              "Magnitude": "4.1",
-              "Kedalaman": "8 km",
-              "Wilayah": "Pusat gempa berada di darat 16 km barat daya Bone",
-              "Dirasakan": "II-III Bone, II - III Soppeng, II Pangkep, II Maros, II Sinjai, II Makassar, II Gowa"
-            },
-          ]
-        }
-      }
+    
 
     const cobaModal = {
         "Infogempa": {
@@ -190,10 +83,7 @@ const Gempa = () => {
         setModalOpen(false)
     }
 
-    const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
-        setIsProvinceClicked(true)
-        console.log('Ini provinsi diklik  test');
-    }
+    
 
     // useEffect(() => {
     //     console.log(activeCategory)
