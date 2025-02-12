@@ -98,7 +98,7 @@ const Gempa = () => {
 
     const CardSatuGempa = ({dataDetail}) => {
         return (
-            <div className='dark:border-white border-2 my-[30px] mx-20 py-[15px] max-w-[90%] px-4 rounded-[15px] w-fit grid grid-cols-4 items-stretch'>
+            <div className='dark:border-white border-2 my-[30px] mx-20 py-[15px] w-[90%] px-4 rounded-[15px] grid grid-cols-4 items-stretch'>
                 <div className='col-span-1 border-r-[1px] dark:border-white'>
                     <div className='pr-[25px] py-[11px]'>
                         <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"}/>
@@ -253,6 +253,7 @@ const Gempa = () => {
                                         : [{ Coordinates: response.Infogempa.gempa.Coordinates }] 
                                     : []
                             }
+                            hoverable={false}
                         />
                     </div>
 
