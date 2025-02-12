@@ -13,6 +13,7 @@ import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol";
 const IndonesiaMap = ({ 
     kodeProvinsi, 
     onProvinceClick, 
+    isProvinceClicked,
     clickable = true, 
     hoverable = true,
     earthquakeData = [],
@@ -24,6 +25,11 @@ const IndonesiaMap = ({
 
     let provinsiData = provinsiJson.data
 
+    useEffect(() => {
+        if (!isProvinceClicked) {
+            setSelectedProvince(null);
+        }
+    }, [isProvinceClicked]);
 
     useEffect(() => {
         // console.log("ini dari indonesia map", earthquakeData);
@@ -165,10 +171,9 @@ const IndonesiaMap = ({
             
                         if (clickedGraphic) {
                             const { PROVINSI, KODE_PROV } = clickedGraphic.attributes;
-                            setSelectedProvince(KODE_PROV);
+                            setSelectedProvince((prev) => (prev === KODE_PROV ? null : KODE_PROV));
                             onProvinceClick(PROVINSI, KODE_PROV);
-                            // console.log(PROVINSI, KODE_PROV);
-                        }
+                        }                        
                     }
                 } catch (error) {
                     console.error("Error saat klik peta:", error);
@@ -177,7 +182,7 @@ const IndonesiaMap = ({
         });
     
         return () => view.destroy();
-    }, [clickable, hoverable, earthquakeData]);    
+    }, [clickable, hoverable, earthquakeData, isProvinceClicked]);    
     
 
     // **Efek perubahan warna ketika provinsi dipilih**

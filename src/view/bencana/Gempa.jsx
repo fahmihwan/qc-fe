@@ -220,15 +220,27 @@ const Gempa = () => {
                     <div className='row-span-3 flex flex-row justify-between'>
                         <div className='flex flex-row items-center gap-[10px]'>
                             <IconGempaSVG color={"fill-red-custom"} />
-                            <span className='text-base dark:text-white'>Magnitudo : {dataDetail.Magnitude}</span>
+                            <span className='text-base dark:text-white'>Magnitudo : &nbsp;
+                                <span className='text-green-custom'>
+                                {dataDetail.Magnitude}
+                                </span>
+                            </span>
                         </div>
                         <div className='flex flex-row items-center gap-[10px]'>
                             <IconPointSVG />
-                            <span className='text-base dark:text-white'>Kedalaman : {dataDetail.Kedalaman}</span>
+                            <span className='text-base dark:text-white'>Kedalaman : &nbsp;
+                                <span className='text-green-custom'>
+                                {dataDetail.Kedalaman}
+                                </span>
+                            </span>
                         </div>
                         <div className='flex flex-row items-center gap-[10px]'>
                             <IconPointMapSVG />
-                            <span className='text-base dark:text-white'>Lokasi : {dataDetail.Lintang} - {dataDetail.Bujur}</span>
+                            <span className='text-base dark:text-white'>Lokasi : &nbsp;
+                                <span className='text-green-custom'>
+                                {dataDetail.Lintang} - {dataDetail.Bujur}
+                                </span>
+                            </span>
                         </div>
                     </div>
 
@@ -334,6 +346,12 @@ const Gempa = () => {
                             )}
                         </div>
                     </div>
+                    <div className='flex flex-row justify-between px-5 h-[50px] py-[13px] items-center'>
+                        <span className='dark:text-white font-bold  text-sm'></span>
+                        <button onClick={() => handleCloseModal()} className='hidden'>
+                            <IconXSVG />
+                        </button>
+                    </div>
                 </div>
             </div>
         )
@@ -350,7 +368,7 @@ const Gempa = () => {
                     <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] dark:border-white">
                         <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
                         <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
-                        <div className='dark:text-white text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
+                        <div className='text-green-custom text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
                     </div>
 
                     <div className='h-full border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>

@@ -209,7 +209,7 @@ const AllCategories = () => {
 
                         <div className='border ml-5 p-2 flex justify-center border-dark-mode-border '>
                             <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode}  />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
                             </div>
                         </div>
 
