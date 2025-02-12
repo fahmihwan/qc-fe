@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
 
-const PieChart = ({ data }) => {
+const PieChart = ({ data, title }) => {
     const chartRef = useRef(null);
     const chartInstance = useRef(null);
-    console.log
+    console.log("dari pie chart", data)
 
     useEffect(() => {
         if (chartInstance.current) {
@@ -13,6 +13,8 @@ const PieChart = ({ data }) => {
 
         const ctx = chartRef.current.getContext("2d")
 
+        const selectedData = title.startsWith("Luas Panen") ? data[0].luas_panen : data[0].produktivitas
+
         chartInstance.current = new Chart(ctx, {
             type: "pie",
             data: {
@@ -20,11 +22,12 @@ const PieChart = ({ data }) => {
                 datasets: [
                     {
                         data: [
-                            data.totalLahan.padi,
-                            data.totalLahan.jagung,
-                            data.totalLahan.kedelai,
-                            data.totalLahan.tebu,
-                            data.totalLahan.singkong,
+
+                            selectedData.Padi,
+                            selectedData.Jagung,
+                            selectedData.Kedelai,
+                            selectedData.Tebu,
+                            selectedData.Singkong,
                         ],
                         backgroundColor: [
                             "rgba(178, 223, 138, 1)",
@@ -78,16 +81,16 @@ const PieChart = ({ data }) => {
     return <canvas ref={chartRef} className="h-full w-full" />
 }
 
-const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data }) => {
+const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year }) => {
     // const getYear = new Date(data.data.startDate).getFullYear()
 
     return (
         <>
             <div className="px-[29px] py-[15px] h-[326px] flex flex-col">
-                <div className="dark:text-white font-bold text-xl lg:-mb-4 mb-2">{title} Tahun 2024</div>
+                <div className="dark:text-white font-bold text-xl lg:-mb-4 mb-2">{title} Tahun {year}</div>
                 <div className="h-[250px] flex flex-row items-center justify-center">
                     <div className="w-72 flex items-center align-middle justify-center">
-                        <PieChart data={data.data} />
+                        <PieChart data={data.data} title={title} />
                     </div>
                 </div>
             </div>

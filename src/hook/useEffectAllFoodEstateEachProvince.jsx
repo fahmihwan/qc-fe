@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
 import { getAllFoodEstateByProvinceIdAndYear } from "../api/foodEstate"
 
-export const useEffectAllFoodEstateEachProvince = (province_id, year) => {
+export const useEffectAllFoodEstateEachProvinceEachYear = (province_id, year) => {
     const [response, setResponse] = useState(null)
     const [error, setError] = useState(null)
 
-    const fetchData = async () => {
+    const fetchData = async (province_id, year) => {
         try{
             if(!province_id && !year) return;
             const response = await getAllFoodEstateByProvinceIdAndYear(province_id, year)
@@ -21,8 +21,8 @@ export const useEffectAllFoodEstateEachProvince = (province_id, year) => {
     }
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        fetchData(province_id, year)
+    }, [province_id, year])
 
     return { response, error }
 }

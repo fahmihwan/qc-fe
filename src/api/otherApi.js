@@ -10,3 +10,13 @@ export const getTable = async (year) => {
         throw error;
     }
 };
+
+export const getYears = async() => {
+    try {
+        const response = await apiClient.get('/getlistyear')
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error;
+    }
+}

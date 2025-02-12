@@ -9,6 +9,9 @@ import DropdownCustom from '../component/miniComponent/DropdownCustom'
 import LayoutAdmin from '../layout/LayoutAdmin'
 import { useEffectOtherApi } from '../../hook/useEffectOtherApi'
 import { useEffectAllFoodEstate } from '../../hook/useEffectAllFoodEstate'
+import { useEffectYears } from '../../hook/useEffectYears'
+import { useEffectAllFoodEstateEachProvinceEachYear } from '../../hook/useEffectAllFoodEstateEachProvince'
+import { getAllFoodEstateByProvinceIdAndYear } from '../../api/foodEstate'
 
 const AllCategories = () => {
     const dummyDataForTable = {
@@ -36,84 +39,30 @@ const AllCategories = () => {
         }
     }
 
-    const dummyDataForSpecifiedProvince = {
-        "message": "data fetch successfully",
-        "data": {
-            "startDate": "2024-01-01T00:00:00Z",
-            "endDate": "2024-01-29T23:59:59Z",
-            "provinceName": "Sumatera Utara",
-            "totalLahan": {
-                "satuan": "ha",
-                "padi": 10024212,
-                "jagung": 1241353,
-                "kedelai": 13892735,
-                "tebu": 93935983,
-                "singkong": 87982783
-            },
-            "produktivitas": {
-                "satuan": "ku/ha",
-                "padi": 298383,
-                "jagung": 124,
-                "kedelai": 329,
-                "tebu": 93872,
-                "singkong": 9827
-            }
-        }
-    }
-
-    const dummyData = {
-        labels: [2020, 2021, 2022, 2023, 2024],
-        datasets: [
-            {
-                label: 'Padi',
-                data: [1000000, 1200000, 1500000, 1300000, 1400000],
-                backgroundColor: 'rgba(178, 223, 138, 1)',
-                borderWidth: 0,
-                barPercentage: 1.2,
-                barThickness: '30'
-            },
-            {
-                label: 'Jagung',
-                data: [500000, 600000, 700000, 650000, 750000],
-                backgroundColor: 'rgba(244, 190, 55, 1)',
-                borderWidth: 0,
-                barPercentage: 1.2,
-                barThickness: '30'
-            },
-            {
-                label: 'Singkong',
-                data: [500000, 600000, 700000, 650000, 750000],
-                backgroundColor: 'rgba(21, 93, 33, 1)',
-                borderWidth: 0,
-                barPercentage: 1.2,
-                barThickness: '30'
-            },
-            {
-                label: 'Kedelai',
-                data: [500000, 600000, 700000, 650000, 750000],
-                backgroundColor: 'rgba(15, 44, 64, 1)',
-                borderWidth: 0,
-                barPercentage: 1.2,
-                barThickness: '30'
-            },
-            {
-                label: 'Tebu',
-                data: [500000, 600000, 700000, 650000, 750000],
-                backgroundColor: 'rgba(138, 28, 114, 1)',
-                borderWidth: 0,
-                barPercentage: 1.2,
-                barThickness: '30'
-            }
-        ]
-    }
-
     const [selectedProvinceName, setSelectedProvinceName] = useState('');
-    const listDropDown = [2024, 2023, 2022, 2021, 2020];
+    const [selectedProvinceCode, setSelectedProvinceCode] = useState(null);
+    const [selectedYear, setSelectedYear] = useState(null)
+    const [listDropDown, setListDropDown] = useState([])    
+
     const [isProvinceClicked, setIsProvinceClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
+    const [pieChartData, setPieChartData] = useState(null)
+    const [errorPieChartData, setErrorPieChartData] = useState(null)
+
     const { response, error } = useEffectOtherApi(2024);
     const { response: responseSideBarChart, error: errorSideBarChart } = useEffectAllFoodEstate();
+    const { response: responseListYear, error: errorListYear} = useEffectYears()
+
+    useEffect(() => {
+        if (responseListYear) {
+            const years = responseListYear.map(item => parseInt(item.year));
+            setListDropDown(years); 
+            console.log("ini years",years)
+            setSelectedYear(years[0])
+        }
+    }, [responseListYear]);
+
 
     useEffect(() => {
         if (responseSideBarChart) {
@@ -123,9 +72,47 @@ const AllCategories = () => {
         }
     }, [responseSideBarChart, errorSideBarChart]);
 
-    const onProvinceClick = (namaProvinsi, kodeProvinsi) => {
+     const fetchData = async (province_id, year) => {
+        try{
+            if(!province_id && !year) return;
+            const response = await getAllFoodEstateByProvinceIdAndYear(province_id, year)
+            if (response.data) {
+                console.log("Data yang diterima test:", response);
+                return response
+            } else {
+                // setError("Data dari API kosong!");
+            }
+        } catch (error) {
+            // setError(error)
+        }
+    }
+
+    const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
+
+        // setSelectedProvinceName(namaProvinsi);
+        // setSelectedProvinceCode(kodeProvinsi)
+        // console.log("masih bisa nih, year: ", selectedYear)
+
+        console.log('wkwkwkwk')
+       await fetchData(kodeProvinsi, selectedYear).then((res)=>{
+        console.log(res)
+        setPieChartData(res)
+        setSelectedProvinceName(namaProvinsi)
+        setSelectedProvinceCode(kodeProvinsi)
+        // console.log("pie  chart: ", pieChartData)
         setIsProvinceClicked(true);
-        setSelectedProvinceName(namaProvinsi);
+       })
+
+        // const { response: responsePieChart, error: errorPieChart } = useEffectAllFoodEstateEachProvinceEachYear(kodeProvinsi, selectedYear)
+        // console.log("pie chart response", responsePieChart)
+        // setPieChartData(dummyDataForSpecifiedProvince)
+        // setErrorPieChartData(errorPieChart)
+    };
+
+    const resetSelection = () => {
+        setIsProvinceClicked(false);
+        setSelectedProvinceName('');
+        setSelectedProvinceCode(null);
     };
 
     const crops = ["Padi", "Jagung", "Singkong", "Kedelai", "Tebu"];
@@ -186,7 +173,7 @@ const AllCategories = () => {
 
                                         {isProvinceClicked &&
                                             <button
-                                                onClick={() => setIsProvinceClicked(!isProvinceClicked)}
+                                                onClick={resetSelection}
                                                 className="text-white w-36 lg:w-44 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                                 type="button"
                                             >
@@ -202,7 +189,7 @@ const AllCategories = () => {
 
                         <div className='border ml-5 p-2 flex justify-center border-dark-mode-border '>
                             <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode}  />
                             </div>
                         </div>
 
@@ -221,8 +208,8 @@ const AllCategories = () => {
                     {/* grafik samping kanan */}
                     {isProvinceClicked ?
                         <div className='w-full xl:col-span-2 '>
-                            <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={dummyDataForSpecifiedProvince} />
-                            <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={dummyDataForSpecifiedProvince} />
+                            <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
+                            <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
                         </div> :
                         <div className='w-full xl:col-span-2  '>
                             <div className='dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
