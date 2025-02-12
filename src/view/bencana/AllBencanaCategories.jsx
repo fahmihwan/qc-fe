@@ -5,6 +5,7 @@ import TabelBencana from '../component/TabelBencana'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
 const AllBencanaCategories = () => {
+    const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     const onProvinceClick = ({namaProvinsi, kodeProvinsi}) => {
         setIsProvinceClicked(true)
         console.log('Ini provinsi diklik  test');
@@ -18,7 +19,7 @@ const AllBencanaCategories = () => {
                 </div>
 
                 <div className='p-[10px] border-b-[1px]' style={{ width: "100%", height: "541px" }}>
-                    <IndonesiaMap onProvinceClick={onProvinceClick} />
+                    <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []}/>
                 </div>
 
                 <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">

@@ -16,6 +16,8 @@ const EachCategoryFoodEstate = ({ category }) => {
     const [dataProduktivitasToParse, setDataProduktivitasToParse] = useState({})
     const [allData, setAllData] = useState({})
 
+    const [isProvinceClicked, setIsProvinceClicked] = useState(false)
+
     useEffect(() => {
         if (response) {
             // console.log('response dari api: ', response);
@@ -119,7 +121,7 @@ const EachCategoryFoodEstate = ({ category }) => {
 
                         <div className='border ml-5 p-2 flex justify-center dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2' >
                             <div className='w-[100%] h-[500px] '>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />
                             </div>
                         </div>
 
