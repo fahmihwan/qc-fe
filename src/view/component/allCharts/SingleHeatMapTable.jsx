@@ -8,7 +8,7 @@ const SingleHeatMapTable = ({ data, dataBe, titleBe }) => {
 
     const maxValue = Math.max(...items.map(([, value]) => value))
 
-    console.log(dataBe);
+    // console.log(dataBe);
 
 
     return (
