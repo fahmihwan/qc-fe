@@ -8,8 +8,15 @@ import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 // import { provinsiData } from "../../data/38provinsi";
 import provinsiJson from '../../data/38provinsi.json'
+import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol";
 
-const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverable = true }) => {
+const IndonesiaMap = ({
+    kodeProvinsi,
+    onProvinceClick,
+    clickable = true,
+    hoverable = true,
+    earthquakeData = [],
+}) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
     const [selectedProvince, setSelectedProvince] = useState(null);
@@ -19,6 +26,7 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverab
 
 
     useEffect(() => {
+        console.log("ini dari indonesia map", earthquakeData);
         const webMap = new WebMap({ basemap: "streets-navigation-vector" });
         const view = new MapView({
             container: mapRef.current,
@@ -166,25 +174,6 @@ const IndonesiaMap = ({ kodeProvinsi, onProvinceClick, clickable = true, hoverab
                     console.error("Error saat klik peta:", error);
                 }
             });
-        });
-
-        view.on("pointer-move", async (event) => {
-            if (!hoverable) return;
-            try {
-                const hitTestResponse = await view.hitTest(event);
-                const hoveredGraphic = hitTestResponse.results.find(
-                    (result) => result.graphic.layer === graphicsLayer
-                )?.graphic;
-
-                if (hoveredGraphic) {
-                    const { KODE_PROV } = hoveredGraphic.attributes;
-                    setHoveredProvince(KODE_PROV); // Set provinsi yang sedang di-hover
-                } else {
-                    setHoveredProvince(null); // Reset hover jika kursor keluar dari provinsi
-                }
-            } catch (error) {
-                console.error("Error saat hover peta:", error);
-            }
         });
 
         return () => view.destroy();
