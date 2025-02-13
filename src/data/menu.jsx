@@ -61,11 +61,11 @@ const menu = [
                 link: '/gempa',
                 icon: <IconGempaSVG />
             },
-            {
-                title: 'Banjir',
-                link: '',
-                icon: <IconBanjirSVG />
-            },
+            // {
+            //     title: 'Banjir',
+            //     link: '',
+            //     icon: <IconBanjirSVG />
+            // },
         ],
     },
     {

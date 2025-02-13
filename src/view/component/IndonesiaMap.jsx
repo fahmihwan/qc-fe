@@ -17,6 +17,7 @@ const IndonesiaMap = ({
     clickable = true, 
     hoverable = true,
     earthquakeData = [],
+    onEarthquakePointClicked,
 }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
@@ -30,6 +31,8 @@ const IndonesiaMap = ({
             setSelectedProvince(null);
         }
     }, [isProvinceClicked]);
+
+    console.log("ini earthquakedata", earthquakeData)
 
     useEffect(() => {
         // console.log("ini dari indonesia map", earthquakeData);
@@ -119,8 +122,8 @@ const IndonesiaMap = ({
                             size: "6px",
                         });
     
-                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: outerEarthquakeSymbol }));
-                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: innerEarthquakeSymbol }));
+                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: outerEarthquakeSymbol, attributes: { Id: data.Id } }));
+                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: innerEarthquakeSymbol, attributes: { Id: data.Id }  }));
                     } else {
                         console.error("Format koordinat tidak valid:", data.Coordinates);
                     }
@@ -159,8 +162,8 @@ const IndonesiaMap = ({
                     )?.graphic;
             
                     if (clickedEarthquake) {
-                        // console.log("Gempa diklik:", clickedEarthquake.attributes);
-                        // Panggil fungsi lain jika diperlukan
+                        console.log("Gempa diklik:", clickedEarthquake.attributes.Id);
+                        onEarthquakePointClicked(clickedEarthquake.attributes.Id)
                     }
             
                     // Cek apakah klik mengenai provinsi
