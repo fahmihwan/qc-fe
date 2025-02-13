@@ -4,12 +4,9 @@ import BarChartEachFoodEstate from '../component/allCharts/BarChartEachFoodEstat
 import IndonesiaMap from '../component/IndonesiaMap'
 import DropdownCustom from '../component/miniComponent/DropdownCustom'
 import LayoutAdmin from '../layout/LayoutAdmin'
+import { getChart } from '../../api/foodEstate'
 
 const EachCategoryFoodEstate = ({ category }) => {
-    const listDropDown = [2024, 2023, 2022, 2021, 2020]
-    // console.log("ini kategori:", category)
-
-    const { response, error } = useEffectFoodEstate(category);
     const [isLoading, setIsLoading] = useState(true)
 
     const [dataLuasPanenToParse, setDataLuasPanenToParse] = useState({})
@@ -17,26 +14,29 @@ const EachCategoryFoodEstate = ({ category }) => {
     const [allData, setAllData] = useState({})
 
     const [isProvinceClicked, setIsProvinceClicked] = useState(false)
+    const [selectedProvinceName, setSelectedProvinceName] = useState('');
+    const [selectedProvinceCode, setSelectedProvinceCode] = useState(null);
+
+    const { response, error } = useEffectFoodEstate(category, null);
 
     useEffect(() => {
         if (response) {
-            // console.log('response dari api: ', response);
-            // console.log('response dari api: ', response.luasPanen);
             setDataLuasPanenToParse(formatChartData(response, 'Luas Panen (ha)'))
             setDataProduktivitasToParse(formatChartData(response, 'Produktivitas (ku/ha)'))
-
-            setTimeout(() => {
-                setAllData(response);
-                // console.log("ini alldatas", response);
-                // console.log("data ", dataLuasPanenToParse)
-                // console.log("data ", dataProduktivitasToParse)
-                setIsLoading(false);
-            }, 1500);
+            setIsLoading(false)
         }
     }, [response]);
 
+
+    // useEffect(() => {
+    //     if (dataLuasPanenToParse && dataProduktivitasToParse) {
+    //         // console.log("Data yang diterima:", dataLuasPanenToParse, dataProduktivitasToParse);
+    //     } else if (dataLuasPanenToParse && dataProduktivitasToParse) {
+    //         // console.error("Error fetching data:");
+    //     }
+    // }, [dataLuasPanenToParse, dataProduktivitasToParse]);    
+
     const formatChartData = (response, title) => {
-        // console.log("ini kepanggil")
         if (!response) {
             return { labels: [], datasets: [] }
         }
@@ -60,6 +60,25 @@ const EachCategoryFoodEstate = ({ category }) => {
         }
     }
 
+    const fetchData = async (sub_category, province_id=null) => {
+        if (!sub_category) {
+            setError("params is not exists");
+            return;
+        }
+
+        try {
+            const response = await getChart(sub_category, province_id);
+            if (response.data) {
+                return response.data
+            } else {
+                // setError("Data dari API kosong!");
+            }
+        } catch (error) {
+            // console.log("ada error di use effect: ", error)
+            // setError(error);
+        }
+    }
+
     const dummyData = (title) => {
         return {
             labels: [2020, 2021, 2022, 2023, 2024],
@@ -72,9 +91,26 @@ const EachCategoryFoodEstate = ({ category }) => {
             ]
         }
     }
-    const onProvinceClick = ({ namaProvinsi, kodeProvinsi }) => {
-        setIsProvinceClicked(true)
-        // console.log('Ini provinsi diklik  test');
+
+    const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
+        console.log("ini berapa kali")
+        await fetchData(category, kodeProvinsi).then((res)=>{
+            setDataLuasPanenToParse(formatChartData(res, 'Luas Panen (ha)'))
+            setDataProduktivitasToParse(formatChartData(res, 'Produktivitas (ku/ha)'))
+            setSelectedProvinceName(namaProvinsi)
+            setSelectedProvinceCode(kodeProvinsi)
+            setIsProvinceClicked(true);
+        })
+     };
+
+    const resetSelection = async() => {
+        await fetchData(category).then((res)=>{
+            setDataLuasPanenToParse(formatChartData(res, 'Luas Panen (ha)'))
+            setDataProduktivitasToParse(formatChartData(res, 'Produktivitas (ku/ha)'))
+            setIsProvinceClicked(false)
+            setSelectedProvinceCode('')
+            setSelectedProvinceName('')
+        })
     }
 
     return (
@@ -91,20 +127,32 @@ const EachCategoryFoodEstate = ({ category }) => {
                         <div className=" flex border dark:border-dark-mode-border ml-5 my-5 px-5 bg-white dark:bg-dark-mode-v2">
                             <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                                 <div className="rounded flex  items-">
-                                    <div className="flex-col justify-center block lg:hidden items-center text-white">
+                                    <div className="flex-col py-4 justify-center block lg:hidden items-center text-white">
                                         <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
                                         <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>
                                 </div>
                                 <div className=" text-white rounded ">
-                                    <div className="text-center h-20  flex-col justify-center hidden lg:block">
+                                    <div className="text-center py-4 flex-col justify-center hidden lg:block">
                                         <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
                                         <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                     </div>
                                 </div>
-                                {/* <div className=" text-white flex justify-end">
-                                    <DropdownCustom listDropDown={listDropDown} />
-                                </div> */}
+                                <div className=" text-white flex items-center justify-end">
+                                    <div className='flex flex-col items-center align-middle'>
+                                        {isProvinceClicked &&
+                                            <button
+                                                onClick={resetSelection}
+                                                className="text-white w-36 lg:w-44 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                type="button"
+                                            >
+                                                <div className="items-center text-center w-full">
+                                                    Seluruh Indonesia
+                                                </div>
+                                            </button>
+                                        }
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -121,7 +169,7 @@ const EachCategoryFoodEstate = ({ category }) => {
 
                         <div className='border ml-5 p-2 flex justify-center dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2' >
                             <div className='w-[100%] h-[500px] '>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
                             </div>
                         </div>
 
@@ -135,10 +183,10 @@ const EachCategoryFoodEstate = ({ category }) => {
                         <>
                             <div className='w-full xl:col-span-2'>
                                 <div className='bg-white dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
-                                    <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} />
+                                    <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                 </div>
                                 <div className='bg-white dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
-                                    <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} />
+                                    <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                 </div>
                             </div>
                         </>

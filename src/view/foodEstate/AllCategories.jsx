@@ -100,25 +100,13 @@ const AllCategories = () => {
     }
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
-
-        // setSelectedProvinceName(namaProvinsi);
-        // setSelectedProvinceCode(kodeProvinsi)
-        // console.log("masih bisa nih, year: ", selectedYear)
-
-        console.log('wkwkwkwk')
        await fetchData(kodeProvinsi, selectedYear).then((res)=>{
         console.log(res)
         setPieChartData(res)
         setSelectedProvinceName(namaProvinsi)
         setSelectedProvinceCode(kodeProvinsi)
-        // console.log("pie  chart: ", pieChartData)
         setIsProvinceClicked(true);
        })
-
-        // const { response: responsePieChart, error: errorPieChart } = useEffectAllFoodEstateEachProvinceEachYear(kodeProvinsi, selectedYear)
-        // console.log("pie chart response", responsePieChart)
-        // setPieChartData(dummyDataForSpecifiedProvince)
-        // setErrorPieChartData(errorPieChart)
     };
 
     const onSelect = async(year) => {

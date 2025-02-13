@@ -1,9 +1,10 @@
 import { createSearchParams } from "react-router-dom";
 import apiClient from "./api";
 
-export const getChart = async (sub_kategori) => {
+export const getChart = async (sub_kategori, province_id=null) => {
     try {
-        const response = await apiClient.get(`/foodestate?sub_kategori=${sub_kategori}`)
+        console.log("test getchart")
+        const response = await apiClient.get(`/foodestate?sub_kategori=${sub_kategori}${province_id ? `&provinsi_id=${province_id}` : ''}`)
         // const response = await apiClient.get(`/foodestate?sub_kategori=Jagung`)
         return response.data
     } catch (error) {

@@ -4,12 +4,14 @@ import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Lege
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
-const BarChart = ({ data, title }) => {
+const BarChart = ({ data, title}) => {
     const maxData = Math.max(...data.datasets[0].data);
     const minData = Math.min(...data.datasets[0].data);
+    console.log('min data', minData)
 
     const range = maxData - minData;
-    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 100000 : Math.ceil(range / 5 / 100) * 100;
+    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 100000 : Math.ceil(range / 5 / 100) * 10;
+    console.log('step size', stepSize)
 
     const options = {
         responsive: true,
@@ -40,6 +42,7 @@ const BarChart = ({ data, title }) => {
             },
             y: {
                 beginAtZero: true,
+                min: 0,
                 suggestedMin: minData - stepSize,
                 suggestedMax: maxData + stepSize,
                 ticks: {
@@ -58,10 +61,11 @@ const BarChart = ({ data, title }) => {
     return <Bar data={data} options={options} height={"274px"} />
 }
 
-const BarChartEachFoodEstate = ({ title, data }) => {
+const BarChartEachFoodEstate = ({ title, data, provinceName = null}) => {
+    console.log('judul yg diterima', provinceName)
     return (
         <div className="px-[29px] py-[15px] h-[306px] flex flex-col">
-            <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
+            <div className="dark:text-white font-bold text-xl mb-[10px]">{title} {provinceName}</div>
             <div className="min-h-28 flex flex-grow items-center justify-center">
                 {data.datasets[0].data.length > 0 ? (
                     <BarChart data={data} />
