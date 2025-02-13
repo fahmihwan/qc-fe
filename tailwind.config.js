@@ -48,15 +48,15 @@ export default {
         // 'dark-mode': '#1a202c',   // Warna custom untuk dark mode
         // 'soft-yellow': '#FBBF24', // Menambahkan warna kuning lembut
       },
-      animation: {
-        marquee: "marquee 10s linear infinite",
-      },
-      keyframes: {
-        marquee: {
-          from: { transform: "translateX(3%)" },
-          to: { transform: "translateX(-50%)" },
-        },
-      },
+      // animation: {
+      //   marquee: "marquee 10s linear infinite",
+      // },
+      // keyframes: {
+      //   marquee: {
+      //     from: { transform: "translateX(3%)" },
+      //     to: { transform: "translateX(-50%)" },
+      //   },
+      // },
     },
   },
   plugins: [

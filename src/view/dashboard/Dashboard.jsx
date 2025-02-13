@@ -33,26 +33,25 @@ const Dashboard = () => {
     return (
         <LayoutAdmin>
             {
-                isLoading ? (<div className='text-white'>dsdsd</div>) : (<div className='w-full min-h-screen '>
-                    <div className="overflow-x-hidden border-b  dark:border-dark-mode-border py-10">
-                        {/* <div className="flex w-full min-w-full gap-16 animate-marquee">
-                                {[...Array(2)].map((_, i) => (
-                                    <div key={i} className="flex whitespace-nowrap gap-8 w-max">
-                                        <span className="text-green-custom text-xl">
-                                            SELAMAT DATANG DI DASHBOARD 360
-                                        </span>
-                                        <span className="dark:text-white text-xl">|</span>
-                                        <span className="text-red-custom text-xl">
-                                            DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
-                                        </span>
-                                        <span className="dark:text-white text-xl">|</span>
-                                    </div>
-                                ))}
-                            </div> */}
-                        {/* <div className='dark:text-white'>-</div> */}
+                isLoading ? (<div className='text-white'>Loading...</div>) : (<div className='w-full min-h-screen '>
+                    <div className="overflow-hidden border-b dark:border-dark-mode-border py-10">
+                        {/* <div className="flex w-full animate-marquee">
+                            {[...Array(2)].map((_, i) => (
+                                <div key={i} className="flex whitespace-nowrap gap-8">
+                                    <span className="text-green-custom text-xl">
+                                        SELAMAT DATANG DI DASHBOARD 360
+                                    </span>
+                                    <span className="dark:text-white text-xl">|</span>
+                                    <span className="text-red-custom text-xl">
+                                        DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
+                                    </span>
+                                    <span className="dark:text-white text-xl">|</span>
+                                </div>
+                            ))}
+                        </div> */}
                     </div>
 
-                    <div className='w-full flex justify-center py-5 my-5'>
+                    <div className='w-full flex justify-center py-5'>
                         <CardMainDashboard allDataFoodEstate={response} />
                     </div>
 
