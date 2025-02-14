@@ -40,9 +40,9 @@ function SurveyComponent() {
             let payload = {
                 title: sender.jsonObj.title,
                 kode: sender.jsonObj.kode,
-                core: {
-                    kode: sender.jsonObj.kode,
-                },
+                // core: {
+                //     kode: sender.jsonObj.kode,
+                // },
                 data: duplicateSender
             }
             storeSurveyDinamis(payload)
