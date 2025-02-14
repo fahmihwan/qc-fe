@@ -75,7 +75,7 @@ const menu = [
     },
     {
         title: 'Survey',
-        link: null,
+        link: '/survey',
         icon: <IconSurveySVG />,
     }
 ]
