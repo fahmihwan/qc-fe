@@ -39,6 +39,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
             y: {
                 stacked: true,
                 beginAtZero: true,
+                min: 0,
                 ticks: {
                     color: '#A3A3A3',
                     stepSize: 500000,

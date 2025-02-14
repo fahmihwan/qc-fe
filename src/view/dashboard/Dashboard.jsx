@@ -9,6 +9,7 @@ import { useEffectDashboardCards } from '../../hook/useEffectDashboardCards';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from 'react';
+import Marquee from "react-fast-marquee";
 
 
 const Dashboard = () => {
@@ -29,30 +30,33 @@ const Dashboard = () => {
     //     }
     // }, [response])
 
-
     return (
         <LayoutAdmin>
             {
-                isLoading ? (<div className='text-white'>dsdsd</div>) : (<div className='w-full min-h-screen '>
-                    <div className="overflow-x-hidden border-b  dark:border-dark-mode-border py-10">
-                        {/* <div className="flex w-full min-w-full gap-16 animate-marquee">
-                                {[...Array(2)].map((_, i) => (
-                                    <div key={i} className="flex whitespace-nowrap gap-8 w-max">
-                                        <span className="text-green-custom text-xl">
-                                            SELAMAT DATANG DI DASHBOARD 360
-                                        </span>
-                                        <span className="dark:text-white text-xl">|</span>
-                                        <span className="text-red-custom text-xl">
-                                            DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
-                                        </span>
-                                        <span className="dark:text-white text-xl">|</span>
+                isLoading ? (<div className='text-white'>Loading...</div>) : (<div className=' min-h-screen'>
+                    
+                    <div className="overflow-hidden px-4 border-b dark:border-dark-mode-border py-10 flex items-center mx-auto">
+                        <div className='md:w-[600px] sm:[540px] lg:w-[700px] xl:w-[1000px] 2xl:w-[1200px] items-center mx-auto'>
+                            <Marquee>
+                                <div className="flex gap-16 overflow-hidden">
+                                        {[...Array(5)].map((_, i) => (
+                                            <div key={i} className="flex whitespace-nowrap gap-8 w-max">
+                                                <span className="text-green-custom text-xl">
+                                                    SELAMAT DATANG DI DASHBOARD 360
+                                                </span>
+                                                <span className="dark:text-white text-xl">|</span>
+                                                <span className="text-red-custom text-xl">
+                                                    DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </span>
+                                                <span className="dark:text-white text-xl">|</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                ))}
-                            </div> */}
-                        {/* <div className='dark:text-white'>-</div> */}
+                            </Marquee>
+                        </div>
                     </div>
 
-                    <div className='w-full flex justify-center py-5 my-5'>
+                    <div className='w-full flex justify-center py-5'>
                         <CardMainDashboard allDataFoodEstate={response} />
                     </div>
 

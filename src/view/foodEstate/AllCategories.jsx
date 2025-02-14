@@ -50,7 +50,7 @@ const AllCategories = () => {
     const [pieChartData, setPieChartData] = useState(null)
     const [errorPieChartData, setErrorPieChartData] = useState(null)
 
-    const { response, error } = useEffectOtherApi(2024);
+    const { response, error } = useEffectOtherApi(selectedYear);
     const { response: responseSideBarChart, error: errorSideBarChart } = useEffectAllFoodEstate();
     const { response: responseListYear, error: errorListYear} = useEffectYears()
 
@@ -100,25 +100,13 @@ const AllCategories = () => {
     }
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
-
-        // setSelectedProvinceName(namaProvinsi);
-        // setSelectedProvinceCode(kodeProvinsi)
-        // console.log("masih bisa nih, year: ", selectedYear)
-
-        console.log('wkwkwkwk')
        await fetchData(kodeProvinsi, selectedYear).then((res)=>{
         console.log(res)
         setPieChartData(res)
         setSelectedProvinceName(namaProvinsi)
         setSelectedProvinceCode(kodeProvinsi)
-        // console.log("pie  chart: ", pieChartData)
         setIsProvinceClicked(true);
        })
-
-        // const { response: responsePieChart, error: errorPieChart } = useEffectAllFoodEstateEachProvinceEachYear(kodeProvinsi, selectedYear)
-        // console.log("pie chart response", responsePieChart)
-        // setPieChartData(dummyDataForSpecifiedProvince)
-        // setErrorPieChartData(errorPieChart)
     };
 
     const onSelect = async(year) => {
@@ -209,17 +197,17 @@ const AllCategories = () => {
 
                         <div className='border ml-5 p-2 flex justify-center border-dark-mode-border '>
                             <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode}  />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
                             </div>
                         </div>
 
                         {!isProvinceClicked &&
                             <div className='grid md:grid-cols-2 ml-5 mt-5  p-2 dark:bg-dark-mode-bg'>
                                 <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border border-dark-mode-border mr-5'>
-                                    <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} />
+                                    <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/>
                                 </div>
                                 <div className=' col-span-1 dark:text-white px-6 py-4  border border-dark-mode-border '>
-                                    <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} />
+                                    <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/>
                                 </div>
                             </div>
                         }

@@ -28,7 +28,23 @@ export const useEffectGempa = (param) => {
                 throw new Error(`HTTP error! Status: ${res.status}`);
             }
             const data = await res.json();
-            setResponse(data);
+
+            if(data){
+                const gempa = data.Infogempa.gempa
+
+                if(!Array.isArray(gempa)){
+                    data.Infogempa.gempa = [gempa]
+                }
+
+                const updatedGempa = data.Infogempa.gempa.map((item, index) => ({
+                    ...item,
+                    Id: index + 1 
+                })); 
+                console.log('ini updated gempa', { ...data, Infogempa: { gempa: updatedGempa } })
+                setResponse({ ...data, Infogempa: { gempa: updatedGempa }});
+            } else{
+                setResponse(data);
+            }
             // console.log("Data fetched:", data);
         } catch (err) {
             // console.error("Fetch error:", err);

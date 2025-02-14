@@ -13,9 +13,11 @@ import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol";
 const IndonesiaMap = ({ 
     kodeProvinsi, 
     onProvinceClick, 
+    isProvinceClicked,
     clickable = true, 
     hoverable = true,
     earthquakeData = [],
+    onEarthquakePointClicked,
 }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
@@ -24,6 +26,13 @@ const IndonesiaMap = ({
 
     let provinsiData = provinsiJson.data
 
+    useEffect(() => {
+        if (!isProvinceClicked) {
+            setSelectedProvince(null);
+        }
+    }, [isProvinceClicked]);
+
+    console.log("ini earthquakedata", earthquakeData)
 
     useEffect(() => {
         // console.log("ini dari indonesia map", earthquakeData);
@@ -113,8 +122,8 @@ const IndonesiaMap = ({
                             size: "6px",
                         });
     
-                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: outerEarthquakeSymbol }));
-                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: innerEarthquakeSymbol }));
+                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: outerEarthquakeSymbol, attributes: { Id: data.Id } }));
+                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: innerEarthquakeSymbol, attributes: { Id: data.Id }  }));
                     } else {
                         console.error("Format koordinat tidak valid:", data.Coordinates);
                     }
@@ -153,8 +162,8 @@ const IndonesiaMap = ({
                     )?.graphic;
             
                     if (clickedEarthquake) {
-                        // console.log("Gempa diklik:", clickedEarthquake.attributes);
-                        // Panggil fungsi lain jika diperlukan
+                        console.log("Gempa diklik:", clickedEarthquake.attributes.Id);
+                        onEarthquakePointClicked(clickedEarthquake.attributes.Id)
                     }
             
                     // Cek apakah klik mengenai provinsi
@@ -165,10 +174,9 @@ const IndonesiaMap = ({
             
                         if (clickedGraphic) {
                             const { PROVINSI, KODE_PROV } = clickedGraphic.attributes;
-                            setSelectedProvince(KODE_PROV);
+                            setSelectedProvince((prev) => (prev === KODE_PROV ? null : KODE_PROV));
                             onProvinceClick(PROVINSI, KODE_PROV);
-                            // console.log(PROVINSI, KODE_PROV);
-                        }
+                        }                        
                     }
                 } catch (error) {
                     console.error("Error saat klik peta:", error);
@@ -177,7 +185,7 @@ const IndonesiaMap = ({
         });
     
         return () => view.destroy();
-    }, [clickable, hoverable, earthquakeData]);    
+    }, [clickable, hoverable, earthquakeData, isProvinceClicked]);    
     
 
     // **Efek perubahan warna ketika provinsi dipilih**
