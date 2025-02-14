@@ -5,6 +5,7 @@ import IndonesiaMap from '../component/IndonesiaMap'
 import DropdownCustom from '../component/miniComponent/DropdownCustom'
 import LayoutAdmin from '../layout/LayoutAdmin'
 import { getChart } from '../../api/foodEstate'
+import Marquee from 'react-fast-marquee'
 
 const EachCategoryFoodEstate = ({ category }) => {
     const [isLoading, setIsLoading] = useState(true)
@@ -124,7 +125,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                     <div className='col-span-12 lg:col-span-5 '>
 
                         {/* header */}
-                        <div className=" flex border dark:border-dark-mode-border ml-5 my-5 px-5 bg-white dark:bg-dark-mode-v2">
+                        <div className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
                             <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                                 <div className="rounded flex  items-">
                                     <div className="flex-col py-4 justify-center block lg:hidden items-center text-white">
@@ -167,25 +168,56 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div> */}
 
-                        <div className='border ml-5 p-2 flex justify-center dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2' >
-                            <div className='w-[100%] h-[500px] '>
+                        <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                            <div className=' w-[100%] h-[500px]'>
                                 <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
                             </div>
                         </div>
 
-                        <marquee className="mx-6 my-4 dark:bg-dark-mode align-middle">
-                            <span className="text-red-custom text-xl">Di sini</span>
-                            <span className="dark:text-white text-xl font-bold">Akan ada </span>
-                            <span className="text-green-custom text-xl">Running Text </span>
-                        </marquee>
+                        <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 mt-5 px-5 dark:bg-dark-mode-bg mx-auto">
+                            <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
+                                <Marquee>
+                                    <div className="flex gap-10 overflow-hidden">
+                                            {[...Array(5)].map((_, i) => (
+                                                <div key={i} className="flex whitespace-nowrap gap-10 w-max">
+                                                    <span className="text-green-custom text-xl">
+                                                        SELAMAT DATANG DI DASHBOARD 360
+                                                    </span>
+                                                    <span className="dark:text-white text-xl">|</span>
+                                                    <span className="text-red-custom text-xl">
+                                                        DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
+                                                    </span>
+                                                    <span className="dark:text-white text-xl">|</span>
+                                                    <span className="text-green-custom text-xl">
+                                                        KETAHANAN PANGAN INDONESIA
+                                                    </span>
+                                                    <span className="dark:text-white text-xl">|</span>
+                                                    <span className="text-red-custom text-xl">
+                                                        DATA TERBARU TERSEDIA
+                                                    </span>
+                                                    <span className="dark:text-white text-xl">|</span>
+                                                    <span className="text-green-custom text-xl">
+                                                        WASPADA DAN SIAP SIAGA
+                                                    </span>
+                                                    <span className="dark:text-white text-xl">|</span>
+                                                    <span className="text-red-custom text-xl">
+                                                        INFORMASI PENTING DI DASHBOARD 360
+                                                    </span>
+                                                    <span className="dark:text-white text-xl">|</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                </Marquee>
+                            </div>
+                        </div>
                     </div>
                     {!isLoading && response && (
                         <>
                             <div className='w-full xl:col-span-2'>
-                                <div className='bg-white dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
+                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
                                     <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                 </div>
-                                <div className='bg-white dark:bg-dark-mode-v2 m-5 border dark:border-dark-mode-border'>
+                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
                                     <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                 </div>
                             </div>

@@ -21,8 +21,8 @@ const IndonesiaMap = ({
 }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
-    const [selectedProvince, setSelectedProvince] = useState(null);
-    const [hoveredProvince, setHoveredProvince] = useState(null)
+    const [selectedProvince, setSelectedProvince] = useState('');
+    const [hoveredProvince, setHoveredProvince] = useState('')
 
     let provinsiData = provinsiJson.data
 
@@ -32,7 +32,7 @@ const IndonesiaMap = ({
         }
     }, [isProvinceClicked]);
 
-    console.log("ini earthquakedata", earthquakeData)
+    // console.log("ini earthquakedata", earthquakeData)
 
     useEffect(() => {
         // console.log("ini dari indonesia map", earthquakeData);

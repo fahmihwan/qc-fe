@@ -10,10 +10,31 @@ const CardMainDashboard = ({ allDataFoodEstate }) => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 5,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         variableWidth: true,
         responsive: [
+            {
+                breakpoint: 2500,
+                settings: {
+                    slidesToShow: 6,
+                    slidesToScroll: 6,
+                }
+            },
+            {
+                breakpoint: 2000,
+                settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5,
+                }
+            },
+            {
+                breakpoint: 1900,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
             {
                 breakpoint: 1500,
                 settings: {
@@ -81,14 +102,14 @@ const CardMainDashboard = ({ allDataFoodEstate }) => {
                         <SingleCard key={index} singleData={item} />
                     ))}
                 </Slider>
-            </div>
+            </div>  
         </div>
     );
 };
 
 const SingleCard = ({ singleData }) => {
     return (
-        <div className="flex border text-center dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2 justify-center rounded-lg dark:text-white w-56 h-[370px] mt-5 px-4" style={{ marginRight: '10px' }}>
+        <div className="flex border text-center dark:border-dark-mode-border bg-white bg-opacity-50 dark:bg-dark-mode dark:bg-opacity-50 justify-center rounded-lg dark:text-white w-56 h-[370px] px-4" style={{ marginRight: '10px' }}>
             <div className="w-full">
                 <h5 className="py-3 font-bold dark:text-white uppercase">{singleData.title}</h5>
                 <div className="h-[1px] dark:bg-white mb-5"></div>

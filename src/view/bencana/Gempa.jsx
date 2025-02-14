@@ -167,7 +167,7 @@ const Gempa = () => {
                     </div>
                     <div className='h-[1px] dark:bg-white bg-dark-mode'></div>
                     <div className='grid grid-cols-2 dark:bg-black'>
-                        <div className='px-5 py-[24px] dark:border-white border-r-[1px]'>
+                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode'>
                             <img src={shakeMapCreator()} className='w-full' />
                         </div>
                         <div className='p-6'>
@@ -227,7 +227,7 @@ const Gempa = () => {
                             )}
                         </div>
                     </div>
-                    <div className='flex flex-row justify-between px-5 h-[50px] py-[13px] items-center'>
+                    <div className='flex flex-row justify-between px-5 h-[50px] py-[13px] items-center border-t border-dark-mode dark:border-white'>
                         <span className='dark:text-white font-bold  text-sm'></span>
                         <button onClick={() => handleCloseModal()} className='hidden'>
                             <IconXSVG />
