@@ -15,7 +15,7 @@ export default function LayoutAdmin({ children }) {
             <NavbarEl handleDrawer={setIsDrawerOpen} isDrawerOpen={isDrawerOpen} />
             <div className="flex flex-row justify-start h-full bg-[#f6f6f6] dark:dark-mode-bg">
                 <Sidebar handleDrawer={setIsDrawerOpen} isDrawerOpen={isDrawerOpen} />
-                <div className="flex-grow dark:bg-dark-mode-bg">
+                <div className="flex-grow dark:bg-dark-mode-bg bg-light-mode-bg">
                     {children}
                 </div>
             </div>

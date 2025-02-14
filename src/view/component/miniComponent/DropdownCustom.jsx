@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-const DropdownCustom = ({ listDropDown, onSelect }) => {
+const DropdownCustom = ({ listDropDown, onSelect, isProvinceClicked }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState("Pilih Tahun");
 
     return (
-        <div className=" py-4">
+        <div className={`pb-5 items-center ${!isProvinceClicked ? 'mt-5':''}`}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white w-36 lg:w-44 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white w-44 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 type="button"
             >
                 <div className="flex flex-row justify-between items-center w-full">
