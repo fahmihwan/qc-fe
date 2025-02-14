@@ -31,7 +31,7 @@ const SurveyDashboard = () => {
                                     No
                                 </th>
                                 <th scope="col" className="px-6 py-3">
-                                    Kode Response
+                                    Kode Responden
                                 </th>
                                 <th scope="col" className="px-6 py-3">
                                     topik
