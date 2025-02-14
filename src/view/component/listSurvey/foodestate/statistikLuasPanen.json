@@ -1,0 +1,149 @@
+{
+  "title": "Statistik Luas Lahan",
+  "kode":"foodestate-singkong-statistikluaspanen",
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "Informasi Lokasi",
+      "elements": [
+        {
+          "type": "text",
+          "name": "nama_desa_kelurahan",
+          "title": "Nama Desa/ Kelurahan",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "alamat_lengkap",
+          "title": "Alamat Lengkap",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "rt",
+          "title": "RT",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "rw",
+          "title": "RW",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "kode_pos",
+          "title": "Kode Pos",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "kab_kota",
+          "title": "Nama Kabupaten/Kota",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "provinsi",
+          "title": "Nama Provinsi",
+          "isRequired": true
+        },
+        {
+          "type": "text",
+          "name": "koordinat_gps",
+          "title": "Koordinat GPS (Opsional)"
+        }
+      ]
+    },
+    {
+      "name": "page2",
+      "title": "Statistik Luas Lahan",
+      "elements": [
+        {
+          "type": "text",
+          "name": "total_luas_lahan_padi_dalam_satuan_hektar_ha",
+          "title": "Total luas lahan padi dalam satuan hektar (ha)",
+          "isRequired": true,
+          "inputType": "number"
+        },
+        {
+          "type": "radiogroup",
+          "name": "status_kepemilikan_lahan",
+          "title": "Status Kepemilikan Lahan",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Milik Pribadi"
+            },
+            {
+              "value": "Item 2",
+              "text": "Sewa"
+            },
+            {
+              "value": "Item 3",
+              "text": "Hak Guna Usaha (HGU)"
+            },
+            {
+              "value": "Item 4",
+              "text": "Milik Pemerintah"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "boolean",
+          "name": "apakah_lahan_ini_termasuk_dalam_program_food_estate",
+          "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+          "isRequired": true,
+          "labelTrue": "Iya",
+          "labelFalse": "Tidak"
+        },
+        {
+          "type": "radiogroup",
+          "name": "jenis_lahan_yang_digunakan_untuk_padi",
+          "title": "Jenis lahan yang digunakan untuk padi",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Item 4",
+              "text": "Sawah irigasi teknis"
+            },
+            {
+              "value": "Item 5",
+              "text": "Sawah tadah hujan"
+            },
+            {
+              "value": "Item 6",
+              "text": "Lahan rawa/pasang surut"
+            },
+            {
+              "value": "Item 7",
+              "text": "Lahan kering/tegalan"
+            }
+          ],
+          "showOtherItem": true
+        },
+        {
+          "type": "text",
+          "name": "besar_hektar_perubahan_lahan_setahun_terakhir_ha",
+          "title": "Besar hektar perubahan Lahan Setahun Terakhir (ha) ?",
+          "inputType": "number"
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "title": "Tanggal Pengisian Survey",
+      "elements": [
+        {
+          "type": "text",
+          "name": "tanggal_dan_waktu_pengisian",
+          "title": "Tanggal dan Waktu Pengisian",
+          "inputType": "datetime-local"
+        }
+      ]
+    }
+  ]
+}

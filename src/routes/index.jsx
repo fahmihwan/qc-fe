@@ -6,6 +6,8 @@ import Login from "../view/auth/Login";
 import { ProtectedRouteAuthenticated, ProtectedRouteGuest } from "./ProtectedRoute";
 import AllBencanaCategories from "../view/bencana/AllBencanaCategories";
 import EachCategoryFoodEstate from "../view/foodEstate/EachCategoryFoodEstate";
+import SurveyComponent from "../view/component/listSurvey/SurveyComponent";
+import PageSurvey from "../view/survey/PageSurvey";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -13,6 +15,11 @@ const routes = createBrowserRouter([
     {
         path: "/",
         element: <ProtectedRouteGuest element={<Login />} />
+    },
+    {
+        path: '/survey-masyarakat',
+        element: <PageSurvey />
+
     },
     {
         path: "/dashboard",
@@ -51,7 +58,8 @@ const routes = createBrowserRouter([
     {
         path: "/all-bencana",
         element: <ProtectedRouteAuthenticated element={<AllBencanaCategories />} />
-    }
+    },
+
 
 ])
 export default routes
