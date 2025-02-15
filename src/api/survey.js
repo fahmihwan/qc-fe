@@ -10,9 +10,9 @@ export const storeSurveyDinamis = async (payload) => {
     }
 };
 
-export const getAllSurvey = async () => {
+export const getAllSurvey = async (page, pageSize) => {
     try {
-        const response = await apiClient.get('/getallsurvey')
+        const response = await apiClient.get(`/getallsurvey?page=${page}&limit=${pageSize}`)
         return response.data
     } catch (error) {
         console.error("error fetching data: ", error)
