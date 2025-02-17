@@ -98,11 +98,42 @@ const IndonesiaMap = ({
             });
     
             if (earthquakeData && Array.isArray(earthquakeData) && earthquakeData.length > 0) {
+                document.getElementById("legend-container").classList.remove("hidden"); 
                 earthquakeData.forEach((data) => {
                     const coordinates = data.Coordinates.split(",").map(Number);
     
                     if (coordinates.length === 2 && !isNaN(coordinates[0]) && !isNaN(coordinates[1])) {
                         const [lat, lon] = coordinates;
+                        const depth = parseFloat(data.Kedalaman.replace(" km", ""))
+                        let color;
+                        let textColor;
+                        let outlineColor;
+
+                        if(depth <= 50){
+                            color = [255, 0, 0, 1];
+                            textColor = [255, 0, 0, 1];
+                            outlineColor = [255, 0, 0, 0.3];
+                        } else if(depth <= 100){
+                            color = [255, 165, 0, 1];
+                            textColor = [255, 165, 0, 1];
+                            outlineColor = [255, 165, 0, 0.3];
+                        } else if(depth <= 250){
+                            color =  [255, 255, 0, 1];
+                            textColor =  [255, 255, 0, 1];
+                            outlineColor = [255, 255, 0, 0.3];
+                        } else if(depth <= 600){
+                            color = [0, 128, 0, 1];
+                            textColor = [0, 128, 0, 1];
+                            outlineColor = [0, 128, 0, 0.3];
+                        } else {
+                            color = [0, 0, 255, 1];
+                            textColor = [0, 0, 255, 1];
+                            outlineColor = [0, 0, 255, 0.3];
+                        } 
+
+                        console.log(depth)
+                        console.log("color: ", color)
+                        console.log("textColor: ", textColor)
     
                         const earthquakePoint = {
                             type: "point",
@@ -117,8 +148,8 @@ const IndonesiaMap = ({
                         });
     
                         const innerEarthquakeSymbol = new SimpleMarkerSymbol({
-                            color: [255, 0, 0, 1],
-                            outline: { color: [255, 0, 0, 0.3], width: 8 },
+                            color: color,
+                            outline: { color: outlineColor, width: 8 },
                             size: "8px",
                         });
     
@@ -127,7 +158,7 @@ const IndonesiaMap = ({
 
                         const textSymbol = {
                             type: "text",
-                            color: [255, 0, 0, 1],
+                            color: textColor,
                             text: data.Magnitude,
                             font: { size: 12, weight: "normal" },
                             horizontalAlignment: "center",

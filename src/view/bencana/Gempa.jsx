@@ -268,7 +268,7 @@ const Gempa = () => {
                                         font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
                                         ${activeCategory === category.id
                                             ? 'bg-blue-custom dark:bg-blue-custom text-white'
-                                            : 'dark:bg-dark-mode hover:bg-gray-hover dark:hover:bg-gray-hover'
+                                            : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover'
                                         }
                                         `}
                                 >
@@ -281,7 +281,30 @@ const Gempa = () => {
                     <CardSatuGempa />
 
                     <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
-                        <div className=' w-[100%] h-[500px]'>
+                        <div className=' w-[100%] h-[500px] relative'>
+                            <div id="legend-container" className="absolute bottom-8 left-4 bg-white bg-opacity-50 p-4 border border-gray-300 shadow-md rounded-lg z-20">
+                                <h3 className="text-lg font-medium mb-4">Kedalaman</h3>
+                                <div className="flex items-center mb-2">
+                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#FF0000]"></span>
+                                    <span>≤ 50 km</span>
+                                </div>
+                                <div className="flex items-center mb-2">
+                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFA500]"></span>
+                                    <span>≤ 100 km</span>
+                                </div>
+                                <div className="flex items-center mb-2">
+                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFFF00]"></span>
+                                    <span>≤ 250 km</span>
+                                </div>
+                                <div className="flex items-center mb-2">
+                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#008000]"></span>
+                                    <span>≤ 600 km</span>
+                                </div>
+                                <div className="flex items-center mb-2">
+                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#0000FF]"></span>
+                                    <span>{'>'} 600 km</span>
+                                </div>
+                            </div>
                             <IndonesiaMap
                                 clickable={false}
                                 earthquakeData={
