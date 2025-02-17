@@ -7,9 +7,11 @@ const TableForFoodEstate = ({ title, data, dataBe, titleBe, year }) => {
 
     return (
         <>
-            <p className="text-center text-xs lg:text-base font-bold mb-4 dark:text-white">
-                Total {title} Food Estate Tahun {year}
-            </p>
+            <div className="flex justify-center items-center h-[40px] mb-4">
+                <p className="text-center text-xs lg:text-base font-bold dark:text-white">
+                    Total {title} Food Estate Tahun {year}
+                </p>
+            </div>
             <SingleHeatMapTable data={selectedData} dataBe={dataBe} titleBe={titleBe} />
         </>
     )

@@ -245,26 +245,11 @@ const Gempa = () => {
                     Loading...
                 </div>
             ) : (
-                <div className='w-full min-h-screen dark:bg-dark-mode'>
-                    <div className="overflow-x-hidden border-y-[1px] py-6 px-[113px] dark:border-white">
+                <div className='w-full min-h-screen'>
+                    <div className="overflow-x-hidden overflow-hidden flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg">
                         <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
                         <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
                         <div className='text-green-custom text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
-                    </div>
-
-                    <div className='h-full border-b-[1px] dark:border-white' style={{ width: "100%", height: "541px" }}>
-                        <IndonesiaMap
-                            clickable={false}
-                            earthquakeData={
-                                response.Infogempa?.gempa
-                                    ? Array.isArray(response.Infogempa.gempa)
-                                        ? response.Infogempa.gempa
-                                        : [response.Infogempa.gempa]
-                                    : []
-                            }
-                            hoverable={false}
-                            onEarthquakePointClicked={onEarthquakePointClicked}
-                        />
                     </div>
 
                     <div className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'>
@@ -283,7 +268,7 @@ const Gempa = () => {
                                         font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
                                         ${activeCategory === category.id
                                             ? 'bg-blue-custom dark:bg-blue-custom text-white'
-                                            : 'dark:bg-dark-mode hover:bg-gray-200 dark:hover:bg-gray-700'
+                                            : 'dark:bg-dark-mode hover:bg-gray-hover dark:hover:bg-gray-hover'
                                         }
                                         `}
                                 >
@@ -295,18 +280,35 @@ const Gempa = () => {
 
                     <CardSatuGempa />
 
+                    <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                        <div className=' w-[100%] h-[500px]'>
+                            <IndonesiaMap
+                                clickable={false}
+                                earthquakeData={
+                                    response.Infogempa?.gempa
+                                        ? Array.isArray(response.Infogempa.gempa)
+                                            ? response.Infogempa.gempa
+                                            : [response.Infogempa.gempa]
+                                        : []
+                                }
+                                hoverable={false}
+                                onEarthquakePointClicked={onEarthquakePointClicked}
+                            />
+                        </div>
+                    </div>
+
                     <div className='mx-[82px] pb-9'>
                         {activeCategory !== "TERKINI" &&
                             <div className='dark:text-white font-bold text-[32px] mt-[111px] mb-[30px]'>
-                                10 Gempa Bumi {activeCategoryTitle}
+                                {response.Infogempa.gempa.length} Gempa Bumi {activeCategoryTitle}
                             </div>
                         }
                         {activeCategory === "M50" &&
-                            <TableForMagnitudoFive data={response.Infogempa.gempa.slice(0, 10)} handleOpenModal={handleOpenModal} />
+                            <TableForMagnitudoFive data={response.Infogempa.gempa.slice(0, 15)} handleOpenModal={handleOpenModal} />
                         }
 
                         {activeCategory === "DIRASAKAN" &&
-                            <TableForDirasakan data={response.Infogempa.gempa.slice(0, 10)} handleOpenModal={handleOpenModal} />
+                            <TableForDirasakan data={response.Infogempa.gempa.slice(0, 15)} handleOpenModal={handleOpenModal} />
                         }
 
                         {activeCategory === "BERPOTENSI_TSUNAMI" &&

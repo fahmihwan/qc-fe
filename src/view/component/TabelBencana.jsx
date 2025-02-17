@@ -33,8 +33,8 @@ const SingleDampakBencana = ({ icon, jlhDampak, title, isMenderita }) => {
 
 const TabelBencana = ({ dataBencana }) => {
     return (
-        <div className='border-t-[1px] dark:border-white grid grid-cols-3'>
-            <div className='border-r-[1px] grid py-4 px-9 col-span-1'>
+        <div className='grid grid-cols-3 mb-5'>
+            <div className='border rounded-[10px]  grid py-4 px-9 col-span-1 ml-5 sm:mr-5 p-2 justify-center dark:border-dark-border border-light-border'>
                 <div className="mb-[30px]">
                     <div className='font-bold dark:text-white text-base text-center'>Jumlah Kejadian</div>
                     <div className='font-bold dark:text-white text-base text-center'>per Jenis Bencana</div>
@@ -53,29 +53,29 @@ const TabelBencana = ({ dataBencana }) => {
                 </div>
             </div>
 
-            <div className='flex flex-col border-r-[1px] col-span-2'>
-                <div className="px-[115px] pt-5 pb-6">
+            <div className='flex flex-col col-span-2 gap-4 '>
+                <div className="px-[115px] pt-5 pb-6 border rounded-[10px] ml-5 sm:mr-5 p-2 dark:border-dark-border border-light-border">
                     <div className="align-top">
                         <div className="text-center text-base font-bold dark:text-white">Dampak Bencana Alam</div>
                         <div className="text-center text-base dark:text-dark-gray-custom text-light-gray-custom">Periode {formatDate(dataBencana.startDate)} - {formatDate(dataBencana.endDate)}</div>
                     </div>
 
-                    <div className="flex flex-col justify-start">
-                        <div className="flex flex-row px-58 space-x-[80px] mt-5 px-[59px]">
+                    <div className="flex flex-col justify-center">
+                        <div className="flex flex-row px-58 space-x-[80px] xl:space-x-[200px] mt-5 px-[59px]">
                             <SingleDampakBencana icon={<IconMeninggalSVG />} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.meninggal} title={"Meninggal"} />
                             <SingleDampakBencana icon={<IconMenderitaMengungsiSVG />} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.menderitaMengungsi} isMenderita={true} title={"Menderita dan Mengungsi"} />
                         </div>
 
                         <div className="h-[1px] bg-dark-gray-custom mt-[14px]"></div>
 
-                        <div className="flex flex-row px-58 space-x-[80px] mt-[14px] px-[59px]">
+                        <div className="flex flex-row px-58 space-x-[80px] xl:space-x-[200px] mt-[14px] px-[59px]">
                             <SingleDampakBencana icon={<IconHilangSVG />} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.hilang} title={"Hilang"} />
                             <SingleDampakBencana icon={<IconLukaSVG />} jlhDampak={dataBencana.semuaKategori.dampakPadaManusia.luka} title={"Luka-luka"} />
                         </div>
                     </div>
                 </div>
 
-                <div className="px-[63px] pt-5 pb-6 border-t-[1px] border-white">
+                <div className="px-[63px] pt-5 pb-6 border rounded-[10px] ml-5 sm:mr-5 p-2 dark:border-dark-border border-light-border">
                     <div className="align-top text-center text-base font-bold dark:text-white mb-[13px]">Dampak Kerusakan Bencana</div>
 
                     <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-white rounded-[10px] mb-[6px]">
