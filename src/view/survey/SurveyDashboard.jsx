@@ -4,11 +4,38 @@ import { useEffectDetailSurvey, useEffectSurvey } from '../../hook/useEffectSurv
 
 import { Button, Modal, Select } from "flowbite-react";
 import { useState } from "react";
+import { PaginationEl } from '../component/PaginationEl';
+import { useEffect } from 'react';
+import { getAllSurvey } from '../../api/survey';
+import { fCalculatePaginateIteration, fFormatDateTimeUtil, fGeneratePaginationNumber } from '../../utils/generateUtil';
 
 const SurveyDashboard = () => {
-    const { response } = useEffectSurvey()
+    // const { response } = useEffectSurvey()
+    const [items, setItems] = useState([])
     const [openModal, setOpenModal] = useState(false);
     const { responseD, fetchData } = useEffectDetailSurvey(null);
+
+    const [paginatePage, setPaginatePage] = useState(1)
+    const [paginateLimit, setpaginateLimit] = useState(5)
+    const [paginateTotalItem, setPaginateTotalItem] = useState(0)
+    const [paginateTotalPage, setPaginateTotalPage] = useState(0)
+
+
+    useEffect(() => {
+
+        getAllSurvey(paginatePage, paginateLimit).then((res) => {
+            console.log(res.result);
+            setItems(res.result)
+            setPaginatePage(res.page)
+            setpaginateLimit(res.limit)
+            setPaginateTotalItem(res.totalItems)
+            setPaginateTotalPage(res.totalPages)
+        })
+
+    }, [paginatePage])
+
+
+    const generatePaginateNumbers = fGeneratePaginationNumber(paginatePage, paginateTotalPage, paginateLimit)
 
     const openDetailResponden = async (kode_responden) => {
 
@@ -16,7 +43,6 @@ const SurveyDashboard = () => {
         await fetchData(kode_responden)
 
     }
-
     return (
         <LayoutAdmin>
             <ModalDetailSurveyEl setOpenModal={setOpenModal} openModal={openModal} responseD={responseD} />
@@ -37,42 +63,54 @@ const SurveyDashboard = () => {
                                     topik
                                 </th>
                                 <th scope="col" className="px-6 py-3">
+                                    tanggal
+                                </th>
+                                <th scope="col" className="px-6 py-3">
                                     Action
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             {
-                                response?.map((d, i) => (
-                                    <>
-                                        <tr key={i} className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
-                                            <th
-                                                scope="row"
-                                                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                items?.length > 0 && items?.map((d, index) => (
+                                    <tr key={index} className="odd:bg-white odd:dark:bg-gray-800 even:bg-gray-50 even:dark:bg-gray-700 border-b dark:border-gray-700 border-gray-200">
+
+                                        <th
+                                            scope="row"
+                                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                                        >
+                                            <th>{fCalculatePaginateIteration(paginatePage, paginateLimit) + index}</th>
+                                        </th>
+                                        <td className="px-6 py-4">{d.kode_responden}</td>
+                                        <td className="px-6 py-4">{d.nama_subdata}</td>
+                                        <td className="px-6 py-4">{fFormatDateTimeUtil(d.created_at)}</td>
+                                        <td className="px-6 py-4">
+                                            <button
+                                                onClick={() => openDetailResponden(d.kode_responden)}
+                                                type="button"
+                                                className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                             >
-                                                {i + 1}
-                                            </th>
-                                            <td className="px-6 py-4">{d.kode_responden}</td>
-                                            <td className="px-6 py-4">{d.nama_subdata}</td>
-                                            <td className="px-6 py-4">
-                                                <button
-                                                    onClick={() => openDetailResponden(d.kode_responden)}
-                                                    type="button"
-                                                    className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                                >
-                                                    Detail
-                                                </button>
+                                                Detail
+                                            </button>
 
 
 
-                                            </td>
-                                        </tr>
+                                        </td>
+                                    </tr>
 
-                                    </>
+
                                 ))
                             }
                         </tbody>
                     </table>
+
+
+                    <PaginationEl
+                        generatePageNumbers={generatePaginateNumbers}
+                        paginatePage={paginatePage}
+                        setPaginatePage={setPaginatePage}
+                        paginateTotalPage={paginateTotalPage}
+                        paginateTotalItem={paginateTotalItem} />
                 </div>
             </div>
 
@@ -85,15 +123,12 @@ export default SurveyDashboard
 const ModalDetailSurveyEl = ({ setOpenModal, openModal, responseD }) => {
 
 
-
     return (
         <>
             <div className="flex flex-wrap gap-4">
-
-                {/* <Button onClick={() => setOpenModal(true)}>Toggle modal</Button> */}
             </div>
             <Modal show={openModal} size={'4xl'} onClose={() => setOpenModal(false)}>
-                <Modal.Header>Small modal</Modal.Header>
+                <Modal.Header>Data survey</Modal.Header>
                 <Modal.Body>
                     <div className="space-y-6 p-6">
                         <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
