@@ -2,7 +2,7 @@ import apiClient from "./api";
 
 export const storeSurveyDinamis = async (payload) => {
     try {
-        const response = await apiClient.post(`/survey`, payload)
+        const response = await apiClient.post(`/survey`, payload, { timeout: 5000 })
         return response.data
     } catch (error) {
         console.error("error fetching data: ", error)

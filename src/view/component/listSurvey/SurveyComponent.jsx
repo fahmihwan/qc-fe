@@ -20,7 +20,10 @@ function SurveyComponent() {
     survey.applyTheme(SurveyTheme.DefaultDark);
 
     survey.onComplete.add((sender, options) => {
-        let getPagesJson = sender.jsonObj.pages
+
+
+        let getPagesJson = sender.jsonObj.pages;
+        console.log(sender.data);
         let arrConcat = []
         for (let i = 0; i < getPagesJson.length; i++) {
             const getElements = getPagesJson[i].elements
@@ -31,10 +34,19 @@ function SurveyComponent() {
         }
 
         let duplicateSender = sender.data;
+
+
+
         const senderData = Object.entries(sender.data).map(([key, value]) => ({ key, value }));
         if (arrConcat.length == senderData.length) {
             for (let x = 0; x < senderData.length; x++) {
+
+                duplicateSender[senderData[x].key] = `${duplicateSender[senderData[x].key]}`
+                if (`${duplicateSender[senderData[x].key]}`.includes('~')) {
+                    duplicateSender[senderData[x].key] = `${duplicateSender[senderData[x].key]}`.split('~').join('-')
+                }
                 duplicateSender[senderData[x].key] = `${duplicateSender[senderData[x].key]}~${arrConcat[x]}`
+
             }
 
             let payload = {
