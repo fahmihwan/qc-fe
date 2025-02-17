@@ -41,7 +41,7 @@ const IndonesiaMap = ({
             container: mapRef.current,
             map: webMap,
             center: [117.148, -2.5489],
-            zoom: 5,
+            zoom: 4,
         });
     
         view.when(() => {
@@ -118,12 +118,37 @@ const IndonesiaMap = ({
     
                         const innerEarthquakeSymbol = new SimpleMarkerSymbol({
                             color: [255, 0, 0, 1],
-                            outline: { color: [255, 255, 255, 0], width: 0 },
-                            size: "6px",
+                            outline: { color: [255, 0, 0, 0.3], width: 8 },
+                            size: "8px",
                         });
     
-                        earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: outerEarthquakeSymbol, attributes: { Id: data.Id } }));
+                        // earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: outerEarthquakeSymbol, attributes: { Id: data.Id } }));
                         earthquakeLayer.add(new Graphic({ geometry: earthquakePoint, symbol: innerEarthquakeSymbol, attributes: { Id: data.Id }  }));
+
+                        const textSymbol = {
+                            type: "text",
+                            color: [255, 0, 0, 1],
+                            text: data.Magnitude,
+                            font: { size: 12, weight: "normal" },
+                            horizontalAlignment: "center",
+                            verticalAlignment: "bottom",
+                        }
+
+                        const textGraphic = new Graphic ({
+                            geometry: earthquakePoint,
+                            symbol: textSymbol,
+                            attributes: {Id: data.Id}
+                        })
+
+                        textGraphic.geometry = {
+                            type: "point",
+                            longitude: lon,
+                            latitude: lat + 0.08
+                        }
+
+                        earthquakeLayer.add(textGraphic)
+
+                        
                     } else {
                         console.error("Format koordinat tidak valid:", data.Coordinates);
                     }

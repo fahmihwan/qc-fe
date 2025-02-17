@@ -174,7 +174,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div>
 
-                        <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 mt-5 px-5 dark:bg-dark-mode-bg mx-auto">
+                        <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
                             <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
                                 <Marquee>
                                     <div className="flex gap-10 overflow-hidden">
