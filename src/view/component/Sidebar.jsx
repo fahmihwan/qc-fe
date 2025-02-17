@@ -13,7 +13,7 @@ export const Sidebar = ({ isDrawerOpen, handleDrawer }) => {
                          lg:block hidden border-r dark:border-dark-mode-border bg-white dark:bg-dark-mode-v2"
                 aria-label="Sidebar"
             >
-                <div className=" w-[273px] h-screen overflow-y-auto bg-white dark:bg-dark-mode-v2">
+                <div className=" w-[273px] min-h-[calc(100vh-69px)] overflow-y-auto bg-white dark:bg-dark-mode-v2">
                     <MenuEl menu={menu} dropDown={dropDown} setDropDown={setDropDown} />
 
                 </div>

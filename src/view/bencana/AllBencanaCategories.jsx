@@ -24,7 +24,7 @@ const AllBencanaCategories = () => {
 
                 <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
                     <div className=' w-[100%] h-[500px]'>
-                    <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />
+                        <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />
                     </div>
                 </div>
 

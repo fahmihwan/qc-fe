@@ -9,6 +9,8 @@ import EachCategoryFoodEstate from "../view/foodEstate/EachCategoryFoodEstate";
 import SurveyComponent from "../view/component/listSurvey/SurveyComponent";
 import PageSurvey from "../view/survey/PageSurvey";
 import SurveyDashboard from "../view/survey/SurveyDashboard";
+import PerumahanRakyat from "../view/perumahanRakyat/PerumahanRakyat";
+import GenerateSurvey from "../view/survey/GenerateSurvey";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -63,6 +65,14 @@ const routes = createBrowserRouter([
     {
         path: "/survey",
         element: <ProtectedRouteAuthenticated element={<SurveyDashboard />} />
+    },
+    {
+        path: "/generate-survey",
+        element: <ProtectedRouteAuthenticated element={<GenerateSurvey />} />
+    },
+    {
+        path: "/perumahan-rakyat",
+        element: <ProtectedRouteAuthenticated element={<PerumahanRakyat />} />
     },
 
 
