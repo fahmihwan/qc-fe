@@ -24,6 +24,9 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
                 callbacks: {
                     label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.raw.toLocaleString()}`
                 }
+            },
+            datalabels: {
+                display: false
             }
         },
         scales: {

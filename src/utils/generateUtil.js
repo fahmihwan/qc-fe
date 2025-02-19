@@ -33,3 +33,9 @@ export const fFormatDateTimeUtil = (inputDate) => {
     // Gabungkan tanggal dan waktu
     return `${formattedDate}  - ${formattedTime} WIB`;
 };
+
+
+export const formatCurrency = (value) => {
+    if (!value || isNaN(value)) return "0,00"; 
+    return Number(value).toLocaleString("id-ID", { minimumFractionDigits: 2 });
+};

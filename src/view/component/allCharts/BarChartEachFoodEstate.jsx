@@ -29,6 +29,9 @@ const BarChart = ({ data, title}) => {
                 callbacks: {
                     label: (tooltipItem) => `Luas Panen: ${tooltipItem.raw.toLocaleString()}`
                 }
+            },
+            datalabels: {
+                display: false
             }
         },
         scales: {

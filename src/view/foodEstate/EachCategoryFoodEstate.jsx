@@ -4,8 +4,11 @@ import BarChartEachFoodEstate from '../component/allCharts/BarChartEachFoodEstat
 import IndonesiaMap from '../component/IndonesiaMap'
 import DropdownCustom from '../component/miniComponent/DropdownCustom'
 import LayoutAdmin from '../layout/LayoutAdmin'
-import { getChart } from '../../api/foodEstate'
+import { getChart, getEachFoodEstateEachProvinceByYear } from '../../api/foodEstate'
 import Marquee from 'react-fast-marquee'
+import TableForAllProvincesEachFoodEstate from '../component/allCharts/TableForAllProvincesEachFoodEstate'
+import { useEffectYears } from '../../hook/useEffectYears'
+import PieChartAllProvincesEachFoodEstate from '../component/allCharts/PieChartAllProvincesEachFoodEstate'
 
 const EachCategoryFoodEstate = ({ category }) => {
     const [isLoading, setIsLoading] = useState(true)
@@ -18,7 +21,30 @@ const EachCategoryFoodEstate = ({ category }) => {
     const [selectedProvinceName, setSelectedProvinceName] = useState('');
     const [selectedProvinceCode, setSelectedProvinceCode] = useState(null);
 
+    const [selectedYear, setSelectedYear] = useState(null)
+    const [listDropDown, setListDropDown] = useState([])  
+    const [tableData, setTableData] = useState([])
+
     const { response, error } = useEffectFoodEstate(category, null);
+    const { response: responseListYear, error: errorListYear} = useEffectYears()
+
+    useEffect(() => {
+        if (responseListYear) {
+            const years = responseListYear.map(item => parseInt(item.year));
+            setListDropDown(years); 
+            console.log("ini years",years)
+            setSelectedYear(years[0])
+        }
+    }, [responseListYear]);
+
+    useEffect(() => {
+        if(category && selectedYear) {
+            fetchDataAllProvinces(selectedYear, category).then((res) => {
+                console.log(res.data)
+                setTableData(res.data)
+            })
+        }
+    }, [category, selectedYear])
 
     useEffect(() => {
         if (response) {
@@ -93,6 +119,21 @@ const EachCategoryFoodEstate = ({ category }) => {
         }
     }
 
+    const fetchDataAllProvinces = async(year, sub_category) => {
+        try{
+            if(!year && !sub_category) return
+            const response = await getEachFoodEstateEachProvinceByYear(year, sub_category)
+            if(response.data) {
+                console.log("Data yang diterima: ", response)
+                return response
+            } else {
+                setError("Data dari API kosong!")
+            }
+        } catch (error) {
+            setError(error)
+        }
+    }
+
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
         console.log("ini berapa kali")
         await fetchData(category, kodeProvinsi).then((res)=>{
@@ -103,6 +144,14 @@ const EachCategoryFoodEstate = ({ category }) => {
             setIsProvinceClicked(true);
         })
      };
+
+    const onSelect = async(year) => {
+        setSelectedYear(year)
+        await fetchData(selectedProvinceCode, selectedYear).then((res)=>{
+            console.log(res)
+            setPieChartData(res)
+        })
+    }
 
     const resetSelection = async() => {
         await fetchData(category).then((res)=>{
@@ -174,7 +223,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div>
 
-                        <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
+                        {/* <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
                             <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
                                 <Marquee>
                                     <div className="flex gap-10 overflow-hidden">
@@ -209,6 +258,14 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         </div>
                                 </Marquee>
                             </div>
+                        </div> */}
+
+                        <div className="overflow-hidden  flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 p-5 dark:bg-dark-mode-bg mx-auto">
+                            <div className='flex flex-row justify-between items-center'>
+                                <div className='dark:text-white font-bold text-2xl '>Data {category} di Seluruh Provinsi Tahun {selectedYear}</div>
+                                <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
+                            </div>
+                            <TableForAllProvincesEachFoodEstate data={tableData}/>
                         </div>
                     </div>
                     {!isLoading && response && (
@@ -219,6 +276,12 @@ const EachCategoryFoodEstate = ({ category }) => {
                                 </div>
                                 <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
                                     <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
+                                </div>
+                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
+                                </div>
+                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
                                 </div>
                             </div>
                         </>

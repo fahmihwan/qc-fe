@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { formatCurrency } from "../../../utils/generateUtil"
 
 const SingleHeatMapTable = ({ data, dataBe, titleBe }) => {
     const items = Object.entries(data).filter(([key]) => key !== "satuan")
@@ -55,7 +56,7 @@ const SingleHeatMapTable = ({ data, dataBe, titleBe }) => {
                                                     color: getColorText(d?.total, titleBe == "Luas Panen" ? maxValueLuasPanen : maxValueProduktivitas)
                                                 }}
                                             >
-                                                {d?.total}
+                                                {formatCurrency(d?.total)}
                                             </div>
                                         </td>
                                     </tr>

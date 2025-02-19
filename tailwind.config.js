@@ -44,7 +44,8 @@ export default {
         'gempa-sembilan': '#F80000',
         'gempa-sembilan-sepuluh': '#DA0000',
         'gempa-sepuluh-plus': '#C80000',
-        'gray-hover': '#505050'
+        'gray-hover': '#505050',
+        'gray-not-selected': '#AEAEAE'
 
         // 'brand-blue': '#1D4ED8',  // Menambahkan warna biru khusus
         // 'brand-green': '#10B981', // Menambahkan warna hijau khusus

@@ -67,6 +67,19 @@ const PieChart = ({ data, title }) => {
                             },
                         },
                     },
+                    datalabels: {
+                        display: (context) => {
+                            const value = context.dataset.data[context.dataIndex]; // Ambil nilai persentase
+                            return value > 8; 
+                        },
+                        color: "#fff",
+                        font: {
+                            size: 10
+                        },
+                        anchor: "center",
+                        align: "center",
+                        formatter: (value) => `${value}`
+                    }  
                 },
             },
         });
