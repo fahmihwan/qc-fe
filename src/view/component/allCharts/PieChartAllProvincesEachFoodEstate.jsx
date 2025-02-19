@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import Chart from "chart.js/auto";
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
+Chart.register(ChartDataLabels)
 
 const PieChart = ({ data, title }) => {
     const chartRef = useRef(null)
@@ -12,8 +15,7 @@ const PieChart = ({ data, title }) => {
             hash = provinceName.charCodeAt(i) + ((hash << 5) - hash);
         }
     
-        // Warna lebih tegas, tidak pastel
-        const r = ((hash >> 3) & 0xff) % 130 + 70;  // Rentang 70-200
+        const r = ((hash >> 3) & 0xff) % 130 + 70; 
         const g = ((hash >> 5) & 0xff) % 130 + 70;
         const b = ((hash >> 7) & 0xff) % 130 + 70;
     
@@ -79,10 +81,6 @@ const PieChart = ({ data, title }) => {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: {
-                        // position: "bottom",
-                        // labels: {
-                        //     color: "#a3a3a3"
-                        // }
                         display: false
                     },
                     tooltip: {
@@ -90,9 +88,26 @@ const PieChart = ({ data, title }) => {
                             label: function(tooltipItem) {
                                 let value = parseFloat(tooltipItem.raw) || 0;
                                 return `${tooltipItem.label}: ${value}%`
+                            },
+                            title: function(tooltipItem){
+                                return `${title}`
                             }
                         }
+                    },
+                    datalabels: {
+                        display: (context) => {
+                            const value = context.dataset.data[context.dataIndex]; // Ambil nilai persentase
+                            return value > 8; 
+                        },
+                        color: "#fff",
+                        font: {
+                            size: 10
+                        },
+                        anchor: "center",
+                        align: "center",
+                        formatter: (value) => `${value}%`
                     }
+                    
                 }
             }
         })
@@ -112,7 +127,7 @@ const PieChart = ({ data, title }) => {
                 <canvas ref={chartRef} className="h-44 w-full" />
             </div>
             <div>
-                <div className="ml-4 mt-4 max-h-20 w-full max-w-[90%] flex flex-wrap items-center justify-center overflow-y-scroll overflow-x-hidden p-2 rounded">
+                <div className="ml-4 mt-4 max-h-20 w-full max-w-[90%] flex flex-wrap items-center justify-center overflow-y-scroll  scrollbar scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300 overflow-x-hidden p-2 rounded">
                     {legendItems.map((item, index) => (
                     <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
                         <span className="w-7 h-2" style={{ backgroundColor: item.color }}></span>
@@ -127,13 +142,19 @@ const PieChart = ({ data, title }) => {
 }
 
 const PieChartAllProvincesEachFoodEstate = ({ title, data, year }) => {
+    const selectedKey = title.includes("Luas Panen") ? "luas_panen" : "produktivitas"
+    const totalValue = data.reduce((sum, item) => sum + (isNaN(item[selectedKey]) ? 0 : item[selectedKey]), 0);
+    console.log("ini totalvalue", totalValue)
+    
     return (
-        <div className="px-[29px] py-[15px] h-96 flex flex-col">
-            <div className="dark:text-white font-bold text-xl mb-4">Persentase {title} Tahun {year}</div>
-            <div className="flex flex-row justify-center">
-                <div className="flex items-center align-middle justify-center">
+        <div className="px-[29px] py-[15px] min-h-96 flex flex-col">
+            <div className="dark:text-white font-bold text-xl mb-4">Persentase {title} Setiap Provinsi Tahun {year}</div>
+            <div className="flex flex-1 items-center align-middle justify-center">
+                {totalValue == 0 ? (
+                    <div className="h-full dark:text-gray-400 items-center justify-center flex text-xl mb-[10px]">Data belum tersedia</div>
+                ) : (
                     <PieChart data={data} title={title} />
-                </div>
+                )}
             </div>
         </div>
     )
