@@ -9,6 +9,7 @@ import EachCategoryFoodEstate from "../view/foodEstate/EachCategoryFoodEstate";
 import SurveyComponent from "../view/component/listSurvey/SurveyComponent";
 import PageSurvey from "../view/survey/PageSurvey";
 import SurveyDashboard from "../view/survey/SurveyDashboard";
+import QRcode from "../view/survey/QRcode";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -61,7 +62,11 @@ const routes = createBrowserRouter([
         element: <ProtectedRouteAuthenticated element={<AllBencanaCategories />} />
     },
     {
-        path: "/survey",
+        path: "/qrcode",
+        element: <ProtectedRouteAuthenticated element={<QRcode />} />
+    },
+    {
+        path: "/data-hasil-survey",
         element: <ProtectedRouteAuthenticated element={<SurveyDashboard />} />
     },
 

@@ -75,9 +75,24 @@ const menu = [
     },
     {
         title: 'Survey',
-        link: '/survey',
+        link: null,
         icon: <IconSurveySVG />,
-    }
+        submenu: [
+            {
+                title: 'QRcode',
+                link: '/qrcode',
+                icon: <IconGempaSVG />
+            },
+            {
+                title: 'Data Hasil Survey',
+                link: '/data-hasil-survey',
+                icon: <IconDashboardSVG />
+            },
+
+
+        ],
+    },
+
 ]
 
 export default menu

@@ -1,3 +1,5 @@
+import AsyncSelect from "react-select/async"
+import CreatableSelect from "react-select/creatable"
 
 
 
@@ -58,5 +60,67 @@ export const TextareaEl = ({ name, id, placeholder, handleChange, value, readOnl
 
             />
         </div>
+    )
+}
+
+
+// libraray react-select
+export const InputReactSelectEl = ({ handleChange, value, placeholder, options, styles }) => {
+
+    return (
+        <>
+            <CreatableSelect
+                styles={styles}
+                onChange={(e) => handleChange(e)}
+                value={value}
+                placeholder={placeholder}
+                isClearable options={options} />
+
+            {/* <CreatableSelect
+                                                styles={{
+                                                    control: (baseStyles) => ({
+                                                        ...baseStyles,
+                                                        width: '410px',
+                                                        height: "60px",
+                                                        marginRight: "20px"
+                                                    }),
+                                                }}
+                                                onChange={(e) => setSelectedProvince({
+                                                    value: e?.value ? e.value : 0,
+                                                    label: e?.label ? e.label : ''
+                                                })}
+                                                value={selectedProvince.value != 0 && selectedProvince}
+                                                placeholder="Province"
+                                                isClearable
+                                                options={allProvince}
+                                                optionsCreatableSelect={allProvince} /> */}
+        </>)
+}
+
+
+
+export const InputReactSelectAsyncEl = ({ defaultOptions, fetchData }) => {
+    const loadOptions = async (inputValue, callback) => {
+        try {
+            const data = await fetchData();
+            const filteredData = data?.filter((item) =>
+                item.label.toLowerCase().includes(inputValue.toLowerCase())
+            );
+            callback(filteredData);  // Berikan hasil filter ke callback
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            callback([]);  // Kembalikan array kosong jika ada error
+        }
+    };
+
+    return (
+
+        <AsyncSelect
+            cacheOptions
+            loadOptions={loadOptions}  // Fungsi untuk memuat data berdasarkan input pengguna
+            defaultOptions={defaultOptions}  // Set default options dengan data yang sudah diproses
+            getOptionLabel={(e) => e.label}  // Menampilkan nama kategori sebagai label
+            getOptionValue={(e) => e.value}  // Menyimpan nilai kategori sebagai value
+        />
     )
 }
