@@ -127,7 +127,7 @@ const PieChart = ({ data, title }) => {
                 <canvas ref={chartRef} className="h-44 w-full" />
             </div>
             <div>
-                <div className="ml-4 mt-4 max-h-20 w-full max-w-[90%] flex flex-wrap items-center justify-center overflow-y-scroll  scrollbar scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-300 overflow-x-hidden p-2 rounded">
+                <div className="ml-4 mt-4 max-h-20 w-full max-w-[90%] flex flex-wrap items-center justify-center overflow-y-scroll custom-scrollbar overflow-x-hidden p-2 rounded">
                     {legendItems.map((item, index) => (
                     <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
                         <span className="w-7 h-2" style={{ backgroundColor: item.color }}></span>
