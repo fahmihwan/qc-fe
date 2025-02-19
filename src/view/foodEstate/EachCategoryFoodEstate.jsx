@@ -8,6 +8,7 @@ import { getChart, getEachFoodEstateEachProvinceByYear } from '../../api/foodEst
 import Marquee from 'react-fast-marquee'
 import TableForAllProvincesEachFoodEstate from '../component/allCharts/TableForAllProvincesEachFoodEstate'
 import { useEffectYears } from '../../hook/useEffectYears'
+import PieChartAllProvincesEachFoodEstate from '../component/allCharts/PieChartAllProvincesEachFoodEstate'
 
 const EachCategoryFoodEstate = ({ category }) => {
     const [isLoading, setIsLoading] = useState(true)
@@ -222,7 +223,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div>
 
-                        <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
+                        {/* <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
                             <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
                                 <Marquee>
                                     <div className="flex gap-10 overflow-hidden">
@@ -257,7 +258,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         </div>
                                 </Marquee>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="overflow-hidden  flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 p-5 dark:bg-dark-mode-bg mx-auto">
                             <div className='flex flex-row justify-between items-center'>
@@ -275,6 +276,12 @@ const EachCategoryFoodEstate = ({ category }) => {
                                 </div>
                                 <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
                                     <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
+                                </div>
+                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
+                                </div>
+                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
                                 </div>
                             </div>
                         </>

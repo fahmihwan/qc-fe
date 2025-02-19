@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { formatCurrency } from "../../../utils/generateUtil";
 import { Pagination } from "flowbite-react";
 import { IconSortFilterSVG } from "../IconSvg";
 
 const TableForAllProvincesEachFoodEstate = ({data}) => {
-  let maxValueLuasPanen = 0
-  let maxValueProduktivitas = 0
+  const [maxValueLuasPanen, setMaxValueLuasPanen] = useState(1)
+  const [maxValueProduktivitas, setMaxValueProduktivitas] = useState(1)
 
   const [currentPage, setCurrentPage] = useState(1)
   const [sortColumn, setSortColumn] = useState(null)
@@ -13,6 +13,16 @@ const TableForAllProvincesEachFoodEstate = ({data}) => {
   const [searchTerm, setSearchTerm] = useState("")
 
   const itemsPerPage = 5
+
+  useEffect(() => {
+    if(data && data.length > 0) {
+      const luasPanenValues = data.map((item) => parseFloat(item.luas_panen) || 0)
+      const produktivitasValues = data.map((item) => parseFloat(item.produktivitas || 0))
+
+      setMaxValueLuasPanen(Math.max(...luasPanenValues, 1))
+      setMaxValueProduktivitas(Math.max(...produktivitasValues, 1))
+    }
+  }, [data])
 
   const onPageChange = (page) => setCurrentPage(page)
 
@@ -33,11 +43,6 @@ const TableForAllProvincesEachFoodEstate = ({data}) => {
   const getColorText = (value, max = maxValueLuasPanen,) => {
       const lightness = value > (max / 2) ? 100 : 10.6
       return `hsl(0, 0%, ${lightness}%)`;
-  }
-
-  if(data){
-    maxValueLuasPanen = Math.max(...data.map(item => parseFloat(item.luas_panen)));
-    maxValueProduktivitas = Math.max(...data.map(item => parseFloat(item.produktivitas)));
   }
 
   const filteredData = data.filter((item) => {
