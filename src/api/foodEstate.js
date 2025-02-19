@@ -32,3 +32,13 @@ export const getAllFoodEstateByProvinceIdAndYear = async(province_id, year = 202
         throw error
     }
 }
+
+export const getEachFoodEstateEachProvinceByYear = async(year, sub_category) => {
+    try{
+        const response = await apiClient.get(`/gettotaldatalistprovinsi?year=${year}&subkategori=${sub_category}`)
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}
