@@ -183,8 +183,8 @@ const CardQRcodeEl = ({
 
 
 
-    const link = `${window.location.host}/survey-masyarakat?kodeqr=${kodeQr}`
-
+    const link = `${window.location.origin}/survey-masyarakat?kodeqr=${kodeQr}`
+    console.log(link);
     return (
         <div className="bg-[#E7E7E780] rounded-xl p-4 ">
             <div className="w-full flex">
