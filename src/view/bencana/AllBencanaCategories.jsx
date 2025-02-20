@@ -6,6 +6,7 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 import Marquee from 'react-fast-marquee'
 import { Datepicker } from 'flowbite-react'
 import { getAllBencana, getAllSummary } from '../../api/publicApi'
+// import SidebarProvider from '../../context/SidebarContext'
 
 const AllBencanaCategories = () => {
 
@@ -204,98 +205,98 @@ const AllBencanaCategories = () => {
     // console.log("responseSummary ", responseSummary)
 
     return (
-        <LayoutAdmin>
+        <>
             {isLoading ? (
-                <div className="flex justify-center items-center h-screen text-white text-2xl">
-                    Loading...
-                </div>
-            ) : (
-                <div className='w-full '>
-                    <div className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg">
-                        <div className='dark:text-white text-2xl font-bold text-center items-center mb-6 uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
-                        
-                        <div className='flex flex-row justify-between'>
-                            <div className='flex flex-row z-500 gap-4 items-center'>
-                                <div className='dark:text-white'> Dari </div>
-                                <Datepicker 
-                                    className='w-[296px]' 
-                                    language='id' 
-                                    theme={themeDatePicker}
-                                    datatype='yyyy-MM-dd'
-                                    value={startDate}
-                                    onChange={handleStartDateChange}
-                                    minDate={new Date(2008, 0, 1)}
-                                    maxDate={new Date()}
-                                />
-                                <div className='dark:text-white'> sampai </div>
-                                <Datepicker 
-                                    className='w-[296px]' 
-                                    language='id' 
-                                    theme={themeDatePicker}
-                                    datatype='yyyy-MM-DD'
-                                    value={endDate}
-                                    onChange={setEndDate}
-                                    minDate={startDate}
-                                    maxDate={new Date()}
-                                />
-                            </div>
-                            <div className='flex flex-row gap-6'>
-                                <button
-                                    onClick={onDateChange}
-                                    className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800"
-                                    type="button"
-                                >
-                                    <div className="items-center text-center text-sm">
-                                        Tampilkan data
-                                    </div>
-                                </button>
-                                {isProvinceClicked &&
+                    <div className="flex justify-center items-center h-screen text-white text-2xl">
+                        Loading...
+                    </div>
+                ) : (
+                    <div className='w-full '>
+                        <div className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg">
+                            <div className='dark:text-white text-2xl font-bold text-center items-center mb-6 uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
+                            
+                            <div className='flex flex-row justify-between'>
+                                <div className='flex flex-row z-500 gap-4 items-center'>
+                                    <div className='dark:text-white'> Dari </div>
+                                    <Datepicker 
+                                        className='w-[296px]' 
+                                        language='id' 
+                                        theme={themeDatePicker}
+                                        datatype='yyyy-MM-dd'
+                                        value={startDate}
+                                        onChange={handleStartDateChange}
+                                        minDate={new Date(2008, 0, 1)}
+                                        maxDate={new Date()}
+                                    />
+                                    <div className='dark:text-white'> sampai </div>
+                                    <Datepicker 
+                                        className='w-[296px]' 
+                                        language='id' 
+                                        theme={themeDatePicker}
+                                        datatype='yyyy-MM-DD'
+                                        value={endDate}
+                                        onChange={setEndDate}
+                                        minDate={startDate}
+                                        maxDate={new Date()}
+                                    />
+                                </div>
+                                <div className='flex flex-row gap-6'>
                                     <button
-                                        onClick={resetSelection}
+                                        onClick={onDateChange}
                                         className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800"
                                         type="button"
                                     >
                                         <div className="items-center text-center text-sm">
-                                            Kembali ke Seluruh Indonesia
+                                            Tampilkan data
                                         </div>
                                     </button>
-                                }
+                                    {isProvinceClicked &&
+                                        <button
+                                            onClick={resetSelection}
+                                            className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800"
+                                            type="button"
+                                        >
+                                            <div className="items-center text-center text-sm">
+                                                Kembali ke Seluruh Indonesia
+                                            </div>
+                                        </button>
+                                    }
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
-                        <div className=' w-[100%] h-[500px]'>
-                            {IndonesiaMapMemoized}
+                        <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                            <div className=' w-[100%] h-[500px]'>
+                                {IndonesiaMapMemoized}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
-                        <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
-                            <Marquee>
-                                <div className="flex gap-10 overflow-hidden">
-                                        {[...Array(5)].map((_, i) => (
-                                            <div key={i} className="flex whitespace-nowrap  w-max">
-                                                <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
-                                                <span className="dark:text-white text-xl font-bold">Mag: </span>
-                                                <span className="text-green-custom text-xl">3.3 </span>
-                                                <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
-                                                <span className="dark:text-white text-xl font-bold">Lok: </span>
-                                                <span className="text-green-custom text-xl">4.09 LS </span>
-                                                <span className="dark:text-white text-xl">, </span>
-                                                <span className="text-green-custom text-xl">121.80 BT </span>
-                                                <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
-                                            </div>
-                                        ))}
-                                    </div>
-                            </Marquee>
+                        <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
+                            <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
+                                <Marquee>
+                                    <div className="flex gap-10 overflow-hidden">
+                                            {[...Array(5)].map((_, i) => (
+                                                <div key={i} className="flex whitespace-nowrap  w-max">
+                                                    <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
+                                                    <span className="dark:text-white text-xl font-bold">Mag: </span>
+                                                    <span className="text-green-custom text-xl">3.3 </span>
+                                                    <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
+                                                    <span className="dark:text-white text-xl font-bold">Lok: </span>
+                                                    <span className="text-green-custom text-xl">4.09 LS </span>
+                                                    <span className="dark:text-white text-xl">, </span>
+                                                    <span className="text-green-custom text-xl">121.80 BT </span>
+                                                    <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                </Marquee>
+                            </div>
                         </div>
-                    </div>
 
-                    <TabelBencana dataBencana={dataBencana || {}} dataSummary={dataSummary || {}} startDate={fixedStartDate} endDate={fixedEndDate}/>
-                </div>
-            )}
-        </LayoutAdmin>
+                        <TabelBencana dataBencana={dataBencana || {}} dataSummary={dataSummary || {}} startDate={fixedStartDate} endDate={fixedEndDate}/>
+                    </div>
+                )}
+        </>
     )
 }
 

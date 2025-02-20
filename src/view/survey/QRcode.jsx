@@ -7,6 +7,7 @@ import CreatableSelect from 'react-select/creatable';
 import QRCode from 'react-qr-code';
 import { getAllQrcode, storeQRcode } from '../../api/qrcode';
 import { InputReactSelectEl } from '../component/InputCompt';
+// import SidebarProvider from '../../context/SidebarContext'
 
 const QRcode = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -101,72 +102,72 @@ const QRcode = () => {
 
     // buat button submit 
     return (
-        <LayoutAdmin>
+        <>
             <div className='p-10'>
-                <div className='flex justify-between items-center'>
-                    <h1 className='text-3xl text-white mb-5 font-bold'>QRcode Survey</h1>
-                    <Button onClick={() => setOpenModal(true)}>Buat QRcode</Button>
-                </div>
-
-
-                <div className=''>
-                    <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {listQrcode?.map((d, i) => (
-                            <CardQRcodeEl
-                                key={i}
-                                namaKategori={d.nama_kategori}
-                                kodeQr={d.kode_qr}
-                                namaSubKategori={d.nama_sub_kategori}
-                                topik={d.topik}
-                            />
-                        ))}
-
-                        {/* const host = window.location.host; */}
-
-
+                    <div className='flex justify-between items-center'>
+                        <h1 className='text-3xl text-white mb-5 font-bold'>QRcode Survey</h1>
+                        <Button onClick={() => setOpenModal(true)}>Buat QRcode</Button>
                     </div>
-                </div>
 
 
+                    <div className=''>
+                        <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                            {listQrcode?.map((d, i) => (
+                                <CardQRcodeEl
+                                    key={i}
+                                    namaKategori={d.nama_kategori}
+                                    kodeQr={d.kode_qr}
+                                    namaSubKategori={d.nama_sub_kategori}
+                                    topik={d.topik}
+                                />
+                            ))}
+
+                            {/* const host = window.location.host; */}
 
 
-
-
-
-
-
-
-            </div>
-            <CreateQRcode openModal={openModal} setOpenModal={setOpenModal}
-                setSelectedKategori={setSelectedKategori}
-                selectedKategori={selectedKategori}
-                listKategori={listKategori}
-                setSelectedSubKategori={setSelectedSubKategori}
-                selectedSubKategori={selectedSubKategori}
-                listSubKategori={listSubKategori}
-                setSelectedTopik={setSelectedTopik}
-                selectedTopik={selectedTopik}
-                listTopik={listTopik}
-
-                handleSubmit={handleSubmit}
-            />
-
-            {/* <Modal show={openModal} size="md" popup onClose={() => setOpenModal(false)} initialFocus={null}>
-                <Modal.Header />
-                <Modal.Body>
-                    <div className="space-y-6">
-                        <h3 className="text-xl font-medium text-gray-900 dark:text-white">Create QRcode</h3>
-
-                        <div className='w-full mb-3'>
-                         
-                        </div>
-                        <div className="w-full">
-                            <Button>Log in to your account</Button>
                         </div>
                     </div>
-                </Modal.Body>
-            </Modal> */}
-        </LayoutAdmin>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <CreateQRcode openModal={openModal} setOpenModal={setOpenModal}
+                    setSelectedKategori={setSelectedKategori}
+                    selectedKategori={selectedKategori}
+                    listKategori={listKategori}
+                    setSelectedSubKategori={setSelectedSubKategori}
+                    selectedSubKategori={selectedSubKategori}
+                    listSubKategori={listSubKategori}
+                    setSelectedTopik={setSelectedTopik}
+                    selectedTopik={selectedTopik}
+                    listTopik={listTopik}
+
+                    handleSubmit={handleSubmit}
+                />
+
+                {/* <Modal show={openModal} size="md" popup onClose={() => setOpenModal(false)} initialFocus={null}>
+                    <Modal.Header />
+                    <Modal.Body>
+                        <div className="space-y-6">
+                            <h3 className="text-xl font-medium text-gray-900 dark:text-white">Create QRcode</h3>
+
+                            <div className='w-full mb-3'>
+                            
+                            </div>
+                            <div className="w-full">
+                                <Button>Log in to your account</Button>
+                            </div>
+                        </div>
+                    </Modal.Body>
+                </Modal> */}
+        </>
     )
 }
 

@@ -12,6 +12,7 @@ import { useEffectAllFoodEstate } from '../../hook/useEffectAllFoodEstate'
 import { useEffectYears } from '../../hook/useEffectYears'
 import { useEffectAllFoodEstateEachProvinceEachYear } from '../../hook/useEffectAllFoodEstateEachProvince'
 import { getAllFoodEstateByProvinceIdAndYear } from '../../api/foodEstate'
+// import SidebarProvider from '../../context/SidebarContext'
 
 const AllCategories = () => {
     const dummyDataForTable = {
@@ -151,87 +152,87 @@ const AllCategories = () => {
     const chartDataProduktivitas = { labels, datasets: datasetsProduktivitas };
 
     return (
-        <LayoutAdmin>
+        <>
             {isLoading ? (
-                <div className="flex justify-center items-center h-screen  text-white text-2xl">
-                    Loading...
-                </div>
-            ) : (
-                <div className='w-full xl:grid lg:grid-cols-7 '>
-                    <div className='col-span-12 lg:col-span-5 '>
-                        {/* header */}
-                        <div className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
-                            <div className="grid grid-cols-3 gap-4 justify-center  lg:py-5  items-center w-full ">
-                                <div className=" rounded  items-centers ">
+                    <div className="flex justify-center items-center h-screen  text-white text-2xl">
+                        Loading...
+                    </div>
+                ) : (
+                    <div className='w-full xl:grid lg:grid-cols-7 '>
+                        <div className='col-span-12 lg:col-span-5 '>
+                            {/* header */}
+                            <div className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
+                                <div className="grid grid-cols-3 gap-4 justify-center  lg:py-5  items-center w-full ">
+                                    <div className=" rounded  items-centers ">
 
-                                    <div className="flex-col justify-center block lg:hidden items-center dark:text-white">
-                                        <div className="text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
-                                        <div className="text-xs lg:text-2xl  font-bold">SEMUA FOOD ESTATE</div>
+                                        <div className="flex-col justify-center block lg:hidden items-center dark:text-white">
+                                            <div className="text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
+                                            <div className="text-xs lg:text-2xl  font-bold">SEMUA FOOD ESTATE</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className=" dark:text-white rounded ">
-                                    <div className="text-center flex-col justify-center hidden lg:block">
-                                        <div className=" text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
-                                        <div className=" text-xs lg:text-2xl text-center font-bold">SEMUA FOOD ESTATE</div>
+                                    <div className=" dark:text-white rounded ">
+                                        <div className="text-center flex-col justify-center hidden lg:block">
+                                            <div className=" text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
+                                            <div className=" text-xs lg:text-2xl text-center font-bold">SEMUA FOOD ESTATE</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className=" text-white flex justify-end px-6 my-2">
-                                    <div className='flex flex-col items-center'>
-                                        <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
+                                    <div className=" text-white flex justify-end px-6 my-2">
+                                        <div className='flex flex-col items-center'>
+                                            <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
 
-                                        {isProvinceClicked &&
-                                            <button
-                                                onClick={resetSelection}
-                                                className="text-white w-44 bg-blue-700 justify-center hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                                                type="button"
-                                                ><span className='text-center'>Seluruh Indonesia</span>
-                                            </button>
-                                        }
+                                            {isProvinceClicked &&
+                                                <button
+                                                    onClick={resetSelection}
+                                                    className="text-white w-44 bg-blue-700 justify-center hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                    type="button"
+                                                    ><span className='text-center'>Seluruh Indonesia</span>
+                                                </button>
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
-                            <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
-                            </div>
-                        </div>
-
-                        {!isProvinceClicked &&
-                            <div className='grid md:grid-cols-2 ml-5 sm:mr-5  mt-5 dark:bg-dark-mode-bg'>
-                                <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px]  mr-5'>
-                                    <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/>
+                            <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                                <div className=' w-[100%] h-[500px]'>
+                                    <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
                                 </div>
-                                <div className=' col-span-1 dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
-                                    <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/>
+                            </div>
+
+                            {!isProvinceClicked &&
+                                <div className='grid md:grid-cols-2 ml-5 sm:mr-5  mt-5 dark:bg-dark-mode-bg'>
+                                    <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px]  mr-5'>
+                                        <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/>
+                                    </div>
+                                    <div className=' col-span-1 dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
+                                        <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        {/* grafik samping kanan */}
+                        {isProvinceClicked ?
+                            <div className='w-full xl:col-span-2 '>
+                                <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
+                                </div>
+                                <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
+                                </div>
+                            </div> :
+                            <div className='w-full xl:col-span-2  '>
+                                <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen} />
+                                </div>
+                                <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} />
                                 </div>
                             </div>
                         }
                     </div>
-
-                    {/* grafik samping kanan */}
-                    {isProvinceClicked ?
-                        <div className='w-full xl:col-span-2 '>
-                            <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
-                                <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
-                            </div>
-                            <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
-                                <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
-                            </div>
-                        </div> :
-                        <div className='w-full xl:col-span-2  '>
-                            <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
-                                <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen} />
-                            </div>
-                            <div className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
-                                <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} />
-                            </div>
-                        </div>
-                    }
-                </div>
-            )}
-        </LayoutAdmin>
+                )}
+        </>
     );
 }
 
