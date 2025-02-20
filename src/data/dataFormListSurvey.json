@@ -2,7 +2,7 @@
   "listFormSurvey" : [
     {
       "title": "Statistik Luas Lahan",
-      "kode":"foodestate-singkong-statistikluaspanen",
+      "kode":"foodestate-padi-statistikluaspanen",
       "logoPosition": "right",
       "pages": [
         {

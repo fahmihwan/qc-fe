@@ -21,7 +21,7 @@ const routes = createBrowserRouter([
         element: <ProtectedRouteGuest element={<Login />} />
     },
     {
-        path: '/survey-masyarakat',
+        path: '/survey-masyarakat/:kodeqr',
         element: <PageSurvey />
 
     },

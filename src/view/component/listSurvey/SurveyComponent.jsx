@@ -7,15 +7,37 @@ import "survey-core/defaultV2.min.css";
 import * as SurveyTheme from "survey-core/themes";;
 import { storeSurveyDinamis } from '../../../api/survey';
 import dataFormListSurvey from './../../../data/dataFormListSurvey.json'
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { getDetailQRcode } from "../../../api/qrcode";
 
 
 
 
 function SurveyComponent() {
+    // http://localhost:5173/survey-masyarakat?kodeqr=ea0a37f7-23da-4586-9422-5f8b76bfa6e4
+    const { kodeqr } = useParams()
+
+    const [surveyJson, setSurveyJson] = useState({})
+
+
+    useEffect(() => {
+
+        getDetailQRcode(kodeqr).then((res) => {
+            let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == res.data[0].kode_topik)
+            if (getJson.length == 0) {
+                alert('survey tidak ada')
+            }
+            setSurveyJson(getJson[0]);
+        })
 
 
 
-    const survey = new Model(dataFormListSurvey.listFormSurvey[0]);
+    }, [kodeqr])
+
+    console.log(surveyJson);
+    const survey = new Model(surveyJson);
+
 
     survey.applyTheme(SurveyTheme.DefaultDark);
 

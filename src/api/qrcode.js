@@ -32,3 +32,13 @@ export const deleteQrcode = async (qrcode) => {
         throw error
     }
 }
+
+export const getDetailQRcode = async (qrcode) => {
+    try {
+        const response = await apiClient.get(`/qrcode/${qrcode}`)
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}

@@ -5,14 +5,14 @@ import { Button, Modal } from "flowbite-react";
 import { getDropdownNamakategori, getDropdownSubkatgeori, getDropdownTopik } from '../../api/otherApi';
 import CreatableSelect from 'react-select/creatable';
 import QRCode from 'react-qr-code';
-import { getAllQrcode, storeQRcode } from '../../api/qrcode';
+import { deleteQrcode, getAllQrcode, storeQRcode } from '../../api/qrcode';
 import { InputReactSelectEl } from '../component/InputCompt';
 
 const QRcode = () => {
     const [openModal, setOpenModal] = useState(false);
 
     const [listQrcode, setListQrcode] = useState([])
-
+    const [selectedQR, setSelectedQR] = useState(null)
 
 
 
@@ -34,7 +34,7 @@ const QRcode = () => {
     // jika ada tampilkan
 
 
-    const fetchQRcode = async (params) => {
+    const fetchQRcode = async () => {
         // getAllQrcode().then((res)=> console.log(res))
         try {
             const response = await getAllQrcode()
@@ -66,6 +66,7 @@ const QRcode = () => {
                 setListKategori(res.data)
             })
         }
+        setSelectedQR(null)
 
     }, [openModal])
 
@@ -74,9 +75,6 @@ const QRcode = () => {
 
     useEffect(() => {
 
-
-
-        // console.log(selectedKategori?.value != '' && listKategori.length != 0);
         if (selectedKategori?.value != 0) {
             getDropdownSubkatgeori(selectedKategori?.value).then((res) => {
                 setListSubKategori(res.data)
@@ -95,17 +93,53 @@ const QRcode = () => {
         await storeQRcode({
             user_id: 1,
             topik_id: selectedTopik?.value
-        })
+        }).then((res) => fetchQRcode())
         setOpenModal(false)
+    }
+
+    const handleDelete = async () => {
+
+        let isConfirm = confirm("apakah anda yakin ingin menghapus?")
+        if (isConfirm) {
+            await deleteQrcode(selectedQR).then((res) => {
+                fetchQRcode()
+            })
+        }
     }
 
     // buat button submit 
     return (
         <LayoutAdmin>
             <div className='p-10'>
-                <div className='flex justify-between items-center'>
-                    <h1 className='text-3xl text-white mb-5 font-bold'>QRcode Survey</h1>
-                    <Button onClick={() => setOpenModal(true)}>Buat QRcode</Button>
+                <div className='flex justify-between items-center mb-5'>
+                    <h1 className='text-3xl text-white  font-bold'>QRcode Survey</h1>
+                    <div className='flex items-center justify-between '>
+
+                        {
+                            selectedQR != null && (
+                                <>
+                                    <button
+                                        onClick={() => handleDelete()}
+                                        type="button"
+                                        className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                    >
+                                        Delete
+                                    </button>
+                                    {/* <button
+                                        type="button"
+                                        className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-5 dark:focus:ring-yellow-900"
+                                    >
+                                        Yellow
+                                    </button> */}
+                                </>
+                            )
+                        }
+
+                        <Button onClick={() => setOpenModal(true)}>Buat QRcode</Button>
+
+
+                    </div>
+
                 </div>
 
 
@@ -114,10 +148,16 @@ const QRcode = () => {
                         {listQrcode?.map((d, i) => (
                             <CardQRcodeEl
                                 key={i}
+                                id={d?.id}
                                 namaKategori={d.nama_kategori}
                                 kodeQr={d.kode_qr}
                                 namaSubKategori={d.nama_sub_kategori}
                                 topik={d.topik}
+                                selectedQR={selectedQR}
+                                // setSelectedQR={setSelectedQR}
+                                handleChange={() => {
+                                    setSelectedQR(d.kode_qr)
+                                }}
                             />
                         ))}
 
@@ -151,21 +191,6 @@ const QRcode = () => {
                 handleSubmit={handleSubmit}
             />
 
-            {/* <Modal show={openModal} size="md" popup onClose={() => setOpenModal(false)} initialFocus={null}>
-                <Modal.Header />
-                <Modal.Body>
-                    <div className="space-y-6">
-                        <h3 className="text-xl font-medium text-gray-900 dark:text-white">Create QRcode</h3>
-
-                        <div className='w-full mb-3'>
-                         
-                        </div>
-                        <div className="w-full">
-                            <Button>Log in to your account</Button>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal> */}
         </LayoutAdmin>
     )
 }
@@ -174,19 +199,24 @@ export default QRcode
 
 
 const CardQRcodeEl = ({
-
+    // id,
     namaKategori,
     namaSubKategori,
     kodeQr,
-    topik
+    topik,
+    selectedQR,
+    handleChange
 }) => {
 
 
 
+
     const link = `${window.location.origin}/survey-masyarakat?kodeqr=${kodeQr}`
-    console.log(link);
+
     return (
-        <div className="bg-[#E7E7E780] rounded-xl p-4 ">
+        <div
+            onClick={(e) => handleChange(e)}
+            className={` rounded-xl p-4  cursor-pointer box-border ${selectedQR == kodeQr ? " border-4 bg-[#91919180] border-yellow-200 " : "bg-[#E7E7E780]"} `}>
             <div className="w-full flex">
                 <div className='w-6/12 bg-white p-2 rounded-lg'>
                     <QRCode
@@ -248,6 +278,7 @@ const CreateQRcode = ({ openModal, setOpenModal,
                 <div className='p-5 text-white text-2xl font-bold '>
                     Buat QRcode
                 </div>
+
             </Modal.Header>
 
             <Modal.Body className=''>
