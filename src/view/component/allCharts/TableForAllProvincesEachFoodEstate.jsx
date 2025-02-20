@@ -77,121 +77,132 @@ const TableForAllProvincesEachFoodEstate = ({data}) => {
   const endIndex = startIndex + itemsPerPage
   const paginatedData = sortedData.slice(startIndex, endIndex)
 
+  const allZero = data.every(item => 
+    parseFloat(item?.luas_panen ?? 0) === 0 && 
+    parseFloat(item?.produktivitas ?? 0) === 0
+  );  
+
   return (
     <div className="overflow-x-auto mt-4">
-      <div className="mb-4 w-full">
-        <input
-          type="text"
-          placeholder="Cari..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="p-2 border border-dark-mode-border dark:border-light-border px-4 py-2 dark:bg-dark-mode-bg w-full rounded shadow-none outline-none focus:outline-none focus:ring-0"
-        />
-      </div>
-      
-      <table className="min-w-full border-collapse border border-light-border dark:border-dark-mode-border table-fixed">
-        <thead>
-            <tr className=" bg-gray-900 dark:bg-white">
-                <th 
-                  className="cursor-pointer border border-gray-400 text-white dark:text-dark-mode px-4 py-2 "
-                  onClick={() => handleSort("nama_provinsi")}
-                >
-                  <div className="flex flex-row items-center gap-3 justify-center">
-                    Provinsi <IconSortFilterSVG />
-                  </div>
-                </th>
-                <th 
-                  className="border border-gray-400 text-white dark:text-dark-mode px-4 py-2"
-                  onClick={() => handleSort("luas_panen")}
-                >
-                  <div className="flex flex-row items-center gap-3 justify-center">
-                    Luas Panen (ha) <IconSortFilterSVG />
-                  </div>
-                </th>
-                <th 
-                  className="border border-gray-400 text-white dark:text-dark-mode px-4 py-2"
-                  onClick={() => handleSort("produktivitas")}
-                >
-                  <div className="flex flex-row items-center gap-3 justify-center">
-                    Produktivitas (ku/ha) <IconSortFilterSVG />
-                  </div>
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-          {
-            paginatedData?.map((d, i) => {
-              return (
-                <tr key={i} className=" text-center">
-                  <td className="border border-gray-400 px-4 py-2 capitalize dark:text-white">{d?.nama_provinsi}</td>
-                  <td className="border border-gray-400 p-2 font-semibold">
-                    <div 
-                      className="p-2"
-                      style={{ 
-                          backgroundColor: getColor(parseFloat(d?.luas_panen), maxValueLuasPanen, "luas_panen"), 
-                          color: getColorText(parseFloat(d?.luas_panen), maxValueLuasPanen)
-                      }}
+      {allZero ? (
+        <div className="dark:text-gray-400 text-center text-xl mb-[10px]">Data belum tersedia</div>
+      ) : (
+        <>
+          <div className="mb-4 w-full">
+            <input
+              type="text"
+              placeholder="Cari..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="p-2 border border-dark-mode-border dark:border-light-border px-4 py-2 dark:bg-dark-mode-bg w-full rounded shadow-none outline-none focus:outline-none focus:ring-0"
+            />
+          </div>
+          
+          <table className="min-w-full border-collapse border border-light-border dark:border-dark-mode-border table-fixed">
+            <thead>
+                <tr className=" bg-gray-900 dark:bg-white">
+                    <th 
+                      className="cursor-pointer border border-gray-400 text-white dark:text-dark-mode px-4 py-2 "
+                      onClick={() => handleSort("nama_provinsi")}
                     >
-                      {formatCurrency(parseFloat(d?.luas_panen))}
-                    </div>
-                  </td>
-                  <td className="border border-gray-400 p-2 font-semibold">
-                    <div 
-                      className="p-2"
-                      style={{ 
-                          backgroundColor: getColor(parseFloat(d?.produktivitas), maxValueProduktivitas, "produktivitas"), 
-                          color: getColorText(parseFloat(d?.produktivitas), maxValueProduktivitas)
-                      }}
+                      <div className="flex flex-row items-center gap-3 justify-center">
+                        Provinsi <IconSortFilterSVG />
+                      </div>
+                    </th>
+                    <th 
+                      className="border border-gray-400 text-white dark:text-dark-mode px-4 py-2"
+                      onClick={() => handleSort("luas_panen")}
                     >
-                      {formatCurrency(parseFloat(d?.produktivitas))}
-                    </div>
-                  </td>
+                      <div className="flex flex-row items-center gap-3 justify-center">
+                        Luas Panen (ha) <IconSortFilterSVG />
+                      </div>
+                    </th>
+                    <th 
+                      className="border border-gray-400 text-white dark:text-dark-mode px-4 py-2"
+                      onClick={() => handleSort("produktivitas")}
+                    >
+                      <div className="flex flex-row items-center gap-3 justify-center">
+                        Produktivitas (ku/ha) <IconSortFilterSVG />
+                      </div>
+                    </th>
                 </tr>
-              )
-            })
-          }
-        </tbody>
-      </table>
+            </thead>
+            <tbody>
+              {
+                paginatedData?.map((d, i) => {
+                  return (
+                    <tr key={i} className=" text-center">
+                      <td className="border border-gray-400 px-4 py-2 capitalize dark:text-white">{d?.nama_provinsi}</td>
+                      <td className="border border-gray-400 p-2 font-semibold">
+                        <div 
+                          className="p-2"
+                          style={{ 
+                              backgroundColor: getColor(parseFloat(d?.luas_panen), maxValueLuasPanen, "luas_panen"), 
+                              color: getColorText(parseFloat(d?.luas_panen), maxValueLuasPanen)
+                          }}
+                        >
+                          {formatCurrency(parseFloat(d?.luas_panen))}
+                        </div>
+                      </td>
+                      <td className="border border-gray-400 p-2 font-semibold">
+                        <div 
+                          className="p-2"
+                          style={{ 
+                              backgroundColor: getColor(parseFloat(d?.produktivitas), maxValueProduktivitas, "produktivitas"), 
+                              color: getColorText(parseFloat(d?.produktivitas), maxValueProduktivitas)
+                          }}
+                        >
+                          {formatCurrency(parseFloat(d?.produktivitas))}
+                        </div>
+                      </td>
+                    </tr>
+                  )
+                })
+              }
+            </tbody>
+          </table>
 
-      <div className="flex justify-center mt-4">
-        <Pagination 
-          layout="pagination"
-          currentPage={currentPage}
-          totalPages={Math.ceil(data.length / itemsPerPage)}
-          onPageChange={onPageChange}
-          previousLabel="Prev"
-          nextLabel="Next"
-          showIcons
-          theme={
-            {
-              "base": "",
-              "layout": {
-                "table": {
-                  "base": "text-sm text-black dark:text-gray-custom",
-                  "span": "font-semibold text-gray-900 dark:text-white"
-                }
-              },
-              "pages": {
-                "base": "xs:mt-0 mt-2 inline-flex items-center -space-x-px",
-                "showIcon": "inline-flex",
-                "previous": {
-                  "base": "ml-0 rounded-l-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-dark-mode dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
-                  "icon": "h-5 w-5"
-                },
-                "next": {
-                  "base": "rounded-r-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-dark-mode dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
-                  "icon": "h-5 w-5"
-                },
-                "selector": {
-                  "base": "w-12 border border-gray-300 bg-white py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-dark-mode dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
-                  "active": "bg-cyan-50 text-cyan-600 hover:bg-cyan-100 hover:text-cyan-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
-                  "disabled": "cursor-not-allowed opacity-50"
+          <div className="flex justify-center mt-4">
+            <Pagination 
+              layout="pagination"
+              currentPage={currentPage}
+              totalPages={Math.ceil(data.length / itemsPerPage)}
+              onPageChange={onPageChange}
+              previousLabel="Prev"
+              nextLabel="Next"
+              showIcons
+              theme={
+                {
+                  "base": "",
+                  "layout": {
+                    "table": {
+                      "base": "text-sm text-black dark:text-gray-custom",
+                      "span": "font-semibold text-gray-900 dark:text-white"
+                    }
+                  },
+                  "pages": {
+                    "base": "xs:mt-0 mt-2 inline-flex items-center -space-x-px",
+                    "showIcon": "inline-flex",
+                    "previous": {
+                      "base": "ml-0 rounded-l-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-dark-mode dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
+                      "icon": "h-5 w-5"
+                    },
+                    "next": {
+                      "base": "rounded-r-lg border border-gray-300 bg-white px-3 py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-dark-mode dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
+                      "icon": "h-5 w-5"
+                    },
+                    "selector": {
+                      "base": "w-12 border border-gray-300 bg-white py-2 leading-tight text-gray-500 enabled:hover:bg-gray-100 enabled:hover:text-gray-700 dark:border-gray-700 dark:bg-dark-mode dark:text-gray-400 enabled:dark:hover:bg-gray-700 enabled:dark:hover:text-white",
+                      "active": "bg-cyan-50 text-cyan-600 hover:bg-cyan-100 hover:text-cyan-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white",
+                      "disabled": "cursor-not-allowed opacity-50"
+                    }
+                  }
                 }
               }
-            }
-          }
-        />
-      </div>
+            />
+          </div>
+        </>
+      )}
     </div>
   )
 }

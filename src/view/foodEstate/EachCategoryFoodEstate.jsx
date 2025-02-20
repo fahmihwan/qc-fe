@@ -38,6 +38,16 @@ const EachCategoryFoodEstate = ({ category }) => {
     }, [responseListYear]);
 
     useEffect(() => {
+        if(category) {
+            fetchData(category, null).then((res) => {
+                console.log(res.data)
+                setDataLuasPanenToParse(formatChartData(res, 'Luas Panen (ha)'))
+                setDataProduktivitasToParse(formatChartData(res, 'Produktivitas (ku/ha)'))
+            })
+        }
+    }, [category])
+
+    useEffect(() => {
         if(category && selectedYear) {
             fetchDataAllProvinces(selectedYear, category).then((res) => {
                 console.log(res.data)
@@ -135,7 +145,7 @@ const EachCategoryFoodEstate = ({ category }) => {
     }
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
-        console.log("ini berapa kali")
+        console.log("ini berapa kali", namaProvinsi, kodeProvinsi)
         await fetchData(category, kodeProvinsi).then((res)=>{
             setDataLuasPanenToParse(formatChartData(res, 'Luas Panen (ha)'))
             setDataProduktivitasToParse(formatChartData(res, 'Produktivitas (ku/ha)'))

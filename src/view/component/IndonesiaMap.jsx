@@ -13,6 +13,7 @@ import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol";
 const IndonesiaMap = ({ 
     kodeProvinsi, 
     onProvinceClick, 
+    selectedProvinceCode,
     isProvinceClicked,
     clickable = true, 
     hoverable = true,
@@ -21,7 +22,7 @@ const IndonesiaMap = ({
 }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
-    const [selectedProvince, setSelectedProvince] = useState('');
+    const [selectedProvince, setSelectedProvince] = useState(selectedProvinceCode || '');
     const [hoveredProvince, setHoveredProvince] = useState('')
 
     let provinsiData = provinsiJson.data
