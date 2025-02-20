@@ -145,7 +145,7 @@ const EachCategoryFoodEstate = ({ category }) => {
     }
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
-        console.log("ini berapa kali")
+        console.log("ini berapa kali", namaProvinsi, kodeProvinsi)
         await fetchData(category, kodeProvinsi).then((res)=>{
             setDataLuasPanenToParse(formatChartData(res, 'Luas Panen (ha)'))
             setDataProduktivitasToParse(formatChartData(res, 'Produktivitas (ku/ha)'))
