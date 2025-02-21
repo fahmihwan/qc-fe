@@ -111,7 +111,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                 <div className="flex flex-row gap-[8px] mr-[22px] items-center">
                                     <IconRumahSVG color={"#33A02C"}/>
                                     <div className="flex flex-col">
-                                        <div className="text-[25px] dark:text-white">{dataSummary.rumah_rusak_ringan || 0}</div>
+                                        <div className="text-[25px] text-green-custom">{dataSummary.rumah_rusak_ringan || 0}</div>
                                         <div className="text-base dark:text-white -mt-2">Rusak Ringan</div>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                 <div className="flex flex-row gap-[8px] mr-[22px] items-center">
                                     <IconRumahSVG color={"#F4BE37"}/>
                                     <div className="flex flex-col">
-                                        <div className="text-[25px] dark:text-white">{dataSummary.rumah_rusak_sedang || 0}</div>
+                                        <div className="text-[25px] text-green-custom">{dataSummary.rumah_rusak_sedang || 0}</div>
                                         <div className="text-base dark:text-white -mt-2">Rusak Sedang</div>
                                     </div>
                                 </div>
@@ -127,7 +127,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                 <div className="flex flex-row gap-[8px] mr-[22px] items-center">
                                     <IconRumahSVG color={"#E31A1C"}/>
                                     <div className="flex flex-col">
-                                        <div className="text-[25px] dark:text-white">{dataSummary.rumah_rusak_berat || 0}</div>
+                                        <div className="text-[25px] text-green-custom">{dataSummary.rumah_rusak_berat || 0}</div>
                                         <div className="text-base dark:text-white -mt-2">Rusak Berat</div>
                                     </div>
                                 </div>
@@ -135,7 +135,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
 
                             <div className="flex flex-col">
                                 <div className="font-bold text-base dark:text-white">Total Rusak</div>
-                                <div className="font-bold text-3xl dark:text-white">{totalRumahRusak}</div>
+                                <div className="font-bold text-3xl text-green-custom">{totalRumahRusak}</div>
                             </div>
                         </div>
                     )}
@@ -151,7 +151,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                     <div className="flex flex-row gap-[8px] mr-[22px] items-center  max-w-[150px] min-w-[150px]">
                                         <IconSatuanPendidikanSVG className={"min-w-[40px] min-h-[34px] -mt-5"} />
                                         <div className="flex flex-col">
-                                            <div className="text-[25px] dark:text-white">{dataSummary.pendidikan_rusak || 0}</div>
+                                            <div className="text-[25px] text-green-custom">{dataSummary.pendidikan_rusak || 0}</div>
                                             <div className="text-base dark:text-white -mt-2">Satuan Pendidikan</div>
                                         </div>
                                     </div>
@@ -159,7 +159,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                     <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
                                         <IconRumahIbadatSVG className={"min-w-[40px] min-h-[34px]"} />
                                         <div className="flex flex-col">
-                                            <div className="text-[25px] dark:text-white">{dataSummary.peribadatan_rusak || 0}</div>
+                                            <div className="text-[25px] text-green-custom">{dataSummary.peribadatan_rusak || 0}</div>
                                             <div className="text-base dark:text-white -mt-2">Rumah Ibadat</div>
                                         </div>
                                     </div>
@@ -167,7 +167,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                     <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
                                         <IconFasyenkesSVG className={"min-w-[40px] min-h-[34px]"} />
                                         <div className="flex flex-col">
-                                            <div className="text-[25px] dark:text-white">{dataSummary.kesehatan_rusak || 0}</div>
+                                            <div className="text-[25px] text-green-custom">{dataSummary.kesehatan_rusak || 0}</div>
                                             <div className="text-base dark:text-white -mt-2">Fasyankes</div>
                                         </div>
                                     </div>
@@ -175,7 +175,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
 
                                 <div className="flex flex-col">
                                     <div className="font-bold text-base dark:text-white">Total Rusak</div>
-                                    <div className="font-bold text-3xl dark:text-white">{totalFasilitasRusak}</div>
+                                    <div className="font-bold text-3xl text-green-custom">{totalFasilitasRusak}</div>
                                 </div>
                             </>
                         )}

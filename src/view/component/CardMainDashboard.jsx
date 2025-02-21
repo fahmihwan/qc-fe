@@ -76,7 +76,7 @@ const CardMainDashboard = ({ allDataFoodEstate }) => {
 
 const SingleCard = ({ singleData }) => {
     return (
-        <div className="flex border text-center dark:border-dark-mode-border bg-white bg-opacity-50 dark:bg-dark-mode dark:bg-opacity-50 justify-center rounded-lg dark:text-white w-56 md:w-48 sm:w-32 h-[370px] px-4" style={{ marginRight: '10px' }}>
+        <div className="flex border text-center dark:border-dark-mode-border bg-white bg-opacity-50 dark:bg-dark-mode dark:bg-opacity-50 justify-center rounded-lg dark:text-white w-56 md:w-48 sm:w-32 h-[420px] px-4" style={{ marginRight: '10px' }}>
             <div className="w-full">
                 <h5 className="py-3 font-bold dark:text-white uppercase">{singleData.title}</h5>
                 <div className="h-[1px] dark:bg-white mb-5"></div>
