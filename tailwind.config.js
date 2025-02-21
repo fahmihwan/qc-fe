@@ -61,6 +61,9 @@ export default {
       //     to: { transform: "translateX(-50%)" },
       //   },
       // },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"], // Ganti default sans-serif jadi Poppins
+      },
     },
   },
   plugins: [
