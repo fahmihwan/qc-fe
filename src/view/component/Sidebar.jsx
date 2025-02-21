@@ -40,6 +40,7 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                                 to={d?.link}
                                 className="flex items-center border border-black dark:border-white p-2 text-gray-900 
                                 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                onClick={() => toggleDropdown(null)}
                             >
                                 {d?.icon}
                                 <span className="ml-3 text-sm">{d?.title}</span>

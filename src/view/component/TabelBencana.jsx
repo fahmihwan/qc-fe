@@ -12,7 +12,7 @@ const SingleBencana = ({ icon, jlhKejadian, title }) => {
     return (
         <div className="flex flex-row align-middle">
             {icon}
-            <span className="text-green-custom text-base mr-[31px] ml-5">{jlhKejadian}</span>
+            <span className="text-green-custom text-base mr-[31px] min-w-7 ml-5 text-center">{jlhKejadian}</span>
             <span className="dark:text-white text-base">{title}</span>
         </div>
     )
