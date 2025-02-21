@@ -6,6 +6,7 @@ import LayoutAdmin from '../layout/LayoutAdmin'
 import Marquee from 'react-fast-marquee'
 import { Datepicker } from 'flowbite-react'
 import { getAllBencana, getAllSummary } from '../../api/publicApi'
+import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
 
 const AllBencanaCategories = () => {
@@ -208,7 +209,10 @@ const AllBencanaCategories = () => {
         <>
             {isLoading ? (
                 <div className="flex justify-center items-center h-screen text-white text-2xl">
-                    Loading...
+                    <RingLoader 
+                        size={60}
+                        color='#33A02C'
+                    />
                 </div>
             ) : (
                 <div className='w-full '>

@@ -9,6 +9,7 @@ import { TableForRealTime } from '../component/allGempaTables/TableForRealTime'
 import { SkalaMMI } from '../component/miniComponent/SkalaMMI'
 import { useEffectGempa } from '../../hook/useEffectGempa'
 import { useParams } from 'react-router-dom'
+import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
 
 const Gempa = () => {
@@ -243,7 +244,10 @@ const Gempa = () => {
         <>
             {loading ? (
                 <div className="flex justify-center items-center h-screen dark:text-white text-2xl">
-                    Loading...
+                    <RingLoader 
+                        size={60}
+                        color='#33A02C'
+                    />
                 </div>
             ) : (
                 <div className='w-full min-h-screen'>

@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
+import { RingLoader } from 'react-spinners';
 
 
 const Dashboard = () => {
@@ -24,7 +25,10 @@ const Dashboard = () => {
         <>
             {isLoading ? (
                 <div className="flex justify-center dark:bg-dark-mode-bg items-center h-screen  text-white text-2xl">
-                    Loading...
+                    <RingLoader 
+                        size={60}
+                        color='#33A02C'
+                    />
                 </div>
             ) : (
                 <div className=' min-h-screen'>

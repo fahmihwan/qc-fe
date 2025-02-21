@@ -9,6 +9,7 @@ import Marquee from 'react-fast-marquee'
 import TableForAllProvincesEachFoodEstate from '../component/allCharts/TableForAllProvincesEachFoodEstate'
 import { useEffectYears } from '../../hook/useEffectYears'
 import PieChartAllProvincesEachFoodEstate from '../component/allCharts/PieChartAllProvincesEachFoodEstate'
+import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
 
 const EachCategoryFoodEstate = ({ category }) => {
@@ -178,7 +179,10 @@ const EachCategoryFoodEstate = ({ category }) => {
         <>
             {isLoading ? (
                 <div className="flex justify-center items-center h-screen text-white text-2xl">
-                    Loading...
+                    <RingLoader 
+                        size={60}
+                        color='#33A02C'
+                    />
                 </div>
             ) : (
                 <div className='w-full xl:grid lg:grid-cols-7 '>
