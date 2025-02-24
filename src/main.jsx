@@ -7,6 +7,8 @@ import { PersistGate } from 'redux-persist/integration/react';
 import routes from './routes/index.jsx'
 import { Provider } from 'react-redux'
 import { persistor, store } from './redux/app/store.js'
+import { SidebarProvider } from './context/SidebarContext.jsx';
+import { RingLoader } from 'react-spinners';
 
 
 createRoot(document.getElementById('root')).render(
@@ -15,13 +17,18 @@ createRoot(document.getElementById('root')).render(
   // </StrictMode>,
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
+      <SidebarProvider>
       <Suspense fallback={
-        <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-          <p className='text-4xl'>Loading ...</p>
+        <div className="flex justify-center dark:bg-dark-mode-bg items-center h-screen  text-white text-2xl">
+          <RingLoader 
+              size={60}
+              color='#33A02C'
+          />
         </div>
       }>
         <RouterProvider router={routes} />
       </Suspense>
+      </SidebarProvider>
     </PersistGate>
   </Provider>
 

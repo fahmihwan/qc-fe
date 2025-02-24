@@ -1,4 +1,6 @@
 import { IconAirPasangAbrasiSVG, IconBanjirSVG, IconCuacaEkstremSVG, IconErupsiGunungApiSVG, IconFasyenkesSVG, IconGempaBumiSVG, IconHilangSVG, IconKarhutlaSVG, IconKekeringanSVG, IconLukaSVG, IconMenderitaMengungsiSVG, IconMeninggalSVG, IconRumahIbadatSVG, IconRumahSVG, IconSatuanPendidikanSVG, IconTanahLongsorSVG, IconTsunamiSVG } from "./IconSvg"
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 const formatDate = (dateString) => {
     return new Intl.DateTimeFormat("id-ID", {
@@ -12,7 +14,7 @@ const SingleBencana = ({ icon, jlhKejadian, title }) => {
     return (
         <div className="flex flex-row align-middle">
             {icon}
-            <span className="text-green-custom text-base mr-[31px] ml-5">{jlhKejadian}</span>
+            <span className="text-green-custom text-base mr-[31px] min-w-7 ml-5 text-center">{jlhKejadian}</span>
             <span className="dark:text-white text-base">{title}</span>
         </div>
     )
@@ -48,8 +50,16 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
     const allZeroSummary = dataSummary.length < 1
 
     return (
-        <div className='grid grid-cols-3 mb-5'>
-            <div className='border rounded-[10px]  grid py-4 px-9 col-span-1 ml-5 sm:mr-5 p-2 justify-center dark:border-dark-border border-light-border'>
+        <div className='grid grid-cols-3 mb-5 pb-5 '>
+            <motion.div 
+                className='border rounded-[10px] overflow-ellipsis  grid py-4 px-9 col-span-1 ml-5 sm:mr-5 p-2 justify-center dark:border-dark-border border-light-border'
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.7}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+            >
                 <div className="mb-[30px]">
                     <div className='font-bold dark:text-white text-base text-center'>Jumlah Kejadian</div>
                     <div className='font-bold dark:text-white text-base text-center'>per Jenis Bencana</div>
@@ -70,10 +80,18 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                         <SingleBencana icon={<IconTsunamiSVG />} jlhKejadian={dataBencana.tsunami || 0} title={"Tsunami"} />
                     </div>
                 )}
-            </div>
+            </motion.div>
 
-            <div className='flex flex-col col-span-2 gap-4 '>
-                <div className="px-[115px] pt-5 pb-6 border rounded-[10px] ml-5 sm:mr-5 p-2 dark:border-dark-border border-light-border">
+            <div className='flex flex-col col-span-2 gap-4'>
+                <motion.div 
+                    className=" px-[115px] pt-5 pb-6 border rounded-[10px] ml-2 sm:mr-5 p-2 dark:border-dark-border border-light-border"
+                    variants={fadeIn("up", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{once: false, amount: 0.7}}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.95 }}
+                >
                     <div className="align-top">
                         <div className="text-center text-base font-bold dark:text-white">Dampak Bencana Alam</div>
                         <div className="text-center text-base dark:text-dark-gray-custom text-light-gray-custom">Periode {formatDate(startDate)} - {formatDate(endDate)}</div>
@@ -96,9 +114,17 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                             </div>
                         </div>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="px-[63px] pt-5 pb-6 border rounded-[10px] ml-5 sm:mr-5 p-2 dark:border-dark-border border-light-border">
+                <motion.div 
+                    className="px-[63px] pt-5 pb-6 border rounded-[10px] ml-2 sm:mr-5 p-2 dark:border-dark-border border-light-border"
+                    variants={fadeIn("up", 0.4)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{once: false, amount: 0.7}}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.95 }}
+                >
                     <div className="align-top text-center text-base font-bold dark:text-white mb-[13px]">Dampak Kerusakan Bencana</div>
 
                     {allZeroSummary ? (
@@ -111,7 +137,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                 <div className="flex flex-row gap-[8px] mr-[22px] items-center">
                                     <IconRumahSVG color={"#33A02C"}/>
                                     <div className="flex flex-col">
-                                        <div className="text-[25px] dark:text-white">{dataSummary.rumah_rusak_ringan || 0}</div>
+                                        <div className="text-[25px] text-green-custom">{dataSummary.rumah_rusak_ringan || 0}</div>
                                         <div className="text-base dark:text-white -mt-2">Rusak Ringan</div>
                                     </div>
                                 </div>
@@ -119,7 +145,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                 <div className="flex flex-row gap-[8px] mr-[22px] items-center">
                                     <IconRumahSVG color={"#F4BE37"}/>
                                     <div className="flex flex-col">
-                                        <div className="text-[25px] dark:text-white">{dataSummary.rumah_rusak_sedang || 0}</div>
+                                        <div className="text-[25px] text-green-custom">{dataSummary.rumah_rusak_sedang || 0}</div>
                                         <div className="text-base dark:text-white -mt-2">Rusak Sedang</div>
                                     </div>
                                 </div>
@@ -127,7 +153,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                 <div className="flex flex-row gap-[8px] mr-[22px] items-center">
                                     <IconRumahSVG color={"#E31A1C"}/>
                                     <div className="flex flex-col">
-                                        <div className="text-[25px] dark:text-white">{dataSummary.rumah_rusak_berat || 0}</div>
+                                        <div className="text-[25px] text-green-custom">{dataSummary.rumah_rusak_berat || 0}</div>
                                         <div className="text-base dark:text-white -mt-2">Rusak Berat</div>
                                     </div>
                                 </div>
@@ -135,7 +161,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
 
                             <div className="flex flex-col">
                                 <div className="font-bold text-base dark:text-white">Total Rusak</div>
-                                <div className="font-bold text-3xl dark:text-white">{totalRumahRusak}</div>
+                                <div className="font-bold text-3xl text-green-custom">{totalRumahRusak}</div>
                             </div>
                         </div>
                     )}
@@ -151,7 +177,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                     <div className="flex flex-row gap-[8px] mr-[22px] items-center  max-w-[150px] min-w-[150px]">
                                         <IconSatuanPendidikanSVG className={"min-w-[40px] min-h-[34px] -mt-5"} />
                                         <div className="flex flex-col">
-                                            <div className="text-[25px] dark:text-white">{dataSummary.pendidikan_rusak || 0}</div>
+                                            <div className="text-[25px] text-green-custom">{dataSummary.pendidikan_rusak || 0}</div>
                                             <div className="text-base dark:text-white -mt-2">Satuan Pendidikan</div>
                                         </div>
                                     </div>
@@ -159,7 +185,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                     <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
                                         <IconRumahIbadatSVG className={"min-w-[40px] min-h-[34px]"} />
                                         <div className="flex flex-col">
-                                            <div className="text-[25px] dark:text-white">{dataSummary.peribadatan_rusak || 0}</div>
+                                            <div className="text-[25px] text-green-custom">{dataSummary.peribadatan_rusak || 0}</div>
                                             <div className="text-base dark:text-white -mt-2">Rumah Ibadat</div>
                                         </div>
                                     </div>
@@ -167,7 +193,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                                     <div className="flex flex-row gap-[8px] mr-[22px] items-center max-w-[150px] min-w-[150px]">
                                         <IconFasyenkesSVG className={"min-w-[40px] min-h-[34px]"} />
                                         <div className="flex flex-col">
-                                            <div className="text-[25px] dark:text-white">{dataSummary.kesehatan_rusak || 0}</div>
+                                            <div className="text-[25px] text-green-custom">{dataSummary.kesehatan_rusak || 0}</div>
                                             <div className="text-base dark:text-white -mt-2">Fasyankes</div>
                                         </div>
                                     </div>
@@ -175,12 +201,12 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
 
                                 <div className="flex flex-col">
                                     <div className="font-bold text-base dark:text-white">Total Rusak</div>
-                                    <div className="font-bold text-3xl dark:text-white">{totalFasilitasRusak}</div>
+                                    <div className="font-bold text-3xl text-green-custom">{totalFasilitasRusak}</div>
                                 </div>
                             </>
                         )}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

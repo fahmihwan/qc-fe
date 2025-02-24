@@ -43,6 +43,11 @@ const IndonesiaMap = ({
             map: webMap,
             center: [117.148, -2.5489],
             zoom: 4,
+            constraints: {
+                minZoom: 2,
+                rotationEnabled: false, 
+                wrapAround180: true 
+            }
         });
     
         view.when(() => {
@@ -190,23 +195,39 @@ const IndonesiaMap = ({
             const navToggle = new NavigationToggle({ view });
             view.ui.add(navToggle, "top-left");
 
+            let lastHoveredProvince = null
+            let lastHoverEventTime = 0
+
             view.on("pointer-move", async (event) => {
                 if (!hoverable) return;
+
+                const now = performance.now()
+                if(now - lastHoverEventTime < 50) return
+                lastHoverEventTime = now
             
-                try {
-                    const hitTestResponse = await view.hitTest(event);
-                    const hoveredGraphic = hitTestResponse.results.find(
-                        (result) => result.graphic.layer === provinceLayer
-                    )?.graphic;
-            
-                    if (hoveredGraphic) {
-                        setHoveredProvince(hoveredGraphic.attributes.KODE_PROV);
-                    } else {
-                        setHoveredProvince(null);
+                requestAnimationFrame(async() => {
+                    try {
+                        const hitTestResponse = await view.hitTest(event);
+                        const hoveredGraphic = hitTestResponse.results.find(
+                            (result) => result.graphic.layer === provinceLayer
+                        )?.graphic;
+                
+                        if (hoveredGraphic) {
+                            const kodeProv = hoveredGraphic.attributes.KODE_PROV
+                            if(lastHoveredProvince !== kodeProv){
+                                lastHoveredProvince = kodeProv
+                                setHoveredProvince(kodeProv);   
+                            }
+                        } else {
+                            if(lastHoveredProvince !== null){
+                                lastHoveredProvince = null
+                                setHoveredProvince(null);   
+                            }
+                        }
+                    } catch (error) {
+                        console.error("Error saat hover peta:", error);
                     }
-                } catch (error) {
-                    console.error("Error saat hover peta:", error);
-                }
+                })
             });
             
             view.on("click", async (event) => {

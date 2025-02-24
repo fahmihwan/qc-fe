@@ -12,6 +12,7 @@ import SurveyDashboard from "../view/survey/SurveyDashboard";
 import QRcode from "../view/survey/QRcode";
 import PerumahanRakyat from "../view/perumahanRakyat/PerumahanRakyat";
 import GenerateSurvey from "../view/survey/GenerateSurvey";
+import LayoutAdmin from "../view/layout/LayoutAdmin";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -23,64 +24,25 @@ const routes = createBrowserRouter([
     {
         path: '/survey-masyarakat/:kodeqr',
         element: <PageSurvey />
+    },
+    {
+        element: <ProtectedRouteAuthenticated element={<LayoutAdmin />} />, // LayoutAdmin sebagai wrapper utama
+        children: [
+            { path: "/dashboard", element: <Dashboard /> },
+            { path: "/gempa", element: <Gempa /> },
+            { path: "/all-food-estate", element: <AllCategories /> },
+            { path: "/padi", element: <EachCategoryFoodEstate category="Padi" /> },
+            { path: "/jagung", element: <EachCategoryFoodEstate category="Jagung" /> },
+            { path: "/singkong", element: <EachCategoryFoodEstate category="Singkong" /> },
+            { path: "/kedelai", element: <EachCategoryFoodEstate category="Kedelai" /> },
+            { path: "/tebu", element: <EachCategoryFoodEstate category="Tebu" /> },
+            { path: "/all-bencana", element: <AllBencanaCategories /> },
+            { path: "/qrcode", element: <QRcode /> },
+            { path: "/data-hasil-survey", element: <SurveyDashboard /> },
+            { path: "/generate-survey", element: <GenerateSurvey /> },
+            { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
+        ]
+    }
+]);
 
-    },
-    {
-        path: "/dashboard",
-        element: <ProtectedRouteAuthenticated element={<Dashboard />} />
-    },
-    {
-        path: "/gempa",
-        element: <ProtectedRouteAuthenticated element={<Gempa />} />
-    },
-
-    {
-        path: "/all-food-estate",
-        element: <ProtectedRouteAuthenticated element={<AllCategories />} />
-    },
-    {
-        path: "/padi",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Padi"} />} />
-    },
-    {
-        path: "/jagung",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Jagung"} />} />
-    },
-    {
-        path: "/singkong",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Singkong"} />} />
-    },
-    {
-        path: "/kedelai",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Kedelai"} />} />
-    },
-    {
-        path: "/tebu",
-        element: <ProtectedRouteAuthenticated element={<EachCategoryFoodEstate category={"Tebu"} />} />
-    },
-
-    {
-        path: "/all-bencana",
-        element: <ProtectedRouteAuthenticated element={<AllBencanaCategories />} />
-    },
-    {
-        path: "/qrcode",
-        element: <ProtectedRouteAuthenticated element={<QRcode />} />
-    },
-    {
-        path: "/data-hasil-survey",
-        element: <ProtectedRouteAuthenticated element={<SurveyDashboard />} />
-    },
-    {
-        path: "/generate-survey",
-        element: <ProtectedRouteAuthenticated element={<GenerateSurvey />} />
-    },
-    {
-        path: "/perumahan-rakyat",
-        element: <ProtectedRouteAuthenticated element={<PerumahanRakyat />} />
-    },
-
-
-
-])
 export default routes

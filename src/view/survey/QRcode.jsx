@@ -7,6 +7,7 @@ import CreatableSelect from 'react-select/creatable';
 import QRCode from 'react-qr-code';
 import { deleteQrcode, getAllQrcode, storeQRcode } from '../../api/qrcode';
 import { InputReactSelectEl } from '../component/InputCompt';
+// import SidebarProvider from '../../context/SidebarContext'
 
 const QRcode = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -109,7 +110,8 @@ const QRcode = () => {
 
     // buat button submit 
     return (
-        <LayoutAdmin>
+
+        <>
             <div className='p-10'>
                 <div className='flex justify-between items-center mb-5'>
                     <h1 className='text-3xl text-white  font-bold'>QRcode Survey</h1>
@@ -162,19 +164,8 @@ const QRcode = () => {
                         ))}
 
                         {/* const host = window.location.host; */}
-
-
                     </div>
                 </div>
-
-
-
-
-
-
-
-
-
 
             </div>
             <CreateQRcode openModal={openModal} setOpenModal={setOpenModal}
@@ -191,7 +182,7 @@ const QRcode = () => {
                 handleSubmit={handleSubmit}
             />
 
-        </LayoutAdmin>
+        </>
     )
 }
 
@@ -350,9 +341,6 @@ const CreateQRcode = ({ openModal, setOpenModal,
                                 </button>
                             )
                         }
-
-
-
 
                     </div>
                 </div>
