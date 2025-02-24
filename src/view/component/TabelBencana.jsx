@@ -1,4 +1,6 @@
 import { IconAirPasangAbrasiSVG, IconBanjirSVG, IconCuacaEkstremSVG, IconErupsiGunungApiSVG, IconFasyenkesSVG, IconGempaBumiSVG, IconHilangSVG, IconKarhutlaSVG, IconKekeringanSVG, IconLukaSVG, IconMenderitaMengungsiSVG, IconMeninggalSVG, IconRumahIbadatSVG, IconRumahSVG, IconSatuanPendidikanSVG, IconTanahLongsorSVG, IconTsunamiSVG } from "./IconSvg"
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 const formatDate = (dateString) => {
     return new Intl.DateTimeFormat("id-ID", {
@@ -48,8 +50,16 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
     const allZeroSummary = dataSummary.length < 1
 
     return (
-        <div className='grid grid-cols-3 mb-5'>
-            <div className='border rounded-[10px]  grid py-4 px-9 col-span-1 ml-5 sm:mr-5 p-2 justify-center dark:border-dark-border border-light-border'>
+        <div className='grid grid-cols-3 mb-5 pb-5 '>
+            <motion.div 
+                className='border rounded-[10px] overflow-ellipsis  grid py-4 px-9 col-span-1 ml-5 sm:mr-5 p-2 justify-center dark:border-dark-border border-light-border'
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.7}}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+            >
                 <div className="mb-[30px]">
                     <div className='font-bold dark:text-white text-base text-center'>Jumlah Kejadian</div>
                     <div className='font-bold dark:text-white text-base text-center'>per Jenis Bencana</div>
@@ -70,10 +80,18 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                         <SingleBencana icon={<IconTsunamiSVG />} jlhKejadian={dataBencana.tsunami || 0} title={"Tsunami"} />
                     </div>
                 )}
-            </div>
+            </motion.div>
 
-            <div className='flex flex-col col-span-2 gap-4 '>
-                <div className="px-[115px] pt-5 pb-6 border rounded-[10px] ml-5 sm:mr-5 p-2 dark:border-dark-border border-light-border">
+            <div className='flex flex-col col-span-2 gap-4'>
+                <motion.div 
+                    className=" px-[115px] pt-5 pb-6 border rounded-[10px] ml-2 sm:mr-5 p-2 dark:border-dark-border border-light-border"
+                    variants={fadeIn("up", 0.2)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{once: false, amount: 0.7}}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.95 }}
+                >
                     <div className="align-top">
                         <div className="text-center text-base font-bold dark:text-white">Dampak Bencana Alam</div>
                         <div className="text-center text-base dark:text-dark-gray-custom text-light-gray-custom">Periode {formatDate(startDate)} - {formatDate(endDate)}</div>
@@ -96,9 +114,17 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                             </div>
                         </div>
                     )}
-                </div>
+                </motion.div>
 
-                <div className="px-[63px] pt-5 pb-6 border rounded-[10px] ml-5 sm:mr-5 p-2 dark:border-dark-border border-light-border">
+                <motion.div 
+                    className="px-[63px] pt-5 pb-6 border rounded-[10px] ml-2 sm:mr-5 p-2 dark:border-dark-border border-light-border"
+                    variants={fadeIn("up", 0.4)}
+                    initial="hidden"
+                    whileInView={"show"}
+                    viewport={{once: false, amount: 0.7}}
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.95 }}
+                >
                     <div className="align-top text-center text-base font-bold dark:text-white mb-[13px]">Dampak Kerusakan Bencana</div>
 
                     {allZeroSummary ? (
@@ -180,7 +206,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                             </>
                         )}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

@@ -12,6 +12,9 @@ import PieChartAllProvincesEachFoodEstate from '../component/allCharts/PieChartA
 import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
 
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
+
 const EachCategoryFoodEstate = ({ category }) => {
     const [isLoading, setIsLoading] = useState(true)
 
@@ -189,7 +192,13 @@ const EachCategoryFoodEstate = ({ category }) => {
                     <div className='col-span-12 lg:col-span-5 '>
 
                         {/* header */}
-                        <div className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
+                        <motion.div 
+                            className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg"
+                            variants={fadeIn("right", 0.3)}
+                            initial="hidden"
+                            whileInView={"show"}
+                            viewport={{once: false, amount: 0.5}}
+                        >
                             <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                                 <div className="rounded flex  items-">
                                     <div className="flex-col py-4 justify-center block lg:hidden items-center text-white">
@@ -206,20 +215,24 @@ const EachCategoryFoodEstate = ({ category }) => {
                                 <div className=" text-white flex items-center justify-end">
                                     <div className='flex flex-col items-center align-middle'>
                                         {isProvinceClicked &&
-                                            <button
+                                            <motion.button
                                                 onClick={resetSelection}
-                                                className="text-white w-36 lg:w-44 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                                className="w-44 text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
                                                 type="button"
+                                                variants={fadeIn("right", 0.3, true)}
+                                                initial="hidden"
+                                                whileInView={"show"}
+                                                viewport={{once: false, amount: 0.5}}
                                             >
                                                 <div className="items-center text-center w-full">
                                                     Seluruh Indonesia
                                                 </div>
-                                            </button>
+                                            </motion.button>
                                         }
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* <div className="relative border-b-[1px] px-6 dark:border-white flex items-center">
                             <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
@@ -232,72 +245,73 @@ const EachCategoryFoodEstate = ({ category }) => {
                             </div>
                         </div> */}
 
-                        <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                        <motion.div 
+                            className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'
+                            variants={fadeIn("right", 0.3)}
+                            initial="hidden"
+                            whileInView={"show"}
+                            viewport={{once: false, amount: 0.5}}
+                        >
                             <div className=' w-[100%] h-[500px]'>
                                 <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
                             </div>
-                        </div>
+                        </motion.div>
 
-                        {/* <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
-                            <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
-                                <Marquee>
-                                    <div className="flex gap-10 overflow-hidden">
-                                            {[...Array(5)].map((_, i) => (
-                                                <div key={i} className="flex whitespace-nowrap gap-10 w-max">
-                                                    <span className="text-green-custom text-xl">
-                                                        SELAMAT DATANG DI DASHBOARD 360
-                                                    </span>
-                                                    <span className="dark:text-white text-xl">|</span>
-                                                    <span className="text-red-custom text-xl">
-                                                        DASHBOARD MENYAJIKAN INFORMASI SEPUTAR FOOD ESTATE & BENCANA ALAM DI INDONESIA
-                                                    </span>
-                                                    <span className="dark:text-white text-xl">|</span>
-                                                    <span className="text-green-custom text-xl">
-                                                        KETAHANAN PANGAN INDONESIA
-                                                    </span>
-                                                    <span className="dark:text-white text-xl">|</span>
-                                                    <span className="text-red-custom text-xl">
-                                                        DATA TERBARU TERSEDIA
-                                                    </span>
-                                                    <span className="dark:text-white text-xl">|</span>
-                                                    <span className="text-green-custom text-xl">
-                                                        WASPADA DAN SIAP SIAGA
-                                                    </span>
-                                                    <span className="dark:text-white text-xl">|</span>
-                                                    <span className="text-red-custom text-xl">
-                                                        INFORMASI PENTING DI DASHBOARD 360
-                                                    </span>
-                                                    <span className="dark:text-white text-xl">|</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                </Marquee>
-                            </div>
-                        </div> */}
-
-                        <div className="overflow-hidden  flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 p-5 dark:bg-dark-mode-bg mx-auto">
+                        <motion.div 
+                            className="overflow-hidden  flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 p-5 dark:bg-dark-mode-bg mx-auto"
+                            variants={fadeIn("right", 0.3)}
+                            initial="hidden"
+                            whileInView={"show"}
+                            viewport={{once: false, amount: 0.5}}
+                        >
                             <div className='flex flex-row justify-between items-center'>
                                 <div className='dark:text-white font-bold text-2xl '>Data {category} di Seluruh Provinsi Tahun {selectedYear}</div>
                                 <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
                             </div>
                             <TableForAllProvincesEachFoodEstate data={tableData}/>
-                        </div>
+                        </motion.div>
                     </div>
                     {!isLoading && response && (
                         <>
-                            <div className='w-full xl:col-span-2'>
-                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                            <div className='w-full xl:col-span-2 overflow-hidden'>
+                                <motion.div 
+                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                    variants={fadeIn("left", 0.3)}
+                                    initial="hidden"
+                                    whileInView={"show"}
+                                    viewport={{once: false, amount: 0.5}}
+                                >
                                     <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
-                                </div>
-                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                </motion.div>
+                                <motion.div 
+                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                    variants={fadeIn("left", 0.3)}
+                                    initial="hidden"
+                                    whileInView={"show"}
+                                    viewport={{once: false, amount: 0.5}}
+                                >
                                     <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
-                                </div>
-                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                </motion.div>
+                                <motion.div 
+                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                    variants={fadeIn("left", 0.3)}
+                                    initial="hidden"
+                                    whileInView={"show"}
+                                    viewport={{once: false, amount: 0.5}}
+                                >
                                     <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
-                                </div>
-                                <div className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border'>
+                                </motion.div>
+                                <motion.div 
+                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                    variants={fadeIn("left", 0.3)}
+                                    initial="hidden"
+                                    whileInView={"show"}
+                                    viewport={{once: false, amount: 0.5}}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }} 
+                                >
                                     <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
-                                </div>
+                                </motion.div>
                             </div>
                         </>
                     )}

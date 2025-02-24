@@ -43,6 +43,11 @@ const IndonesiaMap = ({
             map: webMap,
             center: [117.148, -2.5489],
             zoom: 4,
+            constraints: {
+                minZoom: 2,
+                rotationEnabled: false, 
+                wrapAround180: true 
+            }
         });
     
         view.when(() => {

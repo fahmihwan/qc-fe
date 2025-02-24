@@ -64,6 +64,12 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"], // Ganti default sans-serif jadi Poppins
       },
+      screens: {
+        xs: '360px',
+        md_lg: '800px',
+        customXL: '1280px',
+        customTwoXL: '1536px',
+      }
     },
   },
   plugins: [

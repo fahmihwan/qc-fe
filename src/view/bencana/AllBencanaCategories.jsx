@@ -9,6 +9,9 @@ import { getAllBencana, getAllSummary } from '../../api/publicApi'
 import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
 
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
+
 const AllBencanaCategories = () => {
 
     const defaultStartDate = new Date(new Date().getFullYear(), 0, 1)
@@ -216,66 +219,106 @@ const AllBencanaCategories = () => {
                 </div>
             ) : (
                 <div className='w-full '>
-                    <div className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg">
-                        <div className='dark:text-white text-2xl font-bold text-center items-center mb-6 uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
-                        
+                    <motion.div 
+                        className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.7}}
+                    >
+                        <div className='dark:text-white text-2xl font-bold text-center items-center uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
+                    </motion.div>
+
+                    <motion.div 
+                        className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.7}}
+                    >
                         <div className='flex flex-row justify-between'>
-                            <div className='flex flex-row z-500 gap-4 items-center'>
+                            <div className='flex flex-row z-50 gap-4 items-center'>
                                 <div className='dark:text-white'> Dari </div>
-                                <Datepicker 
-                                    className='w-[296px]' 
-                                    language='id' 
-                                    theme={themeDatePicker}
-                                    datatype='yyyy-MM-dd'
-                                    value={startDate}
-                                    onChange={handleStartDateChange}
-                                    minDate={new Date(2008, 0, 1)}
-                                    maxDate={new Date()}
-                                />
+                                <motion.div
+                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{ scale: 1.05 }}
+                                >
+                                    <Datepicker 
+                                        className='w-[296px]' 
+                                        language='id' 
+                                        theme={themeDatePicker}
+                                        datatype='yyyy-MM-dd'
+                                        value={startDate}
+                                        onChange={handleStartDateChange}
+                                        minDate={new Date(2008, 0, 1)}
+                                        maxDate={new Date()}
+                                    />
+                                </motion.div>
                                 <div className='dark:text-white'> sampai </div>
-                                <Datepicker 
-                                    className='w-[296px]' 
-                                    language='id' 
-                                    theme={themeDatePicker}
-                                    datatype='yyyy-MM-DD'
-                                    value={endDate}
-                                    onChange={setEndDate}
-                                    minDate={startDate}
-                                    maxDate={new Date()}
-                                />
+                                <motion.div
+                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{ scale: 1.05 }}
+                                >
+                                    <Datepicker 
+                                        className='w-[296px]' 
+                                        language='id' 
+                                        theme={themeDatePicker}
+                                        datatype='yyyy-MM-DD'
+                                        value={endDate}
+                                        onChange={setEndDate}
+                                        minDate={startDate}
+                                        maxDate={new Date()}
+                                    />
+                                </motion.div>
                             </div>
                             <div className='flex flex-row gap-6'>
-                                <button
+                                <motion.button
                                     onClick={onDateChange}
-                                    className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800"
+                                    className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
                                     type="button"
+                                    whileTap={{ scale: 0.95 }}
+                                    whileHover={{ scale: 1.05 }}
                                 >
                                     <div className="items-center text-center text-sm">
                                         Tampilkan data
                                     </div>
-                                </button>
+                                </motion.button>
                                 {isProvinceClicked &&
-                                    <button
+                                    <motion.button
                                         onClick={resetSelection}
-                                        className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800"
+                                        className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
                                         type="button"
+                                        whileTap={{ scale: 0.95 }}
+                                        whileHover={{ scale: 1.05 }}
                                     >
                                         <div className="items-center text-center text-sm">
                                             Kembali ke Seluruh Indonesia
                                         </div>
-                                    </button>
+                                    </motion.button>
                                 }
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                    <motion.div 
+                        className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.7}}
+                    >
                         <div className=' w-[100%] h-[500px]'>
                             {IndonesiaMapMemoized}
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto">
+                    <motion.div 
+                        className="overflow-hidden mt-20  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.7}}
+                    >
                         <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
                             <Marquee>
                                 <div className="flex gap-10 overflow-hidden">
@@ -295,7 +338,7 @@ const AllBencanaCategories = () => {
                                     </div>
                             </Marquee>
                         </div>
-                    </div>
+                    </motion.div>
 
                     <TabelBencana dataBencana={dataBencana || {}} dataSummary={dataSummary || {}} startDate={fixedStartDate} endDate={fixedEndDate}/>
                 </div>

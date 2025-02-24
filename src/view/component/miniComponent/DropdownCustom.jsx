@@ -5,10 +5,10 @@ const DropdownCustom = ({ listDropDown, onSelect, isProvinceClicked }) => {
     const [selectedItem, setSelectedItem] = useState("Pilih Tahun");
 
     return (
-        <div className={`pb-5 items-center ${!isProvinceClicked ? 'mt-5':''}`}>
+        <div className={` items-center ${!isProvinceClicked ? '':''}`}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-white w-44 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="w-44 text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
                 type="button"
             >
                 <div className="flex flex-row justify-between items-center w-full">

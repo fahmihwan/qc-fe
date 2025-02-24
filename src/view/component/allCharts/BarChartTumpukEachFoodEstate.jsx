@@ -61,7 +61,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
         <>
             <div className="  px-[29px] py-[15px] h-[326px] flex flex-col">
                 <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-                <div className="min-h-28 flex flex-grow items-center justify-center">
+                <div className="w-72 min-h-28 flex flex-grow items-center justify-center">
                     {isDataEmpty ? (
                         <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                     ) : (

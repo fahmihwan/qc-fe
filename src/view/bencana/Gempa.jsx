@@ -11,6 +11,8 @@ import { useEffectGempa } from '../../hook/useEffectGempa'
 import { useParams } from 'react-router-dom'
 import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 const Gempa = () => {
     const [activeCategory, setActiveCategory] = useState("TERKINI")
@@ -91,7 +93,13 @@ const Gempa = () => {
                 : response.Infogempa.gempa[0]
         console.log('ini data detail card', dataDetail)
         return (
-            <div className='dark:border-white border-2 my-[30px] mx-20 py-[15px] w-[90%] px-4 rounded-[15px] grid grid-cols-4 items-stretch'>
+            <motion.div 
+                className='dark:border-white border-2 my-[30px] mx-20 py-[15px] w-[90%] px-4 rounded-[15px] grid grid-cols-4 items-stretch'
+                variants={fadeIn("up", 0.2)}
+                initial="hidden"
+                whileInView={"show"}
+                viewport={{once: false, amount: 0.7}}
+            >
                 <div className='col-span-1 border-r-[1px] dark:border-white'>
                     <div className='pr-[25px] py-[11px]'>
                         <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"} />
@@ -127,14 +135,16 @@ const Gempa = () => {
                         </div>
                     </div>
 
-                    <button
+                    <motion.button
                         className='w-[297px] row-span-1 rounded-[5px] bg-blue-custom mx-auto text-white '
                         onClick={() => handleOpenModal(dataDetail)}
+                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05 }}
                     >
                         Lihat Detail
-                    </button>
+                    </motion.button>
                 </div>
-            </div>
+            </motion.div>
         )
     }
 
@@ -163,9 +173,13 @@ const Gempa = () => {
                 >
                     <div className='flex flex-row justify-between px-5 py-[13px] items-center'>
                         <span className='dark:text-white font-bold text-sm'>Gempa Bumi {activeCategoryTitle}</span>
-                        <button onClick={() => handleCloseModal()}>
+                        <motion.button 
+                            onClick={() => handleCloseModal()}
+                            whileTap={{ scale: 0.95 }}
+                            whileHover={{ scale: 1.05 }}
+                        >
                             <IconXSVG />
-                        </button>
+                        </motion.button>
                     </div>
                     <div className='h-[1px] dark:bg-white bg-dark-mode'></div>
                     <div className='grid grid-cols-2 dark:bg-black'>
@@ -251,13 +265,25 @@ const Gempa = () => {
                 </div>
             ) : (
                 <div className='w-full min-h-screen'>
-                    <div className="overflow-x-hidden overflow-hidden flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg">
+                    <motion.div 
+                        className="overflow-x-hidden overflow-hidden flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.7}}
+                    >
                         <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
                         <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
                         <div className='text-green-custom text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
-                    </div>
+                    </motion.div>
 
-                    <div className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'>
+                    <motion.div 
+                        className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: false, amount: 0.7}}
+                    >
                         {categories.map((category) => {
                             return (
                                 <button
@@ -273,7 +299,7 @@ const Gempa = () => {
                                         font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
                                         ${activeCategory === category.id
                                             ? 'bg-blue-custom dark:bg-blue-custom text-white'
-                                            : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover'
+                                            : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover transition-colors duration-300 ease-in-out'
                                         }
                                         `}
                                 >
@@ -281,7 +307,7 @@ const Gempa = () => {
                                 </button>
                             )
                         })}
-                    </div>
+                    </motion.div>
 
                     <CardSatuGempa />
 
