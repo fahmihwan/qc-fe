@@ -1,0 +1,439 @@
+{
+  "listFormSurvey" : [
+    {
+      "title": "Statistik Luas Panen",
+      "kode":"foodestate-padi-statistikluaspanen",
+      "logoPosition": "right",
+      "pages": [
+        {
+          "name": "page2",
+          "title": "Statistik Luas Lahan",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question1",
+              "title": "Total luas lahan padi dalam satuan hektar (ha)",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question2",
+              "title": "Status Kepemilikan Lahan",
+              "isRequired": true,
+              "choices": [
+                "Milik Pribadi",
+                "Sewa",
+                "Hak Guna Usaha (HGU)",
+                "Milik Pemerintah"
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "question3",
+              "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+              "isRequired": true,
+              "labelTrue": "Iya",
+              "labelFalse": "Tidak"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question4",
+              "title": "Jenis lahan yang digunakan untuk padi",
+              "isRequired": true,
+              "choices": [
+                "Sawah irigasi teknis",
+                "Sawah tadah hujan",
+                "Lahan rawa/pasang surut",
+                "Lahan kering/tegalan"
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "opsi-1",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "opsi-2",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'opsi-1'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_menurun",
+              "visibleIf": "{question5} = 'opsi-2'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question6",
+              "title": "Apakah ada peningkatan atau penurunan (tes tidak)",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "opsi-1",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "opsi-2",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question6-Inputopsi-ya_meningkat",
+              "visibleIf": "{question6} = 'opsi-1'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question6-Inputopsi-ya_menurun",
+              "visibleIf": "{question6} = 'opsi-2'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question7",
+              "title": "Jika ada perubahan, apa penyebabnya?",
+              "isRequired": true,
+              "choices": [
+                "Alih fungsi lahan ke non-pertanian",
+                "Perluasan lahan tanam",
+                "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll)"
+              ],
+              "showOtherItem": true,
+              "otherText": "Faktor lainnya"
+            },
+            {
+              "type": "text",
+              "name": "question8",
+              "title": "Besar hektar perubahan Lahan Setahun Terakhir (ha) ?",
+              "inputType": "number"
+            },
+            {
+              "type": "text",
+              "name": "question9"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question10",
+              "choices": [
+                "Item 1",
+                "Item 2",
+                "Item 3"
+              ]
+            },
+            {
+              "type": "checkbox",
+              "name": "question11",
+              "choices": [
+                "Item 1",
+                "Item 2",
+                "Item 3"
+              ]
+            },
+            {
+              "type": "dropdown",
+              "name": "question12",
+              "choices": [
+                "Item 1",
+                "Item 2",
+                "Item 3"
+              ]
+            },
+            {
+              "type": "tagbox",
+              "name": "question13",
+              "choices": [
+                "Item 1",
+                "Item 2",
+                "Item 3"
+              ]
+            },
+            {
+              "type": "boolean",
+              "name": "question14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Statistik Luas Panen",
+      "kode":"foodestate-padi-statistikluaspanen",
+      "logoPosition": "right",
+      "pages": [
+        {
+          "name": "page1",
+          "title": "Informasi Lokasi",
+          "elements": [
+            {
+              "no":1,
+              "type": "text",
+              "name": "question1",
+              "title": "Nama Desa/ Kelurahan",
+              "isRequired": true
+            },
+            {
+              "no":2,
+              "type": "text",
+              "name": "question2",
+              "title": "Alamat Lengkap",
+              "isRequired": true
+            },
+            {
+              "no":3,
+              "type": "text",
+              "name": "question3",
+              "title": "RT",
+              "isRequired": true
+            },
+            {
+              "no":4,
+              "type": "text",
+              "name": "question4",
+              "title": "RW",
+              "isRequired": true
+            },
+            {
+              "no":5,
+              "type": "text",
+              "name": "question5",
+              "title": "Kode Pos",
+              "isRequired": true
+            },
+            {
+              "no":6,
+              "type": "text",
+              "name": "question6",
+              "title": "Nama Kabupaten/Kota",
+              "isRequired": true
+            },
+            {
+              "no":7,
+              "type": "text",
+              "name": "question7",
+              "title": "Nama Provinsi",
+              "isRequired": true
+            },
+            {
+              "no":8,
+              "type": "text",
+              "name": "question8",
+              "title": "Koordinat GPS (Opsional)"
+            }
+          ]
+        },
+        {
+          "name": "page2",
+          "title": "Statistik Luas Lahan",
+          "elements": [
+            {
+              "no":9,
+              "type": "text",
+              "name": "question9",
+              "title": "Total luas lahan padi dalam satuan hektar (ha)",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "no":10,
+              "type": "radiogroup",
+              "name": "question10",
+              "title": "Status Kepemilikan Lahan",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Milik Pribadi",
+                  "text": "Milik Pribadi"
+                },
+                {
+                  "value": "Sewa",
+                  "text": "Sewa"
+                },
+                {
+                  "value": "Hak Guna Usaha (HGU)",
+                  "text": "Hak Guna Usaha (HGU)"
+                },
+                {
+                  "value": "Milik Pemerintah",
+                  "text": "Milik Pemerintah"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "no":11,
+              "type": "boolean",
+              "name": "question11",
+              "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+              "isRequired": true,
+              "labelTrue": "Iya",
+              "labelFalse": "Tidak"
+            },
+            {
+              "no":12,
+              "type": "radiogroup",
+              "name": "question12",
+              "title": "Jenis lahan yang digunakan untuk padi",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Sawah irigasi teknis",
+                  "text": "Sawah irigasi teknis"
+                },
+                {
+                  "value": "Sawah tadah hujan",
+                  "text": "Sawah tadah hujan"
+                },
+                {
+                  "value": "Lahan rawa/pasang surut",
+                  "text": "Lahan rawa/pasang surut"
+                },
+                {
+                  "value": "Lahan kering/tegalan",
+                  "text": "Lahan kering/tegalan"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "no":13,
+              "type": "radiogroup",
+              "name": "question13",
+              "title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "opsi-1",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "opsi-2",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question13-Inputopsi-ya_meningkat",
+              "visibleIf": "{question13} = 'opsi-1'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question13-Inputopsi-ya_menurun",
+              "visibleIf": "{question13} = 'opsi-2'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            
+            {
+              "no":14,
+              "type": "radiogroup",
+              "name": "question14",
+              "title": "Apakah ada peningkatan atau penurunan (tes tidak)",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "opsi-1",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "opsi-2",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question14-Inputopsi-ya_meningkat",
+              "visibleIf": "{question14} = 'opsi-1'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question14-Inputopsi-ya_menurun",
+              "visibleIf": "{question14} = 'opsi-2'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            
+            {
+              "no":15,
+              "type": "radiogroup",
+              "name": "question16",
+              "title": "Jika ada perubahan, apa penyebabnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Alih fungsi lahan ke non-pertanian",
+                  "text": "Alih fungsi lahan ke non-pertanian"
+                },
+                {
+                  "value": "Perluasan lahan tanam",
+                  "text": "Perluasan lahan tanam"
+                },
+                {
+                  "value": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll)",
+                  "text": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll)"
+                }
+              ],
+              "showOtherItem": true,
+              "otherText": "Faktor lainnya"
+            },
+
+            {
+              "no":16,
+              "type": "text",
+              "name": "question17",
+              "title": "Besar hektar perubahan Lahan Setahun Terakhir (ha) ?",
+              "inputType": "number"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
