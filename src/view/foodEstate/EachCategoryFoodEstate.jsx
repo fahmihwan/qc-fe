@@ -44,6 +44,9 @@ const EachCategoryFoodEstate = ({ category }) => {
 
     useEffect(() => {
         if(category) {
+            setIsProvinceClicked(false)
+            setSelectedProvinceCode('')
+            setSelectedProvinceName('')
             fetchData(category, null).then((res) => {
                 console.log(res.data)
                 setDataLuasPanenToParse(formatChartData(res, 'Luas Panen (ha)'))

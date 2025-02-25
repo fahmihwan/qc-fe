@@ -79,7 +79,16 @@ const BarChartEachFoodEstate = ({ title, data, provinceName = null}) => {
     
     return (
         <div className="px-[29px] py-[15px] h-[326px] flex flex-col">
-            <div className="dark:text-white font-bold text-xl mb-[10px]">{title} {provinceName}</div>
+            <div className="dark:text-white font-bold text-xl mb-[10px]">
+                {
+                    !provinceName && title === 'Produktivitas (ku/ha)' 
+                    ? 'Rata-Rata '
+                    : !provinceName 
+                    ? 'Total '
+                    : ''
+                }
+                {title} {provinceName}
+            </div>
             <div className="min-h-28 flex flex-grow items-center justify-center">
                 {data.datasets[0].data.length > 0 && !allZero ? (
                     <BarChart data={data} title={title}/>
