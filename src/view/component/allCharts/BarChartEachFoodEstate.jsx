@@ -11,7 +11,7 @@ const BarChart = ({ data, title}) => {
     console.log('min data', minData)
 
     const range = maxData - minData;
-    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 10000 : Math.ceil(range / 5 / 100) * 10;
+    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 1000 : Math.ceil(range / 5 / 100) * 10;
     console.log('step size', stepSize)
 
     const options = {
