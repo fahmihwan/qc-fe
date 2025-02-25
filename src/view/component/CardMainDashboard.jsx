@@ -142,7 +142,7 @@ const SingleCard = ({ singleData }) => {
                     {Object.entries(singleData.data).map(([key, value], index) => (
                         <div className="mb-5" key={index}>
                             <h5 className="dark:text-white capitalize font-bold text-base">{key.replace(/Dan/g, " &").replace(/([A-Z])/g, ' $1')}</h5>
-                            <span className="text-green-custom">{value == null ? "0" : formatCurrency(value)}</span>
+                            <span className="text-green-custom">{value == null ? formatCurrency(0) : formatCurrency(value)}</span>
                         </div>
                     ))}
                 </div>

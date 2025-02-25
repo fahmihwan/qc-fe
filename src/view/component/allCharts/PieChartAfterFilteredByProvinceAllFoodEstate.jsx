@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import { formatCurrency } from "../../../utils/generateUtil";
 
 const PieChart = ({ data, title }) => {
     const chartRef = useRef(null);
@@ -30,11 +31,11 @@ const PieChart = ({ data, title }) => {
                             selectedData.Singkong,
                         ],
                         backgroundColor: [
-                            "rgba(178, 223, 138, 1)",
-                            "rgba(244, 190, 55, 1)",
-                            "rgba(15, 44, 64, 1)",
-                            "rgba(138, 28, 114, 1)",
-                            "rgba(21, 93, 33, 1)",
+                            'rgba(227, 26, 28, 1)',  // Padi
+                            'rgba(255, 127, 0, 1)',   // Jagung
+                            'rgba(244, 190, 55, 1)',     // Singkong
+                            'rgba(146, 255, 23, 1)',     // Kedelai
+                            'rgba(33, 107, 214, 1)'    // Tebu
                         ],
                         borderWidth: 1,
                     },
@@ -62,9 +63,12 @@ const PieChart = ({ data, title }) => {
                     tooltip: {
                         callbacks: {
                             label: function (tooltipItem) {
-                                let value = tooltipItem.raw.toLocaleString();
+                                let value = formatCurrency(tooltipItem.raw);
                                 return `${tooltipItem.label}: ${value} ha`;
                             },
+                            title: function(tooltipItem){
+                                return `${title}`
+                            }
                         },
                     },
                     datalabels: {
@@ -78,7 +82,7 @@ const PieChart = ({ data, title }) => {
                         },
                         anchor: "center",
                         align: "center",
-                        formatter: (value) => `${value}`
+                        formatter: (value) => `${formatCurrency(value)}`
                     }  
                 },
             },
@@ -97,7 +101,7 @@ const PieChart = ({ data, title }) => {
 const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year }) => {
     // const getYear = new Date(data.data.startDate).getFullYear()
     const allZeroData = data.length < 1
-    
+     
     return (
         <>
             <div className="px-[29px] py-[15px] h-[336px] flex flex-col">

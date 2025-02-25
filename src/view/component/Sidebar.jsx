@@ -39,13 +39,13 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                         <li style={{ marginBottom: "20px" }}>
                             <Link
                                 to={d?.link}
-                                className={`flex items-center border border-black dark:border-white p-2 text-gray-900 
+                                className={`flex flex-row gap-3 items-center border border-black dark:border-white p-2 
                                 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group
-                                ${location.pathname === d?.link ? "bg-gray-hover dark:bg-gray-hover": ""} `}
+                                ${location.pathname === d?.link ? "bg-gray-hover text-white hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"} `}
                                 onClick={() => toggleDropdown(null)}
                             >
                                 {d?.icon}
-                                <span className="ml-3 text-sm">{d?.title}</span>
+                                <span className="text-sm">{d?.title}</span>
                             </Link>
                         </li>
                     ) : (
@@ -86,9 +86,9 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                                     <li key={index} className={`${index === 0 ? "mt-2" : ""}`}>
                                         <Link
                                             to={x.link}
-                                            className={`flex flex-row gap-3 items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 
+                                            className={`flex flex-row gap-3 items-center p-2 transition duration-75 rounded-lg ml-8 
                                             group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-                                            ${location.pathname === x.link ? "bg-gray-hover dark:bg-gray-hover" : ""}`}
+                                            ${location.pathname === x.link ? "bg-gray-200 hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"}`}
                                             onClick={(e) => e.stopPropagation()}
                                         >
                                             <span>{x?.icon}</span>

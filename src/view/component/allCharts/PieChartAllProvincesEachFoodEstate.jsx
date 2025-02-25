@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react"
 import Chart from "chart.js/auto";
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { formatCurrency } from "../../../utils/generateUtil";
+import provinceColors from '../../../data/colorMappingEachProvince.json'
 
 Chart.register(ChartDataLabels)
 
@@ -8,19 +10,12 @@ const PieChart = ({ data, title }) => {
     const chartRef = useRef(null)
     const chartInstance = useRef(null)
     const [legendItems, setLegendItems] = useState([])
-
-    const getColorForProvince = (provinceName) => {
-        let hash = 0;
-        for (let i = 0; i < provinceName.length; i++) {
-            hash = provinceName.charCodeAt(i) + ((hash << 5) - hash);
-        }
     
-        const r = ((hash >> 3) & 0xff) % 130 + 70; 
-        const g = ((hash >> 5) & 0xff) % 130 + 70;
-        const b = ((hash >> 7) & 0xff) % 130 + 70;
+    const getColorForProvince = (provinsiId) => {
+        const province = provinceColors.find(p => p.provinsi_id === provinsiId);
+        return province ? province.color : "rgb(192, 192, 192)"; // Default abu-abu jika tidak ditemukan
+    };
     
-        return `rgb(${r}, ${g}, ${b})`;
-    };    
 
     useEffect(() => {
         console.log("ini data", data)
@@ -35,16 +30,17 @@ const PieChart = ({ data, title }) => {
         console.log("ini selected key", selectedKey)
 
         const formattedData = data.map((item) => ({
+            provinsi_id: item.provinsi_id,
             nama_provinsi: item.nama_provinsi,
-            value: isNaN(parseFloat(item[selectedKey])) ? 0 : parseFloat(item[selectedKey])
+            value: isNaN(parseFloat(item[selectedKey])) ? 0 : parseFloat(item[selectedKey]),
         }))
-        // console.log("ini formatted data: ", formattedData)
 
         const totalValue = formattedData.reduce((sum, item) => sum + (isNaN(item.value) ? 0 : item.value), 0);
         // console.log("ini totalValue", totalValue)
 
         const sortedData = formattedData
             .map((item) => ({
+                provinsi_id: item.provinsi_id,
                 nama_provinsi: item.nama_provinsi,
                 persentase: (item.value / totalValue) * 100
             }))
@@ -52,7 +48,7 @@ const PieChart = ({ data, title }) => {
         
         console.log("ini sorted data", sortedData)    
 
-        const backgroundColors =  sortedData.map((item) => getColorForProvince(item.nama_provinsi));
+        const backgroundColors =  sortedData.map((item) => getColorForProvince(item.provinsi_id));
         console.log("ini generateColors", backgroundColors)
 
         setLegendItems((prevItems) => {
@@ -87,7 +83,7 @@ const PieChart = ({ data, title }) => {
                         callbacks: {
                             label: function(tooltipItem) {
                                 let value = parseFloat(tooltipItem.raw) || 0;
-                                return `${tooltipItem.label}: ${value}%`
+                                return `${tooltipItem.label}: ${formatCurrency(value)}%`
                             },
                             title: function(tooltipItem){
                                 return `${title}`
@@ -105,7 +101,7 @@ const PieChart = ({ data, title }) => {
                         },
                         anchor: "center",
                         align: "center",
-                        formatter: (value) => `${value}%`
+                        formatter: (value) => `${formatCurrency(value)}%`
                     }
                     
                 }

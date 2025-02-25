@@ -130,11 +130,11 @@ const AllCategories = () => {
 
     const crops = ["Padi", "Jagung", "Singkong", "Kedelai", "Tebu"];
     const colors = [
-        'rgba(178, 223, 138, 1)',  // Padi
-        'rgba(244, 190, 55, 1)',   // Jagung
-        'rgba(21, 93, 33, 1)',     // Singkong
-        'rgba(15, 44, 64, 1)',     // Kedelai
-        'rgba(138, 28, 114, 1)'    // Tebu
+        'rgba(227, 26, 28, 1)',  // Padi
+        'rgba(255, 127, 0, 1)',   // Jagung
+        'rgba(244, 190, 55, 1)',     // Singkong
+        'rgba(146, 255, 23, 1)',     // Kedelai
+        'rgba(33, 107, 214, 1)'    // Tebu
     ];
 
     const labels = responseSideBarChart ? responseSideBarChart.map(item => item.year) : [];
@@ -199,8 +199,6 @@ const AllCategories = () => {
                             viewport={{once: true, amount: 0.5}}
                         >
                             <div className='flex flex-row justify-between items-center'>
-                                <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
-                                
                                 <AnimatePresence>
                                     {isProvinceClicked ?
                                             <motion.button
@@ -218,6 +216,7 @@ const AllCategories = () => {
                                         <div className='w-44'></div>
                                     }
                                 </AnimatePresence>
+                                <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
                             </div>
                         </motion.div>
                         <motion.div 
@@ -234,7 +233,7 @@ const AllCategories = () => {
 
                         {!isProvinceClicked &&
                             <motion.div 
-                                className='grid md:grid-cols-2 ml-5 sm:mr-5  mt-5 dark:bg-dark-mode-bg'
+                                className='grid md:grid-cols-2 ml-5 sm:mr-5 mb-5  mt-5 dark:bg-dark-mode-bg'
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}

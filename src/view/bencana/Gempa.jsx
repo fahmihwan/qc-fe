@@ -306,7 +306,7 @@ const Gempa = () => {
                                             font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
                                             ${activeCategory === category.id
                                                 ? 'bg-blue-custom dark:bg-blue-custom text-white'
-                                                : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover transition-colors duration-300 ease-in-out'
+                                                : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover hover:text-white transition-colors duration-300 ease-in-out'
                                             }
                                             `}
                                     >

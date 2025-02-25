@@ -8,6 +8,7 @@ import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 // import { provinsiData } from "../../data/38provinsi";
 import provinsiJson from '../../data/38provinsi.json'
+import provinceColors from '../../data/colorMappingEachProvince.json'
 import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol";
 
 const IndonesiaMap = ({ 
@@ -19,6 +20,7 @@ const IndonesiaMap = ({
     hoverable = true,
     earthquakeData = [],
     onEarthquakePointClicked,
+    isProvinceColored = false
 }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
@@ -89,9 +91,10 @@ const IndonesiaMap = ({
                     };
     
                     const defaultSymbol = new SimpleFillSymbol({
-                        color: [0, 0, 255, 0.2],
-                        outline: { color: [0, 0, 150], width: 1 },
+                        color: [0, 0, 255, 0],
+                        outline: { color: [0, 0, 150], width: 0.2 },
                     });
+                    console.log("ini defaultSymbol", defaultSymbol)
     
                     const graphic = new Graphic({
                         geometry: polygon,
@@ -283,7 +286,13 @@ const IndonesiaMap = ({
                 return;
             }
 
+            const provinceColorMap = new Map(
+                provinceColors.map(prov => [prov.provinsi_id.toString(), prov.color])
+            );
+
             graphicsLayer.graphics.forEach((graphic) => {
+                const kodeProv = graphic.attributes?.KODE_PROV?.toString();
+
                 if (graphic.attributes?.KODE_PROV === selectedProvince) {
                     graphic.symbol = new SimpleFillSymbol({
                         color: [0, 0, 255, 0.5],
@@ -295,7 +304,19 @@ const IndonesiaMap = ({
                         outline: { color: [0, 0, 150], width: 1 },
                     });
                 } else {
-                    graphic.symbol = new SimpleFillSymbol({
+                    const rgbString = provinceColorMap.get(kodeProv) || "rgb(0, 0, 255)";
+                    const [r, g, b] = rgbString.match(/\d+/g).map(Number);
+                    isProvinceColored && !isProvinceClicked
+                    ? graphic.symbol = new SimpleFillSymbol({
+                        color: [r, g, b, 0.3],
+                        outline: { color: [r, g, b], width: 0.2 },
+                    })
+                    : isProvinceColored && isProvinceClicked
+                    ? graphic.symbol = new SimpleFillSymbol({
+                        color: [0, 0, 255, 0],
+                        outline: { color: [0, 0, 150], width: 0.2 },
+                    })
+                    : graphic.symbol = new SimpleFillSymbol({
                         color: [0, 0, 255, 0],
                         outline: { color: [0, 0, 150], width: 0.2 },
                     });

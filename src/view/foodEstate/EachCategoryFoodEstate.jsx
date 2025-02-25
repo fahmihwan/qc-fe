@@ -222,7 +222,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                                 variants={fadeIn("right", 0.3, true)}
                                                 initial="hidden"
                                                 whileInView={"show"}
-                                                viewport={{once: false, amount: 0.5}}
+                                                viewport={{once: true, amount: 0.5}}
                                             >
                                                 <div className="items-center text-center w-full">
                                                     Seluruh Indonesia
@@ -253,7 +253,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             viewport={{once: true, amount: 0.5}}
                         >
                             <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true} />
                             </div>
                         </motion.div>
 

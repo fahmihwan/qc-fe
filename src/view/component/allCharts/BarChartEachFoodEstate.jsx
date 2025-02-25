@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
+import { formatCurrency } from "../../../utils/generateUtil";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend)
 
@@ -10,7 +11,7 @@ const BarChart = ({ data, title}) => {
     console.log('min data', minData)
 
     const range = maxData - minData;
-    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 100000 : Math.ceil(range / 5 / 100) * 10;
+    const stepSize = title == "Luas Panen (ha)" ? Math.ceil(range / 5 / 800000) * 10000 : Math.ceil(range / 5 / 100) * 10;
     console.log('step size', stepSize)
 
     const options = {
@@ -27,7 +28,7 @@ const BarChart = ({ data, title}) => {
             tooltip: {
                 enabled: true,
                 callbacks: {
-                    label: (tooltipItem) => `Luas Panen: ${tooltipItem.raw.toLocaleString()}`
+                    label: (tooltipItem) => `${title ? title : ''}: ${formatCurrency(tooltipItem.raw)}`
                 }
             },
             datalabels: {
@@ -47,14 +48,19 @@ const BarChart = ({ data, title}) => {
                 beginAtZero: true,
                 min: 0,
                 suggestedMin: minData - stepSize,
-                suggestedMax: maxData + stepSize,
+                maxData: maxData - stepSize,
                 ticks: {
                     color: "#A3A3A3",
                     stepSize: stepSize,
-                    callback: (value) => `${value.toLocaleString()}`
+                    callback: (value) => `${formatCurrency(value)}`
                 },
                 grid: {
-                    color: "rgba(255, 255, 255, 0.1)"
+                    color: '#CCCCCC',
+                    borderColor: '#CCCCCC',
+                    drawBorder: true
+                },
+                border:{
+                    color: '#cccccc'
                 }
             }
         }
@@ -66,12 +72,17 @@ const BarChart = ({ data, title}) => {
 
 const BarChartEachFoodEstate = ({ title, data, provinceName = null}) => {
     console.log('judul yg diterima', provinceName)
+    
+    const allZero = data.datasets[0].data.every(item => 
+        parseFloat(item ?? 0) === 0
+    )
+    
     return (
         <div className="px-[29px] py-[15px] h-[326px] flex flex-col">
             <div className="dark:text-white font-bold text-xl mb-[10px]">{title} {provinceName}</div>
             <div className="min-h-28 flex flex-grow items-center justify-center">
-                {data.datasets[0].data.length > 0 ? (
-                    <BarChart data={data} />
+                {data.datasets[0].data.length > 0 && !allZero ? (
+                    <BarChart data={data} title={title}/>
                 ) : (
                     <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                 )}
