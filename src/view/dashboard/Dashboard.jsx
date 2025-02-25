@@ -69,13 +69,13 @@ const Dashboard = () => {
                     />
                 </div>
             ) : (
-                <div className=' min-h-screen overflow-hidden'>
+                <div className=' min-h-screen'>
                     <motion.div 
                         className="overflow-hidden  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 mr-5 mt-5 px-5 dark:bg-dark-mode-bg mx-auto"
                         variants={fadeIn("left", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <motion.div 
                             className='block items-center mx-auto py-5'
@@ -118,21 +118,21 @@ const Dashboard = () => {
                     </motion.div>
 
                     <motion.div 
-                        className="w-full flex justify-center py-5 bg-[url('/assets/img/background.png')] bg-contain"
+                        className="w-full flex justify-center pt-5 pb-6 bg-[url('/assets/img/background.png')] bg-contain"
                         variants={fadeIn("right", 0.4)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.5}}
+                        viewport={{once: true, amount: 0.5}}
                     >
                         <CardMainDashboard allDataFoodEstate={response} />
                     </motion.div>
 
                     <motion.div 
                         className='border rounded-[10px] ml-5 sm:mr-5 p-2 mb-5 flex justify-center dark:border-dark-border border-light-border'
-                        variants={fadeIn("right", 0.2)}
+                        variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className=' w-[100%] h-[500px]'>
                             <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />

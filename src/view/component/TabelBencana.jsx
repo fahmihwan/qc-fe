@@ -56,7 +56,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
+                viewport={{once: true, amount: 0.7}}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >

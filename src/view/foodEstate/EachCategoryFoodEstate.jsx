@@ -197,7 +197,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{once: false, amount: 0.5}}
+                            viewport={{once: true, amount: 0.5}}
                         >
                             <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
                                 <div className="rounded flex  items-">
@@ -250,7 +250,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{once: false, amount: 0.5}}
+                            viewport={{once: true, amount: 0.5}}
                         >
                             <div className=' w-[100%] h-[500px]'>
                                 <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
@@ -262,7 +262,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{once: false, amount: 0.5}}
+                            viewport={{once: true, amount: 0.5}}
                         >
                             <div className='flex flex-row justify-between items-center'>
                                 <div className='dark:text-white font-bold text-2xl '>Data {category} di Seluruh Provinsi Tahun {selectedYear}</div>
@@ -279,7 +279,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
-                                    viewport={{once: false, amount: 0.5}}
+                                    viewport={{once: true, amount: 0.5}}
                                 >
                                     <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                 </motion.div>
@@ -288,7 +288,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
-                                    viewport={{once: false, amount: 0.5}}
+                                    viewport={{once: true, amount: 0.5}}
                                 >
                                     <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                 </motion.div>
@@ -297,7 +297,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
-                                    viewport={{once: false, amount: 0.5}}
+                                    viewport={{once: true, amount: 0.5}}
                                 >
                                     <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
                                 </motion.div>
@@ -306,7 +306,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
-                                    viewport={{once: false, amount: 0.5}}
+                                    viewport={{once: true, amount: 0.5}}
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }} 
                                 >

@@ -4,6 +4,8 @@ import LayoutAdmin from "../layout/LayoutAdmin";
 import { useEffect, useState } from "react";
 import { RingLoader } from "react-spinners";
 // import SidebarProvider from '../../context/SidebarContext'
+import { AnimatePresence, motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 const PerumahanRakyat = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -23,7 +25,13 @@ const PerumahanRakyat = () => {
                 </div>
             ) : (
                 <div className="w-full min-h-[calc(100vh-69px)] bg-[url('/assets/img/background.png')] bg-contain flex justify-center items-center">
-                    <div className="border-[3px] flex flex-col items-center border-light-border rounded-[15px] dark:bg-dark-mode-bg dark:border-dark-border py-[50px] px-[140px]">
+                    <motion.div 
+                        className="border-[3px] flex flex-col items-center border-light-border rounded-[15px] dark:bg-dark-mode-bg dark:border-dark-border py-[50px] px-[140px]"
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: true, amount: 0.7}}
+                    >
                         <div className="h-[107px] w-[107px]">
                             <IconWarningSVG />
                         </div>
@@ -42,7 +50,7 @@ const PerumahanRakyat = () => {
                                 KEMBALI KE DASHBOARD
                             </div>
                         </Link>
-                    </div>
+                    </motion.div>
                 </div>
             )}
         </>

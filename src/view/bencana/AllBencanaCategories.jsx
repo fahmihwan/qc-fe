@@ -224,7 +224,7 @@ const AllBencanaCategories = () => {
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className='dark:text-white text-2xl font-bold text-center items-center uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
                     </motion.div>
@@ -234,7 +234,7 @@ const AllBencanaCategories = () => {
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className='flex flex-row justify-between'>
                             <div className='flex flex-row z-50 gap-4 items-center'>
@@ -305,7 +305,7 @@ const AllBencanaCategories = () => {
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className=' w-[100%] h-[500px]'>
                             {IndonesiaMapMemoized}
@@ -313,11 +313,11 @@ const AllBencanaCategories = () => {
                     </motion.div>
 
                     <motion.div 
-                        className="overflow-hidden mt-20  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
+                        className="overflow-hidden mt-6 flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
                             <Marquee>

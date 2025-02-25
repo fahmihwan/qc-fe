@@ -173,7 +173,7 @@ const AllCategories = () => {
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{once: false, amount: 0.5}}
+                            viewport={{once: true, amount: 0.5}}
                         >
                             <div className="grid grid-cols-3 gap-4 justify-center  lg:py-5  items-center w-full ">
                                 <div className=" rounded  items-centers ">
@@ -196,7 +196,7 @@ const AllCategories = () => {
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{once: false, amount: 0.5}}
+                            viewport={{once: true, amount: 0.5}}
                         >
                             <div className='flex flex-row justify-between items-center'>
                                 <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
@@ -225,7 +225,7 @@ const AllCategories = () => {
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
-                            viewport={{once: false, amount: 0.5}}
+                            viewport={{once: true, amount: 0.5}}
                         >
                             <div className=' w-[100%] h-[500px]'>
                                 <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
@@ -238,7 +238,7 @@ const AllCategories = () => {
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{once: false, amount: 0.5}}
+                                viewport={{once: true, amount: 0.5}}
                             >
                                 <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px]  mr-5'>
                                     <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/>
@@ -258,7 +258,7 @@ const AllCategories = () => {
                                 variants={fadeIn("left", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{once: false, amount: 0.5}}
+                                viewport={{once: true, amount: 0.5}}
                             >
                                 <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
                             </motion.div>
@@ -267,7 +267,7 @@ const AllCategories = () => {
                                 variants={fadeIn("left", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{once: false, amount: 0.5}}
+                                viewport={{once: true, amount: 0.5}}
                             >
                                 <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
                             </motion.div>
@@ -278,7 +278,7 @@ const AllCategories = () => {
                                 variants={fadeIn("left", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{once: false, amount: 0.5}}
+                                viewport={{once: true, amount: 0.5}}
                             >
                                 <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen} />
                             </motion.div>
@@ -287,7 +287,7 @@ const AllCategories = () => {
                                 variants={fadeIn("left", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
-                                viewport={{once: false, amount: 0.5}}
+                                viewport={{once: true, amount: 0.5}}
                             >
                                 <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} />
                             </motion.div>
