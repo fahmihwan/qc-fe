@@ -15,89 +15,95 @@ import { getDetailQRcode } from "../../../api/qrcode";
 
 
 function SurveyComponent() {
-    // http://localhost:5173/survey-masyarakat?kodeqr=ea0a37f7-23da-4586-9422-5f8b76bfa6e4
+
     const { kodeqr } = useParams()
 
     const [surveyJson, setSurveyJson] = useState({})
 
 
-    useEffect(() => {
-
-        getDetailQRcode(kodeqr).then((res) => {
-            let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == res.data[0].kode_topik)
-            if (getJson.length == 0) {
-                alert('survey tidak ada')
-            }
-            setSurveyJson(getJson[0]);
-        })
-
-    }, [kodeqr])
-
-
-
-    // let informasiLokasi = {
-    //     "name": "page1",
-    //     "title": "Informasi Lokasi",
-    //     "elements": [
-    //         {
-    //             "type": "text",
-    //             "name": "nama_desa_kelurahan",
-    //             "title": "Nama Desa/ Kelurahan",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "alamat_lengkap",
-    //             "title": "Alamat Lengkap",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "rt",
-    //             "title": "RT",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "rw",
-    //             "title": "RW",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "Kode_Pos",
-    //             "title": "Kode Pos",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "Kab_kota",
-    //             "title": "Nama Kabupaten/Kota",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "prov",
-    //             "title": "Nama Provinsi",
-    //             "isRequired": true
-    //         },
-    //         {
-    //             "type": "text",
-    //             "name": "gps",
-    //             "title": "Koordinat GPS (Opsional)"
-    //         }
-    //     ]
-    // }
-
     // useEffect(() => {
-    //     let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == 'foodestate-tebu-statistikluaspanen')
+    //     getDetailQRcode(kodeqr).then((res) => {
+    //         let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == res.data[0].kode_topik)
+    //         if (getJson.length == 0) {
+    //             alert('survey tidak ada')
+    //         }
+    //         setSurveyJson(getJson[0]);
+    //     })
+    // }, [kodeqr])
 
-    //     if (getJson.length == 0) {
-    //         alert('pertanyaan survey FE tidak ada')
-    //         return false
-    //     }
-    //     setSurveyJson(getJson[0]);
-    // }, [])
+
+
+
+
+    let informasiLokasi = {
+        "name": "page1",
+        "title": "Informasi Lokasi",
+        "elements": [
+            {
+                "type": "dropdown",
+                "name": "province_id",
+                "title": "Nama Provinsi",
+                "isRequired": true,
+                "choicesByUrl": {
+                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json",
+                    "valueName": "id",
+                    "titleName": "name"
+                }
+            }, {
+                "type": "dropdown",
+                "name": "regency_id",
+                "title": "Nama Kabupaten/Kota",
+                "isRequired": true,
+                "choicesByUrl": {
+                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/regencies/{province_id}.json",
+                    "valueName": "id",
+                    "titleName": "name"
+                }
+            },
+            {
+                "type": "dropdown",
+                "name": "district_id",
+                "isRequired": true,
+                "title": "Nama Kecamatan",
+                "choicesByUrl": {
+                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/districts/{regency_id}.json",
+                    "valueName": "id",
+                    "titleName": "name"
+                }
+            },
+            {
+                "type": "dropdown",
+                "name": "village_id",
+                "isRequired": true,
+                "title": "Nama Desa",
+                "choicesByUrl": {
+                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/villages/{district_id}.json",
+                    "valueName": "id",
+                    "titleName": "name"
+                }
+            },
+            {
+                "type": "text",
+                "name": "gps",
+                "title": "Koordinat GPS (Opsional)"
+            }
+        ]
+    }
+
+
+
+    useEffect(() => {
+        let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == 'foodestate-tebu-statistikluaspanen')
+
+        if (getJson.length == 0) {
+            alert('pertanyaan survey FE tidak ada')
+            return false
+        }
+        getJson[0].pages = [informasiLokasi, ...getJson[0].pages]
+
+        console.log(getJson[0]);
+        setSurveyJson(getJson[0]);
+    }, [])
 
     const survey = new Model(surveyJson);
 
@@ -250,6 +256,9 @@ function SurveyComponent() {
         //     alert('terdapat kesalahan mapping survey')
         // }
     });
+
+
+
     return (<Survey model={survey} />);
 }
 

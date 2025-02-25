@@ -13,6 +13,8 @@ import QRcode from "../view/survey/QRcode";
 import PerumahanRakyat from "../view/perumahanRakyat/PerumahanRakyat";
 import GenerateSurvey from "../view/survey/GenerateSurvey";
 import LayoutAdmin from "../view/layout/LayoutAdmin";
+import DashboardSurvey from "../view/survey/DashboardSurvey";
+import DetailDashboardSurvey from "../view/survey/DetailDashboardSurvey";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -39,6 +41,8 @@ const routes = createBrowserRouter([
             { path: "/all-bencana", element: <AllBencanaCategories /> },
             { path: "/qrcode", element: <QRcode /> },
             { path: "/data-hasil-survey", element: <SurveyDashboard /> },
+            { path: "/dashboard-hasil-survey", element: <DashboardSurvey /> },
+            { path: "/dashboard-hasil-survey/:detail", element: <DetailDashboardSurvey /> },
             { path: "/generate-survey", element: <GenerateSurvey /> },
             { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
         ]

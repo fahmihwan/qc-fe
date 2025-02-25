@@ -1,0 +1,85 @@
+{
+    "data": [
+        {
+            "title":"Luas Panen",
+            "img": "/assets/icon/1.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },{
+            "title":"Produktivitas",
+            "img": "/assets/icon/2.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Produksi",
+            "img": "/assets/icon/3.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Luas Irigasi",
+            "img": "/assets/icon/4.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Jumlah Pupuk",
+            "img": "/assets/icon/5.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Presentase Hama",
+            "img": "/assets/icon/6.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Lahan Kosong",
+            "img": "/assets/icon/7.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Ketersediaan Komoditas",
+            "img": "/assets/icon/8.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Realisasi Pembangungan Lahan",
+            "img": "/assets/icon/9.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+
+        {
+            "title":"Realisasi Distribusi Pangan",
+            "img": "/assets/icon/10.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Efektivitas Program Bantuan Pangan",
+            "img": "/assets/icon/11.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Perubahan Pola Konsumsi Masyarakat",
+            "img": "/assets/icon/12.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Keberlanjutan Produksi Pangan",
+            "img": "/assets/icon/13.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Pemanfaatan Lahan di Sekitar Batas Hutan",
+            "img": "/assets/icon/14.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Potensi Konflik di Sekitar Batas Hutan",
+            "img": "/assets/icon/15.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        },
+        {
+            "title":"Pelestarian dan Keberlanjutan Batas Hutan",
+            "img": "/assets/icon/16.png",
+            "url":"/dashboard-hasil-survey/tes-detail"
+        }
+
+    ]
+}

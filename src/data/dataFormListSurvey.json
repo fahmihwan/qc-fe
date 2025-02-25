@@ -2,7 +2,7 @@
   "listFormSurvey" : [
     {
       "no":1,
-      "title": "Statistik Luas Panen",
+      "title": "Statistik Luas Panen (Padi)",
       "kode":"foodestate-padi-statistikluaspanen",
       "logoPosition": "right",
       "pages": [
@@ -137,8 +137,548 @@
     },
     {
       "no":2,
-      "title": "Statistik Luas Panen",
+      "title": "Statistik Luas Panen (Singkong)",
+      "kode":"foodestate-singkong-statistikluaspanen",
+      "logoPosition": "right",
+      "pages": [
+        {
+          "name": "page2",
+          "title": "Statistik Luas Lahan",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question1",
+              "title": "Total luas lahan padi dalam satuan hektar (ha)",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question2",
+              "title": "Status Kepemilikan Lahan",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Milik Pribadi",
+                  "text": "Milik Pribadi"
+                },
+                {
+                  "value": "Sewa",
+                  "text": "Sewa"
+                },
+                {
+                  "value": "Hak Guna Usaha (HGU)",
+                  "text": "Hak Guna Usaha (HGU)"
+                },
+                {
+                  "value": "Milik Pemerintah",
+                  "text": "Milik Pemerintah"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "question3",
+              "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+              "isRequired": true,
+              "labelTrue": "Iya",
+              "labelFalse": "Tidak"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question4",
+              "title": "Jenis lahan yang digunakan untuk tebu",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Sawah irigasi teknis",
+                  "text": "Sawah irigasi teknis"
+                },
+                {
+                  "value": "Sawah tadah hujan",
+                  "text": "Sawah tadah hujan"
+                },
+                {
+                  "value": "Lahan rawa/pasang surut",
+                  "text": "Lahan rawa/pasang surut"
+                },
+                {
+                  "value": "Lahan kering/tegalan",
+                  "text": "Lahan kering/tegalan"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Ya (meningkat)",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "Ya (menurun)",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (meningkat)'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (menurun)'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question6",
+              "title": "Jika ada perubahan, apa penyebabnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Alih fungsi lahan ke non-pertanian",
+                  "text": "Alih fungsi lahan ke non-pertanian"
+                },
+                {
+                  "value": "Perluasan lahan tanam",
+                  "text": "Perluasan lahan tanam"
+                },
+                {
+                  "value": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)",
+                  "text": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "no":3,
+      "title": "Statistik Luas Panen (Tebu)",
       "kode":"foodestate-tebu-statistikluaspanen",
+      "logoPosition": "right",
+      "pages": [
+        {
+          "name": "page2",
+          "title": "Statistik Luas Lahan",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question1",
+              "title": "Total luas lahan padi dalam satuan hektar (ha)",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question2",
+              "title": "Status Kepemilikan Lahan",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Milik Pribadi",
+                  "text": "Milik Pribadi"
+                },
+                {
+                  "value": "Sewa",
+                  "text": "Sewa"
+                },
+                {
+                  "value": "Hak Guna Usaha (HGU)",
+                  "text": "Hak Guna Usaha (HGU)"
+                },
+                {
+                  "value": "Milik Pemerintah",
+                  "text": "Milik Pemerintah"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "question3",
+              "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+              "isRequired": true,
+              "labelTrue": "Iya",
+              "labelFalse": "Tidak"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question4",
+              "title": "Jenis lahan yang digunakan untuk tebu",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Sawah irigasi teknis",
+                  "text": "Sawah irigasi teknis"
+                },
+                {
+                  "value": "Sawah tadah hujan",
+                  "text": "Sawah tadah hujan"
+                },
+                {
+                  "value": "Lahan rawa/pasang surut",
+                  "text": "Lahan rawa/pasang surut"
+                },
+                {
+                  "value": "Lahan kering/tegalan",
+                  "text": "Lahan kering/tegalan"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Ya (meningkat)",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "Ya (menurun)",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (meningkat)'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (menurun)'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question6",
+              "title": "Jika ada perubahan, apa penyebabnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Alih fungsi lahan ke non-pertanian",
+                  "text": "Alih fungsi lahan ke non-pertanian"
+                },
+                {
+                  "value": "Perluasan lahan tanam",
+                  "text": "Perluasan lahan tanam"
+                },
+                {
+                  "value": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)",
+                  "text": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "no":4,
+      "title": "Statistik Luas Panen (Kedelai)",
+      "kode":"foodestate-kedelai-statistikluaspanen",
+      "logoPosition": "right",
+      "pages": [
+        {
+          "name": "page2",
+          "title": "Statistik Luas Lahan",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question1",
+              "title": "Total luas lahan padi dalam satuan hektar (ha)",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question2",
+              "title": "Status Kepemilikan Lahan",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Milik Pribadi",
+                  "text": "Milik Pribadi"
+                },
+                {
+                  "value": "Sewa",
+                  "text": "Sewa"
+                },
+                {
+                  "value": "Hak Guna Usaha (HGU)",
+                  "text": "Hak Guna Usaha (HGU)"
+                },
+                {
+                  "value": "Milik Pemerintah",
+                  "text": "Milik Pemerintah"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "question3",
+              "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+              "isRequired": true,
+              "labelTrue": "Iya",
+              "labelFalse": "Tidak"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question4",
+              "title": "Jenis lahan yang digunakan untuk tebu",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Sawah irigasi teknis",
+                  "text": "Sawah irigasi teknis"
+                },
+                {
+                  "value": "Sawah tadah hujan",
+                  "text": "Sawah tadah hujan"
+                },
+                {
+                  "value": "Lahan rawa/pasang surut",
+                  "text": "Lahan rawa/pasang surut"
+                },
+                {
+                  "value": "Lahan kering/tegalan",
+                  "text": "Lahan kering/tegalan"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Ya (meningkat)",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "Ya (menurun)",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (meningkat)'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (menurun)'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question6",
+              "title": "Jika ada perubahan, apa penyebabnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Alih fungsi lahan ke non-pertanian",
+                  "text": "Alih fungsi lahan ke non-pertanian"
+                },
+                {
+                  "value": "Perluasan lahan tanam",
+                  "text": "Perluasan lahan tanam"
+                },
+                {
+                  "value": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)",
+                  "text": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "no":5,
+      "title": "Statistik Luas Panen (Jagung)",
+      "kode":"foodestate-jagung-statistikluaspanen",
+      "logoPosition": "right",
+      "pages": [
+        {
+          "name": "page2",
+          "title": "Statistik Luas Lahan",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question1",
+              "title": "Total luas lahan padi dalam satuan hektar (ha)",
+              "isRequired": true,
+              "inputType": "number"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question2",
+              "title": "Status Kepemilikan Lahan",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Milik Pribadi",
+                  "text": "Milik Pribadi"
+                },
+                {
+                  "value": "Sewa",
+                  "text": "Sewa"
+                },
+                {
+                  "value": "Hak Guna Usaha (HGU)",
+                  "text": "Hak Guna Usaha (HGU)"
+                },
+                {
+                  "value": "Milik Pemerintah",
+                  "text": "Milik Pemerintah"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "boolean",
+              "name": "question3",
+              "title": "Apakah lahan ini termasuk dalam program Food Estate?",
+              "isRequired": true,
+              "labelTrue": "Iya",
+              "labelFalse": "Tidak"
+            },
+            {
+              "type": "radiogroup",
+              "name": "question4",
+              "title": "Jenis lahan yang digunakan untuk tebu",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Sawah irigasi teknis",
+                  "text": "Sawah irigasi teknis"
+                },
+                {
+                  "value": "Sawah tadah hujan",
+                  "text": "Sawah tadah hujan"
+                },
+                {
+                  "value": "Lahan rawa/pasang surut",
+                  "text": "Lahan rawa/pasang surut"
+                },
+                {
+                  "value": "Lahan kering/tegalan",
+                  "text": "Lahan kering/tegalan"
+                }
+              ],
+              "showOtherItem": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question5",
+              "title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Ya (meningkat)",
+                  "text": "Ya (meningkat)"
+                },
+                {
+                  "value": "Ya (menurun)",
+                  "text": "Ya (menurun)"
+                },
+                {
+                  "value": "tidak",
+                  "text": "Tidak"
+                }
+              ],
+              "separateSpecialChoices": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (meningkat)'",
+              "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "text",
+              "name": "question5-Inputopsi-ya_meningkat",
+              "visibleIf": "{question5} = 'Ya (menurun)'",
+              "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+              "isRequired": true
+            },
+            {
+              "type": "radiogroup",
+              "name": "question6",
+              "title": "Jika ada perubahan, apa penyebabnya?",
+              "isRequired": true,
+              "choices": [
+                {
+                  "value": "Alih fungsi lahan ke non-pertanian",
+                  "text": "Alih fungsi lahan ke non-pertanian"
+                },
+                {
+                  "value": "Perluasan lahan tanam",
+                  "text": "Perluasan lahan tanam"
+                },
+                {
+                  "value": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)",
+                  "text": "Penyusutan akibat bencana alam (banjir, kekeringan, longsor, dll.)"
+                }
+              ],
+              "showOtherItem": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "no":6,
+      "title": "Statistik Luas Panen (Sawit)",
+      "kode":"foodestate-sawit-statistikluaspanen",
       "logoPosition": "right",
       "pages": [
         {

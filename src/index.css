@@ -36,3 +36,44 @@
     }
   }
   
+/* #surveyVizPanel {
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#surveyVizPanel .visualization-element {
+    font-size: 16px;
+    color: #333;
+    background-color: red;
+} */
+
+
+
+/* 
+.sa-question__content {
+  background: linear-gradient(to top, #1d1e24, #2e2e30) !important;
+} */
+
+
+
+
+.dashboardContainer {
+  background: #1f2420;
+  color: white;
+}
+.sa-question__title .sa-question__title--draggable {
+  color: red !important;
+
+
+}
+.sa-question__content {
+  /* background: gray !important; */
+  /* background: linear-gradient(to top, #1d1e24, #2e2e30) !important; */
+  color: white;
+}
+.sa-question__select-wrapper .sa-question__select  {
+  background: gray !important;
+  border-color: gray !important;
+  color: white;
+}

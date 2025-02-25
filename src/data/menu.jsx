@@ -88,6 +88,12 @@ const menu = [
                 link: '/data-hasil-survey',
                 icon: <IconDashboardSVG />
             },
+            {
+                title: 'Dashboard Survey',
+                link: '/dashboard-hasil-survey',
+                icon: <IconDashboardSVG />
+            },
+
 
 
         ],

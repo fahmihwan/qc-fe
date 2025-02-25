@@ -4,7 +4,7 @@ import SurveyComponent from '../component/listSurvey/SurveyComponent'
 const PageSurvey = () => {
     return (
         <>
-            <div className="sm:hidden">
+            {/* <div className="sm:hidden">
                 <label htmlFor="tabs" className="sr-only">
                     Select your country
                 </label>
@@ -38,7 +38,7 @@ const PageSurvey = () => {
                 </li>
 
             </ul>
-
+ */}
 
 
             <SurveyComponent />
