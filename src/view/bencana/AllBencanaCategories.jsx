@@ -238,7 +238,7 @@ const AllBencanaCategories = () => {
                     >
                         <div className='flex flex-row justify-between'>
                             <div className='flex flex-row z-50 gap-4 items-center'>
-                                <div className='dark:text-white'> Dari </div>
+                                <div className='dark:text-white'> Dari : </div>
                                 <motion.div
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
@@ -254,7 +254,7 @@ const AllBencanaCategories = () => {
                                         maxDate={new Date()}
                                     />
                                 </motion.div>
-                                <div className='dark:text-white'> sampai </div>
+                                <div className='dark:text-white'> Sampai : </div>
                                 <motion.div
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}

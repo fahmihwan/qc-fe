@@ -41,7 +41,7 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                                 to={d?.link}
                                 className={`flex flex-row gap-3 items-center border border-black dark:border-white p-2 
                                 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group
-                                ${location.pathname === d?.link ? "bg-gray-hover text-white hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"} `}
+                                ${location.pathname === d.link ? "bg-gray-200 hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"} `}
                                 onClick={() => toggleDropdown(null)}
                             >
                                 {d?.icon}

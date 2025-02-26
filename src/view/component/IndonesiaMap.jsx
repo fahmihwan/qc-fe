@@ -353,7 +353,7 @@ const IndonesiaMap = ({
     }, [selectedProvince, hoveredProvince, mapView]);
 
     return (
-        <div ref={mapRef} className="w-full h-full rounded-[10px] border border-dark-border dark:border-light-border overflow-hidden">
+        <div ref={mapRef} className="w-full h-full rounded-[10px] border border-light-border dark:border-dark-border overflow-hidden">
             {tooltipPosition.visible && (
                 <div
                     className="absolute bg-gray-100 p-2 rounded shadow-md text-sm"

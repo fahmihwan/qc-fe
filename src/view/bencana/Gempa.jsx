@@ -168,7 +168,7 @@ const Gempa = () => {
                 exit={{ opacity: 0, transition: { duration: 0.3 } }}
             >
                 <motion.div
-                    className='bg-white dark:bg-dark-mode lg:max-w-[60%] shadow-lg transform transition-all duration-300 opacity-100 scale-100'
+                    className='bg-white rounded-[15px] dark:bg-dark-mode-bg lg:max-w-[60%] shadow-lg transform transition-all duration-300 opacity-100 scale-100'
                     onClick={(e) => e.stopPropagation()}
                     variants={fadeIn("up", 0.1)}
                     initial="hidden"
@@ -187,11 +187,11 @@ const Gempa = () => {
                         </motion.button>
                     </div>
                     <div className='h-[1px] dark:bg-white bg-dark-mode'></div>
-                    <div className='grid grid-cols-2 dark:bg-black'>
-                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode'>
+                    <div className='grid grid-cols-2 '>
+                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode-bg'>
                             <img src={shakeMapCreator()} className='w-full' />
                         </div>
-                        <div className='p-6'>
+                        <div className='p-6 dark:bg-dark-mode-v2'>
                             <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"} />
                             <div className='mt-[10px] dark:text-white text-xs'>{dataDetail.Tanggal}, {dataDetail.Jam}</div>
                             <div className='mt-5 dark:text-white text-base font-bold'>{dataDetail.Wilayah}</div>
@@ -317,7 +317,16 @@ const Gempa = () => {
                         </div>
 
                         <CardSatuGempa />
+                    
+                    
+                    </motion.div>
 
+                    <motion.div
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: true, amount: 0.7}}
+                    >
                         <div className=' ml-5 sm:mr-5 flex justify-center'>
                             <div className=' w-[100%] h-[500px] relative'>
                                 <div id="legend-container" className="absolute bottom-5 left-[13px] bg-white dark:text-white dark:bg-dark-mode-bg p-6 border border-gray-300 shadow-md rounded-lg z-20">
@@ -357,10 +366,8 @@ const Gempa = () => {
                                 />
                             </div>
                         </div>
-
                     
                     </motion.div>
-
                     <div className='mx-[82px] pb-9'>
                         {activeCategory !== "TERKINI" &&
                             <div className='dark:text-white font-bold text-[32px] mt-[111px] mb-[30px]'>
