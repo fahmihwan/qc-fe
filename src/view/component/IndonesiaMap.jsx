@@ -294,6 +294,12 @@ const IndonesiaMap = ({
     }, [clickable, hoverable, earthquakeData, isProvinceClicked]);    
     
 
+    useEffect(() => {
+        return () => {
+            setTooltipPosition((prev) => ({ ...prev, visible: false }));
+        };
+    }, []);
+    
     // **Efek perubahan warna ketika provinsi dipilih**
     useEffect(() => {
         if (!mapView) return;
@@ -354,21 +360,24 @@ const IndonesiaMap = ({
 
     return (
         <div ref={mapRef} className="w-full h-full rounded-[10px] border border-light-border dark:border-dark-border overflow-hidden">
+            <div>
             {tooltipPosition.visible && (
                 <div
-                    className="absolute bg-gray-100 p-2 rounded shadow-md text-sm"
+                    key={tooltipContent}
+                    className="absolute bg-gray-100 p-2 rounded shadow-md text-sm transition-opacity duration-200"
                     style={{
                         left: `${tooltipPosition.x}px`,
                         top: `${tooltipPosition.y}px`,
                         transform: "translate(-10%, -10%)",
-                        // pointerEvents: "none",
                         whiteSpace: "nowrap",
                         position: "absolute"
                     }}
                 >
                     {tooltipContent}
                 </div>
+            
             )}
+            </div>
         </div>
     );
 };
