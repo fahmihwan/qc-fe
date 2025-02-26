@@ -128,14 +128,14 @@ const Dashboard = () => {
                     </motion.div>
 
                     <motion.div 
-                        className='border rounded-[10px] ml-5 sm:mr-5 p-2 mb-5 flex justify-center dark:border-dark-border border-light-border'
+                        className='ml-5 sm:mr-5 mb-5 flex justify-center'
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.7}}
                     >
                         <div className=' w-[100%] h-[500px]'>
-                            <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} />
+                            <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} clickable={false} />
                         </div>
                     </motion.div>
                 </div >)

@@ -1,34 +1,41 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { formatCurrency } from "../../../utils/generateUtil"
 
 const SingleHeatMapTable = ({ data, dataBe, titleBe }) => {
     const items = Object.entries(data).filter(([key]) => key !== "satuan")
-    let maxValueLuasPanen = 0
-    let maxValueProduktivitas = 0
+    const [maxValueLuasPanen, setMaxValueLuasPanen] = useState(1)
+    const [maxValueProduktivitas, setMaxValueProduktivitas] = useState(1)
 
-    const getColor = (value, max = maxValueLuasPanen) => {
-        const lightness = 30 + (1 - value / max) * 50;
-        return `hsl(100, 50%, ${lightness}%)`;
+    useEffect(() => {
+        if(dataBe && dataBe.length > 0){
+            setMaxValueLuasPanen(Math.max(...dataBe
+                .filter((item) => item.nama_subdata == "Luas Panen")
+                .map((item) => parseFloat(item.total))
+            ))
+            setMaxValueProduktivitas(Math.max(...dataBe
+                .filter((item) => item.nama_subdata == "Produktivitas")
+                .map((item) => parseFloat(item.total))
+            ))
+        }
+    }, [dataBe])
+
+    const getColor = (value, max = maxValueLuasPanen, type) => {
+        if (type == "produktivitas") {
+            // if (value === 0) return `hsl(283, 100%, 90%)`; 
+        
+            const lightness = 90 - (parseFloat(value) / max) * 40; // dari 90 turun ke 50
+            return `hsl(283, 100%, ${Math.max(lightness, 50)}%)`;
+        }
+        // if (value === 0) return `hsl(100, 50%, 90%)`;
+    
+        const lightness = 90 - (parseFloat(value) / max) * 40; // dari 90 turun ke 50
+        return `hsl(203, 100%, ${Math.max(lightness, 50)}%)`;
     }
 
     const getColorText = (value, max = maxValueLuasPanen) => {
         const lightness = value > (max / 2) ? 100 : 10.6
         return `hsl(0, 0%, ${lightness}%)`;
     }
-
-    if(dataBe) {
-        maxValueLuasPanen = Math.max(...dataBe
-            .filter((item) => item.nama_subdata == "Luas Panen")
-            .map((item) => parseFloat(item.total))
-        )
-
-        maxValueProduktivitas = Math.max(...dataBe
-            .filter((item) => item.nama_subdata == "Produktivitas")
-            .map((item) => parseFloat(item.total))
-        )
-        
-    }
-
     // console.log(dataBe);
 
 
@@ -52,8 +59,15 @@ const SingleHeatMapTable = ({ data, dataBe, titleBe }) => {
                                             <div 
                                                 className="p-2"
                                                 style={{ 
-                                                    backgroundColor: getColor(d?.total, titleBe == "Luas Panen" ? maxValueLuasPanen : maxValueProduktivitas), 
-                                                    color: getColorText(d?.total, titleBe == "Luas Panen" ? maxValueLuasPanen : maxValueProduktivitas)
+                                                    backgroundColor: getColor(
+                                                        d?.total, 
+                                                        titleBe == "Luas Panen" ? maxValueLuasPanen : maxValueProduktivitas, 
+                                                        titleBe == "Luas Panen" ? "produktivitas" : "luas_panen"
+                                                    ), 
+                                                    color: getColorText(
+                                                        d?.total, 
+                                                        titleBe == "Luas Panen" ? maxValueLuasPanen : maxValueProduktivitas
+                                                    )
                                                 }}
                                             >
                                                 {formatCurrency(d?.total)}

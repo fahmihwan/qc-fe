@@ -28,15 +28,15 @@ const TableForAllProvincesEachFoodEstate = ({data}) => {
 
   const getColor = (value, max = maxValueLuasPanen, type) => {
     if (type == "produktivitas") {
-        if (value === 0) return `hsl(42, 96%, 80%)`; 
+        // if (value === 0) return `hsl(283, 100%, 90%)`; 
     
-        const lightness = 78 - (value / max) * 40;
-        return `hsl(42, 96%, ${Math.min(Math.max(lightness, 30), 80)}%)`;
+        const lightness = 90 - (parseFloat(value) / max) * 40; // dari 90 turun ke 50
+        return `hsl(283, 100%, ${Math.max(lightness, 50)}%)`;
     }
-    if (value === 0) return `hsl(100, 50%, 30%)`; 
+    // if (value === 0) return `hsl(100, 50%, 90%)`;
 
-    const lightness = 30 + (1 - value / max) * 50;
-    return `hsl(100, 50%, ${Math.max(lightness, 30)}%)`; 
+    const lightness = 90 - (parseFloat(value) / max) * 40; // dari 90 turun ke 50
+    return `hsl(203, 100%, ${Math.max(lightness, 50)}%)`;
   }
 
 

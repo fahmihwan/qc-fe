@@ -301,7 +301,7 @@ const AllBencanaCategories = () => {
                     </motion.div>
 
                     <motion.div 
-                        className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'
+                        className='ml-5 sm:mr-5 flex justify-center'
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}

@@ -220,14 +220,14 @@ const AllCategories = () => {
                             </div>
                         </motion.div>
                         <motion.div 
-                            className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'
+                            className='ml-5 sm:mr-5 flex justify-center'
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
                             viewport={{once: true, amount: 0.5}}
                         >
                             <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} />
+                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true}/>
                             </div>
                         </motion.div>
 

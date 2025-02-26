@@ -318,29 +318,29 @@ const Gempa = () => {
 
                         <CardSatuGempa />
 
-                        <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
+                        <div className=' ml-5 sm:mr-5 flex justify-center'>
                             <div className=' w-[100%] h-[500px] relative'>
-                                <div id="legend-container" className="absolute bottom-8 left-4 bg-white bg-opacity-50 p-4 border border-gray-300 shadow-md rounded-lg z-20">
-                                    <h3 className="text-lg font-medium mb-4">Kedalaman</h3>
+                                <div id="legend-container" className="absolute bottom-5 left-[13px] bg-white dark:text-white dark:bg-dark-mode-bg p-6 border border-gray-300 shadow-md rounded-lg z-20">
+                                    <h3 className="text-lg font-bold mb-4">Kedalaman (km)</h3>
                                     <div className="flex items-center mb-2">
-                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FF0000]"></span>
-                                        <span>≤ 50 km</span>
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FF0000] border-2 border-[#CC0000]"></span>
+                                        <span>≤ 50</span>
                                     </div>
                                     <div className="flex items-center mb-2">
-                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFA500]"></span>
-                                        <span>≤ 100 km</span>
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFA500] border-2 border-[#CC8400]"></span>
+                                        <span>≤ 100</span>
                                     </div>
                                     <div className="flex items-center mb-2">
-                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFFF00]"></span>
-                                        <span>≤ 250 km</span>
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFFF00] border-2 border-[#CCCC00]"></span>
+                                        <span>≤ 250</span>
                                     </div>
                                     <div className="flex items-center mb-2">
-                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#008000]"></span>
-                                        <span>≤ 600 km</span>
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#008000] border-2 border-[#006D00]"></span>
+                                        <span>≤ 600</span>
                                     </div>
                                     <div className="flex items-center mb-2">
-                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#0000FF]"></span>
-                                        <span>{'>'} 600 km</span>
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#0000FF] border-2 border-[#0000CC]"></span>
+                                        <span>{'>'} 600</span>
                                     </div>
                                 </div>
                                 <IndonesiaMap

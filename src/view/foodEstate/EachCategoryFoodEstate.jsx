@@ -98,7 +98,7 @@ const EachCategoryFoodEstate = ({ category }) => {
             datasets: [
                 {
                     data: sortedData.map(item => parseFloat(item.value)),
-                    backgroundColor: isLuasPanen ? "rgba(178, 223, 138, 1)" : "rgba(244, 190, 55, 1)",
+                    backgroundColor: isLuasPanen ? "rgba(0, 157, 255, 1)" : "rgba(139, 0, 196, 1)",
                     borderWidth: 0,
                 }
             ]
@@ -249,7 +249,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                         </div> */}
 
                         <motion.div 
-                            className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'
+                            className='ml-5 sm:mr-5 flex justify-center'
                             variants={fadeIn("right", 0.3)}
                             initial="hidden"
                             whileInView={"show"}
