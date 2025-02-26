@@ -12,7 +12,7 @@ const TableForAllProvincesEachFoodEstate = ({data}) => {
   const [sortOrder, setSortOrder] = useState("asc")
   const [searchTerm, setSearchTerm] = useState("")
 
-  const itemsPerPage = 5
+  const itemsPerPage = 13
 
   useEffect(() => {
     if(data && data.length > 0) {

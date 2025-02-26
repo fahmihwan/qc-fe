@@ -191,134 +191,134 @@ const EachCategoryFoodEstate = ({ category }) => {
                     />
                 </div>
             ) : (
-                <div className='w-full xl:grid lg:grid-cols-7 '>
-                    <div className='col-span-12 lg:col-span-5 '>
-
-                        {/* header */}
-                        <motion.div 
-                            className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg"
-                            variants={fadeIn("right", 0.3)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{once: true, amount: 0.5}}
-                        >
-                            <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
-                                <div className="rounded flex  items-">
-                                    <div className="flex-col py-4 justify-center block lg:hidden items-center text-white">
-                                        <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
-                                        <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
-                                    </div>
-                                </div>
-                                <div className=" text-white rounded ">
-                                    <div className="text-center py-4 flex-col justify-center hidden lg:block">
-                                        <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
-                                        <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
-                                    </div>
-                                </div>
-                                <div className=" text-white flex items-center justify-end">
-                                    <div className='flex flex-col items-center align-middle'>
-                                        {isProvinceClicked &&
-                                            <motion.button
-                                                onClick={resetSelection}
-                                                className="w-44 text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
-                                                type="button"
-                                                variants={fadeIn("right", 0.3, true)}
-                                                initial="hidden"
-                                                whileInView={"show"}
-                                                viewport={{once: true, amount: 0.5}}
-                                            >
-                                                <div className="items-center text-center w-full">
-                                                    Seluruh Indonesia
-                                                </div>
-                                            </motion.button>
-                                        }
-                                    </div>
+                <div>
+                    {/* header */}
+                    <motion.div 
+                        className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg"
+                        variants={fadeIn("right", 0.3)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: true, amount: 0.5}}
+                    >
+                        <div className="grid grid-cols-3 gap-4 lg:py-5  items-center w-full ">
+                            <div className="rounded flex  items-">
+                                <div className="flex-col lg:py-0 py-4 justify-center block lg:hidden items-center text-white">
+                                    <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
+                                    <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
                                 </div>
                             </div>
-                        </motion.div>
-
-                        {/* <div className="relative border-b-[1px] px-6 dark:border-white flex items-center">
-                            <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
-                                <div className="dark:text-white text-2xl font-bold">DASHBOARD 360</div>
-                                <div className="dark:text-white text-2xl font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                            <div className=" text-white rounded ">
+                                <div className="text-center lg:py-0 py-4 flex-col justify-center hidden lg:block">
+                                    <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
+                                    <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                                </div>
                             </div>
-
-                            <div className="ml-auto">
-                                <DropdownCustom listDropDown={listDropDown} />
+                            <div className=" text-white flex items-center justify-end">
+                                <div className='flex flex-col items-center align-middle'>
+                                    {isProvinceClicked &&
+                                        <motion.button
+                                            onClick={resetSelection}
+                                            className="w-44 text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
+                                            type="button"
+                                            variants={fadeIn("right", 0.3, true)}
+                                            initial="hidden"
+                                            whileInView={"show"}
+                                            viewport={{once: true, amount: 0.5}}
+                                        >
+                                            <div className="items-center text-center w-full">
+                                                Seluruh Indonesia
+                                            </div>
+                                        </motion.button>
+                                    }
+                                </div>
                             </div>
-                        </div> */}
+                        </div>
+                    </motion.div>
+                    <div className='w-full xl:grid lg:grid-cols-7 '>
+                        <div className='col-span-12 lg:col-span-5 '>
+                            {/* <div className="relative border-b-[1px] px-6 dark:border-white flex items-center">
+                                <div className="absolute left-1/2 transform -translate-x-1/2 text-center">
+                                    <div className="dark:text-white text-2xl font-bold">DASHBOARD 360</div>
+                                    <div className="dark:text-white text-2xl font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                                </div>
 
-                        <motion.div 
-                            className='ml-5 sm:mr-5 flex justify-center'
-                            variants={fadeIn("right", 0.3)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{once: true, amount: 0.5}}
-                        >
-                            <div className=' w-[100%] h-[500px]'>
-                                <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true} />
-                            </div>
-                        </motion.div>
+                                <div className="ml-auto">
+                                    <DropdownCustom listDropDown={listDropDown} />
+                                </div>
+                            </div> */}
 
-                        <motion.div 
-                            className="overflow-hidden  flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 p-5 dark:bg-dark-mode-bg mx-auto"
-                            variants={fadeIn("right", 0.3)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{once: true, amount: 0.5}}
-                        >
-                            <div className='flex flex-row justify-between items-center'>
-                                <div className='dark:text-white font-bold text-2xl '>Data {category} di Seluruh Provinsi Tahun {selectedYear}</div>
-                                <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
-                            </div>
-                            <TableForAllProvincesEachFoodEstate data={tableData}/>
-                        </motion.div>
+                            <motion.div 
+                                className='ml-5 sm:mr-5 flex justify-center'
+                                variants={fadeIn("right", 0.3)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{once: true, amount: 0.5}}
+                            >
+                                <div className=' w-[100%] h-[500px]'>
+                                    <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={response?.earthquakeData || []} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true} />
+                                </div>
+                            </motion.div>
+
+                            <motion.div 
+                                className="overflow-hidden  flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 p-5 dark:bg-dark-mode-bg mx-auto"
+                                variants={fadeIn("right", 0.3)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{once: true, amount: 0.5}}
+                            >
+                                <div className='flex flex-row justify-between items-center'>
+                                    <div className='dark:text-white font-bold text-2xl '>Data {category} di Seluruh Provinsi Tahun {selectedYear}</div>
+                                    <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
+                                </div>
+                                <TableForAllProvincesEachFoodEstate data={tableData}/>
+                            </motion.div>
+                        </div>
+                        {!isLoading && response && (
+                            <>
+                                <div className='w-full xl:col-span-2 overflow-hidden'>
+                                    <motion.div 
+                                        className=' mx-5 mb-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                        variants={fadeIn("left", 0.3)}
+                                        initial="hidden"
+                                        whileInView={"show"}
+                                        viewport={{once: true, amount: 0.5}}
+                                    >
+                                        <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
+                                    </motion.div>
+                                    <motion.div 
+                                        className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                        variants={fadeIn("left", 0.3)}
+                                        initial="hidden"
+                                        whileInView={"show"}
+                                        viewport={{once: true, amount: 0.5}}
+                                    >
+                                        <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
+                                    </motion.div>
+                                    <motion.div 
+                                        className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                        variants={fadeIn("left", 0.3)}
+                                        initial="hidden"
+                                        whileInView={"show"}
+                                        viewport={{once: true, amount: 0.5}}
+                                    >
+                                        <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
+                                    </motion.div>
+                                    <motion.div 
+                                        className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                        variants={fadeIn("left", 0.3)}
+                                        initial="hidden"
+                                        whileInView={"show"}
+                                        viewport={{once: true, amount: 0.5}}
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }} 
+                                    >
+                                        <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
+                                    </motion.div>
+                                </div>
+                            </>
+                        )}
+
                     </div>
-                    {!isLoading && response && (
-                        <>
-                            <div className='w-full xl:col-span-2 overflow-hidden'>
-                                <motion.div 
-                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                                    variants={fadeIn("left", 0.3)}
-                                    initial="hidden"
-                                    whileInView={"show"}
-                                    viewport={{once: true, amount: 0.5}}
-                                >
-                                    <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
-                                </motion.div>
-                                <motion.div 
-                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                                    variants={fadeIn("left", 0.3)}
-                                    initial="hidden"
-                                    whileInView={"show"}
-                                    viewport={{once: true, amount: 0.5}}
-                                >
-                                    <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
-                                </motion.div>
-                                <motion.div 
-                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                                    variants={fadeIn("left", 0.3)}
-                                    initial="hidden"
-                                    whileInView={"show"}
-                                    viewport={{once: true, amount: 0.5}}
-                                >
-                                    <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
-                                </motion.div>
-                                <motion.div 
-                                    className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                                    variants={fadeIn("left", 0.3)}
-                                    initial="hidden"
-                                    whileInView={"show"}
-                                    viewport={{once: true, amount: 0.5}}
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }} 
-                                >
-                                    <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
-                                </motion.div>
-                            </div>
-                        </>
-                    )}
-
                 </div>
             )
             }
