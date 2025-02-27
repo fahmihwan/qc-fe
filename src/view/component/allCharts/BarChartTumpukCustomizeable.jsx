@@ -79,7 +79,7 @@ const BarChartTumpukCustomizeable = ({ data, title, legendItems, width }) => {
                     ) : (
                         <div className="flex flex-col gap-4">
                             <div style={{ width: width }}>
-                                <div className="ml-4 mt-4 max-h-20 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center overflow-y-scroll custom-scrollbar overflow-x-hidden p-2 rounded">
+                                <div className="ml-4 mt-4 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center p-2 rounded">
                                     {legendItems.map((item, index) => (
                                     <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
                                         <span className="w-4 h-4" style={{ backgroundColor: item.color }}></span>
