@@ -92,7 +92,8 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                                             onClick={(e) => e.stopPropagation()}
                                         >
 
-                                            {x?.icon} &nbsp; {x?.title}
+                                            {x?.icon}
+                                            {x?.title}
                                         </Link>
                                     </li>
                                 ))}
