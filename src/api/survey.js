@@ -31,13 +31,27 @@ export const getDetailSurveyByResponden = async (param) => {
 }
 
 
-export const getAllChartByQuestion = async () => {
+
+// chart
+export const getPieChartSurvey = async () => {
     try {
-        const response = await apiClient.get(`/getallchart-dashboard-survey`)
+        const response = await apiClient.get(`/getpie-dashboard-survey`)
         return response.data
     } catch (error) {
         console.error("error fetching data: ", error)
         throw error
     }
 }
+
+export const getBarChartSurvey = async () => {
+    try {
+        const response = await apiClient.get(`/getbar-dashboard-survey`)
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}
+
+
 

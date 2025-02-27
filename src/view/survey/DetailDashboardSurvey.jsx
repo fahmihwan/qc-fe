@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import IndonesiaMap from '../component/IndonesiaMap'
 // import 'survey-analytics/survey.analytics.min.css';
 import { Bar, Line, Pie } from 'react-chartjs-2';
-import { getAllChartByQuestion } from '../../api/survey';
+import { getBarChartSurvey, getPieChartSurvey } from '../../api/survey';
 
 
 import WordCloud from 'react-d3-cloud'
@@ -11,13 +11,14 @@ import { scaleOrdinal } from 'd3-scale';
 
 import { schemeCategory10 } from 'd3-scale-chromatic';
 import { useCallback } from 'react';
+import BarChartTumpukCustomizeable from '../component/allCharts/BarChartTumpukCustomizeable';
 
 
 
 
 const DetailDashboardSurvey = () => {
-
-    const [response, setResponse] = useState([])
+    const [responseBar, setResponseBar] = useState([])
+    const [responsePie, setResponsePie] = useState([])
 
     // const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     // const [isLoading, setIsLoading] = useState(true)
@@ -32,7 +33,13 @@ const DetailDashboardSurvey = () => {
 
     // getAllChartByQuestion
     useEffect(() => {
-        getAllChartByQuestion().then((res) => setResponse(res))
+        getPieChartSurvey().then((res) => {
+            setResponsePie(res.data)
+        })
+
+        getBarChartSurvey().then((res) => {
+            setResponseBar(res.data)
+        })
     }, [])
 
     const data = [
@@ -54,7 +61,7 @@ const DetailDashboardSurvey = () => {
         <div className="w-full text-white p-5">
 
 
-            {/* <div className=" flex border dark:border-dark-border border-light-border rounded-[10px]  sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
+            <div className=" flex border dark:border-dark-border border-light-border rounded-[10px]  sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
                 <div className="grid grid-cols-3 gap-4 justify-center  lg:py-5  items-center w-full ">
                     <div className=" rounded  items-centers ">
 
@@ -70,7 +77,7 @@ const DetailDashboardSurvey = () => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
 
             <div className="w-full flex items-center justify-between mb-5 border dark:border-dark-border border-light-border rounded-[10px]  ">
                 {/* <div className='flex h-20 items-center pl-5 '>
@@ -110,7 +117,7 @@ const DetailDashboardSurvey = () => {
                         <div className='text-center py-5'>
                             <p>Status Kepemilikan Pangan</p>
                         </div>
-                        <PieChartEL data={response?.pie} />
+                        <PieChartEL data={responsePie} />
                     </div>
                 </div>
                 <div className='w-full flex '>
@@ -124,7 +131,7 @@ const DetailDashboardSurvey = () => {
                         <div className='text-center py-5'>
                             <p>Jenis pangan yang digunakan</p>
                         </div>
-                        <BarChartEL data={response?.bar} />
+                        <BarChartEL data={responseBar} />
                     </div>
                     <div className='border w-3/12 rounded-[10px] p-5   dark:border-dark-border border-light-border'>
                         <WordCloud
@@ -212,76 +219,61 @@ const PieChartEL = ({ data }) => {
 
 const BarChartEL = ({ data }) => {
 
-    // let outputBar = {
-    //     "topik": data[0]?.topik,
-    //     "typChart": "bar",
-    //     "title": data[0]?.title,
-    //     "labels": [],
-    //     "data": [],
-    //     "year": []
-    // }
+    const labelsMauDitumpuk = [
+        "Sawah Irigasi Teknis",
+        "Sawah tadah hujan",
+        "Lahan rawa/pasang surut",
+        "Lahan kering/tegalan",
+        "Lainnya"
+    ];
+    function logicDataToParsingChart(currentResult) {
+        const result = [];
+        currentResult.forEach(item => {
+            let yearData = result.find(entry => entry.year === item.year);
+            if (!yearData) {
+                yearData = { year: item.year, data: {} };
+                result.push(yearData);
+            }
+            if (!yearData.data[item.value]) {
+                yearData.data[item.value] = 0;
+            }
 
+            yearData.data[item.value] += Number(item.count);
+        });
+        result.forEach(entry => {
+            labelsMauDitumpuk.forEach(landType => {
+                if (!entry.data[landType]) {
+                    entry.data[landType] = Number(0);
+                }
+            });
+        });
+        return result;
+    }
+    let dummyData = logicDataToParsingChart(data);
 
-    // console.log(outputBar);
+    const colors = [
+        'rgba(0, 177, 0, 1)',
+        'rgba(0, 168, 255, 1)',
+        'rgba(255, 0, 255, 1)',
+        'rgba(251, 93, 37, 1)',
+        'rgba(255, 0, 0, 1)'
+    ]
 
+    const labels = dummyData ? dummyData.map(item => item.year) : []
+    const datasets = labelsMauDitumpuk.map((labelTumpuk, index) => ({
+        label: labelTumpuk,
+        data: dummyData ? dummyData.map(item => item.data[labelTumpuk]) : [],
+        backgroundColor: colors[index],
+        borderWidth: 0
+    }))
 
-    return (<Bar data={{
-        labels: [2004, 2025], // Label sumbu X
-        datasets: [
-            {
-                label: 'lainnya', // Label dataset
-                data: [40, 120], // Data untuk setiap bulan
-                backgroundColor: 'rgba(75, 192, 192, 0.2)', // Warna latar belakang bar
-                borderColor: 'rgb(75, 192, 192)', // Warna border bar
-                borderWidth: 1, // Ketebalan border
-            },
-            {
-                label: 'Sawah tadah hujan', // Label dataset
-                data: [20, 30, 10], // Data untuk setiap bulan
-                backgroundColor: 'rgba(192, 75, 75, 0.2)', // Warna latar belakang bar
-                borderColor: 'rgb(192, 75, 75)', // Warna border bar
-                borderWidth: 1, // Ketebalan border
-            },
-            {
-                label: 'Sawah irigasi teknis', // Label dataset
-                data: [10, 20, 30], // Data untuk setiap bulan
-                backgroundColor: 'rgba(35, 68, 168, 0.2)', // Warna latar belakang bar
-                borderColor: 'rgb(49, 81, 161)', // Warna border bar
-                borderWidth: 1, // Ketebalan border
-            },
+    const chartDummyData = { labels, datasets: datasets }
 
-        ],
-    }} options={{
-        responsive: true,
-        plugins: {
-            legend: {
-                position: 'top', // Posisi legend
-            },
-            tooltip: {
-                callbacks: {
-                    // Kustomisasi tooltip jika diperlukan
-                    label: function (tooltipItem) {
-                        return `Pendapatan: $${tooltipItem.raw}`; // Format label tooltip
-                    },
-                },
-            },
-        },
-        scales: {
-            x: {
-                title: {
-                    display: true,
-                    text: 'Bulan', // Judul sumbu X
-                },
-            },
-            y: {
-                beginAtZero: true, // Mulai sumbu Y dari 0
-                title: {
-                    display: true,
-                    text: 'Pendapatan ($)', // Judul sumbu Y
-                },
-            },
-        },
-    }} />)
+    return (
+        <div className="flex flex-col">
+            <BarChartTumpukCustomizeable data={chartDummyData} title={"Test 123"} />
+        </div>
+    )
 }
 
 const LineChartEL = (params) => {
