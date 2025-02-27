@@ -5,9 +5,12 @@ import { Bar, Line, Pie } from 'react-chartjs-2';
 import { getAllChartByQuestion } from '../../api/survey';
 
 
+import WordCloud from 'react-d3-cloud'
 
+import { scaleOrdinal } from 'd3-scale';
 
-
+import { schemeCategory10 } from 'd3-scale-chromatic';
+import { useCallback } from 'react';
 
 
 
@@ -32,9 +35,25 @@ const DetailDashboardSurvey = () => {
         getAllChartByQuestion().then((res) => setResponse(res))
     }, [])
 
+    const data = [
+        { text: 'Kebutuan', value: 1000 },
+        { text: 'Penebangan', value: 100 },
+        { text: 'Industri', value: 800 },
+        { text: 'Lahan', value: 100 },
+        { text: 'Aktivitas', value: 190 },
+        { text: 'Hutan', value: 420 },
+        { text: 'Liar', value: 30 },
+        { text: 'Kerusakan', value: 140 },
+        { text: 'Berpindah', value: 30 },
+        { text: 'Kebakaran', value: 240 },
+        { text: 'Ladang', value: 140 },
+    ];
+
 
     return (
         <div className="w-full text-white p-5">
+
+
             {/* <div className=" flex border dark:border-dark-border border-light-border rounded-[10px]  sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg">
                 <div className="grid grid-cols-3 gap-4 justify-center  lg:py-5  items-center w-full ">
                     <div className=" rounded  items-centers ">
@@ -108,6 +127,33 @@ const DetailDashboardSurvey = () => {
                         <BarChartEL data={response?.bar} />
                     </div>
                     <div className='border w-3/12 rounded-[10px] p-5   dark:border-dark-border border-light-border'>
+                        <WordCloud
+                            data={data}
+                            // width={500}
+                            // height={500}
+                            // font="Times"
+                            // fontStyle="italic"
+                            // fontWeight="bold"
+                            fontSize={(word) => Math.log2(word.value) * 5}
+                            rotate={0}
+                        // spiral="rectangular"
+                        // rotate={(word) => word.value % 360}
+                        // padding={5}
+                        // random={Math.random}
+                        // fill={(d, i) => scaleOrdinal(i)}
+                        // fill={useCallback((d, i) => scaleOrdinal(schemeCategory10)(i), [])}
+                        // rotate={useCallback((word) => word.value % 180, [])}
+
+                        // onWordClick={(event, d) => {
+                        //     console.log(`onWordClick: ${d.text}`);
+                        // }}
+                        // onWordMouseOver={(event, d) => {
+                        //     console.log(`onWordMouseOver: ${d.text}`);
+                        // }}
+                        // onWordMouseOut={(event, d) => {
+                        //     console.log(`onWordMouseOut: ${d.text}`);
+                        // }}
+                        />
                         {/* 
                         <WordCloud
                             width={500}
@@ -244,15 +290,15 @@ const LineChartEL = (params) => {
             labels: ['January', 'February', 'March', 'April', 'May', 'June'], // Label sumbu X
             datasets: [
                 {
-                    label: 'Pengunjung', // Label dataset
+                    label: 'naik', // Label dataset
                     data: [65, 59, 80, 81, 56, 55], // Data untuk setiap bulan
                     fill: false, // Tidak ada area yang diisi
                     borderColor: 'rgb(75, 192, 192)', // Warna garis
                     tension: 0.1, // Tension untuk kelengkungan garis
                 },
                 {
-                    label: 'Pengunjung', // Label dataset
-                    data: [65, 20, 10, 81, 56, 55], // Data untuk setiap bulan
+                    label: 'turun', // Label dataset
+                    data: [65, 20, 10, 81, 29, 50], // Data untuk setiap bulan
                     fill: false, // Tidak ada area yang diisi
                     borderColor: 'rgba(255, 99, 132, 1)', // Warna garis
                     tension: 0.1, // Tension untuk kelengkungan garis
