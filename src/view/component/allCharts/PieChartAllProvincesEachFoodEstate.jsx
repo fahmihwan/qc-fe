@@ -146,7 +146,7 @@ const PieChartAllProvincesEachFoodEstate = ({ title, data, year }) => {
         <div className="px-[29px] py-[15px] min-h-96 flex flex-col">
             <div className="dark:text-white font-bold text-xl mb-4">Persentase {title} Setiap Provinsi Tahun {year}</div>
             <div className="flex flex-1 items-center align-middle justify-center">
-                {totalValue == 0 ? (
+                {totalValue == 0 || data.length < 1 ? (
                     <div className="h-full dark:text-gray-400 items-center justify-center flex text-xl mb-[10px]">Data belum tersedia</div>
                 ) : (
                     <PieChart data={data} title={title} />

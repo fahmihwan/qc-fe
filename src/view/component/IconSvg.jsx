@@ -323,6 +323,14 @@ export const IconDataHasilSurveySVG = () => {
     )
 }
 
+export const IconDownloadSVG = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="62" viewBox="0 0 71 62" fill="none">
+            <path d="M35.4997 41.2264L20.708 28.5321L24.8497 24.8507L32.5413 31.4518V10.76H38.458V31.4518L46.1497 24.8507L50.2913 28.5321L35.4997 41.2264ZM17.7497 51.3819C16.1226 51.3819 14.7302 50.8851 13.5725 49.8916C12.4148 48.898 11.835 47.7022 11.833 46.3042V38.6876H17.7497V46.3042H53.2497V38.6876H59.1663V46.3042C59.1663 47.7005 58.5875 48.8964 57.4298 49.8916C56.2721 50.8868 54.8787 51.3836 53.2497 51.3819H17.7497Z" className="fill-dark-mode dark:fill-white"/>
+        </svg>
+    )
+}
+
 export const IconLightModeSVG = () => {
     return (
         <svg
