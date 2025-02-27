@@ -3,11 +3,14 @@ import MapView from "@arcgis/core/views/MapView";
 import WebMap from "@arcgis/core/WebMap";
 import GraphicsLayer from "@arcgis/core/layers/GraphicsLayer";
 import Graphic from "@arcgis/core/Graphic";
+import Tooltip from "@arcgis/core/views/interactive/Tooltip.js";
+import Feature from "@arcgis/core/widgets/Feature";
 import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol";
 import NavigationToggle from "@arcgis/core/widgets/NavigationToggle";
 import "@arcgis/core/assets/esri/themes/light/main.css";
 // import { provinsiData } from "../../data/38provinsi";
 import provinsiJson from '../../data/38provinsi.json'
+import provinceColors from '../../data/colorMappingEachProvince.json'
 import SimpleMarkerSymbol from "@arcgis/core/symbols/SimpleMarkerSymbol";
 
 const IndonesiaMap = ({ 
@@ -19,11 +22,15 @@ const IndonesiaMap = ({
     hoverable = true,
     earthquakeData = [],
     onEarthquakePointClicked,
+    isProvinceColored = false
 }) => {
     const mapRef = useRef(null);
     const [mapView, setMapView] = useState(null);
     const [selectedProvince, setSelectedProvince] = useState(selectedProvinceCode || '');
     const [hoveredProvince, setHoveredProvince] = useState('')
+
+    const [tooltipContent, setTooltipContent] = useState("");
+    const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0, visible: false });
 
     let provinsiData = provinsiJson.data
 
@@ -47,7 +54,8 @@ const IndonesiaMap = ({
                 minZoom: 2,
                 rotationEnabled: false, 
                 wrapAround180: true 
-            }
+            },
+            // popupEnabled: true
         });
     
         view.when(() => {
@@ -63,6 +71,12 @@ const IndonesiaMap = ({
                 console.error("Error: Tidak ada fitur dalam provinsiData!");
                 return;
             }
+
+            // let tooltip = new Tooltip({
+            //     view: view, 
+            //     text: "Hover untuk melihat provinsi",
+            //     visible: false
+            // });
     
             const extractCoordinates = (geometry) => {
                 if (!geometry || !geometry.type) {
@@ -89,9 +103,10 @@ const IndonesiaMap = ({
                     };
     
                     const defaultSymbol = new SimpleFillSymbol({
-                        color: [0, 0, 255, 0.2],
-                        outline: { color: [0, 0, 150], width: 1 },
+                        color: [0, 0, 255, 0],
+                        outline: { color: [0, 0, 150], width: 0.2 },
                     });
+                    // console.log("ini defaultSymbol", defaultSymbol)
     
                     const graphic = new Graphic({
                         geometry: polygon,
@@ -193,7 +208,7 @@ const IndonesiaMap = ({
             }
     
             const navToggle = new NavigationToggle({ view });
-            view.ui.add(navToggle, "top-left");
+            // view.ui.add(navToggle, "top-left");
 
             let lastHoveredProvince = null
             let lastHoverEventTime = 0
@@ -205,20 +220,33 @@ const IndonesiaMap = ({
                 if(now - lastHoverEventTime < 50) return
                 lastHoverEventTime = now
             
+                
+                // console.log("Popup object:", view.popup);
                 requestAnimationFrame(async() => {
                     try {
                         const hitTestResponse = await view.hitTest(event);
                         const hoveredGraphic = hitTestResponse.results.find(
                             (result) => result.graphic.layer === provinceLayer
                         )?.graphic;
-                
+
+                        
+                        // view.popup.set("visible", true);
                         if (hoveredGraphic) {
                             const kodeProv = hoveredGraphic.attributes.KODE_PROV
+                            const provinsiName = hoveredGraphic.attributes.PROVINSI
+                            
+                            setTooltipContent(`Provinsi ${provinsiName}`);
+                            setTooltipPosition({
+                                x: event.x + 330,
+                                y: event.y + 280,
+                                visible: true
+                            });
                             if(lastHoveredProvince !== kodeProv){
                                 lastHoveredProvince = kodeProv
                                 setHoveredProvince(kodeProv);   
                             }
                         } else {
+                            setTooltipPosition((prev) => ({ ...prev, visible: false }));
                             if(lastHoveredProvince !== null){
                                 lastHoveredProvince = null
                                 setHoveredProvince(null);   
@@ -266,6 +294,12 @@ const IndonesiaMap = ({
     }, [clickable, hoverable, earthquakeData, isProvinceClicked]);    
     
 
+    useEffect(() => {
+        return () => {
+            setTooltipPosition((prev) => ({ ...prev, visible: false }));
+        };
+    }, []);
+    
     // **Efek perubahan warna ketika provinsi dipilih**
     useEffect(() => {
         if (!mapView) return;
@@ -283,7 +317,13 @@ const IndonesiaMap = ({
                 return;
             }
 
+            const provinceColorMap = new Map(
+                provinceColors.map(prov => [prov.provinsi_id.toString(), prov.color])
+            );
+
             graphicsLayer.graphics.forEach((graphic) => {
+                const kodeProv = graphic.attributes?.KODE_PROV?.toString();
+
                 if (graphic.attributes?.KODE_PROV === selectedProvince) {
                     graphic.symbol = new SimpleFillSymbol({
                         color: [0, 0, 255, 0.5],
@@ -295,16 +335,51 @@ const IndonesiaMap = ({
                         outline: { color: [0, 0, 150], width: 1 },
                     });
                 } else {
-                    graphic.symbol = new SimpleFillSymbol({
-                        color: [0, 0, 255, 0],
-                        outline: { color: [0, 0, 150], width: 0.2 },
-                    });
+                    const rgbString = provinceColorMap.get(kodeProv) || "rgb(0, 0, 255)";
+                    const [r, g, b] = rgbString.match(/\d+/g).map(Number);
+                    if (isProvinceColored && !isProvinceClicked) {
+                        const newSymbol = graphic.symbol.clone(); // Duplikasi simbol agar tidak menimpa keseluruhan objek
+                        newSymbol.color = [r, g, b, 0.5]; // Ubah hanya warna fill tanpa mengganti yang lain
+                        newSymbol.outline = { color: [r, g, b], width: 0.2 }; // Outline tetap sama
+                        graphic.symbol = newSymbol; 
+                    } else if (isProvinceColored && isProvinceClicked) {
+                        graphic.symbol = new SimpleFillSymbol({
+                            color: [0, 0, 255, 0],
+                            outline: { color: [0, 0, 150], width: 0.2 },
+                        });
+                    } else {
+                        graphic.symbol = new SimpleFillSymbol({
+                            color: [0, 0, 255, 0],
+                            outline: { color: [0, 0, 150], width: 0.2 },
+                        });
+                    }                    
                 }
             });
         });
     }, [selectedProvince, hoveredProvince, mapView]);
 
-    return <div ref={mapRef} className="w-full h-full" />;
+    return (
+        <div ref={mapRef} className="w-full h-full rounded-[10px] border border-light-border dark:border-dark-border overflow-hidden">
+            <div>
+            {tooltipPosition.visible && (
+                <div
+                    key={tooltipContent}
+                    className="absolute bg-gray-100 p-2 rounded shadow-md text-sm transition-opacity duration-200"
+                    style={{
+                        left: `${tooltipPosition.x}px`,
+                        top: `${tooltipPosition.y}px`,
+                        transform: "translate(-10%, -10%)",
+                        whiteSpace: "nowrap",
+                        position: "absolute"
+                    }}
+                >
+                    {tooltipContent}
+                </div>
+            
+            )}
+            </div>
+        </div>
+    );
 };
 
 export default IndonesiaMap;

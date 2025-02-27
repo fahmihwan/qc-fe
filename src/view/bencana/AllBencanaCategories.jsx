@@ -11,6 +11,8 @@ import { RingLoader } from 'react-spinners'
 
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import PieChartAllDisasters from '../component/allCharts/PieChartAllDisasters'
+import { IconDownloadSVG } from '../component/IconSvg'
 
 const AllBencanaCategories = () => {
 
@@ -61,7 +63,9 @@ const AllBencanaCategories = () => {
     }
 
     const fetchDataAsync = async (province_id = 0) => {
-        if (startDate && endDate) {
+        setFixedStartDate(startDate)
+        setFixedEndDate(endDate)
+        if (fixedStartDate && fixedEndDate) {
             console.log(selectedProvinceCode)
             try {
                 const { responseSummary, responseBencana } = await fetchData(
@@ -71,8 +75,7 @@ const AllBencanaCategories = () => {
                 );
                 setDataSummary(responseSummary.data[0]);
                 setDataBencana(responseBencana.data[0]);
-                setFixedStartDate(startDate)
-                setFixedEndDate(endDate)
+                console.log("ini response bencana", responseBencana.data[0])
                 setSelectedProvinceCode(province_id)
                 // console.log("ini province_id", province_id)
             } catch (error) {
@@ -178,6 +181,10 @@ const AllBencanaCategories = () => {
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
         console.log("dapat nama provinsi, kode prov", namaProvinsi, kodeProvinsi)
         setIsLoading(true)
+        setFixedStartDate(startDate)
+        setFixedEndDate(endDate)
+        console.log("start date", startDate)
+        console.log("end date", endDate) 
         await fetchDataAsync(kodeProvinsi).then(() => {
             setIsProvinceClicked(true)
             setSelectedProvinceCode(kodeProvinsi)
@@ -202,7 +209,9 @@ const AllBencanaCategories = () => {
 
     const onDateChange = async() => {
         setIsLoading(true)
-        await fetchDataAsync()
+        setFixedStartDate(startDate)
+        setFixedEndDate(endDate)
+        await fetchDataAsync(selectedProvinceCode)
     }
 
     const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked}/>, [isProvinceClicked, selectedProvinceCode])
@@ -224,7 +233,7 @@ const AllBencanaCategories = () => {
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className='dark:text-white text-2xl font-bold text-center items-center uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
                     </motion.div>
@@ -234,11 +243,11 @@ const AllBencanaCategories = () => {
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
                         <div className='flex flex-row justify-between'>
                             <div className='flex flex-row z-50 gap-4 items-center'>
-                                <div className='dark:text-white'> Dari </div>
+                                <div className='dark:text-white'> Dari : </div>
                                 <motion.div
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
@@ -254,7 +263,7 @@ const AllBencanaCategories = () => {
                                         maxDate={new Date()}
                                     />
                                 </motion.div>
-                                <div className='dark:text-white'> sampai </div>
+                                <div className='dark:text-white'> Sampai : </div>
                                 <motion.div
                                     whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
@@ -300,45 +309,76 @@ const AllBencanaCategories = () => {
                         </div>
                     </motion.div>
 
-                    <motion.div 
-                        className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'
-                        variants={fadeIn("up", 0.2)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
-                    >
-                        <div className=' w-[100%] h-[500px]'>
-                            {IndonesiaMapMemoized}
-                        </div>
-                    </motion.div>
+                    <div className='grid grid-cols-7 w-full'>
+                        <div className='col-span-5'>
+                            <motion.div 
+                                className='ml-5 sm:mr-5 flex justify-center'
+                                variants={fadeIn("up", 0.2)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{once: true, amount: 0.7}}
+                            >
+                                <div className=' w-[100%] h-[500px]'>
+                                    {IndonesiaMapMemoized}
+                                </div>
+                            </motion.div>
 
-                    <motion.div 
-                        className="overflow-hidden mt-20  flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
-                        variants={fadeIn("up", 0.2)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
-                    >
-                        <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
-                            <Marquee>
-                                <div className="flex gap-10 overflow-hidden">
-                                        {[...Array(5)].map((_, i) => (
-                                            <div key={i} className="flex whitespace-nowrap  w-max">
-                                                <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
-                                                <span className="dark:text-white text-xl font-bold">Mag: </span>
-                                                <span className="text-green-custom text-xl">3.3 </span>
-                                                <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
-                                                <span className="dark:text-white text-xl font-bold">Lok: </span>
-                                                <span className="text-green-custom text-xl">4.09 LS </span>
-                                                <span className="dark:text-white text-xl">, </span>
-                                                <span className="text-green-custom text-xl">121.80 BT </span>
-                                                <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
+                            <motion.div 
+                                className="overflow-hidden mt-6 flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
+                                variants={fadeIn("up", 0.2)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{once: true, amount: 0.7}}
+                            >
+                                <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
+                                    <Marquee>
+                                        <div className="flex gap-10 overflow-hidden">
+                                                {[...Array(5)].map((_, i) => (
+                                                    <div key={i} className="flex whitespace-nowrap  w-max">
+                                                        <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
+                                                        <span className="dark:text-white text-xl font-bold">Mag: </span>
+                                                        <span className="text-green-custom text-xl">3.3 </span>
+                                                        <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
+                                                        <span className="dark:text-white text-xl font-bold">Lok: </span>
+                                                        <span className="text-green-custom text-xl">4.09 LS </span>
+                                                        <span className="dark:text-white text-xl">, </span>
+                                                        <span className="text-green-custom text-xl">121.80 BT </span>
+                                                        <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
+                                                    </div>
+                                                ))}
                                             </div>
-                                        ))}
-                                    </div>
-                            </Marquee>
+                                    </Marquee>
+                                </div>
+                            </motion.div>
                         </div>
-                    </motion.div>
+                        <div className='col-span-2 flex flex-col h-full'>
+                            <motion.div 
+                                className='lg:mr-5 mb-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                variants={fadeIn("left", 0.3)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{once: true, amount: 0.5}}
+                            >
+                                <PieChartAllDisasters dataBencana={dataBencana || {}}/>
+                            </motion.div>
+                            <motion.button 
+                                whileTap={{ scale: 0.8 }}
+                                className="relative overflow-hidden min-h-36 items-center mr-5 py-6 px-[30px] border rounded-[10px] 
+                                dark:border-dark-border border-light-border transition-all duration-300 group"
+                                onClick={() => {}}
+                            >
+                                {/* Background animasi dengan before */}
+                                <span className="absolute inset-0 bg-blue-custom w-0 h-full transition-all duration-500 ease-in-out group-hover:w-full"></span>
+
+                                {/* Konten tombol */}
+                                <div className='relative z-10 flex-row flex justify-between items-center'>
+                                    <span className="relative dark:text-white font-bold text-2xl z-10">Export Data</span>
+                                    <IconDownloadSVG className="relative z-50" />
+                                </div>
+                            </motion.button>
+
+                        </div>
+                    </div>
 
                     <TabelBencana dataBencana={dataBencana || {}} dataSummary={dataSummary || {}} startDate={fixedStartDate} endDate={fixedEndDate}/>
                 </div>

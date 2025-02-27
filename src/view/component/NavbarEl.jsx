@@ -42,7 +42,7 @@ export const NavbarEl = ({ isDrawerOpen, handleDrawer }) => {
 
     return (
         <>
-            <Navbar fluid rounded className="dark:!bg-dark-mode-v2 border-b dark:border-dark-mode-border">
+            <Navbar fluid className="dark:!bg-dark-mode-v2 border-b dark:border-dark-mode-border">
                 <button
                     onClick={() => handleDrawer(true)}
                     type="button"

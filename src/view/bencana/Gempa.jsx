@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LayoutAdmin from '../layout/LayoutAdmin'
-import { IconGempaSVG, IconPointMapSVG, IconPointSVG, IconXSVG } from '../component/IconSvg'
+import { IconGempaSVG, IconPointMapSVG, IconPointSVG, IconWarningSVG, IconXSVG } from '../component/IconSvg'
 import IndonesiaMap from '../component/IndonesiaMap'
 import { TableForMagnitudoFive } from '../component/allGempaTables/TableForMagnitudoFive'
 import { TableForDirasakan } from '../component/allGempaTables/TableForDirasakan'
@@ -11,7 +11,7 @@ import { useEffectGempa } from '../../hook/useEffectGempa'
 import { useParams } from 'react-router-dom'
 import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 const Gempa = () => {
@@ -93,12 +93,8 @@ const Gempa = () => {
                 : response.Infogempa.gempa[0]
         console.log('ini data detail card', dataDetail)
         return (
-            <motion.div 
+            <div 
                 className='dark:border-white border-2 my-[30px] mx-20 py-[15px] w-[90%] px-4 rounded-[15px] grid grid-cols-4 items-stretch'
-                variants={fadeIn("up", 0.2)}
-                initial="hidden"
-                whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
             >
                 <div className='col-span-1 border-r-[1px] dark:border-white'>
                     <div className='pr-[25px] py-[11px]'>
@@ -144,12 +140,14 @@ const Gempa = () => {
                         Lihat Detail
                     </motion.button>
                 </div>
-            </motion.div>
+            </div>
         )
     }
 
     const ModalDetailGempa = ({ dataDetail }) => {
         console.log("modal detil gempa, ", dataDetail)
+        const [shakeMapURL, setShakeMapURL] = useState(null)
+
         const shakeMapCreator = () => {
             const monthMap = {
                 "Jan": "01", "Feb": "02", "Mar": "03", "Apr": "04",
@@ -162,14 +160,29 @@ const Gempa = () => {
             console.log(`ini dari modal detail gempa shakemapcreator https://data.bmkg.go.id/DataMKG/TEWS/${year}${monthMap[month]}${day.padStart(2, '0')}${time.replace(/:/g, '')}.mmi.jpg`)
             return `https://data.bmkg.go.id/DataMKG/TEWS/${year}${monthMap[month]}${day.padStart(2, '0')}${time.replace(/:/g, '')}.mmi.jpg`;
         }
+
+        useEffect(() => {
+            if(dataDetail){
+                setShakeMapURL(shakeMapCreator())
+            }
+        }, [dataDetail])
+
         return (
-            <div
+            <motion.div
                 className='fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-70'
                 onClick={() => handleCloseModal()}
+                key={dataDetail.Id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0, transition: { duration: 0.3 } }}
             >
-                <div
-                    className='bg-white dark:bg-dark-mode lg:max-w-[60%] shadow-lg transform transition-all duration-300 opacity-100 scale-100'
+                <motion.div
+                    className='bg-white rounded-[15px] dark:bg-dark-mode-bg lg:max-w-[60%] shadow-lg transform transition-all duration-300 opacity-100 scale-100'
                     onClick={(e) => e.stopPropagation()}
+                    initial="hidden"
+                    animate={"show"}
+                    viewport={{once: true, amount: 0.5}}
+                    exit={"hidden"}
                 >
                     <div className='flex flex-row justify-between px-5 py-[13px] items-center'>
                         <span className='dark:text-white font-bold text-sm'>Gempa Bumi {activeCategoryTitle}</span>
@@ -182,11 +195,34 @@ const Gempa = () => {
                         </motion.button>
                     </div>
                     <div className='h-[1px] dark:bg-white bg-dark-mode'></div>
-                    <div className='grid grid-cols-2 dark:bg-black'>
-                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode'>
-                            <img src={shakeMapCreator()} className='w-full' />
+                    <div className='grid grid-cols-2 '>
+                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode-bg flex justify-center items-center h-full'>
+                            {
+                                shakeMapURL
+                                ? <img src={shakeMapURL} className='w-full' />
+                                : <div className='flex flex-col items-center justify-center gap-6 py-[50px] px-[25px] border dark:border-dark-border border-light-border rounded-[10px] dark:bg-dark-mode-v2'>
+                                        <div className="h-[69px] w-[69px]">
+                                            <IconWarningSVG />
+                                        </div>
+                                        <div className="font-bold text-center text-2xl text-black dark:text-white mt-[17px] ml-6 mb-[12px]">
+                                            Gambar tidak tersedia !
+                                        </div>
+                                    </div>
+                            }
                         </div>
-                        <div className='p-6'>
+
+                        {/* <div className='px-5 py-[24px] h-full dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode-bg'>
+                            
+                            <div className='items-center mx-auto my-auto  gap-6 flex flex-col align-middle px-[50px] py-[25px] w-fit border dark:border-dark-border border-light-border rounded-[10px] dark:bg-dark-mode-v2'>
+                                <div className="h-[69px] w-[69px]">
+                                    <IconWarningSVG />
+                                </div>
+                                <div className="font-bold text-center text-2xl text-black dark:text-white mt-[17px] ml-6 mb-[12px]">
+                                    Gambar tidak tersedia !
+                                </div>
+                            </div>
+                        </div> */}
+                        <div className='p-6 dark:bg-dark-mode-v2'>
                             <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"} />
                             <div className='mt-[10px] dark:text-white text-xs'>{dataDetail.Tanggal}, {dataDetail.Jam}</div>
                             <div className='mt-5 dark:text-white text-base font-bold'>{dataDetail.Wilayah}</div>
@@ -249,8 +285,8 @@ const Gempa = () => {
                             <IconXSVG />
                         </button>
                     </div>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         )
     }
 
@@ -265,92 +301,104 @@ const Gempa = () => {
                 </div>
             ) : (
                 <div className='w-full min-h-screen'>
-                    <motion.div 
-                        className="overflow-x-hidden overflow-hidden flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
+                    <motion.div
                         variants={fadeIn("up", 0.2)}
                         initial="hidden"
                         whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
+                        viewport={{once: true, amount: 0.7}}
                     >
-                        <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
-                        <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
-                        <div className='text-green-custom text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
-                    </motion.div>
-
-                    <motion.div 
-                        className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'
-                        variants={fadeIn("up", 0.2)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{once: false, amount: 0.7}}
-                    >
-                        {categories.map((category) => {
-                            return (
-                                <button
-                                    key={category.id}
-                                    type="button"
-                                    onClick={() => {
-                                        setActiveCategory(category.id)
-                                        setActiveCategoryTitle(category.label)
-                                        setActiveCategoryDesc(category.description)
-                                        fetchData(category.id)
-                                    }}
-                                    className={`border-2 dark:border-white border-dark-mode w-[196px] dark:text-white focus:ring-4 focus:ring-blue-300 
-                                        font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
-                                        ${activeCategory === category.id
-                                            ? 'bg-blue-custom dark:bg-blue-custom text-white'
-                                            : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover transition-colors duration-300 ease-in-out'
-                                        }
-                                        `}
-                                >
-                                    {category.label}
-                                </button>
-                            )
-                        })}
-                    </motion.div>
-
-                    <CardSatuGempa />
-
-                    <div className='border rounded-[10px] ml-5 sm:mr-5 p-2 flex justify-center dark:border-dark-border border-light-border'>
-                        <div className=' w-[100%] h-[500px] relative'>
-                            <div id="legend-container" className="absolute bottom-8 left-4 bg-white bg-opacity-50 p-4 border border-gray-300 shadow-md rounded-lg z-20">
-                                <h3 className="text-lg font-medium mb-4">Kedalaman</h3>
-                                <div className="flex items-center mb-2">
-                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#FF0000]"></span>
-                                    <span>≤ 50 km</span>
-                                </div>
-                                <div className="flex items-center mb-2">
-                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFA500]"></span>
-                                    <span>≤ 100 km</span>
-                                </div>
-                                <div className="flex items-center mb-2">
-                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFFF00]"></span>
-                                    <span>≤ 250 km</span>
-                                </div>
-                                <div className="flex items-center mb-2">
-                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#008000]"></span>
-                                    <span>≤ 600 km</span>
-                                </div>
-                                <div className="flex items-center mb-2">
-                                    <span className="block w-5 h-5 mr-2 rounded-full bg-[#0000FF]"></span>
-                                    <span>{'>'} 600 km</span>
-                                </div>
-                            </div>
-                            <IndonesiaMap
-                                clickable={false}
-                                earthquakeData={
-                                    response.Infogempa?.gempa
-                                        ? Array.isArray(response.Infogempa.gempa)
-                                            ? response.Infogempa.gempa
-                                            : [response.Infogempa.gempa]
-                                        : []
-                                }
-                                hoverable={false}
-                                onEarthquakePointClicked={onEarthquakePointClicked}
-                            />
+                        <div 
+                            className="overflow-x-hidden overflow-hidden flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
+                        >
+                            <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
+                            <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
+                            <div className='text-green-custom text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
                         </div>
-                    </div>
 
+                        <div 
+                            className='flex flex-row items-center justify-center gap-[15px] mt-[30px]'
+                            variants={fadeIn("up", 0.2)}
+                            initial="hidden"
+                            whileInView={"show"}
+                            viewport={{once: true, amount: 0.7}}
+                        >
+                            {categories.map((category) => {
+                                return (
+                                    <button
+                                        key={category.id}
+                                        type="button"
+                                        onClick={() => {
+                                            setActiveCategory(category.id)
+                                            setActiveCategoryTitle(category.label)
+                                            setActiveCategoryDesc(category.description)
+                                            fetchData(category.id)
+                                        }}
+                                        className={`border-2 dark:border-white border-dark-mode w-[196px] dark:text-white focus:ring-blue-300 
+                                            font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none dark:focus:ring-blue-800
+                                            ${activeCategory === category.id
+                                                ? 'bg-blue-custom dark:bg-blue-custom text-white'
+                                                : 'dark:bg-dark-mode-bg hover:bg-gray-hover dark:hover:bg-gray-hover hover:text-white transition-colors duration-300 ease-in-out'
+                                            }
+                                            `}
+                                    >
+                                        {category.label}
+                                    </button>
+                                )
+                            })}
+                        </div>
+
+                        <CardSatuGempa />
+                    
+                    
+                    </motion.div>
+
+                    <motion.div
+                        variants={fadeIn("up", 0.2)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: true, amount: 0.7}}
+                    >
+                        <div className=' ml-5 sm:mr-5 flex justify-center'>
+                            <div className=' w-[100%] h-[500px] relative'>
+                                <div id="legend-container" className="absolute bottom-5 left-[13px] bg-white dark:text-white dark:bg-dark-mode-bg p-6 border border-gray-300 shadow-md rounded-lg z-20">
+                                    <h3 className="text-lg font-bold mb-4">Kedalaman (km)</h3>
+                                    <div className="flex items-center mb-2">
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FF0000] border-2 border-[#CC0000]"></span>
+                                        <span>≤ 50</span>
+                                    </div>
+                                    <div className="flex items-center mb-2">
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFA500] border-2 border-[#CC8400]"></span>
+                                        <span>≤ 100</span>
+                                    </div>
+                                    <div className="flex items-center mb-2">
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#FFFF00] border-2 border-[#CCCC00]"></span>
+                                        <span>≤ 250</span>
+                                    </div>
+                                    <div className="flex items-center mb-2">
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#008000] border-2 border-[#006D00]"></span>
+                                        <span>≤ 600</span>
+                                    </div>
+                                    <div className="flex items-center mb-2">
+                                        <span className="block w-5 h-5 mr-2 rounded-full bg-[#0000FF] border-2 border-[#0000CC]"></span>
+                                        <span>{'>'} 600</span>
+                                    </div>
+                                </div>
+                                <IndonesiaMap
+                                    clickable={false}
+                                    earthquakeData={
+                                        response.Infogempa?.gempa
+                                            ? Array.isArray(response.Infogempa.gempa)
+                                                ? response.Infogempa.gempa
+                                                : [response.Infogempa.gempa]
+                                            : []
+                                    }
+                                    hoverable={false}
+                                    onEarthquakePointClicked={onEarthquakePointClicked}
+                                />
+                            </div>
+                        </div>
+                    
+                    </motion.div>
                     <div className='mx-[82px] pb-9'>
                         {activeCategory !== "TERKINI" &&
                             <div className='dark:text-white font-bold text-[32px] mt-[111px] mb-[30px]'>
@@ -374,9 +422,13 @@ const Gempa = () => {
                         }
                     </div>
 
-                    {modalOpen && (
-                        <ModalDetailGempa dataDetail={selectedDetailGempa} />
-                    )}
+
+                        
+                    <AnimatePresence mode='wait'>
+                        {modalOpen && (
+                            <ModalDetailGempa dataDetail={selectedDetailGempa} />
+                        )}
+                    </AnimatePresence>
                 </div>
             )}
         </>

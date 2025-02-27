@@ -278,8 +278,8 @@ export const IconPointMapSVG = () => {
 
 export const IconXSVG = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 12L19 19M12 12L5 5M12 12L5 19M12 12L19 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="fill-dark-mode dark:fill-white" />
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-dark-mode dark:text-white">
+            <path d="M12 12L19 19M12 12L5 5M12 12L5 19M12 12L19 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="fill-dark-mode dark:fill-white" />
         </svg>
     )
 }
@@ -319,6 +319,14 @@ export const IconDataHasilSurveySVG = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M11 16H3V19C3 19.55 3.196 20.021 3.588 20.413C3.98 20.805 4.45067 21.0007 5 21H11V16ZM13 16V21H19C19.55 21 20.021 20.8043 20.413 20.413C20.805 20.0217 21.0007 19.5507 21 19V16H13ZM11 14V9H3V14H11ZM13 14H21V9H13V14ZM3 7H21V5C21 4.45 20.8043 3.97933 20.413 3.588C20.0217 3.19667 19.5507 3.00067 19 3H5C4.45 3 3.97933 3.196 3.588 3.588C3.19667 3.98 3.00067 4.45067 3 5V7Z"  className="fill-dark-mode dark:fill-white"/>
+        </svg>
+    )
+}
+
+export const IconDownloadSVG = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="62" viewBox="0 0 71 62" fill="none">
+            <path d="M35.4997 41.2264L20.708 28.5321L24.8497 24.8507L32.5413 31.4518V10.76H38.458V31.4518L46.1497 24.8507L50.2913 28.5321L35.4997 41.2264ZM17.7497 51.3819C16.1226 51.3819 14.7302 50.8851 13.5725 49.8916C12.4148 48.898 11.835 47.7022 11.833 46.3042V38.6876H17.7497V46.3042H53.2497V38.6876H59.1663V46.3042C59.1663 47.7005 58.5875 48.8964 57.4298 49.8916C56.2721 50.8868 54.8787 51.3836 53.2497 51.3819H17.7497Z" className="fill-dark-mode dark:fill-white"/>
         </svg>
     )
 }

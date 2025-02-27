@@ -15,6 +15,7 @@ import GenerateSurvey from "../view/survey/GenerateSurvey";
 import LayoutAdmin from "../view/layout/LayoutAdmin";
 import DashboardSurvey from "../view/survey/DashboardSurvey";
 import DetailDashboardSurvey from "../view/survey/DetailDashboardSurvey";
+import NotFoundPage from "../view/notFound/NotFoundPage";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -46,6 +47,10 @@ const routes = createBrowserRouter([
             { path: "/generate-survey", element: <GenerateSurvey /> },
             { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
         ]
+    },
+    {
+        path: '*',
+        element: <ProtectedRouteAuthenticated element={<NotFoundPage />} />
     }
 ]);
 

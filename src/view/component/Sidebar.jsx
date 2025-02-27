@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import menu from '../../data/menu';
 import { Drawer } from "flowbite-react";
 import { useSidebar } from '../../context/SidebarContext';
 
 export const Sidebar = () => {
     const { isDrawerOpen, toggleDrawer, dropDown, toggleDropdown } = useSidebar();
+    const location = useLocation()
 
     return (
         <>
@@ -38,12 +39,13 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                         <li style={{ marginBottom: "20px" }}>
                             <Link
                                 to={d?.link}
-                                className="flex items-center border border-black dark:border-white p-2 text-gray-900 
-                                rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                                className={`flex flex-row gap-3 items-center border border-black dark:border-white p-2 
+                                rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group
+                                ${location.pathname === d.link ? "bg-gray-200 hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"} `}
                                 onClick={() => toggleDropdown(null)}
                             >
                                 {d?.icon}
-                                <span className="ml-3 text-sm">{d?.title}</span>
+                                <span className="text-sm">{d?.title}</span>
                             </Link>
                         </li>
                     ) : (
@@ -56,8 +58,8 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                         >
                             <button
                                 type="button"
-                                className="flex border border-black dark:border-white items-center w-full p-2 text-sm text-gray-900 
-                                transition duration-75 rounded-lg group dark:text-white"
+                                className={`flex border border-black dark:border-white items-center w-full p-2 text-sm text-gray-900 
+                                transition duration-75 rounded-lg group dark:text-white`}
                             >
                                 {d?.icon}
                                 <span className="flex-1 ml-3 text-left rtl:text-right whitespace-nowrap">
@@ -81,13 +83,12 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
 
                             <ul className={`${d?.title === dropDown ? 'max-h-[1000px]' : 'max-h-0'} overflow-hidden py-0 space-y-2 transform transition-all duration-300 ease-in-out`}>
                                 {d?.submenu?.map((x, index) => (
-                                    <li key={index}>
+                                    <li key={index} className={`${index === 0 ? "mt-2" : ""}`}>
                                         <Link
                                             to={x.link}
-                                            className="flex items-center  p-2 text-gray-900 transition duration-75 rounded-lg pl-11 
-                                            group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700 
-                                            w-64 overflow-hidden text-ellipsis whitespace-nowrap  decoration-dotted
-                                            "
+                                            className={`flex flex-row gap-3 items-center p-2 transition duration-75 rounded-lg ml-8 
+                                            group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
+                                            ${location.pathname === x.link ? "bg-gray-200 hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"}`}
                                             onClick={(e) => e.stopPropagation()}
                                         >
 

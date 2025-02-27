@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
+import { formatCurrency } from "../../../utils/generateUtil";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
@@ -9,6 +10,15 @@ const BarChart = ({ data, options }) => {
 }
 
 const BarChartTumpukEachFoodEstate = ({ title, data }) => {
+    const maxData = Math.max(...data.datasets[0].data);
+    const minData = Math.min(...data.datasets[0].data);
+    
+    const range = maxData - minData;
+
+    const stepSize = title === "Luas Panen (ha)" 
+        ? Math.ceil(range / 5 / 800000) * 100000 
+        : Math.ceil(range / 5 / 100) * 10;
+
     const options = {
         responsive: true,
         plugins: {
@@ -22,7 +32,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
             tooltip: {
                 enabled: true,
                 callbacks: {
-                    label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.raw.toLocaleString()}`
+                    label: (tooltipItem) => `${tooltipItem.dataset.label}: ${formatCurrency(tooltipItem.raw)}`
                 }
             },
             datalabels: {
@@ -45,11 +55,16 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
                 min: 0,
                 ticks: {
                     color: '#A3A3A3',
-                    stepSize: 500000,
-                    callback: (value) => `${value.toLocaleString()}`
+                    stepSize: stepSize,
+                    callback: (value) => formatCurrency(value)
                 },
                 grid: {
-                    color: 'rgba(255, 255, 255, 0.1)'
+                    color: '#CCCCCC',
+                    borderColor: '#CCCCCC',
+                    drawBorder: true
+                },
+                border:{
+                    color: '#cccccc'
                 }
             }
         }
@@ -61,11 +76,13 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
         <>
             <div className="  px-[29px] py-[15px] h-[326px] flex flex-col">
                 <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-                <div className="w-72 min-h-28 flex flex-grow items-center justify-center">
+                <div className="w-full min-h-28 flex flex-grow items-center justify-center">
                     {isDataEmpty ? (
                         <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                     ) : (
-                        <BarChart data={data} options={options} />
+                        <div className="w-full flex justify-center">
+                            <BarChart data={data} options={options} />
+                        </div>
                     )}
                 </div>
             </div>

@@ -56,7 +56,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                 variants={fadeIn("up", 0.2)}
                 initial="hidden"
                 whileInView={"show"}
-                viewport={{once: false, amount: 0.7}}
+                viewport={{once: true, amount: 0.7}}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
             >
@@ -88,7 +88,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                     variants={fadeIn("up", 0.2)}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{once: false, amount: 0.7}}
+                    viewport={{once: true, amount: 0.7}}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.95 }}
                 >
@@ -121,7 +121,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                     variants={fadeIn("up", 0.4)}
                     initial="hidden"
                     whileInView={"show"}
-                    viewport={{once: false, amount: 0.7}}
+                    viewport={{once: true, amount: 0.7}}
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.95 }}
                 >
@@ -130,7 +130,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                     {allZeroSummary ? (
                         <div className="dark:text-gray-400 text-center text-xl mb-[10px]">Data belum tersedia</div>
                     ) : (
-                        <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-white rounded-[10px] mb-[6px]">
+                        <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-dark-border border-light-border rounded-[10px] mb-[6px]">
                             <span className="font-bold text-base dark:text-white max-w-[70px]">Rumah Rusak</span>
 
                             <div className="flex flex-row justify-evenly">
@@ -166,7 +166,7 @@ const TabelBencana = ({ dataBencana, dataSummary, startDate, endDate }) => {
                         </div>
                     )}
 
-                    <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-white rounded-[10px]">
+                    <div className="flex flex-row px-6 py-[11px] justify-between border-2 dark:border-dark-border border-light-border rounded-[10px]">
                         <span className="font-bold text-base dark:text-white max-w-[70px]">Fasilitas Rusak</span>
 
                         {allZeroSummary ? (
