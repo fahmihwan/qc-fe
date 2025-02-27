@@ -13,6 +13,7 @@ import QRcode from "../view/survey/QRcode";
 import PerumahanRakyat from "../view/perumahanRakyat/PerumahanRakyat";
 import GenerateSurvey from "../view/survey/GenerateSurvey";
 import LayoutAdmin from "../view/layout/LayoutAdmin";
+import NotFoundPage from "../view/notFound/NotFoundPage";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -42,6 +43,10 @@ const routes = createBrowserRouter([
             { path: "/generate-survey", element: <GenerateSurvey /> },
             { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
         ]
+    },
+    {
+        path: '*',
+        element: <NotFoundPage />
     }
 ]);
 
