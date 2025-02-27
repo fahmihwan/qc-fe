@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 export const ExampleChart = () => {
 
     useEffect(() => {
-        // Membuat observer untuk memantau DOM
         const observer = new MutationObserver(() => {
             const elements = document.getElementsByClassName("sa-question__content");
             if (elements.length > 0) {
@@ -14,20 +13,14 @@ export const ExampleChart = () => {
                     elements[i].style.background = "linear-gradient(to top, #1d1e24, #2e2e30)";
                     // elements[i].style.color = "white";
                 }
-                // Hentikan observer setelah elemen ditemukan
                 observer.disconnect();
             }
         });
-
-        // Mulai observer untuk memantau perubahan DOM
         observer.observe(document.body, { childList: true, subtree: true });
-
-        // Membersihkan observer saat komponen unmount
         return () => {
             observer.disconnect();
         };
-    }, []); // [] memastikan efek hanya dijalankan sekali setelah render pertama
-
+    }, []);
 
     // VisualizerBase.customColors = [
     //     // "#f3cec9",
@@ -42,10 +35,18 @@ export const ExampleChart = () => {
     //     // "#182844",
     // ];
 
+
+
+
+    // vizPanel.showHeader = false;
+    // vizPanel.backgroundColor = "gray";
+    // vizPanel.render(this.elem?.nativeElement);
+
+
     const surveyJson = {
         elements: [{
             name: "satisfaction-score",
-            title: "How would you describe your experience with our product?",
+            title: "ini coooo?",
             type: "radiogroup",
             choices: [
                 { value: 5, text: "Fully satisfying" },
@@ -67,13 +68,13 @@ export const ExampleChart = () => {
     };
 
     const surveyResults = [{
-        "satisfaction-score": 5,
+        "satisfaction-score": 2,
         "nps-scorescore": 10
     }, {
-        "satisfaction-score": 5,
+        "satisfaction-score": 3,
         "nps-score": 9
     }, {
-        "satisfaction-score": 3,
+        "satisfaction-score": 9,
         "nps-score": 6
     }, {
         "satisfaction-score": 3,
@@ -82,6 +83,8 @@ export const ExampleChart = () => {
         "satisfaction-score": 2,
         "nps-score": 3
     }];
+
+
 
     const vizPanelOptions = {
         allowHideQuestions: false
@@ -102,44 +105,14 @@ export const ExampleChart = () => {
             vizPanelOptions
         );
 
-
-        // .dashboardContainer {
-        //     background: #1f2420;
-        //     /* background-image: "linear-gradient(to right, #FF7E5F, #feb47b)" ; */
-        //     /* background: linear-gradient(to top, #1B1B1B, #575757) !important; */
-        //   }
-        //   .sa-question__content {
-        //     background: linear-gradient(to top, #1d1e24, #2e2e30) !important;
-        //     /* background: gray !important; */
-        //   }
-        //   .sa-question__select-wrapper .sa-question__select {
-
         vizPanel.color = 'red'
-
         vizPanel.backgroundColor = "transparent"
-        // vizPanel.style
-        // vizPanel.backgroundColor = "linear-gradient(to right, #ff7e5f, #feb47b);";
-        // vizPanel.backgroundImage = "linear-gradient(to right, #ff7e5f, #feb47b);";
         vizPanel.showToolbar = false;
 
-
-        // .backgroundColor = "linear-gradient(to top, #1d1e24, #2e2e30) !important;";
-
-        // Menambahkan CSS gradient ke latar belakang
-        // document.getElementById("surveyVizPanel").style.backgroundImage = "linear-gradient(to right, #FF7E5F, #feb47b)";
         setVizPanel(vizPanel);
     }
 
 
-
-    // const vizPanel = new VisualizationPanel(
-    //   survey.getAllQuestions(),
-    //   surveyResults,
-    //   vizPanelOptions
-    // );
-    // vizPanel.showHeader = false;
-    // vizPanel.backgroundColor = "gray";
-    // vizPanel.render(this.elem?.nativeElement);
 
     useEffect(() => {
         vizPanel.render("surveyVizPanel");

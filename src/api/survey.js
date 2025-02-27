@@ -30,3 +30,14 @@ export const getDetailSurveyByResponden = async (param) => {
     }
 }
 
+
+export const getAllChartByQuestion = async () => {
+    try {
+        const response = await apiClient.get(`/getallchart-dashboard-survey`)
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}
+

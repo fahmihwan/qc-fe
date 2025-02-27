@@ -57,7 +57,7 @@
 
 
 
-
+/* 
 .dashboardContainer {
   background: #1f2420;
   color: white;
@@ -68,12 +68,10 @@
 
 }
 .sa-question__content {
-  /* background: gray !important; */
-  /* background: linear-gradient(to top, #1d1e24, #2e2e30) !important; */
   color: white;
 }
 .sa-question__select-wrapper .sa-question__select  {
   background: gray !important;
   border-color: gray !important;
   color: white;
-}
+} */

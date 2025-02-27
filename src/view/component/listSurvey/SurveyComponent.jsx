@@ -30,9 +30,10 @@ function SurveyComponent() {
     //         setSurveyJson(getJson[0]);
     //     })
     // }, [kodeqr])
+    console.log(import.meta.env.VITE_API_BE_URL);
 
-
-
+    // "url": "https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json",
+    // "url": `${import.meta.env.VITE_API_BE_URL}/api/provinsi`,
 
 
     let informasiLokasi = {
@@ -45,48 +46,50 @@ function SurveyComponent() {
                 "title": "Nama Provinsi",
                 "isRequired": true,
                 "choicesByUrl": {
-                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json",
-                    "valueName": "id",
-                    "titleName": "name"
+                    "url": `${import.meta.env.VITE_API_BE_URL}/api/provinsi`,
+                    "valueName": "provinsi_id",
+                    "titleName": "nama_provinsi",
+                    "path": "data"
                 }
             }, {
                 "type": "dropdown",
-                "name": "regency_id",
+                "name": "kabkota_id",
                 "title": "Nama Kabupaten/Kota",
                 "isRequired": true,
                 "choicesByUrl": {
-                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/regencies/{province_id}.json",
-                    "valueName": "id",
-                    "titleName": "name"
+                    "url": `${import.meta.env.VITE_API_BE_URL}/api/kabkota/{province_id}`,
+                    "valueName": "kabkota_id",
+                    "titleName": "nama_kabupaten_kota",
+                    "path": "data"
                 }
             },
-            {
-                "type": "dropdown",
-                "name": "district_id",
-                "isRequired": true,
-                "title": "Nama Kecamatan",
-                "choicesByUrl": {
-                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/districts/{regency_id}.json",
-                    "valueName": "id",
-                    "titleName": "name"
-                }
-            },
-            {
-                "type": "dropdown",
-                "name": "village_id",
-                "isRequired": true,
-                "title": "Nama Desa",
-                "choicesByUrl": {
-                    "url": "https://www.emsifa.com/api-wilayah-indonesia/api/villages/{district_id}.json",
-                    "valueName": "id",
-                    "titleName": "name"
-                }
-            },
-            {
-                "type": "text",
-                "name": "gps",
-                "title": "Koordinat GPS (Opsional)"
-            }
+            // {
+            //     "type": "dropdown",
+            //     "name": "district_id",
+            //     "isRequired": true,
+            //     "title": "Nama Kecamatan",
+            //     "choicesByUrl": {
+            //         "url": "https://www.emsifa.com/api-wilayah-indonesia/api/districts/{regency_id}.json",
+            //         "valueName": "id",
+            //         "titleName": "name"
+            //     }
+            // },
+            // {
+            //     "type": "dropdown",
+            //     "name": "village_id",
+            //     "isRequired": true,
+            //     "title": "Nama Desa",
+            //     "choicesByUrl": {
+            //         "url": "https://www.emsifa.com/api-wilayah-indonesia/api/villages/{district_id}.json",
+            //         "valueName": "id",
+            //         "titleName": "name"
+            //     }
+            // },
+            // {
+            //     "type": "text",
+            //     "name": "gps",
+            //     "title": "Koordinat GPS (Opsional)"
+            // }
         ]
     }
 
@@ -130,6 +133,10 @@ function SurveyComponent() {
                 for (let i = 0; i < str.length; i++) {
                     if (!isNaN(str[i]) && str[i] !== ' ') {
                         result += str[i];
+                    } else if (str == 'province_id') {
+                        result = '0'
+                    } else if (str == 'kabkota_id') {
+                        result = '0'
                     }
                 }
                 return result;
@@ -193,6 +200,7 @@ function SurveyComponent() {
 
                 if (findByName) {
                     mappingQuestionFix[i].name = findByName.key
+
                     if (mappingQuestionFix[i].type == 'checkbox') {
                         mappingQuestionFix[i].value = findByName?.value?.join('~');
                     } else if (mappingQuestionFix[i].type == 'tagbox') {
@@ -200,61 +208,25 @@ function SurveyComponent() {
                     } else {
                         mappingQuestionFix[i].value = findByName.value
                     }
+
+
                 }
             }
             let finalResult = {
+                informasi_lokasi: {
+                    provinsi_id: sender.data?.province_id,
+                    kabkota_id: sender.data?.kabkota_id,
+                },
                 kode: sender.jsonObj.kode,
                 data: mappingQuestionFix,
             }
             storeSurveyDinamis(finalResult)
-            // console.log(finalResult);
 
 
         } catch (error) {
             alert('uppsss', error)
         }
 
-
-        // let getPagesJson = sender.jsonObj.pages;
-        // // console.log(getPagesJson);
-        // let arrConcat = []
-        // for (let i = 0; i < getPagesJson.length; i++) {
-        //     const getElements = getPagesJson[i].elements
-        //     for (let j = 0; j < getElements.length; j++) {
-        //         let concatText = `${getElements[j].title}~${getElements[j].no}`
-        //         arrConcat.push(concatText);
-        //     }
-        // }
-
-        // let duplicateSender = sender.data;
-
-
-
-        // const senderData = Object.entries(sender.data).map(([key, value]) => ({ key, value }));
-        // if (arrConcat.length == senderData.length) {
-        //     for (let x = 0; x < senderData.length; x++) {
-
-        //         duplicateSender[senderData[x].key] = `${duplicateSender[senderData[x].key]}`
-        //         if (`${duplicateSender[senderData[x].key]}`.includes('~')) {
-        //             duplicateSender[senderData[x].key] = `${duplicateSender[senderData[x].key]}`.split('~').join('-')
-        //         }
-        //         duplicateSender[senderData[x].key] = `${duplicateSender[senderData[x].key]}~${arrConcat[x]}`
-
-        //     }
-
-        //     let payload = {
-        //         title: sender.jsonObj.title,
-        //         kode: sender.jsonObj.kode,
-        //         // core: {
-        //         //     kode: sender.jsonObj.kode,
-        //         // },
-        //         data: duplicateSender
-        //     }
-        //     // console.log(payload);
-        //     // storeSurveyDinamis(payload)
-        // } else {
-        //     alert('terdapat kesalahan mapping survey')
-        // }
     });
 
 
