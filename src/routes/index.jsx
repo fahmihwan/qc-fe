@@ -46,7 +46,7 @@ const routes = createBrowserRouter([
     },
     {
         path: '*',
-        element: <NotFoundPage />
+        element: <ProtectedRouteAuthenticated element={<NotFoundPage />} />
     }
 ]);
 

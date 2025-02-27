@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import LayoutAdmin from '../layout/LayoutAdmin'
-import { IconGempaSVG, IconPointMapSVG, IconPointSVG, IconXSVG } from '../component/IconSvg'
+import { IconGempaSVG, IconPointMapSVG, IconPointSVG, IconWarningSVG, IconXSVG } from '../component/IconSvg'
 import IndonesiaMap from '../component/IndonesiaMap'
 import { TableForMagnitudoFive } from '../component/allGempaTables/TableForMagnitudoFive'
 import { TableForDirasakan } from '../component/allGempaTables/TableForDirasakan'
@@ -146,6 +146,8 @@ const Gempa = () => {
 
     const ModalDetailGempa = ({ dataDetail }) => {
         console.log("modal detil gempa, ", dataDetail)
+        const [shakeMapURL, setShakeMapURL] = useState(null)
+
         const shakeMapCreator = () => {
             const monthMap = {
                 "Jan": "01", "Feb": "02", "Mar": "03", "Apr": "04",
@@ -158,6 +160,13 @@ const Gempa = () => {
             console.log(`ini dari modal detail gempa shakemapcreator https://data.bmkg.go.id/DataMKG/TEWS/${year}${monthMap[month]}${day.padStart(2, '0')}${time.replace(/:/g, '')}.mmi.jpg`)
             return `https://data.bmkg.go.id/DataMKG/TEWS/${year}${monthMap[month]}${day.padStart(2, '0')}${time.replace(/:/g, '')}.mmi.jpg`;
         }
+
+        useEffect(() => {
+            if(dataDetail){
+                setShakeMapURL(shakeMapCreator())
+            }
+        }, [dataDetail])
+
         return (
             <motion.div
                 className='fixed z-50 inset-0 flex items-center justify-center bg-black bg-opacity-70'
@@ -170,7 +179,6 @@ const Gempa = () => {
                 <motion.div
                     className='bg-white rounded-[15px] dark:bg-dark-mode-bg lg:max-w-[60%] shadow-lg transform transition-all duration-300 opacity-100 scale-100'
                     onClick={(e) => e.stopPropagation()}
-                    variants={fadeIn("up", 0.1)}
                     initial="hidden"
                     animate={"show"}
                     viewport={{once: true, amount: 0.5}}
@@ -188,9 +196,32 @@ const Gempa = () => {
                     </div>
                     <div className='h-[1px] dark:bg-white bg-dark-mode'></div>
                     <div className='grid grid-cols-2 '>
-                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode-bg'>
-                            <img src={shakeMapCreator()} className='w-full' />
+                        <div className='px-5 py-[24px] dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode-bg flex justify-center items-center h-full'>
+                            {
+                                shakeMapURL
+                                ? <img src={shakeMapURL} className='w-full' />
+                                : <div className='flex flex-col items-center justify-center gap-6 py-[50px] px-[25px] border dark:border-dark-border border-light-border rounded-[10px] dark:bg-dark-mode-v2'>
+                                        <div className="h-[69px] w-[69px]">
+                                            <IconWarningSVG />
+                                        </div>
+                                        <div className="font-bold text-center text-2xl text-black dark:text-white mt-[17px] ml-6 mb-[12px]">
+                                            Gambar tidak tersedia !
+                                        </div>
+                                    </div>
+                            }
                         </div>
+
+                        {/* <div className='px-5 py-[24px] h-full dark:border-white border-r-[1px] border-dark-mode dark:bg-dark-mode-bg'>
+                            
+                            <div className='items-center mx-auto my-auto  gap-6 flex flex-col align-middle px-[50px] py-[25px] w-fit border dark:border-dark-border border-light-border rounded-[10px] dark:bg-dark-mode-v2'>
+                                <div className="h-[69px] w-[69px]">
+                                    <IconWarningSVG />
+                                </div>
+                                <div className="font-bold text-center text-2xl text-black dark:text-white mt-[17px] ml-6 mb-[12px]">
+                                    Gambar tidak tersedia !
+                                </div>
+                            </div>
+                        </div> */}
                         <div className='p-6 dark:bg-dark-mode-v2'>
                             <MiniComponentStatusGunung status={dataDetail.Potensi ? dataDetail.Potensi : "Gempa Dirasakan"} />
                             <div className='mt-[10px] dark:text-white text-xs'>{dataDetail.Tanggal}, {dataDetail.Jam}</div>

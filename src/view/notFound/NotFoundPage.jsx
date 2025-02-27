@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { RingLoader } from "react-spinners";
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import { NavbarEl } from "../component/NavbarEl";
 
 const NotFoundPage = () => {
     const [isLoading, setIsLoading] = useState(false)
@@ -21,25 +22,28 @@ const NotFoundPage = () => {
                     />
                 </div>
             ) : (
-                <div className="bg-dark-mode-bg w-screen h-screen">
-                    <div className="w-full h-full bg-[url('/assets/img/background.png')] bg-cover flex justify-center items-center">
-                        <motion.div 
-                            className="border-[3px] flex flex-col items-center border-light-border rounded-[15px] dark:bg-dark-mode-bg dark:border-dark-border py-[50px] px-[140px]"
-                            variants={fadeIn("up", 0.2)}
-                            initial="hidden"
-                            whileInView={"show"}
-                            viewport={{once: true, amount: 0.7}}
-                        >
-                            <div className="h-[107px] w-[107px]">
-                                <IconWarningSVG />
-                            </div>
-                            <div className="font-bold text-center text-2xl text-black dark:text-white mt-[17px] mb-[12px]">
-                                404 Not Found
-                            </div>
-                            <div className="text-center text-2xl text-black dark:text-white mb-[25px]">
-                                URL yang diminta tidak ditemukan di server ini.
-                            </div>
-                        </motion.div>
+                <div className="flex flex-col min-h-screen">
+                    <NavbarEl/>
+                    <div className="dark:bg-dark-mode-bg flex flex-col flex-grow">
+                        <div className="w-full flex-grow bg-[url('/assets/img/background.png')] bg-cover flex justify-center items-center">
+                            <motion.div 
+                                className="border-[3px] flex flex-col items-center border-light-border rounded-[15px] dark:bg-dark-mode-bg dark:border-dark-border py-[50px] px-[140px]"
+                                variants={fadeIn("up", 0.2)}
+                                initial="hidden"
+                                whileInView={"show"}
+                                viewport={{once: true, amount: 0.7}}
+                            >
+                                <div className="h-[107px] w-[107px]">
+                                    <IconWarningSVG />
+                                </div>
+                                <div className="font-bold text-center text-2xl text-black dark:text-white mt-[17px] mb-[12px]">
+                                    404 Not Found
+                                </div>
+                                <div className="text-center text-2xl text-black dark:text-white mb-[25px]">
+                                    URL yang diminta tidak ditemukan di server ini.
+                                </div>
+                            </motion.div>
+                        </div>
                     </div>
                 </div>
             )}
