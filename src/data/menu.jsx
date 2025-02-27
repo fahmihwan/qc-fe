@@ -93,7 +93,11 @@ const menu = [
                 link: '/dashboard-hasil-survey',
                 icon: <IconDashboardSVG />
             },
-
+            {
+                title: 'Other Dashboard Survey',
+                link: '/other-dashboard-survey',
+                icon: <IconDashboardSVG />
+            },
 
 
         ],

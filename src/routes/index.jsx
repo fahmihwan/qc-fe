@@ -16,6 +16,7 @@ import LayoutAdmin from "../view/layout/LayoutAdmin";
 import DashboardSurvey from "../view/survey/DashboardSurvey";
 import DetailDashboardSurvey from "../view/survey/DetailDashboardSurvey";
 import NotFoundPage from "../view/notFound/NotFoundPage";
+import OtherDashboardSurvey from "../view/survey/OtherDashboardSurvey";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -46,6 +47,7 @@ const routes = createBrowserRouter([
             { path: "/dashboard-hasil-survey/:detail", element: <DetailDashboardSurvey /> },
             { path: "/generate-survey", element: <GenerateSurvey /> },
             { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
+            { path: "/other-dashboard-survey", element: <OtherDashboardSurvey /> }
         ]
     },
     {
