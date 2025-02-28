@@ -146,6 +146,9 @@ const DetailDashboardSurvey = () => {
                         <BarChartEL data={responseBar} />
                     </div>
                     <div className='border w-3/12 rounded-[10px] p-5   dark:border-dark-border border-light-border'>
+                        <div className='text-center py-5'>
+                            <p>Kendala Pengendalian hama</p>
+                        </div>
                         <WordCloud
                             data={responseWorldCloud}
                             // width={500}
