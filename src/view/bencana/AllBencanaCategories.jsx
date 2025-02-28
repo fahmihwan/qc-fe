@@ -45,6 +45,8 @@ const AllBencanaCategories = () => {
     const fetchData = async(startDateInput, endDateInput, provinceIdInput = null) => {
         try{
             // console.log("dari fetch data: ", provinceIdInput)
+            console.log("start date fetch data", startDateInput)
+            console.log("end date fetch data", endDateInput)
             if(!startDate && !endDate){
                 console.error("start date and end date dont exist")
                 return
@@ -62,16 +64,15 @@ const AllBencanaCategories = () => {
         }
     }
 
-    const fetchDataAsync = async (province_id = 0) => {
-        setFixedStartDate(startDate)
-        setFixedEndDate(endDate)
+    const fetchDataAsync = async (province_id, start = startDate, end = endDate) => {
         if (fixedStartDate && fixedEndDate) {
             console.log(selectedProvinceCode)
+            console.log("ini province_id", province_id)
             try {
                 const { responseSummary, responseBencana } = await fetchData(
-                    formatDate(startDate), 
-                    formatDate(endDate), 
-                    province_id
+                    formatDate(start), 
+                    formatDate(end), 
+                    province_id ? province_id : 0
                 );
                 setDataSummary(responseSummary.data[0]);
                 setDataBencana(responseBencana.data[0]);
@@ -88,10 +89,22 @@ const AllBencanaCategories = () => {
     };
 
     useEffect(() => {
-        if(dataSummary === null & dataBencana === null){
-            fetchDataAsync()
+        if(dataSummary === null && dataBencana === null){
+            fetchDataAsync(0)
         }
     },[])
+
+    // useEffect(() => {
+    //     setFixedStartDate(startDate)
+    //     setFixedEndDate(endDate)
+    // }, [selectedProvinceCode])
+
+    // useEffect(() => {
+    //     if (fixedStartDate && fixedEndDate) {
+    //         console.log("ini fetching lagi")
+    //         fetchDataAsync(selectedProvinceCode);
+    //     }
+    // }, [fixedStartDate, fixedEndDate]);
 
     const {response} = []
 
@@ -178,21 +191,71 @@ const AllBencanaCategories = () => {
             }
         }
     
-    const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
-        console.log("dapat nama provinsi, kode prov", namaProvinsi, kodeProvinsi)
+        
+    const handleStartDateChange = (newStartDate) => {
+        setStartDate(newStartDate)
+        setEndDate(newStartDate)
+        setMinEndDate(newStartDate)
+    }
+    
+    const onDateChange = async(province_code = null) => {
+        console.log("ini dari onDateChange", province_code)
         setIsLoading(true)
         setFixedStartDate(startDate)
         setFixedEndDate(endDate)
-        console.log("start date", startDate)
-        console.log("end date", endDate) 
-        await fetchDataAsync(kodeProvinsi).then(() => {
-            setIsProvinceClicked(true)
-            setSelectedProvinceCode(kodeProvinsi)
-            setSelectedProvinceName(namaProvinsi)
+        setSelectedProvinceCode(province_code)
+        await fetchDataAsync(province_code).then(() => {
+            setFixedStartDate(startDate)
+            setFixedEndDate(endDate)
         })
-        console.log('Ini provinsi diklik  test');
     }
 
+    const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
+        console.log("Klik provinsi:", namaProvinsi, kodeProvinsi);
+        // setIsLoading(true);
+        console.log("ini start date on province click", startDate)
+        console.log("ini end date on province click", endDate)
+
+        setIsLoading(true)
+        setSelectedProvinceCode(kodeProvinsi);
+
+        setStartDate((currentStartDate) => {
+            setEndDate((currentEndDate) => {
+                fetchDataAsync(kodeProvinsi, currentStartDate, currentEndDate);
+                setIsProvinceClicked(true)
+                return currentEndDate;
+            });
+            return currentStartDate;
+        });
+        // await onDateChange(kodeProvinsi).then(() => {
+        //     setIsProvinceClicked(true);
+        //             setSelectedProvinceCode(kodeProvinsi);
+        //             setSelectedProvinceName(namaProvinsi);
+        // })
+    
+        // try {
+        //     setFixedStartDate(startDate)
+        //     setFixedEndDate(endDate)
+        //     await fetchDataAsync(kodeProvinsi).then(() => {
+        //         setFixedStartDate(startDate)
+        //         setFixedEndDate(endDate)
+        //         setIsProvinceClicked(true);
+        //         setSelectedProvinceCode(kodeProvinsi);
+        //         setSelectedProvinceName(namaProvinsi);
+        //     })
+        //     // await fetchDataAsync(kodeProvinsi);
+        //     // console.log("Fetch data selesai untuk provinsi:", kodeProvinsi);
+            
+        //     // setIsProvinceClicked(true);
+        //     // setSelectedProvinceCode(kodeProvinsi);
+        //     // setSelectedProvinceName(namaProvinsi);
+        // } catch (error) {
+        //     console.error("Error di onProvinceClick:", error);
+        // } finally {
+        //     console.log("Selesai eksekusi onProvinceClick");
+        // }
+    };
+        
     const resetSelection = async() => {
         setIsLoading(true)
         setIsProvinceClicked(false);
@@ -200,19 +263,6 @@ const AllBencanaCategories = () => {
         setSelectedProvinceCode(null);
         await fetchDataAsync()
     };
-    
-    const handleStartDateChange = (newStartDate) => {
-        setStartDate(newStartDate)
-        setEndDate(newStartDate)
-        setMinEndDate(newStartDate)
-    }
-
-    const onDateChange = async() => {
-        setIsLoading(true)
-        setFixedStartDate(startDate)
-        setFixedEndDate(endDate)
-        await fetchDataAsync(selectedProvinceCode)
-    }
 
     const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked}/>, [isProvinceClicked, selectedProvinceCode])
     // console.log("responseSummary ", responseSummary)
@@ -249,11 +299,11 @@ const AllBencanaCategories = () => {
                             <div className='flex flex-row z-50 gap-4 items-center'>
                                 <div className='dark:text-white'> Dari : </div>
                                 <motion.div
-                                    whileTap={{ scale: 0.95 }}
+                                    // whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     <Datepicker 
-                                        className='w-[296px]' 
+                                        className='w-[296px] z-50' 
                                         language='id' 
                                         theme={themeDatePicker}
                                         datatype='yyyy-MM-dd'
@@ -265,11 +315,11 @@ const AllBencanaCategories = () => {
                                 </motion.div>
                                 <div className='dark:text-white'> Sampai : </div>
                                 <motion.div
-                                    whileTap={{ scale: 0.95 }}
+                                    // whileTap={{ scale: 0.95 }}
                                     whileHover={{ scale: 1.05 }}
                                 >
                                     <Datepicker 
-                                        className='w-[296px]' 
+                                        className='w-[296px] z-50' 
                                         language='id' 
                                         theme={themeDatePicker}
                                         datatype='yyyy-MM-DD'
@@ -282,7 +332,7 @@ const AllBencanaCategories = () => {
                             </div>
                             <div className='flex flex-row gap-6'>
                                 <motion.button
-                                    onClick={onDateChange}
+                                    onClick={() => onDateChange(selectedProvinceCode)}
                                     className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
                                     type="button"
                                     whileTap={{ scale: 0.95 }}

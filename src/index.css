@@ -36,6 +36,9 @@
     }
   }
   
+path.leaflet-interactive:focus {
+  outline: none;
+}
 /* #surveyVizPanel {
     background-color: red;
     padding: 20px;
