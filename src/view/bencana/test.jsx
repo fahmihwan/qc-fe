@@ -94,18 +94,6 @@ const AllBencanaCategories = () => {
         }
     },[])
 
-    // useEffect(() => {
-    //     setFixedStartDate(startDate)
-    //     setFixedEndDate(endDate)
-    // }, [selectedProvinceCode])
-
-    // useEffect(() => {
-    //     if (fixedStartDate && fixedEndDate) {
-    //         console.log("ini fetching lagi")
-    //         fetchDataAsync(selectedProvinceCode);
-    //     }
-    // }, [fixedStartDate, fixedEndDate]);
-
     const {response} = []
 
     const themeDatePicker = {
@@ -227,33 +215,6 @@ const AllBencanaCategories = () => {
             });
             return currentStartDate;
         });
-        // await onDateChange(kodeProvinsi).then(() => {
-        //     setIsProvinceClicked(true);
-        //             setSelectedProvinceCode(kodeProvinsi);
-        //             setSelectedProvinceName(namaProvinsi);
-        // })
-    
-        // try {
-        //     setFixedStartDate(startDate)
-        //     setFixedEndDate(endDate)
-        //     await fetchDataAsync(kodeProvinsi).then(() => {
-        //         setFixedStartDate(startDate)
-        //         setFixedEndDate(endDate)
-        //         setIsProvinceClicked(true);
-        //         setSelectedProvinceCode(kodeProvinsi);
-        //         setSelectedProvinceName(namaProvinsi);
-        //     })
-        //     // await fetchDataAsync(kodeProvinsi);
-        //     // console.log("Fetch data selesai untuk provinsi:", kodeProvinsi);
-            
-        //     // setIsProvinceClicked(true);
-        //     // setSelectedProvinceCode(kodeProvinsi);
-        //     // setSelectedProvinceName(namaProvinsi);
-        // } catch (error) {
-        //     console.error("Error di onProvinceClick:", error);
-        // } finally {
-        //     console.log("Selesai eksekusi onProvinceClick");
-        // }
     };
         
     const resetSelection = async() => {
@@ -265,7 +226,6 @@ const AllBencanaCategories = () => {
     };
 
     const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked}/>, [isProvinceClicked, selectedProvinceCode])
-    // console.log("responseSummary ", responseSummary)
 
     return (
         <>
@@ -370,34 +330,6 @@ const AllBencanaCategories = () => {
                             >
                                 <div className=' w-[100%] h-[500px]'>
                                     {IndonesiaMapMemoized}
-                                </div>
-                            </motion.div>
-
-                            <motion.div 
-                                className="overflow-hidden mt-6 flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
-                                variants={fadeIn("up", 0.2)}
-                                initial="hidden"
-                                whileInView={"show"}
-                                viewport={{once: true, amount: 0.7}}
-                            >
-                                <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
-                                    <Marquee>
-                                        <div className="flex gap-10 overflow-hidden">
-                                                {[...Array(5)].map((_, i) => (
-                                                    <div key={i} className="flex whitespace-nowrap  w-max">
-                                                        <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
-                                                        <span className="dark:text-white text-xl font-bold">Mag: </span>
-                                                        <span className="text-green-custom text-xl">3.3 </span>
-                                                        <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
-                                                        <span className="dark:text-white text-xl font-bold">Lok: </span>
-                                                        <span className="text-green-custom text-xl">4.09 LS </span>
-                                                        <span className="dark:text-white text-xl">, </span>
-                                                        <span className="text-green-custom text-xl">121.80 BT </span>
-                                                        <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                    </Marquee>
                                 </div>
                             </motion.div>
                         </div>

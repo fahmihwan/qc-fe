@@ -53,7 +53,7 @@ const IndonesiaMap = ({
     const getEarthquakeColor = (depth) => {
         if (depth <= 50) return "rgba(255, 0, 0, 1)";
         if (depth <= 100) return "rgba(255, 165, 0, 1)";
-        if (depth <= 250) return "rgba(255, 255, 0, 1)";
+        if (depth <= 250) return "rgba(230, 230, 0, 1)";
         if (depth <= 600) return "rgba(0, 128, 0, 1)";
         return "rgba(0, 0, 255, 1)";
     };
@@ -71,7 +71,7 @@ const IndonesiaMap = ({
             zoom={4.5} 
             minZoom={1}
             maxZoom={12}
-            className="w-full h-full rounded-[10px] border border-light-border dark:border-dark-border overflow-hidden"
+            className="w-full h-full rounded-[10px] border z-10 border-light-border dark:border-dark-border overflow-hidden"
         >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <GeoJSON 
@@ -103,10 +103,12 @@ const IndonesiaMap = ({
                             eventHandlers={{ click: () => onEarthquakePointClicked(data.Id) }}>
                             <Popup>Magnitude: {data.Magnitude}</Popup>
                         </Marker>
-                        <Marker key={`text-${index}`} position={[lat + 0.2, lon - 0.1]} 
+                        <Marker key={`text-${index}`} position={[lat, lon]} 
                             icon={L.divIcon({
                                 className: "earthquake-text",
-                                html: `<div style='color: ${color}; font-size: 12px; font-weight: bold; padding: 2px 4px; border-radius: 3px;'>${data.Magnitude}</div>`
+                                iconSize: [30, 15],
+                                iconAnchor: [15, 30],
+                                html: `<div style='color: ${color}; font-size: 12px; font-weight: bold; text-align: center; background: rgba(255, 255, 255, 0.7); padding: 2px 4px; border-radius: 3px;'>${data.Magnitude}</div>`
                             })} />
                     </>
                 );
