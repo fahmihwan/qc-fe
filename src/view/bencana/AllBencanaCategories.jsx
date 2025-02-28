@@ -199,15 +199,26 @@ const AllBencanaCategories = () => {
     }
     
     const onDateChange = async(province_code = null) => {
-        console.log("ini dari onDateChange", province_code)
-        setIsLoading(true)
-        setFixedStartDate(startDate)
-        setFixedEndDate(endDate)
-        setSelectedProvinceCode(province_code)
-        await fetchDataAsync(province_code).then(() => {
-            setFixedStartDate(startDate)
-            setFixedEndDate(endDate)
-        })
+        // console.log("ini dari onDateChange", province_code)
+        // setIsLoading(true)
+        // setFixedStartDate(startDate)
+        // setFixedEndDate(endDate)
+        // setSelectedProvinceCode(province_code)
+        // await fetchDataAsync(province_code).then(() => {
+        //     setFixedStartDate(startDate)
+        //     setFixedEndDate(endDate)
+        // })
+        console.log("ini dari onDateChange", province_code);
+        setIsLoading(true);
+
+        const newStartDate = startDate;
+        const newEndDate = endDate;
+
+        setFixedStartDate(newStartDate);
+        setFixedEndDate(newEndDate);
+        setSelectedProvinceCode(province_code);
+
+        await fetchDataAsync(province_code, newStartDate, newEndDate);
     }
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
