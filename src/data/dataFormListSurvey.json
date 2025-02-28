@@ -105,7 +105,7 @@
             },
             {
               "type": "text",
-              "name": "question5-Inputopsi-ya_meningkat",
+              "name": "question5-Inputopsi-ya_menurun",
               "visibleIf": "{question5} = 'Ya (menurun)'",
               "title": "Jika pilih Ya (menurun) (kuintal/ha)",
               "isRequired": true
@@ -240,7 +240,7 @@
             },
             {
               "type": "text",
-              "name": "question5-Inputopsi-ya_meningkat",
+              "name": "question5-Inputopsi-ya_menurun",
               "visibleIf": "{question5} = 'Ya (menurun)'",
               "title": "Jika pilih Ya (menurun) (kuintal/ha)",
               "isRequired": true
@@ -375,7 +375,7 @@
             },
             {
               "type": "text",
-              "name": "question5-Inputopsi-ya_meningkat",
+              "name": "question5-Inputopsi-ya_menurun",
               "visibleIf": "{question5} = 'Ya (menurun)'",
               "title": "Jika pilih Ya (menurun) (kuintal/ha)",
               "isRequired": true
@@ -510,7 +510,7 @@
             },
             {
               "type": "text",
-              "name": "question5-Inputopsi-ya_meningkat",
+              "name": "question5-Inputopsi-ya_menurun",
               "visibleIf": "{question5} = 'Ya (menurun)'",
               "title": "Jika pilih Ya (menurun) (kuintal/ha)",
               "isRequired": true
@@ -645,7 +645,7 @@
             },
             {
               "type": "text",
-              "name": "question5-Inputopsi-ya_meningkat",
+              "name": "question5-Inputopsi-ya_menurun",
               "visibleIf": "{question5} = 'Ya (menurun)'",
               "title": "Jika pilih Ya (menurun) (kuintal/ha)",
               "isRequired": true
@@ -780,7 +780,7 @@
             },
             {
               "type": "text",
-              "name": "question5-Inputopsi-ya_meningkat",
+              "name": "question5-Inputopsi-ya_menurun",
               "visibleIf": "{question5} = 'Ya (menurun)'",
               "title": "Jika pilih Ya (menurun) (kuintal/ha)",
               "isRequired": true

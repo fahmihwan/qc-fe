@@ -13,7 +13,7 @@ export const storeSurveyDinamis = async (payload) => {
 export const getAllSurvey = async (page, pageSize) => {
     try {
         const response = await apiClient.get(`/getallsurvey?page=${page}&limit=${pageSize}`)
-        return response.data
+        return response.dat
     } catch (error) {
         console.error("error fetching data: ", error)
         throw error
@@ -52,6 +52,17 @@ export const getBarChartSurvey = async () => {
         throw error
     }
 }
+
+export const getWorldCloudChartSurvey = async () => {
+    try {
+        const response = await apiClient.get(`/getworldcloud-dashboard-survey`)
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}
+
 
 
 

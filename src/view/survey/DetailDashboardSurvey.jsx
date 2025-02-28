@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import IndonesiaMap from '../component/IndonesiaMap'
 // import 'survey-analytics/survey.analytics.min.css';
 import { Bar, Line, Pie } from 'react-chartjs-2';
-import { getBarChartSurvey, getPieChartSurvey } from '../../api/survey';
+import { getBarChartSurvey, getPieChartSurvey, getWorldCloudChartSurvey } from '../../api/survey';
 
 
 import WordCloud from 'react-d3-cloud'
@@ -19,6 +19,7 @@ import BarChartTumpukCustomizeable from '../component/allCharts/BarChartTumpukCu
 const DetailDashboardSurvey = () => {
     const [responseBar, setResponseBar] = useState([])
     const [responsePie, setResponsePie] = useState([])
+    const [responseWorldCloud, setResponseWorldCloud] = useState([])
 
     // const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     // const [isLoading, setIsLoading] = useState(true)
@@ -40,22 +41,26 @@ const DetailDashboardSurvey = () => {
         getBarChartSurvey().then((res) => {
             setResponseBar(res.data)
         })
+
+        getWorldCloudChartSurvey().then((res) => {
+            setResponseWorldCloud(res.data)
+        })
+
     }, [])
 
-    const data = [
-        { text: 'Kebutuan', value: 1000 },
-        { text: 'Penebangan', value: 100 },
-        { text: 'Industri', value: 800 },
-        { text: 'Lahan', value: 100 },
-        { text: 'Aktivitas', value: 190 },
-        { text: 'Hutan', value: 420 },
-        { text: 'Liar', value: 30 },
-        { text: 'Kerusakan', value: 140 },
-        { text: 'Berpindah', value: 30 },
-        { text: 'Kebakaran', value: 240 },
-        { text: 'Ladang', value: 140 },
-    ];
-
+    // const data = [
+    //     { text: 'Kebutuan', value: 1000 },
+    //     { text: 'Penebangan', value: 100 },
+    //     { text: 'Industri', value: 800 },
+    //     { text: 'Lahan', value: 100 },
+    //     { text: 'Aktivitas', value: 190 },
+    //     { text: 'Hutan', value: 420 },
+    //     { text: 'Liar', value: 30 },
+    //     { text: 'Kerusakan', value: 140 },
+    //     { text: 'Berpindah', value: 30 },
+    //     { text: 'Kebakaran', value: 240 },
+    //     { text: 'Ladang', value: 140 },
+    // ];
 
     return (
         <div className="w-full text-white p-5">
@@ -135,13 +140,14 @@ const DetailDashboardSurvey = () => {
                     </div>
                     <div className='border w-3/12 rounded-[10px] p-5   dark:border-dark-border border-light-border'>
                         <WordCloud
-                            data={data}
+                            data={responseWorldCloud}
                             // width={500}
                             // height={500}
                             // font="Times"
                             // fontStyle="italic"
-                            // fontWeight="bold"
+                            fontWeight="bold"
                             fontSize={(word) => Math.log2(word.value) * 5}
+                            // fontSize={20}
                             rotate={0}
                         // spiral="rectangular"
                         // rotate={(word) => word.value % 360}
@@ -276,6 +282,8 @@ const BarChartEL = ({ data }) => {
     )
 }
 
+
+
 const LineChartEL = (params) => {
     return (
         <Line data={{
@@ -283,18 +291,18 @@ const LineChartEL = (params) => {
             datasets: [
                 {
                     label: 'naik', // Label dataset
-                    data: [65, 59, 80, 81, 56, 55], // Data untuk setiap bulan
+                    data: [0, 0, 0, 81, 56, 55], // Data untuk setiap bulan
                     fill: false, // Tidak ada area yang diisi
                     borderColor: 'rgb(75, 192, 192)', // Warna garis
                     tension: 0.1, // Tension untuk kelengkungan garis
                 },
-                {
-                    label: 'turun', // Label dataset
-                    data: [65, 20, 10, 81, 29, 50], // Data untuk setiap bulan
-                    fill: false, // Tidak ada area yang diisi
-                    borderColor: 'rgba(255, 99, 132, 1)', // Warna garis
-                    tension: 0.1, // Tension untuk kelengkungan garis
-                },
+                // {
+                //     label: 'turun', // Label dataset
+                //     data: [65, 20, 10, 81, 29, 50], // Data untuk setiap bulan
+                //     fill: false, // Tidak ada area yang diisi
+                //     borderColor: 'rgba(255, 99, 132, 1)', // Warna garis
+                //     tension: 0.1, // Tension untuk kelengkungan garis
+                // },
             ],
         }} options={{
             responsive: true,
