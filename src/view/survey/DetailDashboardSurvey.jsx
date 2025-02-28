@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import IndonesiaMap from '../component/IndonesiaMap'
 // import 'survey-analytics/survey.analytics.min.css';
 import { Bar, Line, Pie } from 'react-chartjs-2';
-import { getBarChartSurvey, getPieChartSurvey, getWorldCloudChartSurvey } from '../../api/survey';
+import { getBarChartSurvey, getlinechart, getPieChartSurvey, getWorldCloudChartSurvey } from '../../api/survey';
 
 
 import WordCloud from 'react-d3-cloud'
@@ -20,6 +20,7 @@ const DetailDashboardSurvey = () => {
     const [responseBar, setResponseBar] = useState([])
     const [responsePie, setResponsePie] = useState([])
     const [responseWorldCloud, setResponseWorldCloud] = useState([])
+    const [responseLine, setResponseLine] = useState([])
 
     // const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     // const [isLoading, setIsLoading] = useState(true)
@@ -45,6 +46,12 @@ const DetailDashboardSurvey = () => {
         getWorldCloudChartSurvey().then((res) => {
             setResponseWorldCloud(res.data)
         })
+
+
+        getlinechart().then((res) => {
+            setResponseLine(res.data);
+        })
+
 
     }, [])
 
@@ -130,7 +137,7 @@ const DetailDashboardSurvey = () => {
                         <div className='text-center py-5'>
                             <p>Perubahan Luas Pangan dalam setahun terakhir</p>
                         </div>
-                        <LineChartEL />
+                        <LineChartEL data={responseLine} />
                     </div>
                     <div className='border w-4/12 rounded-[10px]  mr-2 dark:border-dark-border border-light-border'>
                         <div className='text-center py-5'>
@@ -284,14 +291,29 @@ const BarChartEL = ({ data }) => {
 
 
 
-const LineChartEL = (params) => {
+const LineChartEL = ({ data }) => {
+
+    let chartData = {
+        labels: [],
+        data: []
+    }
+
+    // console.log(data);
+
+
+    data.forEach(item => {
+        chartData.labels.push(item.year);
+        chartData.data.push(item.sum);
+    });
+
+    // console.log(chartData);
     return (
         <Line data={{
-            labels: ['January', 'February', 'March', 'April', 'May', 'June'], // Label sumbu X
+            labels: chartData.labels, // Label sumbu X
             datasets: [
                 {
                     label: 'naik', // Label dataset
-                    data: [0, 0, 0, 81, 56, 55], // Data untuk setiap bulan
+                    data: chartData.data, // Data untuk setiap bulan
                     fill: false, // Tidak ada area yang diisi
                     borderColor: 'rgb(75, 192, 192)', // Warna garis
                     tension: 0.1, // Tension untuk kelengkungan garis

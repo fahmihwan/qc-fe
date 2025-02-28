@@ -64,5 +64,16 @@ export const getWorldCloudChartSurvey = async () => {
 }
 
 
+export const getlinechart = async () => {
+    try {
+        const response = await apiClient.get(`/getlinechart-dashboard-survey`)
+        return response.data
+    } catch (error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}
+
+
 
 
