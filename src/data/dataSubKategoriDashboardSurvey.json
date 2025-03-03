@@ -2,83 +2,453 @@
     "data": [
         {
             "title":"Luas Panen",
+            "topicTitle": "Statistik Luas Panen",
             "img": "/assets/icon/1.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/luas-panen",
+            "charts": [
+                {
+                    "title": "Perubahan luas pangan dalam setahun terakhir",
+                    "type": "line-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Jenis pangan yang digunakan",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Status kepemilikan pangan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Penyebab perubahan luas pangan",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },{
             "title":"Produktivitas",
+            "topicTitle": "Statistik Produktivitas",
             "img": "/assets/icon/2.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/produktivitas",
+            "charts": [
+                {
+                    "title": "Luas lahan yang dipanen VS hasil panen",
+                    "type": "line-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Perbandingan luas panen dengan hasil panen",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Faktor yang mempengaruhi produktivitas",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Produksi",
+            "topicTitle": "Statistik Produksi",
             "img": "/assets/icon/3.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/produksi",
+            "charts": [
+                {
+                    "title": "Kendala dalam produksi",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Musim tanam dalam setahun",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Jenis padi yang ditanam",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Penggunaan hasil panen",
+                    "type": "count-doughnut-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Luas Irigasi",
+            "topicTitle": "Statistik Luas Irigasi",
             "img": "/assets/icon/4.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/luas-irigasi",
+            "charts": [
+                {
+                    "title": "Kendala dalam irigasi",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Jenis irigasi yang digunakan",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Presentase lahan yang memiliki akses irigasi",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Jumlah Pupuk",
+            "topicTitle": "Statistik Jumlah Pupuk",
             "img": "/assets/icon/5.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/jumlah-pupuk",
+            "charts": [
+                {
+                    "title": "Tren ketersediaan pupuk",
+                    "type": "line-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Sumber pupuk",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Jenis Pupuk Yang Digunakan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Presentase Hama",
+            "topicTitle": "Statistik Presentase Hama",
             "img": "/assets/icon/6.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/presentase-hama",
+            "charts": [
+                {
+                    "title": "Metode pengendalian hama",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Jenis hama yang menyerang",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Luas lahan terdampak hama",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Kendala pengendalian hama",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Lahan Kosong",
+            "topicTitle": "Statistik Lahan Kosong",
             "img": "/assets/icon/7.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/lahan-kosong",
+            "charts": [
+                {
+                    "title": "Durasi Lahan Kosong",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Alasan lahan kosong",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Persentase lahan kosong",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Rencana penggunaan lahan kosong",
+                    "type": "count-doughnut-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Ketersediaan Komoditas",
+            "topicTitle": "Ketersediaan Komoditas",
             "img": "/assets/icon/8.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
+            "charts": [
+                {
+                    "title": "Ketersediaan komoditas",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Distribusi komoditas ke pasar",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Kenaikan harga komoditas",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Realisasi Pembangungan Lahan",
+            "topicTitle": "Realisasi Pembangungan Lahan",
             "img": "/assets/icon/9.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/realisasi-pembangunan-lahan",
+            "charts": [
+                {
+                    "title": "Perluasan lahan pertanian",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Status lahan baru",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Kendala pembangunan lahan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
 
         {
             "title":"Realisasi Distribusi Pangan",
+            "topicTitle": "Realisasi Distribusi Pangan",
             "img": "/assets/icon/10.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/realisasi-distribusi-pangan",
+            "charts": [
+                {
+                    "title": "Harga pangan akibat distribusi",
+                    "type": "line-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Distribusi pangan yang berjalan lancar",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Kendala dalam distribusi",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Efektivitas Program Bantuan Pangan",
+            "topicTitle": "Efektivitas Program Bantuan Pangan",
             "img": "/assets/icon/11.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/efektivitas-program-bantuan-pangan",
+            "charts": [
+                {
+                    "title": "Kendala bantunan pangan",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Kendala dalam distribusi",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Jenis pangan yang dibutuhkan",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Perubahan Pola Konsumsi Masyarakat",
+            "topicTitle": "Perubahan Pola Konsumsi Masyarakat",
             "img": "/assets/icon/12.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/perubahan-pola-konsumsi-masyarakat",
+            "charts": [
+                {
+                    "title": "Jenis perubahan konsumsi akibat harga",
+                    "type": "line-chart-bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Konsumsi pangan lokal VS impor",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Alasan memilih pangan import",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Keberlanjutan Produksi Pangan",
+            "topicTitle": "Keberlanjutan Produksi Pangan",
             "img": "/assets/icon/13.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/keberlanjutan-produksi-pangan",
+            "charts": [
+                {
+                    "title": "Akses petani ke sumber daya",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Kendala utama dalam produksi pangan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Efektivitas program pemerintah",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Pemanfaatan Lahan di Sekitar Batas Hutan",
+            "topicTitle": "Pemanfaatan Lahan di Sekitar Batas Hutan",
             "img": "/assets/icon/14.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/pemanfaatan-lahan",
+            "charts": [
+                {
+                    "title": "Penyebab utama konflik",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Konflik batas hutan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Pihak yang terlibat dalam konflik",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Potensi Konflik di Sekitar Batas Hutan",
+            "topicTitle": "Potensi Konflik di Sekitar Batas Hutan",
             "img": "/assets/icon/15.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout4",
+            "url":"/dashboard-hasil-survey/potensi-konflik",
+            "charts": [
+                {
+                    "title": "Ancaman deforestasi",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Program konservasi batas hutan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Pihak yang menjalankan program",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         },
         {
             "title":"Pelestarian dan Keberlanjutan Batas Hutan",
+            "topicTitle": "Pelestarian dan Keberlanjutan Batas Hutan",
             "img": "/assets/icon/16.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout5",
+            "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
+            "charts": [
+                {
+                    "title": "Program rehabilitasi hutan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": []
+                },
+                {
+                    "title": "Manfaat ekonomi dari konservasi",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": []
+                }
+            ]
         }
 
     ]
