@@ -95,17 +95,32 @@ function SurveyComponent() {
 
 
 
+    function getDataByKode(kode) {
+        // Menelusuri listFormSurvey dan mencari list berdasarkan kode
+        for (let i = 0; i < dataFormListSurvey.listFormSurvey.length; i++) {
+          const form = dataFormListSurvey.listFormSurvey[i];
+          const found = form.list.find(item => item.kode === kode);
+          if (found) {
+            return found; // Mengembalikan data yang ditemukan
+          }
+        }
+        return null; // Jika tidak ditemukan
+      }
+      
+
+    // == 'foodestate-tebu-statistikluaspanen'
     useEffect(() => {
-        let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == 'foodestate-tebu-statistikluaspanen')
+
+        let getJson = getDataByKode('foodestate-padi-realisasipembangunanlahan')
 
         if (getJson.length == 0) {
             alert('pertanyaan survey FE tidak ada')
             return false
         }
-        getJson[0].pages = [informasiLokasi, ...getJson[0].pages]
 
-        console.log(getJson[0]);
-        setSurveyJson(getJson[0]);
+        getJson.pages = [informasiLokasi, ...getJson.pages]
+
+        setSurveyJson(getJson);
     }, [])
 
     const survey = new Model(surveyJson);
