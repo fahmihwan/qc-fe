@@ -90,7 +90,7 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                                             to={x.link}
                                             className={`flex flex-row gap-3 items-center p-2 transition duration-75 rounded-lg ml-8 
                                             group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700
-                                            ${location.pathname === x.link ? "bg-gray-200 hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"}`}
+                                            ${location.pathname.includes(x.link) ? "bg-gray-200 hover:text-gray-900 dark:bg-gray-hover" : "text-gray-900"}`}
                                             onClick={(e) => e.stopPropagation()}
                                         >
 
