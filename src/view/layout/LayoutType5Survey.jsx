@@ -14,7 +14,8 @@ const LayoutType5Survey = ({
     selectedProvinceCode,
     selectedProvinceName,
     isProvinceClicked,
-    resetSelection
+    resetSelection,
+    children
 }) => {
 
     const IndonesiaMapMemoized = useMemo(() => 
@@ -35,7 +36,7 @@ const LayoutType5Survey = ({
                 whileInView={"show"}
                 viewport={{once: true, amount: 0.5}}
             >
-                <div className="flex flex-row justify-between lg:py-5 items-center w-full ">
+                <div className="flex flex-row justify-between lg:py-5 h-24 items-center w-full ">
                     <div className="flex flex-row gap-4 z-40 justify-center items-center dark:text-white">
                         <div className="text-sm flex items-center">Sub Kategori</div>
                         <div>
@@ -101,33 +102,37 @@ const LayoutType5Survey = ({
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.5}}
                     >
-                        <div className=' mb-10 md:mb-0  col-span-5 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
-                            {/* <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/> */}
+                        <div className=' mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                            {/* children pertama */}
+                            {children[0]}
                         </div>
-                        <div className=' col-span-3 dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
-                            {/* <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/> */}
+                        <div className=' col-span-3 dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                            {/* children kedua */}
+                            {children[1]}
                         </div>
                     </motion.div>
                 </div>
                 
                 <div className='w-full xl:col-span-2 flex flex-col overflow-hidden'>
                     <motion.div 
-                        className=' mx-5 h-[364px] mb-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                        className=' mx-5 h-[364px] mb-5 border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.5}}
                     >
-                        {/* isi children */}
+                        {/* children ketiga */}
+                        {children[2]}
                     </motion.div>
                     <motion.div 
-                        className=' mx-5 mb-5 h-[364px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                        className=' mx-5 mb-5 h-[364px] border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.5}}
                     >
-                        {/* isi children */}
+                        {/* children keempat */}
+                        {children[3]}
                     </motion.div>
 
                     {isProvinceClicked &&

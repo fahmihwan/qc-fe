@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import IndonesiaMap from '../component/IndonesiaMap';
 import { Link } from 'react-router-dom';
 
-const LayoutType4Survey = ({
+const LayoutType6Survey = ({
     topicTitle,
     selectedSubCategory,
     setSelectedSubCategory,
@@ -94,24 +94,21 @@ const LayoutType4Survey = ({
                             {IndonesiaMapMemoized}
                         </div>
                     </motion.div>
-
-                    <motion.div 
-                        className='h-[326px] grid ml-5 mb-5  mt-5 dark:bg-dark-mode-bg'
-                        variants={fadeIn("right", 0.3)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{once: true, amount: 0.5}}
-                    >
-                        <div className=' mb-10 md:mb-0 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
-                            {/* children pertama */}
-                            {children[0]}
-                        </div>
-                    </motion.div>
                 </div>
                 
                 <div className='w-full xl:col-span-2 flex flex-col overflow-hidden'>
                     <motion.div 
-                        className=' mx-5 h-[364px] mb-5 p-[15px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                        className=' mx-5 h-[364px] mb-5 border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
+                        variants={fadeIn("left", 0.3)}
+                        initial="hidden"
+                        whileInView={"show"}
+                        viewport={{once: true, amount: 0.5}}
+                    >
+                        {/* children pertama */}
+                        {children[0]}
+                    </motion.div>
+                    <motion.div 
+                        className=' mx-5 mb-5 h-[364px] border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                         variants={fadeIn("left", 0.3)}
                         initial="hidden"
                         whileInView={"show"}
@@ -119,16 +116,6 @@ const LayoutType4Survey = ({
                     >
                         {/* children kedua */}
                         {children[1]}
-                    </motion.div>
-                    <motion.div 
-                        className=' mx-5 mb-5 h-[364px] p-[15px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                        variants={fadeIn("left", 0.3)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{once: true, amount: 0.5}}
-                    >
-                        {/* children ketiga */}
-                        {children[2]}
                     </motion.div>
 
                     {isProvinceClicked &&
@@ -156,4 +143,4 @@ const LayoutType4Survey = ({
     )
 }
 
-export default LayoutType4Survey
+export default LayoutType6Survey

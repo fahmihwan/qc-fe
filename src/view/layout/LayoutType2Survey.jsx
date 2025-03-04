@@ -14,7 +14,8 @@ const LayoutType2Survey = ({
     selectedProvinceCode,
     selectedProvinceName,
     isProvinceClicked,
-    resetSelection
+    resetSelection,
+    children
 }) => {
 
     const IndonesiaMapMemoized = useMemo(() => 
@@ -35,7 +36,7 @@ const LayoutType2Survey = ({
                 whileInView={"show"}
                 viewport={{once: true, amount: 0.5}}
             >
-                <div className="flex flex-row justify-between lg:py-5 items-center w-full ">
+                <div className="flex flex-row justify-between lg:py-5 h-24 items-center w-full ">
                     <div className="flex flex-row gap-4 z-40 justify-center items-center dark:text-white">
                         <div className="text-sm flex items-center">Sub Kategori</div>
                         <div>
@@ -104,7 +105,8 @@ const LayoutType2Survey = ({
                         {/* <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/> */}
                     {/* </div> */}
                     <div className=' col-span-3 dark:text-white px-6 py-4 h-[402px] dark:border-dark-border border-light-border border rounded-[10px]  '>
-                        {/* <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/> */}
+                        {/* children ketiga */}
+                        {children[2]}
                     </div>
 
                     {isProvinceClicked &&
@@ -137,11 +139,13 @@ const LayoutType2Survey = ({
                     whileInView={"show"}
                     viewport={{once: true, amount: 0.5}}
                 >
-                    <div className=' mb-10 md:mb-0  col-span-4 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
-                        {/* <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/> */}
+                    <div className=' mb-10 md:mb-0  col-span-4 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                        {/* children pertama */}
+                        {children[0]}
                     </div>
-                    <div className=' col-span-5  dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
-                        {/* <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/> */}
+                    <div className=' col-span-5  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                        {/* children kedua */}
+                        {children[1]}
                     </div>
                 </motion.div>
             </div>
