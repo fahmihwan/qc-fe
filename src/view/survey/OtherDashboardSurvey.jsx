@@ -1,4 +1,6 @@
 import BarChartTumpukCustomizeable from "../component/allCharts/BarChartTumpukCustomizeable"
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../variants';
 
 const OtherDashboardSurvey = () => {
     const dummyData = {
@@ -80,12 +82,27 @@ const OtherDashboardSurvey = () => {
 
     const chartDummyData = {labels, datasets: datasets}
     console.log("ini chartDummyData", chartDummyData)
+
+    const legendItems = labelsMauDitumpuk.map((item, index) => ({
+        label: item,
+        color: colors[index] || 'rgba(192, 192, 192, 1)'
+    }))
     
     return (
-        <div className="flex flex-col">
-            {/* <div>test</div> */}
-            <BarChartTumpukCustomizeable data={chartDummyData} title={"Test 123"}/>
-        </div>
+        <motion.div 
+            className='mt-5 ml-5 w-fit border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+            variants={fadeIn("left", 0.3)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{once: true, amount: 0.5}}
+        >
+            <BarChartTumpukCustomizeable 
+                data={chartDummyData} 
+                title={"Test 123"} 
+                legendItems={legendItems}
+                width={"800px"}
+            />
+        </motion.div>
     )
 }
 
