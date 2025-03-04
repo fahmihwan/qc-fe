@@ -66,7 +66,9 @@ export const MenuEl = ({ menu, dropDown, toggleDropdown }) => {
                                     {d?.title}
                                 </span>
                                 <svg
-                                    className="w-3 h-3"
+                                    className={`w-3 h-3 transition-transform duration-300 ${
+                                        d?.title === dropDown ? "rotate-0" : "-rotate-90"
+                                    }`}
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 10 6"

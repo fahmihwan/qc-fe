@@ -309,8 +309,6 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         initial="hidden"
                                         whileInView={"show"}
                                         viewport={{once: true, amount: 0.5}}
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }} 
                                     >
                                         <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
                                     </motion.div>
