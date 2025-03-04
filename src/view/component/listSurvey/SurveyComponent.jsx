@@ -10,6 +10,7 @@ import dataFormListSurvey from './../../../data/dataFormListSurvey.json'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getDetailQRcode } from "../../../api/qrcode";
+import apiClient from "../../../api/api";
 
 
 
@@ -88,17 +89,17 @@ function SurveyComponent() {
     function getDataByKode(kode) {
         // Menelusuri listFormSurvey dan mencari list berdasarkan kode
         for (let i = 0; i < dataFormListSurvey.listFormSurvey.length; i++) {
-          const form = dataFormListSurvey.listFormSurvey[i];
-          const found = form.list.find(item => item.kode === kode);
-          if (found) {
-            return found; // Mengembalikan data yang ditemukan
-          }
+            const form = dataFormListSurvey.listFormSurvey[i];
+            const found = form.list.find(item => item.kode === kode);
+            if (found) {
+                return found; // Mengembalikan data yang ditemukan
+            }
         }
         return null; // Jika tidak ditemukan
-      }
-      
+    }
 
-      useEffect(() => {
+
+    useEffect(() => {
         getDetailQRcode(kodeqr).then((res) => {
             let getJson = getDataByKode(res.data[0]?.kode_topik)
             if (!getJson) {
@@ -226,6 +227,11 @@ function SurveyComponent() {
 
 
         } catch (error) {
+            apiClient.post(`/qrcode`, {
+                error: `ERROR FE SUBMIT SURVEY - message: ${error?.message} - code: ${error?.code} - stack: ${error?.stack} name: ${error?.name}`
+            })
+
+
             alert('uppsss', error)
         }
 
