@@ -8,6 +8,8 @@ import NotFoundPage from "../notFound/NotFoundPage"
 import topicsConfig from "../../data/dataSubKategoriDashboardSurvey.json"
 import { useParams } from "react-router-dom"
 import { useState } from "react"
+import LayoutType6Survey from "../layout/LayoutType6Survey"
+import ChartRenderer from "../component/SurveyChart/ChartRenderer"
 
 const getLayoutComponent = (
     layoutType,
@@ -19,7 +21,8 @@ const getLayoutComponent = (
     selectedProvinceCode,
     selectedProvinceName,
     isProvinceClicked,
-    resetSelection
+    resetSelection,
+    children
 ) => {
     console.log(layoutType)
 
@@ -32,7 +35,8 @@ const getLayoutComponent = (
         selectedProvinceCode,
         selectedProvinceName,
         isProvinceClicked,
-        resetSelection
+        resetSelection,
+        children
     }
 
     switch(layoutType) {
@@ -46,6 +50,8 @@ const getLayoutComponent = (
             return <LayoutType4Survey {...props}/>
         case "layout5":
             return <LayoutType5Survey {...props}/>
+        case "layout6":
+            return <LayoutType6Survey {...props}/>
         default:
             return <div className="text-center">Test 123</div>
     }
@@ -89,6 +95,15 @@ const DetailAllDashboardSurvey = () => {
     };
     // console.log("ini topic data", topicData)
 
+    const children = topicData.charts.map((chart, index) => (
+        <div key={index} className="w-full h-full">
+            <div className="dark:text-white font-bold text-xl text-left mb-4">
+                {chart.title}
+            </div>
+            <ChartRenderer type={chart.type} data={chart.dummyData.data} labels={chart.labels} colors={chart.colors}/>
+        </div>
+    ))
+
     return getLayoutComponent(
         layoutType,
         topicTitle,
@@ -99,7 +114,8 @@ const DetailAllDashboardSurvey = () => {
         selectedProvinceCode,
         selectedProvinceName,
         isProvinceClicked,
-        resetSelection
+        resetSelection,
+        children
     )
 }   
 
