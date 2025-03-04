@@ -21,16 +21,6 @@ function SurveyComponent() {
     const [surveyJson, setSurveyJson] = useState({})
 
 
-    // useEffect(() => {
-    //     getDetailQRcode(kodeqr).then((res) => {
-    //         let getJson = dataFormListSurvey.listFormSurvey.filter((d) => d.kode == res.data[0].kode_topik)
-    //         if (getJson.length == 0) {
-    //             alert('survey tidak ada')
-    //         }
-    //         setSurveyJson(getJson[0]);
-    //     })
-    // }, [kodeqr])
-    console.log(import.meta.env.VITE_API_BE_URL);
 
     // "url": "https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json",
     // "url": `${import.meta.env.VITE_API_BE_URL}/api/provinsi`,
@@ -108,20 +98,17 @@ function SurveyComponent() {
       }
       
 
-    // == 'foodestate-tebu-statistikluaspanen'
-    useEffect(() => {
+      useEffect(() => {
+        getDetailQRcode(kodeqr).then((res) => {
+            let getJson = getDataByKode(res.data[0]?.kode_topik)
+            if (!getJson) {
+                alert('survey tidak ada')
+            }
+            getJson.pages = [informasiLokasi, ...getJson.pages]
+            setSurveyJson(getJson);
+        })
+    }, [kodeqr])
 
-        let getJson = getDataByKode('foodestate-padi-realisasipembangunanlahan')
-
-        if (getJson.length == 0) {
-            alert('pertanyaan survey FE tidak ada')
-            return false
-        }
-
-        getJson.pages = [informasiLokasi, ...getJson.pages]
-
-        setSurveyJson(getJson);
-    }, [])
 
     const survey = new Model(surveyJson);
 

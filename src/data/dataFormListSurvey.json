@@ -2091,15 +2091,15 @@
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "Penyaluran bantuan tidak adil",
                       "text": "Penyaluran bantuan tidak adil"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "Tidak ada informasi jelas tentang penerima bantuan",
                       "text": "Tidak ada informasi jelas tentang penerima bantuan"
                     },
                     {
-                      "value": "Item 3",
+                      "value": "Adanya dugaan penyimpangan atau penyelewengan",
                       "text": "Adanya dugaan penyimpangan atau penyelewengan"
                     }
                   ],
@@ -2113,7 +2113,7 @@
         {
           "no":2,
           "title": "Efektivitas Program Bantuan Tebu",
-          "kode":"foodestate-padi-efektivitasprogrambantuanpangan",
+          "kode":"foodestate-tebu-efektivitasprogrambantuanpangan",
           "logoPosition": "right",
           "pages": [
             {
@@ -2271,15 +2271,15 @@
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "Penyaluran bantuan tidak adil",
                       "text": "Penyaluran bantuan tidak adil"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "Tidak ada informasi jelas tentang penerima bantuan",
                       "text": "Tidak ada informasi jelas tentang penerima bantuan"
                     },
                     {
-                      "value": "Item 3",
+                      "value": "Adanya dugaan penyimpangan atau penyelewengan",
                       "text": "Adanya dugaan penyimpangan atau penyelewengan"
                     }
                   ],
@@ -2292,8 +2292,8 @@
         },
         {
           "no":3,
-          "title": "Efektivitas Program Bantuan Tebu",
-          "kode":"foodestate-padi-efektivitasprogrambantuanpangan",
+          "title": "Efektivitas Program Bantuan Kedelai",
+          "kode":"foodestate-kedelai-efektivitasprogrambantuanpangan",
           "logoPosition": "right",
           "pages": [
             {
@@ -2451,15 +2451,15 @@
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "Penyaluran bantuan tidak adil",
                       "text": "Penyaluran bantuan tidak adil"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "Tidak ada informasi jelas tentang penerima bantuan",
                       "text": "Tidak ada informasi jelas tentang penerima bantuan"
                     },
                     {
-                      "value": "Item 3",
+                      "value": "Adanya dugaan penyimpangan atau penyelewengan",
                       "text": "Adanya dugaan penyimpangan atau penyelewengan"
                     }
                   ],
@@ -2472,8 +2472,8 @@
         },
         {
           "no":4,
-          "title": "Efektivitas Program Bantuan Tebu",
-          "kode":"foodestate-padi-efektivitasprogrambantuanpangan",
+          "title": "Efektivitas Program Bantuan Singkong",
+          "kode":"foodestate-singkong-efektivitasprogrambantuanpangan",
           "logoPosition": "right",
           "pages": [
             {
@@ -2631,15 +2631,15 @@
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "Penyaluran bantuan tidak adil",
                       "text": "Penyaluran bantuan tidak adil"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "Tidak ada informasi jelas tentang penerima bantuan",
                       "text": "Tidak ada informasi jelas tentang penerima bantuan"
                     },
                     {
-                      "value": "Item 3",
+                      "value": "Adanya dugaan penyimpangan atau penyelewengan",
                       "text": "Adanya dugaan penyimpangan atau penyelewengan"
                     }
                   ],
@@ -2652,8 +2652,8 @@
         },
         {
           "no":5,
-          "title": "Efektivitas Program Bantuan Tebu",
-          "kode":"foodestate-padi-efektivitasprogrambantuanpangan",
+          "title": "Efektivitas Program Bantuan Jagung",
+          "kode":"foodestate-jagung-efektivitasprogrambantuanpangan",
           "logoPosition": "right",
           "pages": [
             {
@@ -2811,15 +2811,15 @@
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "Penyaluran bantuan tidak adil",
                       "text": "Penyaluran bantuan tidak adil"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "Tidak ada informasi jelas tentang penerima bantuan",
                       "text": "Tidak ada informasi jelas tentang penerima bantuan"
                     },
                     {
-                      "value": "Item 3",
+                      "value": "Adanya dugaan penyimpangan atau penyelewengan",
                       "text": "Adanya dugaan penyimpangan atau penyelewengan"
                     }
                   ],
@@ -2832,8 +2832,8 @@
         },
         {
           "no":6,
-          "title": "Efektivitas Program Bantuan Tebu",
-          "kode":"foodestate-padi-efektivitasprogrambantuanpangan",
+          "title": "Efektivitas Program Bantuan Kelapa Sawit",
+          "kode":"foodestate-sawit-efektivitasprogrambantuanpangan",
           "logoPosition": "right",
           "pages": [
             {
@@ -2991,15 +2991,15 @@
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "Penyaluran bantuan tidak adil",
                       "text": "Penyaluran bantuan tidak adil"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "Tidak ada informasi jelas tentang penerima bantuan",
                       "text": "Tidak ada informasi jelas tentang penerima bantuan"
                     },
                     {
-                      "value": "Item 3",
+                      "value": "Adanya dugaan penyimpangan atau penyelewengan",
                       "text": "Adanya dugaan penyimpangan atau penyelewengan"
                     }
                   ],
