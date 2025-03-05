@@ -27,7 +27,7 @@ const LayoutType2Survey = ({
         [isProvinceClicked, selectedProvinceCode]
     )
     return (
-        <div>
+        <div className='min-h-screen'>
             {/* header */}
             <motion.div
                 className=" flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 mt-5 px-5 dark:bg-dark-mode-bg"
@@ -131,19 +131,19 @@ const LayoutType2Survey = ({
                 </motion.div>
             </div>
 
-            <div className='col-span-12 lg:col-span-5 '>
+            <div className='col-span-12 lg:col-span-5 h-fit mb-5'>
                 <motion.div 
-                    className='h-[326px] grid md:grid-cols-9 ml-5 sm:mr-5 mb-5 dark:bg-dark-mode-bg'
+                    className='grid md:grid-cols-9 ml-5 sm:mr-5 dark:bg-dark-mode-bg'
                     variants={fadeIn("right", 0.3)}
                     initial="hidden"
                     whileInView={"show"}
                     viewport={{once: true, amount: 0.5}}
                 >
-                    <div className=' mb-10 md:mb-0  col-span-4 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                    <div className='min-h-[326px] md:mb-0  col-span-4 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
                         {/* children pertama */}
                         {children[0]}
                     </div>
-                    <div className=' col-span-5  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                    <div className='min-h-[200px] md:min-h-[300px] flex flex-col col-span-5  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
                         {/* children kedua */}
                         {children[1]}
                     </div>
