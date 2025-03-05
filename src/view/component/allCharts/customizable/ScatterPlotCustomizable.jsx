@@ -20,17 +20,53 @@ const ScatterPlotCustomizable = ({
     
 
     const [xKey, yKey] = isDataEmpty ? [] : Object.keys(data[0])
+
+    const sortedData = isDataEmpty ? [] : [...data].sort((a, b) => a[xKey] - b[xKey])
+    
+    const calcLinearRegression = (data) => {
+        const n = data.length;
+        if (n === 0) return { m: 0, b: 0 };
+
+        const sumX = data.reduce((sum, p) => sum + p[xKey], 0);
+        const sumY = data.reduce((sum, p) => sum + p[yKey], 0);
+        const sumXY = data.reduce((sum, p) => sum + p[xKey] * p[yKey], 0);
+        const sumX2 = data.reduce((sum, p) => sum + p[xKey] ** 2, 0);
+
+        const m = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX ** 2);
+        const b = (sumY - m * sumX) / n;
+
+        return { m, b };
+    };
+
+    const { m, b } = calcLinearRegression(sortedData);
+
+    const xMin = sortedData[0]?.[xKey];
+    const xMax = sortedData[sortedData.length - 1]?.[xKey];
+    const trendLine = [
+        { x: xMin, y: m * xMin + b },
+        { x: xMax, y: m * xMax + b }
+    ];
+
     const chartData = isDataEmpty ? {} : {
         datasets: [
             {
-                label: labels[0],
+                label: labels[0] || "Scatter Data",
                 data: data.map(item => ({
                     x: item[xKey],
                     y: item[yKey]
                 })),
                 backgroundColor: colors[0],
                 pointRadius: 4,
-                pointHoverRadius: 6
+                pointHoverRadius: 6,
+                type: "scatter"
+            },
+            {
+                label: "Tren Line",
+                data: trendLine,
+                borderColor: "red",
+                borderWidth: 2,
+                pointHoverRadius: 0,
+                type: "line"
             }
         ]
     }
