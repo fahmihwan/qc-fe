@@ -1,6 +1,6 @@
 import { CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Title, Tooltip } from "chart.js";
 import { formatCurrency } from "../../../../utils/generateUtil";
-import { Doughnut } from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
 const PieChartCustomizable = ({ 
@@ -12,7 +12,9 @@ const PieChartCustomizable = ({
  }) => {
 
     console.log("data yg diterima", data)
-    const isDataEmpty = !data || data.length < 1
+    const isDataEmpty = !data // Jika `data` null atau undefined
+        || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
+        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
     const chartData = {
         labels,
@@ -28,8 +30,10 @@ const PieChartCustomizable = ({
 
     const options = {
         responsive: true,
-        cutout: "10%",
         maintainAspecRatio: false,
+        layout: {
+            padding: 10,
+        },
         plugins: {
             legend: {
                 display: false,
@@ -37,7 +41,7 @@ const PieChartCustomizable = ({
             tooltip: {
                 callbacks: {
                     label: (tooltipItem) => {
-                        return ` ${tooltipItem.label}: ${formatCurrency(tooltipItem.raw)}`;
+                        return ` ${formatCurrency(tooltipItem.raw)}`;
                     },
                     labelColor: (tooltipItem) => {
                         const datasetIndex = tooltipItem.dataIndex;
@@ -60,7 +64,7 @@ const PieChartCustomizable = ({
                     const total = dataset.reduce((sum, val) => sum + val, 0); 
                     const percentage = (value / total) * 100;
                     
-                    return percentage > 20 ? `${formatCurrency(value)}` : '';
+                    return percentage > 15 ? `${formatCurrency(value)}` : '';
                 }
             }
         }
@@ -68,16 +72,16 @@ const PieChartCustomizable = ({
 
 
     return (
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col">
             {
                 isDataEmpty ? (
-                    <div className="flex flex-col">
-                        <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
+                    <div className="flex flex-col h-full justify-center">
+                        <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                     </div>
                 ) : (
                     <div className="flex flex-col gap-4">
-                        <div className="max-h-52 items-center flex justify-center overflow-hidden">
-                            <Doughnut data={chartData} options={options} />
+                        <div className="h-52 items-center flex justify-center overflow-hidden">
+                            <Pie data={chartData} options={options} />
                         </div>
                         <div >
                             <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
