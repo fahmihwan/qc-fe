@@ -223,14 +223,20 @@ function SurveyComponent() {
                 kode: sender.jsonObj.kode,
                 data: mappingQuestionFix,
             }
-            storeSurveyDinamis(finalResult)
+            storeSurveyDinamis(finalResult).then((res) => {
+                alert('data survey berhasil di simpan')
+            }).catch((error) => {
+                apiClient.post(`/qrcode`, {
+                    error: `ERROR FE SUBMIT SURVEY - message: ${error?.message} - code: ${error?.code} - stack: ${error?.stack} name: ${error?.name}`
+                })
+                alert('data survey gagal di simpan')
+            })
 
 
         } catch (error) {
             apiClient.post(`/qrcode`, {
                 error: `ERROR FE SUBMIT SURVEY - message: ${error?.message} - code: ${error?.code} - stack: ${error?.stack} name: ${error?.name}`
             })
-
 
             alert('uppsss', error)
         }
