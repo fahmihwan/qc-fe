@@ -35,7 +35,10 @@ export const fFormatDateTimeUtil = (inputDate) => {
 };
 
 
-export const formatCurrency = (value) => {
+export const formatCurrency = (value, useDecimal = true) => {
     if (!value || isNaN(value)) return "0,00"; 
-    return Number(value).toLocaleString("id-ID", { minimumFractionDigits: 2 });
+    return Number(value).toLocaleString("id-ID", { 
+        minimumFractionDigits: useDecimal ? 2 : 0, 
+        maximumFractionDigits: useDecimal ? 2 : 0
+    });
 };
