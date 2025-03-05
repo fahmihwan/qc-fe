@@ -238,7 +238,7 @@ function SurveyComponent() {
                 error: `ERROR FE SUBMIT SURVEY - message: ${error?.message} - code: ${error?.code} - stack: ${error?.stack} name: ${error?.name}`
             })
 
-            alert('uppsss', error)
+            alert(`uppss error ${error}`)
         }
 
     });
