@@ -1,0 +1,108 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Kendala dalam produksi",
+            "data": [
+                {
+                    "year": 2021,
+                    "Hama": 1284222,
+                    "Pupuk": 938598,
+                    "Tenaga Kerja": 938598,
+                    "Cuaca Buruk": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Hama": 1284222,
+                    "Pupuk": 938598,
+                    "Tenaga Kerja": 429712,
+                    "Cuaca Buruk": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Hama": 1284222,
+                    "Pupuk": 938598,
+                    "Tenaga Kerja": 829712,
+                    "Cuaca Buruk": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Hama": 1284222,
+                    "Pupuk": 938598,
+                    "Tenaga Kerja": 629712,
+                    "Cuaca Buruk": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Hama": 1284222,
+                    "Pupuk": 938598,
+                    "Tenaga Kerja": 529712,
+                    "Cuaca Buruk": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Musim tanam",
+            "data": [
+                {
+                    "year": 2021,
+                    "1 kali": 1284222,
+                    "2 kali": 938598,
+                    "3 kali": 938598,
+                    "Lebih dari 3 kali": 97552
+                },
+                {
+                    "year": 2022,
+                    "1 kali": 1284222,
+                    "2 kali": 938598,
+                    "3 kali": 429712,
+                    "Lebih dari 3 kali": 97552
+                },
+                {
+                    "year": 2023,
+                    "1 kali": 1284222,
+                    "2 kali": 938598,
+                    "3 kali": 829712,
+                    "Lebih dari 3 kali": 97552
+                },
+                {
+                    "year": 2024,
+                    "1 kali": 1284222,
+                    "2 kali": 938598,
+                    "3 kali": 629712,
+                    "Lebih dari 3 kali": 97552
+                },
+                {
+                    "year": 2025,
+                    "1 kali": 1284222,
+                    "2 kali": 938598,
+                    "3 kali": 529712,
+                    "Lebih dari 3 kali": 97552
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Jenis padi yang ditanam",
+            "data":  {
+                "Hibrida": 135359,
+                "Inbrida": 80809,
+                "Organik": 91383,
+                "Lainnya": 9408
+            }
+        },
+        {
+            "nama_grafik": "Penggunaan hasil panen",
+            "data": {
+                "Konsum Sendiri": 135359,
+                "Dijual Pasar Lokal": 80809,
+                "Dijual Perusahaan Besar": 91383,
+                "Disimpan Untuk Cadangan": 9408,
+                "Lainnya": 1937
+            }
+        }
+    ]
+}

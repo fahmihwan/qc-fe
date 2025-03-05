@@ -1,0 +1,91 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Kendala bantunan pangan",
+            "data": [
+                {
+                    "year": 2021,
+                    "Kuantitas bantuan tidak mencukupi": 1284222,
+                    "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                    "Distribusi tidak merata": 938598,
+                    "Bantuan tidak tepat waktu": 97552,
+                    "Lainnya": 38722
+                },
+                {
+                    "year": 2022,
+                    "Kuantitas bantuan tidak mencukupi": 1284222,
+                    "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                    "Distribusi tidak merata": 429712,
+                    "Bantuan tidak tepat waktu": 97552,
+                    "Lainnya": 38722
+                },
+                {
+                    "year": 2023,
+                    "Kuantitas bantuan tidak mencukupi": 1284222,
+                    "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                    "Distribusi tidak merata": 829712,
+                    "Bantuan tidak tepat waktu": 97552,
+                    "Lainnya": 38722
+                },
+                {
+                    "year": 2024,
+                    "Kuantitas bantuan tidak mencukupi": 1284222,
+                    "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                    "Distribusi tidak merata": 629712,
+                    "Bantuan tidak tepat waktu": 97552,
+                    "Lainnya": 38722
+                },
+                {
+                    "year": 2025,
+                    "Kuantitas bantuan tidak mencukupi": 1284222,
+                    "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                    "Distribusi tidak merata": 529712,
+                    "Bantuan tidak tepat waktu": 97552,
+                    "Lainnya": 38722
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Sebaran penerima bantuan",
+            "data": {
+                "Petani": 87512,
+                "Pedagang pangan": 9554,
+                "Penerima manfaat bantuan pangan": 21862,
+                "Konsumen umum": 91866
+            }
+        },
+        {
+            "nama_grafik": "Jenis pangan yang lebih dibutuhkan",
+            "data": [
+                {
+                    "text": "Beras",
+                    "value": 381
+                },
+                {
+                    "text": "Jagung",
+                    "value": 39
+                },
+                {
+                    "text": "Kedelai",
+                    "value": 83
+                },
+                {
+                    "text": "Minyak Goreng",
+                    "value": 31
+                },
+                {
+                    "text": "Lainnya1",
+                    "value": 3871
+                },
+                {
+                    "text": "Lainnya2",
+                    "value": 88
+                },
+                {
+                    "text": "Lainnya3",
+                    "value": 90
+                }
+            ]
+        }
+    ]
+}
