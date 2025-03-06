@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Status lahan baru",
+            "data": [
+                {
+                    "year": 2021,
+                    "Sudah digunakan untuk produksi": 1284222,
+                    "Belum digunakan untuk produksi": 938598
+                },
+                {
+                    "year": 2022,
+                    "Sudah digunakan untuk produksi": 429712,
+                    "Belum digunakan untuk produksi": 97552
+                },
+                {
+                    "year": 2023,
+                    "Sudah digunakan untuk produksi": 1284222,
+                    "Belum digunakan untuk produksi": 97552
+                },
+                {
+                    "year": 2024,
+                    "Sudah digunakan untuk produksi": 629712,
+                    "Belum digunakan untuk produksi": 97552
+                },
+                {
+                    "year": 2025,
+                    "Sudah digunakan untuk produksi": 1284222,
+                    "Belum digunakan untuk produksi": 938598
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Kendala pembangunan lahan",
+            "data": {
+                "Kurang alat pertanian": 87512,
+                "Irigasi": 9554,
+                "Kurang Tenaga Kerja": 21862,
+                "Kurang Bibit/pupuk": 91866,
+                "Lainnya": 39719
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Distribusi pangan yang berjalan lancar",
+            "data": [
+                {
+                    "nama_provinsi": "Sumatera Utara",
+                    "Lancar": 938598,
+                    "Bermasalah": 97552
+                },
+                {
+                    "nama_provinsi": "Papua Tengah",
+                    "Lancar": 1284222,
+                    "Bermasalah": 938598
+                },
+                {
+                    "nama_provinsi": "DKI Jakarta",
+                    "Lancar": 8969,
+                    "Bermasalah": 8969
+                },
+                {
+                    "nama_provinsi": "Sulawesi Tenggara",
+                    "Lancar": 938598,
+                    "Bermasalah": 8969
+                },
+                {
+                    "nama_provinsi": "Jawa Timur",
+                    "Lancar": 1284222,
+                    "Bermasalah": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Kendala dalam distribusi",
+            "data": {
+                "Transportasi": 7512,
+                "Penyimpanan": 9554,
+                "Biaya": 2862,
+                "Lainnya": 9719
+            }
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Akses petani ke sumber daya",
+            "data": [
+                {
+                    "year": 2021,
+                    "Bibit Unggul": 938598,
+                    "Irigasi": 97552,
+                    "Alat Pertanian Modern": 8969
+                },
+                {
+                    "year": 2022,
+                    "Bibit Unggul": 1284222,
+                    "Irigasi": 97552,
+                    "Alat Pertanian Modern": 8969
+                },
+                {
+                    "year": 2023,
+                    "Bibit Unggul": 1284222,
+                    "Irigasi": 938598,
+                    "Alat Pertanian Modern": 829712
+                },
+                {
+                    "year": 2024,
+                    "Bibit Unggul": 1284222,
+                    "Irigasi": 938598,
+                    "Alat Pertanian Modern": 8969
+                },
+                {
+                    "year": 2025,
+                    "Bibit Unggul": 1284222,
+                    "Irigasi": 938598,
+                    "Alat Pertanian Modern": 529712
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Aspek Perbaikan",
+            "data": [
+                {
+                    "year": 2021,
+                    "Peningkatan akses teknologi pertanian": 1284222,
+                    "Subsidi pupuk & pestisida yang merata": 938598,
+                    "Perbaikan sistem irigasi": 938598,
+                    "Pelatihan praktik pertanian": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Peningkatan akses teknologi pertanian": 1284222,
+                    "Subsidi pupuk & pestisida yang merata": 938598,
+                    "Perbaikan sistem irigasi": 429712,
+                    "Pelatihan praktik pertanian": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Peningkatan akses teknologi pertanian": 1284222,
+                    "Subsidi pupuk & pestisida yang merata": 938598,
+                    "Perbaikan sistem irigasi": 829712,
+                    "Pelatihan praktik pertanian": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Peningkatan akses teknologi pertanian": 1284222,
+                    "Subsidi pupuk & pestisida yang merata": 938598,
+                    "Perbaikan sistem irigasi": 629712,
+                    "Pelatihan praktik pertanian": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Peningkatan akses teknologi pertanian": 1284222,
+                    "Subsidi pupuk & pestisida yang merata": 938598,
+                    "Perbaikan sistem irigasi": 529712,
+                    "Pelatihan praktik pertanian": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Kendala utama dalam produksi pangan",
+            "data": {
+                "Harga pupuk yang tinggi": 135359,
+                "Kerusakan lahan": 80809,
+                "Serangan hama": 91383,
+                "Kurang tenaga kerja": 9408, 
+                "Perubahan iklim": 48949,
+                "Lainnya": 89939
+            }
+        }
+    ]
+}

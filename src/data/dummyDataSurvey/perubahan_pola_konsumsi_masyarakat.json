@@ -1,0 +1,101 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Jenis perubahan konsumsi akibat harga",
+            "data": [
+                {
+                    "year": 2021,
+                    "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                    "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                    "Mengurangi porsi makan harian": 938598,
+                    "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                    "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                    "Mengurangi porsi makan harian": 429712,
+                    "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                    "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                    "Mengurangi porsi makan harian": 829712,
+                    "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                    "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                    "Mengurangi porsi makan harian": 629712,
+                    "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                    "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                    "Mengurangi porsi makan harian": 529712,
+                    "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Konsumsi pangan lokal VS impor",
+            "data": {
+                "Lokal": 87512,
+                "Import": 9554
+            }
+        },
+        {
+            "nama_grafik": "Alasan memilih pangan import",
+            "data": [
+                {
+                    "year": 2021,
+                    "Harga pangan lokal lebih mahal": 1284222,
+                    "Ketersediaan pangan impor lebih tinggi": 938598,
+                    "Kualitas pangan impor lebih baik": 1284222,
+                    "Kebiasaan konsumsi sejak lama": 938598,
+                    "Lainnya": 13981
+                },
+                {
+                    "year": 2022,
+                    "Harga pangan lokal lebih mahal": 429712,
+                    "Ketersediaan pangan impor lebih tinggi": 97552,
+                    "Kualitas pangan impor lebih baik": 1284222,
+                    "Kebiasaan konsumsi sejak lama": 938598,
+                    "Lainnya": 13981
+                },
+                {
+                    "year": 2023,
+                    "Harga pangan lokal lebih mahal": 1284222,
+                    "Ketersediaan pangan impor lebih tinggi": 97552,
+                    "Kualitas pangan impor lebih baik": 1284222,
+                    "Kebiasaan konsumsi sejak lama": 938598,
+                    "Lainnya": 13981
+                },
+                {
+                    "year": 2024,
+                    "Harga pangan lokal lebih mahal": 629712,
+                    "Ketersediaan pangan impor lebih tinggi": 97552,
+                    "Kualitas pangan impor lebih baik": 1284222,
+                    "Kebiasaan konsumsi sejak lama": 938598,
+                    "Lainnya": 13981
+                },
+                {
+                    "year": 2025,
+                    "Harga pangan lokal lebih mahal": 1284222,
+                    "Ketersediaan pangan impor lebih tinggi": 938598,
+                    "Kualitas pangan impor lebih baik": 1284222,
+                    "Kebiasaan konsumsi sejak lama": 938598,
+                    "Lainnya": 13981
+                }
+            ]
+        }
+    ]
+}
