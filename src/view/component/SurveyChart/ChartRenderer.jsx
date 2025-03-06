@@ -1,4 +1,5 @@
 import BarChartHorizontalCustomizable from "../allCharts/customizable/BarChartHorizontalCustomizable"
+import BarChartTumpukColumn from "../allCharts/customizable/BarChartTumpukColumn"
 import BarChartTumpukCustomizeable from "../allCharts/customizable/BarChartTumpukCustomizable"
 import CountDoughnutChartCustomizable from "../allCharts/customizable/CountDoughnutChartCustomizable"
 import LineChartBarChartCustomizable from "../allCharts/customizable/LineChartBarChartCustomizabel"
@@ -60,6 +61,12 @@ const ChartRenderer = ({
             />
         case "line-chart-bar-chart-horizontal":
             return <LineChartBarChartCustomizable 
+                data={data}
+                labels={labels}
+                colors={colors}
+            />
+        case "bar-chart-tumpuk-vertical":
+            return <BarChartTumpukColumn 
                 data={data}
                 labels={labels}
                 colors={colors}
