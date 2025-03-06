@@ -8,23 +8,25 @@ const BarChartTumpukCustomizeable = ({
     data = [],
     labels = [],
     colors = [],
-    width,
+    width = 800,
     height
 }) => {
     const isDataEmpty = !data // Jika `data` null atau undefined
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
-    const years = isDataEmpty ? [] : data.map((item) => item.year)
+    const xKey = isDataEmpty ? "" : Object.keys(data[0])[0];
+    const xLabels = isDataEmpty ? [] : data.map((item) => item[xKey]);
+    
     const datasets = isDataEmpty ? [] : labels.map((label, index) => ({
         label,
-        data: data.map((item) => item[label]),
+        data: data.map((item) => item[label] || 0),
         borderColor: colors[index],
         backgroundColor: colors[index],
     }))
 
     const chartData = isDataEmpty ? {} : {
-        labels: years,
+        labels: xLabels,
         datasets
     }
 
@@ -60,6 +62,8 @@ const BarChartTumpukCustomizeable = ({
         },
         scales: {
             x: {
+                barPercentage: 1.0, // Pastikan batang mengisi penuh kategori
+                categoryPercentage: 1.0,   
                 stacked: true,
                 grid: {
                     color: '#CCCCCC',
@@ -103,11 +107,11 @@ const BarChartTumpukCustomizeable = ({
                     <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                 </div>
             ) : (
-                <div className="flex flex-col gap-4 w-full">
-                    <div className="h-56 w-full p-2 flex justify-center overflow-hidden">
-                        <Bar data={chartData} options={options} height={85} />
+                <div className="flex flex-col justify-start h-full w-full">
+                    <div className="p-2 flex justify-center overflow-hidden">
+                        <Bar data={chartData} options={options} height={"100%"}/>
                     </div>
-                    <div >
+                    <div >  
                         <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
                             {labels.map((label, index) => (
                             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>

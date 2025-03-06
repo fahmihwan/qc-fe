@@ -2,30 +2,27 @@ import { CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, Poin
 import { formatCurrency } from "../../../../utils/generateUtil";
 import { Bar } from "react-chartjs-2";
 
-const BarChartHorizontalCustomizable = ({
-    data =[],
+ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
+
+const BarChartTumpukColumn = ({
+    data = [],
     labels = [],
     colors = [],
-    width,
+    width = 800,
     height
 }) => {
-    console.log("data yg diterima", data)
     const isDataEmpty = !data // Jika `data` null atau undefined
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
     const xKey = isDataEmpty ? "" : Object.keys(data[0])[0];
     const xLabels = isDataEmpty ? [] : data.map((item) => item[xKey]);
-
-    const availableKeys = isDataEmpty ? [] : Object.keys(data[0]).slice(1); 
-    const activeLabels = labels.length > 0 ? labels : availableKeys;
     
-    const datasets = isDataEmpty ? [] : activeLabels.map((label, index) => ({
+    const datasets = isDataEmpty ? [] : labels.map((label, index) => ({
         label,
-        data: data.map((item) => item[label]),
-        backgroundColor: colors[index],
+        data: data.map((item) => item[label] || 0),
         borderColor: colors[index],
-        borderWidth: 0
+        backgroundColor: colors[index],
     }))
 
     const chartData = isDataEmpty ? {} : {
@@ -34,9 +31,10 @@ const BarChartHorizontalCustomizable = ({
     }
 
     const options = {
+        indexAxis: 'y', // Ubah orientasi chart menjadi vertical
         responsive: true,
-        maintainAspecRatio: false,
-        plugins:{
+        maintainAspectRatio: false,
+        plugins: {
             legend: {
                 display: false
             },
@@ -45,7 +43,7 @@ const BarChartHorizontalCustomizable = ({
                 callbacks: {
                     label: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex
-                        const datasetLabelCustom = activeLabels[datasetIndex]
+                        const datasetLabelCustom = labels[datasetIndex]
                         return ` ${datasetLabelCustom}: ${formatCurrency(tooltipItem.raw)}`
                     },
                     labelColor: (tooltipItem) => {
@@ -64,7 +62,29 @@ const BarChartHorizontalCustomizable = ({
             }
         },
         scales: {
-            x: {
+            x: { // Sekarang sumbu X akan menunjukkan angka
+                stacked: true,
+                beginAtZero: true,
+                min: 0,
+                ticks: {
+                    color: "#A3A3A3",
+                    callback: (value) => `${formatCurrency(value)}`,
+                    maxRotation: 45,
+                    minRotation: 45
+                },
+                grid: {
+                    color: '#CCCCCC',
+                    borderColor: '#CCCCCC',
+                    drawBorder: true
+                },
+                border: {
+                    color: '#cccccc'
+                }
+            },
+            y: { // Sumbu Y menjadi kategori
+                barPercentage: 0.8,
+                categoryPercentage: 0.9,
+                stacked: true,
                 grid: {
                     color: '#CCCCCC',
                     borderColor: '#CCCCCC',
@@ -73,52 +93,36 @@ const BarChartHorizontalCustomizable = ({
                 },
                 ticks: {
                     color: "#A3A3A3",
-                    align: "center" // Agar grid pas dengan tahun
+                    align: "center"
                 },
-                border:{
-                    color: '#cccccc'
-                }
-            },
-            y: {
-                beginAtZero: true,
-                min: 0,
-                ticks: {
-                    color: "#A3A3A3",
-                    callback: (value) => `${formatCurrency(value)}`
-                },
-                grid: {
-                    color: '#CCCCCC',
-                    borderColor: '#CCCCCC',
-                    drawBorder: true
-                },
-                border:{
+                border: {
                     color: '#cccccc'
                 }
             }
         }
     }
-
+    
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
         {
             isDataEmpty ? (
                 <div className="flex flex-col h-full justify-center">
                     <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                 </div>
             ) : (
-                <div className="flex flex-col gap-4">
-                    <div >
+                <div className="flex flex-col justify-start h-full w-full">
+                    <div className="h-72 p-2 flex justify-center overflow-hidden">
+                        <Bar data={chartData} options={options} height={"100%"}/>
+                    </div>
+                    <div >  
                         <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
-                            {activeLabels.map((label, index) => (
+                            {labels.map((label, index) => (
                             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                 <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
                             </div>
                             ))}
                         </div>
-                    </div>
-                    <div className="w-full h-full p-2 flex justify-center overflow-hidden">
-                        <Bar data={chartData} options={options} />
                     </div>
                 </div>
             )
@@ -127,4 +131,4 @@ const BarChartHorizontalCustomizable = ({
     )
 }
 
-export default BarChartHorizontalCustomizable
+export default BarChartTumpukColumn
