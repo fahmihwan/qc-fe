@@ -96,7 +96,7 @@ const LayoutType5Survey = ({
                     </motion.div>
 
                     <motion.div 
-                        className='grid md:grid-cols-8 ml-5 sm:mr-5 mb-5  mt-5 dark:bg-dark-mode-bg'
+                        className='grid md:grid-cols-8 ml-5 sm:mr-5 mb-5  mt-5 dark:bg-dark-mode-bg h-fit'
                         variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView={"show"}

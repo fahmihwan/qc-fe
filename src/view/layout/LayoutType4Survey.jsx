@@ -96,13 +96,13 @@ const LayoutType4Survey = ({
                     </motion.div>
 
                     <motion.div 
-                        className='min-h-[326px] ml-5 mb-5  mt-5 dark:bg-dark-mode-bg'
+                        className='ml-5 mb-5  mt-5 dark:bg-dark-mode-bg'
                         variants={fadeIn("right", 0.3)}
                         initial="hidden"
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.5}}
                     >
-                        <div className='h-full mb-10 md:mb-0 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                        <div className='min-h-[326px]  mb-10 md:mb-0 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
                             {/* children pertama */}
                             {children[0]}
                         </div>
