@@ -1454,6 +1454,164 @@
             "img": "/assets/icon/9.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/realisasi-pembangunan-lahan",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 13,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 13,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 14,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 14,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 15,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 15,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 16,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 16,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 17,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 17,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 18,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 18,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Perluasan lahan pertanian",
