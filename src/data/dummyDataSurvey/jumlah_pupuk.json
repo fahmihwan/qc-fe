@@ -1,0 +1,81 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Tren ketersediaan pupuk",
+            "data": [
+                {
+                    "year": 2021,
+                    "Rata-rata jumlah pupuk per hektar (kg/ha)": 98368
+                },
+                {
+                    "year": 2022,
+                    "Rata-rata jumlah pupuk per hektar (kg/ha)": 1952
+                },
+                {
+                    "year": 2023,
+                    "Rata-rata jumlah pupuk per hektar (kg/ha)": 34611
+                },
+                {
+                    "year": 2024,
+                    "Rata-rata jumlah pupuk per hektar (kg/ha)": 57578
+                },
+                {
+                    "year": 2025,
+                    "Rata-rata jumlah pupuk per hektar (kg/ha)": 23233
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Sumber pupuk",
+            "data": [
+                {
+                    "year": 2021,
+                    "Subsidi Pemerintah": 1284222,
+                    "Komersial": 938598,
+                    "Alami/Organik": 938598,
+                    "Lainnya": 97552
+                },
+                {
+                    "year": 2022,
+                    "Subsidi Pemerintah": 1284222,
+                    "Komersial": 938598,
+                    "Alami/Organik": 429712,
+                    "Lainnya": 97552
+                },
+                {
+                    "year": 2023,
+                    "Subsidi Pemerintah": 1284222,
+                    "Komersial": 938598,
+                    "Alami/Organik": 829712,
+                    "Lainnya": 97552
+                },
+                {
+                    "year": 2024,
+                    "Subsidi Pemerintah": 1284222,
+                    "Komersial": 938598,
+                    "Alami/Organik": 629712,
+                    "Lainnya": 97552
+                },
+                {
+                    "year": 2025,
+                    "Subsidi Pemerintah": 1284222,
+                    "Komersial": 938598,
+                    "Alami/Organik": 529712,
+                    "Lainnya": 97552
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Jenis Pupuk Yang Digunakan",
+            "data": {
+                "Urea": 3232,
+                "NPK": 3919,
+                "SP-36": 233, 
+                "KCL": 311, 
+                "Organik": 877, 
+                "Hayati": 877, 
+                "Lainnya": 877
+            }
+        }
+    ]
+}

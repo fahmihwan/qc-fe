@@ -2,83 +2,2018 @@
     "data": [
         {
             "title":"Luas Panen",
+            "topicTitle": "Statistik Luas Panen",
             "img": "/assets/icon/1.png",
-            "url":"/dashboard-hasil-survey/foodestate-padi-statistikluaspanen"
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/luas-panen",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 1,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 1,
+                                        "body_title": "Jenis lahan yang digunakan untuk padi",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 1,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 2,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 2,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 2,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 3,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 3,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 3,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "charts": [
+                {
+                    "title": "Perubahan luas lahan dalam setahun terakhir",
+                    "type": "line-chart",
+                    "labels": ["Menaik", "Menurun"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data" : [
+                            {
+                                "year": 2021,
+                                "Menaik": 242411,
+                                "Menurun": 98368
+                            },
+                            {
+                                "year": 2022,
+                                "Menaik": 1952,
+                                "Menurun": 35111
+                            },
+                            {
+                                "year": 2023,
+                                "Menaik": 2352353,
+                                "Menurun": 34611
+                            },
+                            {
+                                "year": 2024,
+                                "Menaik": 48422,
+                                "Menurun": 57578
+                            },
+                            {
+                                "year": 2025,
+                                "Menaik": 2352233,
+                                "Menurun": 89876
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Jenis lahan yang digunakan",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Sawah Irigasi Teknis", "Sawah Tadah Hujan", "Lahan Rawa / Pasang Surut", "Lahan Kering / Tegalan", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Sawah Irigasi Teknis": 1284222,
+                                "Sawah Tadah Hujan": 938598,
+                                "Lahan Rawa / Pasang Surut": 938598,
+                                "Lahan Kering / Tegalan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Sawah Irigasi Teknis": 1284222,
+                                "Sawah Tadah Hujan": 938598,
+                                "Lahan Rawa / Pasang Surut": 429712,
+                                "Lahan Kering / Tegalan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Sawah Irigasi Teknis": 1284222,
+                                "Sawah Tadah Hujan": 938598,
+                                "Lahan Rawa / Pasang Surut": 829712,
+                                "Lahan Kering / Tegalan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Sawah Irigasi Teknis": 1284222,
+                                "Sawah Tadah Hujan": 938598,
+                                "Lahan Rawa / Pasang Surut": 629712,
+                                "Lahan Kering / Tegalan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Sawah Irigasi Teknis": 1284222,
+                                "Sawah Tadah Hujan": 938598,
+                                "Lahan Rawa / Pasang Surut": 529712,
+                                "Lahan Kering / Tegalan": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Status kepemilikan lahan",
+                    "type": "pie-chart",
+                    "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha", "Lahan Pemerintah", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Milik Pribadi": 87512,
+                            "Sewa": 9554,
+                            "Hak Guna Usaha": 21862,
+                            "Lahan Pemerintah": 91866,
+                            "Lainnya": 19826
+                        }
+                    }
+                },
+                {
+                    "title": "Penyebab perubahan luas pangan",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+
+                        }
+                    }
+                }
+            ]
         },{
             "title":"Produktivitas",
+            "topicTitle": "Statistik Produktivitas",
             "img": "/assets/icon/2.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/produktivitas",
+            "charts": [
+                {
+                    "title": "Tren peningkatan/penurunan produktivitas",
+                    "type": "line-chart",
+                    "labels": ["Menaik", "Menurun"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data" : [
+                            {
+                                "year": 2021,
+                                "Menaik": 242411,
+                                "Menurun": 98368
+                            },
+                            {
+                                "year": 2022,
+                                "Menaik": 1952,
+                                "Menurun": 35111
+                            },
+                            {
+                                "year": 2023,
+                                "Menaik": 2352353,
+                                "Menurun": 34611
+                            },
+                            {
+                                "year": 2024,
+                                "Menaik": 48422,
+                                "Menurun": 57578
+                            },
+                            {
+                                "year": 2025,
+                                "Menaik": 2352233,
+                                "Menurun": 89876
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Perbandingan luas panen dengan hasil panen",
+                    "type": "scatter-plot",
+                    "labels": ["Luas Panen vs Hasil Panen"],
+                    "colors": ["rgba(0, 168, 255, 1)"],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "Luas Panen": 1241234,
+                                "Hasil Panen": 38298
+                            },
+                            {
+                                "Luas Panen": 1100000,
+                                "Hasil Panen": 35000
+                            },
+                            {
+                                "Luas Panen": 950000,
+                                "Hasil Panen": 30000
+                            },
+                            {
+                                "Luas Panen": 1300000,
+                                "Hasil Panen": 40000
+                            },
+                            {
+                                "Luas Panen": 1400000,
+                                "Hasil Panen": 42000
+                            },
+                            {
+                                "Luas Panen": 1000000,
+                                "Hasil Panen": 31000
+                            },
+                            {
+                                "Luas Panen": 1150000,
+                                "Hasil Panen": 33000
+                            },
+                            {
+                                "Luas Panen": 1050000,
+                                "Hasil Panen": 29000
+                            },
+                            {
+                                "Luas Panen": 1200000,
+                                "Hasil Panen": 37000
+                            },
+                            {
+                                "Luas Panen": 1350000,
+                                "Hasil Panen": 41000
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Faktor yang mempengaruhi produktivitas",
+                    "type": "pie-chart",
+                    "labels": ["Benih", "Pupuk", "Irigasi", "Serangan Hama", "Perubahan Cuaca", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)",
+                        "rgba(227, 222, 66)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Benih": 135359,
+                            "Pupuk": 80809,
+                            "Irigasi": 91383,
+                            "Serangan Hama": 9408, 
+                            "Perubahan Cuaca": 48949,
+                            "Lainnya": 89939
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Produksi",
+            "topicTitle": "Statistik Produksi",
             "img": "/assets/icon/3.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout5",
+            "url":"/dashboard-hasil-survey/produksi",
+            "charts": [
+                {
+                    "title": "Kendala dalam produksi",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Hama", "Pupuk", "Tenaga Kerja", "Cuaca Buruk", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Hama": 1284222,
+                                "Pupuk": 938598,
+                                "Tenaga Kerja": 938598,
+                                "Cuaca Buruk": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Hama": 1284222,
+                                "Pupuk": 938598,
+                                "Tenaga Kerja": 429712,
+                                "Cuaca Buruk": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Hama": 1284222,
+                                "Pupuk": 938598,
+                                "Tenaga Kerja": 829712,
+                                "Cuaca Buruk": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Hama": 1284222,
+                                "Pupuk": 938598,
+                                "Tenaga Kerja": 629712,
+                                "Cuaca Buruk": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Hama": 1284222,
+                                "Pupuk": 938598,
+                                "Tenaga Kerja": 529712,
+                                "Cuaca Buruk": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Musim tanam",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "1 kali": 1284222,
+                                "2 kali": 938598,
+                                "3 kali": 938598,
+                                "Lebih dari 3 kali": 97552
+                            },
+                            {
+                                "year": 2022,
+                                "1 kali": 1284222,
+                                "2 kali": 938598,
+                                "3 kali": 429712,
+                                "Lebih dari 3 kali": 97552
+                            },
+                            {
+                                "year": 2023,
+                                "1 kali": 1284222,
+                                "2 kali": 938598,
+                                "3 kali": 829712,
+                                "Lebih dari 3 kali": 97552
+                            },
+                            {
+                                "year": 2024,
+                                "1 kali": 1284222,
+                                "2 kali": 938598,
+                                "3 kali": 629712,
+                                "Lebih dari 3 kali": 97552
+                            },
+                            {
+                                "year": 2025,
+                                "1 kali": 1284222,
+                                "2 kali": 938598,
+                                "3 kali": 529712,
+                                "Lebih dari 3 kali": 97552
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Jenis padi yang ditanam",
+                    "type": "pie-chart",
+                    "labels": ["Hibrida", "Inbrida", "Organik", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Hibrida": 135359,
+                            "Inbrida": 80809,
+                            "Organik": 91383,
+                            "Lainnya": 9408
+                        }
+                    }
+                },
+                {
+                    "title": "Penggunaan hasil panen",
+                    "type": "count-doughnut-chart",
+                    "labels": ["Konsum Sendiri", "Dijual Pasar Lokal", "Dijual Perusahaan Besar", "Disimpan Untuk Cadangan", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Konsum Sendiri": 135359,
+                            "Dijual Pasar Lokal": 80809,
+                            "Dijual Perusahaan Besar": 91383,
+                            "Disimpan Untuk Cadangan": 9408,
+                            "Lainnya": 1937
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Luas Irigasi",
+            "topicTitle": "Statistik Luas Irigasi",
             "img": "/assets/icon/4.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/luas-irigasi",
+            "charts": [
+                {
+                    "title": "Kendala dalam irigasi",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Kerusakan saluran irigasi": 1284222,
+                                "Debit air tidak mencukupi": 938598,
+                                "Pengelolaan irigasi kurang optimal": 938598,
+                                "Kurangnya infrastruktur pendukung": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Kerusakan saluran irigasi": 1284222,
+                                "Debit air tidak mencukupi": 938598,
+                                "Pengelolaan irigasi kurang optimal": 429712,
+                                "Kurangnya infrastruktur pendukung": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Kerusakan saluran irigasi": 1284222,
+                                "Debit air tidak mencukupi": 938598,
+                                "Pengelolaan irigasi kurang optimal": 829712,
+                                "Kurangnya infrastruktur pendukung": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Kerusakan saluran irigasi": 1284222,
+                                "Debit air tidak mencukupi": 938598,
+                                "Pengelolaan irigasi kurang optimal": 629712,
+                                "Kurangnya infrastruktur pendukung": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Kerusakan saluran irigasi": 1284222,
+                                "Debit air tidak mencukupi": 938598,
+                                "Pengelolaan irigasi kurang optimal": 529712,
+                                "Kurangnya infrastruktur pendukung": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Jenis irigasi yang digunakan",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Teknis", "Setengah teknis", "Sederhana", "Tadah Hujan", "Rawa/Pasang Surut", "Pompa/Air Tanah", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(26, 0, 255, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Teknis": 1284222,
+                                "Setengah teknis": 938598,
+                                "Sederhana": 938598,
+                                "Tadah Hujan": 97552,
+                                "Rawa/Pasang Surut": 8969,
+                                "Pompa/Air Tanah": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Teknis": 1284222,
+                                "Setengah teknis": 938598,
+                                "Sederhana": 429712,
+                                "Tadah Hujan": 97552,
+                                "Rawa/Pasang Surut": 8969,
+                                "Pompa/Air Tanah": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Teknis": 1284222,
+                                "Setengah teknis": 938598,
+                                "Sederhana": 829712,
+                                "Tadah Hujan": 97552,
+                                "Rawa/Pasang Surut": 8969,
+                                "Pompa/Air Tanah": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Teknis": 1284222,
+                                "Setengah teknis": 938598,
+                                "Sederhana": 629712,
+                                "Tadah Hujan": 97552,
+                                "Rawa/Pasang Surut": 8969,
+                                "Pompa/Air Tanah": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Teknis": 1284222,
+                                "Setengah teknis": 938598,
+                                "Sederhana": 529712,
+                                "Tadah Hujan": 9755,
+                                "Rawa/Pasang Surut": 8969,
+                                "Pompa/Air Tanah": 8969,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Presentase lahan yang memiliki akses irigasi",
+                    "type": "pie-chart",
+                    "labels": ["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "100%": 32352,
+                            "75% - 99%": 3919,
+                            "50% - 74%": 233, 
+                            "25% - 49%": 311, 
+                            "< 25%": 877
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Jumlah Pupuk",
+            "topicTitle": "Statistik Jumlah Pupuk",
             "img": "/assets/icon/5.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/jumlah-pupuk",
+            "charts": [
+                {
+                    "title": "Tren ketersediaan pupuk",
+                    "type": "line-chart",
+                    "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Rata-rata jumlah pupuk per hektar (kg/ha)": 98368
+                            },
+                            {
+                                "year": 2022,
+                                "Rata-rata jumlah pupuk per hektar (kg/ha)": 1952
+                            },
+                            {
+                                "year": 2023,
+                                "Rata-rata jumlah pupuk per hektar (kg/ha)": 34611
+                            },
+                            {
+                                "year": 2024,
+                                "Rata-rata jumlah pupuk per hektar (kg/ha)": 57578
+                            },
+                            {
+                                "year": 2025,
+                                "Rata-rata jumlah pupuk per hektar (kg/ha)": 23233
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Sumber pupuk",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Subsidi Pemerintah", "Komersial", "Alami/Organik", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Subsidi Pemerintah": 1284222,
+                                "Komersial": 938598,
+                                "Alami/Organik": 938598,
+                                "Lainnya": 97552
+                            },
+                            {
+                                "year": 2022,
+                                "Subsidi Pemerintah": 1284222,
+                                "Komersial": 938598,
+                                "Alami/Organik": 429712,
+                                "Lainnya": 97552
+                            },
+                            {
+                                "year": 2023,
+                                "Subsidi Pemerintah": 1284222,
+                                "Komersial": 938598,
+                                "Alami/Organik": 829712,
+                                "Lainnya": 97552
+                            },
+                            {
+                                "year": 2024,
+                                "Subsidi Pemerintah": 1284222,
+                                "Komersial": 938598,
+                                "Alami/Organik": 629712,
+                                "Lainnya": 97552
+                            },
+                            {
+                                "year": 2025,
+                                "Subsidi Pemerintah": 1284222,
+                                "Komersial": 938598,
+                                "Alami/Organik": 529712,
+                                "Lainnya": 97552
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Jenis Pupuk Yang Digunakan",
+                    "type": "pie-chart",
+                    "labels": ["Urea", "NPK", "SP-36", "KCL", "Organik", "Hayati", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(26, 0, 255, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Urea": 3232,
+                            "NPK": 3919,
+                            "SP-36": 233, 
+                            "KCL": 311, 
+                            "Organik": 877, 
+                            "Hayati": 877, 
+                            "Lainnya": 877
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Presentase Hama",
+            "topicTitle": "Statistik Presentase Hama",
             "img": "/assets/icon/6.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout5",
+            "url":"/dashboard-hasil-survey/presentase-hama",
+            "charts": [
+                {
+                    "title": "Metode pengendalian hama",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Pestisida kimia": 1284222,
+                                "Pestisida nabati/organik": 938598,
+                                "Predator alami (burung, serangga pemangsa)": 938598,
+                                "Sistem tanam bergilir": 97552,
+                                "Penggunaan varietas tahan hama": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Pestisida kimia": 1284222,
+                                "Pestisida nabati/organik": 938598,
+                                "Predator alami (burung, serangga pemangsa)": 429712,
+                                "Sistem tanam bergilir": 97552,
+                                "Penggunaan varietas tahan hama": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Pestisida kimia": 1284222,
+                                "Pestisida nabati/organik": 938598,
+                                "Predator alami (burung, serangga pemangsa)": 829712,
+                                "Sistem tanam bergilir": 97552,
+                                "Penggunaan varietas tahan hama": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Pestisida kimia": 1284222,
+                                "Pestisida nabati/organik": 938598,
+                                "Predator alami (burung, serangga pemangsa)": 629712,
+                                "Sistem tanam bergilir": 97552,
+                                "Penggunaan varietas tahan hama": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Pestisida kimia": 1284222,
+                                "Pestisida nabati/organik": 938598,
+                                "Predator alami (burung, serangga pemangsa)": 529712,
+                                "Sistem tanam bergilir": 9755,
+                                "Penggunaan varietas tahan hama": 8969,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Jenis hama yang menyerang",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(26, 0, 255, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Wereng coklat": 1284222,
+                                "Tikus sawah": 938598,
+                                "Ulat grayak": 938598,
+                                "Walang sangit": 97552,
+                                "Penggerek batang": 8969,
+                                "Keong mas": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Wereng coklat": 1284222,
+                                "Tikus sawah": 938598,
+                                "Ulat grayak": 429712,
+                                "Walang sangit": 97552,
+                                "Penggerek batang": 8969,
+                                "Keong mas": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Wereng coklat": 1284222,
+                                "Tikus sawah": 938598,
+                                "Ulat grayak": 829712,
+                                "Walang sangit": 97552,
+                                "Penggerek batang": 8969,
+                                "Keong mas": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Wereng coklat": 1284222,
+                                "Tikus sawah": 938598,
+                                "Ulat grayak": 629712,
+                                "Walang sangit": 97552,
+                                "Penggerek batang": 8969,
+                                "Keong mas": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Wereng coklat": 1284222,
+                                "Tikus sawah": 938598,
+                                "Ulat grayak": 529712,
+                                "Walang sangit": 9755,
+                                "Penggerek batang": 8969,
+                                "Keong mas": 8969,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Persentase Luas lahan terdampak hama",
+                    "type": "pie-chart",
+                    "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "0% (Tidak ada Serangan)": 3352,
+                            "1 - 10%": 3919,
+                            "11 - 25%": 233, 
+                            "26 - 50%": 311, 
+                            "51 - 75%": 877,
+                            "76 - 100%": 382
+                        }
+                    }
+                },
+                {
+                    "title": "Kendala pengendalian hama",
+                    "type": "pie-chart",
+                    "labels": ["Akses ke pestisida atau metode pengendalian", "Hama semakin resisten terhadap pestisida", "Kurangnya tenaga kerja", "Faktor cuaca yang mendukung perkembangan hama", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data":  {
+                            "Akses ke pestisida atau metode pengendalian": 32352,
+                            "Hama semakin resisten terhadap pestisida": 3919,
+                            "Kurangnya tenaga kerja": 233, 
+                            "Faktor cuaca yang mendukung perkembangan hama": 311, 
+                            "Lainnya": 877
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Lahan Kosong",
+            "topicTitle": "Statistik Lahan Kosong",
             "img": "/assets/icon/7.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout5",
+            "url":"/dashboard-hasil-survey/lahan-kosong",
+            "charts": [
+                {
+                    "title": "Durasi Lahan Kosong",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                },
+                {
+                    "title": "Alasan lahan kosong",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Belum masuk musim tanam": 1284222,
+                                "Kurangnya pasokan air/irigasi": 938598,
+                                "Kekurangan pupuk atau benih": 938598,
+                                "Kurangnya tenaga kerja": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Belum masuk musim tanam": 1284222,
+                                "Kurangnya pasokan air/irigasi": 938598,
+                                "Kekurangan pupuk atau benih": 429712,
+                                "Kurangnya tenaga kerja": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Belum masuk musim tanam": 1284222,
+                                "Kurangnya pasokan air/irigasi": 938598,
+                                "Kekurangan pupuk atau benih": 8969,
+                                "Kurangnya tenaga kerja": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Belum masuk musim tanam": 1284222,
+                                "Kurangnya pasokan air/irigasi": 938598,
+                                "Kekurangan pupuk atau benih": 629712,
+                                "Kurangnya tenaga kerja": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",
+                                "Belum masuk musim tanam": 1284222,
+                                "Kurangnya pasokan air/irigasi": 938598,
+                                "Kekurangan pupuk atau benih": 8969,
+                                "Kurangnya tenaga kerja": 8969,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Persentase lahan kosong",
+                    "type": "pie-chart",
+                    "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "0% (Semua lahan sudah ditanami)": 3352,
+                            "1 - 10%": 3919,
+                            "11 - 25%": 233, 
+                            "26 - 50%": 3121, 
+                            "51 - 75%": 877,
+                            "76 - 100%": 382
+                        }
+                    }
+                },
+                {
+                    "title": "Rencana penggunaan lahan kosong",
+                    "type": "count-doughnut-chart",
+                    "labels": ["Alih fungsi", "Padi", "Non Pertanian", "Belum ada rencana", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Alih fungsi": 135359,
+                            "Padi": 80809,
+                            "Non Pertanian": 91383,
+                            "Belum ada rencana": 9408,
+                            "Lainnya": 1937
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Ketersediaan Komoditas",
+            "topicTitle": "Ketersediaan Komoditas",
             "img": "/assets/icon/8.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
+            "charts": [
+                {
+                    "title": "Ketersediaan komoditas",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Cukup", "Tidak Cukup"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Cukup": 1284222,
+                                "Tidak Cukup": 938598
+                            },
+                            {
+                                "year": 2022,
+                                "Cukup": 429712,
+                                "Tidak Cukup": 97552
+                            },
+                            {
+                                "year": 2023,
+                                "Cukup": 1284222,
+                                "Tidak Cukup": 97552
+                            },
+                            {
+                                "year": 2024,
+                                "Cukup": 629712,
+                                "Tidak Cukup": 97552
+                            },
+                            {
+                                "year": 2025,
+                                "Cukup": 1284222,
+                                "Tidak Cukup": 938598
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Distribusi komoditas ke pasar",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Ya", "Tidak"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Ya": 1284222,
+                                "Tidak": 938598
+                            },
+                            {
+                                "year": 2022,
+                                "Ya": 429712,
+                                "Tidak": 97552
+                            },
+                            {
+                                "year": 2023,
+                                "Ya": 1284222,
+                                "Tidak": 97552
+                            },
+                            {
+                                "year": 2024,
+                                "Ya": 629712,
+                                "Tidak": 97552
+                            },
+                            {
+                                "year": 2025,
+                                "Ya": 1284222,
+                                "Tidak": 938598
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Kenaikan harga komoditas",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Realisasi Pembangungan Lahan",
+            "topicTitle": "Realisasi Pembangungan Lahan",
             "img": "/assets/icon/9.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/realisasi-pembangunan-lahan",
+            "charts": [
+                {
+                    "title": "Perluasan lahan pertanian",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                },
+                {
+                    "title": "Status lahan baru",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Sudah digunakan untuk produksi", "Belum digunakan untuk produksi"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Sudah digunakan untuk produksi": 1284222,
+                                "Belum digunakan untuk produksi": 938598
+                            },
+                            {
+                                "year": 2022,
+                                "Sudah digunakan untuk produksi": 429712,
+                                "Belum digunakan untuk produksi": 97552
+                            },
+                            {
+                                "year": 2023,
+                                "Sudah digunakan untuk produksi": 1284222,
+                                "Belum digunakan untuk produksi": 97552
+                            },
+                            {
+                                "year": 2024,
+                                "Sudah digunakan untuk produksi": 629712,
+                                "Belum digunakan untuk produksi": 97552
+                            },
+                            {
+                                "year": 2025,
+                                "Sudah digunakan untuk produksi": 1284222,
+                                "Belum digunakan untuk produksi": 938598
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Kendala pembangunan lahan",
+                    "type": "pie-chart",
+                    "labels": ["Kurang alat pertanian", "Irigasi", "Kurang Tenaga Kerja", "Kurang Bibit/pupuk", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Kurang alat pertanian": 87512,
+                            "Irigasi": 9554,
+                            "Kurang Tenaga Kerja": 21862,
+                            "Kurang Bibit/pupuk": 91866,
+                            "Lainnya": 39719
+                        }
+                    }
+                }
+            ]
         },
 
         {
             "title":"Realisasi Distribusi Pangan",
+            "topicTitle": "Realisasi Distribusi Pangan",
             "img": "/assets/icon/10.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout2",
+            "url":"/dashboard-hasil-survey/realisasi-distribusi-pangan",
+            "charts": [
+                {
+                    "title": "Harga pangan akibat distribusi",
+                    "type": "bar-chart-tumpuk",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                },
+                {
+                    "title": "Distribusi pangan yang berjalan lancar",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Lancar", "Bermasalah"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data":  [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Lancar": 938598,
+                                "Bermasalah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Lancar": 1284222,
+                                "Bermasalah": 938598
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Lancar": 8969,
+                                "Bermasalah": 8969
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Lancar": 938598,
+                                "Bermasalah": 8969
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",
+                                "Lancar": 1284222,
+                                "Bermasalah": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Kendala dalam distribusi",
+                    "type": "pie-chart",
+                    "labels": ["Transportasi", "Penyimpanan", "Biaya", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Transportasi": 7512,
+                            "Penyimpanan": 9554,
+                            "Biaya": 2862,
+                            "Lainnya": 9719
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Efektivitas Program Bantuan Pangan",
+            "topicTitle": "Efektivitas Program Bantuan Pangan",
             "img": "/assets/icon/11.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout4",
+            "url":"/dashboard-hasil-survey/efektivitas-program-bantuan-pangan",
+            "charts": [
+                {
+                    "title": "Kendala bantunan pangan",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Kuantitas bantuan tidak mencukupi": 1284222,
+                                "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                                "Distribusi tidak merata": 938598,
+                                "Bantuan tidak tepat waktu": 97552,
+                                "Lainnya": 38722
+                            },
+                            {
+                                "year": 2022,
+                                "Kuantitas bantuan tidak mencukupi": 1284222,
+                                "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                                "Distribusi tidak merata": 429712,
+                                "Bantuan tidak tepat waktu": 97552,
+                                "Lainnya": 38722
+                            },
+                            {
+                                "year": 2023,
+                                "Kuantitas bantuan tidak mencukupi": 1284222,
+                                "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                                "Distribusi tidak merata": 829712,
+                                "Bantuan tidak tepat waktu": 97552,
+                                "Lainnya": 38722
+                            },
+                            {
+                                "year": 2024,
+                                "Kuantitas bantuan tidak mencukupi": 1284222,
+                                "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                                "Distribusi tidak merata": 629712,
+                                "Bantuan tidak tepat waktu": 97552,
+                                "Lainnya": 38722
+                            },
+                            {
+                                "year": 2025,
+                                "Kuantitas bantuan tidak mencukupi": 1284222,
+                                "Jenis pangan yang diberikan tidak sesuai kebutuhan": 938598,
+                                "Distribusi tidak merata": 529712,
+                                "Bantuan tidak tepat waktu": 97552,
+                                "Lainnya": 38722
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Sebaran penerima bantuan",
+                    "type": "pie-chart",
+                    "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Petani": 87512,
+                            "Pedagang pangan": 9554,
+                            "Penerima manfaat bantuan pangan": 21862,
+                            "Konsumen umum": 91866
+                        }
+                    }
+                },
+                {
+                    "title": "Jenis pangan yang lebih dibutuhkan",
+                    "type": "word-cloud",
+                    "labels": ["Beras", "Jagung", "Kedelai", "Minyak goreng", "Protein hewani (telur, daging, ikan)", "Lainnya"],
+                    "colors": [],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "text": "Beras",
+                                "value": 381
+                            },
+                            {
+                                "text": "Jagung",
+                                "value": 39
+                            },
+                            {
+                                "text": "Kedelai",
+                                "value": 83
+                            },
+                            {
+                                "text": "Minyak Goreng",
+                                "value": 31
+                            },
+                            {
+                                "text": "Lainnya1",
+                                "value": 3871
+                            },
+                            {
+                                "text": "Lainnya2",
+                                "value": 88
+                            },
+                            {
+                                "text": "Lainnya3",
+                                "value": 90
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "title":"Perubahan Pola Konsumsi Masyarakat",
+            "topicTitle": "Perubahan Pola Konsumsi Masyarakat",
             "img": "/assets/icon/12.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout4",
+            "url":"/dashboard-hasil-survey/perubahan-pola-konsumsi-masyarakat",
+            "charts": [
+                {
+                    "title": "Jenis perubahan konsumsi akibat harga",
+                    "type": "line-chart-bar-chart-horizontal",
+                    "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Mengurangi porsi makan harian", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                                "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                                "Mengurangi porsi makan harian": 938598,
+                                "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                                "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                                "Mengurangi porsi makan harian": 429712,
+                                "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                                "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                                "Mengurangi porsi makan harian": 829712,
+                                "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                                "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                                "Mengurangi porsi makan harian": 629712,
+                                "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Mengurangi konsumsi daging dan beralih ke protein nabati": 1284222,
+                                "Mengganti beras dengan alternatif lain seperti singkong atau jagung": 938598,
+                                "Mengurangi porsi makan harian": 529712,
+                                "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Konsumsi pangan lokal VS impor",
+                    "type": "pie-chart",
+                    "labels": ["Lokal", "Import"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Lokal": 87512,
+                            "Import": 9554
+                        }
+                    }
+                },
+                {
+                    "title": "Alasan memilih pangan import",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Harga pangan lokal lebih mahal": 1284222,
+                                "Ketersediaan pangan impor lebih tinggi": 938598,
+                                "Kualitas pangan impor lebih baik": 1284222,
+                                "Kebiasaan konsumsi sejak lama": 938598,
+                                "Lainnya": 13981
+                            },
+                            {
+                                "year": 2022,
+                                "Harga pangan lokal lebih mahal": 429712,
+                                "Ketersediaan pangan impor lebih tinggi": 97552,
+                                "Kualitas pangan impor lebih baik": 1284222,
+                                "Kebiasaan konsumsi sejak lama": 938598,
+                                "Lainnya": 13981
+                            },
+                            {
+                                "year": 2023,
+                                "Harga pangan lokal lebih mahal": 1284222,
+                                "Ketersediaan pangan impor lebih tinggi": 97552,
+                                "Kualitas pangan impor lebih baik": 1284222,
+                                "Kebiasaan konsumsi sejak lama": 938598,
+                                "Lainnya": 13981
+                            },
+                            {
+                                "year": 2024,
+                                "Harga pangan lokal lebih mahal": 629712,
+                                "Ketersediaan pangan impor lebih tinggi": 97552,
+                                "Kualitas pangan impor lebih baik": 1284222,
+                                "Kebiasaan konsumsi sejak lama": 938598,
+                                "Lainnya": 13981
+                            },
+                            {
+                                "year": 2025,
+                                "Harga pangan lokal lebih mahal": 1284222,
+                                "Ketersediaan pangan impor lebih tinggi": 938598,
+                                "Kualitas pangan impor lebih baik": 1284222,
+                                "Kebiasaan konsumsi sejak lama": 938598,
+                                "Lainnya": 13981
+                            }
+                        ]
+                    }
+                }
+            ]
         },
         {
             "title":"Keberlanjutan Produksi Pangan",
+            "topicTitle": "Keberlanjutan Produksi Pangan",
             "img": "/assets/icon/13.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/keberlanjutan-produksi-pangan",
+            "charts": [
+                {
+                    "title": "Akses petani ke sumber daya",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Bibit Unggul": 938598,
+                                "Irigasi": 97552,
+                                "Alat Pertanian Modern": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Bibit Unggul": 1284222,
+                                "Irigasi": 97552,
+                                "Alat Pertanian Modern": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Bibit Unggul": 1284222,
+                                "Irigasi": 938598,
+                                "Alat Pertanian Modern": 829712
+                            },
+                            {
+                                "year": 2024,
+                                "Bibit Unggul": 1284222,
+                                "Irigasi": 938598,
+                                "Alat Pertanian Modern": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Bibit Unggul": 1284222,
+                                "Irigasi": 938598,
+                                "Alat Pertanian Modern": 529712
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Aspek Perbaikan",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Peningkatan akses teknologi pertanian", "Subsidi pupuk & pestisida yang merata", "Perbaikan sistem irigasi", "Pelatihan praktik pertanian", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Peningkatan akses teknologi pertanian": 1284222,
+                                "Subsidi pupuk & pestisida yang merata": 938598,
+                                "Perbaikan sistem irigasi": 938598,
+                                "Pelatihan praktik pertanian": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Peningkatan akses teknologi pertanian": 1284222,
+                                "Subsidi pupuk & pestisida yang merata": 938598,
+                                "Perbaikan sistem irigasi": 429712,
+                                "Pelatihan praktik pertanian": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Peningkatan akses teknologi pertanian": 1284222,
+                                "Subsidi pupuk & pestisida yang merata": 938598,
+                                "Perbaikan sistem irigasi": 829712,
+                                "Pelatihan praktik pertanian": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Peningkatan akses teknologi pertanian": 1284222,
+                                "Subsidi pupuk & pestisida yang merata": 938598,
+                                "Perbaikan sistem irigasi": 629712,
+                                "Pelatihan praktik pertanian": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Peningkatan akses teknologi pertanian": 1284222,
+                                "Subsidi pupuk & pestisida yang merata": 938598,
+                                "Perbaikan sistem irigasi": 529712,
+                                "Pelatihan praktik pertanian": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Kendala utama dalam produksi pangan",
+                    "type": "pie-chart",
+                    "labels": ["Harga pupuk yang tinggi", "Kerusakan lahan", "Serangan hama", "Kurang tenaga kerja", "Perubahan iklim", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            "Harga pupuk yang tinggi": 135359,
+                            "Kerusakan lahan": 80809,
+                            "Serangan hama": 91383,
+                            "Kurang tenaga kerja": 9408, 
+                            "Perubahan iklim": 48949,
+                            "Lainnya": 89939
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Pemanfaatan Lahan di Sekitar Batas Hutan",
+            "topicTitle": "Pemanfaatan Lahan di Sekitar Batas Hutan",
             "img": "/assets/icon/14.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/pemanfaatan-lahan",
+            "charts": [
+                {
+                    "title": "Penyebab utama konflik",
+                    "type": "bar-chart-horizontal",
+                    "labels": ["Tidak ada batas hutan yang jelas", "Perluasan perkebunan tanpa izin", "Aktivitas pertambangan di kawasan hutan", "Klaim lahan oleh masyarakat adat", "Pembalakan", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Tidak ada batas hutan yang jelas": 124222,
+                                "Perluasan perkebunan tanpa izin": 93898,
+                                "Aktivitas pertambangan di kawasan hutan": 98598,
+                                "Klaim lahan oleh masyarakat adat": 97552,
+                                "Pembalakan": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Tidak ada batas hutan yang jelas": 124222,
+                                "Perluasan perkebunan tanpa izin": 93898,
+                                "Aktivitas pertambangan di kawasan hutan": 98598,
+                                "Klaim lahan oleh masyarakat adat": 97552,
+                                "Pembalakan": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Tidak ada batas hutan yang jelas": 124222,
+                                "Perluasan perkebunan tanpa izin": 93898,
+                                "Aktivitas pertambangan di kawasan hutan": 98598,
+                                "Klaim lahan oleh masyarakat adat": 97552,
+                                "Pembalakan": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Tidak ada batas hutan yang jelas": 124222,
+                                "Perluasan perkebunan tanpa izin": 93898,
+                                "Aktivitas pertambangan di kawasan hutan": 98598,
+                                "Klaim lahan oleh masyarakat adat": 97552,
+                                "Pembalakan": 8969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Tidak ada batas hutan yang jelas": 124222,
+                                "Perluasan perkebunan tanpa izin": 93898,
+                                "Aktivitas pertambangan di kawasan hutan": 98598,
+                                "Klaim lahan oleh masyarakat adat": 97552,
+                                "Pembalakan": 8969,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Pihak yang terlibat dalam konflik",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Warga lokal / petani", "Perusahaan perkebunan", "Pemerintah daerah", "LSM lingkungan", "Masyarakat adat", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Warga lokal / petani": 124222,
+                                "Perusahaan perkebunan": 93898,
+                                "Pemerintah daerah": 98598,
+                                "LSM lingkungan": 97552,
+                                "Masyarakat adat": 89969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Warga lokal / petani": 124222,
+                                "Perusahaan perkebunan": 93898,
+                                "Pemerintah daerah": 98598,
+                                "LSM lingkungan": 97552,
+                                "Masyarakat adat": 89969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Warga lokal / petani": 124222,
+                                "Perusahaan perkebunan": 93898,
+                                "Pemerintah daerah": 98598,
+                                "LSM lingkungan": 97552,
+                                "Masyarakat adat": 89969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Warga lokal / petani": 124222,
+                                "Perusahaan perkebunan": 93898,
+                                "Pemerintah daerah": 98598,
+                                "LSM lingkungan": 97552,
+                                "Masyarakat adat": 89969,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Warga lokal / petani": 124222,
+                                "Perusahaan perkebunan": 93898,
+                                "Pemerintah daerah": 98598,
+                                "LSM lingkungan": 97552,
+                                "Masyarakat adat": 89969,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Konflik batas hutan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Potensi Konflik di Sekitar Batas Hutan",
+            "topicTitle": "Potensi Konflik di Sekitar Batas Hutan",
             "img": "/assets/icon/15.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout3",
+            "url":"/dashboard-hasil-survey/potensi-konflik",
+            "charts": [
+                {
+                    "title": "Ancaman deforestasi / Perambahan hutan",
+                    "type": "bar-chart-horizontal",
+                    "labels": [],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Jumlah Kab/Kota Terdampak": 12222
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Jumlah Kab/Kota Terdampak": 8969
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Jumlah Kab/Kota Terdampak": 8969
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Jumlah Kab/Kota Terdampak": 6712
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",                                
+                                "Jumlah Kab/Kota Terdampak": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Pihak yang menjalankan program pelestarian batas hutan",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["LSM lingkungan", "Masyarakat setempat", "Perusahaan swasta", "Pemerintah daerah", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "LSM lingkungan": 1284222,
+                                "Masyarakat setempat": 938598,
+                                "Perusahaan swasta": 938598,
+                                "Pemerintah daerah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "LSM lingkungan": 1284222,
+                                "Masyarakat setempat": 938598,
+                                "Perusahaan swasta": 429712,
+                                "Pemerintah daerah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "LSM lingkungan": 1284222,
+                                "Masyarakat setempat": 938598,
+                                "Perusahaan swasta": 829712,
+                                "Pemerintah daerah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "LSM lingkungan": 1284222,
+                                "Masyarakat setempat": 938598,
+                                "Perusahaan swasta": 629712,
+                                "Pemerintah daerah": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "LSM lingkungan": 1284222,
+                                "Masyarakat setempat": 938598,
+                                "Perusahaan swasta": 529712,
+                                "Pemerintah daerah": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Program konservasi batas hutan",
+                    "type": "pie-chart",
+                    "labels": ["Ya", "Tidak"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)"
+                    ],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                }
+            ]
         },
         {
             "title":"Pelestarian dan Keberlanjutan Batas Hutan",
+            "topicTitle": "Pelestarian dan Keberlanjutan Batas Hutan",
             "img": "/assets/icon/16.png",
-            "url":"/dashboard-hasil-survey/tes-detail"
+            "layoutType": "layout6",
+            "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
+            "charts": [
+                {
+                    "title": "Program rehabilitasi hutan",
+                    "type": "pie-chart",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                },
+                {
+                    "title": "Manfaat ekonomi dari konservasi",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": {
+                            
+                        }
+                    }
+                }
+            ]
         }
 
     ]

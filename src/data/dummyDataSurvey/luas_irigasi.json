@@ -1,0 +1,114 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Kendala dalam irigasi",
+            "data": [
+                {
+                    "year": 2021,
+                    "Kerusakan saluran irigasi": 1284222,
+                    "Debit air tidak mencukupi": 938598,
+                    "Pengelolaan irigasi kurang optimal": 938598,
+                    "Kurangnya infrastruktur pendukung": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Kerusakan saluran irigasi": 1284222,
+                    "Debit air tidak mencukupi": 938598,
+                    "Pengelolaan irigasi kurang optimal": 429712,
+                    "Kurangnya infrastruktur pendukung": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Kerusakan saluran irigasi": 1284222,
+                    "Debit air tidak mencukupi": 938598,
+                    "Pengelolaan irigasi kurang optimal": 829712,
+                    "Kurangnya infrastruktur pendukung": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Kerusakan saluran irigasi": 1284222,
+                    "Debit air tidak mencukupi": 938598,
+                    "Pengelolaan irigasi kurang optimal": 629712,
+                    "Kurangnya infrastruktur pendukung": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Kerusakan saluran irigasi": 1284222,
+                    "Debit air tidak mencukupi": 938598,
+                    "Pengelolaan irigasi kurang optimal": 529712,
+                    "Kurangnya infrastruktur pendukung": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Jenis irigasi yang digunakan",
+            "data": [
+                {
+                    "year": 2021,
+                    "Teknis": 1284222,
+                    "Setengah teknis": 938598,
+                    "Sederhana": 938598,
+                    "Tadah Hujan": 97552,
+                    "Rawa/Pasang Surut": 8969,
+                    "Pompa/Air Tanah": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Teknis": 1284222,
+                    "Setengah teknis": 938598,
+                    "Sederhana": 429712,
+                    "Tadah Hujan": 97552,
+                    "Rawa/Pasang Surut": 8969,
+                    "Pompa/Air Tanah": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Teknis": 1284222,
+                    "Setengah teknis": 938598,
+                    "Sederhana": 829712,
+                    "Tadah Hujan": 97552,
+                    "Rawa/Pasang Surut": 8969,
+                    "Pompa/Air Tanah": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Teknis": 1284222,
+                    "Setengah teknis": 938598,
+                    "Sederhana": 629712,
+                    "Tadah Hujan": 97552,
+                    "Rawa/Pasang Surut": 8969,
+                    "Pompa/Air Tanah": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Teknis": 1284222,
+                    "Setengah teknis": 938598,
+                    "Sederhana": 529712,
+                    "Tadah Hujan": 9755,
+                    "Rawa/Pasang Surut": 8969,
+                    "Pompa/Air Tanah": 8969,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Presentase lahan yang memiliki akses irigasi",
+            "data": {
+                "100%": 32352,
+                "75% - 99%": 3919,
+                "50% - 74%": 233, 
+                "25% - 49%": 311, 
+                "< 25%": 877
+            }
+        }
+    ]
+}

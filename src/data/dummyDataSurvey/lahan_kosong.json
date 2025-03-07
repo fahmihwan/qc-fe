@@ -1,0 +1,70 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Alasan lahan kosong",
+            "data": [
+                {
+                    "nama_provinsi": "Sumatera Utara",
+                    "Belum masuk musim tanam": 1284222,
+                    "Kurangnya pasokan air/irigasi": 938598,
+                    "Kekurangan pupuk atau benih": 938598,
+                    "Kurangnya tenaga kerja": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "Papua Tengah",
+                    "Belum masuk musim tanam": 1284222,
+                    "Kurangnya pasokan air/irigasi": 938598,
+                    "Kekurangan pupuk atau benih": 429712,
+                    "Kurangnya tenaga kerja": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "DKI Jakarta",
+                    "Belum masuk musim tanam": 1284222,
+                    "Kurangnya pasokan air/irigasi": 938598,
+                    "Kekurangan pupuk atau benih": 8969,
+                    "Kurangnya tenaga kerja": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "Sulawesi Tenggara",
+                    "Belum masuk musim tanam": 1284222,
+                    "Kurangnya pasokan air/irigasi": 938598,
+                    "Kekurangan pupuk atau benih": 629712,
+                    "Kurangnya tenaga kerja": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "Jawa Timur",
+                    "Belum masuk musim tanam": 1284222,
+                    "Kurangnya pasokan air/irigasi": 938598,
+                    "Kekurangan pupuk atau benih": 8969,
+                    "Kurangnya tenaga kerja": 8969,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Persentase lahan kosong",
+            "data": {
+                "0% (Semua lahan sudah ditanami)": 3352,
+                "1 - 10%": 3919,
+                "11 - 25%": 233, 
+                "26 - 50%": 3121, 
+                "51 - 75%": 877,
+                "76 - 100%": 382
+            }
+        },
+        {
+            "nama_grafik": "Rencana penggunaan lahan kosong",
+            "data": {
+                "Alih fungsi": 135359,
+                "Padi": 80809,
+                "Non Pertanian": 91383,
+                "Belum ada rencana": 9408,
+                "Lainnya": 1937
+            }
+        }
+    ]
+}

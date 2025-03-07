@@ -1,0 +1,90 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Tren peningkatan/penurunan produktivitas",
+            "data": [
+                {
+                    "year": 2021,
+                    "Menaik": 242411,
+                    "Menurun": 98368
+                },
+                {
+                    "year": 2022,
+                    "Menaik": 1952,
+                    "Menurun": 35111
+                },
+                {
+                    "year": 2023,
+                    "Menaik": 2352353,
+                    "Menurun": 34611
+                },
+                {
+                    "year": 2024,
+                    "Menaik": 48422,
+                    "Menurun": 57578
+                },
+                {
+                    "year": 2025,
+                    "Menaik": 2352233,
+                    "Menurun": 89876
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Perbandingan luas panen dengan hasil panen",
+            "data": [
+                {
+                    "Luas Panen": 1241234,
+                    "Hasil Panen": 38298
+                },
+                {
+                    "Luas Panen": 1100000,
+                    "Hasil Panen": 35000
+                },
+                {
+                    "Luas Panen": 950000,
+                    "Hasil Panen": 30000
+                },
+                {
+                    "Luas Panen": 1300000,
+                    "Hasil Panen": 40000
+                },
+                {
+                    "Luas Panen": 1400000,
+                    "Hasil Panen": 42000
+                },
+                {
+                    "Luas Panen": 1000000,
+                    "Hasil Panen": 31000
+                },
+                {
+                    "Luas Panen": 1150000,
+                    "Hasil Panen": 33000
+                },
+                {
+                    "Luas Panen": 1050000,
+                    "Hasil Panen": 29000
+                },
+                {
+                    "Luas Panen": 1200000,
+                    "Hasil Panen": 37000
+                },
+                {
+                    "Luas Panen": 1350000,
+                    "Hasil Panen": 41000
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Faktor yang mempengaruhi produktivitas",
+            "data": {
+                "Benih": 135359,
+                "Pupuk": 80809,
+                "Irigasi": 91383,
+                "Serangan Hama": 9408, 
+                "Perubahan Cuaca": 48949,
+                "Lainnya": 89939
+            }
+        }
+    ]
+}

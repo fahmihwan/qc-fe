@@ -275,7 +275,7 @@ const AllBencanaCategories = () => {
         await fetchDataAsync()
     };
 
-    const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked}/>, [isProvinceClicked, selectedProvinceCode])
+    const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true}/>, [isProvinceClicked, selectedProvinceCode])
     // console.log("responseSummary ", responseSummary)
 
     return (

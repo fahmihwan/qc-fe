@@ -1,0 +1,89 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Perubahan luas lahan dalam setahun terakhir",
+            "data":  [
+                {
+                    "year": 2021,
+                    "Menaik": 242411,
+                    "Menurun": 98368
+                },
+                {
+                    "year": 2022,
+                    "Menaik": 1952,
+                    "Menurun": 35111
+                },
+                {
+                    "year": 2023,
+                    "Menaik": 2352353,
+                    "Menurun": 34611
+                },
+                {
+                    "year": 2024,
+                    "Menaik": 48422,
+                    "Menurun": 57578
+                },
+                {
+                    "year": 2025,
+                    "Menaik": 2352233,
+                    "Menurun": 89876
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Jenis lahan yang digunakan",
+            "data": [
+                {
+                    "year": 2021,
+                    "Sawah Irigasi Teknis": 1284222,
+                    "Sawah Tadah Hujan": 938598,
+                    "Lahan Rawa / Pasang Surut": 19268,
+                    "Lahan Kering / Tegalan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Sawah Irigasi Teknis": 1284222,
+                    "Sawah Tadah Hujan": 938598,
+                    "Lahan Rawa / Pasang Surut": 19268,
+                    "Lahan Kering / Tegalan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Sawah Irigasi Teknis": 1284222,
+                    "Sawah Tadah Hujan": 938598,
+                    "Lahan Rawa / Pasang Surut": 19268,
+                    "Lahan Kering / Tegalan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Sawah Irigasi Teknis": 1284222,
+                    "Sawah Tadah Hujan": 938598,
+                    "Lahan Rawa / Pasang Surut": 19268,
+                    "Lahan Kering / Tegalan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Sawah Irigasi Teknis": 1284222,
+                    "Sawah Tadah Hujan": 938598,
+                    "Lahan Rawa / Pasang Surut": 19268,
+                    "Lahan Kering / Tegalan": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Status kepemilikan lahan",
+            "data": {
+                "Milik Pribadi": 87512,
+                "Sewa": 9554,
+                "Hak Guna Usaha": 21862,
+                "Lahan Pemerintah": 91866,
+                "Lainnya": 19826
+            }
+        }
+    ]
+}

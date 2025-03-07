@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-const DropdownCustomV2 = ({ title, listDropDown, selectedItem, setSelectedItem }) => {
+const DropdownCustomV2 = ({ title, listDropDown, selectedItem, setSelectedItem, width }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="pb-5 items-center">
+        <div className="items-center">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="border-[1px] bg-light-mode-bg dark:border-light-border border-dark-border dark:bg-dark-mode-bg w-96 rounded-[5px] text-sm p-[15px] text-center flex items-center dark:hover:bg-gray-hover hover:bg-gray-hover hover:text-white"
+                className="border-[1px] bg-light-mode-bg dark:border-dark-border border-light-border dark:bg-dark-mode-v2 rounded-[5px] text-sm p-3 text-center flex items-center dark:hover:bg-gray-hover hover:bg-gray-hover hover:text-white"
+                style={{width}}
                 type="button"
             >
                 <div className={`flex flex-row justify-between items-center w-full ${selectedItem ? 'dark:text-white' : 'dark:text-gray-not-selected text-gray-not-selected'}`}>
@@ -26,7 +27,10 @@ const DropdownCustomV2 = ({ title, listDropDown, selectedItem, setSelectedItem }
             </button>
 
             {isOpen && (
-                <div className="absolute mt-2 z-10 max-h-60 overflow-y-auto bg-dark-mode divide-y divide-gray-100 rounded-lg shadow-sm w-96 dark:bg-white">
+                <div
+                    className="absolute mt-2 z-10 max-h-60 overflow-y-auto bg-dark-mode divide-y divide-gray-100 rounded-lg shadow-sm w-96 dark:bg-white"
+                    style={{width}}
+                >
                     <ul className="py-2 text-sm text-white dark:text-dark-mode">
                         {listDropDown.map((item, index) => (
                             <li key={index}>

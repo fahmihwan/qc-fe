@@ -1,0 +1,130 @@
+{
+    "data" : [
+        {
+            "nama_grafik": "Metode pengendalian hama",
+            "data": [
+                {
+                    "year": 2021,
+                    "Pestisida kimia": 1284222,
+                    "Pestisida nabati/organik": 938598,
+                    "Predator alami (burung, serangga pemangsa)": 938598,
+                    "Sistem tanam bergilir": 97552,
+                    "Penggunaan varietas tahan hama": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Pestisida kimia": 1284222,
+                    "Pestisida nabati/organik": 938598,
+                    "Predator alami (burung, serangga pemangsa)": 429712,
+                    "Sistem tanam bergilir": 97552,
+                    "Penggunaan varietas tahan hama": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Pestisida kimia": 1284222,
+                    "Pestisida nabati/organik": 938598,
+                    "Predator alami (burung, serangga pemangsa)": 829712,
+                    "Sistem tanam bergilir": 97552,
+                    "Penggunaan varietas tahan hama": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Pestisida kimia": 1284222,
+                    "Pestisida nabati/organik": 938598,
+                    "Predator alami (burung, serangga pemangsa)": 629712,
+                    "Sistem tanam bergilir": 97552,
+                    "Penggunaan varietas tahan hama": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Pestisida kimia": 1284222,
+                    "Pestisida nabati/organik": 938598,
+                    "Predator alami (burung, serangga pemangsa)": 529712,
+                    "Sistem tanam bergilir": 9755,
+                    "Penggunaan varietas tahan hama": 8969,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Jenis hama yang menyerang",
+            "data": [
+                {
+                    "year": 2021,
+                    "Wereng coklat": 1284222,
+                    "Tikus sawah": 938598,
+                    "Ulat grayak": 938598,
+                    "Walang sangit": 97552,
+                    "Penggerek batang": 8969,
+                    "Keong mas": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Wereng coklat": 1284222,
+                    "Tikus sawah": 938598,
+                    "Ulat grayak": 429712,
+                    "Walang sangit": 97552,
+                    "Penggerek batang": 8969,
+                    "Keong mas": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Wereng coklat": 1284222,
+                    "Tikus sawah": 938598,
+                    "Ulat grayak": 829712,
+                    "Walang sangit": 97552,
+                    "Penggerek batang": 8969,
+                    "Keong mas": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Wereng coklat": 1284222,
+                    "Tikus sawah": 938598,
+                    "Ulat grayak": 629712,
+                    "Walang sangit": 97552,
+                    "Penggerek batang": 8969,
+                    "Keong mas": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Wereng coklat": 1284222,
+                    "Tikus sawah": 938598,
+                    "Ulat grayak": 529712,
+                    "Walang sangit": 9755,
+                    "Penggerek batang": 8969,
+                    "Keong mas": 8969,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Persentase Luas lahan terdampak hama",
+            "data": {
+                "0% (Tidak ada Serangan)": 3352,
+                "1 - 10%": 3919,
+                "11 - 25%": 233, 
+                "26 - 50%": 311, 
+                "51 - 75%": 877,
+                "76 - 100%": 382
+            }
+        },
+        {
+            "nama_grafik": "Kendala pengendalian hama",
+            "data": {
+                "Akses ke pestisida atau metode pengendalian": 32352,
+                "Hama semakin resisten terhadap pestisida": 3919,
+                "Kurangnya tenaga kerja": 233, 
+                "Faktor cuaca yang mendukung perkembangan hama": 311, 
+                "Lainnya": 877
+            }
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Ketersediaan Komoditas",
+            "data": [
+                {
+                    "year": 2021,
+                    "Cukup": 1284222,
+                    "Tidak Cukup": 938598
+                },
+                {
+                    "year": 2022,
+                    "Cukup": 429712,
+                    "Tidak Cukup": 97552
+                },
+                {
+                    "year": 2023,
+                    "Cukup": 1284222,
+                    "Tidak Cukup": 97552
+                },
+                {
+                    "year": 2024,
+                    "Cukup": 629712,
+                    "Tidak Cukup": 97552
+                },
+                {
+                    "year": 2025,
+                    "Cukup": 1284222,
+                    "Tidak Cukup": 938598
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Distribusi komoditas ke pasar",
+            "data": [
+                {
+                    "year": 2021,
+                    "Ya": 1284222,
+                    "Tidak": 938598
+                },
+                {
+                    "year": 2022,
+                    "Ya": 429712,
+                    "Tidak": 97552
+                },
+                {
+                    "year": 2023,
+                    "Ya": 1284222,
+                    "Tidak": 97552
+                },
+                {
+                    "year": 2024,
+                    "Ya": 629712,
+                    "Tidak": 97552
+                },
+                {
+                    "year": 2025,
+                    "Ya": 1284222,
+                    "Tidak": 938598
+                }
+            ]
+        }
+    ]
+}

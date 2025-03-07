@@ -5,28 +5,25 @@ import { formatCurrency } from "../../../utils/generateUtil";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const BarChart = ({ data, options }) => {
-    return <Bar data={data} options={options} height={"350px"} width={"500px"} />;
+const BarChart = ({ data, options, width }) => {
+    return <Bar data={data} options={options} height={"350px"} width={width || "500px"} />;
 }
 
-const BarChartTumpukCustomizeable = ({ data, title }) => {
+const BarChartTumpukCustomizeable = ({ data, title, legendItems, width }) => {
     console.log("data barchart", data)
     const maxData = Math.max(...data.datasets[0].data);
     const minData = Math.min(...data.datasets[0].data);
-    
+
     const range = maxData - minData;
     const stepSize =  Math.ceil(range / 5 / 100) * 50
 
     const options = {
         plugins: {
             legend: {
-                display: true,
+                display: false,
                 position: 'top',
                 labels: {
                     color: '#A3A3A3',
-                    afterFit: (legend) => {
-                        legend.height += 50; // Tambah jarak antara legend dan grafik
-                    }
                 },
             },
             tooltip: {
@@ -71,17 +68,29 @@ const BarChartTumpukCustomizeable = ({ data, title }) => {
     };
 
     const isDataEmpty = data.datasets.every(dataset => dataset.data.every(value => value === 0));
-    
+
     return (
         <>
-            <div className="  px-[29px] py-[15px] h-[326px] flex flex-col">
-                <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-                <div className="w-96 min-h-28 flex flex-grow items-center justify-center">
+            <div className="  px-[29px] py-[15px]  flex flex-col" style={{ width: width }}>
+                <div className="dark:text-white font-bold text-xl mb-[20px]">{title}</div>
+                <div className="items-center justify-center">
                     {isDataEmpty ? (
                         <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                     ) : (
-                        <div className="w-full flex justify-center">
-                            <BarChart data={data} options={options} />
+                        <div className="flex flex-col gap-4">
+                            <div style={{ width: width }}>
+                                <div className="ml-4 mt-4 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-end p-2 rounded">
+                                    {legendItems.map((item, index) => (
+                                    <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
+                                        <span className="w-4 h-4" style={{ backgroundColor: item.color }}></span>
+                                        <span className="text-xs text-gray-700 dark:text-gray-300">{item.label}</span>
+                                    </div>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="w-full flex justify-center">
+                                <BarChart data={data} options={options}width={width} />
+                            </div>
                         </div>
                     )}
                 </div>

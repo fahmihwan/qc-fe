@@ -1,0 +1,74 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Ancaman deforestasi / Perambahan hutan",
+            "data": [
+                {
+                    "nama_provinsi": "Sumatera Utara",
+                    "Jumlah Kab/Kota Terdampak": 12222
+                },
+                {
+                    "nama_provinsi": "Papua Tengah",
+                    "Jumlah Kab/Kota Terdampak": 8969
+                },
+                {
+                    "nama_provinsi": "DKI Jakarta",
+                    "Jumlah Kab/Kota Terdampak": 8969
+                },
+                {
+                    "nama_provinsi": "Sulawesi Tenggara",
+                    "Jumlah Kab/Kota Terdampak": 6712
+                },
+                {
+                    "nama_provinsi": "Jawa Timur",
+                    "Jumlah Kab/Kota Terdampak": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Pihak yang menjalankan program pelestarian batas hutan",
+            "data": [
+                {
+                    "year": 2021,
+                    "LSM lingkungan": 1284222,
+                    "Masyarakat setempat": 938598,
+                    "Perusahaan swasta": 938598,
+                    "Pemerintah daerah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "LSM lingkungan": 1284222,
+                    "Masyarakat setempat": 938598,
+                    "Perusahaan swasta": 429712,
+                    "Pemerintah daerah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "LSM lingkungan": 1284222,
+                    "Masyarakat setempat": 938598,
+                    "Perusahaan swasta": 829712,
+                    "Pemerintah daerah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "LSM lingkungan": 1284222,
+                    "Masyarakat setempat": 938598,
+                    "Perusahaan swasta": 629712,
+                    "Pemerintah daerah": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "LSM lingkungan": 1284222,
+                    "Masyarakat setempat": 938598,
+                    "Perusahaan swasta": 529712,
+                    "Pemerintah daerah": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        }
+    ]
+}

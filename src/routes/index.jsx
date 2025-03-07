@@ -17,6 +17,7 @@ import DashboardSurvey from "../view/survey/DashboardSurvey";
 import DetailDashboardSurvey from "../view/survey/DetailDashboardSurvey";
 import NotFoundPage from "../view/notFound/NotFoundPage";
 import OtherDashboardSurvey from "../view/survey/OtherDashboardSurvey";
+import DetailAllDashboardSurvey from "../view/survey/DetailAllDashboardSurvey";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -44,7 +45,7 @@ const routes = createBrowserRouter([
             { path: "/qrcode", element: <QRcode /> },
             { path: "/data-hasil-survey", element: <SurveyDashboard /> },
             { path: "/dashboard-hasil-survey", element: <DashboardSurvey /> },
-            { path: "/dashboard-hasil-survey/:detail", element: <DetailDashboardSurvey /> },
+            { path: "/dashboard-hasil-survey/:detail", element: <DetailAllDashboardSurvey /> },
             { path: "/generate-survey", element: <GenerateSurvey /> },
             { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
             { path: "/other-dashboard-survey", element: <OtherDashboardSurvey /> }

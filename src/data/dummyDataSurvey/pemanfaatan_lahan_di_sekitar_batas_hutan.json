@@ -1,0 +1,104 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Penyebab utama konflik",
+            "data": [
+                {
+                    "year": 2021,
+                    "Tidak ada batas hutan yang jelas": 124222,
+                    "Perluasan perkebunan tanpa izin": 93898,
+                    "Aktivitas pertambangan di kawasan hutan": 98598,
+                    "Klaim lahan oleh masyarakat adat": 97552,
+                    "Pembalakan": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Tidak ada batas hutan yang jelas": 124222,
+                    "Perluasan perkebunan tanpa izin": 93898,
+                    "Aktivitas pertambangan di kawasan hutan": 98598,
+                    "Klaim lahan oleh masyarakat adat": 97552,
+                    "Pembalakan": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Tidak ada batas hutan yang jelas": 124222,
+                    "Perluasan perkebunan tanpa izin": 93898,
+                    "Aktivitas pertambangan di kawasan hutan": 98598,
+                    "Klaim lahan oleh masyarakat adat": 97552,
+                    "Pembalakan": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Tidak ada batas hutan yang jelas": 124222,
+                    "Perluasan perkebunan tanpa izin": 93898,
+                    "Aktivitas pertambangan di kawasan hutan": 98598,
+                    "Klaim lahan oleh masyarakat adat": 97552,
+                    "Pembalakan": 8969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Tidak ada batas hutan yang jelas": 124222,
+                    "Perluasan perkebunan tanpa izin": 93898,
+                    "Aktivitas pertambangan di kawasan hutan": 98598,
+                    "Klaim lahan oleh masyarakat adat": 97552,
+                    "Pembalakan": 8969,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Pihak yang terlibat dalam konflik",
+            "data": [
+                {
+                    "year": 2021,
+                    "Warga lokal / petani": 124222,
+                    "Perusahaan perkebunan": 93898,
+                    "Pemerintah daerah": 98598,
+                    "LSM lingkungan": 97552,
+                    "Masyarakat adat": 89969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Warga lokal / petani": 124222,
+                    "Perusahaan perkebunan": 93898,
+                    "Pemerintah daerah": 98598,
+                    "LSM lingkungan": 97552,
+                    "Masyarakat adat": 89969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Warga lokal / petani": 124222,
+                    "Perusahaan perkebunan": 93898,
+                    "Pemerintah daerah": 98598,
+                    "LSM lingkungan": 97552,
+                    "Masyarakat adat": 89969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Warga lokal / petani": 124222,
+                    "Perusahaan perkebunan": 93898,
+                    "Pemerintah daerah": 98598,
+                    "LSM lingkungan": 97552,
+                    "Masyarakat adat": 89969,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Warga lokal / petani": 124222,
+                    "Perusahaan perkebunan": 93898,
+                    "Pemerintah daerah": 98598,
+                    "LSM lingkungan": 97552,
+                    "Masyarakat adat": 89969,
+                    "Lainnya": 8969
+                }
+            ]
+        }
+    ]
+}
