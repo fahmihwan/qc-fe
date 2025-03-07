@@ -108,6 +108,108 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 4,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 4,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 4,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 5,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 5,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 5,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 6,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 6,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 6,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "charts": [
