@@ -1692,6 +1692,164 @@
             "img": "/assets/icon/10.png",
             "layoutType": "layout2",
             "url":"/dashboard-hasil-survey/realisasi-distribusi-pangan",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 19,
+                                        "body_title": "Apakah distribusi padi ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 19,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi padi?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 20,
+                                        "body_title": "Apakah distribusi tebu ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 20,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi tebu?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 21,
+                                        "body_title": "Apakah distribusi kedelai ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 21,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi kedelai?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 22,
+                                        "body_title": "Apakah distribusi singkong ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 22,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi singkong?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 23,
+                                        "body_title": "Apakah distribusi jagung ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 23,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi jagung?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 24,
+                                        "body_title": "Apakah distribusi sawit ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 24,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi sawit?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }     
+            ],
             "charts": [
                 {
                     "title": "Harga pangan akibat distribusi",
@@ -1769,6 +1927,7 @@
             "img": "/assets/icon/11.png",
             "layoutType": "layout4",
             "url":"/dashboard-hasil-survey/efektivitas-program-bantuan-pangan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Kendala bantunan pangan",
@@ -1891,6 +2050,7 @@
             "img": "/assets/icon/12.png",
             "layoutType": "layout4",
             "url":"/dashboard-hasil-survey/perubahan-pola-konsumsi-masyarakat",
+            "payload": [],
             "charts": [
                 {
                     "title": "Jenis perubahan konsumsi akibat harga",
@@ -2027,6 +2187,7 @@
             "img": "/assets/icon/13.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/keberlanjutan-produksi-pangan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Akses petani ke sumber daya",
@@ -2159,6 +2320,7 @@
             "img": "/assets/icon/14.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/pemanfaatan-lahan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Penyebab utama konflik",
@@ -2303,6 +2465,7 @@
             "img": "/assets/icon/15.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/potensi-konflik",
+            "payload": [],
             "charts": [
                 {
                     "title": "Ancaman deforestasi / Perambahan hutan",
@@ -2414,6 +2577,7 @@
             "img": "/assets/icon/16.png",
             "layoutType": "layout6",
             "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Program rehabilitasi hutan",
