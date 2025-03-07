@@ -6,6 +6,110 @@
             "img": "/assets/icon/1.png",
             "layoutType": "layout1",
             "url":"/dashboard-hasil-survey/luas-panen",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 1,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 1,
+                                        "body_title": "Jenis lahan yang digunakan untuk padi",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 1,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 2,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 2,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 2,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 3,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 3,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 3,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Perubahan luas lahan dalam setahun terakhir",
