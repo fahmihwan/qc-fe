@@ -2050,7 +2050,212 @@
             "img": "/assets/icon/12.png",
             "layoutType": "layout4",
             "url":"/dashboard-hasil-survey/perubahan-pola-konsumsi-masyarakat",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 31,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 31,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 31,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 32,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 32,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 32,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 33,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 33,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 33,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 34,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 34,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 34,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 35,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 35,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 35,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 36,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 36,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 36,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Jenis perubahan konsumsi akibat harga",
