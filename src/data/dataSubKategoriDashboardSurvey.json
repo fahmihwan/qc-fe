@@ -1237,7 +1237,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 8,
-                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_title": "Apakah Suplai Tebu tersedia dengan cukup di daerah Anda?",
                                         "body_name_input": "question1"
                                     }
                                 },
@@ -1263,7 +1263,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 9,
-                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_title": "Apakah Suplai kedelai tersedia dengan cukup di daerah Anda?",
                                         "body_name_input": "question1"
                                     }
                                 },
@@ -1289,7 +1289,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 10,
-                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_title": "Apakah Suplai singkong tersedia dengan cukup di daerah Anda?",
                                         "body_name_input": "question1"
                                     }
                                 },
@@ -1315,7 +1315,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 11,
-                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_title": "Apakah Suplai Jagung tersedia dengan cukup di daerah Anda?",
                                         "body_name_input": "question1"
                                     }
                                 },
@@ -1341,7 +1341,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 12,
-                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_title": "Apakah Suplai Sawit tersedia dengan cukup di daerah Anda?",
                                         "body_name_input": "question1"
                                     }
                                 },
