@@ -1,7 +1,7 @@
 {
   "listFormSurvey" : [
     {
-      "topik": "Statis Luas Panen",
+      "topik": "Statistik Luas Panen",
       "list": [
         {
           "no":1,
@@ -818,6 +818,108 @@
                     }
                   ],
                   "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topik": "Statistik Produktivitas",
+      "list":[
+        {
+          "title": "Statistik Produktivitas (Padi)",
+          "kode":"foodestate-padi-statistikproduktivitas",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produktivitas Padi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan padi dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Total hasil  panen dalam kuintal (100 kg)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata hasil panen per hektar dalam kuintal (kuintal/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "Faktor",
+                  "title": "Faktor yang mempengaruhi produktivitas",
+                  "isRequired": true,
+                  "choices": [
+                    "Kualitas Benih",
+                    "Penggunaan Pupuk",
+                    "Kondisi Irigasi",
+                    "Serangan Hama/Penyakit",
+                    "Perubahan Cuaca"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question600",
+                  "title": "Apakah ada peningkatan atau penurunan (tes tidak)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "opsi-1",
+                      "text": "Ya (meningkat)"
+                    },
+                    {
+                      "value": "opsi-2",
+                      "text": "Ya (menurun)"
+                    },
+                    {
+                      "value": "tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "text",
+                  "name": "question600-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question600} = 'opsi-1'",
+                  "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "question600-Inputopsi-ya_menurun",
+                  "visibleIf": "{question6} = 'opsi-2'",
+                  "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question10",
+                  "title": "Jika ada perubahan, apa penyebabnya?",
+                  "isRequired": true,
+                  "choices": [
+                    "Perbaikan teknik pertanian",
+                    "Penggunaan pupuk dan pestisida yang lebih baik",
+                    "Cuaca yang lebih mendukung"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
                 }
               ]
             }
