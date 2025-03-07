@@ -346,6 +346,7 @@
             "img": "/assets/icon/2.png",
             "layoutType": "layout2",
             "url":"/dashboard-hasil-survey/produktivitas",
+            "payload": [],
             "charts": [
                 {
                     "title": "Tren peningkatan/penurunan produktivitas",
@@ -466,6 +467,7 @@
             "img": "/assets/icon/3.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/produksi",
+            "payload": [],
             "charts": [
                 {
                     "title": "Kendala dalam produksi",
@@ -621,6 +623,7 @@
             "img": "/assets/icon/4.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/luas-irigasi",
+            "payload": [],
             "charts": [
                 {
                     "title": "Kendala dalam irigasi",
@@ -775,6 +778,7 @@
             "img": "/assets/icon/5.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/jumlah-pupuk",
+            "payload": [],
             "charts": [
                 {
                     "title": "Tren ketersediaan pupuk",
@@ -891,6 +895,7 @@
             "img": "/assets/icon/6.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/presentase-hama",
+            "payload": [],
             "charts": [
                 {
                     "title": "Metode pengendalian hama",
@@ -1074,6 +1079,7 @@
             "img": "/assets/icon/7.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/lahan-kosong",
+            "payload": [],
             "charts": [
                 {
                     "title": "Durasi Lahan Kosong",
@@ -1194,6 +1200,164 @@
             "img": "/assets/icon/8.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 7,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 7,
+                                        "body_title": " Apakah distribusi beras dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tabu-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 8,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 8,
+                                        "body_title": " Apakah distribusi Tebu dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 9,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 9,
+                                        "body_title": " Apakah distribusi kedelai dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 10,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 10,
+                                        "body_title": " Apakah distribusi singkong dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 11,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 11,
+                                        "body_title": " Apakah distribusi Jagung dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 12,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 12,
+                                        "body_title": " Apakah distribusi Sawit dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Ketersediaan komoditas",
