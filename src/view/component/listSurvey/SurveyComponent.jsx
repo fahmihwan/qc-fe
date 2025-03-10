@@ -54,33 +54,26 @@ function SurveyComponent() {
                     "path": "data"
                 }
             },
-            // {
-            //     "type": "dropdown",
-            //     "name": "district_id",
-            //     "isRequired": true,
-            //     "title": "Nama Kecamatan",
-            //     "choicesByUrl": {
-            //         "url": "https://www.emsifa.com/api-wilayah-indonesia/api/districts/{regency_id}.json",
-            //         "valueName": "id",
-            //         "titleName": "name"
-            //     }
-            // },
-            // {
-            //     "type": "dropdown",
-            //     "name": "village_id",
-            //     "isRequired": true,
-            //     "title": "Nama Desa",
-            //     "choicesByUrl": {
-            //         "url": "https://www.emsifa.com/api-wilayah-indonesia/api/villages/{district_id}.json",
-            //         "valueName": "id",
-            //         "titleName": "name"
-            //     }
-            // },
-            // {
-            //     "type": "text",
-            //     "name": "gps",
-            //     "title": "Koordinat GPS (Opsional)"
-            // }
+            {
+                "type": "dropdown",
+                "name": "kecamatan_id",
+                "title": "Nama Kecamatan",
+                "isRequired": true,
+                "choicesByUrl": {
+                    "url": `${import.meta.env.VITE_API_BE_URL}/api/kecamatan/{kabkota_id}`,
+                    "valueName": "kecamatan_id",
+                    "titleName": "nama_kecamatan",
+                    "path": "data"
+                }
+            },
+            {
+                "type": "comment",
+                "name": "alamat_detail",
+                "title": "Alamat Detail",
+                "isRequired": true
+            },
+
+
         ]
     }
 
@@ -139,6 +132,10 @@ function SurveyComponent() {
                     } else if (str == 'province_id') {
                         result = '0'
                     } else if (str == 'kabkota_id') {
+                        result = '0'
+                    } else if (str == 'kecamatan_id') {
+                        result = '0'
+                    } else if (str == 'alamat_detail') {
                         result = '0'
                     }
                 }
@@ -215,10 +212,13 @@ function SurveyComponent() {
 
                 }
             }
+
             let finalResult = {
                 informasi_lokasi: {
                     provinsi_id: sender.data?.province_id,
                     kabkota_id: sender.data?.kabkota_id,
+                    kecamatan_id: sender.data?.kecamatan_id,
+                    alamat_detail: sender.data?.alamat_detail,
                 },
                 kode: sender.jsonObj.kode,
                 data: mappingQuestionFix,
