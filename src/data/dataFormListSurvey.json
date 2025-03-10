@@ -860,7 +860,7 @@
                 },
                 {
                   "type": "dropdown",
-                  "name": "Faktor",
+                  "name": "question4",
                   "title": "Faktor yang mempengaruhi produktivitas",
                   "isRequired": true,
                   "choices": [
@@ -875,7 +875,7 @@
                 },
                 {
                   "type": "radiogroup",
-                  "name": "question600",
+                  "name": "question5",
                   "title": "Apakah ada peningkatan atau penurunan (tes tidak)",
                   "isRequired": true,
                   "choices": [
@@ -896,21 +896,21 @@
                 },
                 {
                   "type": "text",
-                  "name": "question600-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question600} = 'opsi-1'",
+                  "name": "question5-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question5} = 'opsi-1'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
-                  "name": "question600-Inputopsi-ya_menurun",
-                  "visibleIf": "{question6} = 'opsi-2'",
+                  "name": "question5-Inputopsi-ya_menurun",
+                  "visibleIf": "{question5} = 'opsi-2'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "radiogroup",
-                  "name": "question10",
+                  "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
