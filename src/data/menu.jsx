@@ -61,6 +61,11 @@ const menu = [
                 link: '/gempa',
                 icon: <IconGempaSVG />
             },
+            {
+                title: 'Pantauan dan Data Tabular',
+                link: '/pantauan-dan-data-tabular',
+                icon: <IconDashboardSVG />
+            }
             // {
             //     title: 'Banjir',
             //     link: '',
