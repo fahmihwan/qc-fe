@@ -38,7 +38,8 @@
     "survey-analytics": "^1.12.26",
     "survey-react-ui": "^1.12.23",
     "tailwind-scrollbar": "^3.1.0",
-    "vanilla-infinite-marquee": "^1.0.12"
+    "vanilla-infinite-marquee": "^1.0.12",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

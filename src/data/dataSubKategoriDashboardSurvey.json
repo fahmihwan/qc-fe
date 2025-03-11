@@ -108,13 +108,116 @@
                             ]
                         }
                     ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 4,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 4,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 4,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 5,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 5,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 5,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikluaspanen",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 6,
+                                        "body_title": "Apakah ada peningkatan atau penurunan  produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 6,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 6,
+                                        "body_title": "Status Kepemilikan Lahan",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 }
             ],
             "charts": [
                 {
                     "title": "Perubahan luas lahan dalam setahun terakhir",
                     "type": "line-chart",
-                    "labels": ["Menaik", "Menurun"],
+                    "labels": ["Meningkat", "Menurun"],
+                    "dataName": "resultLine",
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(255, 0, 0, 1)"
@@ -123,27 +226,27 @@
                         "data" : [
                             {
                                 "year": 2021,
-                                "Menaik": 242411,
+                                "Meningkat": 242411,
                                 "Menurun": 98368
                             },
                             {
                                 "year": 2022,
-                                "Menaik": 1952,
+                                "Meningkat": 1952,
                                 "Menurun": 35111
                             },
                             {
                                 "year": 2023,
-                                "Menaik": 2352353,
+                                "Meningkat": 2352353,
                                 "Menurun": 34611
                             },
                             {
                                 "year": 2024,
-                                "Menaik": 48422,
+                                "Meningkat": 48422,
                                 "Menurun": 57578
                             },
                             {
                                 "year": 2025,
-                                "Menaik": 2352233,
+                                "Meningkat": 2352233,
                                 "Menurun": 89876
                             }
                         ]
@@ -152,7 +255,13 @@
                 {
                     "title": "Jenis lahan yang digunakan",
                     "type": "bar-chart-horizontal",
-                    "labels": ["Sawah Irigasi Teknis", "Sawah Tadah Hujan", "Lahan Rawa / Pasang Surut", "Lahan Kering / Tegalan", "Lainnya"],
+                    "labels": [
+                        "Sawah irigasi teknis", 
+                        "Sawah tadah hujan", 
+                        "Lahan rawa/pasang surut", 
+                        "Lahan kering/tegalan", 
+                        "Lainnya"
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -164,43 +273,43 @@
                         "data": [
                             {
                                 "year": 2021,
-                                "Sawah Irigasi Teknis": 1284222,
-                                "Sawah Tadah Hujan": 938598,
-                                "Lahan Rawa / Pasang Surut": 938598,
-                                "Lahan Kering / Tegalan": 97552,
-                                "Lainnya": 8969
+                                "Sawah irigasi teknis": 1284222,
+                                "Sawah tadah hujan": 938598,
+                                "Lahan rawa/pasang surut": 938598,
+                                "Lahan kering/tegalan": 97552,
+                                "Lainnya": 89692
                             },
                             {
                                 "year": 2022,
-                                "Sawah Irigasi Teknis": 1284222,
-                                "Sawah Tadah Hujan": 938598,
-                                "Lahan Rawa / Pasang Surut": 429712,
-                                "Lahan Kering / Tegalan": 97552,
-                                "Lainnya": 8969
+                                "Sawah irigasi teknis": 1284222,
+                                "Sawah tadah hujan": 938598,
+                                "Lahan rawa/pasang surut": 938598,
+                                "Lahan kering/tegalan": 97552,
+                                "Lainnya": 89692
                             },
                             {
                                 "year": 2023,
-                                "Sawah Irigasi Teknis": 1284222,
-                                "Sawah Tadah Hujan": 938598,
-                                "Lahan Rawa / Pasang Surut": 829712,
-                                "Lahan Kering / Tegalan": 97552,
-                                "Lainnya": 8969
+                                "Sawah irigasi teknis": 1284222,
+                                "Sawah tadah hujan": 938598,
+                                "Lahan rawa/pasang surut": 938598,
+                                "Lahan kering/tegalan": 97552,
+                                "Lainnya": 89692
                             },
                             {
                                 "year": 2024,
-                                "Sawah Irigasi Teknis": 1284222,
-                                "Sawah Tadah Hujan": 938598,
-                                "Lahan Rawa / Pasang Surut": 629712,
-                                "Lahan Kering / Tegalan": 97552,
-                                "Lainnya": 8969
+                                "Sawah irigasi teknis": 1284222,
+                                "Sawah tadah hujan": 938598,
+                                "Lahan rawa/pasang surut": 938598,
+                                "Lahan kering/tegalan": 97552,
+                                "Lainnya": 89692
                             },
                             {
                                 "year": 2025,
-                                "Sawah Irigasi Teknis": 1284222,
-                                "Sawah Tadah Hujan": 938598,
-                                "Lahan Rawa / Pasang Surut": 529712,
-                                "Lahan Kering / Tegalan": 97552,
-                                "Lainnya": 8969
+                                "Sawah irigasi teknis": 1284222,
+                                "Sawah tadah hujan": 938598,
+                                "Lahan rawa/pasang surut": 938598,
+                                "Lahan kering/tegalan": 97552,
+                                "Lainnya": 89692
                             }
                         ]
                     }
@@ -208,7 +317,7 @@
                 {
                     "title": "Status kepemilikan lahan",
                     "type": "pie-chart",
-                    "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha", "Lahan Pemerintah", "Lainnya"],
+                    "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -221,19 +330,8 @@
                             "Milik Pribadi": 87512,
                             "Sewa": 9554,
                             "Hak Guna Usaha": 21862,
-                            "Lahan Pemerintah": 91866,
+                            "Milik Pemerintah": 91866,
                             "Lainnya": 19826
-                        }
-                    }
-                },
-                {
-                    "title": "Penyebab perubahan luas pangan",
-                    "type": "word-cloud",
-                    "labels": [],
-                    "colors": [],
-                    "dummyData": {
-                        "data": {
-
                         }
                     }
                 }
@@ -244,6 +342,7 @@
             "img": "/assets/icon/2.png",
             "layoutType": "layout2",
             "url":"/dashboard-hasil-survey/produktivitas",
+            "payload": [],
             "charts": [
                 {
                     "title": "Tren peningkatan/penurunan produktivitas",
@@ -364,6 +463,7 @@
             "img": "/assets/icon/3.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/produksi",
+            "payload": [],
             "charts": [
                 {
                     "title": "Kendala dalam produksi",
@@ -519,6 +619,7 @@
             "img": "/assets/icon/4.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/luas-irigasi",
+            "payload": [],
             "charts": [
                 {
                     "title": "Kendala dalam irigasi",
@@ -673,6 +774,7 @@
             "img": "/assets/icon/5.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/jumlah-pupuk",
+            "payload": [],
             "charts": [
                 {
                     "title": "Tren ketersediaan pupuk",
@@ -789,6 +891,7 @@
             "img": "/assets/icon/6.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/presentase-hama",
+            "payload": [],
             "charts": [
                 {
                     "title": "Metode pengendalian hama",
@@ -972,6 +1075,7 @@
             "img": "/assets/icon/7.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/lahan-kosong",
+            "payload": [],
             "charts": [
                 {
                     "title": "Durasi Lahan Kosong",
@@ -1092,6 +1196,164 @@
             "img": "/assets/icon/8.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 7,
+                                        "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 7,
+                                        "body_title": " Apakah distribusi beras dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tabu-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 8,
+                                        "body_title": "Apakah Suplai Tebu tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 8,
+                                        "body_title": " Apakah distribusi Tebu dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 9,
+                                        "body_title": "Apakah Suplai kedelai tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 9,
+                                        "body_title": " Apakah distribusi kedelai dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 10,
+                                        "body_title": "Apakah Suplai singkong tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 10,
+                                        "body_title": " Apakah distribusi singkong dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 11,
+                                        "body_title": "Apakah Suplai Jagung tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 11,
+                                        "body_title": " Apakah distribusi Jagung dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-ketersediaankomoditas",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 12,
+                                        "body_title": "Apakah Suplai Sawit tersedia dengan cukup di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 12,
+                                        "body_title": " Apakah distribusi Sawit dari petani ke pasar berjalan lancar?\n",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Ketersediaan komoditas",
@@ -1188,6 +1450,164 @@
             "img": "/assets/icon/9.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/realisasi-pembangunan-lahan",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 13,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 13,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 14,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 14,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 15,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 15,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 16,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 16,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 17,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 17,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-realisasipembangunanlahan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 18,
+                                        "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit ",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 18,
+                                        "body_title": "Jika belum, apa kendala utamanya?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Perluasan lahan pertanian",
@@ -1268,6 +1688,164 @@
             "img": "/assets/icon/10.png",
             "layoutType": "layout2",
             "url":"/dashboard-hasil-survey/realisasi-distribusi-pangan",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 19,
+                                        "body_title": "Apakah distribusi padi ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 19,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi padi?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 20,
+                                        "body_title": "Apakah distribusi tebu ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 20,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi tebu?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 21,
+                                        "body_title": "Apakah distribusi kedelai ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 21,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi kedelai?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 22,
+                                        "body_title": "Apakah distribusi singkong ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 22,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi singkong?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 23,
+                                        "body_title": "Apakah distribusi jagung ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 23,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi jagung?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-realisasidistribusipangan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 24,
+                                        "body_title": "Apakah distribusi sawit ke masyarakat berjalan lancar?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 24,
+                                        "body_title": "Jika tidak, apa kendala utama dalam distribusi sawit?",
+                                        "body_name_input": "question2"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }     
+            ],
             "charts": [
                 {
                     "title": "Harga pangan akibat distribusi",
@@ -1345,6 +1923,7 @@
             "img": "/assets/icon/11.png",
             "layoutType": "layout4",
             "url":"/dashboard-hasil-survey/efektivitas-program-bantuan-pangan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Kendala bantunan pangan",
@@ -1467,6 +2046,212 @@
             "img": "/assets/icon/12.png",
             "layoutType": "layout4",
             "url":"/dashboard-hasil-survey/perubahan-pola-konsumsi-masyarakat",
+            "payload": [
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 31,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 31,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 31,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 32,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 32,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 32,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 33,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 33,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 33,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 34,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 34,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 34,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 35,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 35,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 35,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-perubahanpolakonsumsimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 36,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 36,
+                                        "body_title": "Apakah masyarakat lebih sering mengonsumsi pangan lokal dibanding pangan impor?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 36,
+                                        "body_title": "Jika tidak, apa alasan utama memilih pangan impor?",
+                                        "body_name_input": "question3"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Jenis perubahan konsumsi akibat harga",
@@ -1603,6 +2388,7 @@
             "img": "/assets/icon/13.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/keberlanjutan-produksi-pangan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Akses petani ke sumber daya",
@@ -1735,6 +2521,7 @@
             "img": "/assets/icon/14.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/pemanfaatan-lahan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Penyebab utama konflik",
@@ -1879,6 +2666,7 @@
             "img": "/assets/icon/15.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/potensi-konflik",
+            "payload": [],
             "charts": [
                 {
                     "title": "Ancaman deforestasi / Perambahan hutan",
@@ -1990,6 +2778,7 @@
             "img": "/assets/icon/16.png",
             "layoutType": "layout6",
             "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
+            "payload": [],
             "charts": [
                 {
                     "title": "Program rehabilitasi hutan",

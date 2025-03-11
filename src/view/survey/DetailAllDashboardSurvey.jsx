@@ -76,7 +76,8 @@ const DetailAllDashboardSurvey = () => {
         "Jagung",
         "Kedelai",
         "Tebu", 
-        "Singkong"
+        "Singkong",
+        "Sawit"
     ])
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {

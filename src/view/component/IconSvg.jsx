@@ -315,6 +315,14 @@ export const IconSortFilterSVG = () => {
     )
 }
 
+export const IconSortFilterSVG2 = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.50011 1.52881L7.33811 4.13181L6.66211 4.86881L5.00011 3.34381V13.9998H4.00011V3.34381L2.33811 4.86881L1.66211 4.13181L4.50011 1.52881ZM10.9541 12.2738V1.90981H11.9541V12.2728L13.6161 10.7478L14.2921 11.4848L11.4541 14.0878L8.61611 11.4848L9.29211 10.7478L10.9541 12.2738Z" className="fill-dark-mode dark:fill-white"/>
+        </svg>
+    )
+}
+
 export const IconDataHasilSurveySVG = () => {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

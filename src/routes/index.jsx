@@ -18,6 +18,7 @@ import DetailDashboardSurvey from "../view/survey/DetailDashboardSurvey";
 import NotFoundPage from "../view/notFound/NotFoundPage";
 import OtherDashboardSurvey from "../view/survey/OtherDashboardSurvey";
 import DetailAllDashboardSurvey from "../view/survey/DetailAllDashboardSurvey";
+import PantauandanDataTabular from "../view/bencana/PantauandanDataTabular";
 
 const Dashboard = lazy(() => import("../view/dashboard/Dashboard"));
 
@@ -35,6 +36,7 @@ const routes = createBrowserRouter([
         children: [
             { path: "/dashboard", element: <Dashboard /> },
             { path: "/gempa", element: <Gempa /> },
+            { path: "/pantauan-dan-data-tabular", element: <PantauandanDataTabular /> },
             { path: "/all-food-estate", element: <AllCategories /> },
             { path: "/padi", element: <EachCategoryFoodEstate category="Padi" /> },
             { path: "/jagung", element: <EachCategoryFoodEstate category="Jagung" /> },

@@ -124,16 +124,20 @@ const LayoutType1Survey = ({
                         {/* children ketiga */}
                         {children[2]}
                     </motion.div>
-                    <motion.div 
-                        className=' mx-5 mb-5 h-[364px] border p-[15px] rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                        variants={fadeIn("left", 0.3)}
-                        initial="hidden"
-                        whileInView={"show"}
-                        viewport={{once: true, amount: 0.5}}
-                    >
-                        {/* children keempat */}
-                        {children[3]}
-                    </motion.div>
+
+                    {
+                        children[3] &&
+                        <motion.div 
+                            className=' mx-5 mb-5 h-[364px] border p-[15px] rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                            variants={fadeIn("left", 0.3)}
+                            initial="hidden"
+                            whileInView={"show"}
+                            viewport={{once: true, amount: 0.5}}
+                        >
+                            {/* children keempat */}
+                            {children[3]}
+                        </motion.div>
+                    }
 
                     {isProvinceClicked &&
                         <motion.div 
