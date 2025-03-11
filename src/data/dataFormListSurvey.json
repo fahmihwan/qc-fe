@@ -193,7 +193,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question4",
-                  "title": "Jenis lahan yang digunakan untuk tebu",
+                  "title": "Jenis lahan yang digunakan untuk Singkong",
                   "isRequired": true,
                   "choices": [
                     {
@@ -288,7 +288,7 @@
                 {
                   "type": "text",
                   "name": "question1",
-                  "title": "Total luas lahan padi dalam satuan hektar (ha)",
+                  "title": "Total luas lahan Tebu dalam satuan hektar (ha)",
                   "isRequired": true,
                   "inputType": "number"
                 },
@@ -425,7 +425,7 @@
                 {
                   "type": "text",
                   "name": "question1",
-                  "title": "Total luas lahan padi dalam satuan hektar (ha)",
+                  "title": "Total luas lahan kedelai dalam satuan hektar (ha)",
                   "isRequired": true,
                   "inputType": "number"
                 },
@@ -465,7 +465,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question4",
-                  "title": "Jenis lahan yang digunakan untuk tebu",
+                  "title": "Jenis lahan yang digunakan untuk kedelai",
                   "isRequired": true,
                   "choices": [
                     {
@@ -562,7 +562,7 @@
                 {
                   "type": "text",
                   "name": "question1",
-                  "title": "Total luas lahan padi dalam satuan hektar (ha)",
+                  "title": "Total luas lahan jagung dalam satuan hektar (ha)",
                   "isRequired": true,
                   "inputType": "number"
                 },
@@ -602,7 +602,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question4",
-                  "title": "Jenis lahan yang digunakan untuk tebu",
+                  "title": "Jenis lahan yang digunakan untuk jagung",
                   "isRequired": true,
                   "choices": [
                     {
@@ -699,7 +699,7 @@
                 {
                   "type": "text",
                   "name": "question1",
-                  "title": "Total luas lahan padi dalam satuan hektar (ha)",
+                  "title": "Total luas lahan sawit dalam satuan hektar (ha)",
                   "isRequired": true,
                   "inputType": "number"
                 },
@@ -739,7 +739,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question4",
-                  "title": "Jenis lahan yang digunakan untuk tebu",
+                  "title": "Jenis lahan yang digunakan untuk sawit",
                   "isRequired": true,
                   "choices": [
                     {
