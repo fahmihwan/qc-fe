@@ -1419,6 +1419,1782 @@
       ]
     },
     {
+      "topik": "Statistik Produksi",
+      "list":[
+        {
+          "no":1,
+          "title": "Statistik Produksi (Padi)",
+          "kode":"foodestate-padi-statistikproduksi",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produksi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang ditanami padi dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Jumlah total hasil panen dalam satuan ton (ton)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Jumlah musim tanam dalam setahun",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "1 kali",
+                      "text": "1 kali"
+                    },
+                    {
+                      "value": "2 kali",
+                      "text": "2 kali"
+                    },
+                    {
+                      "value": "3 kali",
+                      "text": "3 kali"
+                    },
+                    {
+                      "value": "Lebih dari 3 kali",
+                      "text": "Lebih dari 3 kali"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jenis padi yang ditanam",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Padi hibrida",
+                      "text": "Padi hibrida"
+                    },
+                    {
+                      "value": "Padi inbrida",
+                      "text": "Padi inbrida"
+                    },
+                    {
+                      "value": "Padi organik",
+                      "text": "Padi organik"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Hasil panen digunakan untuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Konsumsi sendiri",
+                      "text": "Konsumsi sendiri"
+                    },
+                    {
+                      "value": "Dijual ke pasar lokal",
+                      "text": "Dijual ke pasar lokal"
+                    },
+                    {
+                      "value": "Dijual ke perusahaan besar",
+                      "text": "Dijual ke perusahaan besar"
+                    },
+                    {
+                      "value": "Disimpan sebagai cadangan",
+                      "text": "Disimpan sebagai cadangan"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "title": "Jika hasil panen dijual, berapa harga rata-rata per kg (ex: Rp20000000)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Kendala utama dalam produksi padi\n",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya pupuk atau pestisida",
+                      "text": "Kurangnya pupuk atau pestisida"
+                    },
+                    {
+                      "value": "Serangan hama dan penyakit",
+                      "text": "Serangan hama dan penyakit"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Cuaca buruk",
+                      "text": "Cuaca buruk"
+                    },
+                    {
+                      "value": "Keterbatasan akses ke pasar",
+                      "text": "Keterbatasan akses ke pasar"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topik": "Statistik Luas irigasi",
+      "list": [
+        {
+          "no":1,
+          "kode":"foodestate-padi-statistikluasirigasi",
+          "title": "Statistik Luas Irigasi (Padi)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Luas Irigasi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang memiliki sistem irigasi dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jenis irigasi yang digunakan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    },
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Persentase lahan yang memiliki akses irigasi",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "100%",
+                      "text": "100%"
+                    },
+                    {
+                      "value": "75% - 99%",
+                      "text": "75% - 99%"
+                    },
+                    {
+                      "value": "50% - 74%",
+                      "text": "50% - 74%"
+                    },
+                    {
+                      "value": "25% - 49%",
+                      "text": "25% - 49%"
+                    },
+                    {
+                      "value": "< 25%",
+                      "text": "< 25%"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question5",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kerusakan saluran irigasi",
+                      "text": "Kerusakan saluran irigasi"
+                    },
+                    {
+                      "value": "Debit air tidak mencukupi",
+                      "text": "Debit air tidak mencukupi"
+                    },
+                    {
+                      "value": "Pengelolaan irigasi kurang optimal",
+                      "text": "Pengelolaan irigasi kurang optimal"
+                    },
+                    {
+                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
+                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":2,
+          "kode":"foodestate-singkong-statistikluasirigasi",
+          "title": "Statistik Luas Irigasi (Singkong)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Luas Irigasi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang memiliki sistem irigasi dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jenis irigasi yang digunakan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    },
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Persentase lahan yang memiliki akses irigasi",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "100%",
+                      "text": "100%"
+                    },
+                    {
+                      "value": "75% - 99%",
+                      "text": "75% - 99%"
+                    },
+                    {
+                      "value": "50% - 74%",
+                      "text": "50% - 74%"
+                    },
+                    {
+                      "value": "25% - 49%",
+                      "text": "25% - 49%"
+                    },
+                    {
+                      "value": "< 25%",
+                      "text": "< 25%"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question5",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kerusakan saluran irigasi",
+                      "text": "Kerusakan saluran irigasi"
+                    },
+                    {
+                      "value": "Debit air tidak mencukupi",
+                      "text": "Debit air tidak mencukupi"
+                    },
+                    {
+                      "value": "Pengelolaan irigasi kurang optimal",
+                      "text": "Pengelolaan irigasi kurang optimal"
+                    },
+                    {
+                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
+                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":3,
+          "kode":"foodestate-tebu-statistikluasirigasi",
+          "title": "Statistik Luas Irigasi (Tebu)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Luas Irigasi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang memiliki sistem irigasi dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jenis irigasi yang digunakan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    },
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Persentase lahan yang memiliki akses irigasi",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "100%",
+                      "text": "100%"
+                    },
+                    {
+                      "value": "75% - 99%",
+                      "text": "75% - 99%"
+                    },
+                    {
+                      "value": "50% - 74%",
+                      "text": "50% - 74%"
+                    },
+                    {
+                      "value": "25% - 49%",
+                      "text": "25% - 49%"
+                    },
+                    {
+                      "value": "< 25%",
+                      "text": "< 25%"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question5",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kerusakan saluran irigasi",
+                      "text": "Kerusakan saluran irigasi"
+                    },
+                    {
+                      "value": "Debit air tidak mencukupi",
+                      "text": "Debit air tidak mencukupi"
+                    },
+                    {
+                      "value": "Pengelolaan irigasi kurang optimal",
+                      "text": "Pengelolaan irigasi kurang optimal"
+                    },
+                    {
+                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
+                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":4,
+          "kode":"foodestate-kedelai-statistikluasirigasi",
+          "title": "Statistik Luas Irigasi (Kedelai)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Luas Irigasi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang memiliki sistem irigasi dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jenis irigasi yang digunakan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    },
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Persentase lahan yang memiliki akses irigasi",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "100%",
+                      "text": "100%"
+                    },
+                    {
+                      "value": "75% - 99%",
+                      "text": "75% - 99%"
+                    },
+                    {
+                      "value": "50% - 74%",
+                      "text": "50% - 74%"
+                    },
+                    {
+                      "value": "25% - 49%",
+                      "text": "25% - 49%"
+                    },
+                    {
+                      "value": "< 25%",
+                      "text": "< 25%"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question5",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kerusakan saluran irigasi",
+                      "text": "Kerusakan saluran irigasi"
+                    },
+                    {
+                      "value": "Debit air tidak mencukupi",
+                      "text": "Debit air tidak mencukupi"
+                    },
+                    {
+                      "value": "Pengelolaan irigasi kurang optimal",
+                      "text": "Pengelolaan irigasi kurang optimal"
+                    },
+                    {
+                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
+                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":5,
+          "kode":"foodestate-jagung-statistikluasirigasi",
+          "title": "Statistik Luas Irigasi (Jagung)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Luas Irigasi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang memiliki sistem irigasi dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jenis irigasi yang digunakan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    },
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Persentase lahan yang memiliki akses irigasi",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "100%",
+                      "text": "100%"
+                    },
+                    {
+                      "value": "75% - 99%",
+                      "text": "75% - 99%"
+                    },
+                    {
+                      "value": "50% - 74%",
+                      "text": "50% - 74%"
+                    },
+                    {
+                      "value": "25% - 49%",
+                      "text": "25% - 49%"
+                    },
+                    {
+                      "value": "< 25%",
+                      "text": "< 25%"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question5",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kerusakan saluran irigasi",
+                      "text": "Kerusakan saluran irigasi"
+                    },
+                    {
+                      "value": "Debit air tidak mencukupi",
+                      "text": "Debit air tidak mencukupi"
+                    },
+                    {
+                      "value": "Pengelolaan irigasi kurang optimal",
+                      "text": "Pengelolaan irigasi kurang optimal"
+                    },
+                    {
+                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
+                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":6,
+          "kode":"foodestate-sawit-statistikluasirigasi",
+          "title": "Statistik Luas Irigasi (Sawit)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Luas Irigasi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang memiliki sistem irigasi dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jenis irigasi yang digunakan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    },
+                    {
+                      "value": "Irigasi teknis",
+                      "text": "Irigasi teknis"
+                    },
+                    {
+                      "value": "Irigasi setengah teknis",
+                      "text": "Irigasi setengah teknis"
+                    },
+                    {
+                      "value": "Irigasi sederhana",
+                      "text": "Irigasi sederhana"
+                    },
+                    {
+                      "value": "Irigasi tadah hujan",
+                      "text": "Irigasi tadah hujan"
+                    },
+                    {
+                      "value": "Irigasi rawa/pasang surut",
+                      "text": "Irigasi rawa/pasang surut"
+                    },
+                    {
+                      "value": "Irigasi pompa/air tanah",
+                      "text": "Irigasi pompa/air tanah"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Persentase lahan yang memiliki akses irigasi",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "100%",
+                      "text": "100%"
+                    },
+                    {
+                      "value": "75% - 99%",
+                      "text": "75% - 99%"
+                    },
+                    {
+                      "value": "50% - 74%",
+                      "text": "50% - 74%"
+                    },
+                    {
+                      "value": "25% - 49%",
+                      "text": "25% - 49%"
+                    },
+                    {
+                      "value": "< 25%",
+                      "text": "< 25%"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question5",
+                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kerusakan saluran irigasi",
+                      "text": "Kerusakan saluran irigasi"
+                    },
+                    {
+                      "value": "Debit air tidak mencukupi",
+                      "text": "Debit air tidak mencukupi"
+                    },
+                    {
+                      "value": "Pengelolaan irigasi kurang optimal",
+                      "text": "Pengelolaan irigasi kurang optimal"
+                    },
+                    {
+                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
+                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topik":"Statistik Jumlah pupuk",
+      "list":[
+        {
+          "no":1,
+          "kode":"foodestate-padi-statistikjumlahpupuk",
+          "title": "Statistik Jumlah Pupuk (Padi)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Jumlah Pupuk padi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang menggunakan pupuk dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "question2",
+                  "title": "Jenis pupuk yang digunakan ",
+                  "description": "(pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pupuk Urea",
+                      "text": "Pupuk Urea"
+                    },
+                    {
+                      "value": "Pupuk NPK",
+                      "text": "Pupuk NPK"
+                    },
+                    {
+                      "value": "Pupuk SP-36",
+                      "text": "Pupuk SP-36"
+                    },
+                    {
+                      "value": "Pupuk KCl",
+                      "text": "Pupuk KCl"
+                    },
+                    {
+                      "value": "Pupuk Organik",
+                      "text": "Pupuk Organik"
+                    },
+                    {
+                      "value": "Pupuk Hayati",
+                      "text": "Pupuk Hayati"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Sumber pupuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Subsidi pemerintah",
+                      "text": "Subsidi pemerintah"
+                    },
+                    {
+                      "value": "Pupuk komersial (beli sendiri)",
+                      "text": "Pupuk komersial (beli sendiri)"
+                    },
+                    {
+                      "value": "Pupuk alami/organik dari peternakan sendiri",
+                      "text": "Pupuk alami/organik dari peternakan sendiri"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah jumlah pupuk yang tersedia cukup untuk kebutuhan pertanian?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ya",
+                      "text": "Ya, mencukupi"
+                    }
+                  ],
+                  "separateSpecialChoices": true,
+                  "showOtherItem": true,
+                  "otherText": "Tidak, kurang sebanyak"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketersediaan pupuk di pasaran",
+                      "text": "Ketersediaan pupuk di pasaran"
+                    },
+                    {
+                      "value": "Harga pupuk terlalu mahal",
+                      "text": "Harga pupuk terlalu mahal"
+                    },
+                    {
+                      "value": "Distribusi lambat",
+                      "text": "Distribusi lambat"
+                    },
+                    {
+                      "value": "Kualitas pupuk kurang baik",
+                      "text": "Kualitas pupuk kurang baik"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":2,
+          "kode":"foodestate-singkong-statistikjumlahpupuk",
+          "title": "Statistik Jumlah Pupuk (Singkong)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Jumlah Pupuk singkong",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang menggunakan pupuk dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "question2",
+                  "title": "Jenis pupuk yang digunakan ",
+                  "description": "(pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pupuk Urea",
+                      "text": "Pupuk Urea"
+                    },
+                    {
+                      "value": "Pupuk NPK",
+                      "text": "Pupuk NPK"
+                    },
+                    {
+                      "value": "Pupuk SP-36",
+                      "text": "Pupuk SP-36"
+                    },
+                    {
+                      "value": "Pupuk KCl",
+                      "text": "Pupuk KCl"
+                    },
+                    {
+                      "value": "Pupuk Organik",
+                      "text": "Pupuk Organik"
+                    },
+                    {
+                      "value": "Pupuk Hayati",
+                      "text": "Pupuk Hayati"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Sumber pupuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Subsidi pemerintah",
+                      "text": "Subsidi pemerintah"
+                    },
+                    {
+                      "value": "Pupuk komersial (beli sendiri)",
+                      "text": "Pupuk komersial (beli sendiri)"
+                    },
+                    {
+                      "value": "Pupuk alami/organik dari peternakan sendiri",
+                      "text": "Pupuk alami/organik dari peternakan sendiri"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah jumlah pupuk yang tersedia cukup untuk kebutuhan pertanian?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ya",
+                      "text": "Ya, mencukupi"
+                    }
+                  ],
+                  "separateSpecialChoices": true,
+                  "showOtherItem": true,
+                  "otherText": "Tidak, kurang sebanyak"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketersediaan pupuk di pasaran",
+                      "text": "Ketersediaan pupuk di pasaran"
+                    },
+                    {
+                      "value": "Harga pupuk terlalu mahal",
+                      "text": "Harga pupuk terlalu mahal"
+                    },
+                    {
+                      "value": "Distribusi lambat",
+                      "text": "Distribusi lambat"
+                    },
+                    {
+                      "value": "Kualitas pupuk kurang baik",
+                      "text": "Kualitas pupuk kurang baik"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":3,
+          "kode":"foodestate-tebu-statistikjumlahpupuk",
+          "title": "Statistik Jumlah Pupuk (Tebu)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Jumlah Pupuk tebu",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang menggunakan pupuk dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "question2",
+                  "title": "Jenis pupuk yang digunakan ",
+                  "description": "(pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pupuk Urea",
+                      "text": "Pupuk Urea"
+                    },
+                    {
+                      "value": "Pupuk NPK",
+                      "text": "Pupuk NPK"
+                    },
+                    {
+                      "value": "Pupuk SP-36",
+                      "text": "Pupuk SP-36"
+                    },
+                    {
+                      "value": "Pupuk KCl",
+                      "text": "Pupuk KCl"
+                    },
+                    {
+                      "value": "Pupuk Organik",
+                      "text": "Pupuk Organik"
+                    },
+                    {
+                      "value": "Pupuk Hayati",
+                      "text": "Pupuk Hayati"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Sumber pupuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Subsidi pemerintah",
+                      "text": "Subsidi pemerintah"
+                    },
+                    {
+                      "value": "Pupuk komersial (beli sendiri)",
+                      "text": "Pupuk komersial (beli sendiri)"
+                    },
+                    {
+                      "value": "Pupuk alami/organik dari peternakan sendiri",
+                      "text": "Pupuk alami/organik dari peternakan sendiri"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah jumlah pupuk yang tersedia cukup untuk kebutuhan pertanian?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ya",
+                      "text": "Ya, mencukupi"
+                    }
+                  ],
+                  "separateSpecialChoices": true,
+                  "showOtherItem": true,
+                  "otherText": "Tidak, kurang sebanyak"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketersediaan pupuk di pasaran",
+                      "text": "Ketersediaan pupuk di pasaran"
+                    },
+                    {
+                      "value": "Harga pupuk terlalu mahal",
+                      "text": "Harga pupuk terlalu mahal"
+                    },
+                    {
+                      "value": "Distribusi lambat",
+                      "text": "Distribusi lambat"
+                    },
+                    {
+                      "value": "Kualitas pupuk kurang baik",
+                      "text": "Kualitas pupuk kurang baik"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":4,
+          "kode":"foodestate-kedelai-statistikjumlahpupuk",
+          "title": "Statistik Jumlah Pupuk (Kedelai)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Jumlah Pupuk kedelai",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang menggunakan pupuk dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "question2",
+                  "title": "Jenis pupuk yang digunakan ",
+                  "description": "(pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pupuk Urea",
+                      "text": "Pupuk Urea"
+                    },
+                    {
+                      "value": "Pupuk NPK",
+                      "text": "Pupuk NPK"
+                    },
+                    {
+                      "value": "Pupuk SP-36",
+                      "text": "Pupuk SP-36"
+                    },
+                    {
+                      "value": "Pupuk KCl",
+                      "text": "Pupuk KCl"
+                    },
+                    {
+                      "value": "Pupuk Organik",
+                      "text": "Pupuk Organik"
+                    },
+                    {
+                      "value": "Pupuk Hayati",
+                      "text": "Pupuk Hayati"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Sumber pupuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Subsidi pemerintah",
+                      "text": "Subsidi pemerintah"
+                    },
+                    {
+                      "value": "Pupuk komersial (beli sendiri)",
+                      "text": "Pupuk komersial (beli sendiri)"
+                    },
+                    {
+                      "value": "Pupuk alami/organik dari peternakan sendiri",
+                      "text": "Pupuk alami/organik dari peternakan sendiri"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah jumlah pupuk yang tersedia cukup untuk kebutuhan pertanian?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ya",
+                      "text": "Ya, mencukupi"
+                    }
+                  ],
+                  "separateSpecialChoices": true,
+                  "showOtherItem": true,
+                  "otherText": "Tidak, kurang sebanyak"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketersediaan pupuk di pasaran",
+                      "text": "Ketersediaan pupuk di pasaran"
+                    },
+                    {
+                      "value": "Harga pupuk terlalu mahal",
+                      "text": "Harga pupuk terlalu mahal"
+                    },
+                    {
+                      "value": "Distribusi lambat",
+                      "text": "Distribusi lambat"
+                    },
+                    {
+                      "value": "Kualitas pupuk kurang baik",
+                      "text": "Kualitas pupuk kurang baik"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":5,
+          "kode":"foodestate-jagung-statistikjumlahpupuk",
+          "title": "Statistik Jumlah Pupuk (Jagung)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Jumlah Pupuk jagung",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang menggunakan pupuk dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "question2",
+                  "title": "Jenis pupuk yang digunakan ",
+                  "description": "(pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pupuk Urea",
+                      "text": "Pupuk Urea"
+                    },
+                    {
+                      "value": "Pupuk NPK",
+                      "text": "Pupuk NPK"
+                    },
+                    {
+                      "value": "Pupuk SP-36",
+                      "text": "Pupuk SP-36"
+                    },
+                    {
+                      "value": "Pupuk KCl",
+                      "text": "Pupuk KCl"
+                    },
+                    {
+                      "value": "Pupuk Organik",
+                      "text": "Pupuk Organik"
+                    },
+                    {
+                      "value": "Pupuk Hayati",
+                      "text": "Pupuk Hayati"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Sumber pupuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Subsidi pemerintah",
+                      "text": "Subsidi pemerintah"
+                    },
+                    {
+                      "value": "Pupuk komersial (beli sendiri)",
+                      "text": "Pupuk komersial (beli sendiri)"
+                    },
+                    {
+                      "value": "Pupuk alami/organik dari peternakan sendiri",
+                      "text": "Pupuk alami/organik dari peternakan sendiri"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah jumlah pupuk yang tersedia cukup untuk kebutuhan pertanian?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ya",
+                      "text": "Ya, mencukupi"
+                    }
+                  ],
+                  "separateSpecialChoices": true,
+                  "showOtherItem": true,
+                  "otherText": "Tidak, kurang sebanyak"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketersediaan pupuk di pasaran",
+                      "text": "Ketersediaan pupuk di pasaran"
+                    },
+                    {
+                      "value": "Harga pupuk terlalu mahal",
+                      "text": "Harga pupuk terlalu mahal"
+                    },
+                    {
+                      "value": "Distribusi lambat",
+                      "text": "Distribusi lambat"
+                    },
+                    {
+                      "value": "Kualitas pupuk kurang baik",
+                      "text": "Kualitas pupuk kurang baik"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":6,
+          "kode":"foodestate-sawit-statistikjumlahpupuk",
+          "title": "Statistik Jumlah Pupuk (Sawit)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Jumlah Pupuk sawit",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang menggunakan pupuk dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "checkbox",
+                  "name": "question2",
+                  "title": "Jenis pupuk yang digunakan ",
+                  "description": "(pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pupuk Urea",
+                      "text": "Pupuk Urea"
+                    },
+                    {
+                      "value": "Pupuk NPK",
+                      "text": "Pupuk NPK"
+                    },
+                    {
+                      "value": "Pupuk SP-36",
+                      "text": "Pupuk SP-36"
+                    },
+                    {
+                      "value": "Pupuk KCl",
+                      "text": "Pupuk KCl"
+                    },
+                    {
+                      "value": "Pupuk Organik",
+                      "text": "Pupuk Organik"
+                    },
+                    {
+                      "value": "Pupuk Hayati",
+                      "text": "Pupuk Hayati"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Sumber pupuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Subsidi pemerintah",
+                      "text": "Subsidi pemerintah"
+                    },
+                    {
+                      "value": "Pupuk komersial (beli sendiri)",
+                      "text": "Pupuk komersial (beli sendiri)"
+                    },
+                    {
+                      "value": "Pupuk alami/organik dari peternakan sendiri",
+                      "text": "Pupuk alami/organik dari peternakan sendiri"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah jumlah pupuk yang tersedia cukup untuk kebutuhan pertanian?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "ya",
+                      "text": "Ya, mencukupi"
+                    }
+                  ],
+                  "separateSpecialChoices": true,
+                  "showOtherItem": true,
+                  "otherText": "Tidak, kurang sebanyak"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketersediaan pupuk di pasaran",
+                      "text": "Ketersediaan pupuk di pasaran"
+                    },
+                    {
+                      "value": "Harga pupuk terlalu mahal",
+                      "text": "Harga pupuk terlalu mahal"
+                    },
+                    {
+                      "value": "Distribusi lambat",
+                      "text": "Distribusi lambat"
+                    },
+                    {
+                      "value": "Kualitas pupuk kurang baik",
+                      "text": "Kualitas pupuk kurang baik"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "topik" : "Ketersediaan komoditas",
       "list": [
         {
@@ -1649,7 +3425,6 @@
             }
           ]
         }
-        
       ]
     },
     {
