@@ -829,6 +829,7 @@
       "topik": "Statistik Produktivitas",
       "list":[
         {
+          "no":1,
           "title": "Statistik Produktivitas (Padi)",
           "kode":"foodestate-padi-statistikproduktivitas",
           "logoPosition": "right",
@@ -847,7 +848,7 @@
                 {
                   "type": "text",
                   "name": "question2",
-                  "title": "Total hasil  panen dalam kuintal (100 kg)",
+                  "title": "Total hasil panen dalam kuintal (100 kg)",
                   "isRequired": true,
                   "inputType": "number"
                 },
@@ -876,7 +877,497 @@
                 {
                   "type": "radiogroup",
                   "name": "question5",
-                  "title": "Apakah ada peningkatan atau penurunan (tes tidak)",
+                  "title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "opsi-1",
+                      "text": "Ya (meningkat)"
+                    },
+                    {
+                      "value": "opsi-2",
+                      "text": "Ya (menurun)"
+                    },
+                    {
+                      "value": "tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question5} = 'opsi-1'",
+                  "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_menurun",
+                  "visibleIf": "{question5} = 'opsi-2'",
+                  "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jika ada perubahan, apa penyebabnya?",
+                  "isRequired": true,
+                  "choices": [
+                    "Perbaikan teknik pertanian",
+                    "Penggunaan pupuk dan pestisida yang lebih baik",
+                    "Cuaca yang lebih mendukung"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":2,
+          "title": "Statistik Produktivitas (Singkong)",
+          "kode":"foodestate-singkong-statistikproduktivitas",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produktivitas singkong",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan singkong dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Total hasil panen dalam kuintal (100 kg)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata hasil panen per hektar dalam kuintal (kuintal/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": "Faktor yang mempengaruhi produktivitas",
+                  "isRequired": true,
+                  "choices": [
+                    "Kualitas Benih",
+                    "Penggunaan Pupuk",
+                    "Kondisi Irigasi",
+                    "Serangan Hama/Penyakit",
+                    "Perubahan Cuaca"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "opsi-1",
+                      "text": "Ya (meningkat)"
+                    },
+                    {
+                      "value": "opsi-2",
+                      "text": "Ya (menurun)"
+                    },
+                    {
+                      "value": "tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question5} = 'opsi-1'",
+                  "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_menurun",
+                  "visibleIf": "{question5} = 'opsi-2'",
+                  "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jika ada perubahan, apa penyebabnya?",
+                  "isRequired": true,
+                  "choices": [
+                    "Perbaikan teknik pertanian",
+                    "Penggunaan pupuk dan pestisida yang lebih baik",
+                    "Cuaca yang lebih mendukung"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":3,
+          "title": "Statistik Produktivitas (Tebu)",
+          "kode":"foodestate-tebu-statistikproduktivitas",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produktivitas tebu",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan tebu dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Total hasil panen dalam kuintal (100 kg)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata hasil panen per hektar dalam kuintal (kuintal/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": "Faktor yang mempengaruhi produktivitas",
+                  "isRequired": true,
+                  "choices": [
+                    "Kualitas Benih",
+                    "Penggunaan Pupuk",
+                    "Kondisi Irigasi",
+                    "Serangan Hama/Penyakit",
+                    "Perubahan Cuaca"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "opsi-1",
+                      "text": "Ya (meningkat)"
+                    },
+                    {
+                      "value": "opsi-2",
+                      "text": "Ya (menurun)"
+                    },
+                    {
+                      "value": "tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question5} = 'opsi-1'",
+                  "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_menurun",
+                  "visibleIf": "{question5} = 'opsi-2'",
+                  "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jika ada perubahan, apa penyebabnya?",
+                  "isRequired": true,
+                  "choices": [
+                    "Perbaikan teknik pertanian",
+                    "Penggunaan pupuk dan pestisida yang lebih baik",
+                    "Cuaca yang lebih mendukung"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":4,
+          "title": "Statistik Produktivitas (Kedelai)",
+          "kode":"foodestate-kedelai-statistikproduktivitas",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produktivitas kedelai",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan kedelai dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Total hasil panen dalam kuintal (100 kg)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata hasil panen per hektar dalam kuintal (kuintal/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": "Faktor yang mempengaruhi produktivitas",
+                  "isRequired": true,
+                  "choices": [
+                    "Kualitas Benih",
+                    "Penggunaan Pupuk",
+                    "Kondisi Irigasi",
+                    "Serangan Hama/Penyakit",
+                    "Perubahan Cuaca"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "opsi-1",
+                      "text": "Ya (meningkat)"
+                    },
+                    {
+                      "value": "opsi-2",
+                      "text": "Ya (menurun)"
+                    },
+                    {
+                      "value": "tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question5} = 'opsi-1'",
+                  "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_menurun",
+                  "visibleIf": "{question5} = 'opsi-2'",
+                  "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jika ada perubahan, apa penyebabnya?",
+                  "isRequired": true,
+                  "choices": [
+                    "Perbaikan teknik pertanian",
+                    "Penggunaan pupuk dan pestisida yang lebih baik",
+                    "Cuaca yang lebih mendukung"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":5,
+          "title": "Statistik Produktivitas (Jagung)",
+          "kode":"foodestate-jagung-statistikproduktivitas",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produktivitas jagung",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan jagung dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Total hasil panen dalam kuintal (100 kg)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata hasil panen per hektar dalam kuintal (kuintal/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": "Faktor yang mempengaruhi produktivitas",
+                  "isRequired": true,
+                  "choices": [
+                    "Kualitas Benih",
+                    "Penggunaan Pupuk",
+                    "Kondisi Irigasi",
+                    "Serangan Hama/Penyakit",
+                    "Perubahan Cuaca"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "opsi-1",
+                      "text": "Ya (meningkat)"
+                    },
+                    {
+                      "value": "opsi-2",
+                      "text": "Ya (menurun)"
+                    },
+                    {
+                      "value": "tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_meningkat",
+                  "visibleIf": "{question5} = 'opsi-1'",
+                  "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "text",
+                  "name": "question5-Inputopsi-ya_menurun",
+                  "visibleIf": "{question5} = 'opsi-2'",
+                  "title": "Jika pilih Ya (menurun) (kuintal/ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jika ada perubahan, apa penyebabnya?",
+                  "isRequired": true,
+                  "choices": [
+                    "Perbaikan teknik pertanian",
+                    "Penggunaan pupuk dan pestisida yang lebih baik",
+                    "Cuaca yang lebih mendukung"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":6,
+          "title": "Statistik Produktivitas (Sawit)",
+          "kode":"foodestate-sawit-statistikproduktivitas",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produktivitas sawit",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan sawit dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Total hasil panen dalam kuintal (100 kg)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata hasil panen per hektar dalam kuintal (kuintal/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": "Faktor yang mempengaruhi produktivitas",
+                  "isRequired": true,
+                  "choices": [
+                    "Kualitas Benih",
+                    "Penggunaan Pupuk",
+                    "Kondisi Irigasi",
+                    "Serangan Hama/Penyakit",
+                    "Perubahan Cuaca"
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
                   "isRequired": true,
                   "choices": [
                     {
