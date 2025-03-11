@@ -3195,6 +3195,1109 @@
       ]
     },
     {
+      "topik":"Statistik persentase hama",
+      "list":[
+        {
+          "no":1,
+          "kode":"foodestate-padi-statistikpersentasehama",
+          "title": "Statistik Persentase Hama (Padi)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Persentase Hama",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang terdampak hama dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan padi:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Tidak ada serangan)",
+                      "text": "0% (Tidak ada serangan)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Wereng coklat",
+                      "text": "Wereng coklat"
+                    },
+                    {
+                      "value": "Tikus sawah",
+                      "text": "Tikus sawah"
+                    },
+                    {
+                      "value": "Ulat grayak",
+                      "text": "Ulat grayak"
+                    },
+                    {
+                      "value": "Walang sangit",
+                      "text": "Walang sangit"
+                    },
+                    {
+                      "value": "Penggerek batang",
+                      "text": "Penggerek batang"
+                    },
+                    {
+                      "value": "Keong mas",
+                      "text": "Keong mas"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pestisida kimia",
+                      "text": "Pestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Efektivitas upaya pengendalian hama",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sangat efektif (hama hampir tidak ada)",
+                      "text": "Sangat efektif (hama hampir tidak ada)"
+                    },
+                    {
+                      "value": "Cukup efektif (hama berkurang signifikan)",
+                      "text": "Cukup efektif (hama berkurang signifikan)"
+                    },
+                    {
+                      "value": "Kurang efektif (hama masih bestisida kimia",
+                      "text": "Kurang efektif (hama masih bestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya akses ke pestisida atau metode pengendalian",
+                      "text": "Kurangnya akses ke pestisida atau metode pengendalian"
+                    },
+                    {
+                      "value": "Hama semakin resisten terhadap pestisida",
+                      "text": "Hama semakin resisten terhadap pestisida"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja untuk pengendalian",
+                      "text": "Kurangnya tenaga kerja untuk pengendalian"
+                    },
+                    {
+                      "value": "Faktor cuaca yang mendukung perkembangan hama",
+                      "text": "Faktor cuaca yang mendukung perkembangan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question7",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "inputType": "number"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":2,
+          "kode":"foodestate-singkong-statistikpersentasehama",
+          "title": "Statistik Persentase Hama (Singkong)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Persentase Hama",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang terdampak hama dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan singkong:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Tidak ada serangan)",
+                      "text": "0% (Tidak ada serangan)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Wereng coklat",
+                      "text": "Wereng coklat"
+                    },
+                    {
+                      "value": "Tikus sawah",
+                      "text": "Tikus sawah"
+                    },
+                    {
+                      "value": "Ulat grayak",
+                      "text": "Ulat grayak"
+                    },
+                    {
+                      "value": "Walang sangit",
+                      "text": "Walang sangit"
+                    },
+                    {
+                      "value": "Penggerek batang",
+                      "text": "Penggerek batang"
+                    },
+                    {
+                      "value": "Keong mas",
+                      "text": "Keong mas"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pestisida kimia",
+                      "text": "Pestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Efektivitas upaya pengendalian hama",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sangat efektif (hama hampir tidak ada)",
+                      "text": "Sangat efektif (hama hampir tidak ada)"
+                    },
+                    {
+                      "value": "Cukup efektif (hama berkurang signifikan)",
+                      "text": "Cukup efektif (hama berkurang signifikan)"
+                    },
+                    {
+                      "value": "Kurang efektif (hama masih bestisida kimia",
+                      "text": "Kurang efektif (hama masih bestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya akses ke pestisida atau metode pengendalian",
+                      "text": "Kurangnya akses ke pestisida atau metode pengendalian"
+                    },
+                    {
+                      "value": "Hama semakin resisten terhadap pestisida",
+                      "text": "Hama semakin resisten terhadap pestisida"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja untuk pengendalian",
+                      "text": "Kurangnya tenaga kerja untuk pengendalian"
+                    },
+                    {
+                      "value": "Faktor cuaca yang mendukung perkembangan hama",
+                      "text": "Faktor cuaca yang mendukung perkembangan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question7",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "inputType": "number"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":3,
+          "kode":"foodestate-tebu-statistikpersentasehama",
+          "title": "Statistik Persentase Hama (Tebu)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Persentase Hama",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang terdampak hama dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan tebu:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Tidak ada serangan)",
+                      "text": "0% (Tidak ada serangan)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Wereng coklat",
+                      "text": "Wereng coklat"
+                    },
+                    {
+                      "value": "Tikus sawah",
+                      "text": "Tikus sawah"
+                    },
+                    {
+                      "value": "Ulat grayak",
+                      "text": "Ulat grayak"
+                    },
+                    {
+                      "value": "Walang sangit",
+                      "text": "Walang sangit"
+                    },
+                    {
+                      "value": "Penggerek batang",
+                      "text": "Penggerek batang"
+                    },
+                    {
+                      "value": "Keong mas",
+                      "text": "Keong mas"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pestisida kimia",
+                      "text": "Pestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Efektivitas upaya pengendalian hama",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sangat efektif (hama hampir tidak ada)",
+                      "text": "Sangat efektif (hama hampir tidak ada)"
+                    },
+                    {
+                      "value": "Cukup efektif (hama berkurang signifikan)",
+                      "text": "Cukup efektif (hama berkurang signifikan)"
+                    },
+                    {
+                      "value": "Kurang efektif (hama masih bestisida kimia",
+                      "text": "Kurang efektif (hama masih bestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya akses ke pestisida atau metode pengendalian",
+                      "text": "Kurangnya akses ke pestisida atau metode pengendalian"
+                    },
+                    {
+                      "value": "Hama semakin resisten terhadap pestisida",
+                      "text": "Hama semakin resisten terhadap pestisida"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja untuk pengendalian",
+                      "text": "Kurangnya tenaga kerja untuk pengendalian"
+                    },
+                    {
+                      "value": "Faktor cuaca yang mendukung perkembangan hama",
+                      "text": "Faktor cuaca yang mendukung perkembangan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question7",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "inputType": "number"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":4,
+          "kode":"foodestate-kedelai-statistikpersentasehama",
+          "title": "Statistik Persentase Hama (Kedelai)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Persentase Hama",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang terdampak hama dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan kedelai:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Tidak ada serangan)",
+                      "text": "0% (Tidak ada serangan)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Wereng coklat",
+                      "text": "Wereng coklat"
+                    },
+                    {
+                      "value": "Tikus sawah",
+                      "text": "Tikus sawah"
+                    },
+                    {
+                      "value": "Ulat grayak",
+                      "text": "Ulat grayak"
+                    },
+                    {
+                      "value": "Walang sangit",
+                      "text": "Walang sangit"
+                    },
+                    {
+                      "value": "Penggerek batang",
+                      "text": "Penggerek batang"
+                    },
+                    {
+                      "value": "Keong mas",
+                      "text": "Keong mas"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pestisida kimia",
+                      "text": "Pestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Efektivitas upaya pengendalian hama",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sangat efektif (hama hampir tidak ada)",
+                      "text": "Sangat efektif (hama hampir tidak ada)"
+                    },
+                    {
+                      "value": "Cukup efektif (hama berkurang signifikan)",
+                      "text": "Cukup efektif (hama berkurang signifikan)"
+                    },
+                    {
+                      "value": "Kurang efektif (hama masih bestisida kimia",
+                      "text": "Kurang efektif (hama masih bestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya akses ke pestisida atau metode pengendalian",
+                      "text": "Kurangnya akses ke pestisida atau metode pengendalian"
+                    },
+                    {
+                      "value": "Hama semakin resisten terhadap pestisida",
+                      "text": "Hama semakin resisten terhadap pestisida"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja untuk pengendalian",
+                      "text": "Kurangnya tenaga kerja untuk pengendalian"
+                    },
+                    {
+                      "value": "Faktor cuaca yang mendukung perkembangan hama",
+                      "text": "Faktor cuaca yang mendukung perkembangan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question7",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "inputType": "number"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":5,
+          "kode":"foodestate-jagung-statistikpersentasehama",
+          "title": "Statistik Persentase Hama (Jagung)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Persentase Hama",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang terdampak hama dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan jagung:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Tidak ada serangan)",
+                      "text": "0% (Tidak ada serangan)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Wereng coklat",
+                      "text": "Wereng coklat"
+                    },
+                    {
+                      "value": "Tikus sawah",
+                      "text": "Tikus sawah"
+                    },
+                    {
+                      "value": "Ulat grayak",
+                      "text": "Ulat grayak"
+                    },
+                    {
+                      "value": "Walang sangit",
+                      "text": "Walang sangit"
+                    },
+                    {
+                      "value": "Penggerek batang",
+                      "text": "Penggerek batang"
+                    },
+                    {
+                      "value": "Keong mas",
+                      "text": "Keong mas"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pestisida kimia",
+                      "text": "Pestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Efektivitas upaya pengendalian hama",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sangat efektif (hama hampir tidak ada)",
+                      "text": "Sangat efektif (hama hampir tidak ada)"
+                    },
+                    {
+                      "value": "Cukup efektif (hama berkurang signifikan)",
+                      "text": "Cukup efektif (hama berkurang signifikan)"
+                    },
+                    {
+                      "value": "Kurang efektif (hama masih bestisida kimia",
+                      "text": "Kurang efektif (hama masih bestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya akses ke pestisida atau metode pengendalian",
+                      "text": "Kurangnya akses ke pestisida atau metode pengendalian"
+                    },
+                    {
+                      "value": "Hama semakin resisten terhadap pestisida",
+                      "text": "Hama semakin resisten terhadap pestisida"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja untuk pengendalian",
+                      "text": "Kurangnya tenaga kerja untuk pengendalian"
+                    },
+                    {
+                      "value": "Faktor cuaca yang mendukung perkembangan hama",
+                      "text": "Faktor cuaca yang mendukung perkembangan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question7",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "inputType": "number"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":6,
+          "kode":"foodestate-sawit-statistikpersentasehama",
+          "title": "Statistik Persentase Hama (sawit)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Persentase Hama",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang terdampak hama dalam hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan sawit:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Tidak ada serangan)",
+                      "text": "0% (Tidak ada serangan)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Wereng coklat",
+                      "text": "Wereng coklat"
+                    },
+                    {
+                      "value": "Tikus sawah",
+                      "text": "Tikus sawah"
+                    },
+                    {
+                      "value": "Ulat grayak",
+                      "text": "Ulat grayak"
+                    },
+                    {
+                      "value": "Walang sangit",
+                      "text": "Walang sangit"
+                    },
+                    {
+                      "value": "Penggerek batang",
+                      "text": "Penggerek batang"
+                    },
+                    {
+                      "value": "Keong mas",
+                      "text": "Keong mas"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pestisida kimia",
+                      "text": "Pestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Efektivitas upaya pengendalian hama",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sangat efektif (hama hampir tidak ada)",
+                      "text": "Sangat efektif (hama hampir tidak ada)"
+                    },
+                    {
+                      "value": "Cukup efektif (hama berkurang signifikan)",
+                      "text": "Cukup efektif (hama berkurang signifikan)"
+                    },
+                    {
+                      "value": "Kurang efektif (hama masih bestisida kimia",
+                      "text": "Kurang efektif (hama masih bestisida kimia"
+                    },
+                    {
+                      "value": "Pestisida nabati/organik",
+                      "text": "Pestisida nabati/organik"
+                    },
+                    {
+                      "value": "Predator alami (burung, serangga pemangsa)",
+                      "text": "Predator alami (burung, serangga pemangsa)"
+                    },
+                    {
+                      "value": "Sistem tanam bergilir",
+                      "text": "Sistem tanam bergilir"
+                    },
+                    {
+                      "value": "Penggunaan varietas tahan hama",
+                      "text": "Penggunaan varietas tahan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya akses ke pestisida atau metode pengendalian",
+                      "text": "Kurangnya akses ke pestisida atau metode pengendalian"
+                    },
+                    {
+                      "value": "Hama semakin resisten terhadap pestisida",
+                      "text": "Hama semakin resisten terhadap pestisida"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja untuk pengendalian",
+                      "text": "Kurangnya tenaga kerja untuk pengendalian"
+                    },
+                    {
+                      "value": "Faktor cuaca yang mendukung perkembangan hama",
+                      "text": "Faktor cuaca yang mendukung perkembangan hama"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question7",
+                  "title": "Upaya pengendalian hama yang dilakukan:",
+                  "inputType": "number"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "topik" : "Ketersediaan komoditas",
       "list": [
         {
