@@ -5,7 +5,7 @@ import TabelBencana from '../component/TabelBencana'
 import LayoutAdmin from '../layout/LayoutAdmin'
 import Marquee from 'react-fast-marquee'
 import { Datepicker } from 'flowbite-react'
-import { getAllBencana, getAllSummary } from '../../api/publicApi'
+import { getAllBencana, getAllSummary, getByEachBencana } from '../../api/publicApi'
 import { RingLoader } from 'react-spinners'
 // import SidebarProvider from '../../context/SidebarContext'
 
@@ -13,10 +13,12 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import PieChartAllDisasters from '../component/allCharts/PieChartAllDisasters'
 import { IconDownloadSVG } from '../component/IconSvg'
+import DropdownCustomV2 from '../component/miniComponent/DropdownCustomV2'
+import { TableForTabularBencana } from '../component/TableForTabularBencana'
 
-const AllBencanaCategories = () => {
+const PantauandanDataTabular = () => {
 
-    const defaultStartDate = new Date(new Date().getFullYear(), 0, 1)
+    const defaultStartDate = new Date(new Date().setDate(new Date().getDate() - 7))
     const defaultEndDate = new Date()
 
     const [isProvinceClicked, setIsProvinceClicked] = useState(false)
@@ -27,13 +29,30 @@ const AllBencanaCategories = () => {
     
     const [minEndDate, setMinEndDate] = useState(startDate)
     const [maxEndDate, setMaxEndDate] = useState(defaultEndDate)
+
     const [fixedStartDate, setFixedStartDate] = useState(defaultStartDate)
     const [fixedEndDate, setFixedEndDate] = useState(defaultEndDate)
+
     const [selectedProvinceName, setSelectedProvinceName] = useState('')
     const [selectedProvinceCode, setSelectedProvinceCode] = useState(null)
 
-    const [dataSummary, setDataSummary] = useState(null)
     const [dataBencana, setDataBencana] = useState(null)
+    
+    const [subCategoryBencana, setSubCategoryBencana] = useState('BANJIR')
+    const [selectedSubCategoryBencana, setSelectedSubCategoryBencana] = useState(subCategoryBencana)
+    const listDropDownBencana = [
+        "BANJIR",
+        "TANAH LONGSOR",
+        "GEMPABUMI",
+        "ERUPSI GUNUNG API",
+        "CUACA EKSTREM",
+        "GELOMBANG PASANG DAN ABRASI",
+        "KEKERINGAN",
+        "KEBAKARAN HUTAN DAN LAHAN",
+        "TSUNAMI",
+        "GEMPA BUMI DAN TSUNAMI"
+    ]
+
 
     const formatDate = (date) => {
         const year = date.getFullYear();
@@ -42,41 +61,41 @@ const AllBencanaCategories = () => {
         return `${year}-${month}-${day}`;
     };
 
-    const fetchData = async(startDateInput, endDateInput, provinceIdInput = null) => {
+    const fetchData = async(startDateInput, endDateInput, provinceIdInput = null, sub_category = selectedSubCategoryBencana) => {
         try{
             // console.log("dari fetch data: ", provinceIdInput)
             console.log("start date fetch data", startDateInput)
             console.log("end date fetch data", endDateInput)
+            console.log("selected sub category", selectedSubCategoryBencana)
             if(!startDate && !endDate){
                 console.error("start date and end date dont exist")
                 return
             }
-            const responseSummary = await getAllSummary(startDateInput, endDateInput, provinceIdInput)
-            const responseBencana = await getAllBencana(startDateInput, endDateInput, provinceIdInput)
+            const responseBencana = await getByEachBencana(startDateInput, endDateInput, sub_category, provinceIdInput)
 
-            if(responseSummary.data && responseBencana.data){
+            if(responseBencana.data){
                 // console.log("ini responsesummary", responseSummary.data)
                 // console.log("ini response bencana", responseBencana.data)
-                return { responseSummary, responseBencana }
+                return { responseBencana }
             } 
         } catch (error) {
             setError(error)
         }
     }
 
-    const fetchDataAsync = async (province_id, start = startDate, end = endDate) => {
+    const fetchDataAsync = async (province_id, sub_category = selectedSubCategoryBencana, start = startDate, end = endDate) => {
         if (fixedStartDate && fixedEndDate) {
             console.log(selectedProvinceCode)
             console.log("ini province_id", province_id)
             try {
-                const { responseSummary, responseBencana } = await fetchData(
+                const { responseBencana } = await fetchData(
                     formatDate(start), 
                     formatDate(end), 
-                    province_id ? province_id : 0
+                    province_id ? province_id : 0,
+                    sub_category
                 );
-                setDataSummary(responseSummary.data[0]);
-                setDataBencana(responseBencana.data[0]);
-                console.log("ini response bencana", responseBencana.data[0])
+                setDataBencana(responseBencana.data.result);
+                console.log("ini response bencana", responseBencana.data.result)
                 setSelectedProvinceCode(province_id)
                 // console.log("ini province_id", province_id)
             } catch (error) {
@@ -89,22 +108,10 @@ const AllBencanaCategories = () => {
     };
 
     useEffect(() => {
-        if(dataSummary === null && dataBencana === null){
+        if(dataBencana === null){
             fetchDataAsync(0)
         }
     },[])
-
-    // useEffect(() => {
-    //     setFixedStartDate(startDate)
-    //     setFixedEndDate(endDate)
-    // }, [selectedProvinceCode])
-
-    // useEffect(() => {
-    //     if (fixedStartDate && fixedEndDate) {
-    //         console.log("ini fetching lagi")
-    //         fetchDataAsync(selectedProvinceCode);
-    //     }
-    // }, [fixedStartDate, fixedEndDate]);
 
     const {response} = []
 
@@ -199,15 +206,6 @@ const AllBencanaCategories = () => {
     }
     
     const onDateChange = async(province_code = null) => {
-        // console.log("ini dari onDateChange", province_code)
-        // setIsLoading(true)
-        // setFixedStartDate(startDate)
-        // setFixedEndDate(endDate)
-        // setSelectedProvinceCode(province_code)
-        // await fetchDataAsync(province_code).then(() => {
-        //     setFixedStartDate(startDate)
-        //     setFixedEndDate(endDate)
-        // })
         console.log("ini dari onDateChange", province_code);
         setIsLoading(true);
 
@@ -217,8 +215,9 @@ const AllBencanaCategories = () => {
         setFixedStartDate(newStartDate);
         setFixedEndDate(newEndDate);
         setSelectedProvinceCode(province_code);
+        setSelectedSubCategoryBencana(subCategoryBencana);
 
-        await fetchDataAsync(province_code, newStartDate, newEndDate);
+        await fetchDataAsync(province_code, subCategoryBencana, newStartDate, newEndDate);
     }
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
@@ -233,39 +232,15 @@ const AllBencanaCategories = () => {
 
         setStartDate((currentStartDate) => {
             setEndDate((currentEndDate) => {
-                fetchDataAsync(kodeProvinsi, currentStartDate, currentEndDate);
-                setIsProvinceClicked(true)
+                setSelectedSubCategoryBencana((currentSubCategoryBencana) => {
+                    fetchDataAsync(kodeProvinsi, subCategoryBencana, currentStartDate, currentEndDate);
+                    setIsProvinceClicked(true)
+                    return currentSubCategoryBencana
+                })
                 return currentEndDate;
             });
             return currentStartDate;
         });
-        // await onDateChange(kodeProvinsi).then(() => {
-        //     setIsProvinceClicked(true);
-        //             setSelectedProvinceCode(kodeProvinsi);
-        //             setSelectedProvinceName(namaProvinsi);
-        // })
-    
-        // try {
-        //     setFixedStartDate(startDate)
-        //     setFixedEndDate(endDate)
-        //     await fetchDataAsync(kodeProvinsi).then(() => {
-        //         setFixedStartDate(startDate)
-        //         setFixedEndDate(endDate)
-        //         setIsProvinceClicked(true);
-        //         setSelectedProvinceCode(kodeProvinsi);
-        //         setSelectedProvinceName(namaProvinsi);
-        //     })
-        //     // await fetchDataAsync(kodeProvinsi);
-        //     // console.log("Fetch data selesai untuk provinsi:", kodeProvinsi);
-            
-        //     // setIsProvinceClicked(true);
-        //     // setSelectedProvinceCode(kodeProvinsi);
-        //     // setSelectedProvinceName(namaProvinsi);
-        // } catch (error) {
-        //     console.error("Error di onProvinceClick:", error);
-        // } finally {
-        //     console.log("Selesai eksekusi onProvinceClick");
-        // }
     };
         
     const resetSelection = async() => {
@@ -273,10 +248,14 @@ const AllBencanaCategories = () => {
         setIsProvinceClicked(false);
         setSelectedProvinceName('');
         setSelectedProvinceCode(null);
-        await fetchDataAsync()
+
+        setSelectedSubCategoryBencana((currentSelectedSubCategoryBencana) => {
+            fetchDataAsync()
+            return currentSelectedSubCategoryBencana
+        })
     };
 
-    const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true}/>, [isProvinceClicked, selectedProvinceCode])
+    const IndonesiaMapMemoized = useMemo(() => <IndonesiaMap onProvinceClick={onProvinceClick} earthquakeData={[]} selectedProvinceCode={selectedProvinceCode} isProvinceClicked={isProvinceClicked} isProvinceColored={true} disasterData={dataBencana}/>, [isProvinceClicked, selectedProvinceCode, dataBencana])
     // console.log("responseSummary ", responseSummary)
 
     return (
@@ -297,7 +276,7 @@ const AllBencanaCategories = () => {
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.7}}
                     >
-                        <div className='dark:text-white text-2xl font-bold text-center items-center uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
+                        <div className='dark:text-white text-2xl font-bold text-center items-center uppercase'>Pantauan dan Data Tabular {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
                     </motion.div>
 
                     <motion.div 
@@ -307,8 +286,8 @@ const AllBencanaCategories = () => {
                         whileInView={"show"}
                         viewport={{once: true, amount: 0.7}}
                     >
-                        <div className='flex flex-row justify-between'>
-                            <div className='flex flex-row z-50 gap-4 items-center'>
+                        <div className='flex flex-col justify-center'>
+                            <div className='flex flex-row z-50 gap-4 justify-center items-center'>
                                 <div className='dark:text-white'> Dari : </div>
                                 <motion.div
                                     // whileTap={{ scale: 0.95 }}
@@ -341,8 +320,21 @@ const AllBencanaCategories = () => {
                                         maxDate={new Date()}
                                     />
                                 </motion.div>
+                                <div className='dark:text-white'>Kejadian : </div>
+                                <motion.div
+                                    // whileTap={{ scale: 0.95 }}
+                                    whileHover={{ scale: 1.05 }}
+                                >
+                                    <DropdownCustomV2
+                                        listDropDown={listDropDownBencana}
+                                        selectedItem={subCategoryBencana}
+                                        setSelectedItem={setSubCategoryBencana}
+                                        title={"Pilih Kejadian"}
+                                        width={"296px"}
+                                    />
+                                </motion.div>
                             </div>
-                            <div className='flex flex-row gap-6'>
+                            <div className='flex flex-row gap-6 mt-6 justify-center'>
                                 <motion.button
                                     onClick={() => onDateChange(selectedProvinceCode)}
                                     className="text-white  bg-blue-custom hover:bg-gray-hover font-sm rounded-[5px] text-sm px-[10px] py-[10px] text-center inline-flex items-center dark:focus:ring-blue-800 transition-colors duration-300 ease-in-out"
@@ -371,7 +363,7 @@ const AllBencanaCategories = () => {
                         </div>
                     </motion.div>
 
-                    <div className='grid grid-cols-7 w-full'>
+                    <div className='w-full'>
                         <div className='col-span-5'>
                             <motion.div 
                                 className='ml-5 sm:mr-5 flex justify-center'
@@ -381,78 +373,21 @@ const AllBencanaCategories = () => {
                                 viewport={{once: true, amount: 0.7}}
                             >
                                 <div className=' w-[100%] h-[500px] relative'>
-                                    <div id="legend-container" className="absolute bottom-5 left-[13px] bg-white dark:text-white dark:bg-dark-mode-bg p-6 border border-gray-300 shadow-md rounded-lg z-50">
-                                        <h3 className="text-lg mb-4">Jumlah Kejadian</h3>
-                                        <div className="flex w-full justify-center font-bold text-4xl text-center mb-2">
-                                            <span>{dataSummary.jumlah_kejadian || 0}</span>
-                                        </div>
-                                    </div>
                                     {IndonesiaMapMemoized}
                                 </div>
                             </motion.div>
-
-                            <motion.div 
-                                className="overflow-hidden mt-6 flex border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 dark:bg-dark-mode-bg mx-auto"
-                                variants={fadeIn("up", 0.2)}
-                                initial="hidden"
-                                whileInView={"show"}
-                                viewport={{once: true, amount: 0.7}}
-                            >
-                                <div className='md:w-[700px] sm:[340px] lg:w-[800px] xl:w-[500px] 2xl:w-[1100px] 3xl:w-[1400px] items-center mx-5 py-5'>
-                                    <Marquee>
-                                        <div className="flex gap-10 overflow-hidden">
-                                                {[...Array(5)].map((_, i) => (
-                                                    <div key={i} className="flex whitespace-nowrap  w-max">
-                                                        <span className="text-red-custom text-xl">{"(UPDATE)"} </span>
-                                                        <span className="dark:text-white text-xl font-bold">Mag: </span>
-                                                        <span className="text-green-custom text-xl">3.3 </span>
-                                                        <span className="dark:text-white text-xl">| 30-Jan-25 20:57:34 WIB | </span>
-                                                        <span className="dark:text-white text-xl font-bold">Lok: </span>
-                                                        <span className="text-green-custom text-xl">4.09 LS </span>
-                                                        <span className="dark:text-white text-xl">, </span>
-                                                        <span className="text-green-custom text-xl">121.80 BT </span>
-                                                        <span className="dark:text-white text-xl">{"(Pusat gempa berada di darat"} </span>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                    </Marquee>
-                                </div>
-                            </motion.div>
-                        </div>
-                        <div className='col-span-2 flex flex-col h-full'>
-                            <motion.div 
-                                className='lg:mr-5 mb-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
-                                variants={fadeIn("left", 0.3)}
-                                initial="hidden"
-                                whileInView={"show"}
-                                viewport={{once: true, amount: 0.5}}
-                            >
-                                <PieChartAllDisasters dataBencana={dataBencana || {}}/>
-                            </motion.div>
-                            <motion.button 
-                                whileTap={{ scale: 0.8 }}
-                                className="relative overflow-hidden min-h-36 items-center mr-5 py-6 px-[30px] border rounded-[10px] 
-                                dark:border-dark-border border-light-border transition-all duration-300 group"
-                                onClick={() => {}}
-                            >
-                                {/* Background animasi dengan before */}
-                                <span className="absolute inset-0 bg-blue-custom w-0 h-full transition-all duration-500 ease-in-out group-hover:w-full"></span>
-
-                                {/* Konten tombol */}
-                                <div className='relative z-10 flex-row flex justify-between items-center'>
-                                    <span className="relative dark:text-white font-bold text-2xl z-10">Export Data</span>
-                                    <IconDownloadSVG className="relative z-50" />
-                                </div>
-                            </motion.button>
-
                         </div>
                     </div>
-
-                    <TabelBencana dataBencana={dataBencana || {}} dataSummary={dataSummary || {}} startDate={fixedStartDate} endDate={fixedEndDate}/>
+                    
+                    <div className="overflow-hidden w-full">
+                        <div className="overflow-x-auto px-5">
+                            <TableForTabularBencana data={dataBencana || []} />
+                        </div>
+                    </div>
                 </div>
             )}
         </>
     )
 }
 
-export default AllBencanaCategories
+export default PantauandanDataTabular
