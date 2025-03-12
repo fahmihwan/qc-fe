@@ -4298,6 +4298,827 @@
       ]
     },
     {
+      "topik":"Statistik Lahan Kosong",
+      "list":[
+        {
+          "no":1,
+          "kode":"foodestate-padi-lahankosong",
+          "title": "Statistik Luas Lahan Kosong untuk (Padi)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Lahan Kosong untuk Padi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang kosong atau belum ditanami dalam hektar (ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Semua lahan sudah ditanami)",
+                      "text": "0% (Semua lahan sudah ditanami)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Alasan utama lahan masih kosong",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Belum masuk musim tanam",
+                      "text": "Belum masuk musim tanam"
+                    },
+                    {
+                      "value": "Kurangnya pasokan air/irigasi",
+                      "text": "Kurangnya pasokan air/irigasi"
+                    },
+                    {
+                      "value": "Kekurangan pupuk atau benih",
+                      "text": "Kekurangan pupuk atau benih"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Terkena dampak bencana alam (banjir, kekeringan, longsor)",
+                      "text": "Terkena dampak bencana alam (banjir, kekeringan, longsor)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": " Berapa lama lahan kosong tidak ditanami?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "< 1 bulan",
+                      "text": "< 1 bulan"
+                    },
+                    {
+                      "value": "1 - 3 bulan",
+                      "text": "1 - 3 bulan"
+                    },
+                    {
+                      "value": "4 - 6 bulan",
+                      "text": "4 - 6 bulan"
+                    },
+                    {
+                      "value": "7 - 12 bulan",
+                      "text": "7 - 12 bulan"
+                    },
+                    {
+                      "value": "Lebih dari 1 tahun",
+                      "text": "Lebih dari 1 tahun"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question5",
+                  "title": "Rencana penggunaan lahan kosong ke depan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Akan ditanami padi pada musim tanam berikutnya",
+                      "text": "Akan ditanami padi pada musim tanam berikutnya"
+                    },
+                    {
+                      "value": "Akan dialihfungsikan untuk tanaman lain",
+                      "text": "Akan dialihfungsikan untuk tanaman lain"
+                    },
+                    {
+                      "value": "Akan digunakan untuk keperluan non-pertanian",
+                      "text": "Akan digunakan untuk keperluan non-pertanian"
+                    },
+                    {
+                      "value": "Belum ada rencana",
+                      "text": "Belum ada rencana"
+                    }
+                  ],
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":2,
+          "kode":"foodestate-singkong-lahankosong",
+          "title": "Statistik Luas Lahan Kosong untuk (Singkong)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Lahan Kosong untuk singkong",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang kosong atau belum ditanami dalam hektar (ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Semua lahan sudah ditanami)",
+                      "text": "0% (Semua lahan sudah ditanami)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Alasan utama lahan masih kosong",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Belum masuk musim tanam",
+                      "text": "Belum masuk musim tanam"
+                    },
+                    {
+                      "value": "Kurangnya pasokan air/irigasi",
+                      "text": "Kurangnya pasokan air/irigasi"
+                    },
+                    {
+                      "value": "Kekurangan pupuk atau benih",
+                      "text": "Kekurangan pupuk atau benih"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Terkena dampak bencana alam (banjir, kekeringan, longsor)",
+                      "text": "Terkena dampak bencana alam (banjir, kekeringan, longsor)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": " Berapa lama lahan kosong tidak ditanami?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "< 1 bulan",
+                      "text": "< 1 bulan"
+                    },
+                    {
+                      "value": "1 - 3 bulan",
+                      "text": "1 - 3 bulan"
+                    },
+                    {
+                      "value": "4 - 6 bulan",
+                      "text": "4 - 6 bulan"
+                    },
+                    {
+                      "value": "7 - 12 bulan",
+                      "text": "7 - 12 bulan"
+                    },
+                    {
+                      "value": "Lebih dari 1 tahun",
+                      "text": "Lebih dari 1 tahun"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question5",
+                  "title": "Rencana penggunaan lahan kosong ke depan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Akan ditanami singkong pada musim tanam berikutnya",
+                      "text": "Akan ditanami singkong pada musim tanam berikutnya"
+                    },
+                    {
+                      "value": "Akan dialihfungsikan untuk tanaman lain",
+                      "text": "Akan dialihfungsikan untuk tanaman lain"
+                    },
+                    {
+                      "value": "Akan digunakan untuk keperluan non-pertanian",
+                      "text": "Akan digunakan untuk keperluan non-pertanian"
+                    },
+                    {
+                      "value": "Belum ada rencana",
+                      "text": "Belum ada rencana"
+                    }
+                  ],
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":3,
+          "kode":"foodestate-tebu-lahankosong",
+          "title": "Statistik Luas Lahan Kosong untuk (Tebu)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Lahan Kosong untuk tebu",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang kosong atau belum ditanami dalam hektar (ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Semua lahan sudah ditanami)",
+                      "text": "0% (Semua lahan sudah ditanami)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Alasan utama lahan masih kosong",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Belum masuk musim tanam",
+                      "text": "Belum masuk musim tanam"
+                    },
+                    {
+                      "value": "Kurangnya pasokan air/irigasi",
+                      "text": "Kurangnya pasokan air/irigasi"
+                    },
+                    {
+                      "value": "Kekurangan pupuk atau benih",
+                      "text": "Kekurangan pupuk atau benih"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Terkena dampak bencana alam (banjir, kekeringan, longsor)",
+                      "text": "Terkena dampak bencana alam (banjir, kekeringan, longsor)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": " Berapa lama lahan kosong tidak ditanami?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "< 1 bulan",
+                      "text": "< 1 bulan"
+                    },
+                    {
+                      "value": "1 - 3 bulan",
+                      "text": "1 - 3 bulan"
+                    },
+                    {
+                      "value": "4 - 6 bulan",
+                      "text": "4 - 6 bulan"
+                    },
+                    {
+                      "value": "7 - 12 bulan",
+                      "text": "7 - 12 bulan"
+                    },
+                    {
+                      "value": "Lebih dari 1 tahun",
+                      "text": "Lebih dari 1 tahun"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question5",
+                  "title": "Rencana penggunaan lahan kosong ke depan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Akan ditanami tebu pada musim tanam berikutnya",
+                      "text": "Akan ditanami tebu pada musim tanam berikutnya"
+                    },
+                    {
+                      "value": "Akan dialihfungsikan untuk tanaman lain",
+                      "text": "Akan dialihfungsikan untuk tanaman lain"
+                    },
+                    {
+                      "value": "Akan digunakan untuk keperluan non-pertanian",
+                      "text": "Akan digunakan untuk keperluan non-pertanian"
+                    },
+                    {
+                      "value": "Belum ada rencana",
+                      "text": "Belum ada rencana"
+                    }
+                  ],
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":4,
+          "kode":"foodestate-kedelai-lahankosong",
+          "title": "Statistik Luas Lahan Kosong untuk (Kedelai)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Lahan Kosong untuk kedelai",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang kosong atau belum ditanami dalam hektar (ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Semua lahan sudah ditanami)",
+                      "text": "0% (Semua lahan sudah ditanami)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Alasan utama lahan masih kosong",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Belum masuk musim tanam",
+                      "text": "Belum masuk musim tanam"
+                    },
+                    {
+                      "value": "Kurangnya pasokan air/irigasi",
+                      "text": "Kurangnya pasokan air/irigasi"
+                    },
+                    {
+                      "value": "Kekurangan pupuk atau benih",
+                      "text": "Kekurangan pupuk atau benih"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Terkena dampak bencana alam (banjir, kekeringan, longsor)",
+                      "text": "Terkena dampak bencana alam (banjir, kekeringan, longsor)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": " Berapa lama lahan kosong tidak ditanami?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "< 1 bulan",
+                      "text": "< 1 bulan"
+                    },
+                    {
+                      "value": "1 - 3 bulan",
+                      "text": "1 - 3 bulan"
+                    },
+                    {
+                      "value": "4 - 6 bulan",
+                      "text": "4 - 6 bulan"
+                    },
+                    {
+                      "value": "7 - 12 bulan",
+                      "text": "7 - 12 bulan"
+                    },
+                    {
+                      "value": "Lebih dari 1 tahun",
+                      "text": "Lebih dari 1 tahun"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question5",
+                  "title": "Rencana penggunaan lahan kosong ke depan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Akan ditanami kedelai pada musim tanam berikutnya",
+                      "text": "Akan ditanami kedelai pada musim tanam berikutnya"
+                    },
+                    {
+                      "value": "Akan dialihfungsikan untuk tanaman lain",
+                      "text": "Akan dialihfungsikan untuk tanaman lain"
+                    },
+                    {
+                      "value": "Akan digunakan untuk keperluan non-pertanian",
+                      "text": "Akan digunakan untuk keperluan non-pertanian"
+                    },
+                    {
+                      "value": "Belum ada rencana",
+                      "text": "Belum ada rencana"
+                    }
+                  ],
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":5,
+          "kode":"foodestate-jagung-lahankosong",
+          "title": "Statistik Luas Lahan Kosong untuk (Jagung)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Lahan Kosong untuk jagung",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang kosong atau belum ditanami dalam hektar (ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Semua lahan sudah ditanami)",
+                      "text": "0% (Semua lahan sudah ditanami)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Alasan utama lahan masih kosong",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Belum masuk musim tanam",
+                      "text": "Belum masuk musim tanam"
+                    },
+                    {
+                      "value": "Kurangnya pasokan air/irigasi",
+                      "text": "Kurangnya pasokan air/irigasi"
+                    },
+                    {
+                      "value": "Kekurangan pupuk atau benih",
+                      "text": "Kekurangan pupuk atau benih"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Terkena dampak bencana alam (banjir, kekeringan, longsor)",
+                      "text": "Terkena dampak bencana alam (banjir, kekeringan, longsor)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": " Berapa lama lahan kosong tidak ditanami?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "< 1 bulan",
+                      "text": "< 1 bulan"
+                    },
+                    {
+                      "value": "1 - 3 bulan",
+                      "text": "1 - 3 bulan"
+                    },
+                    {
+                      "value": "4 - 6 bulan",
+                      "text": "4 - 6 bulan"
+                    },
+                    {
+                      "value": "7 - 12 bulan",
+                      "text": "7 - 12 bulan"
+                    },
+                    {
+                      "value": "Lebih dari 1 tahun",
+                      "text": "Lebih dari 1 tahun"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question5",
+                  "title": "Rencana penggunaan lahan kosong ke depan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Akan ditanami jagung pada musim tanam berikutnya",
+                      "text": "Akan ditanami jagung pada musim tanam berikutnya"
+                    },
+                    {
+                      "value": "Akan dialihfungsikan untuk tanaman lain",
+                      "text": "Akan dialihfungsikan untuk tanaman lain"
+                    },
+                    {
+                      "value": "Akan digunakan untuk keperluan non-pertanian",
+                      "text": "Akan digunakan untuk keperluan non-pertanian"
+                    },
+                    {
+                      "value": "Belum ada rencana",
+                      "text": "Belum ada rencana"
+                    }
+                  ],
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":6,
+          "kode":"foodestate-sawit-lahankosong",
+          "title": "Statistik Luas Lahan Kosong untuk (Sawit)",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Lahan Kosong untuk sawit",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang kosong atau belum ditanami dalam hektar (ha)",
+                  "isRequired": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "0% (Semua lahan sudah ditanami)",
+                      "text": "0% (Semua lahan sudah ditanami)"
+                    },
+                    {
+                      "value": "1 - 10%",
+                      "text": "1 - 10%"
+                    },
+                    {
+                      "value": "11 - 25%",
+                      "text": "11 - 25%"
+                    },
+                    {
+                      "value": "26 - 50%",
+                      "text": "26 - 50%"
+                    },
+                    {
+                      "value": "51 - 75%",
+                      "text": "51 - 75%"
+                    },
+                    {
+                      "value": "76 - 100%",
+                      "text": "76 - 100%"
+                    }
+                  ]
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Alasan utama lahan masih kosong",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Belum masuk musim tanam",
+                      "text": "Belum masuk musim tanam"
+                    },
+                    {
+                      "value": "Kurangnya pasokan air/irigasi",
+                      "text": "Kurangnya pasokan air/irigasi"
+                    },
+                    {
+                      "value": "Kekurangan pupuk atau benih",
+                      "text": "Kekurangan pupuk atau benih"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Terkena dampak bencana alam (banjir, kekeringan, longsor)",
+                      "text": "Terkena dampak bencana alam (banjir, kekeringan, longsor)"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question4",
+                  "title": " Berapa lama lahan kosong tidak ditanami?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "< 1 bulan",
+                      "text": "< 1 bulan"
+                    },
+                    {
+                      "value": "1 - 3 bulan",
+                      "text": "1 - 3 bulan"
+                    },
+                    {
+                      "value": "4 - 6 bulan",
+                      "text": "4 - 6 bulan"
+                    },
+                    {
+                      "value": "7 - 12 bulan",
+                      "text": "7 - 12 bulan"
+                    },
+                    {
+                      "value": "Lebih dari 1 tahun",
+                      "text": "Lebih dari 1 tahun"
+                    }
+                  ],
+                  "separateSpecialChoices": true
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question5",
+                  "title": "Rencana penggunaan lahan kosong ke depan",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Akan ditanami sawit pada musim tanam berikutnya",
+                      "text": "Akan ditanami sawit pada musim tanam berikutnya"
+                    },
+                    {
+                      "value": "Akan dialihfungsikan untuk tanaman lain",
+                      "text": "Akan dialihfungsikan untuk tanaman lain"
+                    },
+                    {
+                      "value": "Akan digunakan untuk keperluan non-pertanian",
+                      "text": "Akan digunakan untuk keperluan non-pertanian"
+                    },
+                    {
+                      "value": "Belum ada rencana",
+                      "text": "Belum ada rencana"
+                    }
+                  ],
+                  "otherText": "Faktor lainnya"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "topik" : "Ketersediaan komoditas",
       "list": [
         {
