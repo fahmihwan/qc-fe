@@ -16,11 +16,21 @@ const PieChartCustomizable = ({
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label })) 
+    : Object.keys(data).map((key) => {
+        const labelObj = labels.find(obj => obj && obj.hasOwnProperty(key)); 
+        return {
+            key, 
+            label: labelObj ? labelObj[key] : key
+        };
+    });
+
     const chartData = {
-        labels,
+        labels: activeLabels.map(({label}) => label),
         datasets: [
             {
-                data: labels.map(label => data[label] ?? 0), 
+                data: activeLabels.map(({key}) => data[key] ?? 0), 
                 backgroundColor: colors,
                 borderColor: "#ffffff", 
                 borderWidth: 1
@@ -85,7 +95,7 @@ const PieChartCustomizable = ({
                         </div>
                         <div >
                             <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
-                                {labels.map((label, index) => (
+                                {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                     <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>

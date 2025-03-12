@@ -17,10 +17,22 @@ const BarChartTumpukCustomizeable = ({
 
     const xKey = isDataEmpty ? "" : Object.keys(data[0])[0];
     const xLabels = isDataEmpty ? [] : data.map((item) => item[xKey]);
+
+    const availableKeys = isDataEmpty ? [] : Object.keys(data[0]).slice(1);
     
-    const datasets = isDataEmpty ? [] : labels.map((label, index) => ({
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label })) 
+    : availableKeys.map((key) => {
+        const labelObj = labels.find(obj => obj && obj.hasOwnProperty(key)); 
+        return {
+            key, 
+            label: labelObj ? labelObj[key] : key 
+        };
+    });
+    
+    const datasets = isDataEmpty ? [] : activeLabels.map(({key, label}, index) => ({
         label,
-        data: data.map((item) => item[label] || 0),
+        data: data.map((item) => item[key] || 0),
         borderColor: colors[index],
         backgroundColor: colors[index],
     }))
@@ -42,7 +54,7 @@ const BarChartTumpukCustomizeable = ({
                 callbacks: {
                     label: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex
-                        const datasetLabelCustom = labels[datasetIndex]
+                        const datasetLabelCustom = activeLabels[datasetIndex]?.label
                         return ` ${datasetLabelCustom}: ${formatCurrency(tooltipItem.raw)}`
                     },
                     labelColor: (tooltipItem) => {
@@ -113,7 +125,7 @@ const BarChartTumpukCustomizeable = ({
                     </div>
                     <div >  
                         <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
-                            {labels.map((label, index) => (
+                            {activeLabels.map(({label}, index) => (
                             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                 <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
