@@ -6984,7 +6984,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa yang menjadi kendala utama?",
@@ -7164,7 +7164,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa yang menjadi kendala utama?",
@@ -7344,7 +7344,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa yang menjadi kendala utama?",
@@ -7524,7 +7524,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                 "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa yang menjadi kendala utama?",
@@ -7704,7 +7704,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa yang menjadi kendala utama?",
@@ -7884,7 +7884,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa yang menjadi kendala utama?",
