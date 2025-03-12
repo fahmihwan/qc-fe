@@ -1567,6 +1567,741 @@
               ]
             }
           ]
+        },
+        {
+          "no":2,
+          "title": "Statistik Produksi (Singkong)",
+          "kode":"foodestate-singkong-statistikproduksi",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produksi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang ditanami singkong dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Jumlah total hasil panen dalam satuan ton (ton)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Jumlah musim tanam dalam setahun",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "1 kali",
+                      "text": "1 kali"
+                    },
+                    {
+                      "value": "2 kali",
+                      "text": "2 kali"
+                    },
+                    {
+                      "value": "3 kali",
+                      "text": "3 kali"
+                    },
+                    {
+                      "value": "Lebih dari 3 kali",
+                      "text": "Lebih dari 3 kali"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jenis singkong yang ditanam",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Singkong hibrida",
+                      "text": "Singkong hibrida"
+                    },
+                    {
+                      "value": "Singkong Varietas Lokal",
+                      "text": "Singkong Varietas Lokal"
+                    },
+                    {
+                      "value": "Singkong organik",
+                      "text": "Singkong organik"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Hasil panen digunakan untuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Konsumsi sendiri",
+                      "text": "Konsumsi sendiri"
+                    },
+                    {
+                      "value": "Dijual ke pasar lokal",
+                      "text": "Dijual ke pasar lokal"
+                    },
+                    {
+                      "value": "Dijual ke perusahaan besar",
+                      "text": "Dijual ke perusahaan besar"
+                    },
+                    {
+                      "value": "Disimpan sebagai cadangan",
+                      "text": "Disimpan sebagai cadangan"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "title": "Jika hasil panen dijual, berapa harga rata-rata per kg (ex: Rp20000000)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Kendala utama dalam produksi singkong\n",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya pupuk atau pestisida",
+                      "text": "Kurangnya pupuk atau pestisida"
+                    },
+                    {
+                      "value": "Serangan hama dan penyakit",
+                      "text": "Serangan hama dan penyakit"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Cuaca buruk",
+                      "text": "Cuaca buruk"
+                    },
+                    {
+                      "value": "Keterbatasan akses ke pasar",
+                      "text": "Keterbatasan akses ke pasar"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":3,
+          "title": "Statistik Produksi (Tebu)",
+          "kode":"foodestate-tebu-statistikproduksi",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produksi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang ditanami tebu dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Jumlah total hasil panen dalam satuan ton (ton)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Jumlah musim tanam dalam setahun",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "1 kali",
+                      "text": "1 kali"
+                    },
+                    {
+                      "value": "2 kali",
+                      "text": "2 kali"
+                    },
+                    {
+                      "value": "3 kali",
+                      "text": "3 kali"
+                    },
+                    {
+                      "value": "Lebih dari 3 kali",
+                      "text": "Lebih dari 3 kali"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jenis tebu yang ditanam",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Tebu hibrida",
+                      "text": "Tebu hibrida"
+                    },
+                    {
+                      "value": "Tebu Varietas Lokal",
+                      "text": "Tebu Varietas Lokal"
+                    },
+                    {
+                      "value": "Tebu organik",
+                      "text": "Tebu organik"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Hasil panen digunakan untuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Konsumsi sendiri",
+                      "text": "Konsumsi sendiri"
+                    },
+                    {
+                      "value": "Dijual ke pasar lokal",
+                      "text": "Dijual ke pasar lokal"
+                    },
+                    {
+                      "value": "Dijual ke perusahaan besar",
+                      "text": "Dijual ke perusahaan besar"
+                    },
+                    {
+                      "value": "Disimpan sebagai cadangan",
+                      "text": "Disimpan sebagai cadangan"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "title": "Jika hasil panen dijual, berapa harga rata-rata per kg (ex: Rp20000000)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Kendala utama dalam produksi tebu\n",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya pupuk atau pestisida",
+                      "text": "Kurangnya pupuk atau pestisida"
+                    },
+                    {
+                      "value": "Serangan hama dan penyakit",
+                      "text": "Serangan hama dan penyakit"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Cuaca buruk",
+                      "text": "Cuaca buruk"
+                    },
+                    {
+                      "value": "Keterbatasan akses ke pasar",
+                      "text": "Keterbatasan akses ke pasar"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":4,
+          "title": "Statistik Produksi (Kedelai)",
+          "kode":"foodestate-kedelai-statistikproduksi",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produksi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang ditanami kedelai dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Jumlah total hasil panen dalam satuan ton (ton)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Jumlah musim tanam dalam setahun",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "1 kali",
+                      "text": "1 kali"
+                    },
+                    {
+                      "value": "2 kali",
+                      "text": "2 kali"
+                    },
+                    {
+                      "value": "3 kali",
+                      "text": "3 kali"
+                    },
+                    {
+                      "value": "Lebih dari 3 kali",
+                      "text": "Lebih dari 3 kali"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jenis kedelai yang ditanam",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kedelai hibrida",
+                      "text": "Kedelai hibrida"
+                    },
+                    {
+                      "value": "Kedelai Varietas Lokal",
+                      "text": "Kedelai Varietas Lokal"
+                    },
+                    {
+                      "value": "Kedelai organik",
+                      "text": "Kedelai organik"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Hasil panen digunakan untuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Konsumsi sendiri",
+                      "text": "Konsumsi sendiri"
+                    },
+                    {
+                      "value": "Dijual ke pasar lokal",
+                      "text": "Dijual ke pasar lokal"
+                    },
+                    {
+                      "value": "Dijual ke perusahaan besar",
+                      "text": "Dijual ke perusahaan besar"
+                    },
+                    {
+                      "value": "Disimpan sebagai cadangan",
+                      "text": "Disimpan sebagai cadangan"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "title": "Jika hasil panen dijual, berapa harga rata-rata per kg (ex: Rp20000000)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Kendala utama dalam produksi kedelai\n",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya pupuk atau pestisida",
+                      "text": "Kurangnya pupuk atau pestisida"
+                    },
+                    {
+                      "value": "Serangan hama dan penyakit",
+                      "text": "Serangan hama dan penyakit"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Cuaca buruk",
+                      "text": "Cuaca buruk"
+                    },
+                    {
+                      "value": "Keterbatasan akses ke pasar",
+                      "text": "Keterbatasan akses ke pasar"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":5,
+          "title": "Statistik Produksi (Jagung)",
+          "kode":"foodestate-jagung-statistikproduksi",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produksi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang ditanami jagung dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Jumlah total hasil panen dalam satuan ton (ton)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Jumlah musim tanam dalam setahun",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "1 kali",
+                      "text": "1 kali"
+                    },
+                    {
+                      "value": "2 kali",
+                      "text": "2 kali"
+                    },
+                    {
+                      "value": "3 kali",
+                      "text": "3 kali"
+                    },
+                    {
+                      "value": "Lebih dari 3 kali",
+                      "text": "Lebih dari 3 kali"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jenis jagung yang ditanam",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Jagung hibrida",
+                      "text": "Jagung hibrida"
+                    },
+                    {
+                      "value": "Jagung Varietas Lokal",
+                      "text": "Jagung Varietas Lokal"
+                    },
+                    {
+                      "value": "Jagung organik",
+                      "text": "Jagung organik"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Hasil panen digunakan untuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Konsumsi sendiri",
+                      "text": "Konsumsi sendiri"
+                    },
+                    {
+                      "value": "Dijual ke pasar lokal",
+                      "text": "Dijual ke pasar lokal"
+                    },
+                    {
+                      "value": "Dijual ke perusahaan besar",
+                      "text": "Dijual ke perusahaan besar"
+                    },
+                    {
+                      "value": "Disimpan sebagai cadangan",
+                      "text": "Disimpan sebagai cadangan"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "title": "Jika hasil panen dijual, berapa harga rata-rata per kg (ex: Rp20000000)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Kendala utama dalam produksi jagung\n",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya pupuk atau pestisida",
+                      "text": "Kurangnya pupuk atau pestisida"
+                    },
+                    {
+                      "value": "Serangan hama dan penyakit",
+                      "text": "Serangan hama dan penyakit"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Cuaca buruk",
+                      "text": "Cuaca buruk"
+                    },
+                    {
+                      "value": "Keterbatasan akses ke pasar",
+                      "text": "Keterbatasan akses ke pasar"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "no":6,
+          "title": "Statistik Produksi (Sawit)",
+          "kode":"foodestate-sawit-statistikproduksi",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Statistik Produksi",
+              "elements": [
+                {
+                  "type": "text",
+                  "name": "question1",
+                  "title": "Total luas lahan yang ditanami sawit dalam satuan hektar (ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question2",
+                  "title": "Jumlah total hasil panen dalam satuan ton (ton)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question3",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "text",
+                  "name": "question4",
+                  "title": "Rata-rata produksi per hektar dalam satuan ton (ton/ha)",
+                  "isRequired": true,
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Jumlah musim tanam dalam setahun",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "1 kali",
+                      "text": "1 kali"
+                    },
+                    {
+                      "value": "2 kali",
+                      "text": "2 kali"
+                    },
+                    {
+                      "value": "3 kali",
+                      "text": "3 kali"
+                    },
+                    {
+                      "value": "Lebih dari 3 kali",
+                      "text": "Lebih dari 3 kali"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Jenis sawit yang ditanam",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sawit hibrida",
+                      "text": "Sawit hibrida"
+                    },
+                    {
+                      "value": "Sawit Varietas Lokal",
+                      "text": "Sawit Varietas Lokal"
+                    },
+                    {
+                      "value": "Sawit organik",
+                      "text": "Sawit organik"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Hasil panen digunakan untuk",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Konsumsi sendiri",
+                      "text": "Konsumsi sendiri"
+                    },
+                    {
+                      "value": "Dijual ke pasar lokal",
+                      "text": "Dijual ke pasar lokal"
+                    },
+                    {
+                      "value": "Dijual ke perusahaan besar",
+                      "text": "Dijual ke perusahaan besar"
+                    },
+                    {
+                      "value": "Disimpan sebagai cadangan",
+                      "text": "Disimpan sebagai cadangan"
+                    }
+                  ],
+                  "showOtherItem": true
+                },
+                {
+                  "type": "text",
+                  "name": "question8",
+                  "title": "Jika hasil panen dijual, berapa harga rata-rata per kg (ex: Rp20000000)",
+                  "inputType": "number"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Kendala utama dalam produksi sawit\n",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Kurangnya pupuk atau pestisida",
+                      "text": "Kurangnya pupuk atau pestisida"
+                    },
+                    {
+                      "value": "Serangan hama dan penyakit",
+                      "text": "Serangan hama dan penyakit"
+                    },
+                    {
+                      "value": "Kurangnya tenaga kerja",
+                      "text": "Kurangnya tenaga kerja"
+                    },
+                    {
+                      "value": "Cuaca buruk",
+                      "text": "Cuaca buruk"
+                    },
+                    {
+                      "value": "Keterbatasan akses ke pasar",
+                      "text": "Keterbatasan akses ke pasar"
+                    }
+                  ],
+                  "showOtherItem": true
+                }
+              ]
+            }
+          ]
         }
       ]
     },
