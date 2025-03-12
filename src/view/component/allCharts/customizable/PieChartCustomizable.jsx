@@ -20,7 +20,7 @@ const PieChartCustomizable = ({
         labels,
         datasets: [
             {
-                data: labels.map(label => data[label]), 
+                data: labels.map(label => data[label] ?? 0), 
                 backgroundColor: colors,
                 borderColor: "#ffffff", 
                 borderWidth: 1

@@ -11,10 +11,15 @@ const LineChartCustomizable = ({
     height = null
 }) => {
 
-    console.log("data yg diterima", data)
+    console.log("data yg diterima line", data)
     const isDataEmpty = !data // Jika `data` null atau undefined
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
-        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
+        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0) // Jika `data` object kosong
+        || (Array.isArray(data) && data.every(obj => {
+            if(typeof obj !== "object" || Array.isArray(obj)) return false
+            const keys = Object.keys(obj)
+            return keys.length > 1 && keys.slice(1).every(key => Number(obj[key]) === 0)
+        }))
 
     console.log("isDataEmpty", isDataEmpty)
     const years = isDataEmpty ? [] : data.map((item) => item.year)
@@ -49,7 +54,9 @@ const LineChartCustomizable = ({
                     label: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex
                         const datasetLabelCustom = labels[datasetIndex]
-                        return ` ${datasetLabelCustom}: ${formatCurrency(tooltipItem.raw)}`
+
+                        const formattedLabel = datasetLabelCustom.charAt(0).toUpperCase() + datasetLabelCustom.slice(1)
+                        return ` ${formattedLabel}: ${formatCurrency(tooltipItem.raw)}`
                     },
                     labelColor: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex;
@@ -110,7 +117,7 @@ const LineChartCustomizable = ({
                                 {labels.map((label, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
-                                    <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
+                                    <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
                                 </div>
                                 ))}
                             </div>
