@@ -9365,6 +9365,527 @@
           ]
         }
       ]
+    },
+    {
+      "topik":"Pemanfaatan Lahan di Sekitar Batas Hutan",
+      "list":[
+        {
+          "no":1,
+          "kode":"foodestate-batashutan-pemanfaatanlahandisekitarbatashutan",
+          "title": "Pemanfaatan Lahan di Sekitar Batas Hutan",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Konflik Lahan dan Hutan",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "question1",
+                  "title": "Apakah ada konflik terkait batas hutan di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jika ya, siapa pihak yang terlibat dalam konflik batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Warga lokal/petani",
+                      "text": "Warga lokal/petani"
+                    },
+                    {
+                      "value": "Perusahaan perkebunan",
+                      "text": "Perusahaan perkebunan"
+                    },
+                    {
+                      "value": "Pemerintah daerah",
+                      "text": "Pemerintah daerah"
+                    },
+                    {
+                      "value": "LSM lingkungan",
+                      "text": "LSM lingkungan"
+                    },
+                    {
+                      "value": "Masyarakat adat",
+                      "text": "Masyarakat adat"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Apa penyebab utama konflik batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Tidak adanya batas hutan yang jelas",
+                      "text": "Tidak adanya batas hutan yang jelas"
+                    },
+                    {
+                      "value": "Perluasan perkebunan tanpa izin",
+                      "text": "Perluasan perkebunan tanpa izin"
+                    },
+                    {
+                      "value": "Aktivitas pertambangan di kawasan hutan",
+                      "text": "Aktivitas pertambangan di kawasan hutan"
+                    },
+                    {
+                      "value": "Klaim lahan oleh masyarakat adat",
+                      "text": "Klaim lahan oleh masyarakat adat"
+                    },
+                    {
+                      "value": "Pembalakan liar",
+                      "text": "Pembalakan liar"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Apakah ada upaya penyelesaian konflik yang telah dilakukan?",
+                  "choices": [
+                    {
+                      "value": "Ya, melalui musyawarah desa",
+                      "text": "Ya, melalui musyawarah desa"
+                    },
+                    {
+                      "value": "Ya, melalui pemerintah daerah",
+                      "text": "Ya, melalui pemerintah daerah"
+                    },
+                    {
+                      "value": "Ya, melalui jalur hukum",
+                      "text": "Ya, melalui jalur hukum"
+                    },
+                    {
+                      "value": "Tidak ada upaya penyelesaian",
+                      "text": "Tidak ada upaya penyelesaian"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah konflik ini berdampak pada kesejahteraan masyarakat sekitar?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topik": "Potensi Konflik di Sekitar Batas Hutan",
+      "list": [
+        {
+          "no":1,
+          "kode":"foodestate-batashutan-potensikonflikdisekitarbatashutan",
+          "title": "Potensi Konflik di Sekitar Batas Hutan",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Program Konservasi dan Keberlanjutan\n",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "question1",
+                  "title": "Apakah ada program pelestarian batas hutan di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jika ya, siapa yang menjalankan program tersebut?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pemerintah daerah",
+                      "text": "Pemerintah daerah"
+                    },
+                    {
+                      "value": "LSM lingkungan",
+                      "text": "LSM lingkungan"
+                    },
+                    {
+                      "value": "Masyarakat setempat",
+                      "text": "Masyarakat setempat"
+                    },
+                    {
+                      "value": "Perusahaan swasta",
+                      "text": "Perusahaan swasta"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Apakah masyarakat sekitar dilibatkan dalam upaya pelestarian batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Apakah ada patroli rutin untuk menjaga batas hutan dari aktivitas ilegal?\n",
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah konflik ini berdampak pada kesejahteraan masyarakat sekitar?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada ancaman deforestasi atau perambahan hutan yang masih berlangsung?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "page1",
+              "title": "Upaya Penanaman Kembali",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Apakah ada program rehabilitasi hutan di sekitar batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question8",
+                  "title": "Jika ya, siapa yang melakukan penanaman kembali?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pemerintah",
+                      "text": "Pemerintah"
+                    },
+                    {
+                      "value": "Swasta",
+                      "text": "Swasta"
+                    },
+                    {
+                      "value": "Masyarakat Sekitar",
+                      "text": "Masyarakat Sekitar"
+                    },
+                    {
+                      "value": "Gabungan Berbagai Pihak",
+                      "text": "Gabungan Berbagai Pihak"
+                    },
+                    {
+                      "value": "Tidak Tahu",
+                      "text": "Tidak Tahu"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "title": "Apakah masyarakat mendapat manfaat ekonomi dari kegiatan konservasi batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "topik": "Pelestarian dan Keberlanjutan Batas Hutan",
+      "list":[
+        {
+          "title": "Pelestarian dan Keberlanjutan Batas Hutan",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "Program Konservasi dan Keberlanjutan\n",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "question1",
+                  "title": "Apakah ada program pelestarian batas hutan di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Jika ya, siapa yang menjalankan program tersebut?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pemerintah daerah",
+                      "text": "Pemerintah daerah"
+                    },
+                    {
+                      "value": "LSM lingkungan",
+                      "text": "LSM lingkungan"
+                    },
+                    {
+                      "value": "Masyarakat setempat",
+                      "text": "Masyarakat setempat"
+                    },
+                    {
+                      "value": "Perusahaan swasta",
+                      "text": "Perusahaan swasta"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "dropdown",
+                  "name": "question3",
+                  "title": "Apakah masyarakat sekitar dilibatkan dalam upaya pelestarian batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Apakah ada patroli rutin untuk menjaga batas hutan dari aktivitas ilegal?\n",
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Apakah terdapat insentif bagi masyarakat yang ikut menjaga hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Apakah ada ancaman deforestasi atau perambahan hutan yang masih berlangsung?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "page1",
+              "title": "Upaya Penanaman Kembali",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Apakah ada program rehabilitasi hutan di sekitar batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Jika ya, siapa yang melakukan penanaman kembali?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Pemerintah",
+                      "text": "Pemerintah"
+                    },
+                    {
+                      "value": "Swasta",
+                      "text": "Swasta"
+                    },
+                    {
+                      "value": "Masyarakat Sekitar",
+                      "text": "Masyarakat Sekitar"
+                    },
+                    {
+                      "value": "Gabungan Berbagai Pihak",
+                      "text": "Gabungan Berbagai Pihak"
+                    },
+                    {
+                      "value": "Tidak Tahu",
+                      "text": "Tidak Tahu"
+                    }
+                  ],
+                  "showOtherItem": true,
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question8",
+                  "title": "Apakah masyarakat mendapat manfaat ekonomi dari kegiatan konservasi batas hutan?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                }
+              ]
+            }
+          ]
+        }
+
+      ]
     }
   ]
 }
