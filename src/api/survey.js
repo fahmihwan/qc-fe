@@ -74,6 +74,20 @@ export const getlinechart = async () => {
     }
 }
 
+export const getDynamicChart = async(payload, province_id = null) => {
+    try {
+        // console.log("payload yg diterima: ", payload    )
+        const response = await apiClient.post(
+            `/get-chart-dinamis${province_id ? `?provinsi_id=${province_id}` : ''}`,
+            payload
+        )
+        return response.data
+    } catch(error) {
+        console.error("error fetching data: ", error)
+        throw error
+    }
+}
+
 
 
 
