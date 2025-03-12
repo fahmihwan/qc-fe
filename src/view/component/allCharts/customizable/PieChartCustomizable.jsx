@@ -17,20 +17,22 @@ const PieChartCustomizable = ({
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
     const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
-    ? labels.map(label => ({ key: label, label })) 
-    : Object.keys(data).map((key) => {
-        const labelObj = labels.find(obj => obj && obj.hasOwnProperty(key)); 
+    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
+    : labels.map((label) => {
+        const key = Object.keys(label)[0]; // Ambil key dari object
         return {
-            key, 
-            label: labelObj ? labelObj[key] : key
+            key,
+            label: label[key],
+            value: data[key] ?? 0
         };
     });
 
+    console.log("ini active labels pie chart", activeLabels)
     const chartData = {
         labels: activeLabels.map(({label}) => label),
         datasets: [
             {
-                data: activeLabels.map(({key}) => data[key] ?? 0), 
+                data: activeLabels.map(({value}) => value), 
                 backgroundColor: colors,
                 borderColor: "#ffffff", 
                 borderWidth: 1
