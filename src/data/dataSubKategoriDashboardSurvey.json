@@ -216,7 +216,7 @@
                 {
                     "title": "Perubahan luas lahan dalam setahun terakhir",
                     "type": "line-chart",
-                    "labels": ["Meningkat", "Menurun"],
+                    "labels": ["meningkat", "menurun"],
                     "dataName": "resultLine",
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -317,7 +317,7 @@
                 {
                     "title": "Status kepemilikan lahan",
                     "type": "pie-chart",
-                    "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "Lainnya"],
+                    "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -1192,7 +1192,7 @@
         },
         {
             "title":"Ketersediaan Komoditas",
-            "topicTitle": "Ketersediaan Komoditas",
+            "topicTitle": "Jumlah Daerah dengan Ketersediaan Komoditas",
             "img": "/assets/icon/8.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
@@ -1358,7 +1358,10 @@
                 {
                     "title": "Ketersediaan komoditas",
                     "type": "bar-chart-horizontal",
-                    "labels": ["Cukup", "Tidak Cukup"],
+                    "labels": [
+                        {"true": "Cukup"},
+                        {"false": "Tidak Cukup"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)"
@@ -1396,7 +1399,10 @@
                 {
                     "title": "Distribusi komoditas ke pasar",
                     "type": "bar-chart-tumpuk",
-                    "labels": ["Ya", "Tidak"],
+                    "labels": [
+                        {"true": "Ya"},
+                        {"false": "Tidak"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)"
@@ -1609,21 +1615,14 @@
                 }
             ],
             "charts": [
-                {
-                    "title": "Perluasan lahan pertanian",
-                    "type": "bar-chart-horizontal",
-                    "labels": [],
-                    "colors": [],
-                    "dummyData": {
-                        "data": {
-                            
-                        }
-                    }
-                },
+                
                 {
                     "title": "Status lahan baru",
                     "type": "bar-chart-tumpuk",
-                    "labels": ["Sudah digunakan untuk produksi", "Belum digunakan untuk produksi"],
+                    "labels": [
+                        {"true": "Sudah digunakan untuk produksi"},
+                        {"false": "Belum digunakan untuk produksi"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)"
@@ -1661,7 +1660,13 @@
                 {
                     "title": "Kendala pembangunan lahan",
                     "type": "pie-chart",
-                    "labels": ["Kurang alat pertanian", "Irigasi", "Kurang Tenaga Kerja", "Kurang Bibit/pupuk", "Lainnya"],
+                    "labels": [
+                        {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                        {"Masalah irigasi": "Irigasi"},
+                        {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                        {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                        {"lainnya": "Lainnya"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -1696,7 +1701,7 @@
                             "kode": "foodestate-padi-realisasidistribusipangan",
                             "body": [
                                 {
-                                    "type": "bar-wilayah",
+                                    "type": "bar-realisasidistribusipangan",
                                     "params": {
                                         "body_topikId": 19,
                                         "body_title": "Apakah distribusi padi ke masyarakat berjalan lancar?",
@@ -1722,7 +1727,7 @@
                             "kode": "foodestate-tebu-realisasidistribusipangan",
                             "body": [
                                 {
-                                    "type": "bar-wilayah",
+                                    "type": "bar-realisasidistribusipangan",
                                     "params": {
                                         "body_topikId": 20,
                                         "body_title": "Apakah distribusi tebu ke masyarakat berjalan lancar?",
@@ -1748,7 +1753,7 @@
                             "kode": "foodestate-kedelai-realisasidistribusipangan",
                             "body": [
                                 {
-                                    "type": "bar-wilayah",
+                                    "type": "bar-realisasidistribusipangan",
                                     "params": {
                                         "body_topikId": 21,
                                         "body_title": "Apakah distribusi kedelai ke masyarakat berjalan lancar?",
@@ -1774,7 +1779,7 @@
                             "kode": "foodestate-singkong-realisasidistribusipangan",
                             "body": [
                                 {
-                                    "type": "bar-wilayah",
+                                    "type": "bar-realisasidistribusipangan",
                                     "params": {
                                         "body_topikId": 22,
                                         "body_title": "Apakah distribusi singkong ke masyarakat berjalan lancar?",
@@ -1800,7 +1805,7 @@
                             "kode": "foodestate-jagung-realisasidistribusipangan",
                             "body": [
                                 {
-                                    "type": "bar-wilayah",
+                                    "type": "bar-realisasidistribusipangan",
                                     "params": {
                                         "body_topikId": 23,
                                         "body_title": "Apakah distribusi jagung ke masyarakat berjalan lancar?",
@@ -1826,7 +1831,7 @@
                             "kode": "foodestate-sawit-realisasidistribusipangan",
                             "body": [
                                 {
-                                    "type": "bar-wilayah",
+                                    "type": "bar-realisasidistribusipangan",
                                     "params": {
                                         "body_topikId": 24,
                                         "body_title": "Apakah distribusi sawit ke masyarakat berjalan lancar?",
@@ -1847,17 +1852,6 @@
                 }     
             ],
             "charts": [
-                {
-                    "title": "Harga pangan akibat distribusi",
-                    "type": "bar-chart-tumpuk",
-                    "labels": [],
-                    "colors": [],
-                    "dummyData": {
-                        "data": {
-                            
-                        }
-                    }
-                },
                 {
                     "title": "Distribusi pangan yang berjalan lancar",
                     "type": "bar-chart-horizontal",
@@ -1899,7 +1893,12 @@
                 {
                     "title": "Kendala dalam distribusi",
                     "type": "pie-chart",
-                    "labels": ["Transportasi", "Penyimpanan", "Biaya", "Lainnya"],
+                    "labels": [
+                        {"Kurangnya transportasi": "Transportasi"},
+                        {"Penyimpanan tidak memadai": "Penyimpanan"},
+                        {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                        {"Lainnya": "Lainnnya"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -1923,10 +1922,215 @@
             "img": "/assets/icon/11.png",
             "layoutType": "layout4",
             "url":"/dashboard-hasil-survey/efektivitas-program-bantuan-pangan",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-efektivitasprogrambantuanpangan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 25,
+                                        "body_title": "Jika tidak, apa yang menjadi kendala utama?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 25,
+                                        "body_title": "",
+                                        "body_name_input": ""
+                                    }   
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 25,
+                                        "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-efektivitasprogrambantuanpangan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 26,
+                                        "body_title": "Jika tidak, apa yang menjadi kendala utama?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 26,
+                                        "body_title": "",
+                                        "body_name_input": ""
+                                    }   
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 26,
+                                        "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-efektivitasprogrambantuanpangan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 27,
+                                        "body_title": "Jika tidak, apa yang menjadi kendala utama?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 27,
+                                        "body_title": "",
+                                        "body_name_input": ""
+                                    }   
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 27,
+                                        "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-efektivitasprogrambantuanpangan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 28,
+                                        "body_title": "Jika tidak, apa yang menjadi kendala utama?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 28,
+                                        "body_title": "",
+                                        "body_name_input": ""
+                                    }   
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 28,
+                                        "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-efektivitasprogrambantuanpangan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 29,
+                                        "body_title": "Jika tidak, apa yang menjadi kendala utama?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 29,
+                                        "body_title": "",
+                                        "body_name_input": ""
+                                    }   
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 29,
+                                        "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-efektivitasprogrambantuanpangan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 30,
+                                        "body_title": "Jika tidak, apa yang menjadi kendala utama?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 30,
+                                        "body_title": "",
+                                        "body_name_input": ""
+                                    }   
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 30,
+                                        "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                                        "body_name_input": "question4"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
-                    "title": "Kendala bantunan pangan",
+                    "title": "Kendala bantuan pangan",
                     "type": "bar-chart-tumpuk",
                     "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"],
                     "colors": [
@@ -2048,7 +2252,7 @@
             "url":"/dashboard-hasil-survey/perubahan-pola-konsumsi-masyarakat",
             "payload": [
                 {
-                    "sub_category": "Sawit",
+                    "sub_category": "Padi",
                     "payload": [
                         {
                             "kode": "foodestate-padi-perubahanpolakonsumsimasyarakat",
@@ -2312,7 +2516,10 @@
                 {
                     "title": "Konsumsi pangan lokal VS impor",
                     "type": "pie-chart",
-                    "labels": ["Lokal", "Import"],
+                    "labels": [
+                        {"Ya": "Lokal"},
+                        {"Tidak": "Import"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)"
