@@ -10433,6 +10433,8 @@
       "topik": "Pelestarian dan Keberlanjutan Batas Hutan",
       "list":[
         {
+          "no": 1,
+          "kode":"foodestate-batashutan-pelestariandankeberlanjutanbatashutan",
           "title": "Pelestarian dan Keberlanjutan Batas Hutan",
           "logoPosition": "right",
           "pages": [
