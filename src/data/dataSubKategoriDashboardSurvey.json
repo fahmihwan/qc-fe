@@ -342,12 +342,220 @@
             "img": "/assets/icon/2.png",
             "layoutType": "layout2",
             "url":"/dashboard-hasil-survey/produktivitas",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikproduktivitas",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 43,
+                                        "body_title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "scatter",
+                                    "params": {
+                                        "body_topikId": 43,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 43,
+                                        "body_title": "Faktor yang mempengaruhi produktivitas",
+                                        "body_name_input": "question4"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikproduktivitas",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 44,
+                                        "body_title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "scatter",
+                                    "params": {
+                                        "body_topikId": 44,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 44,
+                                        "body_title": "Faktor yang mempengaruhi produktivitas",
+                                        "body_name_input": "question4"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikproduktivitas",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 45,
+                                        "body_title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "scatter",
+                                    "params": {
+                                        "body_topikId": 45,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 45,
+                                        "body_title": "Faktor yang mempengaruhi produktivitas",
+                                        "body_name_input": "question4"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikproduktivitas",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 46,
+                                        "body_title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "scatter",
+                                    "params": {
+                                        "body_topikId": 46,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 46,
+                                        "body_title": "Faktor yang mempengaruhi produktivitas",
+                                        "body_name_input": "question4"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikproduktivitas",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 47,
+                                        "body_title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "scatter",
+                                    "params": {
+                                        "body_topikId": 47,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 47,
+                                        "body_title": "Faktor yang mempengaruhi produktivitas",
+                                        "body_name_input": "question4"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikproduktivitas",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 48,
+                                        "body_title": "Apakah ada peningkatan atau penurunan produktivitas dibanding tahun sebelumnya?",
+                                        "body_name_input": "question5"
+                                    }
+                                },
+                                {
+                                    "type": "scatter",
+                                    "params": {
+                                        "body_topikId": 48,
+                                        "body_title": "Jenis lahan yang digunakan untuk tebu",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 48,
+                                        "body_title": "Faktor yang mempengaruhi produktivitas",
+                                        "body_name_input": "question4"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Tren peningkatan/penurunan produktivitas",
                     "type": "line-chart",
-                    "labels": ["Menaik", "Menurun"],
+                    "labels": [
+                        {"true": "Menaik"},
+                        {"false": "Menurun"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(255, 0, 0, 1)"
@@ -435,7 +643,14 @@
                 {
                     "title": "Faktor yang mempengaruhi produktivitas",
                     "type": "pie-chart",
-                    "labels": ["Benih", "Pupuk", "Irigasi", "Serangan Hama", "Perubahan Cuaca", "Lainnya"],
+                    "labels": [
+                        {"Kualitas Benih": "Benih"},
+                        {"Penggunaan Pupuk": "Pupuk"},
+                        {"Kondisi Irigasi": "Irigasi"},
+                        {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                        {"Perubahan Cuaca": "Perubahan Cuaca"},
+                        {"Lainnya": "Lainnnya"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -449,7 +664,7 @@
                             "Benih": 135359,
                             "Pupuk": 80809,
                             "Irigasi": 91383,
-                            "Serangan Hama": 9408, 
+                            "Serangan Hama/Penyakit": 9408, 
                             "Perubahan Cuaca": 48949,
                             "Lainnya": 89939
                         }
@@ -2595,7 +2810,212 @@
             "img": "/assets/icon/13.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/keberlanjutan-produksi-pangan",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-keberlanjutanproduksipangan",
+                            "body": [
+                                {
+                                    "type": "bar-keberlanjutanproduksipangan",
+                                    "params": {
+                                        "body_topikId": 37,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 37,
+                                        "body_title": "Jika tidak, aspek apa yang perlu diperbaiki?",
+                                        "body_name_input": "question8"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 37,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-keberlanjutanproduksipangan",
+                            "body": [
+                                {
+                                    "type": "bar-keberlanjutanproduksipangan",
+                                    "params": {
+                                        "body_topikId": 38,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 38,
+                                        "body_title": "Jika tidak, aspek apa yang perlu diperbaiki?",
+                                        "body_name_input": "question8"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 38,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-keberlanjutanproduksipangan",
+                            "body": [
+                                {
+                                    "type": "bar-keberlanjutanproduksipangan",
+                                    "params": {
+                                        "body_topikId": 39,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 39,
+                                        "body_title": "Jika tidak, aspek apa yang perlu diperbaiki?",
+                                        "body_name_input": "question8"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 39,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-keberlanjutanproduksipangan",
+                            "body": [
+                                {
+                                    "type": "bar-keberlanjutanproduksipangan",
+                                    "params": {
+                                        "body_topikId": 40,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 40,
+                                        "body_title": "Jika tidak, aspek apa yang perlu diperbaiki?",
+                                        "body_name_input": "question8"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 40,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-keberlanjutanproduksipangan",
+                            "body": [
+                                {
+                                    "type": "bar-keberlanjutanproduksipangan",
+                                    "params": {
+                                        "body_topikId": 41,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 41,
+                                        "body_title": "Jika tidak, aspek apa yang perlu diperbaiki?",
+                                        "body_name_input": "question8"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 41,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-keberlanjutanproduksipangan",
+                            "body": [
+                                {
+                                    "type": "bar-keberlanjutanproduksipangan",
+                                    "params": {
+                                        "body_topikId": 42,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 42,
+                                        "body_title": "Jika tidak, aspek apa yang perlu diperbaiki?",
+                                        "body_name_input": "question8"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 42,
+                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
+                                        "body_name_input": "question6"
+                                    }   
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Akses petani ke sumber daya",
@@ -2644,7 +3064,13 @@
                 {
                     "title": "Aspek Perbaikan",
                     "type": "bar-chart-tumpuk",
-                    "labels": ["Peningkatan akses teknologi pertanian", "Subsidi pupuk & pestisida yang merata", "Perbaikan sistem irigasi", "Pelatihan praktik pertanian", "Lainnya"],
+                    "labels": [
+                        {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                        {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                        {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                        {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                        {"Lainnya": "Lainnya"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -2700,7 +3126,14 @@
                 {
                     "title": "Kendala utama dalam produksi pangan",
                     "type": "pie-chart",
-                    "labels": ["Harga pupuk yang tinggi", "Kerusakan lahan", "Serangan hama", "Kurang tenaga kerja", "Perubahan iklim", "Lainnya"],
+                    "labels": [
+                        {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                        {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                        {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                        {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                        {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                        {"Lainnya": "Lainnnya"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -2711,9 +3144,9 @@
                     ],
                     "dummyData": {
                         "data": {
-                            "Harga pupuk yang tinggi": 135359,
-                            "Kerusakan lahan": 80809,
-                            "Serangan hama": 91383,
+                            "Harga pupuk dan pestisida yang tinggi": 135359,
+                            "Kerusakan lahan akibat penggunaan berlebih": 80809,
+                            "Serangan hama dan penyakit tanaman": 91383,
                             "Kurang tenaga kerja": 9408, 
                             "Perubahan iklim": 48949,
                             "Lainnya": 89939
