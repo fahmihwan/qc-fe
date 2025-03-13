@@ -9,6 +9,29 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Perubahan luas lahan",
+                            "labels": [
+                                {"meningkat": "Meningkat"},
+                                {"menurun": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Jenis lahan yang digunakan",
+                            "labels": [
+                                "Sawah irigasi teknis", 
+                                "Sawah tadah hujan", 
+                                "Lahan rawa/pasang surut", 
+                                "Lahan kering/tegalan", 
+                                "Lainnya"
+                            ]
+                        },
+                        {
+                            "title": "Status kepemilikan lahan",
+                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-statistikluaspanen",
@@ -43,6 +66,29 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Perubahan luas lahan",
+                            "labels": [
+                                {"meningkat": "Meningkat"},
+                                {"menurun": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Jenis lahan yang digunakan",
+                            "labels": [
+                                "Sawah irigasi teknis", 
+                                "Sawah tadah hujan", 
+                                "Lahan rawa/pasang surut", 
+                                "Lahan kering/tegalan", 
+                                "Lainnya"
+                            ]
+                        },
+                        {
+                            "title": "Status kepemilikan lahan",
+                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-statistikluaspanen",
@@ -77,6 +123,29 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Perubahan luas lahan",
+                            "labels": [
+                                {"meningkat": "Meningkat"},
+                                {"menurun": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Jenis lahan yang digunakan",
+                            "labels": [
+                                "Sawah irigasi teknis", 
+                                "Sawah tadah hujan", 
+                                "Lahan rawa/pasang surut", 
+                                "Lahan kering/tegalan", 
+                                "Lainnya"
+                            ]
+                        },
+                        {
+                            "title": "Status kepemilikan lahan",
+                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-statistikluaspanen",
@@ -111,6 +180,29 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Perubahan luas lahan",
+                            "labels": [
+                                {"meningkat": "Meningkat"},
+                                {"menurun": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Jenis lahan yang digunakan",
+                            "labels": [
+                                "Sawah irigasi teknis", 
+                                "Sawah tadah hujan", 
+                                "Lahan rawa/pasang surut", 
+                                "Lahan kering/tegalan", 
+                                "Lainnya"
+                            ]
+                        },
+                        {
+                            "title": "Status kepemilikan lahan",
+                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-statistikluaspanen",
@@ -145,6 +237,29 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Perubahan luas lahan",
+                            "labels": [
+                                {"meningkat": "Meningkat"},
+                                {"menurun": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Jenis lahan yang digunakan",
+                            "labels": [
+                                "Sawah irigasi teknis", 
+                                "Sawah tadah hujan", 
+                                "Lahan rawa/pasang surut", 
+                                "Lahan kering/tegalan", 
+                                "Lainnya"
+                            ]
+                        },
+                        {
+                            "title": "Status kepemilikan lahan",
+                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-statistikluaspanen",
@@ -179,6 +294,29 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Perubahan luas lahan",
+                            "labels": [
+                                {"meningkat": "Meningkat"},
+                                {"menurun": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Jenis lahan yang digunakan",
+                            "labels": [
+                                "Sawah irigasi teknis", 
+                                "Sawah tadah hujan", 
+                                "Lahan rawa/pasang surut", 
+                                "Lahan kering/tegalan", 
+                                "Lainnya"
+                            ]
+                        },
+                        {
+                            "title": "Status kepemilikan lahan",
+                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-statistikluaspanen",
@@ -216,7 +354,10 @@
                 {
                     "title": "Perubahan luas lahan dalam setahun terakhir",
                     "type": "line-chart",
-                    "labels": ["meningkat", "menurun"],
+                    "labels": [
+                        {"meningkat": "Meningkat"},
+                        {"menurun": "Menurun"}
+                    ],
                     "dataName": "resultLine",
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -345,6 +486,30 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Tren peningkatan/penurunan produktivitas",
+                            "labels": [
+                                {"true": "Menaik"},
+                                {"false": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Perbandingan luas panen dengan hasil panen",
+                            "labels": ["Luas Panen vs Hasil Panen"]
+                        },
+                        {
+                            "title": "Faktor yang mempengaruhi produktivitas",
+                            "labels":[
+                                {"Kualitas Benih": "Benih"},
+                                {"Penggunaan Pupuk": "Pupuk"},
+                                {"Kondisi Irigasi": "Irigasi"},
+                                {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                                {"Perubahan Cuaca": "Perubahan Cuaca"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-statistikproduktivitas",
@@ -379,6 +544,30 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Tren peningkatan/penurunan produktivitas",
+                            "labels": [
+                                {"true": "Menaik"},
+                                {"false": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Perbandingan luas panen dengan hasil panen",
+                            "labels": ["Luas Panen vs Hasil Panen"]
+                        },
+                        {
+                            "title": "Faktor yang mempengaruhi produktivitas",
+                            "labels":[
+                                {"Kualitas Benih": "Benih"},
+                                {"Penggunaan Pupuk": "Pupuk"},
+                                {"Kondisi Irigasi": "Irigasi"},
+                                {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                                {"Perubahan Cuaca": "Perubahan Cuaca"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-statistikproduktivitas",
@@ -413,6 +602,30 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Tren peningkatan/penurunan produktivitas",
+                            "labels": [
+                                {"true": "Menaik"},
+                                {"false": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Perbandingan luas panen dengan hasil panen",
+                            "labels": ["Luas Panen vs Hasil Panen"]
+                        },
+                        {
+                            "title": "Faktor yang mempengaruhi produktivitas",
+                            "labels":[
+                                {"Kualitas Benih": "Benih"},
+                                {"Penggunaan Pupuk": "Pupuk"},
+                                {"Kondisi Irigasi": "Irigasi"},
+                                {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                                {"Perubahan Cuaca": "Perubahan Cuaca"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-statistikproduktivitas",
@@ -447,6 +660,30 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Tren peningkatan/penurunan produktivitas",
+                            "labels": [
+                                {"true": "Menaik"},
+                                {"false": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Perbandingan luas panen dengan hasil panen",
+                            "labels": ["Luas Panen vs Hasil Panen"]
+                        },
+                        {
+                            "title": "Faktor yang mempengaruhi produktivitas",
+                            "labels":[
+                                {"Kualitas Benih": "Benih"},
+                                {"Penggunaan Pupuk": "Pupuk"},
+                                {"Kondisi Irigasi": "Irigasi"},
+                                {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                                {"Perubahan Cuaca": "Perubahan Cuaca"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-statistikproduktivitas",
@@ -481,6 +718,30 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Tren peningkatan/penurunan produktivitas",
+                            "labels": [
+                                {"true": "Menaik"},
+                                {"false": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Perbandingan luas panen dengan hasil panen",
+                            "labels": ["Luas Panen vs Hasil Panen"]
+                        },
+                        {
+                            "title": "Faktor yang mempengaruhi produktivitas",
+                            "labels":[
+                                {"Kualitas Benih": "Benih"},
+                                {"Penggunaan Pupuk": "Pupuk"},
+                                {"Kondisi Irigasi": "Irigasi"},
+                                {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                                {"Perubahan Cuaca": "Perubahan Cuaca"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-statistikproduktivitas",
@@ -515,6 +776,30 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Tren peningkatan/penurunan produktivitas",
+                            "labels": [
+                                {"true": "Menaik"},
+                                {"false": "Menurun"}
+                            ]
+                        },
+                        {
+                            "title": "Perbandingan luas panen dengan hasil panen",
+                            "labels": ["Luas Panen vs Hasil Panen"]
+                        },
+                        {
+                            "title": "Faktor yang mempengaruhi produktivitas",
+                            "labels":[
+                                {"Kualitas Benih": "Benih"},
+                                {"Penggunaan Pupuk": "Pupuk"},
+                                {"Kondisi Irigasi": "Irigasi"},
+                                {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
+                                {"Perubahan Cuaca": "Perubahan Cuaca"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-statistikproduktivitas",
@@ -678,59 +963,505 @@
             "img": "/assets/icon/3.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/produksi",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam produksi",
+                            "labels": [
+                                {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                                {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                                {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                                {"Cuaca buruk": "Cuaca buruk"},
+                                {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Musim tanam",
+                            "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"]
+                        },
+                        {
+                            "title": "Jenis padi yang ditanam",
+                            "labels":[
+                                {"Padi hibrida": "Hibrida"},
+                                {"Padi inbrida": "Inbrida"},
+                                {"Padi organik": "Organik"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Penggunaan hasil panen",
+                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikproduksi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 49,
+                                        "body_title": "Kendala utama dalam produksi padi\n",
+                                        "body_name_input": "question9"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 49,
+                                        "body_title": "Jumlah musim tanam dalam setahun",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 49,
+                                        "body_title": "Jenis padi yang ditanam",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 49,
+                                        "body_title": "Hasil panen digunakan untuk",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam produksi",
+                            "labels": [
+                                {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                                {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                                {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                                {"Cuaca buruk": "Cuaca buruk"},
+                                {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Musim tanam",
+                            "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"]
+                        },
+                        {
+                            "title": "Jenis tebu yang ditanam",
+                            "labels":[
+                                {"Tebu hibrida": "Hibrida"},
+                                {"Tebu Varietas Lokal": "Varietas Lokal"},
+                                {"Tebu organik": "Organik"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Penggunaan hasil panen",
+                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikproduksi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 50,
+                                        "body_title": "Kendala utama dalam produksi tebu\n",
+                                        "body_name_input": "question9"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 50,
+                                        "body_title": "Jumlah musim tanam dalam setahun",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 50,
+                                        "body_title": "Jenis tebu yang ditanam",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 50,
+                                        "body_title": "Hasil panen digunakan untuk",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam produksi",
+                            "labels": [
+                                {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                                {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                                {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                                {"Cuaca buruk": "Cuaca buruk"},
+                                {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Musim tanam",
+                            "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"]
+                        },
+                        {
+                            "title": "Jenis kedelai yang ditanam",
+                            "labels":[
+                                {"Kedelai hibrida": "Hibrida"},
+                                {"Kedelai Varietas Lokal": "Varietas Lokal"},
+                                {"Kedelai organik": "Organik"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Penggunaan hasil panen",
+                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikproduksi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 51,
+                                        "body_title": "Kendala utama dalam produksi kedelai\n",
+                                        "body_name_input": "question9"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 51,
+                                        "body_title": "Jumlah musim tanam dalam setahun",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 51,
+                                        "body_title": "Jenis kedelai yang ditanam",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 51,
+                                        "body_title": "Hasil panen digunakan untuk",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam produksi",
+                            "labels": [
+                                {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                                {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                                {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                                {"Cuaca buruk": "Cuaca buruk"},
+                                {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Musim tanam",
+                            "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"]
+                        },
+                        {
+                            "title": "Jenis singkong yang ditanam",
+                            "labels":[
+                                {"Singkong hibrida": "Hibrida"},
+                                {"Singkong Varietas Lokal": "Varietas Lokal"},
+                                {"Singkong organik": "Organik"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Penggunaan hasil panen",
+                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikproduksi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 52,
+                                        "body_title": "Kendala utama dalam produksi singkong\n",
+                                        "body_name_input": "question9"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 52,
+                                        "body_title": "Jumlah musim tanam dalam setahun",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 52,
+                                        "body_title": "Jenis singkong yang ditanam",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 52,
+                                        "body_title": "Hasil panen digunakan untuk",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam produksi",
+                            "labels": [
+                                {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                                {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                                {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                                {"Cuaca buruk": "Cuaca buruk"},
+                                {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Musim tanam",
+                            "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"]
+                        },
+                        {
+                            "title": "Jenis jagung yang ditanam",
+                            "labels":[
+                                {"Jagung hibrida": "Hibrida"},
+                                {"Jagung Varietas Lokal": "Varietas Lokal"},
+                                {"Jagung organik": "Organik"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Penggunaan hasil panen",
+                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikproduksi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 53,
+                                        "body_title": "Kendala utama dalam produksi jagung\n",
+                                        "body_name_input": "question9"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 53,
+                                        "body_title": "Jumlah musim tanam dalam setahun",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 53,
+                                        "body_title": "Jenis jagung yang ditanam",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 53,
+                                        "body_title": "Hasil panen digunakan untuk",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam produksi",
+                            "labels": [
+                                {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                                {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                                {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                                {"Cuaca buruk": "Cuaca buruk"},
+                                {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Musim tanam",
+                            "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"]
+                        },
+                        {
+                            "title": "Jenis sawit yang ditanam",
+                            "labels":[
+                                {"Sawit hibrida": "Hibrida"},
+                                {"Sawit Varietas Lokal": "Varietas Lokal"},
+                                {"Sawit organik": "Organik"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        },
+                        {
+                            "title": "Penggunaan hasil panen",
+                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikproduksi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 54,
+                                        "body_title": "Kendala utama dalam produksi sawit\n",
+                                        "body_name_input": "question9"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 54,
+                                        "body_title": "Jumlah musim tanam dalam setahun",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 54,
+                                        "body_title": "Jenis sawit yang ditanam",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 54,
+                                        "body_title": "Hasil panen digunakan untuk",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Kendala dalam produksi",
                     "type": "bar-chart-horizontal",
-                    "labels": ["Hama", "Pupuk", "Tenaga Kerja", "Cuaca Buruk", "Lainnya"],
+                    "labels": [
+                        {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
+                        {"Serangan hama dan penyakit": "Hama/Penyakit"},
+                        {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
+                        {"Cuaca buruk": "Cuaca buruk"},
+                        {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
+                        {"Lainnya": "Lainnnya"}
+                    ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
                         "rgba(255, 0, 255, 1)",
                         "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66)",
                         "rgba(255, 0, 0, 1)"
                     ],
                     "dummyData": {
                         "data": [
                             {
                                 "year": 2021,
-                                "Hama": 1284222,
-                                "Pupuk": 938598,
-                                "Tenaga Kerja": 938598,
+                                "Hama/Penyakit": 1284222,
+                                "Kurang Pupuk/Pestisida": 938598,
+                                "Kurangnya tenaga kerja": 938598,
                                 "Cuaca Buruk": 97552,
+                                "Keterbatasan akses ke pasar": 2112,
                                 "Lainnya": 8969
                             },
                             {
                                 "year": 2022,
-                                "Hama": 1284222,
-                                "Pupuk": 938598,
-                                "Tenaga Kerja": 429712,
+                                "Hama/Penyakit": 1284222,
+                                "Kurang Pupuk/Pestisida": 938598,
+                                "Kurangnya tenaga kerja": 429712,
                                 "Cuaca Buruk": 97552,
+                                "Keterbatasan akses ke pasar": 2112,
                                 "Lainnya": 8969
                             },
                             {
                                 "year": 2023,
-                                "Hama": 1284222,
-                                "Pupuk": 938598,
-                                "Tenaga Kerja": 829712,
+                                "Hama/Penyakit": 1284222,
+                                "Kurang Pupuk/Pestisida": 938598,
+                                "Kurangnya tenaga kerja": 829712,
                                 "Cuaca Buruk": 97552,
+                                "Keterbatasan akses ke pasar": 2112,
                                 "Lainnya": 8969
                             },
                             {
                                 "year": 2024,
-                                "Hama": 1284222,
-                                "Pupuk": 938598,
-                                "Tenaga Kerja": 629712,
+                                "Hama/Penyakit": 1284222,
+                                "Kurang Pupuk/Pestisida": 938598,
+                                "Kurangnya tenaga kerja": 629712,
                                 "Cuaca Buruk": 97552,
+                                "Keterbatasan akses ke pasar": 2112,
                                 "Lainnya": 8969
                             },
                             {
                                 "year": 2025,
-                                "Hama": 1284222,
-                                "Pupuk": 938598,
-                                "Tenaga Kerja": 529712,
+                                "Hama/Penyakit": 1284222,
+                                "Kurang Pupuk/Pestisida": 938598,
+                                "Kurangnya tenaga kerja": 529712,
                                 "Cuaca Buruk": 97552,
+                                "Keterbatasan akses ke pasar": 2112,
                                 "Lainnya": 8969
                             }
                         ]
@@ -834,7 +1565,350 @@
             "img": "/assets/icon/4.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/luas-irigasi",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam irigasi",
+                            "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis irigasi yang digunakan",
+                            "labels": [
+                                {"Irigasi teknis": "Teknis"},
+                                {"Irigasi setengah teknis": "Setengah teknis"},
+                                {"Irigasi sederhana": "Sederhana"},
+                                {"Irigasi tadah hujan": "Tadah Hujan"},
+                                {"Irigasi rawa/pasang surut": "Rawa/Pasang Surut"},
+                                {"Irigasi pompa/air tanah": "Pompa/Air Tanah"},
+                                {"Lainnya": "Lainnnya"}
+
+                            ]
+                        },
+                        {
+                            "title": "Persentase lahan yang memiliki akses irigasi",
+                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikluasirigasi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 55,
+                                        "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 55,
+                                        "body_title": "Jenis irigasi yang digunakan",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 55,
+                                        "body_title": "Persentase lahan yang memiliki akses irigasi",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam irigasi",
+                            "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis irigasi yang digunakan",
+                            "labels": [
+                                {"Irigasi teknis": "Teknis"},
+                                {"Irigasi setengah teknis": "Setengah teknis"},
+                                {"Irigasi sederhana": "Sederhana"},
+                                {"Irigasi tadah hujan": "Tadah Hujan"},
+                                {"Irigasi rawa/pasang surut": "Rawa/Pasang Surut"},
+                                {"Irigasi pompa/air tanah": "Pompa/Air Tanah"},
+                                {"Lainnya": "Lainnnya"}
+
+                            ]
+                        },
+                        {
+                            "title": "Persentase lahan yang memiliki akses irigasi",
+                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikluasirigasi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 56,
+                                        "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 56,
+                                        "body_title": "Jenis irigasi yang digunakan",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 56,
+                                        "body_title": "Persentase lahan yang memiliki akses irigasi",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam irigasi",
+                            "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis irigasi yang digunakan",
+                            "labels": [
+                                {"Irigasi teknis": "Teknis"},
+                                {"Irigasi setengah teknis": "Setengah teknis"},
+                                {"Irigasi sederhana": "Sederhana"},
+                                {"Irigasi tadah hujan": "Tadah Hujan"},
+                                {"Irigasi rawa/pasang surut": "Rawa/Pasang Surut"},
+                                {"Irigasi pompa/air tanah": "Pompa/Air Tanah"},
+                                {"Lainnya": "Lainnnya"}
+
+                            ]
+                        },
+                        {
+                            "title": "Persentase lahan yang memiliki akses irigasi",
+                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikluasirigasi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 57,
+                                        "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 57,
+                                        "body_title": "Jenis irigasi yang digunakan",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 57,
+                                        "body_title": "Persentase lahan yang memiliki akses irigasi",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam irigasi",
+                            "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis irigasi yang digunakan",
+                            "labels": [
+                                {"Irigasi teknis": "Teknis"},
+                                {"Irigasi setengah teknis": "Setengah teknis"},
+                                {"Irigasi sederhana": "Sederhana"},
+                                {"Irigasi tadah hujan": "Tadah Hujan"},
+                                {"Irigasi rawa/pasang surut": "Rawa/Pasang Surut"},
+                                {"Irigasi pompa/air tanah": "Pompa/Air Tanah"},
+                                {"Lainnya": "Lainnnya"}
+
+                            ]
+                        },
+                        {
+                            "title": "Persentase lahan yang memiliki akses irigasi",
+                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikluasirigasi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 58,
+                                        "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 58,
+                                        "body_title": "Jenis irigasi yang digunakan",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 58,
+                                        "body_title": "Persentase lahan yang memiliki akses irigasi",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam irigasi",
+                            "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis irigasi yang digunakan",
+                            "labels": [
+                                {"Irigasi teknis": "Teknis"},
+                                {"Irigasi setengah teknis": "Setengah teknis"},
+                                {"Irigasi sederhana": "Sederhana"},
+                                {"Irigasi tadah hujan": "Tadah Hujan"},
+                                {"Irigasi rawa/pasang surut": "Rawa/Pasang Surut"},
+                                {"Irigasi pompa/air tanah": "Pompa/Air Tanah"},
+                                {"Lainnya": "Lainnnya"}
+
+                            ]
+                        },
+                        {
+                            "title": "Persentase lahan yang memiliki akses irigasi",
+                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikluasirigasi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 59,
+                                        "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 59,
+                                        "body_title": "Jenis irigasi yang digunakan",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 59,
+                                        "body_title": "Persentase lahan yang memiliki akses irigasi",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Kendala dalam irigasi",
+                            "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis irigasi yang digunakan",
+                            "labels": [
+                                {"Irigasi teknis": "Teknis"},
+                                {"Irigasi setengah teknis": "Setengah teknis"},
+                                {"Irigasi sederhana": "Sederhana"},
+                                {"Irigasi tadah hujan": "Tadah Hujan"},
+                                {"Irigasi rawa/pasang surut": "Rawa/Pasang Surut"},
+                                {"Irigasi pompa/air tanah": "Pompa/Air Tanah"},
+                                {"Lainnya": "Lainnnya"}
+
+                            ]
+                        },
+                        {
+                            "title": "Persentase lahan yang memiliki akses irigasi",
+                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikluasirigasi",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 60,
+                                        "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 60,
+                                        "body_title": "Jenis irigasi yang digunakan",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 60,
+                                        "body_title": "Persentase lahan yang memiliki akses irigasi",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Kendala dalam irigasi",
@@ -989,7 +2063,344 @@
             "img": "/assets/icon/5.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/jumlah-pupuk",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Tren ketersediaan pupuk",
+                            "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"]
+                        },
+                        {
+                            "title": "Sumber pupuk",
+                            "labels": ["Subsidi pemerintah", "Pupuk komersial (beli sendiri)", "Pupuk alami/organik dari peternakan sendiri", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis Pupuk Yang Digunakan",
+                            "labels":[
+                                {"Pupuk Urea": "Urea"},
+                                {"Pupuk NPK": "NPK"},
+                                {"Pupuk SP-36": "SP-36"},
+                                {"Pupuk KCl": "KCl"},
+                                {"Pupuk Organik": "Organik"},
+                                {"Pupuk Hayati": "Hayati"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikjumlahpupuk",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 61,
+                                        "body_title": " Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 61,
+                                        "body_title": "Sumber pupuk",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 61,
+                                        "body_title": "Jenis pupuk yang digunakan ",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Tren ketersediaan pupuk",
+                            "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"]
+                        },
+                        {
+                            "title": "Sumber pupuk",
+                            "labels": ["Subsidi pemerintah", "Pupuk komersial (beli sendiri)", "Pupuk alami/organik dari peternakan sendiri", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis Pupuk Yang Digunakan",
+                            "labels":[
+                                {"Pupuk Urea": "Urea"},
+                                {"Pupuk NPK": "NPK"},
+                                {"Pupuk SP-36": "SP-36"},
+                                {"Pupuk KCl": "KCl"},
+                                {"Pupuk Organik": "Organik"},
+                                {"Pupuk Hayati": "Hayati"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikjumlahpupuk",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 62,
+                                        "body_title": " Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 62,
+                                        "body_title": "Sumber pupuk",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 62,
+                                        "body_title": "Jenis pupuk yang digunakan ",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Tren ketersediaan pupuk",
+                            "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"]
+                        },
+                        {
+                            "title": "Sumber pupuk",
+                            "labels": ["Subsidi pemerintah", "Pupuk komersial (beli sendiri)", "Pupuk alami/organik dari peternakan sendiri", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis Pupuk Yang Digunakan",
+                            "labels":[
+                                {"Pupuk Urea": "Urea"},
+                                {"Pupuk NPK": "NPK"},
+                                {"Pupuk SP-36": "SP-36"},
+                                {"Pupuk KCl": "KCl"},
+                                {"Pupuk Organik": "Organik"},
+                                {"Pupuk Hayati": "Hayati"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikjumlahpupuk",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 63,
+                                        "body_title": " Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 63,
+                                        "body_title": "Sumber pupuk",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 63,
+                                        "body_title": "Jenis pupuk yang digunakan ",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Tren ketersediaan pupuk",
+                            "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"]
+                        },
+                        {
+                            "title": "Sumber pupuk",
+                            "labels": ["Subsidi pemerintah", "Pupuk komersial (beli sendiri)", "Pupuk alami/organik dari peternakan sendiri", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis Pupuk Yang Digunakan",
+                            "labels":[
+                                {"Pupuk Urea": "Urea"},
+                                {"Pupuk NPK": "NPK"},
+                                {"Pupuk SP-36": "SP-36"},
+                                {"Pupuk KCl": "KCl"},
+                                {"Pupuk Organik": "Organik"},
+                                {"Pupuk Hayati": "Hayati"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikjumlahpupuk",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 64,
+                                        "body_title": " Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 64,
+                                        "body_title": "Sumber pupuk",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 64,
+                                        "body_title": "Jenis pupuk yang digunakan ",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Tren ketersediaan pupuk",
+                            "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"]
+                        },
+                        {
+                            "title": "Sumber pupuk",
+                            "labels": ["Subsidi pemerintah", "Pupuk komersial (beli sendiri)", "Pupuk alami/organik dari peternakan sendiri", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis Pupuk Yang Digunakan",
+                            "labels":[
+                                {"Pupuk Urea": "Urea"},
+                                {"Pupuk NPK": "NPK"},
+                                {"Pupuk SP-36": "SP-36"},
+                                {"Pupuk KCl": "KCl"},
+                                {"Pupuk Organik": "Organik"},
+                                {"Pupuk Hayati": "Hayati"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikjumlahpupuk",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 65,
+                                        "body_title": " Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 65,
+                                        "body_title": "Sumber pupuk",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 65,
+                                        "body_title": "Jenis pupuk yang digunakan ",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Tren ketersediaan pupuk",
+                            "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"]
+                        },
+                        {
+                            "title": "Sumber pupuk",
+                            "labels": ["Subsidi pemerintah", "Pupuk komersial (beli sendiri)", "Pupuk alami/organik dari peternakan sendiri", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis Pupuk Yang Digunakan",
+                            "labels":[
+                                {"Pupuk Urea": "Urea"},
+                                {"Pupuk NPK": "NPK"},
+                                {"Pupuk SP-36": "SP-36"},
+                                {"Pupuk KCl": "KCl"},
+                                {"Pupuk Organik": "Organik"},
+                                {"Pupuk Hayati": "Hayati"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikjumlahpupuk",
+                            "body": [
+                                {
+                                    "type": "line",
+                                    "params": {
+                                        "body_topikId": 66,
+                                        "body_title": " Rata-rata jumlah pupuk yang digunakan per hektar (kg/ha)",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 66,
+                                        "body_title": "Sumber pupuk",
+                                        "body_name_input": "question4"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 66,
+                                        "body_title": "Jenis pupuk yang digunakan ",
+                                        "body_name_input": "question2"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Tren ketersediaan pupuk",
@@ -1101,12 +2512,349 @@
             ]
         },
         {
-            "title":"Presentase Hama",
-            "topicTitle": "Statistik Presentase Hama",
+            "title":"Persentase Hama",
+            "topicTitle": "Statistik Persentase Hama",
             "img": "/assets/icon/6.png",
             "layoutType": "layout5",
-            "url":"/dashboard-hasil-survey/presentase-hama",
-            "payload": [],
+            "url":"/dashboard-hasil-survey/persentase-hama",
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Metode pengendalian hama",
+                            "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis hama yang menyerang",
+                            "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase Luas lahan terdampak hama",
+                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-statistikpersentasehama",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 67,
+                                        "body_title": "Upaya pengendalian hama yang dilakukan:",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 67,
+                                        "body_title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 67,
+                                        "body_title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan padi:",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 67,
+                                        "body_title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Metode pengendalian hama",
+                            "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis hama yang menyerang",
+                            "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase Luas lahan terdampak hama",
+                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-statistikpersentasehama",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 68,
+                                        "body_title": "Upaya pengendalian hama yang dilakukan:",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 68,
+                                        "body_title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 68,
+                                        "body_title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan tebu:",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 68,
+                                        "body_title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Metode pengendalian hama",
+                            "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis hama yang menyerang",
+                            "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase Luas lahan terdampak hama",
+                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-statistikpersentasehama",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 69,
+                                        "body_title": "Upaya pengendalian hama yang dilakukan:",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 69,
+                                        "body_title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 69,
+                                        "body_title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan kedelai:",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 69,
+                                        "body_title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Metode pengendalian hama",
+                            "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis hama yang menyerang",
+                            "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase Luas lahan terdampak hama",
+                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-statistikpersentasehama",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 70,
+                                        "body_title": "Upaya pengendalian hama yang dilakukan:",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 70,
+                                        "body_title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 70,
+                                        "body_title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan singkong:",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 70,
+                                        "body_title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Metode pengendalian hama",
+                            "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis hama yang menyerang",
+                            "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase Luas lahan terdampak hama",
+                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-statistikpersentasehama",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 71,
+                                        "body_title": "Upaya pengendalian hama yang dilakukan:",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 71,
+                                        "body_title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 71,
+                                        "body_title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan jagung:",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 71,
+                                        "body_title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Metode pengendalian hama",
+                            "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"]
+                        },
+                        {
+                            "title": "Jenis hama yang menyerang",
+                            "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase Luas lahan terdampak hama",
+                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-statistikpersentasehama",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 72,
+                                        "body_title": "Upaya pengendalian hama yang dilakukan:",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 72,
+                                        "body_title": "Jenis hama yang paling sering menyerang (pilih lebih dari satu jika perlu)",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 72,
+                                        "body_title": "Persentase lahan yang terkena serangan hama dibanding total luas lahan sawit:",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 72,
+                                        "body_title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                                        "body_name_input": "question6"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Metode pengendalian hama",
@@ -1290,13 +3038,380 @@
             "img": "/assets/icon/7.png",
             "layoutType": "layout5",
             "url":"/dashboard-hasil-survey/lahan-kosong",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Durasi Lahan Kosong",
+                            "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"]
+                        },
+                        {
+                            "title": "Alasan lahan kosong",
+                            "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase lahan kosong",
+                            "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Rencana penggunaan lahan kosong",
+                            "labels": ["Akan ditanami padi pada musim tanam berikutnya", "Akan dialihfungsikan untuk tanaman lain", "Akan digunakan untuk keperluan non-pertanian", "Belum ada rencana", "Faktor Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-padi-lahankosong",
+                            "body": [
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 73,
+                                        "body_title": " Berapa lama lahan kosong tidak ditanami?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 73,
+                                        "body_title": "Alasan utama lahan masih kosong",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 73,
+                                        "body_title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 73,
+                                        "body_title": "Rencana penggunaan lahan kosong ke depan",
+                                        "body_name_input": "question5"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Durasi Lahan Kosong",
+                            "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"]
+                        },
+                        {
+                            "title": "Alasan lahan kosong",
+                            "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase lahan kosong",
+                            "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Rencana penggunaan lahan kosong",
+                            "labels": ["Akan ditanami tebu pada musim tanam berikutnya", "Akan dialihfungsikan untuk tanaman lain", "Akan digunakan untuk keperluan non-pertanian", "Belum ada rencana", "Faktor Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-tebu-lahankosong",
+                            "body": [
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 74,
+                                        "body_title": " Berapa lama lahan kosong tidak ditanami?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 74,
+                                        "body_title": "Alasan utama lahan masih kosong",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 74,
+                                        "body_title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 74,
+                                        "body_title": "Rencana penggunaan lahan kosong ke depan",
+                                        "body_name_input": "question5"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Durasi Lahan Kosong",
+                            "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"]
+                        },
+                        {
+                            "title": "Alasan lahan kosong",
+                            "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase lahan kosong",
+                            "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Rencana penggunaan lahan kosong",
+                            "labels": ["Akan ditanami kedelai pada musim tanam berikutnya", "Akan dialihfungsikan untuk tanaman lain", "Akan digunakan untuk keperluan non-pertanian", "Belum ada rencana", "Faktor Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-kedelai-lahankosong",
+                            "body": [
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 75,
+                                        "body_title": " Berapa lama lahan kosong tidak ditanami?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 75,
+                                        "body_title": "Alasan utama lahan masih kosong",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 75,
+                                        "body_title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 75,
+                                        "body_title": "Rencana penggunaan lahan kosong ke depan",
+                                        "body_name_input": "question5"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Durasi Lahan Kosong",
+                            "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"]
+                        },
+                        {
+                            "title": "Alasan lahan kosong",
+                            "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase lahan kosong",
+                            "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Rencana penggunaan lahan kosong",
+                            "labels": ["Akan ditanami singkong pada musim tanam berikutnya", "Akan dialihfungsikan untuk tanaman lain", "Akan digunakan untuk keperluan non-pertanian", "Belum ada rencana", "Faktor Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-singkong-lahankosong",
+                            "body": [
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 76,
+                                        "body_title": " Berapa lama lahan kosong tidak ditanami?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 76,
+                                        "body_title": "Alasan utama lahan masih kosong",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 76,
+                                        "body_title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 76,
+                                        "body_title": "Rencana penggunaan lahan kosong ke depan",
+                                        "body_name_input": "question5"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Durasi Lahan Kosong",
+                            "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"]
+                        },
+                        {
+                            "title": "Alasan lahan kosong",
+                            "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase lahan kosong",
+                            "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Rencana penggunaan lahan kosong",
+                            "labels": ["Akan ditanami jagung pada musim tanam berikutnya", "Akan dialihfungsikan untuk tanaman lain", "Akan digunakan untuk keperluan non-pertanian", "Belum ada rencana", "Faktor Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-jagung-lahankosong",
+                            "body": [
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 77,
+                                        "body_title": " Berapa lama lahan kosong tidak ditanami?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 77,
+                                        "body_title": "Alasan utama lahan masih kosong",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 77,
+                                        "body_title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 77,
+                                        "body_title": "Rencana penggunaan lahan kosong ke depan",
+                                        "body_name_input": "question5"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Durasi Lahan Kosong",
+                            "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"]
+                        },
+                        {
+                            "title": "Alasan lahan kosong",
+                            "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"]
+                        },
+                        {
+                            "title": "Persentase lahan kosong",
+                            "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Rencana penggunaan lahan kosong",
+                            "labels": ["Akan ditanami sawit pada musim tanam berikutnya", "Akan dialihfungsikan untuk tanaman lain", "Akan digunakan untuk keperluan non-pertanian", "Belum ada rencana", "Faktor Lainnya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-sawit-lahankosong",
+                            "body": [
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 78,
+                                        "body_title": " Berapa lama lahan kosong tidak ditanami?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 78,
+                                        "body_title": "Alasan utama lahan masih kosong",
+                                        "body_name_input": "question3"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 78,
+                                        "body_title": "Persentase lahan kosong dibanding total luas lahan yang tersedia",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 78,
+                                        "body_title": "Rencana penggunaan lahan kosong ke depan",
+                                        "body_name_input": "question5"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Durasi Lahan Kosong",
                     "type": "bar-chart-horizontal",
-                    "labels": [],
-                    "colors": [],
+                    "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
                     "dummyData": {
                         "data": {
                             
@@ -1306,7 +3421,7 @@
                 {
                     "title": "Alasan lahan kosong",
                     "type": "bar-chart-tumpuk",
-                    "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Lainnya"],
+                    "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -1414,6 +3529,22 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Ketersediaan komoditas",
+                            "labels": [
+                                {"true": "Cukup"},
+                                {"false": "Tidak Cukup"}
+                            ]
+                        },
+                        {
+                            "title": "Kelancaran Distribusi: Ya atau Tidak?",
+                            "labels": [
+                                {"true": "Ya"},
+                                {"false": "Tidak"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-ketersediaankomoditas",
@@ -1440,6 +3571,22 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Ketersediaan komoditas",
+                            "labels": [
+                                {"true": "Cukup"},
+                                {"false": "Tidak Cukup"}
+                            ]
+                        },
+                        {
+                            "title": "Kelancaran Distribusi: Ya atau Tidak?",
+                            "labels": [
+                                {"true": "Ya"},
+                                {"false": "Tidak"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tabu-ketersediaankomoditas",
@@ -1466,6 +3613,22 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Ketersediaan komoditas",
+                            "labels": [
+                                {"true": "Cukup"},
+                                {"false": "Tidak Cukup"}
+                            ]
+                        },
+                        {
+                            "title": "Kelancaran Distribusi: Ya atau Tidak?",
+                            "labels": [
+                                {"true": "Ya"},
+                                {"false": "Tidak"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-ketersediaankomoditas",
@@ -1492,6 +3655,22 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Ketersediaan komoditas",
+                            "labels": [
+                                {"true": "Cukup"},
+                                {"false": "Tidak Cukup"}
+                            ]
+                        },
+                        {
+                            "title": "Kelancaran Distribusi: Ya atau Tidak?",
+                            "labels": [
+                                {"true": "Ya"},
+                                {"false": "Tidak"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-ketersediaankomoditas",
@@ -1518,6 +3697,22 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Ketersediaan komoditas",
+                            "labels": [
+                                {"true": "Cukup"},
+                                {"false": "Tidak Cukup"}
+                            ]
+                        },
+                        {
+                            "title": "Kelancaran Distribusi: Ya atau Tidak?",
+                            "labels": [
+                                {"true": "Ya"},
+                                {"false": "Tidak"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-ketersediaankomoditas",
@@ -1544,6 +3739,22 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Ketersediaan komoditas",
+                            "labels": [
+                                {"true": "Cukup"},
+                                {"false": "Tidak Cukup"}
+                            ]
+                        },
+                        {
+                            "title": "Kelancaran Distribusi: Ya atau Tidak?",
+                            "labels": [
+                                {"true": "Ya"},
+                                {"false": "Tidak"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-ketersediaankomoditas",
@@ -1651,17 +3862,6 @@
                             }
                         ]
                     }
-                },
-                {
-                    "title": "Kenaikan harga komoditas",
-                    "type": "pie-chart",
-                    "labels": [],
-                    "colors": [],
-                    "dummyData": {
-                        "data": {
-                            
-                        }
-                    }
                 }
             ]
         },
@@ -1674,6 +3874,25 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Status lahan baru",
+                            "labels": [
+                                {"true": "Sudah digunakan untuk produksi"},
+                                {"false": "Belum digunakan untuk produksi"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala pembangunan lahan",
+                            "labels": [
+                                {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                                {"Masalah irigasi": "Irigasi"},
+                                {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                                {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                                {"lainnya": "Lainnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-realisasipembangunanlahan",
@@ -1700,6 +3919,25 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Status lahan baru",
+                            "labels": [
+                                {"true": "Sudah digunakan untuk produksi"},
+                                {"false": "Belum digunakan untuk produksi"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala pembangunan lahan",
+                            "labels": [
+                                {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                                {"Masalah irigasi": "Irigasi"},
+                                {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                                {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                                {"lainnya": "Lainnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-realisasipembangunanlahan",
@@ -1726,6 +3964,25 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Status lahan baru",
+                            "labels": [
+                                {"true": "Sudah digunakan untuk produksi"},
+                                {"false": "Belum digunakan untuk produksi"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala pembangunan lahan",
+                            "labels": [
+                                {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                                {"Masalah irigasi": "Irigasi"},
+                                {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                                {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                                {"lainnya": "Lainnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-realisasipembangunanlahan",
@@ -1752,6 +4009,25 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Status lahan baru",
+                            "labels": [
+                                {"true": "Sudah digunakan untuk produksi"},
+                                {"false": "Belum digunakan untuk produksi"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala pembangunan lahan",
+                            "labels": [
+                                {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                                {"Masalah irigasi": "Irigasi"},
+                                {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                                {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                                {"lainnya": "Lainnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-realisasipembangunanlahan",
@@ -1778,6 +4054,25 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Status lahan baru",
+                            "labels": [
+                                {"true": "Sudah digunakan untuk produksi"},
+                                {"false": "Belum digunakan untuk produksi"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala pembangunan lahan",
+                            "labels": [
+                                {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                                {"Masalah irigasi": "Irigasi"},
+                                {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                                {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                                {"lainnya": "Lainnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-realisasipembangunanlahan",
@@ -1804,6 +4099,25 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Status lahan baru",
+                            "labels": [
+                                {"true": "Sudah digunakan untuk produksi"},
+                                {"false": "Belum digunakan untuk produksi"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala pembangunan lahan",
+                            "labels": [
+                                {"Kurangnya alat pertanian": "Kurang alat pertanian"},
+                                {"Masalah irigasi": "Irigasi"},
+                                {"Kurangnya tenaga kerja": "Kurang Tenaga Kerja"},
+                                {"Belum ada bibit/pupuk yang cukup": "Kurang Bibit/pupuk"},
+                                {"lainnya": "Lainnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-realisasipembangunanlahan",
@@ -1829,8 +4143,7 @@
                     ]
                 }
             ],
-            "charts": [
-                
+            "charts": [ 
                 {
                     "title": "Status lahan baru",
                     "type": "bar-chart-tumpuk",
@@ -1911,6 +4224,21 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
+                            "labels": ["Lancar", "Bermasalah"]
+                        },
+                        {
+                            "title": "Kendala dalam distribusi",
+                            "labels": [
+                                {"Kurangnya transportasi": "Transportasi"},
+                                {"Penyimpanan tidak memadai": "Penyimpanan"},
+                                {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-realisasidistribusipangan",
@@ -1937,6 +4265,21 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
+                            "labels": ["Lancar", "Bermasalah"]
+                        },
+                        {
+                            "title": "Kendala dalam distribusi",
+                            "labels": [
+                                {"Kurangnya transportasi": "Transportasi"},
+                                {"Penyimpanan tidak memadai": "Penyimpanan"},
+                                {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-realisasidistribusipangan",
@@ -1963,6 +4306,21 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
+                            "labels": ["Lancar", "Bermasalah"]
+                        },
+                        {
+                            "title": "Kendala dalam distribusi",
+                            "labels": [
+                                {"Kurangnya transportasi": "Transportasi"},
+                                {"Penyimpanan tidak memadai": "Penyimpanan"},
+                                {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-realisasidistribusipangan",
@@ -1989,6 +4347,21 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
+                            "labels": ["Lancar", "Bermasalah"]
+                        },
+                        {
+                            "title": "Kendala dalam distribusi",
+                            "labels": [
+                                {"Kurangnya transportasi": "Transportasi"},
+                                {"Penyimpanan tidak memadai": "Penyimpanan"},
+                                {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-realisasidistribusipangan",
@@ -2015,6 +4388,21 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
+                            "labels": ["Lancar", "Bermasalah"]
+                        },
+                        {
+                            "title": "Kendala dalam distribusi",
+                            "labels": [
+                                {"Kurangnya transportasi": "Transportasi"},
+                                {"Penyimpanan tidak memadai": "Penyimpanan"},
+                                {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-realisasidistribusipangan",
@@ -2041,6 +4429,21 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
+                            "labels": ["Lancar", "Bermasalah"]
+                        },
+                        {
+                            "title": "Kendala dalam distribusi",
+                            "labels": [
+                                {"Kurangnya transportasi": "Transportasi"},
+                                {"Penyimpanan tidak memadai": "Penyimpanan"},
+                                {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-realisasidistribusipangan",
@@ -2140,6 +4543,20 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Kendala bantuan pangan",
+                            "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"]
+                        },
+                        {
+                            "title": "Sebaran penerima bantuan",
+                            "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"]
+                        },
+                        {
+                            "title": "Jenis pangan yang lebih dibutuhkan",
+                            "labels": []
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-efektivitasprogrambantuanpangan",
@@ -2174,6 +4591,20 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Kendala bantuan pangan",
+                            "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"]
+                        },
+                        {
+                            "title": "Sebaran penerima bantuan",
+                            "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"]
+                        },
+                        {
+                            "title": "Jenis pangan yang lebih dibutuhkan",
+                            "labels": []
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-efektivitasprogrambantuanpangan",
@@ -2208,6 +4639,20 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Kendala bantuan pangan",
+                            "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"]
+                        },
+                        {
+                            "title": "Sebaran penerima bantuan",
+                            "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"]
+                        },
+                        {
+                            "title": "Jenis pangan yang lebih dibutuhkan",
+                            "labels": []
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-efektivitasprogrambantuanpangan",
@@ -2242,6 +4687,20 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Kendala bantuan pangan",
+                            "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"]
+                        },
+                        {
+                            "title": "Sebaran penerima bantuan",
+                            "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"]
+                        },
+                        {
+                            "title": "Jenis pangan yang lebih dibutuhkan",
+                            "labels": []
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-efektivitasprogrambantuanpangan",
@@ -2276,6 +4735,20 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Kendala bantuan pangan",
+                            "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"]
+                        },
+                        {
+                            "title": "Sebaran penerima bantuan",
+                            "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"]
+                        },
+                        {
+                            "title": "Jenis pangan yang lebih dibutuhkan",
+                            "labels": []
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-efektivitasprogrambantuanpangan",
@@ -2310,6 +4783,20 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Kendala bantuan pangan",
+                            "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"]
+                        },
+                        {
+                            "title": "Sebaran penerima bantuan",
+                            "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"]
+                        },
+                        {
+                            "title": "Jenis pangan yang lebih dibutuhkan",
+                            "labels": []
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-efektivitasprogrambantuanpangan",
@@ -2468,6 +4955,23 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Jenis perubahan konsumsi akibat harga",
+                            "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Mengurangi porsi makan harian", "Lainnya"]
+                        },
+                        {
+                            "title": "Konsumsi pangan lokal VS impor",
+                            "labels": [
+                                {"Ya": "Lokal"},
+                                {"Tidak": "Import"}
+                            ]
+                        },
+                        {
+                            "title": "Alasan memilih pangan import",
+                            "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-perubahanpolakonsumsimasyarakat",
@@ -2502,6 +5006,23 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Jenis perubahan konsumsi akibat harga",
+                            "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Mengurangi porsi makan harian", "Lainnya"]
+                        },
+                        {
+                            "title": "Konsumsi pangan lokal VS impor",
+                            "labels": [
+                                {"Ya": "Lokal"},
+                                {"Tidak": "Import"}
+                            ]
+                        },
+                        {
+                            "title": "Alasan memilih pangan import",
+                            "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-perubahanpolakonsumsimasyarakat",
@@ -2536,6 +5057,23 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Jenis perubahan konsumsi akibat harga",
+                            "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Mengurangi porsi makan harian", "Lainnya"]
+                        },
+                        {
+                            "title": "Konsumsi pangan lokal VS impor",
+                            "labels": [
+                                {"Ya": "Lokal"},
+                                {"Tidak": "Import"}
+                            ]
+                        },
+                        {
+                            "title": "Alasan memilih pangan import",
+                            "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-perubahanpolakonsumsimasyarakat",
@@ -2570,6 +5108,23 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Jenis perubahan konsumsi akibat harga",
+                            "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Mengurangi porsi makan harian", "Lainnya"]
+                        },
+                        {
+                            "title": "Konsumsi pangan lokal VS impor",
+                            "labels": [
+                                {"Ya": "Lokal"},
+                                {"Tidak": "Import"}
+                            ]
+                        },
+                        {
+                            "title": "Alasan memilih pangan import",
+                            "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-perubahanpolakonsumsimasyarakat",
@@ -2604,6 +5159,23 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Jenis perubahan konsumsi akibat harga",
+                            "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Mengurangi porsi makan harian", "Lainnya"]
+                        },
+                        {
+                            "title": "Konsumsi pangan lokal VS impor",
+                            "labels": [
+                                {"Ya": "Lokal"},
+                                {"Tidak": "Import"}
+                            ]
+                        },
+                        {
+                            "title": "Alasan memilih pangan import",
+                            "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-perubahanpolakonsumsimasyarakat",
@@ -2638,6 +5210,23 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Jenis perubahan konsumsi akibat harga",
+                            "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Mengurangi porsi makan harian", "Lainnya"]
+                        },
+                        {
+                            "title": "Konsumsi pangan lokal VS impor",
+                            "labels": [
+                                {"Ya": "Lokal"},
+                                {"Tidak": "Import"}
+                            ]
+                        },
+                        {
+                            "title": "Alasan memilih pangan import",
+                            "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-perubahanpolakonsumsimasyarakat",
@@ -2813,6 +5402,33 @@
             "payload": [
                 {
                     "sub_category": "Padi",
+                    "chart_details": [
+                        {
+                            "title": "Akses petani ke sumber daya",
+                            "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"]
+                        },
+                        {
+                            "title": "Aspek Perbaikan",
+                            "labels": [
+                                {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                                {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                                {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                                {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                                {"Lainnya": "Lainnya"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala utama dalam produksi pangan",
+                            "labels": [
+                                {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                                {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                                {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                                {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                                {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-padi-keberlanjutanproduksipangan",
@@ -2847,6 +5463,33 @@
                 },
                 {
                     "sub_category": "Tebu",
+                    "chart_details": [
+                        {
+                            "title": "Akses petani ke sumber daya",
+                            "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"]
+                        },
+                        {
+                            "title": "Aspek Perbaikan",
+                            "labels": [
+                                {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                                {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                                {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                                {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                                {"Lainnya": "Lainnya"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala utama dalam produksi pangan",
+                            "labels": [
+                                {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                                {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                                {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                                {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                                {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-tebu-keberlanjutanproduksipangan",
@@ -2881,6 +5524,33 @@
                 },
                 {
                     "sub_category": "Kedelai",
+                    "chart_details": [
+                        {
+                            "title": "Akses petani ke sumber daya",
+                            "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"]
+                        },
+                        {
+                            "title": "Aspek Perbaikan",
+                            "labels": [
+                                {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                                {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                                {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                                {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                                {"Lainnya": "Lainnya"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala utama dalam produksi pangan",
+                            "labels": [
+                                {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                                {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                                {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                                {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                                {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-kedelai-keberlanjutanproduksipangan",
@@ -2915,6 +5585,33 @@
                 },
                 {
                     "sub_category": "Singkong",
+                    "chart_details": [
+                        {
+                            "title": "Akses petani ke sumber daya",
+                            "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"]
+                        },
+                        {
+                            "title": "Aspek Perbaikan",
+                            "labels": [
+                                {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                                {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                                {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                                {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                                {"Lainnya": "Lainnya"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala utama dalam produksi pangan",
+                            "labels": [
+                                {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                                {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                                {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                                {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                                {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-singkong-keberlanjutanproduksipangan",
@@ -2949,6 +5646,33 @@
                 },
                 {
                     "sub_category": "Jagung",
+                    "chart_details": [
+                        {
+                            "title": "Akses petani ke sumber daya",
+                            "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"]
+                        },
+                        {
+                            "title": "Aspek Perbaikan",
+                            "labels": [
+                                {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                                {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                                {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                                {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                                {"Lainnya": "Lainnya"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala utama dalam produksi pangan",
+                            "labels": [
+                                {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                                {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                                {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                                {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                                {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-jagung-keberlanjutanproduksipangan",
@@ -2983,6 +5707,33 @@
                 },
                 {
                     "sub_category": "Sawit",
+                    "chart_details": [
+                        {
+                            "title": "Akses petani ke sumber daya",
+                            "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"]
+                        },
+                        {
+                            "title": "Aspek Perbaikan",
+                            "labels": [
+                                {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
+                                {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
+                                {"Perbaikan sistem irigasi": "Perbaikan sistem irigasi"},
+                                {"Pelatihan petani tentang praktik pertanian berkelanjutan": "Pelatihan praktik pertanian"},
+                                {"Lainnya": "Lainnya"}
+                            ]
+                        },
+                        {
+                            "title": "Kendala utama dalam produksi pangan",
+                            "labels": [
+                                {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
+                                {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
+                                {"Serangan hama dan penyakit tanaman": "Serangan hama dan penyakit tanaman"},
+                                {"Kurangnya tenaga kerja pertanian": "Kurang tenaga kerja"},
+                                {"Perubahan iklim yang tidak menentu": "Perubahan iklim"},
+                                {"Lainnya": "Lainnnya"}
+                            ]
+                        }
+                    ],
                     "payload": [
                         {
                             "kode": "foodestate-sawit-keberlanjutanproduksipangan",
