@@ -23,9 +23,21 @@ const LineChartCustomizable = ({
 
     console.log("isDataEmpty", isDataEmpty)
     const years = isDataEmpty ? [] : data.map((item) => item.year)
-    const datasets = isDataEmpty ? [] : labels.map((label, index) => ({
+
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
+    : labels.map((label) => {
+        const key = Object.keys(label)[0]; // Ambil key dari object
+        return {
+            key,
+            label: label[key],
+            value: data[key] ?? 0
+        };
+    });
+
+    const datasets = isDataEmpty ? [] : activeLabels.map(({key, label}, index) => ({
         label,
-        data: data.map((item) => item[label]),
+        data: data.map((item) => item[key]),
         borderColor: colors[index],
         backgroundColor: colors[index],
         tension: 0.3,
@@ -53,7 +65,7 @@ const LineChartCustomizable = ({
                 callbacks: {
                     label: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex
-                        const datasetLabelCustom = labels[datasetIndex]
+                        const datasetLabelCustom = activeLabels[datasetIndex]?.label
 
                         const formattedLabel = datasetLabelCustom.charAt(0).toUpperCase() + datasetLabelCustom.slice(1)
                         return ` ${formattedLabel}: ${formatCurrency(tooltipItem.raw)}`
@@ -114,7 +126,7 @@ const LineChartCustomizable = ({
                     <div className="flex flex-col gap-4">
                         <div >
                             <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-end rounded">
-                                {labels.map((label, index) => (
+                                {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                     <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
