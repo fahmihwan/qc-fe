@@ -134,13 +134,18 @@ const DetailAllDashboardSurvey = () => {
 
     const children = chartData.map((chart, index) => {
         const specifiedTopicChart = topicData.charts[index] || {}
+        const specifiedChartDetails = topicData.payload.find(item => item.sub_category === selectedSubCategory)
+
+        const specifiedLabelsChart = specifiedChartDetails?.chart_details[index]?.labels
+        const specifiedTitleChart = specifiedChartDetails?.chart_details[index]?.title
+        console.log("ini specifiedlabelschart", specifiedLabelsChart)
 
         return (
             <div key={index} className="w-full h-full">
                 <div className="dark:text-white font-bold text-xl text-left mb-4">
-                    {specifiedTopicChart.title}
+                    {specifiedTitleChart}
                 </div>
-                <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedTopicChart.labels} colors={specifiedTopicChart.colors}/>
+                <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedLabelsChart} colors={specifiedTopicChart.colors}/>
             </div>
         )
     })

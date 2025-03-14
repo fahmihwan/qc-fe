@@ -5436,11 +5436,9 @@
                                 {
                                     "type": "bar-keberlanjutanproduksipangan",
                                     "params": {
-                                        "body_topikId": 37,
-                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
-                                        "body_name_input": "question6"
+                                      "body_topikId": 37
                                     }
-                                },
+                                },                              
                                 {
                                     "type": "bar-tahun",
                                     "params": {
@@ -5497,11 +5495,9 @@
                                 {
                                     "type": "bar-keberlanjutanproduksipangan",
                                     "params": {
-                                        "body_topikId": 38,
-                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
-                                        "body_name_input": "question6"
+                                      "body_topikId": 38
                                     }
-                                },
+                                }, 
                                 {
                                     "type": "bar-tahun",
                                     "params": {
@@ -5558,11 +5554,9 @@
                                 {
                                     "type": "bar-keberlanjutanproduksipangan",
                                     "params": {
-                                        "body_topikId": 39,
-                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
-                                        "body_name_input": "question6"
+                                      "body_topikId": 39
                                     }
-                                },
+                                }, 
                                 {
                                     "type": "bar-tahun",
                                     "params": {
@@ -5619,11 +5613,9 @@
                                 {
                                     "type": "bar-keberlanjutanproduksipangan",
                                     "params": {
-                                        "body_topikId": 40,
-                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
-                                        "body_name_input": "question6"
+                                      "body_topikId": 40
                                     }
-                                },
+                                }, 
                                 {
                                     "type": "bar-tahun",
                                     "params": {
@@ -5680,11 +5672,9 @@
                                 {
                                     "type": "bar-keberlanjutanproduksipangan",
                                     "params": {
-                                        "body_topikId": 41,
-                                        "body_title": "Jika ya, perubahan apa yang paling sering terjadi?",
-                                        "body_name_input": "question6"
+                                      "body_topikId": 41
                                     }
-                                },
+                                }, 
                                 {
                                     "type": "bar-tahun",
                                     "params": {
