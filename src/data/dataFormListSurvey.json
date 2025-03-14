@@ -2312,30 +2312,6 @@
                     {
                       "value": "Irigasi pompa/air tanah",
                       "text": "Irigasi pompa/air tanah"
-                    },
-                    {
-                      "value": "Irigasi teknis",
-                      "text": "Irigasi teknis"
-                    },
-                    {
-                      "value": "Irigasi setengah teknis",
-                      "text": "Irigasi setengah teknis"
-                    },
-                    {
-                      "value": "Irigasi sederhana",
-                      "text": "Irigasi sederhana"
-                    },
-                    {
-                      "value": "Irigasi tadah hujan",
-                      "text": "Irigasi tadah hujan"
-                    },
-                    {
-                      "value": "Irigasi rawa/pasang surut",
-                      "text": "Irigasi rawa/pasang surut"
-                    },
-                    {
-                      "value": "Irigasi pompa/air tanah",
-                      "text": "Irigasi pompa/air tanah"
                     }
                   ],
                   "showOtherItem": true
@@ -2400,8 +2376,8 @@
                       "text": "Pengelolaan irigasi kurang optimal"
                     },
                     {
-                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
-                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                      "value": "Kurangnya infrastruktur pendukung",
+                      "text": "Kurangnya infrastruktur pendukung"
                     }
                   ],
                   "showOtherItem": true
@@ -2456,30 +2432,6 @@
                     {
                       "value": "Irigasi pompa/air tanah",
                       "text": "Irigasi pompa/air tanah"
-                    },
-                    {
-                      "value": "Irigasi teknis",
-                      "text": "Irigasi teknis"
-                    },
-                    {
-                      "value": "Irigasi setengah teknis",
-                      "text": "Irigasi setengah teknis"
-                    },
-                    {
-                      "value": "Irigasi sederhana",
-                      "text": "Irigasi sederhana"
-                    },
-                    {
-                      "value": "Irigasi tadah hujan",
-                      "text": "Irigasi tadah hujan"
-                    },
-                    {
-                      "value": "Irigasi rawa/pasang surut",
-                      "text": "Irigasi rawa/pasang surut"
-                    },
-                    {
-                      "value": "Irigasi pompa/air tanah",
-                      "text": "Irigasi pompa/air tanah"
                     }
                   ],
                   "showOtherItem": true
@@ -2544,8 +2496,8 @@
                       "text": "Pengelolaan irigasi kurang optimal"
                     },
                     {
-                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
-                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                      "value": "Kurangnya infrastruktur pendukung",
+                      "text": "Kurangnya infrastruktur pendukung"
                     }
                   ],
                   "showOtherItem": true
@@ -2600,30 +2552,6 @@
                     {
                       "value": "Irigasi pompa/air tanah",
                       "text": "Irigasi pompa/air tanah"
-                    },
-                    {
-                      "value": "Irigasi teknis",
-                      "text": "Irigasi teknis"
-                    },
-                    {
-                      "value": "Irigasi setengah teknis",
-                      "text": "Irigasi setengah teknis"
-                    },
-                    {
-                      "value": "Irigasi sederhana",
-                      "text": "Irigasi sederhana"
-                    },
-                    {
-                      "value": "Irigasi tadah hujan",
-                      "text": "Irigasi tadah hujan"
-                    },
-                    {
-                      "value": "Irigasi rawa/pasang surut",
-                      "text": "Irigasi rawa/pasang surut"
-                    },
-                    {
-                      "value": "Irigasi pompa/air tanah",
-                      "text": "Irigasi pompa/air tanah"
                     }
                   ],
                   "showOtherItem": true
@@ -2688,8 +2616,8 @@
                       "text": "Pengelolaan irigasi kurang optimal"
                     },
                     {
-                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
-                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                      "value": "Kurangnya infrastruktur pendukung",
+                      "text": "Kurangnya infrastruktur pendukung"
                     }
                   ],
                   "showOtherItem": true
@@ -2720,31 +2648,7 @@
                   "name": "question2",
                   "title": "Jenis irigasi yang digunakan",
                   "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "Irigasi teknis",
-                      "text": "Irigasi teknis"
-                    },
-                    {
-                      "value": "Irigasi setengah teknis",
-                      "text": "Irigasi setengah teknis"
-                    },
-                    {
-                      "value": "Irigasi sederhana",
-                      "text": "Irigasi sederhana"
-                    },
-                    {
-                      "value": "Irigasi tadah hujan",
-                      "text": "Irigasi tadah hujan"
-                    },
-                    {
-                      "value": "Irigasi rawa/pasang surut",
-                      "text": "Irigasi rawa/pasang surut"
-                    },
-                    {
-                      "value": "Irigasi pompa/air tanah",
-                      "text": "Irigasi pompa/air tanah"
-                    },
+                 "choices": [
                     {
                       "value": "Irigasi teknis",
                       "text": "Irigasi teknis"
@@ -2832,8 +2736,8 @@
                       "text": "Pengelolaan irigasi kurang optimal"
                     },
                     {
-                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
-                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                      "value": "Kurangnya infrastruktur pendukung",
+                      "text": "Kurangnya infrastruktur pendukung"
                     }
                   ],
                   "showOtherItem": true
@@ -2888,30 +2792,6 @@
                     {
                       "value": "Irigasi pompa/air tanah",
                       "text": "Irigasi pompa/air tanah"
-                    },
-                    {
-                      "value": "Irigasi teknis",
-                      "text": "Irigasi teknis"
-                    },
-                    {
-                      "value": "Irigasi setengah teknis",
-                      "text": "Irigasi setengah teknis"
-                    },
-                    {
-                      "value": "Irigasi sederhana",
-                      "text": "Irigasi sederhana"
-                    },
-                    {
-                      "value": "Irigasi tadah hujan",
-                      "text": "Irigasi tadah hujan"
-                    },
-                    {
-                      "value": "Irigasi rawa/pasang surut",
-                      "text": "Irigasi rawa/pasang surut"
-                    },
-                    {
-                      "value": "Irigasi pompa/air tanah",
-                      "text": "Irigasi pompa/air tanah"
                     }
                   ],
                   "showOtherItem": true
@@ -2976,8 +2856,8 @@
                       "text": "Pengelolaan irigasi kurang optimal"
                     },
                     {
-                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
-                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                      "value": "Kurangnya infrastruktur pendukung",
+                      "text": "Kurangnya infrastruktur pendukung"
                     }
                   ],
                   "showOtherItem": true
@@ -3032,30 +2912,6 @@
                     {
                       "value": "Irigasi pompa/air tanah",
                       "text": "Irigasi pompa/air tanah"
-                    },
-                    {
-                      "value": "Irigasi teknis",
-                      "text": "Irigasi teknis"
-                    },
-                    {
-                      "value": "Irigasi setengah teknis",
-                      "text": "Irigasi setengah teknis"
-                    },
-                    {
-                      "value": "Irigasi sederhana",
-                      "text": "Irigasi sederhana"
-                    },
-                    {
-                      "value": "Irigasi tadah hujan",
-                      "text": "Irigasi tadah hujan"
-                    },
-                    {
-                      "value": "Irigasi rawa/pasang surut",
-                      "text": "Irigasi rawa/pasang surut"
-                    },
-                    {
-                      "value": "Irigasi pompa/air tanah",
-                      "text": "Irigasi pompa/air tanah"
                     }
                   ],
                   "showOtherItem": true
@@ -3120,8 +2976,8 @@
                       "text": "Pengelolaan irigasi kurang optimal"
                     },
                     {
-                      "value": "Kurangnya infrastruktur pendukungSawah irigasi teknis",
-                      "text": "Kurangnya infrastruktur pendukungSawah irigasi teknis"
+                      "value": "Kurangnya infrastruktur pendukung",
+                      "text": "Kurangnya infrastruktur pendukung"
                     }
                   ],
                   "showOtherItem": true
