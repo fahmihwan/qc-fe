@@ -6866,7 +6866,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
                   "isRequired": true,
@@ -7070,7 +7070,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
                   "isRequired": true,
@@ -7274,7 +7274,7 @@
                     "otherText": "Lainnya"
                   },
                   {
-                    "type": "dropdown",
+                    "type": "radiogroup",
                     "name": "question5",
                     "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
                     "isRequired": true,
@@ -7478,7 +7478,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
                   "isRequired": true,
@@ -7682,7 +7682,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
                   "isRequired": true,
@@ -7886,7 +7886,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
                   "isRequired": true,
