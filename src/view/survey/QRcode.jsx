@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import LayoutAdmin from '../layout/LayoutAdmin'
 
-import { Button, Modal } from "flowbite-react";
+import { Button, Checkbox, Modal } from "flowbite-react";
 import { getDropdownNamakategori, getDropdownSubkatgeori, getDropdownTopik } from '../../api/otherApi';
 import CreatableSelect from 'react-select/creatable';
 import QRCode from 'react-qr-code';
@@ -11,9 +11,17 @@ import { InputReactSelectEl } from '../component/InputCompt';
 
 const QRcode = () => {
     const [openModal, setOpenModal] = useState(false);
+    const [openModalQRcode, setOpenModalQRcode] = useState(false);
 
     const [listQrcode, setListQrcode] = useState([])
     const [selectedQR, setSelectedQR] = useState(null)
+
+    const [listFilterKategori, setListFilterKategori] = useState([]);
+    const [listFilterSubKategori, setListFilterSubKategori] = useState([]);
+    const [listFilterTopik, setListFilterTopik] = useState([]);
+
+
+
 
 
 
@@ -27,21 +35,12 @@ const QRcode = () => {
     const [selectedTopik, setSelectedTopik] = useState({ value: 0, label: '' })
 
 
-    // flow
-    // 1. isi kategori survey
-    // 2. isi sub kategori survey
-    // 3. cek apakah topik ada di db berdasarkan id sub_kategori
-    // jika tidak ada jan tampilkan 
-    // jika ada tampilkan
 
 
     const fetchQRcode = async () => {
-        // getAllQrcode().then((res)=> console.log(res))
         try {
             const response = await getAllQrcode()
             setListQrcode(response.data);
-            // const response = await apiClient.get(`/qrcodes`)
-            // return response.data 
         } catch (error) {
             console.error("error fetching data: ", error)
             throw error
@@ -75,7 +74,6 @@ const QRcode = () => {
 
 
     useEffect(() => {
-
         if (selectedKategori?.value != 0) {
             getDropdownSubkatgeori(selectedKategori?.value).then((res) => {
                 setListSubKategori(res.data)
@@ -98,17 +96,18 @@ const QRcode = () => {
         setOpenModal(false)
     }
 
-    const handleDelete = async () => {
-
+    const handleDelete = async (kodeqr) => {
         let isConfirm = confirm("apakah anda yakin ingin menghapus?")
         if (isConfirm) {
-            await deleteQrcode(selectedQR).then((res) => {
+            await deleteQrcode(kodeqr).then((res) => {
                 fetchQRcode()
             })
         }
     }
 
-    // buat button submit 
+
+
+
     return (
 
         <>
@@ -116,27 +115,6 @@ const QRcode = () => {
                 <div className='flex justify-between items-center mb-5'>
                     <h1 className='text-3xl text-white  font-bold'>QRcode Survey</h1>
                     <div className='flex items-center justify-between '>
-
-                        {
-                            selectedQR != null && (
-                                <>
-                                    <button
-                                        onClick={() => handleDelete()}
-                                        type="button"
-                                        className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-5 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                                    >
-                                        Delete
-                                    </button>
-                                    {/* <button
-                                        type="button"
-                                        className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-5 dark:focus:ring-yellow-900"
-                                    >
-                                        Yellow
-                                    </button> */}
-                                </>
-                            )
-                        }
-
                         <Button onClick={() => setOpenModal(true)}>Buat QRcode</Button>
 
 
@@ -144,30 +122,174 @@ const QRcode = () => {
 
                 </div>
 
+                <div className='md:w-full lg:flex'>
+                    <div className={`md:w-12/12 ${selectedQR ? 'lg:w-9/12 ' : 'w-full'} mr-5`}>
+                        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <tr>
+                                    <th scope="col" className="px-6 py-3">
+                                        No
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        kategori
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        sub kategori
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        topik
+                                    </th>
+                                    <th scope="col" className="px-6 py-3">
+                                        Action
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    listQrcode?.length > 0 && listQrcode?.map((d, index) => (
+                                        <tr key={index} className="odd:bg-white odd:dark:bg-gray-800 even:bg-gray-50 even:dark:bg-gray-700 border-b dark:border-gray-700 border-gray-200">
 
-                <div className=''>
-                    <div className="grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {listQrcode?.map((d, i) => (
-                            <CardQRcodeEl
-                                key={i}
-                                id={d?.id}
-                                namaKategori={d.nama_kategori}
-                                kodeQr={d.kode_qr}
-                                namaSubKategori={d.nama_sub_kategori}
-                                topik={d.topik}
-                                selectedQR={selectedQR}
-                                // setSelectedQR={setSelectedQR}
-                                handleChange={() => {
-                                    setSelectedQR(d.kode_qr)
-                                }}
-                            />
-                        ))}
+                                            <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white" >
+                                                {index + 1}
+                                            </th>
+                                            <td className="px-6 py-4">{d.nama_kategori}</td>
+                                            <td className="px-6 py-4">{d.nama_sub_kategori}</td>
+                                            <td className="px-6 py-4">{d.topik} </td>
+                                            <td className="px-6 py-4">
+                                                <div>
+                                                    <button
+                                                        onClick={() => {
+                                                            setSelectedQR({
+                                                                topik: d.topik,
+                                                                kode_qr: d.kode_qr
+                                                            })
+                                                        }}
+                                                        type="button"
+                                                        className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800'
+                                                    // className="hidden xl:block text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-5 py-1 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800"
+                                                    >
+                                                        {/* preview  */}
+                                                        <svg
+                                                            className="text-gray-800 dark:text-white  "
+                                                            aria-hidden="true"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            width={24}
+                                                            height={24}
+                                                            fill="none"
+                                                            viewBox="0 0 24 24"
+                                                        >
+                                                            <path
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                                d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
+                                                            />
+                                                            <path
+                                                                stroke="currentColor"
+                                                                strokeWidth={2}
+                                                                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                                            />
+                                                        </svg>
 
-                        {/* const host = window.location.host; */}
+                                                    </button>
+
+                                                </div>
+                                                <div className='md:flex lg:hidden'>
+                                                    <Button
+                                                        className='mr-2'
+                                                        size='xs'
+                                                        onClick={() => {
+                                                            setSelectedQR({
+                                                                topik: d.topik,
+                                                                kode_qr: d.kode_qr
+                                                            })
+                                                            setOpenModalQRcode(true)
+                                                        }}>Detail QRcode</Button>
+                                                    <Button size="sm" color='failure' onClick={() => handleDelete(d.kode_qr)}>Delete</Button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
+                            </tbody>
+                        </table>
                     </div>
+
+                    {selectedQR && (
+
+                        <div
+                            className="w-3/12 p-6 h-fit bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+                        >
+                            <h5 className="mb-2 text-md font-bold tracking-tight text-gray-900 dark:text-white text-center">
+                                {selectedQR?.topik}
+                            </h5>
+                            <p className="font-normal text-gray-700 dark:text-gray-400">
+                                <div className='flex justify-center'>
+                                    <div className='w-[300px] '>
+                                        <QRCode
+                                            size={250}
+                                            style={{ height: "100%", width: "100%" }}
+                                            value={`${window.location.origin}/survey-masyarakat/${selectedQR?.kode_qr}`}
+                                            viewBox={`0 0 25 25`}
+                                        />
+                                    </div>
+                                </div>
+                            </p>
+                            <div className="flex justify-center py-5" role="group">
+                                <button
+                                    type="button"
+                                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white  dark:focus:ring-blue-500 dark:focus:text-white"
+                                    onClick={() => handleDelete(selectedQR?.kode_qr)}
+                                >
+
+                                    Delete
+                                </button>
+                                <a
+                                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:focus:ring-blue-500 dark:focus:text-white"
+                                    href={`${window.location.origin}/survey-masyarakat/${selectedQR?.kode_qr}`} target='_blank'>
+                                    survey</a>
+                                <button
+                                    type="button"
+                                    className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900  border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white  dark:focus:ring-blue-500 dark:focus:text-white"
+                                >
+                                    Downloads
+                                </button>
+                            </div>
+
+
+                        </div>
+
+
+
+                    )}
+
                 </div>
 
             </div>
+            <Modal show={openModalQRcode} onClose={() => setOpenModalQRcode(false)}>
+                <Modal.Header>{selectedQR?.topik}</Modal.Header>
+                <Modal.Body>
+
+                    <div className='flex justify-center'>
+                        <div className='w-[300px] '>
+                            <QRCode
+                                size={250}
+                                style={{ height: "100%", width: "100%" }}
+                                value={`${window.location.origin}/survey-masyarakat/${selectedQR?.kode_qr}`}
+                                viewBox={`0 0 25 25`}
+                            />
+                        </div>
+                    </div>
+
+
+
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={() => setOpenModalQRcode(false)}>I accept</Button>
+                    <Button color="gray" onClick={() => setOpenModalQRcode(false)}>
+                        Decline
+                    </Button>
+                </Modal.Footer>
+            </Modal>
+
             <CreateQRcode openModal={openModal} setOpenModal={setOpenModal}
                 setSelectedKategori={setSelectedKategori}
                 selectedKategori={selectedKategori}
@@ -198,17 +320,16 @@ const CardQRcodeEl = ({
     selectedQR,
     handleChange
 }) => {
-
-
-
-
-    const link = `${window.location.origin}/survey-masyarakat?kodeqr=${kodeQr}`
+    const link = `${window.location.origin}/survey-masyarakat/${kodeQr}`
 
     return (
         <div
             onClick={(e) => handleChange(e)}
             className={` rounded-xl p-4  cursor-pointer box-border ${selectedQR == kodeQr ? " border-4 bg-[#91919180] border-yellow-200 " : "bg-[#E7E7E780]"} `}>
-            <div className="w-full flex">
+            <div className='bg-red-200 h-20 mb-5 p-2'>
+                <p className='mb-2 text-sm'>{topik}</p>
+            </div>
+            <div className="w-full flex ">
                 <div className='w-6/12 bg-white p-2 rounded-lg'>
                     <QRCode
                         // size={256}
@@ -218,13 +339,9 @@ const CardQRcodeEl = ({
                     />
                 </div>
                 <div className='w-6/12 pl-4 text-black text-sm'>
-                    <div>
-                        <div className='mb-2'>
-                            <b>Topik</b> <br />
-                            <p>{topik}</p>
-                        </div>
-                        <div className='mb-2'>
-                            <b>Kategori</b> <br />
+                    <div className='text-sm'>
+                        <div className='mb-2 '>
+                            <b className=''>Kategori</b> <br />
                             <p>{namaKategori}</p>
                         </div>
                         <div className='mb-2'>
