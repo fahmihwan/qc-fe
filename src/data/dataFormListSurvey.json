@@ -6459,7 +6459,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question2",
-                  "visibleIf": "{question1} = 'Ya'",
+                  "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa kendala utama dalam distribusi padi?",
                   "isRequired": true,
                   "choices": [
@@ -6546,7 +6546,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question2",
-                  "visibleIf": "{question1} = 'Ya'",
+                  "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa kendala utama dalam distribusi tebu?",
                   "isRequired": true,
                   "choices": [
@@ -6633,7 +6633,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question2",
-                  "visibleIf": "{question1} = 'Ya'",
+                  "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa kendala utama dalam distribusi kedelai?",
                   "isRequired": true,
                   "choices": [
@@ -6720,7 +6720,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question2",
-                  "visibleIf": "{question1} = 'Ya'",
+                  "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa kendala utama dalam distribusi singkong?",
                   "isRequired": true,
                   "choices": [
@@ -6807,7 +6807,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question2",
-                  "visibleIf": "{question1} = 'Ya'",
+                  "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa kendala utama dalam distribusi jagung?",
                   "isRequired": true,
                   "choices": [
@@ -6894,7 +6894,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question2",
-                  "visibleIf": "{question1} = 'Ya'",
+                  "visibleIf": "{question1} = 'Tidak'",
                   "title": "Jika tidak, apa kendala utama dalam distribusi sawit?",
                   "isRequired": true,
                   "choices": [
