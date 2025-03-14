@@ -881,11 +881,11 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "opsi-1",
+                      "value": "Ya (meningkat)",
                       "text": "Ya (meningkat)"
                     },
                     {
-                      "value": "opsi-2",
+                      "value": "Ya (menurun)",
                       "text": "Ya (menurun)"
                     },
                     {
@@ -898,14 +898,14 @@
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question5} = 'opsi-1'",
+                  "visibleIf": "{question5} = 'Ya (meningkat)'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_menurun",
-                  "visibleIf": "{question5} = 'opsi-2'",
+                  "visibleIf": "{question5} = 'Ya (menurun)'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
@@ -979,11 +979,11 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "opsi-1",
+                      "value": "Ya (meningkat)",
                       "text": "Ya (meningkat)"
                     },
                     {
-                      "value": "opsi-2",
+                      "value": "Ya (menurun)",
                       "text": "Ya (menurun)"
                     },
                     {
@@ -996,14 +996,14 @@
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question5} = 'opsi-1'",
+                  "visibleIf": "{question5} = 'Ya (meningkat)'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_menurun",
-                  "visibleIf": "{question5} = 'opsi-2'",
+                  "visibleIf": "{question5} = 'Ya (menurun)'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
@@ -1077,11 +1077,11 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "opsi-1",
+                      "value": "Ya (meningkat)",
                       "text": "Ya (meningkat)"
                     },
                     {
-                      "value": "opsi-2",
+                      "value": "Ya (menurun)",
                       "text": "Ya (menurun)"
                     },
                     {
@@ -1094,14 +1094,14 @@
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question5} = 'opsi-1'",
+                  "visibleIf": "{question5} = 'Ya (meningkat)'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_menurun",
-                  "visibleIf": "{question5} = 'opsi-2'",
+                  "visibleIf": "{question5} = 'Ya (menurun)'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
@@ -1175,11 +1175,11 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "opsi-1",
+                      "value": "Ya (meningkat)",
                       "text": "Ya (meningkat)"
                     },
                     {
-                      "value": "opsi-2",
+                      "value": "Ya (menurun)",
                       "text": "Ya (menurun)"
                     },
                     {
@@ -1192,14 +1192,14 @@
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question5} = 'opsi-1'",
+                  "visibleIf": "{question5} = 'Ya (meningkat)'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_menurun",
-                  "visibleIf": "{question5} = 'opsi-2'",
+                  "visibleIf": "{question5} = 'Ya (menurun)'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
@@ -1273,11 +1273,11 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "opsi-1",
+                      "value": "Ya (meningkat)",
                       "text": "Ya (meningkat)"
                     },
                     {
-                      "value": "opsi-2",
+                      "value": "Ya (menurun)",
                       "text": "Ya (menurun)"
                     },
                     {
@@ -1290,14 +1290,14 @@
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question5} = 'opsi-1'",
+                  "visibleIf": "{question5} = 'Ya (meningkat)'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_menurun",
-                  "visibleIf": "{question5} = 'opsi-2'",
+                  "visibleIf": "{question5} = 'Ya (menurun)'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
@@ -1371,11 +1371,11 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "opsi-1",
+                      "value": "Ya (meningkat)",
                       "text": "Ya (meningkat)"
                     },
                     {
-                      "value": "opsi-2",
+                      "value": "Ya (menurun)",
                       "text": "Ya (menurun)"
                     },
                     {
@@ -1388,14 +1388,14 @@
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_meningkat",
-                  "visibleIf": "{question5} = 'opsi-1'",
+                  "visibleIf": "{question5} = 'Ya (meningkat)'",
                   "title": "Jika pilih Ya (meningkat) (kuintal/ha)",
                   "isRequired": true
                 },
                 {
                   "type": "text",
                   "name": "question5-Inputopsi-ya_menurun",
-                  "visibleIf": "{question5} = 'opsi-2'",
+                  "visibleIf": "{question5} = 'Ya (menurun)'",
                   "title": "Jika pilih Ya (menurun) (kuintal/ha)",
                   "isRequired": true
                 },
