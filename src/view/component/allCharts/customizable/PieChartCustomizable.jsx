@@ -16,11 +16,23 @@ const PieChartCustomizable = ({
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
+    : labels.map((label) => {
+        const key = Object.keys(label)[0]; // Ambil key dari object
+        return {
+            key,
+            label: label[key],
+            value: data[key] ?? 0
+        };
+    });
+
+    console.log("ini active labels pie chart", activeLabels)
     const chartData = {
-        labels,
+        labels: activeLabels.map(({label}) => label),
         datasets: [
             {
-                data: labels.map(label => data[label]), 
+                data: activeLabels.map(({value}) => value), 
                 backgroundColor: colors,
                 borderColor: "#ffffff", 
                 borderWidth: 1
@@ -85,7 +97,7 @@ const PieChartCustomizable = ({
                         </div>
                         <div >
                             <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
-                                {labels.map((label, index) => (
+                                {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                     <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>

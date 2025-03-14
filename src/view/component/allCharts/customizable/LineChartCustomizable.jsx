@@ -11,16 +11,33 @@ const LineChartCustomizable = ({
     height = null
 }) => {
 
-    console.log("data yg diterima", data)
+    console.log("data yg diterima line", data)
     const isDataEmpty = !data // Jika `data` null atau undefined
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
-        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
+        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0) // Jika `data` object kosong
+        || (Array.isArray(data) && data.every(obj => {
+            if(typeof obj !== "object" || Array.isArray(obj)) return false
+            const keys = Object.keys(obj)
+            return keys.length > 1 && keys.slice(1).every(key => Number(obj[key]) === 0)
+        }))
 
     console.log("isDataEmpty", isDataEmpty)
     const years = isDataEmpty ? [] : data.map((item) => item.year)
-    const datasets = isDataEmpty ? [] : labels.map((label, index) => ({
+
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
+    : labels.map((label) => {
+        const key = Object.keys(label)[0]; // Ambil key dari object
+        return {
+            key,
+            label: label[key],
+            value: data[key] ?? 0
+        };
+    });
+
+    const datasets = isDataEmpty ? [] : activeLabels.map(({key, label}, index) => ({
         label,
-        data: data.map((item) => item[label]),
+        data: data.map((item) => item[key]),
         borderColor: colors[index],
         backgroundColor: colors[index],
         tension: 0.3,
@@ -48,8 +65,10 @@ const LineChartCustomizable = ({
                 callbacks: {
                     label: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex
-                        const datasetLabelCustom = labels[datasetIndex]
-                        return ` ${datasetLabelCustom}: ${formatCurrency(tooltipItem.raw)}`
+                        const datasetLabelCustom = activeLabels[datasetIndex]?.label
+
+                        const formattedLabel = datasetLabelCustom.charAt(0).toUpperCase() + datasetLabelCustom.slice(1)
+                        return ` ${formattedLabel}: ${formatCurrency(tooltipItem.raw)}`
                     },
                     labelColor: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex;
@@ -107,10 +126,10 @@ const LineChartCustomizable = ({
                     <div className="flex flex-col gap-4">
                         <div >
                             <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-end rounded">
-                                {labels.map((label, index) => (
+                                {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
-                                    <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
+                                    <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
                                 </div>
                                 ))}
                             </div>

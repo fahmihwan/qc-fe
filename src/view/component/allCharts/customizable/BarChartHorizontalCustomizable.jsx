@@ -15,18 +15,37 @@ const BarChartHorizontalCustomizable = ({
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
     const xKey = isDataEmpty ? "" : Object.keys(data[0])[0];
+    // console.log("ini xKey: ", xKey)
     const xLabels = isDataEmpty ? [] : data.map((item) => item[xKey]);
+    // console.log("ini xLabels: ", xLabels)
 
     const availableKeys = isDataEmpty ? [] : Object.keys(data[0]).slice(1); 
-    const activeLabels = labels.length > 0 ? labels : availableKeys;
+    // console.log("ini availablekeys", availableKeys)
     
-    const datasets = isDataEmpty ? [] : activeLabels.map((label, index) => ({
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label })) 
+    : availableKeys.map((key) => {
+        const labelObj = labels.find(obj => obj && obj.hasOwnProperty(key)); 
+        return {
+            key, 
+            label: labelObj ? labelObj[key] : key 
+        };
+    });
+
+// console.log("ini keyLabelMap:", keyLabelMap);
+
+
+    // console.log("ini activelabels", activeLabels)
+    
+    const datasets = isDataEmpty ? [] : activeLabels.map(({key, label}, index) => ({
         label,
-        data: data.map((item) => item[label]),
+        data: data.map((item) => item[key]),
         backgroundColor: colors[index],
         borderColor: colors[index],
         borderWidth: 0
     }))
+
+    console.log("Ini datasets", datasets)
 
     const chartData = isDataEmpty ? {} : {
         labels: xLabels,
@@ -45,7 +64,7 @@ const BarChartHorizontalCustomizable = ({
                 callbacks: {
                     label: (tooltipItem) => {
                         const datasetIndex = tooltipItem.datasetIndex
-                        const datasetLabelCustom = activeLabels[datasetIndex]
+                        const datasetLabelCustom = activeLabels[datasetIndex]?.label
                         return ` ${datasetLabelCustom}: ${formatCurrency(tooltipItem.raw)}`
                     },
                     labelColor: (tooltipItem) => {
@@ -109,7 +128,7 @@ const BarChartHorizontalCustomizable = ({
                 <div className="flex flex-col gap-4">
                     <div >
                         <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
-                            {activeLabels.map((label, index) => (
+                            {activeLabels.map(({label}, index) => (
                             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                 <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>

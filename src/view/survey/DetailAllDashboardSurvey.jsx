@@ -7,9 +7,10 @@ import NotFoundPage from "../notFound/NotFoundPage"
 
 import topicsConfig from "../../data/dataSubKategoriDashboardSurvey.json"
 import { useParams } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import LayoutType6Survey from "../layout/LayoutType6Survey"
 import ChartRenderer from "../component/SurveyChart/ChartRenderer"
+import { getDynamicChart } from "../../api/survey"
 
 const getLayoutComponent = (
     layoutType,
@@ -70,6 +71,7 @@ const DetailAllDashboardSurvey = () => {
     
     const [isProvinceClicked, setIsProvinceClicked] = useState(false)
     const [isLoading, setIsLoading] = useState(false)
+    const [chartData, setChartData] = useState([])
 
     const [subCategories, setSubCategories] = useState([
         "Padi",
@@ -79,6 +81,11 @@ const DetailAllDashboardSurvey = () => {
         "Singkong",
         "Sawit"
     ])
+
+    const titleWithNoSubCategories = [
+        "Potensi Konflik di Sekitar Batas Hutan",
+        "Pelestarian dan Keberlanjutan Batas Hutan"
+    ]
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
         // setIsLoading(true)
@@ -96,14 +103,52 @@ const DetailAllDashboardSurvey = () => {
     };
     // console.log("ini topic data", topicData)
 
-    const children = topicData.charts.map((chart, index) => (
-        <div key={index} className="w-full h-full">
-            <div className="dark:text-white font-bold text-xl text-left mb-4">
-                {chart.title}
+    const filteredPayload = useMemo(() => {
+        return topicData.payload.find(item => item.sub_category === selectedSubCategory)?.payload[0] || []
+    }, [selectedSubCategory, topicData])
+
+    const fetchChartData = async(province_id = null) => {
+        if(filteredPayload.length === 0) return
+        setIsLoading(true)
+
+        try{
+            const response = await getDynamicChart(filteredPayload, province_id)
+            console.log("ini response", response)
+            setChartData(response.data)
+        } catch(error) {
+            console.error("Error fetching dynamic chart data: ", error)
+        } finally {
+            setIsLoading(false)
+        }
+    }
+    useEffect(() => {
+        // console.log("Ini filteredpayload", filteredPayload)
+        fetchChartData(selectedProvinceCode)
+    }, [filteredPayload, selectedProvinceCode])
+
+    useEffect(() => {
+        if(titleWithNoSubCategories.includes(topicTitle)) {
+            setSubCategories([])
+        }
+    }, [topicTitle])
+
+    const children = chartData.map((chart, index) => {
+        const specifiedTopicChart = topicData.charts[index] || {}
+        const specifiedChartDetails = topicData.payload.find(item => item.sub_category === selectedSubCategory)
+
+        const specifiedLabelsChart = specifiedChartDetails?.chart_details[index]?.labels
+        const specifiedTitleChart = specifiedChartDetails?.chart_details[index]?.title
+        console.log("ini specifiedlabelschart", specifiedLabelsChart)
+
+        return (
+            <div key={index} className="w-full h-full">
+                <div className="dark:text-white font-bold text-xl text-left mb-4">
+                    {specifiedTitleChart}
+                </div>
+                <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedLabelsChart} colors={specifiedTopicChart.colors}/>
             </div>
-            <ChartRenderer type={chart.type} data={chart.dummyData.data} labels={chart.labels} colors={chart.colors}/>
-        </div>
-    ))
+        )
+    })
 
     return getLayoutComponent(
         layoutType,
@@ -116,7 +161,8 @@ const DetailAllDashboardSurvey = () => {
         selectedProvinceName,
         isProvinceClicked,
         resetSelection,
-        children
+        children,
+        isLoading   
     )
 }   
 
