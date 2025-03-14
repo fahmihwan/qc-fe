@@ -50,16 +50,22 @@ const LayoutType5Survey = ({
                         >
                             <div className="flex flex-row justify-between lg:py-5 h-24 items-center w-full ">
                                 <div className="flex flex-row gap-4 z-40 justify-center items-center dark:text-white">
-                                    <div className="text-sm flex items-center">Sub Kategori</div>
-                                    <div>
-                                        <DropdownCustomV2 
-                                            listDropDown={subCategories}
-                                            selectedItem={selectedSubCategory}
-                                            setSelectedItem={setSelectedSubCategory}
-                                            title={"Pilih Sub Kategori"}
-                                            width={"220px"}
-                                        />
-                                    </div>
+                                    {subCategories.length > 0 ? (
+                                            <>
+                                                <div className="text-sm flex items-center">Sub Kategori</div>
+                                                <div>
+                                                    <DropdownCustomV2 
+                                                        listDropDown={subCategories}
+                                                        selectedItem={selectedSubCategory}
+                                                        setSelectedItem={setSelectedSubCategory}
+                                                        title={"Pilih Sub Kategori"}
+                                                        width={"220px"}
+                                                    />
+                                                </div>
+                                            </>
+                                        ) : (
+                                            <div></div>
+                                    )}
                                 </div>
 
                                 <div className=" dark:text-white rounded ">
