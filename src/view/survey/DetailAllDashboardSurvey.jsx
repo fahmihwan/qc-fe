@@ -82,6 +82,11 @@ const DetailAllDashboardSurvey = () => {
         "Sawit"
     ])
 
+    const titleWithNoSubCategories = [
+        "Potensi Konflik di Sekitar Batas Hutan",
+        "Pelestarian dan Keberlanjutan Batas Hutan"
+    ]
+
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
         // setIsLoading(true)
         setIsProvinceClicked(true)
@@ -120,6 +125,12 @@ const DetailAllDashboardSurvey = () => {
         // console.log("Ini filteredpayload", filteredPayload)
         fetchChartData(selectedProvinceCode)
     }, [filteredPayload, selectedProvinceCode])
+
+    useEffect(() => {
+        if(titleWithNoSubCategories.includes(topicTitle)) {
+            setSubCategories([])
+        }
+    }, [topicTitle])
 
     const children = chartData.map((chart, index) => {
         const specifiedTopicChart = topicData.charts[index] || {}
