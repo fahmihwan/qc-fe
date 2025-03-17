@@ -2450,8 +2450,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2466,8 +2465,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2570,8 +2586,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2586,8 +2601,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2690,8 +2722,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2706,8 +2737,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2810,8 +2858,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2826,8 +2873,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2930,8 +2994,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2946,8 +3009,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -3050,8 +3130,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -3066,8 +3145,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
