@@ -5914,15 +5914,26 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Padi",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi Beras di daerah Anda",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi Beras di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
                   "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras ",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras?",
                   "isRequired": true
                 },
                 {
@@ -5964,15 +5975,26 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Tebu",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi tebu di daerah Anda",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi tebu di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
                   "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu ",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu?",
                   "isRequired": true
                 },
                 {
@@ -6014,15 +6036,26 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Kedelai",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi kedelai di daerah Anda",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi kedelai di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
                   "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai ",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai?",
                   "isRequired": true
                 },
                 {
@@ -6064,15 +6097,26 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Singkong",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi singkong di daerah Anda",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi singkong di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
                   "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong ",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong?",
                   "isRequired": true
                 },
                 {
@@ -6114,15 +6158,26 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Jagung",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi jagung di daerah Anda",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi jagung di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
                   "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung ",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung?",
                   "isRequired": true
                 },
                 {
@@ -6164,15 +6219,26 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Sawit",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi sawit di daerah Anda",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi sawit di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "boolean",
                   "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit ",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit? ",
                   "isRequired": true
                 },
                 {
