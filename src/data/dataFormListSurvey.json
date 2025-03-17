@@ -918,6 +918,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -1017,6 +1018,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1115,6 +1117,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1213,6 +1216,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1311,6 +1315,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1409,6 +1414,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
