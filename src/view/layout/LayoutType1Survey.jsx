@@ -98,8 +98,8 @@ const LayoutType1Survey = ({
                         </div>
                     </motion.div>
 
-                    <div className='w-full xl:grid lg:grid-cols-7  mt-3 lg:mb-5'>
-                        <div className='col-span-12 lg:col-span-5 '>
+                    <div className='w-full xl:grid lg:grid-cols-7  mt-3 '>
+                        <div className=' col-span-12 lg:col-span-5 '>
                             <motion.div 
                                 className='ml-5 sm:mr-5 flex justify-center z-10'
                                 variants={fadeIn("right", 0.3)}
@@ -113,17 +113,17 @@ const LayoutType1Survey = ({
                             </motion.div>
 
                             <motion.div 
-                                className='grid md:grid-cols-7 ml-5 sm:mr-5 mb-5  mt-5 dark:bg-dark-mode-bg'
+                                className=' grid md:grid-cols-7 ml-5 sm:mr-5 sm:mb-5 mt-5 dark:bg-dark-mode-bg'
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
                                 viewport={{once: true, amount: 0.5}}
                             >
-                                <div className='min-h-[326px]  mb-10 md:mb-0 p-[15px] col-span-4 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                                <div className='col-span-4 mr-5 h-[326px] p-[15px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'>
                                     {/* children pertama */}
                                     {children[0]}
                                 </div>
-                                <div className='min-h-[326px]  col-span-3 p-[15px] dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
+                                <div className='col-span-3 h-[326px] p-[15px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'>
                                     {/* children kedua */}
                                     {children[1]}
                                 </div>
@@ -132,7 +132,7 @@ const LayoutType1Survey = ({
                         
                         <div className='w-full xl:col-span-2 flex flex-col overflow-hidden'>
                             <motion.div 
-                                className=' mx-5 h-[364px] mb-5 p-[15px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
+                                className=' mx-5 h-[400px] mb-5 p-[15px] border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
                                 variants={fadeIn("left", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}

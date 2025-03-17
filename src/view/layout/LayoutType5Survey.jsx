@@ -120,11 +120,11 @@ const LayoutType5Survey = ({
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <div className='min-h-[326px] mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                                    <div className='h-[412px] mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
                                         {/* children pertama */}
                                         {children[0]}
                                     </div>
-                                    <div className='min-h-[326px]  col-span-3 dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                                    <div className='h-[412px]  col-span-3 dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
                                         {/* children kedua */}
                                         {children[1]}
                                     </div>
