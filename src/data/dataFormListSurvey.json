@@ -6965,6 +6965,7 @@
                   "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7048,7 +7049,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7169,6 +7170,7 @@
                   "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7252,7 +7254,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7373,6 +7375,7 @@
                     "type": "radiogroup",
                     "name": "question5",
                     "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                    "visibleIf": "{question4} = 'Ya'",
                     "isRequired": true,
                     "choices": [
                       {
@@ -7456,7 +7459,7 @@
                   {
                     "type": "radiogroup",
                     "name": "question9",
-                    "visibleIf": "{question8} notempty",
+                    "visibleIf": "{question8} = 'Ya'",
                     "title": "Jika ya, apa masalah yang sering terjadi?",
                     "choices": [
                       {
@@ -7577,6 +7580,7 @@
                   "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7660,7 +7664,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7781,6 +7785,7 @@
                   "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7864,7 +7869,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7985,6 +7990,7 @@
                   "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -8068,7 +8074,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
