@@ -11,7 +11,7 @@
                     "sub_category": "Padi",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -29,7 +29,13 @@
                         },
                         {
                             "title": "Status kepemilikan lahan",
-                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                            "labels": [
+                                {"Milik Pribadi": "Milik Pribadi"},
+                                {"Hak Guna Usaha (HGU)": "Hak Guna Usaha"},
+                                {"Milik Pemerintah": "Milik Pemerintah"},
+                                {"Sewa": "Sewa"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -68,7 +74,7 @@
                     "sub_category": "Singkong",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -125,7 +131,7 @@
                     "sub_category": "Tebu",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -182,7 +188,7 @@
                     "sub_category": "Kedelai",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -239,7 +245,7 @@
                     "sub_category": "Jagung",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -296,7 +302,7 @@
                     "sub_category": "Sawit",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -490,8 +496,8 @@
                         {
                             "title": "Tren peningkatan/penurunan produktivitas",
                             "labels": [
-                                {"true": "Menaik"},
-                                {"false": "Menurun"}
+                                {"meningkat": "Menaik"},
+                                {"menurun": "Menurun"}
                             ]
                         },
                         {
@@ -506,7 +512,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         }
                     ],
@@ -975,7 +981,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -988,12 +994,18 @@
                                 {"Padi hibrida": "Hibrida"},
                                 {"Padi inbrida": "Inbrida"},
                                 {"Padi organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1004,7 +1016,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 49,
-                                        "body_title": "Kendala utama dalam produksi padi\n",
+                                        "body_title": "Kendala utama dalam produksi padi",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1013,7 +1025,7 @@
                                     "params": {
                                         "body_topikId": 49,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1021,7 +1033,7 @@
                                     "params": {
                                         "body_topikId": 49,
                                         "body_title": "Jenis padi yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1029,7 +1041,7 @@
                                     "params": {
                                         "body_topikId": 49,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1047,7 +1059,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1060,12 +1072,18 @@
                                 {"Tebu hibrida": "Hibrida"},
                                 {"Tebu Varietas Lokal": "Varietas Lokal"},
                                 {"Tebu organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1076,7 +1094,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 50,
-                                        "body_title": "Kendala utama dalam produksi tebu\n",
+                                        "body_title": "Kendala utama dalam produksi tebu",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1085,7 +1103,7 @@
                                     "params": {
                                         "body_topikId": 50,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1093,7 +1111,7 @@
                                     "params": {
                                         "body_topikId": 50,
                                         "body_title": "Jenis tebu yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1101,7 +1119,7 @@
                                     "params": {
                                         "body_topikId": 50,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1119,7 +1137,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1132,12 +1150,18 @@
                                 {"Kedelai hibrida": "Hibrida"},
                                 {"Kedelai Varietas Lokal": "Varietas Lokal"},
                                 {"Kedelai organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1148,7 +1172,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 51,
-                                        "body_title": "Kendala utama dalam produksi kedelai\n",
+                                        "body_title": "Kendala utama dalam produksi kedelai",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1157,7 +1181,7 @@
                                     "params": {
                                         "body_topikId": 51,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1165,7 +1189,7 @@
                                     "params": {
                                         "body_topikId": 51,
                                         "body_title": "Jenis kedelai yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1173,7 +1197,7 @@
                                     "params": {
                                         "body_topikId": 51,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1191,7 +1215,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1204,12 +1228,18 @@
                                 {"Singkong hibrida": "Hibrida"},
                                 {"Singkong Varietas Lokal": "Varietas Lokal"},
                                 {"Singkong organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1220,7 +1250,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 52,
-                                        "body_title": "Kendala utama dalam produksi singkong\n",
+                                        "body_title": "Kendala utama dalam produksi singkong",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1229,7 +1259,7 @@
                                     "params": {
                                         "body_topikId": 52,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1237,7 +1267,7 @@
                                     "params": {
                                         "body_topikId": 52,
                                         "body_title": "Jenis singkong yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1245,7 +1275,7 @@
                                     "params": {
                                         "body_topikId": 52,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1263,7 +1293,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1276,12 +1306,18 @@
                                 {"Jagung hibrida": "Hibrida"},
                                 {"Jagung Varietas Lokal": "Varietas Lokal"},
                                 {"Jagung organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1292,7 +1328,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 53,
-                                        "body_title": "Kendala utama dalam produksi jagung\n",
+                                        "body_title": "Kendala utama dalam produksi jagung",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1301,7 +1337,7 @@
                                     "params": {
                                         "body_topikId": 53,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1309,7 +1345,7 @@
                                     "params": {
                                         "body_topikId": 53,
                                         "body_title": "Jenis jagung yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1317,7 +1353,7 @@
                                     "params": {
                                         "body_topikId": 53,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1335,7 +1371,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1348,12 +1384,18 @@
                                 {"Sawit hibrida": "Hibrida"},
                                 {"Sawit Varietas Lokal": "Varietas Lokal"},
                                 {"Sawit organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1364,7 +1406,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 54,
-                                        "body_title": "Kendala utama dalam produksi sawit\n",
+                                        "body_title": "Kendala utama dalam produksi sawit",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1373,7 +1415,7 @@
                                     "params": {
                                         "body_topikId": 54,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1381,7 +1423,7 @@
                                     "params": {
                                         "body_topikId": 54,
                                         "body_title": "Jenis sawit yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1389,7 +1431,7 @@
                                     "params": {
                                         "body_topikId": 54,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -4235,7 +4277,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4276,7 +4318,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4317,7 +4359,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4358,7 +4400,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4399,7 +4441,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4440,7 +4482,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4566,15 +4608,15 @@
                                     "params": {
                                         "body_topikId": 25,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 25,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4582,7 +4624,7 @@
                                     "params": {
                                         "body_topikId": 25,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4614,15 +4656,15 @@
                                     "params": {
                                         "body_topikId": 26,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 26,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4630,7 +4672,7 @@
                                     "params": {
                                         "body_topikId": 26,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4662,15 +4704,15 @@
                                     "params": {
                                         "body_topikId": 27,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 27,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4678,7 +4720,7 @@
                                     "params": {
                                         "body_topikId": 27,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4710,15 +4752,15 @@
                                     "params": {
                                         "body_topikId": 28,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 28,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4726,7 +4768,7 @@
                                     "params": {
                                         "body_topikId": 28,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4758,15 +4800,15 @@
                                     "params": {
                                         "body_topikId": 29,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 29,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4774,7 +4816,7 @@
                                     "params": {
                                         "body_topikId": 29,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
