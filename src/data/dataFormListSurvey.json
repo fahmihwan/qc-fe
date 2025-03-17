@@ -5930,14 +5930,25 @@
                   ]
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Ya'",
                   "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras?",
-                  "isRequired": true
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -5991,14 +6002,25 @@
                   ]
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Ya'",
                   "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu?",
-                  "isRequired": true
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6052,14 +6074,25 @@
                   ]
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Ya'",
                   "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai?",
-                  "isRequired": true
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6113,14 +6146,25 @@
                   ]
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Ya'",
                   "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong?",
-                  "isRequired": true
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6174,14 +6218,25 @@
                   ]
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Ya'",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung?",
-                  "isRequired": true
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi Jagung?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6235,14 +6290,25 @@
                   ]
                 },
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question2",
                   "visibleIf": "{question1} = 'Ya'",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit? ",
-                  "isRequired": true
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi Sawit?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
