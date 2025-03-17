@@ -125,7 +125,7 @@ const LineChartCustomizable = ({
                 ) : (
                     <div className="flex flex-col gap-4">
                         <div >
-                            <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-end rounded">
+                            <div className="ml-4 mt-2 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden p-2">
                                 {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
@@ -134,7 +134,7 @@ const LineChartCustomizable = ({
                                 ))}
                             </div>
                         </div>
-                        <div className="h-full w-full flex justify-center overflow-hidden">
+                        <div className="h-48 w-full flex justify-center overflow-hidden">
                             <Line data={chartData} options={options} />
                         </div>
                     </div>

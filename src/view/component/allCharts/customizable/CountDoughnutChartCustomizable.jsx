@@ -103,7 +103,7 @@ const CountDoughnutChartCustomizable = ({
                             <Doughnut data={chartData} options={options}  height={50}/>
                         </div>
                         <div >
-                            <div className="ml-4 mt-4 gap-y-1 flex flex-wrap items-center justify-center rounded">
+                            <div className="ml-4 mt-2 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden p-2">
                                 {labels.map((label, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
