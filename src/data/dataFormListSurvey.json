@@ -5948,12 +5948,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi beras dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6004,12 +5998,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi tebu dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6060,12 +6048,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi kedelai dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6116,12 +6098,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi singkong dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6172,12 +6148,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi jagung dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6228,12 +6198,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi sawit dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
