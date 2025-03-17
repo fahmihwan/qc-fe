@@ -3303,6 +3303,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3425,6 +3442,23 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3553,6 +3587,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3675,6 +3726,23 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3803,6 +3871,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3925,6 +4010,23 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
                   "isRequired": true,
                   "choices": [
                     {

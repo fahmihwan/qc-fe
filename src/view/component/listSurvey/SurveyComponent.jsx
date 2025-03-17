@@ -226,7 +226,7 @@ function SurveyComponent() {
             storeSurveyDinamis(finalResult).then((res) => {
                 alert('data survey berhasil di simpan')
             }).catch((error) => {
-                apiClient.post(`/qrcode`, {
+                apiClient.post(`/log-fe`, {
                     error: `ERROR FE SUBMIT SURVEY - message: ${error?.message} - code: ${error?.code} - stack: ${error?.stack} name: ${error?.name}`
                 })
                 alert('data survey gagal di simpan')
@@ -234,7 +234,7 @@ function SurveyComponent() {
 
 
         } catch (error) {
-            apiClient.post(`/qrcode`, {
+            apiClient.post(`/log-fe`, {
                 error: `ERROR FE SUBMIT SURVEY - message: ${error?.message} - code: ${error?.code} - stack: ${error?.stack} name: ${error?.name}`
             })
 
