@@ -1537,7 +1537,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi padi\n",
+                  "title": "Apakah terdapat kendala dalam produksi padi?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi padi",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1677,7 +1694,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi singkong\n",
+                  "title": "Apakah terdapat kendala dalam produksi singkong?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi singkong",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1817,7 +1851,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi tebu\n",
+                  "title": "Apakah terdapat kendala dalam produksi tebu?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi tebu",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1957,7 +2008,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi kedelai\n",
+                  "title": "Apakah terdapat kendala dalam produksi kedelai?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi kedelai",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2097,7 +2165,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi jagung\n",
+                  "title": "Apakah terdapat kendala dalam produksi jagung?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi jagung",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2237,7 +2322,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi sawit\n",
+                  "title": "Apakah terdapat kendala dalam produksi sawit?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi sawit",
                   "isRequired": true,
                   "choices": [
                     {
