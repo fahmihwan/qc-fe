@@ -21,6 +21,17 @@ const CountDoughnutChartCustomizable = ({
         document.documentElement.classList.contains("dark")
     );
 
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
+    : labels.map((label) => {
+        const key = Object.keys(label)[0]; // Ambil key dari object
+        return {
+            key,
+            label: label[key],
+            value: data[key] ?? 0
+        };
+    });
+
     // useEffect untuk mendeteksi perubahan dark mode secara dinamis
     useEffect(() => {
         const observer = new MutationObserver(() => {
@@ -34,10 +45,10 @@ const CountDoughnutChartCustomizable = ({
     
     const totalSumData = isDataEmpty ? 0 : Object.values(data).reduce((sum, value) => sum + value, 0)
     const chartData = {
-        labels,
+        labels: activeLabels.map(({label}) => label),
         datasets: [
             {
-                data: labels.map(label => data[label]), 
+                data: activeLabels.map(({value}) => value), 
                 backgroundColor: colors,
                 borderColor: "#ffffff", 
                 borderWidth: 1
@@ -103,8 +114,8 @@ const CountDoughnutChartCustomizable = ({
                             <Doughnut data={chartData} options={options}  height={50}/>
                         </div>
                         <div >
-                            <div className="ml-4 mt-2 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden p-2">
-                                {labels.map((label, index) => (
+                            <div className="ml-4 mt-2 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden">
+                                {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                     <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                     <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
