@@ -4194,7 +4194,6 @@
                   "name": "question6",
                   "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
-                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "isRequired": true,
                   "choices": [
                     {
