@@ -2461,13 +2461,13 @@
                 {
                   "type": "text",
                   "name": "question4",
-                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "title": "Jika ada peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (ha)",
                   "inputType": "number"
                 },
                 {
                   "type": "text",
                   "name": "question5",
-                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "title": "Jika ada perbaikan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas? (ha)",
                   "inputType": "number"
                 },
                 {
