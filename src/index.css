@@ -16,29 +16,67 @@
 }
 
 @layer utilities {
-    /* Custom Scrollbar */
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 10px; /* Lebar scrollbar */
-    }
-  
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #f1f1f1; /* Warna track (bagian belakang scrollbar) */
-      border-radius: 10px; /* Border radius track */
-    }
-  
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #888; /* Warna scrollbar */
-      border-radius: 10px; /* Border radius scrollbar */
-    }
-  
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-      background: #555; /* Warna saat hover */
-    }
+  /* Custom Scrollbar */
+  .custom-scrollbar {
+      overflow: auto;
+      scrollbar-gutter: stable;
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+}
   
 path.leaflet-interactive:focus {
   outline: none;
 }
+
+.pulse-circle {
+  position: relative;
+}
+
+.pulse-circle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  background-color: inherit;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 2s infinite ease-out;
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+  }
+}
+
+
 /* #surveyVizPanel {
     background-color: red;
     padding: 20px;
