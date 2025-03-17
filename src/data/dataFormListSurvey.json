@@ -118,6 +118,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -253,6 +254,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -390,6 +392,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -527,6 +530,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -664,6 +668,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -801,6 +806,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -912,6 +918,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "title": "Jika ada perubahan, apa penyebabnya?",
                   "isRequired": true,
                   "choices": [
@@ -1011,6 +1018,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1109,6 +1117,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1207,6 +1216,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1305,6 +1315,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1403,6 +1414,7 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Jika ada perubahan, apa penyebabnya?",
+                  "visibleIf": "{question5} = 'Ya (meningkat)' or {question5} = 'Ya (menurun)'",
                   "isRequired": true,
                   "choices": [
                     "Perbaikan teknik pertanian",
@@ -1531,7 +1543,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi padi\n",
+                  "title": "Apakah terdapat kendala dalam produksi padi?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi padi",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1671,7 +1700,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi singkong\n",
+                  "title": "Apakah terdapat kendala dalam produksi singkong?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi singkong",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1811,7 +1857,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi tebu\n",
+                  "title": "Apakah terdapat kendala dalam produksi tebu?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi tebu",
                   "isRequired": true,
                   "choices": [
                     {
@@ -1951,7 +2014,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi kedelai\n",
+                  "title": "Apakah terdapat kendala dalam produksi kedelai?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi kedelai",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2091,7 +2171,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi jagung\n",
+                  "title": "Apakah terdapat kendala dalam produksi jagung?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi jagung",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2231,7 +2328,24 @@
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Kendala utama dalam produksi sawit\n",
+                  "title": "Apakah terdapat kendala dalam produksi sawit?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question9",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "title": "Kendala utama dalam produksi sawit",
                   "isRequired": true,
                   "choices": [
                     {
@@ -2342,24 +2456,40 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
                   "name": "question4",
-                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (Ha)",
+                  "title": "Jika ada peningkatan jaringan irigasi dalam setahun terakhir, diperluas sebanyak berapa hektar? (ha)",
                   "inputType": "number"
                 },
                 {
                   "type": "text",
                   "name": "question5",
-                  "title": "Jika ada perbaikan atau peningkatan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas ? (Ha)",
+                  "title": "Jika ada perbaikan jaringan irigasi dalam setahun terakhir,diperbaiki di area seluas? (ha)",
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2462,8 +2592,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2478,8 +2607,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2582,8 +2728,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2598,8 +2743,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2702,8 +2864,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2718,8 +2879,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2822,8 +3000,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2838,8 +3015,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -2942,8 +3136,7 @@
                       "value": "< 25%",
                       "text": "< 25%"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "text",
@@ -2958,8 +3151,25 @@
                   "inputType": "number"
                 },
                 {
+                    "type": "radiogroup",
+                    "name": "question6",
+                    "title": "Apakah ada kendala dalam irigasi?",
+                    "isRequired": true,
+                    "choices": [
+                      {
+                        "value": "Ya",
+                        "text": "Ya"
+                      },
+                      {
+                        "value": "Tidak",
+                        "text": "Tidak"
+                      }
+                    ]
+                },
+                {
                   "type": "radiogroup",
-                  "name": "question6",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "name": "question7",
                   "title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -3093,6 +3303,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3215,6 +3442,23 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3343,6 +3587,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3465,6 +3726,23 @@
                   "type": "radiogroup",
                   "name": "question6",
                   "title": "Apakah ada kendala dalam mendapatkan pupuk?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -3593,6 +3871,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3718,6 +4013,23 @@
                   "isRequired": true,
                   "choices": [
                     {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "visibleIf": "{question6} = 'Ya'",
+                  "title": "Jika ya, apa kendalanya?",
+                  "isRequired": true,
+                  "choices": [
+                    {
                       "value": "Ketersediaan pupuk di pasaran",
                       "text": "Ketersediaan pupuk di pasaran"
                     },
@@ -3770,10 +4082,6 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "0% (Tidak ada serangan)",
-                      "text": "0% (Tidak ada serangan)"
-                    },
-                    {
                       "value": "1 - 10%",
                       "text": "1 - 10%"
                     },
@@ -3863,7 +4171,7 @@
                   "title": "Efektivitas upaya pengendalian hama",
                   "isRequired": true,
                   "choices": [
-                    {
+                      {
                       "value": "Sangat efektif (hama hampir tidak ada)",
                       "text": "Sangat efektif (hama hampir tidak ada)"
                     },
@@ -3876,27 +4184,15 @@
                       "text": "Kurang efektif (hama masih bestisida kimia"
                     },
                     {
-                      "value": "Pestisida nabati/organik",
-                      "text": "Pestisida nabati/organik"
-                    },
-                    {
-                      "value": "Predator alami (burung, serangga pemangsa)",
-                      "text": "Predator alami (burung, serangga pemangsa)"
-                    },
-                    {
-                      "value": "Sistem tanam bergilir",
-                      "text": "Sistem tanam bergilir"
-                    },
-                    {
-                      "value": "Penggunaan varietas tahan hama",
-                      "text": "Penggunaan varietas tahan hama"
+                      "value": "Tidak efektif sama sekali",
+                      "text": "Tidak efektif sama sekali"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "radiogroup",
                   "name": "question6",
+                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
                   "isRequired": true,
                   "choices": [
@@ -3918,12 +4214,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "question7",
-                  "title": "Upaya pengendalian hama yang dilakukan:",
-                  "inputType": "number"
                 }
               ]
             }
@@ -3953,10 +4243,6 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "0% (Tidak ada serangan)",
-                      "text": "0% (Tidak ada serangan)"
-                    },
-                    {
                       "value": "1 - 10%",
                       "text": "1 - 10%"
                     },
@@ -4059,28 +4345,16 @@
                       "text": "Kurang efektif (hama masih bestisida kimia"
                     },
                     {
-                      "value": "Pestisida nabati/organik",
-                      "text": "Pestisida nabati/organik"
-                    },
-                    {
-                      "value": "Predator alami (burung, serangga pemangsa)",
-                      "text": "Predator alami (burung, serangga pemangsa)"
-                    },
-                    {
-                      "value": "Sistem tanam bergilir",
-                      "text": "Sistem tanam bergilir"
-                    },
-                    {
-                      "value": "Penggunaan varietas tahan hama",
-                      "text": "Penggunaan varietas tahan hama"
+                      "value": "Tidak efektif sama sekali",
+                      "text": "Tidak efektif sama sekali"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "radiogroup",
                   "name": "question6",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4101,12 +4375,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "question7",
-                  "title": "Upaya pengendalian hama yang dilakukan:",
-                  "inputType": "number"
                 }
               ]
             }
@@ -4136,10 +4404,6 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "0% (Tidak ada serangan)",
-                      "text": "0% (Tidak ada serangan)"
-                    },
-                    {
                       "value": "1 - 10%",
                       "text": "1 - 10%"
                     },
@@ -4229,7 +4493,7 @@
                   "title": "Efektivitas upaya pengendalian hama",
                   "isRequired": true,
                   "choices": [
-                    {
+                      {
                       "value": "Sangat efektif (hama hampir tidak ada)",
                       "text": "Sangat efektif (hama hampir tidak ada)"
                     },
@@ -4242,28 +4506,16 @@
                       "text": "Kurang efektif (hama masih bestisida kimia"
                     },
                     {
-                      "value": "Pestisida nabati/organik",
-                      "text": "Pestisida nabati/organik"
-                    },
-                    {
-                      "value": "Predator alami (burung, serangga pemangsa)",
-                      "text": "Predator alami (burung, serangga pemangsa)"
-                    },
-                    {
-                      "value": "Sistem tanam bergilir",
-                      "text": "Sistem tanam bergilir"
-                    },
-                    {
-                      "value": "Penggunaan varietas tahan hama",
-                      "text": "Penggunaan varietas tahan hama"
+                      "value": "Tidak efektif sama sekali",
+                      "text": "Tidak efektif sama sekali"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "radiogroup",
                   "name": "question6",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4284,12 +4536,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "question7",
-                  "title": "Upaya pengendalian hama yang dilakukan:",
-                  "inputType": "number"
                 }
               ]
             }
@@ -4319,10 +4565,6 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "0% (Tidak ada serangan)",
-                      "text": "0% (Tidak ada serangan)"
-                    },
-                    {
                       "value": "1 - 10%",
                       "text": "1 - 10%"
                     },
@@ -4412,7 +4654,7 @@
                   "title": "Efektivitas upaya pengendalian hama",
                   "isRequired": true,
                   "choices": [
-                    {
+                      {
                       "value": "Sangat efektif (hama hampir tidak ada)",
                       "text": "Sangat efektif (hama hampir tidak ada)"
                     },
@@ -4425,28 +4667,16 @@
                       "text": "Kurang efektif (hama masih bestisida kimia"
                     },
                     {
-                      "value": "Pestisida nabati/organik",
-                      "text": "Pestisida nabati/organik"
-                    },
-                    {
-                      "value": "Predator alami (burung, serangga pemangsa)",
-                      "text": "Predator alami (burung, serangga pemangsa)"
-                    },
-                    {
-                      "value": "Sistem tanam bergilir",
-                      "text": "Sistem tanam bergilir"
-                    },
-                    {
-                      "value": "Penggunaan varietas tahan hama",
-                      "text": "Penggunaan varietas tahan hama"
+                      "value": "Tidak efektif sama sekali",
+                      "text": "Tidak efektif sama sekali"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "radiogroup",
                   "name": "question6",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4467,12 +4697,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "question7",
-                  "title": "Upaya pengendalian hama yang dilakukan:",
-                  "inputType": "number"
                 }
               ]
             }
@@ -4502,10 +4726,6 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "0% (Tidak ada serangan)",
-                      "text": "0% (Tidak ada serangan)"
-                    },
-                    {
                       "value": "1 - 10%",
                       "text": "1 - 10%"
                     },
@@ -4595,7 +4815,7 @@
                   "title": "Efektivitas upaya pengendalian hama",
                   "isRequired": true,
                   "choices": [
-                    {
+                      {
                       "value": "Sangat efektif (hama hampir tidak ada)",
                       "text": "Sangat efektif (hama hampir tidak ada)"
                     },
@@ -4608,28 +4828,16 @@
                       "text": "Kurang efektif (hama masih bestisida kimia"
                     },
                     {
-                      "value": "Pestisida nabati/organik",
-                      "text": "Pestisida nabati/organik"
-                    },
-                    {
-                      "value": "Predator alami (burung, serangga pemangsa)",
-                      "text": "Predator alami (burung, serangga pemangsa)"
-                    },
-                    {
-                      "value": "Sistem tanam bergilir",
-                      "text": "Sistem tanam bergilir"
-                    },
-                    {
-                      "value": "Penggunaan varietas tahan hama",
-                      "text": "Penggunaan varietas tahan hama"
+                      "value": "Tidak efektif sama sekali",
+                      "text": "Tidak efektif sama sekali"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "radiogroup",
                   "name": "question6",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4650,12 +4858,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "question7",
-                  "title": "Upaya pengendalian hama yang dilakukan:",
-                  "inputType": "number"
                 }
               ]
             }
@@ -4685,10 +4887,6 @@
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "0% (Tidak ada serangan)",
-                      "text": "0% (Tidak ada serangan)"
-                    },
-                    {
                       "value": "1 - 10%",
                       "text": "1 - 10%"
                     },
@@ -4778,7 +4976,7 @@
                   "title": "Efektivitas upaya pengendalian hama",
                   "isRequired": true,
                   "choices": [
-                    {
+                      {
                       "value": "Sangat efektif (hama hampir tidak ada)",
                       "text": "Sangat efektif (hama hampir tidak ada)"
                     },
@@ -4791,28 +4989,16 @@
                       "text": "Kurang efektif (hama masih bestisida kimia"
                     },
                     {
-                      "value": "Pestisida nabati/organik",
-                      "text": "Pestisida nabati/organik"
-                    },
-                    {
-                      "value": "Predator alami (burung, serangga pemangsa)",
-                      "text": "Predator alami (burung, serangga pemangsa)"
-                    },
-                    {
-                      "value": "Sistem tanam bergilir",
-                      "text": "Sistem tanam bergilir"
-                    },
-                    {
-                      "value": "Penggunaan varietas tahan hama",
-                      "text": "Penggunaan varietas tahan hama"
+                      "value": "Tidak efektif sama sekali",
+                      "text": "Tidak efektif sama sekali"
                     }
-                  ],
-                  "showOtherItem": true
+                  ]
                 },
                 {
                   "type": "radiogroup",
                   "name": "question6",
                   "title": " Jika pengendalian kurang efektif, apa kendala utamanya?",
+                  "visibleIf": "{question5} = 'Cukup efektif (hama berkurang signifikan)' or {question5} = 'Kurang efektif (hama masih bestisida kimia' or {question5} = 'Tidak efektif sama sekali'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -4833,12 +5019,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "text",
-                  "name": "question7",
-                  "title": "Upaya pengendalian hama yang dilakukan:",
-                  "inputType": "number"
                 }
               ]
             }
@@ -4898,7 +5078,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -4928,7 +5108,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -4957,7 +5137,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5034,7 +5214,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5064,7 +5244,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5093,7 +5273,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5170,7 +5350,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5200,7 +5380,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5229,7 +5409,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5306,7 +5486,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5336,7 +5516,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5365,7 +5545,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5442,7 +5622,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5472,7 +5652,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5501,7 +5681,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5578,7 +5758,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5608,7 +5788,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5637,7 +5817,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5914,19 +6094,41 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Padi",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi Beras di daerah Anda",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras ",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi Beras di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "name": "question2",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -5948,12 +6150,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi beras dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -5970,19 +6166,41 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Tebu",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi tebu di daerah Anda",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu ",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi tebu di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "name": "question2",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6004,12 +6222,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi tebu dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6026,19 +6238,41 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Kedelai",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi kedelai di daerah Anda",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai ",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi kedelai di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "name": "question2",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6060,12 +6294,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi kedelai dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6082,19 +6310,41 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Singkong",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi singkong di daerah Anda",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong ",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi singkong di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "name": "question2",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6116,12 +6366,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi singkong dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6138,19 +6382,41 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Jagung",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi jagung di daerah Anda",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung ",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi jagung di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "name": "question2",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi Jagung?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6172,12 +6438,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi jagung dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6194,19 +6454,41 @@
               "title": "Realisasi Pembangunan Lahan untuk Produksi Sawit",
               "elements": [
                 {
-                  "type": "boolean",
+                  "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada perluasan lahan pertanian untuk produksi sawit di daerah Anda",
-                  "isRequired": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question2",
-                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit ",
-                  "isRequired": true
+                  "title": "Apakah ada perluasan lahan pertanian untuk produksi sawit di daerah Anda?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
                 },
                 {
                   "type": "radiogroup",
+                  "name": "question2",
+                  "visibleIf": "{question1} = 'Ya'",
+                  "title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi Sawit?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "visibleIf": "{question2} = 'Tidak'",
                   "name": "question3",
                   "title": "Jika belum, apa kendala utamanya?",
                   "choices": [
@@ -6228,12 +6510,6 @@
                     }
                   ],
                   "showOtherItem": true
-                },
-                {
-                  "type": "boolean",
-                  "name": "question4",
-                  "title": " Apakah distribusi sawit dari petani ke pasar berjalan lancar?\n",
-                  "isRequired": true
                 }
               ]
             }
@@ -6866,9 +7142,10 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -6952,7 +7229,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7070,9 +7347,10 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7156,7 +7434,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7274,9 +7552,10 @@
                     "otherText": "Lainnya"
                   },
                   {
-                    "type": "dropdown",
+                    "type": "radiogroup",
                     "name": "question5",
                     "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                    "visibleIf": "{question4} = 'Ya'",
                     "isRequired": true,
                     "choices": [
                       {
@@ -7360,7 +7639,7 @@
                   {
                     "type": "radiogroup",
                     "name": "question9",
-                    "visibleIf": "{question8} notempty",
+                    "visibleIf": "{question8} = 'Ya'",
                     "title": "Jika ya, apa masalah yang sering terjadi?",
                     "choices": [
                       {
@@ -7478,9 +7757,10 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7564,7 +7844,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7682,9 +7962,10 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7768,7 +8049,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
@@ -7886,9 +8167,10 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
+                  "visibleIf": "{question4} = 'Ya'",
                   "isRequired": true,
                   "choices": [
                     {
@@ -7972,7 +8254,7 @@
                 {
                   "type": "radiogroup",
                   "name": "question9",
-                  "visibleIf": "{question8} notempty",
+                  "visibleIf": "{question8} = 'Ya'",
                   "title": "Jika ya, apa masalah yang sering terjadi?",
                   "choices": [
                     {
