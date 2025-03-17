@@ -5079,7 +5079,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5109,7 +5109,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5138,7 +5138,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5215,7 +5215,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5245,7 +5245,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5274,7 +5274,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5351,7 +5351,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5381,7 +5381,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5410,7 +5410,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5487,7 +5487,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5517,7 +5517,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5546,7 +5546,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5623,7 +5623,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5653,7 +5653,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5682,7 +5682,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
@@ -5759,7 +5759,7 @@
                   ]
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
                   "title": "Alasan utama lahan masih kosong",
                   "isRequired": true,
@@ -5789,7 +5789,7 @@
                   "otherText": "Lainnya"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question4",
                   "title": " Berapa lama lahan kosong tidak ditanami?",
                   "isRequired": true,
@@ -5818,7 +5818,7 @@
                   "separateSpecialChoices": true
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question5",
                   "title": "Rencana penggunaan lahan kosong ke depan",
                   "isRequired": true,
