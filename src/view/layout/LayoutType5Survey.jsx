@@ -120,11 +120,11 @@ const LayoutType5Survey = ({
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <div className='h-[412px] mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                                    <div className='h-[363px] mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
                                         {/* children pertama */}
                                         {children[0]}
                                     </div>
-                                    <div className='h-[412px]  col-span-3 dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                                    <div className='h-[363px]  col-span-3 dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
                                         {/* children kedua */}
                                         {children[1]}
                                     </div>
@@ -133,7 +133,7 @@ const LayoutType5Survey = ({
                             
                             <div className='w-full xl:col-span-2 flex flex-col overflow-hidden'>
                                 <motion.div 
-                                    className=' mx-5 h-[364px] mb-5 border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
+                                    className=' mx-5 h-[382px] mb-5 border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
@@ -143,7 +143,7 @@ const LayoutType5Survey = ({
                                     {children[2]}
                                 </motion.div>
                                 <motion.div 
-                                    className=' mx-5 mb-5 h-[450px] border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
+                                    className=' mx-5 mb-5 h-[382px] border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}

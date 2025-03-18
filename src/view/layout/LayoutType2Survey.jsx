@@ -157,11 +157,11 @@ const LayoutType2Survey = ({
                                 whileInView={"show"}
                                 viewport={{once: true, amount: 0.5}}
                             >
-                                <div className='min-h-[326px] md:mb-0  col-span-4 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                                <div className='h-[363px] md:mb-0  col-span-4 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
                                     {/* children pertama */}
                                     {children[0]}
                                 </div>
-                                <div className='min-h-[200px] md:min-h-[300px] flex flex-col col-span-5  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                                <div className='h-[363px] md:min-h-[300px] flex flex-col col-span-5  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
                                     {/* children kedua */}
                                     {children[1]}
                                 </div>
