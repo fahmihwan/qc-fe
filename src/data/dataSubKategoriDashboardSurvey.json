@@ -360,6 +360,7 @@
                 {
                     "title": "Perubahan luas lahan dalam setahun terakhir",
                     "type": "line-chart",
+                    "labels-position": "top-right",
                     "labels": [
                         {"meningkat": "Meningkat"},
                         {"menurun": "Menurun"}
@@ -402,6 +403,7 @@
                 {
                     "title": "Jenis lahan yang digunakan",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-left",
                     "labels": [
                         "Sawah irigasi teknis", 
                         "Sawah tadah hujan", 
@@ -512,7 +514,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnya"}
+                                {"lainnya": "Lainnya"}
                             ]
                         }
                     ],
@@ -570,7 +572,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -628,7 +630,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -686,7 +688,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -744,7 +746,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -802,7 +804,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -940,7 +942,7 @@
                         {"Kondisi Irigasi": "Irigasi"},
                         {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                         {"Perubahan Cuaca": "Perubahan Cuaca"},
-                        {"Lainnya": "Lainnnya"}
+                        {"lainnya": "Lainnnya"}
                     ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1630,7 +1632,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1642,7 +1650,7 @@
                                     "params": {
                                         "body_topikId": 55,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1687,7 +1695,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1699,7 +1713,7 @@
                                     "params": {
                                         "body_topikId": 56,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1744,7 +1758,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1756,7 +1776,7 @@
                                     "params": {
                                         "body_topikId": 57,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1801,7 +1821,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1813,7 +1839,7 @@
                                     "params": {
                                         "body_topikId": 58,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1858,7 +1884,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1870,7 +1902,7 @@
                                     "params": {
                                         "body_topikId": 59,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1915,7 +1947,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1927,7 +1965,7 @@
                                     "params": {
                                         "body_topikId": 60,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -2573,7 +2611,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2629,7 +2677,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2685,7 +2743,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2741,7 +2809,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2797,7 +2875,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2853,7 +2941,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -3033,7 +3131,6 @@
                     "type": "pie-chart",
                     "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
                     "colors": [
-                        "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
                         "rgba(255, 0, 255, 1)",
                         "rgba(251, 93, 37, 1)",
@@ -3564,7 +3661,7 @@
         },
         {
             "title":"Ketersediaan Komoditas",
-            "topicTitle": "Jumlah Daerah dengan Ketersediaan Komoditas",
+            "topicTitle": "Ketersediaan Komoditas",
             "img": "/assets/icon/8.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
@@ -3573,7 +3670,7 @@
                     "sub_category": "Padi",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3592,7 +3689,7 @@
                             "kode": "foodestate-padi-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 7,
                                         "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
@@ -3615,7 +3712,7 @@
                     "sub_category": "Tebu",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3634,7 +3731,7 @@
                             "kode": "foodestate-tabu-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 8,
                                         "body_title": "Apakah Suplai Tebu tersedia dengan cukup di daerah Anda?",
@@ -3657,7 +3754,7 @@
                     "sub_category": "Kedelai",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3676,7 +3773,7 @@
                             "kode": "foodestate-kedelai-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 9,
                                         "body_title": "Apakah Suplai kedelai tersedia dengan cukup di daerah Anda?",
@@ -3699,7 +3796,7 @@
                     "sub_category": "Singkong",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3718,7 +3815,7 @@
                             "kode": "foodestate-singkong-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 10,
                                         "body_title": "Apakah Suplai singkong tersedia dengan cukup di daerah Anda?",
@@ -3741,7 +3838,7 @@
                     "sub_category": "Jagung",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3760,7 +3857,7 @@
                             "kode": "foodestate-jagung-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 11,
                                         "body_title": "Apakah Suplai Jagung tersedia dengan cukup di daerah Anda?",
@@ -3783,7 +3880,7 @@
                     "sub_category": "Sawit",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3802,7 +3899,7 @@
                             "kode": "foodestate-sawit-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 12,
                                         "body_title": "Apakah Suplai Sawit tersedia dengan cukup di daerah Anda?",
@@ -5305,7 +5402,7 @@
             "charts": [
                 {
                     "title": "Jenis perubahan konsumsi akibat harga",
-                    "type": "line-chart-bar-chart-horizontal",
+                    "type": "bar-chart-horizontal",
                     "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Mengurangi porsi makan harian", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
