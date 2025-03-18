@@ -116,15 +116,15 @@ const LineChartCustomizable = ({
     }
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col h-full">
             {
                 isDataEmpty ? (
-                    <div className="flex flex-col h-full justify-center">
+                    <div className="min-h-64 flex flex-col h-full justify-center items-center">
                         <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                     </div>
                 ) : (
                     <div className="flex flex-col gap-4">
-                        <div >
+                        <div >  
                             <div className="ml-4 mt-2 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden">
                                 {activeLabels.map(({label}, index) => (
                                 <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>

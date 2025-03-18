@@ -103,10 +103,10 @@ const BarChartTumpukColumn = ({
     }
     
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full h-full">
         {
             isDataEmpty ? (
-                <div className="flex flex-col h-full justify-center">
+                <div className="flex flex-col h-full justify-center items-center">
                     <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                 </div>
             ) : (

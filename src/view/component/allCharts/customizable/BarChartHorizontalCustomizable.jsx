@@ -22,14 +22,23 @@ const BarChartHorizontalCustomizable = ({
     const availableKeys = isDataEmpty ? [] : Object.keys(data[0]).slice(1); 
     // console.log("ini availablekeys", availableKeys)
     
-    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
-    ? labels.map(label => ({ key: label, label })) 
-    : availableKeys.map((key) => {
-        const labelObj = labels.find(obj => obj && obj.hasOwnProperty(key)); 
-        return {
-            key, 
-            label: labelObj ? labelObj[key] : key 
-        };
+    // const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    // ? labels.map(label => ({ key: label, label })) 
+    // : availableKeys.map((key) => {
+    //     const labelObj = labels.find(obj => obj && obj.hasOwnProperty(key)); 
+    //     return {
+    //         key, 
+    //         label: labelObj ? labelObj[key] : key 
+    //     };
+    // });
+
+    const activeLabels = labels.map(label => {
+        if (typeof label === "string") {
+            return { key: label, label }; 
+        } else {
+            const key = Object.keys(label)[0]; 
+            return { key, label: label[key] };
+        }
     });
 
 // console.log("ini keyLabelMap:", keyLabelMap);
@@ -39,9 +48,9 @@ const BarChartHorizontalCustomizable = ({
     
     const datasets = isDataEmpty ? [] : activeLabels.map(({key, label}, index) => ({
         label,
-        data: data.map((item) => item[key]),
-        backgroundColor: colors[index],
-        borderColor: colors[index],
+        data: data.map((item) => item[key] ?? 0),
+        backgroundColor: colors[index % colors.length],
+        borderColor: colors[index % colors.length],
         borderWidth: 0
     }))
 
@@ -118,12 +127,12 @@ const BarChartHorizontalCustomizable = ({
     }
 
     return (
-        <div className="flex flex-col">
+        <div className="h-full">
         {
             isDataEmpty ? (
-                <div className="flex flex-col h-full justify-center">
-                    <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
-                </div>
+                <div className="min-h-64 flex flex-col h-full justify-center items-center">
+                        <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
+                    </div>
             ) : (
                 <div className="flex flex-col gap-4">
                     <div >
