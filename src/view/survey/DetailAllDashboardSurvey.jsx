@@ -141,11 +141,13 @@ const DetailAllDashboardSurvey = () => {
         console.log("ini specifiedlabelschart", specifiedLabelsChart)
 
         return (
-            <div key={index} className="w-full h-full">
+            <div key={index} className="w-full h-full flex flex-col justify-between">
                 <div className="dark:text-white font-bold text-xl text-left mb-4">
                     {specifiedTitleChart}
                 </div>
+                <div className="">
                 <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedLabelsChart} colors={specifiedTopicChart.colors}/>
+                </div>
             </div>
         )
     })
