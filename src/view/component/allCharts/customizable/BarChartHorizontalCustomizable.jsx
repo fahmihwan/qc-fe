@@ -7,7 +7,8 @@ const BarChartHorizontalCustomizable = ({
     labels = [],
     colors = [],
     width,
-    height
+    height,
+    labelsPosition = "bottom-right"
 }) => {
     console.log("data yg diterima", data)
     const isDataEmpty = !data // Jika `data` null atau undefined
@@ -135,20 +136,43 @@ const BarChartHorizontalCustomizable = ({
                     </div>
             ) : (
                 <div className="flex flex-col gap-4">
-                    <div >
-                        <div className="ml-4 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden ">
+                    <div className={labelsPosition.startsWith("top") ? "order-1" : "order-2"}>  
+                        <div className={`
+                                mt-2 w-full px-2 max-h-12 max-w-[90%] gap-y-1 flex flex-wrap overflow-y-scroll custom-scrollbar orverflow-x-hidden
+                                ${labelsPosition.endsWith("right")
+                                    ? "justify-end"
+                                    : labelsPosition.endsWith("left")
+                                    ? "justify-start"
+                                    : "justify-center"
+                                }
+                            `}>
                             {activeLabels.map(({label}, index) => (
                             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
                                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
-                                <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
+                                <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
                             </div>
                             ))}
                         </div>
                     </div>
-                    <div className="h-48 p-2 flex justify-center overflow-hidden">
+                    <div className={`h-48 w-full flex justify-center overflow-hidden order-1 ${labelsPosition.startsWith("top") ? "order-2" : "order-1"}`}>
                         <Bar data={chartData} options={options} />
                     </div>
                 </div>
+                // <div className="flex flex-col gap-4">
+                //     <div >
+                //         <div className="ml-4 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden ">
+                //             {activeLabels.map(({label}, index) => (
+                //             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
+                //                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
+                //                 <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
+                //             </div>
+                //             ))}
+                //         </div>
+                //     </div>
+                //     <div className="h-48 p-2 flex justify-center overflow-hidden">
+                //         <Bar data={chartData} options={options} />
+                //     </div>
+                // </div>
             )
         }
         </div>
