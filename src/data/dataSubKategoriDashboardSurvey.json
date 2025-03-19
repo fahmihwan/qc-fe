@@ -2200,7 +2200,7 @@
                                     }   
                                 },
                                 {
-                                    "type": "pie",
+                                    "type": "pie-checkbox",
                                     "params": {
                                         "body_topikId": 61,
                                         "body_title": "Jenis pupuk yang digunakan ",
@@ -3221,7 +3221,7 @@
                             "kode": "foodestate-padi-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 73,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3281,7 +3281,7 @@
                             "kode": "foodestate-tebu-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 74,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3341,7 +3341,7 @@
                             "kode": "foodestate-kedelai-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 75,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3401,7 +3401,7 @@
                             "kode": "foodestate-singkong-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 76,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3461,7 +3461,7 @@
                             "kode": "foodestate-jagung-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 77,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3521,7 +3521,7 @@
                             "kode": "foodestate-sawit-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 78,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3586,6 +3586,7 @@
                         "rgba(0, 168, 255, 1)",
                         "rgba(255, 0, 255, 1)",
                         "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
                         "rgba(255, 0, 0, 1)"
                     ],
                     "dummyData": {
@@ -4392,7 +4393,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4433,7 +4437,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4474,7 +4481,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4515,7 +4525,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4556,7 +4569,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4597,7 +4613,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4637,7 +4656,7 @@
             "charts": [
                 {
                     "title": "Distribusi pangan yang berjalan lancar",
-                    "type": "bar-chart-horizontal",
+                    "type": "bar-chart-vertical",
                     "labels-position": "top-right",
                     "labels": ["Lancar", "Bermasalah"],
                     "colors": [
@@ -6072,11 +6091,11 @@
             ]
         },
         {
-            "title":"Pemanfaatan Lahan di Sekitar Batas Hutan",
-            "topicTitle": "Pemanfaatan Lahan di Sekitar Batas Hutan",
-            "img": "/assets/icon/14.png",
+            "title":"Potensi Konflik di Sekitar Batas Hutan",
+            "topicTitle": "Potensi Konflik di Sekitar Batas Hutan",
+            "img": "/assets/icon/15.png",
             "layoutType": "layout3",
-            "url":"/dashboard-hasil-survey/pemanfaatan-lahan",
+            "url":"/dashboard-hasil-survey/potensi-konflik",
             "payload": [],
             "charts": [
                 {
@@ -6217,11 +6236,11 @@
             ]
         },
         {
-            "title":"Potensi Konflik di Sekitar Batas Hutan",
-            "topicTitle": "Potensi Konflik di Sekitar Batas Hutan",
-            "img": "/assets/icon/15.png",
+            "title":"Pelestarian dan Keberlanjutan Batas Hutan",
+            "topicTitle": "Pelestarian dan Keberlanjutan Batas Hutan",
+            "img": "/assets/icon/16.png",
             "layoutType": "layout3",
-            "url":"/dashboard-hasil-survey/potensi-konflik",
+            "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
             "payload": [],
             "charts": [
                 {
@@ -6329,37 +6348,469 @@
             ]
         },
         {
-            "title":"Pelestarian dan Keberlanjutan Batas Hutan",
-            "topicTitle": "Pelestarian dan Keberlanjutan Batas Hutan",
+            "title":"Kondisi sosio-ekonomi masyarakat",
+            "topicTitle": "Kondisi sosio-ekonomi masyarakat",
             "img": "/assets/icon/16.png",
-            "layoutType": "layout6",
-            "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
-            "payload": [],
+            "layoutType": "layout5",
+            "url":"/dashboard-hasil-survey/kondisi-sosio-ekonomi-masyarakat",
+            "payload": [
+                {
+                    "sub_category": "Lainnya",
+                    "chart_details": [
+                        {
+                            "title": "Pekerjaan sampingan yang paling banyak dilakukan",
+                            "labels": ["Buruh harian", "Bertani", "Dagang", "Ojek/Transportasi", "Lainnya"]
+                        },
+                        {
+                            "title": "Kesulitan yang paling dirasakan masyarakat",
+                            "labels": ["Harga mahal", "Lapangan kerja", "Akses transportasi", "Gangguan keamanan", "Lainnya"]
+                        },
+                        {
+                            "title": "Apakah ada perubahan harga barang?",
+                            "labels": ["Ya", "Tidak"]
+                        },
+                        {
+                            "title": "Tempat yang paling sering digunakan untuk acara warga",
+                            "labels": ["Pasar", "Balai Desa", "Masjid/Gereja", "Rumah Warga", "Tempat Lain"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "lainnya-lainnya-kondisisosioekonomimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Kalau cari tambahan penghasilan, biasanya orang-orang di sekitar sini kerja apa?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Apa yang paling sering bikin warga di sini kesulitan sehari-hari?",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Akhir-akhir ini ada perubahan harga barang atau biaya hidup yang paling terasa nggak?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Biasanya kalau ada acara atau kumpul-kumpul di sini, paling sering diadakan di mana?",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
-                    "title": "Program rehabilitasi hutan",
-                    "type": "pie-chart",
-                    "labels": [],
-                    "colors": [],
+                    "title": "Pekerjaan sampingan yang paling banyak dilakukan",
+                    "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
+                    "labels": ["Buruh harian", "Bertani", "Dagang", "Ojek/Transportasi", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Kesulitan yang paling dirasakan masyarakat",
+                    "type": "bar-chart-tumpuk",
+                    "labels-position": "bottom-center",
+                    "labels": ["Harga mahal", "Lapangan kerja", "Akses transportasi", "Gangguan keamanan", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Apakah ada perubahan harga barang?",
+                    "type": "pie-chart-percentage",
+                    "labels-position": "bottom-center",
+                    "labels": ["Ya", "Tidak"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(251, 93, 37, 1)"
+                    ],
                     "dummyData": {
                         "data": {
-                            
+                            "Ya": 31894,
+                            "Tidak": 1298
                         }
                     }
                 },
                 {
-                    "title": "Manfaat ekonomi dari konservasi",
-                    "type": "word-cloud",
-                    "labels": [],
-                    "colors": [],
+                    "title": "Tempat yang paling sering digunakan untuk acara warga",
+                    "type": "count-doughnut-chart-percentage",
+                    "labels-position": "bottom-center",
+                    "labels": ["Pasar", "Balai Desa", "Masjid/Gereja", "Rumah Warga", "Tempat Lain"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
                     "dummyData": {
                         "data": {
-                            
+                            "Pasar": 135359,
+                            "Balai Desa": 80809,
+                            "Masjid/Gereja": 91383,
+                            "Rumah Warga": 9408,
+                            "Tempat Lain": 1937
                         }
                     }
                 }
             ]
-        }
-
+        },
+        {
+            "title":"Akses dan Keamanan di Lingkungan Masyarakat",
+            "topicTitle": "Akses dan Keamanan di Lingkungan Masyarakat",
+            "img": "/assets/icon/16.png",
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/akses-dan-keamanan",
+            "payload": [
+                {
+                    "sub_category": "Lainnya",
+                    "chart_details": [
+                        {
+                            "title": "Persepsi Keamanan di Berbagai Provinsi: Tempat Rawan atau Tidak?",
+                            "labels": ["Ya", "Tidak"]
+                        },
+                        {
+                            "title": "Frekuensi kejadian pencurian atau kehilangan barang",
+                            "labels": ["Sering", "Kadang-kadang", "Jarang", "Tidak Pernah"]
+                        },
+                        {
+                            "title": "Tingkat keramaian jalanan di malam hari",
+                            "labels": ["Ramai", "Biasa saja", "Sepi banget"]
+                        },
+                        {
+                            "title": "Usulan warga untuk meningkatkan keamanan",
+                            "labels": []
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "lainnya-lainnya-aksesdankeamanandilingkunganmasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "Apa ada tempat di sekitar sini yang sering dianggap rawan atau kurang aman?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "Seberapa sering warga di sini mengalami kejadian kehilangan barang atau pencurian? (kriminal)",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "kondisi jalanan pada malam hari, jalanan di sekitar sini biasanya ramai atau sepi?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "Menurut warga, apa yang bisa membuat lingkungan ini lebih aman?",
+                                        "body_name_input": "question8"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "charts": [
+                {
+                    "title": "Persepsi Keamanan di Berbagai Provinsi: Tempat Rawan atau Tidak?",
+                    "type": "bar-chart-vertical",
+                    "labels": ["Ya", "Tidak"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",                                
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Frekuensi kejadian pencurian atau kehilangan barang",
+                    "type": "bar-chart-vertical",
+                    "labels": ["Sering", "Kadang-kadang", "Jarang", "Tidak Pernah"],
+                    "colors": [
+                        "rgba(255, 0, 0, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(0, 177, 0, 1)"
+                        
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Tingkat keramaian jalanan di malam hari",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Ramai", "Biasa saja", "Sepi banget"],
+                    "colors": [
+                        "rgba(255, 0, 0, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2022,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2023,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2024,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2025,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Usulan warga untuk meningkatkan keamanan",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "text": "Penerangan jalan",
+                                "value": 381
+                            },
+                            {
+                                "text": "Patroli keamanan",
+                                "value": 39
+                            },
+                            {
+                                "text": "Kamera CCTV",
+                                "value": 83
+                            },
+                            {
+                                "text": "Gotong royong warga",
+                                "value": 31
+                            },
+                            {
+                                "text": "Lainnya1",
+                                "value": 3871
+                            },
+                            {
+                                "text": "Lainnya2",
+                                "value": 88
+                            },
+                            {
+                                "text": "Lainnya3",
+                                "value": 90
+                            }
+                        ]
+                    }
+                }
+            ]
+        }   
     ]
 }
