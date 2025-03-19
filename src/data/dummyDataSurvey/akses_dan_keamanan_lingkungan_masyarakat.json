@@ -1,0 +1,142 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Persepsi Keamanan di Berbagai Provinsi: Tempat Rawan atau Tidak?",
+            "data": [
+                {
+                    "nama_provinsi": "Sumatera Utara",
+                    "Ya": 1213,
+                    "Tidak": 1232
+                },
+                {
+                    "nama_provinsi": "Papua Tengah",
+                    "Ya": 1213,
+                    "Tidak": 1232
+                },
+                {
+                    "nama_provinsi": "DKI Jakarta",
+                    "Ya": 1213,
+                    "Tidak": 1232
+                },
+                {
+                    "nama_provinsi": "Sulawesi Tenggara",
+                    "Ya": 1213,
+                    "Tidak": 1232
+                },
+                {
+                    "nama_provinsi": "Jawa Timur",                                
+                    "Ya": 1213,
+                    "Tidak": 1232
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Frekuensi kejadian pencurian atau kehilangan barang",
+            "data": [
+                {
+                    "nama_provinsi": "Sumatera Utara",
+                    "Sering": 1284222,
+                    "Kadang-kadang": 938598,
+                    "Jarang": 938598,
+                    "Tidak Pernah": 97552
+                },
+                {
+                    "nama_provinsi": "Papua Tengah",
+                    "Sering": 1284222,
+                    "Kadang-kadang": 938598,
+                    "Jarang": 938598,
+                    "Tidak Pernah": 97552
+                },
+                {
+                    "nama_provinsi": "DKI Jakarta",
+                    "Sering": 1284222,
+                    "Kadang-kadang": 938598,
+                    "Jarang": 938598,
+                    "Tidak Pernah": 97552
+                },
+                {
+                    "nama_provinsi": "Sulawesi Tenggara",
+                    "Sering": 1284222,
+                    "Kadang-kadang": 938598,
+                    "Jarang": 938598,
+                    "Tidak Pernah": 97552
+                },
+                {
+                    "nama_provinsi": "Jawa Timur",
+                    "Sering": 1284222,
+                    "Kadang-kadang": 938598,
+                    "Jarang": 938598,
+                    "Tidak Pernah": 97552
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Tingkat keramaian jalanan di malam hari",
+            "data": [
+                {
+                    "year": 2021,
+                    "Ramai": 1284222,
+                    "Biasa saja": 938598,
+                    "Sepi Banget": 938598
+                },
+                {
+                    "year": 2022,
+                    "Ramai": 1284222,
+                    "Biasa saja": 938598,
+                    "Sepi Banget": 938598
+                },
+                {
+                    "year": 2023,
+                    "Ramai": 1284222,
+                    "Biasa saja": 938598,
+                    "Sepi Banget": 938598
+                },
+                {
+                    "year": 2024,
+                    "Ramai": 1284222,
+                    "Biasa saja": 938598,
+                    "Sepi Banget": 938598
+                },
+                {
+                    "year": 2025,
+                    "Ramai": 1284222,
+                    "Biasa saja": 938598,
+                    "Sepi Banget": 938598
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Usulan warga untuk meningkatkan keamanan",
+            "data": [
+                {
+                    "text": "Penerangan jalan",
+                    "value": 381
+                },
+                {
+                    "text": "Patroli keamanan",
+                    "value": 39
+                },
+                {
+                    "text": "Kamera CCTV",
+                    "value": 83
+                },
+                {
+                    "text": "Gotong royong warga",
+                    "value": 31
+                },
+                {
+                    "text": "Lainnya1",
+                    "value": 3871
+                },
+                {
+                    "text": "Lainnya2",
+                    "value": 88
+                },
+                {
+                    "text": "Lainnya3",
+                    "value": 90
+                }
+            ]
+        }
+    ]
+}
