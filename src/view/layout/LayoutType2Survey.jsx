@@ -71,7 +71,7 @@ const LayoutType2Survey = ({
                                 <div className=" dark:text-white rounded ">
                                     <div className="text-center flex-col justify-center ">
                                         <div className=" text-xs lg:text-2xl text-center font-bold uppercase">
-                                            {topicTitle} : {selectedSubCategory} {selectedProvinceName && '-'}
+                                            {topicTitle} {selectedSubCategory.length > 0 && ":"} {selectedSubCategory} {selectedProvinceName && '-'}
                                         </div>
                                         {selectedProvinceName &&
                                             <div className=" text-xs lg:text-2xl text-center font-bold uppercase">
