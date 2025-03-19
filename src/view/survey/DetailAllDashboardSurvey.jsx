@@ -164,7 +164,12 @@ const DetailAllDashboardSurvey = () => {
                     labels={specifiedLabelsChart} 
                     colors={specifiedTopicChart.colors} 
                     labelsPosition={specifiedLabelsPosition}
-                    tooltipText={isProvinceClicked ? "Jumlah Kecamatan" : "Jumlah Kab/Kota"}
+                    tooltipText={
+                        isProvinceClicked && topicTitle !== "Akses dan Keamanan di Lingkungan Masyarakat"
+                        ? "Jumlah Kecamatan"
+                        : topicTitle === "Akses dan Keamanan di Lingkungan Masyarakat"
+                        ? "Jumlah Responden"
+                        : "Jumlah Kab/Kota"}
                 />
                 </div>
             </div>
