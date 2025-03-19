@@ -2,9 +2,11 @@ import BarChartHorizontalCustomizable from "../allCharts/customizable/BarChartHo
 import BarChartTumpukColumn from "../allCharts/customizable/BarChartTumpukColumn"
 import BarChartTumpukCustomizeable from "../allCharts/customizable/BarChartTumpukCustomizable"
 import CountDoughnutChartCustomizable from "../allCharts/customizable/CountDoughnutChartCustomizable"
+import CountDoughnutChartPercentageCustomizable from "../allCharts/customizable/CountDoughnutChartPercentageCustomizable"
 import LineChartBarChartCustomizable from "../allCharts/customizable/LineChartBarChartCustomizabel"
 import LineChartCustomizable from "../allCharts/customizable/LineChartCustomizable"
 import PieChartCustomizable from "../allCharts/customizable/PieChartCustomizable"
+import PieChartPercentageCustomizable from "../allCharts/customizable/PieChartPercentageCustomizable"
 import ScatterPlotCustomizable from "../allCharts/customizable/ScatterPlotCustomizable"
 import WordCloudCustomizable from "../allCharts/customizable/WordCloudCustomizable"
 
@@ -20,6 +22,13 @@ const ChartRenderer = ({
     switch(type){
         case "pie-chart":
             return <PieChartCustomizable 
+                data={data}
+                labels={labels}
+                colors={colors}
+                labelsPosition={labelsPosition}
+            />
+        case "pie-chart-percentage":
+            return <PieChartPercentageCustomizable 
                 data={data}
                 labels={labels}
                 colors={colors}
@@ -54,6 +63,13 @@ const ChartRenderer = ({
             />
         case "count-doughnut-chart":
             return <CountDoughnutChartCustomizable 
+                data={data}
+                labels={labels}
+                colors={colors}
+                labelsPosition={labelsPosition}
+            />
+        case "count-doughnut-chart-percentage":
+            return <CountDoughnutChartPercentageCustomizable 
                 data={data}
                 labels={labels}
                 colors={colors}

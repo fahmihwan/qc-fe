@@ -1,6 +1,8 @@
 import BarChartTumpukCustomizeable from "../component/allCharts/BarChartTumpukCustomizeable"
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
+import PieChartPercentageCustomizable from "../component/allCharts/customizable/PieChartPercentageCustomizable";
+import CountDoughnutChartPercentageCustomizable from "../component/allCharts/customizable/CountDoughnutChartPercentageCustomizable";
 
 const OtherDashboardSurvey = () => {
     const dummyData = {
@@ -101,6 +103,30 @@ const OtherDashboardSurvey = () => {
                 title={"Test 123"} 
                 legendItems={legendItems}
                 width={"800px"}
+            />
+
+            <PieChartPercentageCustomizable
+                data={{
+                    "Ya": 3184,
+                    "Tidak": 1298
+                }}
+                colors={[
+                    "rgba(0, 177, 0, 1)",
+                    "rgba(251, 93, 37, 1)"
+                ]}
+                labels={["Ya", "Tidak"]}
+            />
+
+            <CountDoughnutChartPercentageCustomizable
+                data={{
+                    "Ya": 3184,
+                    "Tidak": 1298
+                }}
+                colors={[
+                    "rgba(0, 177, 0, 1)",
+                    "rgba(251, 93, 37, 1)"
+                ]}
+                labels={["Ya", "Tidak"]}
             />
         </motion.div>
     )
