@@ -1,6 +1,7 @@
 import BarChartHorizontalCustomizable from "../allCharts/customizable/BarChartHorizontalCustomizable"
 import BarChartTumpukColumn from "../allCharts/customizable/BarChartTumpukColumn"
 import BarChartTumpukCustomizeable from "../allCharts/customizable/BarChartTumpukCustomizable"
+import BarChartVerticalCustomizable from "../allCharts/customizable/BarChartVerticalCustomizable"
 import CountDoughnutChartCustomizable from "../allCharts/customizable/CountDoughnutChartCustomizable"
 import CountDoughnutChartPercentageCustomizable from "../allCharts/customizable/CountDoughnutChartPercentageCustomizable"
 import LineChartBarChartCustomizable from "../allCharts/customizable/LineChartBarChartCustomizabel"
@@ -17,7 +18,8 @@ const ChartRenderer = ({
     colors = [],
     width = 0,
     height = 0,
-    labelsPosition = ''
+    labelsPosition = '',
+    tooltipText = ''
 }) => {
     switch(type){
         case "pie-chart":
@@ -95,6 +97,14 @@ const ChartRenderer = ({
                 labels={labels}
                 colors={colors}
                 labelsPosition={labelsPosition}
+            />
+        case "bar-chart-vertical":
+            return <BarChartVerticalCustomizable 
+                data={data}
+                labels={labels}
+                colors={colors}
+                labelsPosition={labelsPosition}
+                tooltipText={tooltipText}
             />
         defult:
             return <div>Unknown chart type</div>
