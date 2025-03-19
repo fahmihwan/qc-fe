@@ -138,6 +138,7 @@ const DetailAllDashboardSurvey = () => {
 
         const specifiedLabelsChart = specifiedChartDetails?.chart_details[index]?.labels
         const specifiedTitleChart = specifiedChartDetails?.chart_details[index]?.title
+        const specifiedLabelsPosition = specifiedTopicChart["labels-position"]
         console.log("ini specifiedlabelschart", specifiedLabelsChart)
 
         return (
@@ -146,7 +147,7 @@ const DetailAllDashboardSurvey = () => {
                     {specifiedTitleChart}
                 </div>
                 <div className="">
-                <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedLabelsChart} colors={specifiedTopicChart.colors}/>
+                <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedLabelsChart} colors={specifiedTopicChart.colors} labelsPosition={specifiedLabelsPosition}/>
                 </div>
             </div>
         )

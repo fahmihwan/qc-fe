@@ -403,7 +403,7 @@
                 {
                     "title": "Jenis lahan yang digunakan",
                     "type": "bar-chart-horizontal",
-                    "labels-position": "top-left",
+                    "labels-position": "top-right",
                     "labels": [
                         "Sawah irigasi teknis", 
                         "Sawah tadah hujan", 
@@ -466,6 +466,7 @@
                 {
                     "title": "Status kepemilikan lahan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -845,6 +846,7 @@
                 {
                     "title": "Tren peningkatan/penurunan produktivitas",
                     "type": "line-chart",
+                    "labels_position": "top-right",
                     "labels": [
                         {"true": "Menaik"},
                         {"false": "Menurun"}
@@ -886,6 +888,7 @@
                 {
                     "title": "Perbandingan luas panen dengan hasil panen",
                     "type": "scatter-plot",
+                    "labels-position": "top-right",
                     "labels": ["Luas Panen vs Hasil Panen"],
                     "colors": ["rgba(0, 168, 255, 1)"],
                     "dummyData": {
@@ -936,6 +939,7 @@
                 {
                     "title": "Faktor yang mempengaruhi produktivitas",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Kualitas Benih": "Benih"},
                         {"Penggunaan Pupuk": "Pupuk"},
@@ -1445,6 +1449,7 @@
                 {
                     "title": "Kendala dalam produksi",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": [
                         {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
                         {"Serangan hama dan penyakit": "Hama/Penyakit"},
@@ -1514,6 +1519,7 @@
                 {
                     "title": "Musim tanam",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "bottom-center",
                     "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1564,6 +1570,7 @@
                 {
                     "title": "Jenis padi yang ditanam",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Hibrida", "Inbrida", "Organik", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1583,6 +1590,7 @@
                 {
                     "title": "Penggunaan hasil panen",
                     "type": "count-doughnut-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Konsum Sendiri", "Dijual Pasar Lokal", "Dijual Perusahaan Besar", "Disimpan Untuk Cadangan", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1993,6 +2001,7 @@
                 {
                     "title": "Kendala dalam irigasi",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2049,6 +2058,7 @@
                 {
                     "title": "Jenis irigasi yang digunakan",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": ["Teknis", "Setengah teknis", "Sederhana", "Tadah Hujan", "Rawa/Pasang Surut", "Pompa/Air Tanah", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2117,6 +2127,7 @@
                 {
                     "title": "Presentase lahan yang memiliki akses irigasi",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2485,6 +2496,7 @@
                 {
                     "title": "Tren ketersediaan pupuk",
                     "type": "line-chart",
+                    "labels-position": "top-right",
                     "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"],
                     "colors": [
                         "rgba(0, 177, 0, 1)"
@@ -2517,6 +2529,7 @@
                 {
                     "title": "Sumber pupuk",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": ["Subsidi Pemerintah", "Komersial", "Alami/Organik", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2567,6 +2580,7 @@
                 {
                     "title": "Jenis Pupuk Yang Digunakan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Urea", "NPK", "SP-36", "KCL", "Organik", "Hayati", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2999,6 +3013,7 @@
                 {
                     "title": "Metode pengendalian hama",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3061,6 +3076,7 @@
                 {
                     "title": "Jenis hama yang menyerang",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-center",
                     "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3129,6 +3145,7 @@
                 {
                     "title": "Persentase Luas lahan terdampak hama",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
                     "colors": [
                         "rgba(0, 168, 255, 1)",
@@ -3151,6 +3168,7 @@
                 {
                     "title": "Kendala pengendalian hama",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Akses ke pestisida atau metode pengendalian", "Hama semakin resisten terhadap pestisida", "Kurangnya tenaga kerja", "Faktor cuaca yang mendukung perkembangan hama", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3543,6 +3561,7 @@
                 {
                     "title": "Durasi Lahan Kosong",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3560,6 +3579,7 @@
                 {
                     "title": "Alasan lahan kosong",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-center",
                     "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3616,6 +3636,7 @@
                 {
                     "title": "Persentase lahan kosong",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3639,6 +3660,7 @@
                 {
                     "title": "Rencana penggunaan lahan kosong",
                     "type": "count-doughnut-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Alih fungsi", "Padi", "Non Pertanian", "Belum ada rencana", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3923,6 +3945,7 @@
                 {
                     "title": "Ketersediaan komoditas",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": [
                         {"true": "Cukup"},
                         {"false": "Tidak Cukup"}
@@ -3964,6 +3987,7 @@
                 {
                     "title": "Distribusi komoditas ke pasar",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": [
                         {"true": "Ya"},
                         {"false": "Tidak"}
@@ -4286,6 +4310,7 @@
                 {
                     "title": "Status lahan baru",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": [
                         {"true": "Sudah digunakan untuk produksi"},
                         {"false": "Belum digunakan untuk produksi"}
@@ -4327,6 +4352,7 @@
                 {
                     "title": "Kendala pembangunan lahan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Kurangnya alat pertanian": "Kurang alat pertanian"},
                         {"Masalah irigasi": "Irigasi"},
@@ -4612,6 +4638,7 @@
                 {
                     "title": "Distribusi pangan yang berjalan lancar",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Lancar", "Bermasalah"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -4650,6 +4677,7 @@
                 {
                     "title": "Kendala dalam distribusi",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Kurangnya transportasi": "Transportasi"},
                         {"Penyimpanan tidak memadai": "Penyimpanan"},
@@ -4973,6 +5001,7 @@
                 {
                     "title": "Kendala bantuan pangan",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5029,6 +5058,7 @@
                 {
                     "title": "Sebaran penerima bantuan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5403,6 +5433,7 @@
                 {
                     "title": "Jenis perubahan konsumsi akibat harga",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Mengurangi porsi makan harian", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5459,6 +5490,7 @@
                 {
                     "title": "Konsumsi pangan lokal VS impor",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Ya": "Lokal"},
                         {"Tidak": "Import"}
@@ -5477,6 +5509,7 @@
                 {
                     "title": "Alasan memilih pangan import",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "bottom-center",
                     "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5900,6 +5933,7 @@
                 {
                     "title": "Akses petani ke sumber daya",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5944,6 +5978,7 @@
                 {
                     "title": "Aspek Perbaikan",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": [
                         {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
                         {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
@@ -6006,6 +6041,7 @@
                 {
                     "title": "Kendala utama dalam produksi pangan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
                         {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},

@@ -144,7 +144,7 @@ const BarChartTumpukCustomizeable = ({
                                 }
                             `}>
                             {activeLabels.map(({label}, index) => (
-                            <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
+                            <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "mr-4" : "mr-4"}`}>
                                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
                                 <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
                             </div>

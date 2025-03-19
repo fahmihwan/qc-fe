@@ -14,7 +14,8 @@ const ChartRenderer = ({
     labels = [],
     colors = [],
     width = 0,
-    height = 0
+    height = 0,
+    labelsPosition = ''
 }) => {
     switch(type){
         case "pie-chart":
@@ -22,24 +23,28 @@ const ChartRenderer = ({
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "bar-chart-tumpuk":
             return <BarChartTumpukCustomizeable 
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "bar-chart-horizontal":
             return <BarChartHorizontalCustomizable 
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "line-chart":
             return <LineChartCustomizable 
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "word-cloud":
             return <WordCloudCustomizable 
@@ -52,24 +57,28 @@ const ChartRenderer = ({
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "scatter-plot":
             return <ScatterPlotCustomizable 
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "line-chart-bar-chart-horizontal":
             return <LineChartBarChartCustomizable 
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         case "bar-chart-tumpuk-vertical":
             return <BarChartTumpukColumn 
                 data={data}
                 labels={labels}
                 colors={colors}
+                labelsPosition={labelsPosition}
             />
         defult:
             return <div>Unknown chart type</div>
