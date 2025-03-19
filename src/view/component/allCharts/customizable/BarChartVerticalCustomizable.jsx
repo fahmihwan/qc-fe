@@ -106,7 +106,7 @@ const BarChartVerticalCustomizable = ({
         <div className="flex flex-col w-full h-full">
         {
             isDataEmpty ? (
-                <div className="flex flex-col h-full justify-center items-center">
+                <div className="min-h-64 flex flex-col h-full justify-center items-center">
                     <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                 </div>
             ) : (
