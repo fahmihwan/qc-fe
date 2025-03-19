@@ -10340,14 +10340,14 @@
           ]
         }
       ]
-    },
+    },  
     {
-      "topik":"Pemanfaatan Lahan di Sekitar Batas Hutan",
-      "list":[
+      "topik": "Potensi Konflik di Sekitar Batas Hutan",
+      "list": [
         {
           "no":1,
-          "kode":"foodestate-batashutan-pemanfaatanlahandisekitarbatashutan",
-          "title": "Pemanfaatan Lahan di Sekitar Batas Hutan",
+          "kode":"foodestate-batashutan-potensikonflikdisekitarbatashutan",
+          "title": "Potensi Konflik di Sekitar Batas Hutan",
           "logoPosition": "right",
           "pages": [
             {
@@ -10476,12 +10476,12 @@
       ]
     },
     {
-      "topik": "Potensi Konflik di Sekitar Batas Hutan",
-      "list": [
+      "topik": "Pelestarian dan Keberlanjutan Batas Hutan",
+      "list":[
         {
           "no":1,
-          "kode":"foodestate-batashutan-potensikonflikdisekitarbatashutan",
-          "title": "Potensi Konflik di Sekitar Batas Hutan",
+          "kode":"foodestate-batashutan-pelestariandankeberlanjutanbatashutan",
+          "title": "Pelestarian dan Keberlanjutan Batas Hutan",
           "logoPosition": "right",
           "pages": [
             {
@@ -10666,26 +10666,26 @@
               ]
             }
           ]
-        }
+        }        
       ]
     },
     {
-      "topik": "Pelestarian dan Keberlanjutan Batas Hutan",
+      "topik":"Kondisi sosio-ekonomi masyarakat",
       "list":[
         {
-          "no": 1,
-          "kode":"foodestate-batashutan-pelestariandankeberlanjutanbatashutan",
-          "title": "Pelestarian dan Keberlanjutan Batas Hutan",
+          "no":1,
+          "kode":"lainnya-lainnya-kondisisosioekonomimasyarakat",
+          "title": "Kondisi sosio-ekonomi masyarakat",
           "logoPosition": "right",
           "pages": [
             {
               "name": "page2",
-              "title": "Program Konservasi dan Keberlanjutan\n",
+              "title": "",
               "elements": [
                 {
                   "type": "radiogroup",
                   "name": "question1",
-                  "title": "Apakah ada program pelestarian batas hutan di daerah Anda?",
+                  "title": "Akhir-akhir ini ada perubahan harga barang atau biaya hidup yang paling terasa nggak?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -10699,44 +10699,32 @@
                   ]
                 },
                 {
-                  "type": "radiogroup",
+                  "type": "text",
+                  "visibleIf": "{question1} = 'Ya'",
                   "name": "question2",
-                  "title": "Jika ya, siapa yang menjalankan program tersebut?",
-                  "isRequired": true,
-                  "choices": [
-                    {
-                      "value": "Pemerintah daerah",
-                      "text": "Pemerintah daerah"
-                    },
-                    {
-                      "value": "LSM lingkungan",
-                      "text": "LSM lingkungan"
-                    },
-                    {
-                      "value": "Masyarakat setempat",
-                      "text": "Masyarakat setempat"
-                    },
-                    {
-                      "value": "Perusahaan swasta",
-                      "text": "Perusahaan swasta"
-                    }
-                  ],
-                  "showOtherItem": true,
-                  "otherText": "Lainnya"
+                  "title": "Jika ya, sebutkan barang apa?"
                 },
                 {
-                  "type": "dropdown",
+                  "type": "radiogroup",
                   "name": "question3",
-                  "title": "Apakah masyarakat sekitar dilibatkan dalam upaya pelestarian batas hutan?",
+                  "title": "Biasanya kalau ada acara atau kumpul-kumpul di sini, paling sering diadakan di mana?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "Ya",
-                      "text": "Ya"
+                      "value": "Pasar",
+                      "text": "Pasar"
                     },
                     {
-                      "value": "Tidak",
-                      "text": "Tidak"
+                      "value": "Balai Desa",
+                      "text": "Balai Desa"
+                    },
+                    {
+                      "value": "Masjid/Gereja",
+                      "text": "Masjid/Gereja"
+                    },
+                    {
+                      "value": "Rumah Warga",
+                      "text": "Rumah Warga"
                     }
                   ],
                   "otherText": "Lainnya"
@@ -10744,106 +10732,99 @@
                 {
                   "type": "radiogroup",
                   "name": "question4",
-                  "title": "Apakah ada patroli rutin untuk menjaga batas hutan dari aktivitas ilegal?\n",
-                  "choices": [
-                    {
-                      "value": "Ya",
-                      "text": "Ya"
-                    },
-                    {
-                      "value": "Tidak",
-                      "text": "Tidak"
-                    }
-                  ]
-                },
-                {
-                  "type": "radiogroup",
-                  "name": "question4",
-                  "title": "Apakah terdapat insentif bagi masyarakat yang ikut menjaga hutan?",
+                  "title": "Kalau cari tambahan penghasilan, biasanya orang-orang di sekitar sini kerja apa?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "Ya",
-                      "text": "Ya"
+                      "value": "Buruh harian",
+                      "text": "Buruh harian"
                     },
                     {
-                      "value": "Tidak",
-                      "text": "Tidak"
+                      "value": "Bertani",
+                      "text": "Bertani"
+                    },
+                    {
+                      "value": "Dagang",
+                      "text": "Dagang"
+                    },
+                    {
+                      "value": "Ojek/Transportasi",
+                      "text": "Ojek/Transportasi"
                     }
-                  ]
+                  ],
+                  "otherText": "Lainnya"
                 },
                 {
                   "type": "radiogroup",
                   "name": "question5",
-                  "title": "Apakah ada ancaman deforestasi atau perambahan hutan yang masih berlangsung?",
+                  "title": "Apa yang paling sering bikin warga di sini kesulitan sehari-hari?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "Ya",
-                      "text": "Ya"
+                      "value": "Harga mahal",
+                      "text": "Harga mahal"
                     },
                     {
-                      "value": "Tidak",
-                      "text": "Tidak"
+                      "value": "Lapangan kerja",
+                      "text": "Lapangan kerja"
+                    },
+                    {
+                      "value": "Akses transportasi",
+                      "text": "Akses transportasi"
+                    },
+                    {
+                      "value": "Gangguan keamanan",
+                      "text": "Gangguan keamanan"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "page1",
-              "title": "Upaya Penanaman Kembali",
-              "elements": [
+                  ],
+                  "otherText": "Lainnya"
+                },
                 {
                   "type": "radiogroup",
                   "name": "question6",
-                  "title": "Apakah ada program rehabilitasi hutan di sekitar batas hutan?",
+                  "title": "Seberapa sering ada orang luar yang datang ke daerah ini untuk urusan kerja atau dagang?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "Ya",
-                      "text": "Ya"
+                      "value": "Sering",
+                      "text": "Sering"
                     },
                     {
-                      "value": "Tidak",
-                      "text": "Tidak"
+                      "value": "Kadang-kadang",
+                      "text": "Kadang-kadang"
+                    },
+                    {
+                      "value": "Jarang",
+                      "text": "Jarang"
+                    },
+                    {
+                      "value": "Tidak pernah",
+                      "text": "Tidak pernah"
                     }
-                  ]
+                  ],
+                  "otherText": "Lainnya"
                 },
                 {
                   "type": "radiogroup",
                   "name": "question7",
-                  "title": "Jika ya, siapa yang melakukan penanaman kembali?",
+                  "title": "Di sekitar sini ada tempat yang mulai berubah atau jadi lebih ramai akhir-akhir ini?",
                   "isRequired": true,
                   "choices": [
                     {
-                      "value": "Pemerintah",
-                      "text": "Pemerintah"
+                      "value": "Ya",
+                      "text": "Ya"
                     },
                     {
-                      "value": "Swasta",
-                      "text": "Swasta"
-                    },
-                    {
-                      "value": "Masyarakat Sekitar",
-                      "text": "Masyarakat Sekitar"
-                    },
-                    {
-                      "value": "Gabungan Berbagai Pihak",
-                      "text": "Gabungan Berbagai Pihak"
-                    },
-                    {
-                      "value": "Tidak Tahu",
-                      "text": "Tidak Tahu"
+                      "value": "Tidak",
+                      "text": "Tidak"
                     }
                   ],
-                  "showOtherItem": true,
                   "otherText": "Lainnya"
                 },
                 {
                   "type": "radiogroup",
                   "name": "question8",
-                  "title": "Apakah masyarakat mendapat manfaat ekonomi dari kegiatan konservasi batas hutan?",
+                  "title": "Akhir-akhir ini ada perubahan harga barang atau biaya hidup yang paling terasa nggak?",
                   "isRequired": true,
                   "choices": [
                     {
@@ -10853,6 +10834,36 @@
                     {
                       "value": "Tidak",
                       "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "visibleIf": "{question8} = 'Ya'",
+                  "name": "question9",
+                  "title": "Jika ya, di mana?"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question3",
+                  "title": "Kalau butuh bantuan atau informasi cepat, biasanya warga lebih percaya ke siapa?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketua RT/RW",
+                      "text": "Ketua RT/RW"
+                    },
+                    {
+                      "value": "Tokoh Agama",
+                      "text": "Tokoh Agama"
+                    },
+                    {
+                      "value": "Pemuda Setempat",
+                      "text": "Pemuda Setempat"
+                    },
+                    {
+                      "value": "Aparat Desa",
+                      "text": "Aparat Desa"
                     }
                   ],
                   "otherText": "Lainnya"
@@ -10861,7 +10872,194 @@
             }
           ]
         }
-
+      ]
+    },
+    {
+      "topik":"Akses dan Keamanan di Lingkungan Masyarakat",
+      "list":[
+        {
+          "no":1,
+          "kode":"lainnya-lainnya-aksesdankeamanandilingkunganmasyarakat",
+          "title": "Akses dan Keamanan di Lingkungan Masyarakat",
+          "logoPosition": "right",
+          "pages": [
+            {
+              "name": "page2",
+              "title": "",
+              "elements": [
+                {
+                  "type": "radiogroup",
+                  "name": "question1",
+                  "title": "kondisi jalanan pada malam hari, jalanan di sekitar sini biasanya ramai atau sepi?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ramai",
+                      "text": "Ramai"
+                    },
+                    {
+                      "value": "Biasa saja",
+                      "text": "Biasa saja"
+                    },
+                    {
+                      "value": "Sepi banget",
+                      "text": "Sepi banget"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question2",
+                  "title": "Apa ada tempat di sekitar sini yang sering dianggap rawan atau kurang aman?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ya",
+                      "text": "Ya"
+                    },
+                    {
+                      "value": "Tidak",
+                      "text": "Tidak"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "visibleIf": "{question2} = 'Ya'",
+                  "name": "question3",
+                  "title": "Jika ya, di mana?"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question4",
+                  "title": "Kalau ada tamu atau orang asing yang datang ke lingkungan ini, biasanya mereka datang untuk apa?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Dagangan",
+                      "text": "Dagangan"
+                    },
+                    {
+                      "value": "Kerja",
+                      "text": "Kerja"
+                    },
+                    {
+                      "value": "Urusan Pribadi",
+                      "text": "Urusan Pribadi"
+                    },
+                    {
+                      "value": "Tidak tahu",
+                      "text": "Tidak tahu"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question5",
+                  "title": "Seberapa sering warga di sini mengalami kejadian kehilangan barang atau pencurian? (kriminal)",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Sering",
+                      "text": "Sering"
+                    },
+                    {
+                      "value": "Kadang-kadang",
+                      "text": "Kadang-kadang"
+                    },
+                    {
+                      "value": "Jarang",
+                      "text": "Jarang"
+                    },
+                    {
+                      "value": "Tidak pernah",
+                      "text": "Tidak pernah"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question6",
+                  "title": "Kalau ada masalah keamanan, biasanya warga lapor ke siapa dulu?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Ketua RT/RW",
+                      "text": "Ketua RT/RW"
+                    },
+                    {
+                      "value": "Polisi",
+                      "text": "Polisi"
+                    },
+                    {
+                      "value": "Satpam",
+                      "text": "Satpam"
+                    },
+                    {
+                      "value": "Tetangga",
+                      "text": "Tetangga"
+                    },
+                    {
+                      "value": "Tidak Lapor",
+                      "text": "Tidak Lapor"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question7",
+                  "title": "Dalam sebulan terakhir, ada perubahan aktivitas yang terasa di sekitar sini?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Lebih ramai",
+                      "text": "Lebih ramai"
+                    },
+                    {
+                      "value": "Tidak ada perubahan",
+                      "text": "Tidak ada perubahan"
+                    },
+                    {
+                      "value": "Lebih sepi",
+                      "text": "Lebih sepi"
+                    },
+                    {
+                      "value": "Tidak tahu",
+                      "text": "Tidak tahu"
+                    }
+                  ]
+                },
+                {
+                  "type": "radiogroup",
+                  "name": "question8",
+                  "title": "Menurut warga, apa yang bisa membuat lingkungan ini lebih aman?",
+                  "isRequired": true,
+                  "choices": [
+                    {
+                      "value": "Penerangan jalan",
+                      "text": "Penerangan jalan"
+                    },
+                    {
+                      "value": "Patroli keamanan",
+                      "text": "Patroli keamanan"
+                    },
+                    {
+                      "value": "Kamera CCTV",
+                      "text": "Kamera CCTV"
+                    },
+                    {
+                      "value": "Gotong royong warga",
+                      "text": "Gotong royong warga"
+                    }
+                  ],
+                  "otherText": "Lainnya"
+                }
+              ]
+            }
+          ]
+        }
       ]
     }
   ]

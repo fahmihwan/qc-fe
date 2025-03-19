@@ -6101,7 +6101,7 @@
                 {
                     "title": "Penyebab utama konflik",
                     "type": "bar-chart-horizontal",
-                    "labels": ["Tidak ada batas hutan yang jelas", "Perluasan perkebunan tanpa izin", "Aktivitas pertambangan di kawasan hutan", "Klaim lahan oleh masyarakat adat", "Pembalakan", "Lainnya"],
+                    "labels": ["Tidak ada batas hutan yang jelas", "Perluasan perkebunan tanpa izin", "Aktivitas pertambangan di kawasan hutan", "Klaim lahan oleh masyarakat adat", "Pembalakan liar", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -6163,7 +6163,7 @@
                 {
                     "title": "Pihak yang terlibat dalam konflik",
                     "type": "bar-chart-tumpuk",
-                    "labels": ["Warga lokal / petani", "Perusahaan perkebunan", "Pemerintah daerah", "LSM lingkungan", "Masyarakat adat", "Lainnya"],
+                    "labels": ["Warga lokal/petani", "Perusahaan perkebunan", "Pemerintah daerah", "LSM lingkungan", "Masyarakat adat", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -6223,14 +6223,12 @@
                     }
                 },
                 {
-                    "title": "Konflik batas hutan",
-                    "type": "pie-chart",
-                    "labels": [],
-                    "colors": [],
+                    "title": "Frekuensi konflik batas hutan",
+                    "type": "pie-chart-percentage",
+                    "labels": ["Ya"],
+                    "colors": ["rgba(255, 0, 0, 1)"],
                     "dummyData": {
-                        "data": {
-                            
-                        }
+                        "data": []
                     }
                 }
             ]
