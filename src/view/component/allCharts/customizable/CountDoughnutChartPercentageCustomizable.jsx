@@ -37,9 +37,10 @@ const CountDoughnutChartPercentageCustomizable = ({
     
     const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
     ? labels.map(label => ({ 
-        key: label, label, 
+        key: label, 
+        label, 
         value: data[label] ?? 0,
-        percentage: totalSumData > 0 ? ((data[label] / totalSumData) * 100).toFixed(2) : 0
+        percentage: totalSumData > 0 ? ((data[label] ?? 0 / totalSumData) * 100).toFixed(2) : 0
     })) 
     : labels.map((label) => {
         const key = Object.keys(label)[0]; // Ambil key dari object
@@ -47,7 +48,7 @@ const CountDoughnutChartPercentageCustomizable = ({
             key,
             label: label[key],
             value: data[key] ?? 0,
-            percentage: totalSumData > 0 ? ((data[key] / totalSumData) * 100).toFixed(2) : 0
+            percentage: totalSumData > 0 ? ((data[key] ?? 0 / totalSumData) * 100).toFixed(2) : 0
         };
     });
     
@@ -100,7 +101,7 @@ const CountDoughnutChartPercentageCustomizable = ({
                     size: 12
                 },
                 formatter: (value) => {
-                    return `${value}%`
+                    return value > 15 ? `${value}%` : ""
                 }
             }
         }
@@ -115,7 +116,7 @@ const CountDoughnutChartPercentageCustomizable = ({
                         <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                     </div>
                 ) : (
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
                         <div className={labelsPosition.startsWith("top") ? "order-1" : "order-2"}>  
                             <div className={`
                                     ml-4 mt-2 w-full px-2 max-h-12 max-w-[90%] gap-y-1 flex flex-wrap overflow-y-scroll custom-scrollbar orverflow-x-hidden
@@ -135,8 +136,8 @@ const CountDoughnutChartPercentageCustomizable = ({
                             </div>
                         </div>
                         <div className={`${labelsPosition.startsWith("top") ? "order-2" : "order-1"}`}>
-                            <div className="text-4xl dark:text-white">{totalSumData}</div>
-                            <div className="h-48 items-center flex justify-center overflow-hidden">
+                            <div className="text-2xl dark:text-white">{totalSumData}</div>
+                            <div className="h-44 items-center flex justify-center overflow-hidden">
                                 <Doughnut data={chartData} options={options}  height={50}/>
                             </div>
                         </div>

@@ -23,7 +23,7 @@ const PieChartPercentageCustomizable = ({
         key: label, 
         label, 
         value: data[label] ?? 0,
-        percentage: total > 0 ? ((data[label] / total) * 100).toFixed(2) : 0
+        percentage: total > 0 ? ((data[label] ?? 0 / total) * 100).toFixed(2) : 0
     })) 
     : labels.map((label) => {
         const key = Object.keys(label)[0]; // Ambil key dari object
@@ -31,7 +31,7 @@ const PieChartPercentageCustomizable = ({
             key,
             label: label[key],
             value: data[key] ?? 0,
-            percentage: total > 0 ? ((data[key] / total) * 100).toFixed(2) : 0
+            percentage: total > 0 ? ((data[key] ?? 0 / total) * 100).toFixed(2) : 0
         };
     });
 
@@ -84,7 +84,7 @@ const PieChartPercentageCustomizable = ({
                     size: 12
                 },
                 formatter: (value) => {
-                    return `${value}%`;
+                    return value > 15 ? `${value}%` : "";
                 }
             }
         }
