@@ -1,0 +1,111 @@
+{
+    "data": [
+        {
+            "nama_grafik": "Pekerjaan sampingan yang paling banyak dilakukan",
+            "data": [
+                {
+                    "year": 2021,
+                    "Buruh harian": 1284222,
+                    "Bertani": 938598,
+                    "Dagang": 938598,
+                    "Ojek/Transportasi": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2022,
+                    "Buruh harian": 1284222,
+                    "Bertani": 938598,
+                    "Dagang": 938598,
+                    "Ojek/Transportasi": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2023,
+                    "Buruh harian": 1284222,
+                    "Bertani": 938598,
+                    "Dagang": 938598,
+                    "Ojek/Transportasi": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2024,
+                    "Buruh harian": 1284222,
+                    "Bertani": 938598,
+                    "Dagang": 938598,
+                    "Ojek/Transportasi": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "year": 2025,
+                    "Buruh harian": 1284222,
+                    "Bertani": 938598,
+                    "Dagang": 938598,
+                    "Ojek/Transportasi": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Kesulitan yang paling dirasakan masyarakat",
+            "data": [
+                {
+                    "nama_provinsi": "Sumatera Utara",
+                    "Harga mahal": 1284222,
+                    "Lapangan kerja": 938598,
+                    "Akses transportasi": 938598,
+                    "Gangguan keamanan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "Papua Tengah",
+                    "Harga mahal": 1284222,
+                    "Lapangan kerja": 938598,
+                    "Akses transportasi": 938598,
+                    "Gangguan keamanan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "DKI Jakarta",
+                    "Harga mahal": 1284222,
+                    "Lapangan kerja": 938598,
+                    "Akses transportasi": 938598,
+                    "Gangguan keamanan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "Sulawesi Tenggara",
+                    "Harga mahal": 1284222,
+                    "Lapangan kerja": 938598,
+                    "Akses transportasi": 938598,
+                    "Gangguan keamanan": 97552,
+                    "Lainnya": 8969
+                },
+                {
+                    "nama_provinsi": "Jawa Timur",
+                    "Harga mahal": 1284222,
+                    "Lapangan kerja": 938598,
+                    "Akses transportasi": 938598,
+                    "Gangguan keamanan": 97552,
+                    "Lainnya": 8969
+                }
+            ]
+        },
+        {
+            "nama_grafik": "Apakah ada perubahan harga barang?",
+            "data": {
+                "Ya": 31894,
+                "Tidak": 1298
+            }
+        },
+        {
+            "nama_grafik": "Tempat yang paling sering digunakan untuk acara warga",
+            "data": {
+                "Pasar": 135359,
+                "Balai Desa": 80809,
+                "Masjid/Gereja": 91383,
+                "Rumah Warga": 9408,
+                "Tempat Lain": 1937
+            }
+        }
+    ]
+}

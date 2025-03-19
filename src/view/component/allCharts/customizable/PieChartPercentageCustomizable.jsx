@@ -1,78 +1,74 @@
 import { CategoryScale, Chart as ChartJS, Legend, LinearScale, LineElement, PointElement, Title, Tooltip } from "chart.js";
-import { Line } from "react-chartjs-2";
 import { formatCurrency } from "../../../../utils/generateUtil";
+import { Pie } from "react-chartjs-2";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
-const LineChartCustomizable = ({
+const PieChartPercentageCustomizable = ({ 
     data = [],
     labels = [],
     colors = [],
     width = null,
     height = null,
     labelsPosition = "bottom-right"
-}) => {
+ }) => {
 
-    console.log("data yg diterima line", data)
+    console.log("data yg diterima", data)
     const isDataEmpty = !data // Jika `data` null atau undefined
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
-        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0) // Jika `data` object kosong
-        || (Array.isArray(data) && data.every(obj => {
-            if(typeof obj !== "object" || Array.isArray(obj)) return false
-            const keys = Object.keys(obj)
-            return keys.length > 1 && keys.slice(1).every(key => Number(obj[key]) === 0)
-        }))
+        || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
-    console.log("isDataEmpty", isDataEmpty)
-    const years = isDataEmpty ? [] : data.map((item) => item.year)
-
+    const total = isDataEmpty ? 0 : Object.values(data).reduce((sum, val) => sum + val, 0)
     const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
-    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
+    ? labels.map(label => ({ 
+        key: label, 
+        label, 
+        value: data[label] ?? 0,
+        percentage: total > 0 ? ((data[label] ?? 0 / total) * 100).toFixed(2) : 0
+    })) 
     : labels.map((label) => {
         const key = Object.keys(label)[0]; // Ambil key dari object
         return {
             key,
             label: label[key],
-            value: data[key] ?? 0
+            value: data[key] ?? 0,
+            percentage: total > 0 ? ((data[key] ?? 0 / total) * 100).toFixed(2) : 0
         };
     });
 
-    const datasets = isDataEmpty ? [] : activeLabels.map(({key, label}, index) => ({
-        label,
-        data: data.map((item) => item[key]),
-        borderColor: colors[index],
-        backgroundColor: colors[index],
-        tension: 0.3,
-        pointBorderColor: colors[index],
-        pointBackgroundColor: "#ffffff",
-        pointRadius: 4,
-        pointHoverRadius: 6,
-        pointBorderWidth: 2
-    }))
-
+    console.log("ini active labels pie chart", activeLabels)
     const chartData = {
-        labels: years,
-        datasets
+        labels: activeLabels.map(({label}) => label),
+        datasets: [
+            {
+                data: activeLabels.map(({percentage}) => percentage), 
+                backgroundColor: colors,
+                borderColor: "#ffffff", 
+                borderWidth: 1
+            }
+        ]
     }
 
     const options = {
         responsive: true,
         maintainAspecRatio: false,
-        plugins:{
+        layout: {
+            padding: 10,
+        },
+        plugins: {
             legend: {
-                display: false
+                display: false,
             },
             tooltip: {
-                enabled: true,
                 callbacks: {
                     label: (tooltipItem) => {
-                        const datasetIndex = tooltipItem.datasetIndex
-                        const datasetLabelCustom = activeLabels[datasetIndex]?.label
-
-                        const formattedLabel = datasetLabelCustom.charAt(0).toUpperCase() + datasetLabelCustom.slice(1)
-                        return ` ${formattedLabel}: ${formatCurrency(tooltipItem.raw)}`
+                        const index = tooltipItem.dataIndex
+                        const label = activeLabels[index].label
+                        const jumlah = activeLabels[index].value
+                        const persen = activeLabels[index].percentage
+                        return [`${label}: ${persen}%`, `Jumlah responden: ${jumlah}`];
                     },
                     labelColor: (tooltipItem) => {
-                        const datasetIndex = tooltipItem.datasetIndex;
+                        const datasetIndex = tooltipItem.dataIndex;
                         return {
                             borderColor: colors[datasetIndex], 
                             backgroundColor: colors[datasetIndex], 
@@ -83,44 +79,23 @@ const LineChartCustomizable = ({
                 }
             },
             datalabels: {
-                display: false
-            }
-        },
-        scales: {
-            x: {
-                grid: {
-                    color: '#CCCCCC',
-                    borderColor: '#CCCCCC',
-                    drawBorder: true
+                color: "#fff",
+                font: {
+                    size: 12
                 },
-                border:{
-                    color: '#cccccc'
-                }
-            },
-            y: {
-                beginAtZero: true,
-                min: 0,
-                ticks: {
-                    color: "#A3A3A3",
-                    callback: (value) => `${formatCurrency(value)}`
-                },
-                grid: {
-                    color: '#CCCCCC',
-                    borderColor: '#CCCCCC',
-                    drawBorder: true
-                },
-                border:{
-                    color: '#cccccc'
+                formatter: (value) => {
+                    return value > 15 ? `${value}%` : "";
                 }
             }
         }
-    }
+    };
+
 
     return (
-        <div className="flex flex-col h-full">
+        <div className="">
             {
                 isDataEmpty ? (
-                    <div className="min-h-64 flex flex-col h-full justify-center items-center">
+                    <div className="min-h-64 flex flex-col h-full justify-center">
                         <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                     </div>
                 ) : (
@@ -143,14 +118,29 @@ const LineChartCustomizable = ({
                                 ))}
                             </div>
                         </div>
-                        <div className={`h-48 w-full flex justify-center overflow-hidden order-1 ${labelsPosition.startsWith("top") ? "order-2" : "order-1"}`}>
-                            <Line data={chartData} options={options} />
+                        <div className={`h-52 w-full flex justify-center overflow-hidden order-1 ${labelsPosition.startsWith("top") ? "order-2" : "order-1"}`}>
+                            <Pie data={chartData} options={options} />
                         </div>
                     </div>
+                    // <div className="flex flex-col gap-4">
+                    //     <div className="h-52 items-center flex justify-center overflow-hidden">
+                    //         <Pie data={chartData} options={options} />
+                    //     </div>
+                    //     <div >
+                    //         <div className="ml-4 mt-2 w-full  max-h-12 max-w-[90%] gap-y-1 flex flex-wrap items-center justify-center rounded overflow-y-scroll custom-scrollbar orverflow-x-hidden">
+                    //             {activeLabels.map(({label}, index) => (
+                    //             <div key={index} className={`flex items-center align-middle gap-2 mb-1 ${index === labels.length - 1 ? "" : "mr-4"}`}>
+                    //                 <span className="w-4 h-4" style={{ backgroundColor: colors[index] }}></span>
+                    //                 <span className="text-xs text-gray-700 dark:text-gray-300">{label}</span>
+                    //             </div>
+                    //             ))}
+                    //         </div>
+                    //     </div>
+                    // </div>
                 )
             }
         </div>
     )
 }
 
-export default LineChartCustomizable
+export default PieChartPercentageCustomizable

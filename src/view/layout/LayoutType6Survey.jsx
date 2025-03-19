@@ -71,7 +71,7 @@ const LayoutType6Survey = ({
                                 <div className=" dark:text-white rounded ">
                                     <div className="text-center flex-col justify-center ">
                                         <div className=" text-xs lg:text-2xl text-center font-bold uppercase">
-                                            {topicTitle} : {selectedSubCategory} {selectedProvinceName && '-'}
+                                            {topicTitle} {selectedSubCategory.length > 0 && ":"} {selectedSubCategory} {selectedProvinceName && '-'}
                                         </div>
                                         {selectedProvinceName &&
                                             <div className=" text-xs lg:text-2xl text-center font-bold uppercase">
@@ -116,7 +116,7 @@ const LayoutType6Survey = ({
                             
                             <div className='w-full xl:col-span-2 flex flex-col overflow-hidden'>
                                 <motion.div 
-                                    className=' mx-5 h-[364px] mb-5 border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
+                                    className=' mx-5 h-[363px] mb-5 border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
@@ -126,7 +126,7 @@ const LayoutType6Survey = ({
                                     {children[0]}
                                 </motion.div>
                                 <motion.div 
-                                    className=' mx-5 mb-5 h-[364px] border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
+                                    className=' mx-5 mb-5 h-[363px] border rounded-[10px] p-[15px] dark:border-dark-border border-light-border overflow-hidden'
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}

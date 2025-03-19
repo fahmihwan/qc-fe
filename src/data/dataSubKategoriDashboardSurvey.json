@@ -11,7 +11,7 @@
                     "sub_category": "Padi",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -29,7 +29,13 @@
                         },
                         {
                             "title": "Status kepemilikan lahan",
-                            "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"]
+                            "labels": [
+                                {"Milik Pribadi": "Milik Pribadi"},
+                                {"Hak Guna Usaha (HGU)": "Hak Guna Usaha"},
+                                {"Milik Pemerintah": "Milik Pemerintah"},
+                                {"Sewa": "Sewa"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -68,7 +74,7 @@
                     "sub_category": "Singkong",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -125,7 +131,7 @@
                     "sub_category": "Tebu",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -182,7 +188,7 @@
                     "sub_category": "Kedelai",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -239,7 +245,7 @@
                     "sub_category": "Jagung",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -296,7 +302,7 @@
                     "sub_category": "Sawit",
                     "chart_details": [
                         {
-                            "title": "Perubahan luas lahan",
+                            "title": "Total perubahan luas lahan (ha)",
                             "labels": [
                                 {"meningkat": "Meningkat"},
                                 {"menurun": "Menurun"}
@@ -354,6 +360,7 @@
                 {
                     "title": "Perubahan luas lahan dalam setahun terakhir",
                     "type": "line-chart",
+                    "labels-position": "top-right",
                     "labels": [
                         {"meningkat": "Meningkat"},
                         {"menurun": "Menurun"}
@@ -396,6 +403,7 @@
                 {
                     "title": "Jenis lahan yang digunakan",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": [
                         "Sawah irigasi teknis", 
                         "Sawah tadah hujan", 
@@ -458,6 +466,7 @@
                 {
                     "title": "Status kepemilikan lahan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Milik Pribadi", "Sewa", "Hak Guna Usaha (HGU)", "Milik Pemerintah", "lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -490,8 +499,8 @@
                         {
                             "title": "Tren peningkatan/penurunan produktivitas",
                             "labels": [
-                                {"true": "Menaik"},
-                                {"false": "Menurun"}
+                                {"meningkat": "Menaik"},
+                                {"menurun": "Menurun"}
                             ]
                         },
                         {
@@ -506,7 +515,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnya"}
                             ]
                         }
                     ],
@@ -564,7 +573,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -622,7 +631,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -680,7 +689,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -738,7 +747,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -796,7 +805,7 @@
                                 {"Kondisi Irigasi": "Irigasi"},
                                 {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                                 {"Perubahan Cuaca": "Perubahan Cuaca"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -837,6 +846,7 @@
                 {
                     "title": "Tren peningkatan/penurunan produktivitas",
                     "type": "line-chart",
+                    "labels_position": "top-right",
                     "labels": [
                         {"true": "Menaik"},
                         {"false": "Menurun"}
@@ -878,6 +888,7 @@
                 {
                     "title": "Perbandingan luas panen dengan hasil panen",
                     "type": "scatter-plot",
+                    "labels-position": "top-right",
                     "labels": ["Luas Panen vs Hasil Panen"],
                     "colors": ["rgba(0, 168, 255, 1)"],
                     "dummyData": {
@@ -928,13 +939,14 @@
                 {
                     "title": "Faktor yang mempengaruhi produktivitas",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Kualitas Benih": "Benih"},
                         {"Penggunaan Pupuk": "Pupuk"},
                         {"Kondisi Irigasi": "Irigasi"},
                         {"Serangan Hama/Penyakit": "Serangan Hama/Penyakit"},
                         {"Perubahan Cuaca": "Perubahan Cuaca"},
-                        {"Lainnya": "Lainnnya"}
+                        {"lainnya": "Lainnnya"}
                     ],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -975,7 +987,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -988,12 +1000,18 @@
                                 {"Padi hibrida": "Hibrida"},
                                 {"Padi inbrida": "Inbrida"},
                                 {"Padi organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1004,7 +1022,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 49,
-                                        "body_title": "Kendala utama dalam produksi padi\n",
+                                        "body_title": "Kendala utama dalam produksi padi",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1013,7 +1031,7 @@
                                     "params": {
                                         "body_topikId": 49,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1021,7 +1039,7 @@
                                     "params": {
                                         "body_topikId": 49,
                                         "body_title": "Jenis padi yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1029,7 +1047,7 @@
                                     "params": {
                                         "body_topikId": 49,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1047,7 +1065,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1060,12 +1078,18 @@
                                 {"Tebu hibrida": "Hibrida"},
                                 {"Tebu Varietas Lokal": "Varietas Lokal"},
                                 {"Tebu organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1076,7 +1100,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 50,
-                                        "body_title": "Kendala utama dalam produksi tebu\n",
+                                        "body_title": "Kendala utama dalam produksi tebu",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1085,7 +1109,7 @@
                                     "params": {
                                         "body_topikId": 50,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1093,7 +1117,7 @@
                                     "params": {
                                         "body_topikId": 50,
                                         "body_title": "Jenis tebu yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1101,7 +1125,7 @@
                                     "params": {
                                         "body_topikId": 50,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1119,7 +1143,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1132,12 +1156,18 @@
                                 {"Kedelai hibrida": "Hibrida"},
                                 {"Kedelai Varietas Lokal": "Varietas Lokal"},
                                 {"Kedelai organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1148,7 +1178,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 51,
-                                        "body_title": "Kendala utama dalam produksi kedelai\n",
+                                        "body_title": "Kendala utama dalam produksi kedelai",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1157,7 +1187,7 @@
                                     "params": {
                                         "body_topikId": 51,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1165,7 +1195,7 @@
                                     "params": {
                                         "body_topikId": 51,
                                         "body_title": "Jenis kedelai yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1173,7 +1203,7 @@
                                     "params": {
                                         "body_topikId": 51,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1191,7 +1221,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1204,12 +1234,18 @@
                                 {"Singkong hibrida": "Hibrida"},
                                 {"Singkong Varietas Lokal": "Varietas Lokal"},
                                 {"Singkong organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1220,7 +1256,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 52,
-                                        "body_title": "Kendala utama dalam produksi singkong\n",
+                                        "body_title": "Kendala utama dalam produksi singkong",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1229,7 +1265,7 @@
                                     "params": {
                                         "body_topikId": 52,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1237,7 +1273,7 @@
                                     "params": {
                                         "body_topikId": 52,
                                         "body_title": "Jenis singkong yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1245,7 +1281,7 @@
                                     "params": {
                                         "body_topikId": 52,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1263,7 +1299,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1276,12 +1312,18 @@
                                 {"Jagung hibrida": "Hibrida"},
                                 {"Jagung Varietas Lokal": "Varietas Lokal"},
                                 {"Jagung organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1292,7 +1334,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 53,
-                                        "body_title": "Kendala utama dalam produksi jagung\n",
+                                        "body_title": "Kendala utama dalam produksi jagung",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1301,7 +1343,7 @@
                                     "params": {
                                         "body_topikId": 53,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1309,7 +1351,7 @@
                                     "params": {
                                         "body_topikId": 53,
                                         "body_title": "Jenis jagung yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1317,7 +1359,7 @@
                                     "params": {
                                         "body_topikId": 53,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1335,7 +1377,7 @@
                                 {"Kurangnya tenaga kerja": "Kurangnya tenaga kerja"},
                                 {"Cuaca buruk": "Cuaca buruk"},
                                 {"Keterbatasan akses ke pasar": "Keterbatasan akses ke pasar"},
-                                {"Lainnya": "Lainnnya"}
+                                {"Lainnya": "Lainnya"}
                             ]
                         },
                         {
@@ -1348,12 +1390,18 @@
                                 {"Sawit hibrida": "Hibrida"},
                                 {"Sawit Varietas Lokal": "Varietas Lokal"},
                                 {"Sawit organik": "Organik"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         },
                         {
                             "title": "Penggunaan hasil panen",
-                            "labels":["Konsumsi sendiri", "Dijual ke pasar lokal", "Dijual ke perusahaan besar", "Disimpan sebagai cadangan", "Lainnya"]
+                            "labels":[
+                                {"Konsumsi sendiri": "Konsumsi sendiri"},
+                                {"Dijual ke pasar lokal": "Dijual ke pasar lokal"},
+                                {"Dijual ke perusahaan besar": "Dijual ke perusahaan besar"},
+                                {"Disimpan sebagai cadangan": "Disimpan sebagai cadangan"},
+                                {"lainnya": "Lainnnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1364,7 +1412,7 @@
                                     "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 54,
-                                        "body_title": "Kendala utama dalam produksi sawit\n",
+                                        "body_title": "Kendala utama dalam produksi sawit",
                                         "body_name_input": "question9"
                                     }
                                 },
@@ -1373,7 +1421,7 @@
                                     "params": {
                                         "body_topikId": 54,
                                         "body_title": "Jumlah musim tanam dalam setahun",
-                                        "body_name_input": "question5"
+                                        "body_name_input": "question4"
                                     }   
                                 },
                                 {
@@ -1381,7 +1429,7 @@
                                     "params": {
                                         "body_topikId": 54,
                                         "body_title": "Jenis sawit yang ditanam",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question5"
                                     }
                                 },
                                 {
@@ -1389,7 +1437,7 @@
                                     "params": {
                                         "body_topikId": 54,
                                         "body_title": "Hasil panen digunakan untuk",
-                                        "body_name_input": "question7"
+                                        "body_name_input": "question6"
                                     }
                                 }
                             ]
@@ -1401,6 +1449,7 @@
                 {
                     "title": "Kendala dalam produksi",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": [
                         {"Kurangnya pupuk atau pestisida": "Kurang Pupuk/Pestisida"},
                         {"Serangan hama dan penyakit": "Hama/Penyakit"},
@@ -1470,6 +1519,7 @@
                 {
                     "title": "Musim tanam",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "bottom-center",
                     "labels": ["1 kali", "2 kali", "3 kali", "Lebih dari 3 kali"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1520,6 +1570,7 @@
                 {
                     "title": "Jenis padi yang ditanam",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Hibrida", "Inbrida", "Organik", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1539,6 +1590,7 @@
                 {
                     "title": "Penggunaan hasil panen",
                     "type": "count-doughnut-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Konsum Sendiri", "Dijual Pasar Lokal", "Dijual Perusahaan Besar", "Disimpan Untuk Cadangan", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1588,7 +1640,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1600,7 +1658,7 @@
                                     "params": {
                                         "body_topikId": 55,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1645,7 +1703,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1657,7 +1721,7 @@
                                     "params": {
                                         "body_topikId": 56,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1702,7 +1766,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1714,7 +1784,7 @@
                                     "params": {
                                         "body_topikId": 57,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1759,7 +1829,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1771,7 +1847,7 @@
                                     "params": {
                                         "body_topikId": 58,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1816,7 +1892,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1828,7 +1910,7 @@
                                     "params": {
                                         "body_topikId": 59,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1873,7 +1955,13 @@
                         },
                         {
                             "title": "Persentase lahan yang memiliki akses irigasi",
-                            "labels":["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"]
+                            "labels":[
+                                {"100%": "100%"},
+                                {"75% - 99%": "75% - 99%"},
+                                {"50% - 74%": "50% - 74%"},
+                                {"25% - 49%": "25% - 49%"},
+                                {"&lt; 25%": "< 25%"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -1885,7 +1973,7 @@
                                     "params": {
                                         "body_topikId": 60,
                                         "body_title": " Jika ada kendala dalam irigasi, apa penyebab utamanya?",
-                                        "body_name_input": "question6"
+                                        "body_name_input": "question7"
                                     }
                                 },
                                 {
@@ -1913,6 +2001,7 @@
                 {
                     "title": "Kendala dalam irigasi",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Kerusakan saluran irigasi", "Debit air tidak mencukupi", "Pengelolaan irigasi kurang optimal", "Kurangnya infrastruktur pendukung", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -1969,6 +2058,7 @@
                 {
                     "title": "Jenis irigasi yang digunakan",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": ["Teknis", "Setengah teknis", "Sederhana", "Tadah Hujan", "Rawa/Pasang Surut", "Pompa/Air Tanah", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2037,6 +2127,7 @@
                 {
                     "title": "Presentase lahan yang memiliki akses irigasi",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["100%", "75% - 99%", "50% - 74%", "25% - 49%", "< 25%"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2109,7 +2200,7 @@
                                     }   
                                 },
                                 {
-                                    "type": "pie",
+                                    "type": "pie-checkbox",
                                     "params": {
                                         "body_topikId": 61,
                                         "body_title": "Jenis pupuk yang digunakan ",
@@ -2405,6 +2496,7 @@
                 {
                     "title": "Tren ketersediaan pupuk",
                     "type": "line-chart",
+                    "labels-position": "top-right",
                     "labels": ["Rata-rata jumlah pupuk per hektar (kg/ha)"],
                     "colors": [
                         "rgba(0, 177, 0, 1)"
@@ -2437,6 +2529,7 @@
                 {
                     "title": "Sumber pupuk",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": ["Subsidi Pemerintah", "Komersial", "Alami/Organik", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2487,6 +2580,7 @@
                 {
                     "title": "Jenis Pupuk Yang Digunakan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Urea", "NPK", "SP-36", "KCL", "Organik", "Hayati", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2531,7 +2625,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2587,7 +2691,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2643,7 +2757,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2699,7 +2823,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2755,7 +2889,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2811,7 +2955,17 @@
                         },
                         {
                             "title": "Persentase Luas lahan terdampak hama",
-                            "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                            "labels": ["1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"]
+                        },
+                        {
+                            "title": "Kendala pengendalian hama",
+                            "labels": [
+                                {"Kurangnya akses ke pestisida atau metode pengendalian": "Akses ke pestisida atau metode pengendalian"}, 
+                                {"Hama semakin resisten terhadap pestisida": "Hama semakin resisten terhadap pestisida"},
+                                {"Kurangnya tenaga kerja untuk pengendalian": "Kurangnya tenaga kerja"},
+                                {"Faktor cuaca yang mendukung perkembangan hama": "Cuaca yang mendukung perkembangan hama"},
+                                {"lainnya": "Lainnya"}
+                            ]
                         }
                     ],
                     "payload": [
@@ -2859,6 +3013,7 @@
                 {
                     "title": "Metode pengendalian hama",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Pestisida kimia", "Pestisida nabati/organik", "Predator alami (burung, serangga pemangsa)", "Sistem tanam bergilir", "Penggunaan varietas tahan hama", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2921,6 +3076,7 @@
                 {
                     "title": "Jenis hama yang menyerang",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-center",
                     "labels": ["Wereng coklat", "Tikus sawah", "Ulat grayak", "Walang sangit", "Penggerek batang", "Keong mas", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -2989,9 +3145,9 @@
                 {
                     "title": "Persentase Luas lahan terdampak hama",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["0% (Tidak ada Serangan)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
                     "colors": [
-                        "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
                         "rgba(255, 0, 255, 1)",
                         "rgba(251, 93, 37, 1)",
@@ -3012,6 +3168,7 @@
                 {
                     "title": "Kendala pengendalian hama",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Akses ke pestisida atau metode pengendalian", "Hama semakin resisten terhadap pestisida", "Kurangnya tenaga kerja", "Faktor cuaca yang mendukung perkembangan hama", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3064,7 +3221,7 @@
                             "kode": "foodestate-padi-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 73,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3124,7 +3281,7 @@
                             "kode": "foodestate-tebu-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 74,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3184,7 +3341,7 @@
                             "kode": "foodestate-kedelai-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 75,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3244,7 +3401,7 @@
                             "kode": "foodestate-singkong-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 76,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3304,7 +3461,7 @@
                             "kode": "foodestate-jagung-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 77,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3364,7 +3521,7 @@
                             "kode": "foodestate-sawit-lahankosong",
                             "body": [
                                 {
-                                    "type": "pie",
+                                    "type": "bar-tahun",
                                     "params": {
                                         "body_topikId": 78,
                                         "body_title": " Berapa lama lahan kosong tidak ditanami?",
@@ -3404,6 +3561,7 @@
                 {
                     "title": "Durasi Lahan Kosong",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["< 1 bulan", "1 - 3 bulan", "4 - 6 bulan", "7 - 12 bulan", "Lebih dari 1 tahun"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3421,12 +3579,14 @@
                 {
                     "title": "Alasan lahan kosong",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-center",
                     "labels": ["Belum masuk musim tanam", "Kurangnya pasokan air/irigasi", "Kekurangan pupuk atau benih", "Kurangnya tenaga kerja", "Terkena dampak bencana alam (banjir, kekeringan, longsor)", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
                         "rgba(255, 0, 255, 1)",
                         "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
                         "rgba(255, 0, 0, 1)"
                     ],
                     "dummyData": {
@@ -3477,6 +3637,7 @@
                 {
                     "title": "Persentase lahan kosong",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["0% (Semua lahan sudah ditanami)", "1 - 10%", "11 - 25%", "26 - 50%", "51 - 75%", "76 - 100%"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3500,6 +3661,7 @@
                 {
                     "title": "Rencana penggunaan lahan kosong",
                     "type": "count-doughnut-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Alih fungsi", "Padi", "Non Pertanian", "Belum ada rencana", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -3522,7 +3684,7 @@
         },
         {
             "title":"Ketersediaan Komoditas",
-            "topicTitle": "Jumlah Daerah dengan Ketersediaan Komoditas",
+            "topicTitle": "Ketersediaan Komoditas",
             "img": "/assets/icon/8.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/ketersediaan-komoditas",
@@ -3531,7 +3693,7 @@
                     "sub_category": "Padi",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3550,7 +3712,7 @@
                             "kode": "foodestate-padi-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 7,
                                         "body_title": "Apakah Suplai Beras tersedia dengan cukup di daerah Anda?",
@@ -3573,7 +3735,7 @@
                     "sub_category": "Tebu",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3592,7 +3754,7 @@
                             "kode": "foodestate-tabu-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 8,
                                         "body_title": "Apakah Suplai Tebu tersedia dengan cukup di daerah Anda?",
@@ -3615,7 +3777,7 @@
                     "sub_category": "Kedelai",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3634,7 +3796,7 @@
                             "kode": "foodestate-kedelai-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 9,
                                         "body_title": "Apakah Suplai kedelai tersedia dengan cukup di daerah Anda?",
@@ -3657,7 +3819,7 @@
                     "sub_category": "Singkong",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3676,7 +3838,7 @@
                             "kode": "foodestate-singkong-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 10,
                                         "body_title": "Apakah Suplai singkong tersedia dengan cukup di daerah Anda?",
@@ -3699,7 +3861,7 @@
                     "sub_category": "Jagung",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3718,7 +3880,7 @@
                             "kode": "foodestate-jagung-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 11,
                                         "body_title": "Apakah Suplai Jagung tersedia dengan cukup di daerah Anda?",
@@ -3741,7 +3903,7 @@
                     "sub_category": "Sawit",
                     "chart_details": [
                         {
-                            "title": "Ketersediaan komoditas",
+                            "title": "Jumlah daerah dengan status ketersediaan komoditas cukup vs tidak cukup",
                             "labels": [
                                 {"true": "Cukup"},
                                 {"false": "Tidak Cukup"}
@@ -3760,7 +3922,7 @@
                             "kode": "foodestate-sawit-ketersediaankomoditas",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 12,
                                         "body_title": "Apakah Suplai Sawit tersedia dengan cukup di daerah Anda?",
@@ -3784,6 +3946,7 @@
                 {
                     "title": "Ketersediaan komoditas",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": [
                         {"true": "Cukup"},
                         {"false": "Tidak Cukup"}
@@ -3825,6 +3988,7 @@
                 {
                     "title": "Distribusi komoditas ke pasar",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": [
                         {"true": "Ya"},
                         {"false": "Tidak"}
@@ -4147,6 +4311,7 @@
                 {
                     "title": "Status lahan baru",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": [
                         {"true": "Sudah digunakan untuk produksi"},
                         {"false": "Belum digunakan untuk produksi"}
@@ -4188,6 +4353,7 @@
                 {
                     "title": "Kendala pembangunan lahan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Kurangnya alat pertanian": "Kurang alat pertanian"},
                         {"Masalah irigasi": "Irigasi"},
@@ -4227,7 +4393,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4235,7 +4404,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4268,7 +4437,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4276,7 +4448,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4309,7 +4481,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4317,7 +4492,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4350,7 +4525,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4358,7 +4536,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4391,7 +4569,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4399,7 +4580,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4432,7 +4613,10 @@
                     "chart_details": [
                         {
                             "title": "Jumlah daerah dengan status distribusi lancar vs bermasalah",
-                            "labels": ["Lancar", "Bermasalah"]
+                            "labels": [
+                                {"lancar": "Lancar"},
+                                {"bermasalah": "Bermasalah"}
+                            ]
                         },
                         {
                             "title": "Kendala dalam distribusi",
@@ -4440,7 +4624,7 @@
                                 {"Kurangnya transportasi": "Transportasi"},
                                 {"Penyimpanan tidak memadai": "Penyimpanan"},
                                 {"Biaya distribusi terlalu tinggi": "Biaya distribusi tinggi"},
-                                {"Lainnya": "Lainnnya"}
+                                {"lainnya": "Lainnnya"}
                             ]
                         }
                     ],
@@ -4472,7 +4656,8 @@
             "charts": [
                 {
                     "title": "Distribusi pangan yang berjalan lancar",
-                    "type": "bar-chart-horizontal",
+                    "type": "bar-chart-vertical",
+                    "labels-position": "top-right",
                     "labels": ["Lancar", "Bermasalah"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -4511,6 +4696,7 @@
                 {
                     "title": "Kendala dalam distribusi",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Kurangnya transportasi": "Transportasi"},
                         {"Penyimpanan tidak memadai": "Penyimpanan"},
@@ -4566,15 +4752,15 @@
                                     "params": {
                                         "body_topikId": 25,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 25,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4582,7 +4768,7 @@
                                     "params": {
                                         "body_topikId": 25,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4614,15 +4800,15 @@
                                     "params": {
                                         "body_topikId": 26,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 26,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4630,7 +4816,7 @@
                                     "params": {
                                         "body_topikId": 26,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4662,15 +4848,15 @@
                                     "params": {
                                         "body_topikId": 27,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 27,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4678,7 +4864,7 @@
                                     "params": {
                                         "body_topikId": 27,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4710,15 +4896,15 @@
                                     "params": {
                                         "body_topikId": 28,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 28,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4726,7 +4912,7 @@
                                     "params": {
                                         "body_topikId": 28,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4758,15 +4944,15 @@
                                     "params": {
                                         "body_topikId": 29,
                                         "body_title": "Jika tidak, apa yang menjadi kendala utama?",
-                                        "body_name_input": "question2"
+                                        "body_name_input": "question3"
                                     }
                                 },
                                 {
                                     "type": "pie",
                                     "params": {
                                         "body_topikId": 29,
-                                        "body_title": "",
-                                        "body_name_input": ""
+                                        "body_title": "Status dalam komunitas",
+                                        "body_name_input": "question1"
                                     }   
                                 },
                                 {
@@ -4774,7 +4960,7 @@
                                     "params": {
                                         "body_topikId": 29,
                                         "body_title": "Jika tidak, jenis pangan apa yang lebih dibutuhkan?",
-                                        "body_name_input": "question4"
+                                        "body_name_input": "question5"
                                     }   
                                 }
                             ]
@@ -4834,6 +5020,7 @@
                 {
                     "title": "Kendala bantuan pangan",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": ["Kuantitas bantuan tidak mencukupi", "Jenis pangan yang diberikan tidak sesuai kebutuhan", "Distribusi tidak merata", "Bantuan tidak tepat waktu", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -4890,6 +5077,7 @@
                 {
                     "title": "Sebaran penerima bantuan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": ["Petani", "Pedagang pangan", "Penerima manfaat bantuan pangan", "Konsumen umum"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5263,7 +5451,8 @@
             "charts": [
                 {
                     "title": "Jenis perubahan konsumsi akibat harga",
-                    "type": "line-chart-bar-chart-horizontal",
+                    "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Mengurangi konsumsi daging dan beralih ke protein nabati", "Mengganti beras dengan alternatif lain seperti singkong atau jagung", "Mengurangi porsi makan harian", "Beralih ke pangan dengan harga lebih murah tetapi kualitas lebih rendah", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5320,6 +5509,7 @@
                 {
                     "title": "Konsumsi pangan lokal VS impor",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Ya": "Lokal"},
                         {"Tidak": "Import"}
@@ -5338,6 +5528,7 @@
                 {
                     "title": "Alasan memilih pangan import",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "bottom-center",
                     "labels": ["Harga pangan lokal lebih mahal", "Ketersediaan pangan impor lebih tinggi", "Kualitas pangan impor lebih baik", "Kebiasaan konsumsi sejak lama", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5761,6 +5952,7 @@
                 {
                     "title": "Akses petani ke sumber daya",
                     "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
                     "labels": ["Bibit Unggul", "Irigasi", "Alat Pertanian Modern"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
@@ -5805,6 +5997,7 @@
                 {
                     "title": "Aspek Perbaikan",
                     "type": "bar-chart-tumpuk",
+                    "labels-position": "top-right",
                     "labels": [
                         {"Peningkatan akses terhadap teknologi pertanian": "Peningkatan akses teknologi pertanian"},
                         {"Subsidi pupuk dan pestisida yang lebih merata": "Subsidi pupuk & pestisida yang merata"},
@@ -5867,6 +6060,7 @@
                 {
                     "title": "Kendala utama dalam produksi pangan",
                     "type": "pie-chart",
+                    "labels-position": "bottom-center",
                     "labels": [
                         {"Harga pupuk dan pestisida yang tinggi": "Harga pupuk dan pestisida yang tinggi"},
                         {"Kerusakan lahan akibat penggunaan berlebih": "Kerusakan lahan akibat penggunaan berlebih"},
@@ -5897,17 +6091,17 @@
             ]
         },
         {
-            "title":"Pemanfaatan Lahan di Sekitar Batas Hutan",
-            "topicTitle": "Pemanfaatan Lahan di Sekitar Batas Hutan",
-            "img": "/assets/icon/14.png",
+            "title":"Potensi Konflik di Sekitar Batas Hutan",
+            "topicTitle": "Potensi Konflik di Sekitar Batas Hutan",
+            "img": "/assets/icon/15.png",
             "layoutType": "layout3",
-            "url":"/dashboard-hasil-survey/pemanfaatan-lahan",
+            "url":"/dashboard-hasil-survey/potensi-konflik",
             "payload": [],
             "charts": [
                 {
                     "title": "Penyebab utama konflik",
                     "type": "bar-chart-horizontal",
-                    "labels": ["Tidak ada batas hutan yang jelas", "Perluasan perkebunan tanpa izin", "Aktivitas pertambangan di kawasan hutan", "Klaim lahan oleh masyarakat adat", "Pembalakan", "Lainnya"],
+                    "labels": ["Tidak ada batas hutan yang jelas", "Perluasan perkebunan tanpa izin", "Aktivitas pertambangan di kawasan hutan", "Klaim lahan oleh masyarakat adat", "Pembalakan liar", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -5969,7 +6163,7 @@
                 {
                     "title": "Pihak yang terlibat dalam konflik",
                     "type": "bar-chart-tumpuk",
-                    "labels": ["Warga lokal / petani", "Perusahaan perkebunan", "Pemerintah daerah", "LSM lingkungan", "Masyarakat adat", "Lainnya"],
+                    "labels": ["Warga lokal/petani", "Perusahaan perkebunan", "Pemerintah daerah", "LSM lingkungan", "Masyarakat adat", "Lainnya"],
                     "colors": [
                         "rgba(0, 177, 0, 1)",
                         "rgba(0, 168, 255, 1)",
@@ -6029,24 +6223,22 @@
                     }
                 },
                 {
-                    "title": "Konflik batas hutan",
-                    "type": "pie-chart",
-                    "labels": [],
-                    "colors": [],
+                    "title": "Frekuensi konflik batas hutan",
+                    "type": "pie-chart-percentage",
+                    "labels": ["Ya"],
+                    "colors": ["rgba(255, 0, 0, 1)"],
                     "dummyData": {
-                        "data": {
-                            
-                        }
+                        "data": []
                     }
                 }
             ]
         },
         {
-            "title":"Potensi Konflik di Sekitar Batas Hutan",
-            "topicTitle": "Potensi Konflik di Sekitar Batas Hutan",
-            "img": "/assets/icon/15.png",
+            "title":"Pelestarian dan Keberlanjutan Batas Hutan",
+            "topicTitle": "Pelestarian dan Keberlanjutan Batas Hutan",
+            "img": "/assets/icon/16.png",
             "layoutType": "layout3",
-            "url":"/dashboard-hasil-survey/potensi-konflik",
+            "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
             "payload": [],
             "charts": [
                 {
@@ -6154,37 +6346,469 @@
             ]
         },
         {
-            "title":"Pelestarian dan Keberlanjutan Batas Hutan",
-            "topicTitle": "Pelestarian dan Keberlanjutan Batas Hutan",
+            "title":"Kondisi sosio-ekonomi masyarakat",
+            "topicTitle": "Kondisi sosio-ekonomi masyarakat",
             "img": "/assets/icon/16.png",
-            "layoutType": "layout6",
-            "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
-            "payload": [],
+            "layoutType": "layout5",
+            "url":"/dashboard-hasil-survey/kondisi-sosio-ekonomi-masyarakat",
+            "payload": [
+                {
+                    "sub_category": "Lainnya",
+                    "chart_details": [
+                        {
+                            "title": "Pekerjaan sampingan yang paling banyak dilakukan",
+                            "labels": ["Buruh harian", "Bertani", "Dagang", "Ojek/Transportasi", "Lainnya"]
+                        },
+                        {
+                            "title": "Kesulitan yang paling dirasakan masyarakat",
+                            "labels": ["Harga mahal", "Lapangan kerja", "Akses transportasi", "Gangguan keamanan", "Lainnya"]
+                        },
+                        {
+                            "title": "Apakah ada perubahan harga barang?",
+                            "labels": ["Ya", "Tidak"]
+                        },
+                        {
+                            "title": "Tempat yang paling sering digunakan untuk acara warga",
+                            "labels": ["Pasar", "Balai Desa", "Masjid/Gereja", "Rumah Warga", "Tempat Lain"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "lainnya-lainnya-kondisisosioekonomimasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Kalau cari tambahan penghasilan, biasanya orang-orang di sekitar sini kerja apa?",
+                                        "body_name_input": "question4"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Apa yang paling sering bikin warga di sini kesulitan sehari-hari?",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Akhir-akhir ini ada perubahan harga barang atau biaya hidup yang paling terasa nggak?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "pie",
+                                    "params": {
+                                        "body_topikId": 79,
+                                        "body_title": "Biasanya kalau ada acara atau kumpul-kumpul di sini, paling sering diadakan di mana?",
+                                        "body_name_input": "question3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
-                    "title": "Program rehabilitasi hutan",
-                    "type": "pie-chart",
-                    "labels": [],
-                    "colors": [],
+                    "title": "Pekerjaan sampingan yang paling banyak dilakukan",
+                    "type": "bar-chart-horizontal",
+                    "labels-position": "top-right",
+                    "labels": ["Buruh harian", "Bertani", "Dagang", "Ojek/Transportasi", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2022,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2023,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2024,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "year": 2025,
+                                "Buruh harian": 1284222,
+                                "Bertani": 938598,
+                                "Dagang": 938598,
+                                "Ojek/Transportasi": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Kesulitan yang paling dirasakan masyarakat",
+                    "type": "bar-chart-tumpuk",
+                    "labels-position": "bottom-center",
+                    "labels": ["Harga mahal", "Lapangan kerja", "Akses transportasi", "Gangguan keamanan", "Lainnya"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",
+                                "Harga mahal": 1284222,
+                                "Lapangan kerja": 938598,
+                                "Akses transportasi": 938598,
+                                "Gangguan keamanan": 97552,
+                                "Lainnya": 8969
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Apakah ada perubahan harga barang?",
+                    "type": "pie-chart-percentage",
+                    "labels-position": "bottom-center",
+                    "labels": ["Ya", "Tidak"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(251, 93, 37, 1)"
+                    ],
                     "dummyData": {
                         "data": {
-                            
+                            "Ya": 31894,
+                            "Tidak": 1298
                         }
                     }
                 },
                 {
-                    "title": "Manfaat ekonomi dari konservasi",
-                    "type": "word-cloud",
-                    "labels": [],
-                    "colors": [],
+                    "title": "Tempat yang paling sering digunakan untuk acara warga",
+                    "type": "count-doughnut-chart-percentage",
+                    "labels-position": "bottom-center",
+                    "labels": ["Pasar", "Balai Desa", "Masjid/Gereja", "Rumah Warga", "Tempat Lain"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(0, 168, 255, 1)",
+                        "rgba(255, 0, 255, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
                     "dummyData": {
                         "data": {
-                            
+                            "Pasar": 135359,
+                            "Balai Desa": 80809,
+                            "Masjid/Gereja": 91383,
+                            "Rumah Warga": 9408,
+                            "Tempat Lain": 1937
                         }
                     }
                 }
             ]
-        }
-
+        },
+        {
+            "title":"Akses dan Keamanan di Lingkungan Masyarakat",
+            "topicTitle": "Akses dan Keamanan di Lingkungan Masyarakat",
+            "img": "/assets/icon/16.png",
+            "layoutType": "layout1",
+            "url":"/dashboard-hasil-survey/akses-dan-keamanan",
+            "payload": [
+                {
+                    "sub_category": "Lainnya",
+                    "chart_details": [
+                        {
+                            "title": "Persepsi Keamanan di Berbagai Provinsi: Tempat Rawan atau Tidak?",
+                            "labels": ["Ya", "Tidak"]
+                        },
+                        {
+                            "title": "Frekuensi kejadian pencurian atau kehilangan barang",
+                            "labels": ["Sering", "Kadang-kadang", "Jarang", "Tidak Pernah"]
+                        },
+                        {
+                            "title": "Tingkat keramaian jalanan di malam hari",
+                            "labels": ["Ramai", "Biasa saja", "Sepi banget"]
+                        },
+                        {
+                            "title": "Usulan warga untuk meningkatkan keamanan",
+                            "labels": []
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "lainnya-lainnya-aksesdankeamanandilingkunganmasyarakat",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "Apa ada tempat di sekitar sini yang sering dianggap rawan atau kurang aman?",
+                                        "body_name_input": "question2"
+                                    }
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "Seberapa sering warga di sini mengalami kejadian kehilangan barang atau pencurian? (kriminal)",
+                                        "body_name_input": "question5"
+                                    }   
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "kondisi jalanan pada malam hari, jalanan di sekitar sini biasanya ramai atau sepi?",
+                                        "body_name_input": "question1"
+                                    }
+                                },
+                                {
+                                    "type": "word-cloud",
+                                    "params": {
+                                        "body_topikId": 80,
+                                        "body_title": "Menurut warga, apa yang bisa membuat lingkungan ini lebih aman?",
+                                        "body_name_input": "question8"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "charts": [
+                {
+                    "title": "Persepsi Keamanan di Berbagai Provinsi: Tempat Rawan atau Tidak?",
+                    "type": "bar-chart-vertical",
+                    "labels": ["Ya", "Tidak"],
+                    "colors": [
+                        "rgba(0, 177, 0, 1)",
+                        "rgba(255, 0, 0, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",                                
+                                "Ya": 1213,
+                                "Tidak": 1232
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Frekuensi kejadian pencurian atau kehilangan barang",
+                    "type": "bar-chart-vertical",
+                    "labels": ["Sering", "Kadang-kadang", "Jarang", "Tidak Pernah"],
+                    "colors": [
+                        "rgba(255, 0, 0, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)",
+                        "rgba(0, 177, 0, 1)"
+                        
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",
+                                "Sering": 1284222,
+                                "Kadang-kadang": 938598,
+                                "Jarang": 938598,
+                                "Tidak Pernah": 97552
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Tingkat keramaian jalanan di malam hari",
+                    "type": "bar-chart-tumpuk",
+                    "labels": ["Ramai", "Biasa saja", "Sepi banget"],
+                    "colors": [
+                        "rgba(255, 0, 0, 1)",
+                        "rgba(251, 93, 37, 1)",
+                        "rgba(227, 222, 66, 1)"
+                    ],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "year": 2021,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2022,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2023,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2024,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            },
+                            {
+                                "year": 2025,
+                                "Ramai": 1284222,
+                                "Biasa saja": 938598,
+                                "Sepi Banget": 938598
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Usulan warga untuk meningkatkan keamanan",
+                    "type": "word-cloud",
+                    "labels": [],
+                    "colors": [],
+                    "dummyData": {
+                        "data": [
+                            {
+                                "text": "Penerangan jalan",
+                                "value": 381
+                            },
+                            {
+                                "text": "Patroli keamanan",
+                                "value": 39
+                            },
+                            {
+                                "text": "Kamera CCTV",
+                                "value": 83
+                            },
+                            {
+                                "text": "Gotong royong warga",
+                                "value": 31
+                            },
+                            {
+                                "text": "Lainnya1",
+                                "value": 3871
+                            },
+                            {
+                                "text": "Lainnya2",
+                                "value": 88
+                            },
+                            {
+                                "text": "Lainnya3",
+                                "value": 90
+                            }
+                        ]
+                    }
+                }
+            ]
+        }   
     ]
 }

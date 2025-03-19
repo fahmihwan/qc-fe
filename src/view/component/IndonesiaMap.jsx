@@ -118,7 +118,7 @@ const IndonesiaMap = ({
                         <Marker key={`marker-${index}`} position={[lat, lon]} 
                             icon={L.divIcon({
                                 className: "earthquake-marker",
-                                html: `<div style='background-color: ${color}; width: 12px; height: 12px; border-radius: 50%;'></div>`
+                                html: `<div class="pulse-circle" style='background-color: ${color}; width: 12px; height: 12px; border-radius: 50%;'></div>`
                             })}
                             eventHandlers={{ click: () => onEarthquakePointClicked(data.Id) }}>
                             <Popup>Magnitude: {data.Magnitude}</Popup>

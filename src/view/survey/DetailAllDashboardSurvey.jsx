@@ -84,7 +84,9 @@ const DetailAllDashboardSurvey = () => {
 
     const titleWithNoSubCategories = [
         "Potensi Konflik di Sekitar Batas Hutan",
-        "Pelestarian dan Keberlanjutan Batas Hutan"
+        "Pelestarian dan Keberlanjutan Batas Hutan",
+        "Kondisi sosio-ekonomi masyarakat",
+        "Akses dan Keamanan di Lingkungan Masyarakat"
     ]
 
     const onProvinceClick = async(namaProvinsi, kodeProvinsi) => {
@@ -104,8 +106,12 @@ const DetailAllDashboardSurvey = () => {
     // console.log("ini topic data", topicData)
 
     const filteredPayload = useMemo(() => {
+        if(titleWithNoSubCategories.includes(topicTitle)) {
+            return topicData.payload[0]?.payload[0] || []
+        }
         return topicData.payload.find(item => item.sub_category === selectedSubCategory)?.payload[0] || []
-    }, [selectedSubCategory, topicData])
+    }, [selectedSubCategory, topicData, topicTitle])
+    console.log()
 
     const fetchChartData = async(province_id = null) => {
         if(filteredPayload.length === 0) return
@@ -128,24 +134,44 @@ const DetailAllDashboardSurvey = () => {
 
     useEffect(() => {
         if(titleWithNoSubCategories.includes(topicTitle)) {
+            setSelectedSubCategory("")
             setSubCategories([])
+        } else{
+            setSelectedSubCategory("Padi")
         }
     }, [topicTitle])
 
     const children = chartData.map((chart, index) => {
         const specifiedTopicChart = topicData.charts[index] || {}
-        const specifiedChartDetails = topicData.payload.find(item => item.sub_category === selectedSubCategory)
+        const specifiedChartDetails = titleWithNoSubCategories.includes(topicTitle)
+            ? topicData.payload[0]
+            : topicData.payload.find(item => item.sub_category === selectedSubCategory)
 
         const specifiedLabelsChart = specifiedChartDetails?.chart_details[index]?.labels
         const specifiedTitleChart = specifiedChartDetails?.chart_details[index]?.title
+        const specifiedLabelsPosition = specifiedTopicChart["labels-position"]
         console.log("ini specifiedlabelschart", specifiedLabelsChart)
 
         return (
-            <div key={index} className="w-full h-full">
+            <div key={index} className="w-full h-full flex flex-col justify-between">
                 <div className="dark:text-white font-bold text-xl text-left mb-4">
                     {specifiedTitleChart}
                 </div>
-                <ChartRenderer type={specifiedTopicChart.type} data={chart.data} labels={specifiedLabelsChart} colors={specifiedTopicChart.colors}/>
+                <div className="">
+                <ChartRenderer 
+                    type={specifiedTopicChart.type} 
+                    data={chart.data} 
+                    labels={specifiedLabelsChart} 
+                    colors={specifiedTopicChart.colors} 
+                    labelsPosition={specifiedLabelsPosition}
+                    tooltipText={
+                        isProvinceClicked && topicTitle !== "Akses dan Keamanan di Lingkungan Masyarakat"
+                        ? "Jumlah Kecamatan"
+                        : topicTitle === "Akses dan Keamanan di Lingkungan Masyarakat"
+                        ? "Jumlah Responden"
+                        : "Jumlah Kab/Kota"}
+                />
+                </div>
             </div>
         )
     })

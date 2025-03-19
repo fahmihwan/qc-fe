@@ -4,7 +4,7 @@ import { Doughnut, Pie } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
-const CountDoughnutChartCustomizable = ({ 
+const CountDoughnutChartPercentageCustomizable = ({ 
     data = [],
     labels = [],
     colors = [],
@@ -22,17 +22,6 @@ const CountDoughnutChartCustomizable = ({
         document.documentElement.classList.contains("dark")
     );
 
-    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
-    ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
-    : labels.map((label) => {
-        const key = Object.keys(label)[0]; // Ambil key dari object
-        return {
-            key,
-            label: label[key],
-            value: data[key] ?? 0
-        };
-    });
-
     // useEffect untuk mendeteksi perubahan dark mode secara dinamis
     useEffect(() => {
         const observer = new MutationObserver(() => {
@@ -45,11 +34,29 @@ const CountDoughnutChartCustomizable = ({
     }, []);
     
     const totalSumData = isDataEmpty ? 0 : Object.values(data).reduce((sum, value) => sum + value, 0)
+    
+    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    ? labels.map(label => ({ 
+        key: label, 
+        label, 
+        value: data[label] ?? 0,
+        percentage: totalSumData > 0 ? ((data[label] ?? 0 / totalSumData) * 100).toFixed(2) : 0
+    })) 
+    : labels.map((label) => {
+        const key = Object.keys(label)[0]; // Ambil key dari object
+        return {
+            key,
+            label: label[key],
+            value: data[key] ?? 0,
+            percentage: totalSumData > 0 ? ((data[key] ?? 0 / totalSumData) * 100).toFixed(2) : 0
+        };
+    });
+    
     const chartData = {
         labels: activeLabels.map(({label}) => label),
         datasets: [
             {
-                data: activeLabels.map(({value}) => value), 
+                data: activeLabels.map(({percentage}) => percentage), 
                 backgroundColor: colors,
                 borderColor: "#ffffff", 
                 borderWidth: 1
@@ -71,7 +78,11 @@ const CountDoughnutChartCustomizable = ({
             tooltip: {
                 callbacks: {
                     label: (tooltipItem) => {
-                        return ` ${formatCurrency(tooltipItem.raw)}`;
+                        const index = tooltipItem.dataIndex
+                        const label = activeLabels[index].label
+                        const jumlah = activeLabels[index].value
+                        const persen = activeLabels[index].percentage
+                        return [`${label}: ${persen}%`, `Jumlah responden: ${jumlah}`];
                     },
                     labelColor: (tooltipItem) => {
                         const datasetIndex = tooltipItem.dataIndex;
@@ -89,12 +100,8 @@ const CountDoughnutChartCustomizable = ({
                 font: {
                     size: 12
                 },
-                formatter: (value, context) => {
-                    const dataset = context.chart.data.datasets[0].data; 
-                    const total = dataset.reduce((sum, val) => sum + val, 0); 
-                    const percentage = (value / total) * 100;
-                    
-                    return percentage > 15 ? `${formatCurrency(value)}` : '';
+                formatter: (value) => {
+                    return value > 15 ? `${value}%` : ""
                 }
             }
         }
@@ -109,7 +116,7 @@ const CountDoughnutChartCustomizable = ({
                         <div className="dark:text-gray-400 text-xl mb-[10px] text-center">Data belum tersedia</div>
                     </div>
                 ) : (
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-col gap-2">
                         <div className={labelsPosition.startsWith("top") ? "order-1" : "order-2"}>  
                             <div className={`
                                     ml-4 mt-2 w-full px-2 max-h-12 max-w-[90%] gap-y-1 flex flex-wrap overflow-y-scroll custom-scrollbar orverflow-x-hidden
@@ -129,8 +136,8 @@ const CountDoughnutChartCustomizable = ({
                             </div>
                         </div>
                         <div className={`${labelsPosition.startsWith("top") ? "order-2" : "order-1"}`}>
-                            <div className="text-4xl dark:text-white">{formatCurrency(totalSumData)}</div>
-                            <div className="h-48 items-center flex justify-center overflow-hidden">
+                            <div className="text-2xl dark:text-white">{totalSumData}</div>
+                            <div className="h-44 items-center flex justify-center overflow-hidden">
                                 <Doughnut data={chartData} options={options}  height={50}/>
                             </div>
                         </div>
@@ -159,4 +166,4 @@ const CountDoughnutChartCustomizable = ({
     )
 }
 
-export default CountDoughnutChartCustomizable
+export default CountDoughnutChartPercentageCustomizable

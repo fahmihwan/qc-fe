@@ -71,7 +71,7 @@ const LayoutType3Survey = ({
                                 <div className=" dark:text-white rounded ">
                                     <div className="text-center flex-col justify-center ">
                                         <div className=" text-xs lg:text-2xl text-center font-bold uppercase">
-                                            {topicTitle} : {selectedSubCategory} {selectedProvinceName && '-'}
+                                            {topicTitle} {selectedSubCategory.length > 0 && ":"} {selectedSubCategory} {selectedProvinceName && '-'}
                                         </div>
                                         {selectedProvinceName &&
                                             <div className=" text-xs lg:text-2xl text-center font-bold uppercase">
@@ -157,11 +157,11 @@ const LayoutType3Survey = ({
                                 whileInView={"show"}
                                 viewport={{once: true, amount: 0.5}}
                             >
-                                <div className='min-h-[326px] mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                                <div className='h-[363px] mb-10 md:mb-0  col-span-5 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
                                     {/* children pertama */}
                                     {children[0]}
                                 </div>
-                                <div className='min-h-[326px] col-span-4  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
+                                <div className='h-[363px] col-span-4  dark:text-white p-[15px] dark:border-dark-border border-light-border border rounded-[10px]  '>
                                     {/* children kedua */}
                                     {children[1]}
                                 </div>
