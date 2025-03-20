@@ -38,9 +38,10 @@ const PantauandanDataTabular = () => {
 
     const [dataBencana, setDataBencana] = useState(null)
     
-    const [subCategoryBencana, setSubCategoryBencana] = useState('BANJIR')
+    const [subCategoryBencana, setSubCategoryBencana] = useState("SEMUA")
     const [selectedSubCategoryBencana, setSelectedSubCategoryBencana] = useState(subCategoryBencana)
     const listDropDownBencana = [
+        "SEMUA",
         "BANJIR",
         "TANAH LONGSOR",
         "GEMPABUMI",
