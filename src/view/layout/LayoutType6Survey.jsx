@@ -102,7 +102,7 @@ const LayoutType6Survey = ({
                         <div className='w-full xl:grid lg:grid-cols-7  mt-3'>
                             <div className='col-span-12 lg:col-span-5 '>
                                 <motion.div 
-                                    className='ml-5 sm:mr-5 flex justify-center z-10'
+                                    className='ml-5 sm:mr-5 lg:mr-0 flex justify-center z-10'
                                     variants={fadeIn("right", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}

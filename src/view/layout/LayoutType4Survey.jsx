@@ -102,7 +102,7 @@ const LayoutType4Survey = ({
                         <div className='w-full xl:grid lg:grid-cols-7  mt-3'>
                             <div className='col-span-12 lg:col-span-5 '>
                                 <motion.div 
-                                    className='ml-5 sm:mr-5 flex justify-center z-10'
+                                    className='ml-5 sm:mr-5 lg:mr-0 flex justify-center z-10'
                                     variants={fadeIn("right", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
@@ -120,7 +120,7 @@ const LayoutType4Survey = ({
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <div className='h-[363px]  mb-10 md:mb-0 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] mr-5'>
+                                    <div className='h-[363px]  mb-10 md:mb-0 dark:text-white p-[15px] border dark:border-dark-border border-light-border rounded-[10px] sm:mr-5 lg:mr-0'>
                                         {/* children pertama */}
                                         {children[0]}
                                     </div>

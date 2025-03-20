@@ -101,7 +101,7 @@ const LayoutType1Survey = ({
                     <div className='w-full xl:grid lg:grid-cols-7  mt-3 '>
                         <div className=' col-span-12 lg:col-span-5 '>
                             <motion.div 
-                                className='ml-5 sm:mr-5 flex justify-center z-10'
+                                className='ml-5 sm:mr-5 lg:mr-0 flex justify-center z-10'
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
@@ -113,7 +113,7 @@ const LayoutType1Survey = ({
                             </motion.div>
 
                             <motion.div 
-                                className=' grid md:grid-cols-7 gap-0 ml-5 sm:mr-5 sm:mb-5 mt-5 dark:bg-dark-mode-bg'
+                                className=' grid md:grid-cols-7 gap-0 ml-5 sm:mr-5 lg:mr-0 sm:mb-5 mt-5 dark:bg-dark-mode-bg'
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}

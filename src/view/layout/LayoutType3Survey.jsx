@@ -101,7 +101,7 @@ const LayoutType3Survey = ({
 
                         <div className='xl:grid lg:grid-cols-7 mt-3'>
                             <motion.div 
-                                className='lg:col-span-5 sm:mb-5 ml-5 sm:mr-5 flex justify-center z-10'
+                                className='lg:col-span-5 sm:mb-5 ml-5 sm:mr-5 lg:mr-0 flex justify-center z-10'
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
