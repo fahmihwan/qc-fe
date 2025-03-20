@@ -17,7 +17,8 @@ const PieChartCustomizable = ({
         || (Array.isArray(data) && data.length === 0) // Jika `data` array kosong
         || (typeof data === "object" && !Array.isArray(data) && Object.keys(data).length === 0); // Jika `data` object kosong
 
-    const activeLabels = labels.length > 0 && typeof labels[0] === "string" 
+    console.log("isdataempty pie chart", isDataEmpty)
+    const activeLabels = isDataEmpty ? [] : labels.length > 0 && typeof labels[0] === "string" 
     ? labels.map(label => ({ key: label, label, value: data[label] ?? 0 })) 
     : labels.map((label) => {
         const key = Object.keys(label)[0]; // Ambil key dari object
