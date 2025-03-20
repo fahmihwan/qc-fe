@@ -4062,7 +4062,7 @@
                             "kode": "foodestate-padi-realisasipembangunanlahan",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 13,
                                         "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi beras ",
@@ -4107,7 +4107,7 @@
                             "kode": "foodestate-tebu-realisasipembangunanlahan",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 14,
                                         "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi tebu ",
@@ -4152,7 +4152,7 @@
                             "kode": "foodestate-kedelai-realisasipembangunanlahan",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 15,
                                         "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi kedelai ",
@@ -4197,7 +4197,7 @@
                             "kode": "foodestate-singkong-realisasipembangunanlahan",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 16,
                                         "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi singkong ",
@@ -4242,7 +4242,7 @@
                             "kode": "foodestate-jagung-realisasipembangunanlahan",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 17,
                                         "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi jagung ",
@@ -4287,7 +4287,7 @@
                             "kode": "foodestate-sawit-realisasipembangunanlahan",
                             "body": [
                                 {
-                                    "type": "bar-tahun",
+                                    "type": "bar-count-provinces-and-regency",
                                     "params": {
                                         "body_topikId": 18,
                                         "body_title": "Apakah lahan baru tersebut sudah mulai digunakan untuk produksi sawit ",
