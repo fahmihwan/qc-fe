@@ -33,53 +33,25 @@ const DashboardSurvey = () => {
             </motion.div>
             <div className="w-full">
                 <div className=' px-24 '>
-                    <div className="grid grid-cols-6 gap-4">
+                    <div className="grid grid-cols-6 items-center col-span-full gap-4">
                         {/* {} */}
 
                         {datas.data.map((d, i) => {
-                            if (i <= 11) {
-                                return (
-                                    <motion.div key={i}
-                                        initial={{opacity: 0}}
-                                        animate={{opacity: 1}}
-                                        exit={{opacity: 0}}
-                                        transition={{duration: 1, delay: i * 0.1, ease: "easeOut"}}
-                                        className="col-span-1 p-4 flex justify-center">
-                                            <CardSubKategori
-                                                title={d.title}
-                                                img={d.img}
-                                                url={d?.url}
-                                            />
-                                    </motion.div>
-                                )
-                            }
+                            return (
+                                <motion.div key={i}
+                                    initial={{opacity: 0}}
+                                    animate={{opacity: 1}}
+                                    exit={{opacity: 0}}
+                                    transition={{duration: 1, delay: i * 0.1, ease: "easeOut"}}
+                                    className="col-span-1 p-4 flex justify-center">
+                                        <CardSubKategori
+                                            title={d.title}
+                                            img={d.img}
+                                            url={d?.url}
+                                        />
+                                </motion.div>
+                            )
                         })}
-
-                        <div className="col-span-6 flex justify-center gap-4">
-                            {datas.data.map((d, i) => {
-
-                                if (i >= 12) {
-                                    return (
-                                        <motion.div key={i}
-                                            initial={{opacity: 0}}
-                                            animate={{opacity: 1}}
-                                            exit={{opacity: 0}}
-                                            transition={{duration: 1, delay: i * 0.1}}
-                                            className="col-span-1 p-4 w-48 flex justify-center"
-                                        >
-                                            <CardSubKategori
-                                                title={d.title}
-                                                img={d.img}
-                                                url={d?.url}
-                                            />
-                                        </motion.div>
-                                    )
-                                }
-
-                            })}
-                        </div>
-
-
 
                     </div>
 
