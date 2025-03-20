@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import datas from '../../data/dataSubKategoriDashboardSurvey.json';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,12 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 const DashboardSurvey = () => {
+    const [searchTerm, setSearchTerm] = useState("");
+
+    const filteredData = datas.data.filter((d) => 
+        d.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    
     console.log(datas);
 
     return (
@@ -31,27 +37,36 @@ const DashboardSurvey = () => {
                     </div>
                 </div>
             </motion.div>
+            <div className='w-full px-28'>
+                <input
+                    type="text"
+                    placeholder="Cari..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="p-2 border border-dark-mode-border dark:focus:text-white dark:border-light-border px-4 py-2 dark:bg-dark-mode-bg w-full rounded shadow-none outline-none focus:outline-none focus:ring-0"
+                />
+            </div>
             <div className="w-full">
                 <div className=' px-24 '>
                     <div className="grid grid-cols-6 items-center col-span-full gap-4">
-                        {/* {} */}
-
-                        {datas.data.map((d, i) => {
-                            return (
-                                <motion.div key={i}
-                                    initial={{opacity: 0}}
-                                    animate={{opacity: 1}}
-                                    exit={{opacity: 0}}
-                                    transition={{duration: 1, delay: i * 0.1, ease: "easeOut"}}
-                                    className="col-span-1 p-4 flex justify-center">
-                                        <CardSubKategori
-                                            title={d.title}
-                                            img={d.img}
-                                            url={d?.url}
-                                        />
+                        {filteredData.length > 0 ? (
+                            filteredData.map((d, i) => (
+                                <motion.div 
+                                    key={i}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 1, delay: i * 0.1, ease: "easeOut" }}
+                                    className="col-span-1 p-4 flex justify-center"
+                                >
+                                    <CardSubKategori title={d.title} img={d.img} url={d?.url} />
                                 </motion.div>
-                            )
-                        })}
+                            ))
+                        ) : (
+                            <div className="col-span-full text-center py-10">
+                                <p className="text-lg text-gray-400">Tidak ada hasil yang ditemukan.</p>
+                            </div>
+                        )}
 
                     </div>
 
