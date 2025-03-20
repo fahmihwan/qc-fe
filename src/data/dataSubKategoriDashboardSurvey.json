@@ -6096,7 +6096,56 @@
             "img": "/assets/icon/15.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/potensi-konflik",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Batas Hutan",
+                    "chart_details": [
+                        {
+                            "title": "Penyebab utama konflik",
+                            "labels": ["Tidak adanya batas hutan yang jelas", "Perluasan perkebunan tanpa izin", "Aktivitas pertambangan di kawasan hutan", "Klaim lahan oleh masyarakat adat", "Pembalakan liar", "Lainnya"]
+                        },
+                        {
+                            "title": "Pihak yang terlibat dalam konflik",
+                            "labels": ["Warga lokal/petani", "Perusahaan perkebunan", "Pemerintah daerah", "LSM lingkungan", "Masyarakat adat", "Lainnya"]
+                        },
+                        {
+                            "title": "Konflik batas hutan",
+                            "labels": ["Ya"]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-batashutan-potensikonflikdisekitarbatashutan",
+                            "body": [
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 82,
+                                        "body_title": "Apa penyebab utama konflik batas hutan?",
+                                        "body_name_input": "question3"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 82,
+                                        "body_title": "Jika ya, siapa pihak yang terlibat dalam konflik batas hutan?",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 82,
+                                        "body_title": "Apakah ada konflik terkait batas hutan di daerah Anda?",
+                                        "body_name_input": "question1"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
                     "title": "Penyebab utama konflik",
@@ -6223,12 +6272,33 @@
                     }
                 },
                 {
-                    "title": "Frekuensi konflik batas hutan",
-                    "type": "pie-chart-percentage",
+                    "title": "Konflik batas hutan",
+                    "type": "bar-chart-vertical",
                     "labels": ["Ya"],
                     "colors": ["rgba(255, 0, 0, 1)"],
                     "dummyData": {
-                        "data": []
+                        "data": [
+                            {
+                                "nama_provinsi": "Sumatera Utara",
+                                "Ya": 1213
+                            },
+                            {
+                                "nama_provinsi": "Papua Tengah",
+                                "Ya": 1213
+                            },
+                            {
+                                "nama_provinsi": "DKI Jakarta",
+                                "Ya": 1213
+                            },
+                            {
+                                "nama_provinsi": "Sulawesi Tenggara",
+                                "Ya": 1213
+                            },
+                            {
+                                "nama_provinsi": "Jawa Timur",                                
+                                "Ya": 1213
+                            }
+                        ]
                     }
                 }
             ]
@@ -6239,11 +6309,64 @@
             "img": "/assets/icon/16.png",
             "layoutType": "layout3",
             "url":"/dashboard-hasil-survey/pelestarian-batas-hutan",
-            "payload": [],
+            "payload": [
+                {
+                    "sub_category": "Batas Hutan",
+                    "chart_details": [
+                        {
+                            "title": "Ancaman deforestasi / perambahan hutan",
+                            "labels": [
+                                {"Ya": "Ya"}
+                            ]
+                        },
+                        {
+                            "title": "Pihak yang menjalankan program pelestarian batas hutan",
+                            "labels": ["LSM lingkungan", "Masyarakat setempat", "Perusahaan swasta", "Pemerintah daerah", "Lainnya"]
+                        },
+                        {
+                            "title": "Program konservasi batas hutan",
+                            "labels": [
+                                {"true": "Ya"}
+                            ]
+                        }
+                    ],
+                    "payload": [
+                        {
+                            "kode": "foodestate-batashutan-pelestariandankeberlanjutanbatashutan",
+                            "body": [
+                                {
+                                    "type": "bar-wilayah",
+                                    "params": {
+                                        "body_topikId": 83,
+                                        "body_title": "Apakah ada ancaman deforestasi atau perambahan hutan yang masih berlangsung?",
+                                        "body_name_input": "question6"
+                                    }
+                                },
+                                {
+                                    "type": "bar-tahun",
+                                    "params": {
+                                        "body_topikId": 83,
+                                        "body_title": "Jika ya, siapa yang menjalankan program tersebut?",
+                                        "body_name_input": "question2"
+                                    }   
+                                },
+                                {
+                                    "type": "pie-wilayah",
+                                    "params": {
+                                        "body_topikId": 83,
+                                        "body_title": "Apakah ada program rehabilitasi hutan di sekitar batas hutan?",
+                                        "body_name_input": "question7"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
             "charts": [
                 {
-                    "title": "Ancaman deforestasi / Perambahan hutan",
-                    "type": "bar-chart-horizontal",
+                    "title": "Ancaman deforestasi / perambahan hutan",
+                    "type": "bar-chart-vertical",
                     "labels": [],
                     "colors": [
                         "rgba(0, 177, 0, 1)"
