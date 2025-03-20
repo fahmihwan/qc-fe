@@ -54,8 +54,8 @@ export const TableForTabularBencana = ({ data }) => {
 
     const handleDownloadExcel = () => {
         const headers = [
-            "Kode Identitas Bencana",
-            "ID Kabupaten",
+            // "Kode Identitas Bencana",
+            // "ID Kabupaten",
             "Jenis Kejadian",
             "Tanggal Kejadian",
             "Kabupaten / Kota",
@@ -75,8 +75,8 @@ export const TableForTabularBencana = ({ data }) => {
         ]
 
         const keys = [
-            "kib",
-            "id_kab",
+            // "kib",
+            // "id_kab",
             "kejadian",
             "tanggal_status",
             "kabkot",
@@ -151,8 +151,8 @@ export const TableForTabularBencana = ({ data }) => {
                                         #
                                     </th>
                                     {[
-                                        { key: "kib", label: "Kode Identitas Bencana" },
-                                        { key: "id_kab", label: "ID Kabupaten" },
+                                        // { key: "kib", label: "Kode Identitas Bencana" },
+                                        // { key: "id_kab", label: "ID Kabupaten" },
                                         { key: "kejadian", label: "Jenis Kejadian"},
                                         { key: "tanggal_status", label: "Tanggal Kejadian" },
                                         { key: "kabkot", label: "Kabupaten / Kota" },
@@ -192,8 +192,8 @@ export const TableForTabularBencana = ({ data }) => {
                                             {startIndex + index + 1}
                                         </th>
                                         {[
-                                            "kib",
-                                            "id_kab",
+                                            // "kib",
+                                            // "id_kab",
                                             "kejadian",
                                             "tanggal_status",
                                             "kabkot",
