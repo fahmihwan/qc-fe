@@ -3,7 +3,7 @@ import { formatCurrency } from "../../../utils/generateUtil";
 import { Pagination } from "flowbite-react";
 import { IconSortFilterSVG } from "../IconSvg";
 
-const TableForAllProvincesEachFoodEstate = ({data}) => {
+const TableForAllProvincesEachFoodEstate = ({data, footnote}) => {
   const [maxValueLuasPanen, setMaxValueLuasPanen] = useState(1)
   const [maxValueProduktivitas, setMaxValueProduktivitas] = useState(1)
 
@@ -201,6 +201,14 @@ const TableForAllProvincesEachFoodEstate = ({data}) => {
               }
             />
           </div>
+          {footnote &&
+              <div className="flex flex-row gap-1 mt-4">
+                  <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                  <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                      <a href={footnote}> {footnote}</a>
+                  </span>
+              </div>
+          }
         </>
       )}
     </div>
