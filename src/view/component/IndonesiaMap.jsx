@@ -90,10 +90,14 @@ const IndonesiaMap = ({
             center={[-2.5489, 117.148]} 
             zoom={4.5} 
             minZoom={1}
-            maxZoom={12}
+            // maxZoom={12}
             className="w-full h-full rounded-[10px] border z-10 border-light-border dark:border-dark-border overflow-hidden"
         >
-            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            {/* <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" /> */}
+            <TileLayer
+                url="http://{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}"
+                subdomains={['mt0', 'mt1', 'mt2', 'mt3']}
+            />
             <GeoJSON 
                 data={provinsiJson.data} 
                 style={getStyle} 
