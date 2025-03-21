@@ -241,10 +241,10 @@ const AllCategories = () => {
                                     viewport={{once: true, amount: 0.5}}
                                 >
                                     <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px]  mr-5'>
-                                        <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear}/>
+                                        <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear} footnote={"https://bps.go.id"}/>
                                     </div>
                                     <div className=' col-span-1 dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
-                                        <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/>
+                                        <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear} footnote={"https://bps.go.id"}/>
                                     </div>
                                 </motion.div>
                             }
@@ -260,7 +260,7 @@ const AllCategories = () => {
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
+                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} footnote={"https://bps.go.id"}/>
                                 </motion.div>
                                 <motion.div 
                                     className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border  overflow-hidden border-light-border'
@@ -269,7 +269,7 @@ const AllCategories = () => {
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
+                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} footnote={"https://bps.go.id"}/>
                                 </motion.div>
                             </div> :
                             <div className='w-full xl:col-span-2  '>
@@ -280,7 +280,7 @@ const AllCategories = () => {
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen} />
+                                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen} footnote={"https://bps.go.id"}/>
                                 </motion.div>
                                 <motion.div 
                                     className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border overflow-hidden border-light-border'
@@ -289,7 +289,7 @@ const AllCategories = () => {
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} />
+                                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} footnote={"https://bps.go.id"}/>
                                 </motion.div>
                             </div>
                         }
