@@ -171,12 +171,105 @@ function SurveyComponent() {
                     }
                     return getDuplicateKey
                 }
-                const nameWithDash = senderDataAnswer.filter(item => item.key?.includes('-')) // ex : "Sawah irigasi teknis", "Sawah tadah hujan", "Lahan rawa/pasang surut", "Other (TEXT)"
-                let result = []
+
+                let nameWithDash = senderDataAnswer.filter(item => item.key?.includes('-')) // ex :"Other (-Comment)"
+
+                let resultss = []
                 if (nameWithDash) {
-                    result = senderDataAnswer.filter(item => !getDuplicateKey(nameWithDash).includes(item.key));
+
+                    if (senderDataAnswer.filter((d) => Array.isArray(d.value)).length > 0) { //cek apakah ini checkbox?
+
+                        const filterCheckbox = (data) => {
+                            let getCheckbox = [];
+
+                            for (let i = 0; i < data.length; i++) {
+                                const item = data[i];
+
+
+                                if (Array.isArray(item.value)) {                                 // Jika item memiliki value berupa array
+
+                                    let comment = null;// Mencari komentar yang sesuai
+                                    const commentKey = `${item.key}-Comment`;
+
+                                    for (let j = 0; j < data.length; j++) {
+                                        if (data[j].key === commentKey) {
+                                            comment = data[j];
+                                            break; // Menghentikan loop ketika komentar ditemukan
+                                        }
+                                    }
+
+                                    let newValue = [];
+                                    for (let k = 0; k < item.value.length; k++) { // Membuat array value tanpa 'other'
+                                        if (item.value[k] !== 'other') {
+                                            newValue.push(item.value[k]);
+                                        }
+                                    }
+
+                                    if (comment) {// Jika ada komentar, tambahkan ke value
+                                        newValue.push(comment.value);
+                                    }
+
+                                    getCheckbox.push({ // Menambahkan objek yang telah dimodifikasi ke getCheckbox
+                                        ...item,
+                                        value: newValue
+                                    });
+                                }
+                            }
+
+                            return getCheckbox
+                        }
+                        let filteredCheckbox = filterCheckbox(senderDataAnswer)
+
+                        function replaceQuestionData(existingData, newData) {
+
+                            for (let i = 0; i < existingData.length; i++) {
+                                const existingItem = existingData[i];
+
+                                for (let j = 0; j < newData.length; j++) { // Loop melalui newData untuk mencocokkan key dan mengganti value
+                                    const newItem = newData[j];
+
+                                    if (existingItem.key === newItem.key) { // Jika key sama, ganti value
+                                        existingItem.value = newItem.value;
+                                    }
+                                }
+                            }
+                            return existingData
+                        }
+                        let replaceQuestionChecbox = replaceQuestionData(senderDataAnswer, filteredCheckbox)
+
+                        function removeCommentFromArray(data) {
+
+                            for (let i = 0; i < data.length; i++) {// Loop melalui setiap item dalam array data
+                                const item = data[i];
+
+                                if (Array.isArray(item.value)) { // Cek jika item value adalah array
+                                    const key = item.key;
+
+                                    for (let j = 0; j < data.length; j++) { // Loop lagi untuk mencari key dengan format '-Comment'
+                                        const commentItem = data[j];
+
+                                        if (commentItem.key === key + '-Comment') { // Jika ditemukan 'questionX-Comment' dan key-nya cocok dengan 'questionX', hapus item ini
+                                            data.splice(j, 1); // Hapus item comment
+                                            break; // Keluar dari loop karena sudah dihapus
+                                        }
+                                    }
+                                }
+                            }
+
+                            return data
+                        }
+
+                        senderDataAnswer = removeCommentFromArray(replaceQuestionChecbox)
+                        let nameWithDashCheckbox = senderDataAnswer.filter(item => item.key?.includes('-'))
+
+                        resultss = senderDataAnswer.filter(item => !getDuplicateKey(nameWithDashCheckbox).includes(item.key));
+                        return resultss
+                    } else {
+                        resultss = senderDataAnswer.filter(item => !getDuplicateKey(nameWithDash).includes(item.key));
+                    }
                 }
-                return result
+
+                return resultss
             }
 
             let mappingQuestionFix = []
