@@ -193,7 +193,7 @@ const AllCategories = () => {
                     <div className='w-full xl:grid lg:grid-cols-7 '>
                         <div className='col-span-12 lg:col-span-5 '>
                             <motion.div 
-                                className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
+                                className=" flex flex-col border dark:border-dark-border border-light-border rounded-[10px] ml-5 sm:mr-5 lg:mr-0 my-5 px-5 py-5  justify-center dark:bg-dark-mode-bg"
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
@@ -221,7 +221,7 @@ const AllCategories = () => {
                                 </div>
                             </motion.div>
                             <motion.div 
-                                className='ml-5 sm:mr-5 flex justify-center'
+                                className='ml-5 sm:mr-5 lg:mr-0 flex justify-center'
                                 variants={fadeIn("right", 0.3)}
                                 initial="hidden"
                                 whileInView={"show"}
@@ -234,7 +234,7 @@ const AllCategories = () => {
 
                             {!isProvinceClicked &&
                                 <motion.div 
-                                    className='grid md:grid-cols-2 ml-5 sm:mr-5 mb-5  mt-5 dark:bg-dark-mode-bg'
+                                    className='grid md:grid-cols-2 ml-5 sm:mr-5 lg:mr-0 mb-5  mt-5 dark:bg-dark-mode-bg'
                                     variants={fadeIn("right", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
