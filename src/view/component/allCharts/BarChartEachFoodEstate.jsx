@@ -28,7 +28,16 @@ const BarChart = ({ data, title}) => {
             tooltip: {
                 enabled: true,
                 callbacks: {
-                    label: (tooltipItem) => `${title ? title : ''}: ${formatCurrency(tooltipItem.raw)}`
+                    label: (tooltipItem) => ` ${title ? title : ''}: ${formatCurrency(tooltipItem.raw)}`,
+                    labelColor: (tooltipItem) => {
+                        const datasetIndex = tooltipItem.dataset;
+                        return {
+                            borderColor: datasetIndex.backgroundColor, 
+                            backgroundColor: datasetIndex.backgroundColor, 
+                            borderWidth: 2,
+                            borderRadius: 2
+                        };
+                    }
                 }
             },
             datalabels: {
