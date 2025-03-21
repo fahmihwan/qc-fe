@@ -67,10 +67,10 @@ const BarChart = ({ data, title}) => {
     };
 
 
-    return <Bar data={data} options={options} height={"274px"} />
+    return <Bar data={data} options={options} />
 }
 
-const BarChartEachFoodEstate = ({ title, data, provinceName = null}) => {
+const BarChartEachFoodEstate = ({ title, data, provinceName = null, footnote}) => {
     console.log('judul yg diterima', provinceName)
     
     const allZero = data.datasets[0].data.every(item => 
@@ -78,25 +78,38 @@ const BarChartEachFoodEstate = ({ title, data, provinceName = null}) => {
     )
     
     return (
-        <div className="px-[29px] py-[15px] h-[326px] flex flex-col">
-            <div className="dark:text-white font-bold text-xl mb-[10px]">
-                {
-                    !provinceName && title === 'Produktivitas (ku/ha)' 
-                    ? 'Rata-Rata '
-                    : !provinceName 
-                    ? 'Total '
-                    : ''
-                }
-                {title} {provinceName}
+        <div className="px-[29px] py-[15px] flex flex-col">
+            <div className="h-12 w-full mb-[10px] grid items-center">
+                <div className="h-full grid items-center mb-[10px] w-full dark:text-white font-bold md:text-lg text-xl">
+                    {
+                        !provinceName && title === 'Produktivitas (ku/ha)' 
+                        ? 'Rata-Rata '
+                        : !provinceName 
+                        ? 'Total '
+                        : ''
+                    }
+                    {title} {provinceName}
+                </div>
             </div>
-            <div className="min-h-28 flex flex-grow items-center justify-center">
+            <div className="w-full">
                 {data.datasets[0].data.length > 0 && !allZero ? (
-                    <BarChart data={data} title={title}/>
+                    <div className="flex flex-col mx-4">
+                        <div className="w-full h-48 justify-center overflow-hidden">
+                            <BarChart data={data} title={title}/>
+                        </div>
+                        {footnote &&
+                            <div className="flex flex-row gap-1 mt-4">
+                                <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                    <a href={footnote}> {footnote}</a>
+                                </span>
+                            </div>
+                        }
+                    </div>
                 ) : (
                     <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                 )}
             </div>
-
         </div>
     )
 }

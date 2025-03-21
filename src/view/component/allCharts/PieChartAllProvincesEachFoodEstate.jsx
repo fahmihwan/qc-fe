@@ -83,7 +83,16 @@ const PieChart = ({ data, title }) => {
                         callbacks: {
                             label: function(tooltipItem) {
                                 let value = parseFloat(tooltipItem.raw) || 0;
-                                return `${tooltipItem.label}: ${formatCurrency(value)}%`
+                                return ` ${tooltipItem.label}: ${formatCurrency(value)}%`
+                            },
+                            labelColor: (tooltipItem) => {
+                                const datasetIndex = tooltipItem.chart.data.datasets[tooltipItem.datasetIndex];
+                                return {
+                                    borderColor: datasetIndex.backgroundColor[tooltipItem.dataIndex], 
+                                    backgroundColor: datasetIndex.backgroundColor[tooltipItem.dataIndex], 
+                                    borderWidth: 2,
+                                    borderRadius: 2
+                                };
                             },
                             title: function(tooltipItem){
                                 return `${title}`
@@ -123,12 +132,12 @@ const PieChart = ({ data, title }) => {
                 <canvas ref={chartRef} className="h-44 w-full" />
             </div>
             <div>
-                <div className="ml-4 mt-4 max-h-20 w-full max-w-[90%] flex flex-wrap items-center justify-center overflow-y-scroll custom-scrollbar overflow-x-hidden p-2 rounded">
+                <div className="mt-4 max-h-20 flex flex-wrap max-[90%] items-center justify-start overflow-y-scroll custom-scrollbar overflow-x-hidden">
                     {legendItems.map((item, index) => (
-                    <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
-                        <span className="w-7 h-2" style={{ backgroundColor: item.color }}></span>
-                        <span className="text-xs text-gray-700 dark:text-gray-300">{item.label}</span>
-                    </div>
+                        <div key={index} className="flex items-center align-middle gap-2 mb-2 mr-4">
+                            <span className="w-4 h-4" style={{ backgroundColor: item.color }}></span>
+                            <span className="text-xs text-gray-700 dark:text-gray-300">{item.label}</span>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -137,7 +146,7 @@ const PieChart = ({ data, title }) => {
     )
 }
 
-const PieChartAllProvincesEachFoodEstate = ({ title, data, year }) => {
+const PieChartAllProvincesEachFoodEstate = ({ title, data, year, footnote }) => {
     const selectedKey = title.includes("Luas Panen") ? "luas_panen" : "produktivitas"
     const totalValue = data.reduce((sum, item) => sum + (isNaN(item[selectedKey]) ? 0 : item[selectedKey]), 0);
     console.log("ini totalvalue", totalValue)
@@ -149,7 +158,17 @@ const PieChartAllProvincesEachFoodEstate = ({ title, data, year }) => {
                 {totalValue == 0 || data.length < 1 ? (
                     <div className="h-full dark:text-gray-400 items-center justify-center flex text-xl mb-[10px]">Data belum tersedia</div>
                 ) : (
-                    <PieChart data={data} title={title} />
+                    <div className="w-full">
+                        <PieChart data={data} title={title} />
+                        {footnote &&
+                            <div className="flex flex-row gap-1 mt-4">
+                                <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                    <a href={footnote}> {footnote}</a>
+                                </span>
+                            </div>
+                        }
+                    </div>
                 )}
             </div>
         </div>
