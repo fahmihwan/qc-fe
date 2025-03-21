@@ -97,7 +97,7 @@ const PieChart = ({ data, title }) => {
         }
     }, [data])
 
-    return <canvas ref={chartRef} className="w-[180px]" />
+    return <canvas ref={chartRef} className="max-w-32 min-h-32 p-2" />
 }
 
 const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year, footnote }) => {
@@ -130,14 +130,14 @@ const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year, footn
      
     return (
         <>
-            <div className="px-[29px] py-[15px] h-[336px] flex flex-col">
+            <div className="px-[29px] py-[15px] h-full flex flex-col justify-between">
                 <div className="dark:text-white font-bold text-xl mb-[20px]">{title} Tahun {year}</div>
                 <div className="w-full flex items-center align-middle justify-center">
                     {allZeroData ? 0 (
                         <div className="h-full dark:text-gray-400 items-center justify-center flex text-xl mb-[10px]">Data belum tersedia</div>
                     ) : (
-                        <div className="flex flex-col gap-4">
-                            <div className="flex flex-row justify-between items-center">
+                        <div className="flex flex-col gap-4 h-full">
+                            <div className="w-full flex flex-row justify-between items-center">
                                 <div className="ml-4 mt-2 w-full px-2 gap-4  max-w-[90%] gap-y-1 overflow-y-scroll custom-scrollbar orverflow-x-hidden justify-start">
                                     {allLabels.map(({label, color}, index) => (
                                     <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
@@ -146,7 +146,7 @@ const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year, footn
                                     </div>
                                     ))}
                                 </div>
-                                <div>
+                                <div className="mr-4 w-full p-2">
                                     <PieChart data={data.data} title={title} />
                                 </div>
                             </div>

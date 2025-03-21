@@ -6,7 +6,7 @@ import { formatCurrency } from "../../../utils/generateUtil";
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const BarChart = ({ data, options }) => {
-    return <Bar data={data} options={options} height={"200px"} width={"400px"} />;
+    return <Bar data={data} options={options} />;
 }
 
 const BarChartTumpukEachFoodEstate = ({ title, data, footnote }) => {
@@ -30,6 +30,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data, footnote }) => {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false,
@@ -92,7 +93,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data, footnote }) => {
 
     return (
         <>
-            <div className="  px-[29px] py-[15px] h-[355px] flex flex-col">
+            <div className="  px-[29px] py-[15px] h-[355px] flex flex-col w-full">
                 <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
                 <div className="w-full min-h-28 items-center justify-center">
                     {isDataEmpty ? (
@@ -107,7 +108,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data, footnote }) => {
                                 </div>
                                 ))}
                             </div>
-                            <div className="flex justify-center">
+                            <div className="justify-center w-full h-56 overflow-hidden">
                                 <BarChart data={data} options={options} />
                             </div>
                             {footnote &&

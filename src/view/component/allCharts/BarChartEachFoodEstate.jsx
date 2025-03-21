@@ -103,7 +103,7 @@ const BarChartEachFoodEstate = ({ title, data, provinceName = null, footnote}) =
             <div className="w-full">
                 {data.datasets[0].data.length > 0 && !allZero ? (
                     <div className="flex flex-col mx-4">
-                        <div className="w-full h-48 justify-center overflow-hidden">
+                        <div className="w-full h-56 justify-center overflow-hidden">
                             <BarChart data={data} title={title}/>
                         </div>
                         {footnote &&
