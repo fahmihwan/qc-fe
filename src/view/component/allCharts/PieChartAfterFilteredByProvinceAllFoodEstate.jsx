@@ -59,6 +59,15 @@ const PieChart = ({ data, title }) => {
                                 let value = formatCurrency(tooltipItem.raw);
                                 return `${tooltipItem.label}: ${value} ha`;
                             },
+                            labelColor: (tooltipItem) => {
+                                const datasetIndex = tooltipItem.chart.data.datasets[tooltipItem.datasetIndex];
+                                return {
+                                    borderColor: datasetIndex.backgroundColor[tooltipItem.dataIndex], 
+                                    backgroundColor: datasetIndex.backgroundColor[tooltipItem.dataIndex], 
+                                    borderWidth: 2,
+                                    borderRadius: 2
+                                };
+                            },
                             title: function(tooltipItem){
                                 return `${title}`
                             }
