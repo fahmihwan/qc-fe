@@ -180,12 +180,26 @@ const AllCategories = () => {
                                 <div className="flex-col justify-center block lg:hidden items-center py-6 dark:text-white">
                                     <div className="text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
                                     <div className="text-xs lg:text-2xl  font-bold">SEMUA FOOD ESTATE</div>
+
+                                    <div className="flex flex-row justify-center gap-1 mt-4">
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                            <a href="https://bps.go.id/">https://bps.go.id/</a>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <div className=" dark:text-white rounded ">
                                 <div className="text-center flex-col justify-center hidden lg:block ">
                                     <div className=" text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
                                     <div className=" text-xs lg:text-2xl text-center font-bold">SEMUA FOOD ESTATE</div>
+
+                                    <div className="flex flex-row justify-center gap-1 mt-4">
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                            <a href="https://bps.go.id/">https://bps.go.id/</a>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -241,10 +255,10 @@ const AllCategories = () => {
                                     viewport={{once: true, amount: 0.5}}
                                 >
                                     <div className=' mb-10 md:mb-0  col-span-1 dark:text-white px-6 pt-4 border dark:border-dark-border border-light-border rounded-[10px]  mr-5'>
-                                        <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear} footnote={"https://bps.go.id"}/>
+                                        <TableForFoodEstate title={"Luas Panen (ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Luas Panen"} year={selectedYear} />
                                     </div>
                                     <div className=' col-span-1 dark:text-white px-6 py-4 dark:border-dark-border border-light-border border rounded-[10px]  '>
-                                        <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear} footnote={"https://bps.go.id"}/>
+                                        <TableForFoodEstate title={"Produktivitas (ku/ha)"} data={dummyDataForTable} dataBe={response} titleBe={"Produktivitas"} year={selectedYear}/>
                                     </div>
                                 </motion.div>
                             }
@@ -254,22 +268,22 @@ const AllCategories = () => {
                         {isProvinceClicked && pieChartData ?
                             <div className='w-full xl:col-span-2'>
                                 <motion.div 
-                                    className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border  overflow-hidden border-light-border'
+                                    className='dark:bg-dark-mode-bg m-5 border rounded-[10px] h-[290px] dark:border-dark-border  overflow-hidden border-light-border'
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} footnote={"https://bps.go.id"}/>
+                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Luas Panen (ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} />
                                 </motion.div>
                                 <motion.div 
-                                    className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border  overflow-hidden border-light-border'
+                                    className='dark:bg-dark-mode-bg m-5 border rounded-[10px] h-[290px] dark:border-dark-border  overflow-hidden border-light-border'
                                     variants={fadeIn("left", 0.3)}
                                     initial="hidden"
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear} footnote={"https://bps.go.id"}/>
+                                    <PieChartAfterFilteredByProvinceAllFoodEstate title={`Produktivitas (ku/ha) Provinsi ${selectedProvinceName}`} data={pieChartData} year={selectedYear}/>
                                 </motion.div>
                             </div> :
                             <div className='w-full xl:col-span-2  '>
@@ -280,7 +294,7 @@ const AllCategories = () => {
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen} footnote={"https://bps.go.id"}/>
+                                    <BarChartTumpukEachFoodEstate title={"Luas Panen (ha)"} data={chartDataLuasPanen}/>
                                 </motion.div>
                                 <motion.div 
                                     className='dark:bg-dark-mode-bg m-5 border rounded-[10px] dark:border-dark-border overflow-hidden border-light-border'
@@ -289,7 +303,7 @@ const AllCategories = () => {
                                     whileInView={"show"}
                                     viewport={{once: true, amount: 0.5}}
                                 >
-                                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} footnote={"https://bps.go.id"}/>
+                                    <BarChartTumpukEachFoodEstate title={"Produktivitas (ku/ha)"} data={chartDataProduktivitas} />
                                 </motion.div>
                             </div>
                         }

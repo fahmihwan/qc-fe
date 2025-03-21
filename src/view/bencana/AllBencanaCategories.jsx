@@ -298,6 +298,12 @@ const AllBencanaCategories = () => {
                         viewport={{once: true, amount: 0.7}}
                     >
                         <div className='dark:text-white text-2xl font-bold text-center items-center uppercase'>Geospasial Data Bencana {isProvinceClicked ? `Provinsi ${selectedProvinceName}` : 'Indonesia'}</div>
+                        <div className="flex flex-row justify-center gap-1 mt-4">
+                            <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                            <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                <a href="https://gis.bnpb.go.id/">https://gis.bnpb.go.id/</a>
+                            </span>
+                        </div>
                     </motion.div>
 
                     <motion.div 

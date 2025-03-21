@@ -205,12 +205,26 @@ const EachCategoryFoodEstate = ({ category }) => {
                                 <div className="flex-col lg:py-0 py-4 justify-center block lg:hidden items-center text-white">
                                     <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">DASHBOARD 360</div>
                                     <div className="text-black dark:text-white text-xs lg:text-2xl  font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+                                    
+                                    <div className="flex flex-row justify-center gap-1 mt-4">
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                            <a href="https://gis.bnpb.go.id/">https://gis.bnpb.go.id/</a>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <div className=" text-white rounded ">
                                 <div className="text-center lg:py-0 py-4 flex-col justify-center hidden lg:block">
                                     <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">DASHBOARD 360</div>
                                     <div className="text-black dark:text-white text-xs lg:text-2xl text-center font-bold">FOOD ESTATE : {category.toUpperCase()}</div>
+
+                                    <div className="flex flex-row justify-center gap-1 mt-4">
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                        <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                            <a href="https://bps.go.id/">https://bps.go.id/</a>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                             <div className=" text-white flex items-center justify-end">
@@ -270,7 +284,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                     <div className='dark:text-white font-bold text-2xl '>Data {category} di Seluruh Provinsi Tahun {selectedYear}</div>
                                     <DropdownCustom listDropDown={listDropDown} onSelect={onSelect} isProvinceClicked={isProvinceClicked}/>
                                 </div>
-                                <TableForAllProvincesEachFoodEstate data={tableData} footnote={"https://bps.go.id"}/>
+                                <TableForAllProvincesEachFoodEstate data={tableData}/>
                             </motion.div>
                         </div>
                         {!isLoading && response && (
@@ -283,7 +297,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         whileInView={"show"}
                                         viewport={{once: true, amount: 0.5}}
                                     >
-                                        <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''} footnote={"https://bps.go.id"}/>
+                                        <BarChartEachFoodEstate title={"Luas Panen (ha)"} data={dataLuasPanenToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                     </motion.div>
                                     <motion.div 
                                         className=' m-5 border rounded-[10px] h-[324px] dark:border-dark-border border-light-border overflow-hidden'
@@ -292,7 +306,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         whileInView={"show"}
                                         viewport={{once: true, amount: 0.5}}
                                     >
-                                        <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''} footnote={"https://bps.go.id"}/>
+                                        <BarChartEachFoodEstate title={"Produktivitas (ku/ha)"} data={dataProduktivitasToParse} provinceName={selectedProvinceName ? selectedProvinceName : ''}/>
                                     </motion.div>
                                     <motion.div 
                                         className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
@@ -301,7 +315,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         whileInView={"show"}
                                         viewport={{once: true, amount: 0.5}}
                                     >
-                                        <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear} footnote={"https://bps.go.id"}/>
+                                        <PieChartAllProvincesEachFoodEstate title={"Luas Panen (ha)"} data={tableData} year={selectedYear}/>
                                     </motion.div>
                                     <motion.div 
                                         className=' m-5 border rounded-[10px] dark:border-dark-border border-light-border overflow-hidden'
@@ -310,7 +324,7 @@ const EachCategoryFoodEstate = ({ category }) => {
                                         whileInView={"show"}
                                         viewport={{once: true, amount: 0.5}}
                                     >
-                                        <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear} footnote={"https://bps.go.id"}/>
+                                        <PieChartAllProvincesEachFoodEstate title={"Produktivitas (ku/ha)"} data={tableData} year={selectedYear}/>
                                     </motion.div>
                                 </div>
                             </>

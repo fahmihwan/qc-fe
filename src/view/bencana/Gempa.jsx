@@ -313,6 +313,13 @@ const Gempa = () => {
                             <div className='dark:text-white font-bold text-center text-2xl'>DASHBOARD 360</div>
                             <div className='dark:text-white font-bold text-center text-2xl uppercase'>DATA GEMPA INDONESIA {activeCategoryTitle}</div>
                             <div className='text-green-custom text-center text-base'>Informasi gempa bumi {activeCategoryDesc} di wilayah Indonesia</div>
+                            
+                            <div className="flex flex-row justify-center gap-1 mt-4">
+                                <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                    <a href="https://bmkg.go.id/gempabumi/">https://bmkg.go.id/gempabumi/</a>
+                                </span>
+                            </div>
                         </div>
 
                         <div 
