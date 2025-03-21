@@ -6,11 +6,19 @@ import { formatCurrency } from "../../../utils/generateUtil";
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
 const BarChart = ({ data, options }) => {
-    return <Bar data={data} options={options} height={"350px"} width={"500px"} />;
+    return <Bar data={data} options={options} height={"200px"} width={"400px"} />;
 }
 
-const BarChartTumpukEachFoodEstate = ({ title, data }) => {
+const BarChartTumpukEachFoodEstate = ({ title, data, footnote }) => {
     console.log("data barchart", data)
+    const allLabels = data 
+        ? data.datasets.map(dataset => ({
+            label: dataset.label,
+            color: dataset.backgroundColor  
+        }))
+        : {}
+    console.log(allLabels)
+
     const maxData = Math.max(...data.datasets[0].data);
     const minData = Math.min(...data.datasets[0].data);
     
@@ -24,7 +32,7 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
         responsive: true,
         plugins: {
             legend: {
-                display: true,
+                display: false,
                 position: 'top',
                 labels: {
                     color: '#A3A3A3',
@@ -33,7 +41,16 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
             tooltip: {
                 enabled: true,
                 callbacks: {
-                    label: (tooltipItem) => `${tooltipItem.dataset.label}: ${formatCurrency(tooltipItem.raw)}`
+                    label: (tooltipItem) => `${tooltipItem.dataset.label}: ${formatCurrency(tooltipItem.raw)}`,
+                    labelColor: (tooltipItem) => {
+                        const datasetIndex = tooltipItem.dataset;
+                        return {
+                            borderColor: datasetIndex.backgroundColor, 
+                            backgroundColor: datasetIndex.backgroundColor, 
+                            borderWidth: 2,
+                            borderRadius: 2
+                        };
+                    }
                 }
             },
             datalabels: {
@@ -75,14 +92,32 @@ const BarChartTumpukEachFoodEstate = ({ title, data }) => {
 
     return (
         <>
-            <div className="  px-[29px] py-[15px] h-[326px] flex flex-col">
+            <div className="  px-[29px] py-[15px] h-[355px] flex flex-col">
                 <div className="dark:text-white font-bold text-xl mb-[10px]">{title}</div>
-                <div className="w-full min-h-28 flex flex-grow items-center justify-center">
+                <div className="w-full min-h-28 items-center justify-center">
                     {isDataEmpty ? (
                         <div className="dark:text-gray-400 text-xl mb-[10px]">Data belum tersedia</div>
                     ) : (
-                        <div className="w-full flex justify-center">
-                            <BarChart data={data} options={options} />
+                        <div className="flex flex-col gap-4">
+                            <div className="ml-4 mt-2 w-full px-2 max-h-12 max-w-[90%] gap-y-1 flex flex-wrap overflow-y-scroll custom-scrollbar orverflow-x-hidden justify-center">
+                                {allLabels.map(({label, color}, index) => (
+                                <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
+                                    <span className="w-4 h-4" style={{ backgroundColor: color }}></span>
+                                    <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
+                                </div>
+                                ))}
+                            </div>
+                            <div className="flex justify-center">
+                                <BarChart data={data} options={options} />
+                            </div>
+                            {footnote &&
+                                <div className="flex flex-row gap-1">
+                                    <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                    <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                        <a href={footnote}> {footnote}</a>
+                                    </span>
+                                </div>
+                            }
                         </div>
                     )}
                 </div>

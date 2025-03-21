@@ -45,16 +45,9 @@ const PieChart = ({ data, title }) => {
                 responsive: true,
                 maintainAspectRatio: false,
                 aspectRatio: 1,
-                // layout: {
-                //     padding: {
-                //         top: 0,
-                //         bottom: 0,
-                //         left: 0,
-                //         right: 0
-                //     }
-                // },
                 plugins: {
                     legend: {
+                        display: false,
                         position: "left",
                         labels: {
                             color: "#A3A3A3",
@@ -95,25 +88,69 @@ const PieChart = ({ data, title }) => {
         }
     }, [data])
 
-    return <canvas ref={chartRef} className="h-full w-full" />
+    return <canvas ref={chartRef} className="w-[180px]" />
 }
 
-const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year }) => {
+const PieChartAfterFilteredByProvinceAllFoodEstate = ({ title, data, year, footnote }) => {
     // const getYear = new Date(data.data.startDate).getFullYear()
     const allZeroData = data.length < 1
+    console.log("data pie", data)
+
+    const allLabels = [
+        {
+            "label": "Padi",
+            "color": "rgba(227, 26, 28, 1)"
+        },
+        {
+            "label": "Jagung",
+            "color": "rgba(255, 127, 0, 1)"
+        },
+        {
+            "label": "Singkong",
+            "color": "rgba(244, 190, 55, 1)"
+        },
+        {
+            "label": "Kedelai",
+            "color": "rgba(146, 255, 23, 1)"
+        },
+        {
+            "label": "Tebu",
+            "color": "rgba(33, 107, 214, 1)"
+        }
+    ]
      
     return (
         <>
             <div className="px-[29px] py-[15px] h-[336px] flex flex-col">
-                <div className="dark:text-white font-bold text-xl lg:-mb-4 mb-2">{title} Tahun {year}</div>
-                <div className="h-[250px] flex flex-row items-center justify-center">
-                    <div className="w-72 flex items-center align-middle justify-center">
-                        {allZeroData ? 0 (
-                            <div className="h-full dark:text-gray-400 items-center justify-center flex text-xl mb-[10px]">Data belum tersedia</div>
-                        ) : (
-                            <PieChart data={data.data} title={title} />
-                        )}
-                    </div>
+                <div className="dark:text-white font-bold text-xl mb-[20px]">{title} Tahun {year}</div>
+                <div className="w-full flex items-center align-middle justify-center">
+                    {allZeroData ? 0 (
+                        <div className="h-full dark:text-gray-400 items-center justify-center flex text-xl mb-[10px]">Data belum tersedia</div>
+                    ) : (
+                        <div className="flex flex-col gap-4">
+                            <div className="flex flex-row justify-between items-center">
+                                <div className="ml-4 mt-2 w-full px-2 gap-4  max-w-[90%] gap-y-1 overflow-y-scroll custom-scrollbar orverflow-x-hidden justify-start">
+                                    {allLabels.map(({label, color}, index) => (
+                                    <div key={index} className="flex items-center align-middle gap-2 mb-1 mr-4">
+                                        <span className="w-4 h-4" style={{ backgroundColor: color }}></span>
+                                        <span className="text-xs text-gray-700 dark:text-gray-300 capitalize">{label}</span>
+                                    </div>
+                                    ))}
+                                </div>
+                                <div>
+                                    <PieChart data={data.data} title={title} />
+                                </div>
+                            </div>
+                            {footnote &&
+                                <div className="flex flex-row gap-1">
+                                    <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom">Sumber: </span>
+                                    <span className="font-light italic text-sm text-light-gray-custom dark:text-dark-gray-custom hover:font-medium underline underline-offset-4"> 
+                                        <a href={footnote}> {footnote}</a>
+                                    </span>
+                                </div>
+                            }
+                        </div>
+                    )}
                 </div>
             </div>
         </>
