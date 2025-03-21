@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavbarEl } from "../component/NavbarEl";
 import { Sidebar } from "../component/Sidebar";
 import { useSidebar } from "../../context/SidebarContext";
@@ -9,6 +9,15 @@ import { Outlet } from "react-router-dom";
 
 export default function LayoutAdmin() {
     const { isDrawerOpen, toggleDrawer } = useSidebar();
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://website-widgets.pages.dev/dist/sienna.min.js';
+        script.async = true;
+        document.body.appendChild(script);
+        return () => {
+          document.body.removeChild(script);
+        };
+      }, []);
 
     return (
 
