@@ -384,7 +384,7 @@ const AllBencanaCategories = () => {
                                     <div id="legend-container" className="absolute bottom-5 left-[13px] bg-white dark:text-white dark:bg-dark-mode-bg p-6 border border-gray-300 shadow-md rounded-lg z-50">
                                         <h3 className="text-lg mb-4">Jumlah Kejadian</h3>
                                         <div className="flex w-full justify-center font-bold text-4xl text-center mb-2">
-                                            <span>{dataSummary.jumlah_kejadian || 0}</span>
+                                            <span>{dataSummary?.jumlah_kejadian || 0}</span>
                                         </div>
                                     </div>
                                     {IndonesiaMapMemoized}
