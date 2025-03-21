@@ -50,7 +50,7 @@ const routes = createBrowserRouter([
             { path: "/dashboard-hasil-survey/:detail", element: <DetailAllDashboardSurvey /> },
             { path: "/generate-survey", element: <GenerateSurvey /> },
             { path: "/perumahan-rakyat", element: <PerumahanRakyat /> },
-            { path: "/other-dashboard-survey", element: <OtherDashboardSurvey /> }
+            // { path: "/other-dashboard-survey", element: <OtherDashboardSurvey /> }
         ]
     },
     {
